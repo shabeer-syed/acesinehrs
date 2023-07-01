@@ -21,11 +21,24 @@ modified: 2016-04-18T16:39:37-04:00
 
 Adverse childhood experiences (ACEs) are potentially traumatic, neglectful or [violent](https://www.who.int/violenceprevention/approach/definition/en/) experiences in childhood. Examples of ACEs range from child maltreatment and witnessing violence in the home to growing up with a parent with a mental health problem [(1)](https://www.cdc.gov/violenceprevention/aces/fastfact.html). Studies estimate that approximately 1 in 2 adults in England reports experiencing at least one ACE in childhood [(2)](https://bmcmedicine.biomedcentral.com/articles/10.1186/1741-7015-12-72). ACEs are linked to considerable health burden in adulthood and can substantially pressure families, health and social care systems [(3)](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext).
 
-The theme includes responsive layouts (`single`, `archive`, and `splash` pages) that look great on mobile and desktop browsers.
+ACEs are preventable. However, many ACEs are very difficult to identify in childhood. Most studies rely on adults' self-reports many years after the event and are prone to memory biases. This “time gap” also means data is collected when it's more challenging to prevent the harmful effects of ACEs.
 
 {% include gallery id="layouts_gallery" caption="Examples of included layouts `splash`, `single`, and `archive`." %}
 
 [Install the Theme]({{ base_path }}/docs/quick-start-guide/){: .btn .btn--success .btn--large}
+
+## How can routinely collected non-identifiable patient data help?
+-----------------------------------------------------------------
+
+Everyone recognises the significant challenges of identifying and monitoring ACEs across individual services and nationally.
+We know NHS trusts, GPs, clinical teams and researchers are at the forefront of this challenge.
+
+Electronic health records (EHRs) are routinely collected data from hospitals, GPs and other health systems. The data is often recorded "prospectively" or as  events happen and as part of routine care. The information is available shortly after a health care presentation and poses less burden to patients than completing a tradiational research survey. All data is made non-identifiable and stored securely (watch the video below to find out more). EHRs also provide researchers with larger samples than self-report or interview-based samples. At a population level, EHRs can be used by healthcare organisations to identify at-risk groups, implement preventive measures, and allocate resources efficiently by analysing trends, patterns, and outcomes across patient populations. Clinically, EHRs can support streamlining workflows, assisting decision-making, and enhancing patient care. 
+
+In the UK, mothers' and children's EHRs can be linked across services. The ability to link mothers' and children's records allows for measuring ACEs before pregnancy, throughout childhood and intergenerationally.
+
+
+<iframe width="600" height="380" src="https://mediacentral.ucl.ac.uk//Player?autostart=n&fullscreen=y&width=0&height=0&videoId=CFGDc8DB&quality=hi&captions=y&chapterId=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Notable Features
 
