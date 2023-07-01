@@ -28,7 +28,6 @@ ACEs are preventable. However, many ACEs are very difficult to identify in child
 [Install the Theme]({{ base_path }}/docs/quick-start-guide/){: .btn .btn--success .btn--large}
 
 ## How can routinely collected non-identifiable patient data help?
------------------------------------------------------------------
 
 Everyone recognises the significant challenges of identifying and monitoring ACEs across individual services and nationally.
 We know NHS trusts, GPs, clinical teams and researchers are at the forefront of this challenge.
