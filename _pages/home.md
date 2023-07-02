@@ -17,7 +17,7 @@ feature_row:
     btn_label: "Learn More"
   - image_path: ACEs start guide implementation and downloads.jpg
     alt: "ACEs implementation"
-    title: "Quick Start Guide"
+    title: "Quick start guide"
     excerpt: "Implementation of indicators and downloads of code lists with helpers to augment your use."
     url: "/docs/layouts/"
     btn_label: "Learn More"
@@ -41,7 +41,7 @@ feature_row:
     btn_label: "Learn More"
   - image_path: ACEs definition and frameworks.jpg
     alt: "ACEs definition and framework"
-    title: "Definition & framework"
+    title: "Definitions & frameworks"
     excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
     url: "/docs/license/"
     btn_label: "Learn More"
