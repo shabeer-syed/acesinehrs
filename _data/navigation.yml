@@ -21,18 +21,18 @@ foo:
 
 # main links links
 main:
-  - title: "Quick-Start Guide"
-    url: /docs/quick-start-guide/
-
-  - title: "About"
+   - title: "About"
     url: /about/
 
+ - title: "Quick-Start Guide"
+    url: /docs/quick-start-guide/
+    
   - title: "Browse code list"
     url: /codelist/
 
   - title: "View domains & indicators"
     url: /domains/
-
+    
   - title: "Terms &amp; Privacy Policy"
     url: /terms/
 
