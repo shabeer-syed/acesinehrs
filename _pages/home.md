@@ -10,21 +10,21 @@ header:
 excerpt: 'A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs) <br /> <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.8">Latest release v3.4.8</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 feature_row:
   - image_path: About ACEsinEHRs.png
-    alt: "customizable"
-    title: "Super Customizable"
-    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
-    url: "/_pages/about/"
+    alt: "Abour ACEs in EHRs"
+    title: "About ACEs in EHRs"
+    excerpt: "Everything about definitions of the ACEs, inclusions and exclusion criteria of indicators"
+    url: "/about"
     btn_label: "Learn More"
   - image_path: ACEs implementation and downloads.png
     alt: "fully responsive"
-    title: "Responsive Layouts"
-    excerpt: "Built on HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
+    title: "Quick Start Guide"
+    excerpt: "Implementation of indicators and downloads of code lists with helpers to augment your use."
     url: "/docs/layouts/"
     btn_label: "Learn More"
   - image_path: ACEs in EHRs view indicators and domains.png
-    alt: "100% free"
-    title: "100% Free"
-    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"
+    alt: "ACE domains and indicators"
+    title: "ACE domains and indicators"
+    excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
     url: "/docs/license/"
     btn_label: "Learn More"
 github:
