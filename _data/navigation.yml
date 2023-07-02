@@ -28,7 +28,7 @@ main:
     url: /about/
 
   - title: "Browse code list"
-    url: /codelist/
+    url: /codelist
 
   - title: "Sample Collections"
     url: /collection-archive/
