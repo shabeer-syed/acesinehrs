@@ -31,13 +31,13 @@ feature_row:
     alt: "browse code lists"
     title: "Browse code lists"
     excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
-    url: "/docs/license/"
+    url: "/codelist"
     btn_label: "Learn More"
   - image_path: ACEsinEHRs graphs and visuals.jpg
     alt: "ACE domains and indicators"
     title: "Explore visuals"
     excerpt: "View and download the ACEs and indicators."
-    url: "/docs/license/"
+    url: "//"
     btn_label: "Learn More"
   - image_path: ACEs definition and frameworks.jpg
     alt: "ACEs definition and framework"
