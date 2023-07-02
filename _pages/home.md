@@ -51,11 +51,9 @@ github:
 intro:
   - excerpt: 'Get notified about updates &nbsp; [<i class="fa fa-twitter"></i> @mmistakes](https://twitter.com/mmistakes){: .btn .btn--twitter}'
 ---
+{% include feature_row id="intro" type="center" %}
 
-
-[![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Introduction%20aces%20net.png)](https://shabeer-syed.github.io/ACEs/about) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/implement%20indicators%20home.png)](https://shabeer-syed.github.io/ACEs/implement)
- [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains%20with%20download2.png)](https://shabeer-syed.github.io/ACEs/domains) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png)](https://shabeer-syed.github.io/ACEs/codelist)
- [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/visuals-min.png)](https://shabeer-syed.github.io/ACEs/visuals) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/definitions%20NEW.png)](https://shabeer-syed.github.io/ACEs/definitions)
+{% include feature_row %}
 
 ## Welcome
 --------------------------------------------
@@ -73,6 +71,4 @@ This library stores ACE indicators and algorithms accompanying the paper publish
 <span style="color:red"> The information is not intended for clinical use. No data is stored in this library.</span>
 <span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
 
-{% include feature_row id="intro" type="center" %}
 
-{% include feature_row %}
