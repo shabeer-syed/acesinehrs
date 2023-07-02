@@ -37,7 +37,7 @@ feature_row:
     alt: "ACE domains and indicators"
     title: "Explore visuals"
     excerpt: "View and download the ACEs and indicators."
-    url: "//"
+    url: "/docs/license/"
     btn_label: "Learn More"
   - image_path: ACEs definition and frameworks.jpg
     alt: "ACEs definition and framework"
