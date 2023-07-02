@@ -20,7 +20,7 @@ modified: 2016-04-18T16:39:37-04:00
 {% include base_path %}
 
 ## Introduction
-
+<img style="float: right;" src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/smaller%20overview%20aces.png">
 Adverse childhood experiences (ACEs) are potentially traumatic, neglectful or [violent](https://www.who.int/violenceprevention/approach/definition/en/) experiences in childhood. Examples of ACEs range from child maltreatment and witnessing violence in the home to growing up with a parent with a mental health problem [(1)](https://www.cdc.gov/violenceprevention/aces/fastfact.html). Studies estimate that approximately 1 in 2 adults in England reports experiencing at least one ACE in childhood [(2)](https://bmcmedicine.biomedcentral.com/articles/10.1186/1741-7015-12-72). ACEs are linked to considerable health burden in adulthood and can substantially pressure families, health and social care systems [(3)](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext).
 
 ACEs are preventable. However, many ACEs are very difficult to identify in childhood. Most studies rely on adults' self-reports many years after the event and are prone to memory biases. This “time gap” also means data is collected when it's more challenging to prevent the harmful effects of ACEs.
