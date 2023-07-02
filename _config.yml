@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Adverse Childhood Experiences in Electronic Health Records (EHRs)"
+title                    : "ACEsinEHRs"
 title_separator          : "-"
 name                     : &name "ACEsinEHRs"
 description              : &description "A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)"
