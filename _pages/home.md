@@ -9,7 +9,7 @@ header:
   caption:
 excerpt: 'A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs) <br /> <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.8">Latest release v3.4.8</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 feature_row:
-  - image_path: About ACEsinEHRs.jpg
+  - image_path: [![](About ACEsinEHRs.jpg)](https://shabeer-syed.github.io/acesinehrs/about/)
     alt: "ACEs in EHRs"
     title: "About ACEs in EHRs"
     excerpt: "Everything about definitions of the ACEs, inclusions and exclusion criteria of indicators"
