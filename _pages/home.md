@@ -29,7 +29,7 @@ feature_row:
     btn_label: "Learn More"
   - image_path: ACEs browse code lists.jpg
     alt: "browse code lists"
-    title: "Browse ACEs code lists"
+    title: "Browse code lists"
     excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
     url: "/docs/license/"
     btn_label: "Learn More"
@@ -41,7 +41,7 @@ feature_row:
     btn_label: "Learn More"
   - image_path: ACEs definition and frameworks.jpg
     alt: "ACEs definition and framework"
-    title: "Definition and framework"
+    title: "Definition & framework"
     excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
     url: "/docs/license/"
     btn_label: "Learn More"
