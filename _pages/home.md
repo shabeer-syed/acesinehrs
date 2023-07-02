@@ -22,8 +22,8 @@ feature_row:
     url: "/docs/layouts/"
     btn_label: "Learn More"
   - image_path: ACEs in EHRs view indicators and domains.jpg
-    alt: "Domains & indicators"
-    title: "ACE domains and indicators"
+    alt: "ACE domains and indicators"
+    title: "Domains & indicators"
     excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
     url: "/docs/license/"
     btn_label: "Learn More"
