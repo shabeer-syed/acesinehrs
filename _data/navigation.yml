@@ -21,10 +21,10 @@ foo:
 
 # main links links
 main:
-   - title: "About"
+  - title: "About"
     url: /about/
-
- - title: "Quick-Start Guide"
+    
+  - title: "Quick-Start Guide"
     url: /docs/quick-start-guide/
     
   - title: "Browse code list"
@@ -35,7 +35,6 @@ main:
     
   - title: "Terms &amp; Privacy Policy"
     url: /terms/
-
 
 # documentation links
 docs:
