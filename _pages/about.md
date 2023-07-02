@@ -19,18 +19,13 @@ modified: 2016-04-18T16:39:37-04:00
 
 {% include base_path %}
 
-## Introduction
+## Adverse childhood experiences
 <img style="float: right;" src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/smaller%20overview%20aces.png">
 Adverse childhood experiences (ACEs) are potentially traumatic, neglectful or [violent](https://www.who.int/violenceprevention/approach/definition/en/) experiences in childhood. Examples of ACEs range from child maltreatment and witnessing violence in the home to growing up with a parent with a mental health problem [(1)](https://www.cdc.gov/violenceprevention/aces/fastfact.html). Studies estimate that approximately 1 in 2 adults in England reports experiencing at least one ACE in childhood [(2)](https://bmcmedicine.biomedcentral.com/articles/10.1186/1741-7015-12-72). ACEs are linked to considerable health burden in adulthood and can substantially pressure families, health and social care systems [(3)](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext).
 
 ACEs are preventable. However, many ACEs are very difficult to identify in childhood. Most studies rely on adults' self-reports many years after the event and are prone to memory biases. This “time gap” also means data is collected when it's more challenging to prevent the harmful effects of ACEs.
 
-{% include gallery id="layouts_gallery" caption="Examples of included layouts `splash`, `single`, and `archive`." %}
-
-[Install the Theme]({{ base_path }}/docs/quick-start-guide/){: .btn .btn--success .btn--large}
-
 ## How can routinely collected non-identifiable patient data help?
-
 Everyone recognises the significant challenges of identifying and monitoring ACEs across individual services and nationally.
 We know NHS trusts, GPs, clinical teams and researchers are at the forefront of this challenge.
 
@@ -43,7 +38,6 @@ In the UK, mothers' and children's EHRs can be linked across services. The abili
 
 
 ## Domains and indicators of ACEs?
---------------------------------------------
 We have developed *indicators* for identifying *domains* of ACEs among families using routinely collected health care data of mothers, fathers and children presenting to GPs and hospitals, from pregnancy up to 5 years post-birth. [Find the publication here.](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext)
 
 Each ACE indicator represents a variable of grouped codes or measures for a potential recorded ACE in mothers, fathers or children. Indicators are further grouped into six or seven overall ACE domains.
@@ -55,7 +49,6 @@ Each ACE indicator represents a variable of grouped codes or measures for a pote
 [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains.png)](https://shabeer-syed.github.io/ACEs/domains) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/definitions%20NEW.png)](https://shabeer-syed.github.io/ACEs/definitions)
 
 # Aims / mission statement
------------------------------------------------------------------
 We are passionate about using routinely recorded electronic health records (EHRs) as an instrument to advance health care, social justice and policy for families and young people affected by adversity.
 
 Whilst EHRs are readily available, there are significant challenges in accessing and using EHRs to inform practice and policy. EHRs are commonly stored in different databases, organisations and coding systems that can result in a complex and messy web of information, requiring specialist data management skills before it can be used. This becomes more complex when trying to study EHRs of families, which depends on accurate data linkage between parents and children.
@@ -83,7 +76,6 @@ is not captured in coded data.
 The limitations of the "ACE" concept have been summarised [elsewhere](https://www.cambridge.org/core/journals/social-policy-and-society/article/introduction-adverse-childhood-experiences-aces-implications-and-challenges/A1E57E800C74406E84F93AB9F8CB125D).
 
 ## About us / Contact
---------------------------------------------
 This project was developed by a range of researchers and clinical experts:
 
 * Dr Shabeer Syed, Senior Research Associate (s.syed.16@ucl.ac.uk), 1,2 
@@ -105,15 +97,12 @@ This project was developed by a range of researchers and clinical experts:
 *7. Department of Anaesthesia & Pain Medicine, Great Ormond Street Hospital for Children NHS Foundation Trust*
 
 ## Feedback & Contributions
---------------------------------------------
 We are continuously working to make this platform and the ACE indicators easier to access and implement. All platform activity is publicly logged. All code for data management and analysis is shared under open licenses. This website is open source and hosted via [Github](https://github.com/shabeer-syed/ACEs/tree/gh-pages).
  
 If you would like to contribute or provide feedback, please get in touch at s.syed.16@ucl.ac.uk
 
 
 # Acknowledgements
---------------------------------------------
-
 This webpage accompanies a study that uses patients' data collected by the NHS as part of their care [#DataSavesLives](https://twitter.com/hashtag/DataSavesLives?src=hashtag_click). We are extremely grateful to the generosity of the patients and their families, along with the participating GP practices and NHS staff, for their ongoing contribution to mental health and family violence research.
 
 This study was approved by the MHRA (UK) Independent Scientific Advisory Committee (now called RDG) [[ISAC protocol. 19_162R]](https://www.cprd.com/protocol/adverse-childhood-experiences-incidence-prevalence-determinants-and-outcomes-across-primary), under Section 251 (NHS Social Care Act 2006). This study was carried out as part of the CALIBER© resource. [CALIBER, led by the UCL Institute of Health Informatics](https://academic.oup.com/jamia/article/26/12/1545/5536916), is a research resource providing validated electronic health record phenotyping algorithms and tools for national structured data sources.
@@ -124,10 +113,7 @@ The research was supported in part by the NIHR Great Ormond Street Hospital Biom
 
 This research benefits from and contributes to the [NIHR Children and Families Policy Research Unit](https://www.ucl.ac.uk/children-policy-research/), but was not commissioned by the National Institute for Health Research (NIHR) Policy Research Programme. The views expressed are those of the author(s) and not necessarily those of the NHS, the National Institute for Health Research, the Department of Health and Social Care or its arm's length bodies, and other Government Departments.
 
-
 ## Outputs
---------------------------------------------
-
 [Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study](https://doi.org/10.1016/S2589-7500(22)00061-9)
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="128460919"></div>
@@ -159,8 +145,6 @@ This research benefits from and contributes to the [NIHR Children and Families P
 
 
 ## More information about ACEs 
---------------------------------------------
-
 For further information about research on ACEs and their uses, please visit:
 
 * [CDC](https://www.cdc.gov/violenceprevention/aces/index.html)
