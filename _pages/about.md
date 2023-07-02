@@ -1,6 +1,6 @@
 ---
 permalink: /about/
-title: "About ACEs in EHRs"
+title: "About"
 layout: single
 author_profile: false
 excerpt: "Minimal Mistakes is a flexible two-column Jekyll theme."
