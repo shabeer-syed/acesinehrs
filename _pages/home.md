@@ -54,7 +54,7 @@ intro:
 ---
 
 {% include feature_row id="intro" type="center" %}
-
+{% include feature_row %}
 
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
