@@ -19,7 +19,7 @@ feature_row:
     alt: "ACEs implementation"
     title: "Quick start guide"
     excerpt: "Implementation of indicators and downloads of code lists with helpers to augment your use."
-    url: "/docs/layouts/"
+    url: "/domains/"
     btn_label: "Learn More"
   - image_path: ACEs in EHRs view indicators and domains.jpg
     alt: "ACE domains and indicators"
@@ -32,12 +32,6 @@ feature_row:
     title: "Browse code lists"
     excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
     url: "/codelist"
-    btn_label: "Learn More"
-  - image_path: ACEsinEHRs graphs and visuals.jpg
-    alt: "ACE domains and indicators"
-    title: "Explore visuals"
-    excerpt: "View and download the ACEs and indicators."
-    url: "//"
     btn_label: "Learn More"
   - image_path: ACEs definition and frameworks.jpg
     alt: "ACEs definition and framework"
