@@ -11,10 +11,10 @@ excerpt: 'A library of indicators for identifying Adverse Childhood Experiences 
 feature_row:
   - image_path: About ACEsinEHRs.jpg
     alt: "ACEs in EHRs"
-    title: "About ACEs in EHRs"
+    title:
     excerpt: "Everything about definitions of the ACEs, inclusions and exclusion criteria of indicators"
     url: "/about"
-    btn_label: "Learn More"
+    btn_label: "About ACEs in EHRs"
   - image_path: ACEs start guide implementation and downloads.jpg
     alt: "ACEs implementation"
     title: "Quick start guide"
@@ -36,13 +36,13 @@ feature_row:
   - image_path: ACEsinEHRs graphs and visuals.jpg
     alt: "ACE domains and indicators"
     title: "Explore visuals"
-    excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
+    excerpt: "View and download the ACEs and indicators."
     url: "/docs/license/"
     btn_label: "Learn More"
   - image_path: ACEs definition and frameworks.jpg
     alt: "ACEs definition and framework"
     title: "Definitions & frameworks"
-    excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
+    excerpt: "View and download the ACEs and indicators. "
     url: "/docs/license/"
     btn_label: "Learn More"
 
