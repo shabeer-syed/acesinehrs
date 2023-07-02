@@ -7,7 +7,7 @@ header:
   cta_label: "<i class='fa fa-download'></i> What is ACEsinEHRs?"
   cta_url: "/docs/quick-start-guide/"
   caption:
-excerpt: 'A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs) <br /> <small><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext">New study out now</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://www.nihr.ac.uk/layout/4.0/assets/logos/nihr-master-logo-325px.png" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs) <br /> <small><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext">New study out in Lancet Public Health!</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 feature_row:
   - image_path: About ACEsinEHRs.jpg
     alt: "ACEs in EHRs"
