@@ -27,8 +27,8 @@ main:
   - title: "About"
     url: /about/
 
-  - title: "Sample Posts"
-    url: /year-archive/
+  - title: "Browse code list"
+    url: /codelist/
 
   - title: "Sample Collections"
     url: /collection-archive/
