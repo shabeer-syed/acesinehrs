@@ -27,6 +27,25 @@ feature_row:
     excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
     url: "/docs/license/"
     btn_label: "Learn More"
+  - image_path: ACEs browse code lists.jpg
+    alt: "browse code lists"
+    title: "Browse ACEs code lists"
+    excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
+    url: "/docs/license/"
+    btn_label: "Learn More"
+  - image_path: ACEsinEHRs graphs and visuals.jpg
+    alt: "ACE domains and indicators"
+    title: "Explore visuals"
+    excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
+    url: "/docs/license/"
+    btn_label: "Learn More"
+  - image_path: ACEs definition and frameworks.jpg
+    alt: "ACEs definition and framework"
+    title: "Definition and framework"
+    excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
+    url: "/docs/license/"
+    btn_label: "Learn More"
+    
 github:
   - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 intro:
