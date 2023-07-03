@@ -2,6 +2,7 @@
 layout: splash
 title: "Research & Outputs"
 permalink: /research/
+entries_layout: grid
 header:
   overlay_color: "#5e616c"
   overlay_image: /images/ACEsinEHRs home page 2023.jpg
