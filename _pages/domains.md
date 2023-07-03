@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: splash
 title: "Domains and indicators of ACEs"
 permalink: /domains/
 author_profile: false
