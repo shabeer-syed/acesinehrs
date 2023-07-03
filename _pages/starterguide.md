@@ -55,6 +55,9 @@ Right click on link to save as a ".txt" file (i.e. using option "save link as")
 
 ### All ACE indicators:
 
+[![All ACEs (8830)](https://cdn.jsdelivr.net/gh/twolfson/paypal-github-button@1.0.0/dist/button.svg)](https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/ALL_ACEs_codelist.txt)
+{: style="margin-top: 0.5em;"}
+
 * [All ACEs (8830)](https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/ALL_ACEs_codelist.txt)
 * [All ACEs + crossmapped SNOMED CT and ICD-11 (10650)](https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/ACEs_crossmaped_snomedCT_icd11.txt)
 * [All ACEs GP/CPRD only: medcodes, prodcodes, measures only (6639)](https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/ACEs_readcode_gemscript_CPRD_gold_only.txt)
