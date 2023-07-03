@@ -2,11 +2,11 @@
 main:
   - title: "Quick-Start Guide"
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
+  - title: "About"
+    url: https://shabeer-syed.github.io/acesinehrs/about/
+  - title: "Browse code list"
+    url: https://shabeer-syed.github.io/acesinehrs/codelist/
+  - title: "View domains & indicators"
+    url: https://shabeer-syed.github.io/acesinehrs/domains/
   # - title: "Sitemap"
   #   url: /sitemap/
