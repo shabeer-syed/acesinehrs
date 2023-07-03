@@ -55,9 +55,9 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter "Shabeer1Syed"
+  username               : &twitter "mmistakes"
 facebook:
-  username               :
+  username               : &facebook "michaelrose"
   app_id                 :
   publisher              :
 og_image                 : "site-logo.png" # Open Graph/Twitter default site image
@@ -67,8 +67,8 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-    - "https://twitter.com/Shabeer1Syed"
-    - ""
+    - "https://twitter.com/mmistakes"
+    - "https://facebook.com/michaelrose"
 
 # Analytics
 analytics:
@@ -80,26 +80,26 @@ analytics:
 # Site Author
 author:
   name             : *name
-  avatar           :
-  bio              : 
-  location         : 
+  avatar           : "michael-rose.jpg"
+  bio              : "Just another boring, tattooed, time traveling, designer."
+  location         : "Buffalo, NY"
   email            :
-  uri              : "https://acesinehrs.com/"
+  uri              : "https://mademistakes.com"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : 
+  facebook         : *facebook
   foursquare       :
-  github           : 
+  github           : "mmistakes"
   google_plus      :
   keybase          :
-  instagram        : 
+  instagram        : "mmistakes"
   lastfm           :
   linkedin         :
   pinterest        :
   soundcloud       :
-  stackoverflow    : 
+  stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
   twitter          : *twitter
