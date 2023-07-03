@@ -5,6 +5,8 @@ permalink: /research/
 author_profile: false
 ---
 
+# Research and outputs from work using ACEsinEHRs
+
 [Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study](https://doi.org/10.1016/S2589-7500(22)00061-9)
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="128460919"></div>
