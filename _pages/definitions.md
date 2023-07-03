@@ -1,13 +1,15 @@
 ---
-title: Definitions and frameworks
+layout: splash
+title: "Theoretical frameworks and definitions"
+permalink: /theory/
+author_profile: false
 ---
-### [Go back](https://shabeer-syed.github.io/ACEs/)
 
----------------------------------
+{% include base_path %}
+
 This page provides summaries of the biopsychosocial theoretical framework and definitions that underpinned the development of the ACE indicators. 
 
 ## Background
--------------------------------------------------------
 
 Adverse childhood experiences (ACEs) are potentially traumatic, neglectful or [violent](https://www.who.int/violenceprevention/approach/definition/en/) experiences in childhood. Examples of ACEs range from child maltreatment and witnessing violence in the home to growing up with a parent with a mental health problem [(1)](https://www.cdc.gov/violenceprevention/aces/fastfact.html). Studies estimate that approximately 1 in 2 adults in England reports experiencing at least one ACE in childhood [(2)](https://bmcmedicine.biomedcentral.com/articles/10.1186/1741-7015-12-72). ACEs are linked to considerable health burden in adulthood, and can substantially pressure families, health and social care systems [(3)](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext).
 
@@ -20,7 +22,6 @@ Since the late 1990s, the initial "ACE domains" have undergone numerous expansio
 To promote a clearer understanding of developing ACE indicators, we developed a set of criteria to define ACE indicators. We developed a "testable" conceptual biopsychosocial model to help generate theoretically informed predictions of which ACE indicators might be more relevant than others. We have summarised this integrative conceptual model and the pre-specified definition of ACEs below.
 
 ## Definitions and inclusions
--------------------------------------------------------
 
 We defined ACE indicators as any experience within the family environment recorded in the child or the maternal record considered to be:
 
