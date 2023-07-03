@@ -38,7 +38,11 @@ For hospital and death registration records, we define indicators by combining c
 
 Unless specified, indicators refers to information recorded in both child and maternal records.
 
+**Note:** The indicators uses the [control flow methods](https://adv-r.hadley.nz/control-flow.html) [2](https://advanced-r-solutions.rbind.io/control-flow.html) to implement rule-based algorithms must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
+{: .notice--warning}
+
 <span style="color:red">Rule-based algorithms must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).</span>
+
 If you're running Jekyll v3.7+ and self-hosting you can quickly install the theme as a Ruby gem.
 
 ## Download code lists
@@ -137,8 +141,6 @@ Apply multiple rule-based algorithims (age critera, accident exclusions etc) usi
 **ProTip:** Be sure to remove `/docs` and `/test` if you forked Minimal Mistakes. These folders contain documentation and test pages for the theme and you probably don't want them littering up your repo.
 {: .notice--info}
 
-**Note:** The theme uses the [jekyll-include-cache](https://github.com/benbalter/jekyll-include-cache) plugin which will need to be installed in your `Gemfile` and added to the `plugins` array of `_config.yml`. Otherwise you'll throw `Unknown tag 'include_cached'` errors at build.
-{: .notice--warning}
 
 ### Gem-based method
 
