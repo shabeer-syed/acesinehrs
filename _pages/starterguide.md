@@ -36,7 +36,10 @@ For GP records, we define indicators by combining information recorded in Read c
 
 For hospital and death registration records, we define indicators by combining codes from the International Classification of Diseases 9th/10th edition (ICD-9/10), the Classification of Interventions and Procedures (OPCS-4) and HES-APC discharge/admission fields. We also provide cross-mapped unvalidated indicators for newer systems (ICD-11/SNOMED CT) for further evaluation. Browse code lists [here](https://acesinehrs.com/codelist).
 
-Unless specified, indicators refers to information recorded in both child and maternal records.
+**Think-family approach** Unless specified, indicators refers to information recorded in the child, mother and father.
+{: .notice--info}
+
+
 
 **Note:** The indicators uses [control flow methods](https://advanced-r-solutions.rbind.io/control-flow.html) to implement rule-based algorithms must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
 {: .notice--danger}
@@ -134,10 +137,6 @@ Apply multiple rule-based algorithims (age critera, accident exclusions etc) usi
 
 
 [^structure]: See [**Structure** page]({{ "/docs/structure/" | relative_url }}) for a list of theme files and what they do.
-
-
-**ProTip:** Be sure to remove `/docs` and `/test` if you forked Minimal Mistakes. These folders contain documentation and test pages for the theme and you probably don't want them littering up your repo.
-{: .notice--info}
 
 
 ### Gem-based method
