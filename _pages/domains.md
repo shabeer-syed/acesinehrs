@@ -1,9 +1,10 @@
 ---
-layout: splash
+layout: single
 title: "Domains and indicators of ACEs"
 permalink: /domains/
 author_profile: false
 ---
+
 {% include base_path %}
 
 # Domains and indicators of ACEs
