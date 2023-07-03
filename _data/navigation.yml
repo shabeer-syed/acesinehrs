@@ -5,10 +5,12 @@ main:
   - title: "Quick-Start Guide"
     url: https://shabeer-syed.github.io/acesinehrs/research/
   - title: "Research"
-    url: https://shabeer-syed.github.io/acesinehrs/codelist/
+    url: https://shabeer-syed.github.io/acesinehrs/research/
   - title: "Browse code list"
     url: https://shabeer-syed.github.io/acesinehrs/codelist/
   - title: "View domains & indicators"
+    url: https://shabeer-syed.github.io/acesinehrs/domains/
+  - title: "Framework & definitions"
     url: https://shabeer-syed.github.io/acesinehrs/domains/
   # - title: "Sitemap"
   #   url: /sitemap/
