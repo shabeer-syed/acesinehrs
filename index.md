@@ -59,6 +59,7 @@ intro:
 
 [![](/images/About ACEsinEHRs.png)](https://shabeer-syed.github.io/acesinehrs/about/)
 {: .full}
+*About ACEs in EHRs*
 
 {% include figure image_path="/assets/images/unsplash-image-10.jpg" alt="this is a placeholder image" caption="This is a figure caption." %}
 
