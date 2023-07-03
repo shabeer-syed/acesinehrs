@@ -8,6 +8,7 @@ header:
   cta_url: "/docs/quick-start-guide/"
   caption:
 excerpt: 'A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs) <br /> <small><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext">New study out in Lancet Public Health!</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+
 feature_row:
   - image_path: /images/About ACEsinEHRs.jpg
     alt: "ACEs in EHRs"
@@ -55,10 +56,6 @@ intro:
 
 {% include feature_row id="intro" type="center" %}
 {% include feature_row %}
-
-<a href="https://shabeer-syed.github.io/acesinehrs/about/"><img src="/images/About ACEsinEHRs.png" alt="Five cats looking around a field." caption="About ACEs in EHRs"/></a>
-
-{% include figure image_path="/images/About ACEsinEHRs.png" alt="this is a placeholder image" caption="This is a figure caption." %}
 
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
