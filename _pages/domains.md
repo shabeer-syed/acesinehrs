@@ -1,0 +1,13 @@
+---
+layout: splash
+title: "Domains and indicators of ACEs"
+permalink: /domains/
+author_profile: false
+---
+
+{% include base_path %}
+
+ [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20indicators.png)](https://shabeer-syed.github.io/ACEs/indicatorsfinal) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/child%20maltreatment.png)](https://shabeer-syed.github.io/ACEs/CM)
+ [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Intimate%20partner%20violence.png)](https://shabeer-syed.github.io/ACEs/mIPV) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/parental%20mental%20health%20problems.png)](https://shabeer-syed.github.io/ACEs/mMHPs)
+ [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Parental%20substance%20misuse.png)](https://shabeer-syed.github.io/ACEs/MSM) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/adverse%20family%20environments.png)](https://shabeer-syed.github.io/ACEs/AFE)
+[![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/high-risk%20presentattion%20of%20child%20maltreatment.png)](https://shabeer-syed.github.io/ACEs/HRPCM) | -  
