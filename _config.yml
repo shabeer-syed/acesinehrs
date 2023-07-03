@@ -84,7 +84,7 @@ author:
   bio              : "Just another boring, tattooed, time traveling, designer."
   location         : "Buffalo, NY"
   email            :
-  uri              : "https://mademistakes.com"
+  uri              : "https://acesinehrs.com/"
   bitbucket        :
   codepen          :
   dribbble         :
@@ -260,7 +260,7 @@ gems:
   - jekyll-gist
   - jekyll-feed
   - jemoji
-  
+
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
