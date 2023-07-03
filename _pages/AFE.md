@@ -1,9 +1,25 @@
 ---
-title: Domain - Adverse family environments
----
-### [Go back](https://shabeer-syed.github.io/ACEs/domains) | [View all ACE indicators](https://shabeer-syed.github.io/ACEs/indicatorsfinal) 
+layout: splash
+title: "Adverse family environments"
+permalink: /AFE/
+header:
+  overlay_color: "#5e616c"
+  overlay_image: /images/ACEsinEHRs home page 2023.jpg
+  cta_label: 
+  cta_url: 
+  caption:
+excerpt: 'Definition <br /> <small><a>  </a></small> Any act of commission or omission by a parent or other caregiver that results in harm, potential for harm, or threat of harm to a child. Harm does not need to be intended <br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
---------------------------------
+github:
+  - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+
+intro:
+  - excerpt: 'We have developed and validated indicators for identifying ACEs in routinely collected non-identifiable health care data of mothers and children presenting to GPs, A&E, hospitals before and after birth. This website provides information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See the publication here.](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext) See also the published [systematic review.](https://adc.bmj.com/content/archdischild/106/1/44.full.pdf)'
+
+---
+
+{% include base_path %}
+
 ## Definition
 The term "adverse family environments" refers to any clinically intervenable psychosocial risk factor or experience recorded in the child or the parent that met the [pre-defined inclusion criteria](https://acesinehrs.com/definitions). The AFE domain broadly aligns with the original ACE domain titled *"household challenges"* from the CDC-Kaiser ACE Study, supplemented with clinically relevant definitions to select indicators consistent with the [UK guidance for identifying families in need](https://www.gov.uk/government/publications/supporting-families-programme-guidance-2022-to-2025/chapter-4-identifying-and-working-with-families#identifying-and-evidencing-family-need), and the [US Preventive Services Task Force for social risk domains](https://jamanetwork.com/journals/jama/fullarticle/2783975). The AFE domain includes indicators from multiple [social risk domains](https://cdn.jamanetwork.com/ama/content_public/journal/jama/938785/jus210019f3_1633975995.29794.png?Expires=1660916428&Signature=VNgy5R3mKpHhh4XvhQJ-StCiSk5UlP3JpFe2Z2ntdQMljvE2pm4q-S2rYjGwpfGfIv49UjTUt7Dy~05Hm23kIqj7DD8qJMkTQhZYTG06H09Y3u65ZoSlwPWU1FwnMuW0e4zJ4WtPSxbpfty3nRAyp4oB8RwIfH-UqhOrx3KRlz3DNnYb64Gnlq1D3m8Qp-RGHUBunYb9DBe4BaLlCHc6~~5muOqKB97VikpeeW0PBJMvGL0xcY-v7xT1UPnkdZ~EUrL5r0uory5uEJiRsbKoN0BCG1MlfylOldSdwqYx-yALfrDRu26sCxQERf1-8VHuQfLGMPLSFHlt3WORIWVTwA__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA) covering clinical concerns relating to housing instability (e.g., homelessness), “criminal behaviours in the household”, food insecurity, education and financial strains, transportation difficulties, utility needs, aspects of interpersonal safety that are not already addressed by other ACE domains. This domain also incorporates [Royal College of General Practitioners](https://bjgp.org/content/bjgp/62/600/e478.full.pdf) recommended indicators for recordings that should raise a cause for concern (e.g. coded observations include various concerns in parent or child such as: *"life crisis", "concerned about appearance", "history of other physical trauma", "anger or aggressive behaviours", etc.*).
 
