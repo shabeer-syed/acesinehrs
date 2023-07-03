@@ -30,12 +30,16 @@ For GP records, we define indicators by combining information recorded in Read c
 
 For hospital and death registration records, we define indicators by combining codes from the International Classification of Diseases 9th/10th edition (ICD-9/10), the Classification of Interventions and Procedures (OPCS-4) and HES-APC discharge/admission fields. We also provide cross-mapped unvalidated indicators for newer systems (ICD-11/SNOMED CT) for further evaluation. Browse code lists [here](https://acesinehrs.com/codelist).
 
-**Think-family approach** Unless specified, indicators refers to information recorded in the child, mother and father.
+**Think-family approach:** Unless specified, indicators refers to information recorded in the child, mother and father.
 {: .notice--info}
 
 
 **Note:** The indicators uses [control flow methods](https://advanced-r-solutions.rbind.io/control-flow.html) to implement rule-based algorithms must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
 {: .notice--danger}
+
+## Control documentation
+
+* [ACEsinEHRs control documentation / release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
 
 ## Download code lists
 Right click on link to save as a ".txt" file (i.e. using option "save link as")
@@ -44,13 +48,9 @@ Right click on link to save as a ".txt" file (i.e. using option "save link as")
 
 *Total number of excluded/tested codes: 7671*
 
-## Control documentation
+## All ACE indicators:
 
-* [ACEsinEHRs control documentation / release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
-
-### All ACE indicators:
-
-* [![All ACEs (8830)](https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/ALL_ACEs_codelist.txt)
+* [All ACEs (8830)](https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/ALL_ACEs_codelist.txt)
 * [All ACEs (8830)](https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/ALL_ACEs_codelist.txt)
 * [All ACEs + crossmapped SNOMED CT and ICD-11 (10650)](https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/ACEs_crossmaped_snomedCT_icd11.txt)
 * [All ACEs GP/CPRD only: medcodes, prodcodes, measures only (6639)](https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/ACEs_readcode_gemscript_CPRD_gold_only.txt)
