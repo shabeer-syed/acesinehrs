@@ -4,8 +4,9 @@ title: "Domains and indicators of ACEs"
 permalink: /domains/
 author_profile: false
 ---
-
 {% include base_path %}
+
+# Domains and indicators of ACEs
 
  [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20indicators.png)](https://shabeer-syed.github.io/ACEs/indicatorsfinal) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/child%20maltreatment.png)](https://shabeer-syed.github.io/ACEs/CM)
  [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Intimate%20partner%20violence.png)](https://shabeer-syed.github.io/ACEs/mIPV) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/parental%20mental%20health%20problems.png)](https://shabeer-syed.github.io/ACEs/mMHPs)
