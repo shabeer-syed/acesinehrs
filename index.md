@@ -57,7 +57,7 @@ intro:
 {% include feature_row %}
 
 
-[![](/images/About ACEsinEHRs.jpg)](https://shabeer-syed.github.io/acesinehrs/about/)
+[![](/images/About ACEsinEHRs.png)](https://shabeer-syed.github.io/acesinehrs/about/)
 {: .full}
 
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
