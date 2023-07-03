@@ -38,12 +38,8 @@ For hospital and death registration records, we define indicators by combining c
 
 Unless specified, indicators refers to information recorded in both child and maternal records.
 
-**Note:** The indicators uses the [control flow methods](https://adv-r.hadley.nz/control-flow.html) [2](https://advanced-r-solutions.rbind.io/control-flow.html) to implement rule-based algorithms must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
+**Note:** The indicators uses [control flow methods](https://advanced-r-solutions.rbind.io/control-flow.html) to implement rule-based algorithms must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
 {: .notice--warning}
-
-<span style="color:red">Rule-based algorithms must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).</span>
-
-If you're running Jekyll v3.7+ and self-hosting you can quickly install the theme as a Ruby gem.
 
 ## Download code lists
 Right click on link to save as a ".txt" file (i.e. using option "save link as")
