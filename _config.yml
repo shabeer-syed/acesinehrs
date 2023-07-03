@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "ACEsinEHRs"
 description              : "A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)"
-url                      : https://shabeer-syed.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://acesinehrs.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/acesinehrs" # the subpath of your site, e.g. "/blog"
 repository               : "shabeer-syed/acesinehrs" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
