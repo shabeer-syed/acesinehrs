@@ -4,8 +4,8 @@ permalink: /
 header:
   overlay_color: "#5e616c"
   overlay_image: /images/ACEsinEHRs home page 2023.jpg
-  cta_label: "<i class='fas fa-question-circle'></i> What is ACEsinEHRs?"
-  cta_url: "/docs/quick-start-guide/"
+  cta_label: "What is ACEsinEHRs <i class='fas fa-question-circle'></i>"
+  cta_url: "/starterguide/"
   caption:
 excerpt: 'A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs) <br /> <small><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext">New study out in Lancet Public Health!</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
