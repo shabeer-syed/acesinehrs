@@ -58,7 +58,7 @@ intro:
 
 <a href="https://shabeer-syed.github.io/acesinehrs/about/"><img src="/images/About ACEsinEHRs.png" alt="Five cats looking around a field." caption="About ACEs in EHRs"/></a>
 
-{% include figure image_path="/assets/images/unsplash-image-10.jpg" alt="this is a placeholder image" caption="This is a figure caption." %}
+{% include figure image_path="/images/About ACEsinEHRs.png" alt="this is a placeholder image" caption="This is a figure caption." %}
 
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
