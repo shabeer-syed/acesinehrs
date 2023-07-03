@@ -39,7 +39,7 @@ For hospital and death registration records, we define indicators by combining c
 Unless specified, indicators refers to information recorded in both child and maternal records.
 
 **Note:** The indicators uses [control flow methods](https://advanced-r-solutions.rbind.io/control-flow.html) to implement rule-based algorithms must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
-{: .notice--warning}
+{: .notice--danger}
 
 ## Download code lists
 Right click on link to save as a ".txt" file (i.e. using option "save link as")
@@ -49,7 +49,6 @@ Right click on link to save as a ".txt" file (i.e. using option "save link as")
 *Total number of excluded/tested codes: 7671*
 
 ## Control documentation
-
 
 * [ACEsinEHRs control documentation / release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
 
