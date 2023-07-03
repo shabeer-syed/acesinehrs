@@ -56,11 +56,7 @@ intro:
 {% include feature_row id="intro" type="center" %}
 {% include feature_row %}
 
-<a href="https://en.wikipedia.org/wiki/Cat"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field."/></a>
-
-[![](/images/About ACEsinEHRs.png)](https://shabeer-syed.github.io/acesinehrs/about/)
-{: .full}
-*About ACEs in EHRs
+<a href="https://shabeer-syed.github.io/acesinehrs/about/"><img src="/images/About ACEsinEHRs.png" alt="Five cats looking around a field." caption="About ACEs in EHRs"/></a>
 
 {% include figure image_path="/assets/images/unsplash-image-10.jpg" alt="this is a placeholder image" caption="This is a figure caption." %}
 
