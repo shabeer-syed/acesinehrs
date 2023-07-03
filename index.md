@@ -26,9 +26,9 @@ feature_row:
     alt: "ACE domains and indicators"
     title: "Domains & indicators"
     excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
-    url: "/docs/license/"
+    url: "/domains/"
     btn_label: "Learn More"
-  - image_path: ACEs browse code lists.jpg
+  - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20browse%20code%20lists.jpg
     alt: "browse code lists"
     title: "Browse code lists"
     excerpt: "View and download the ACEs and indicators. Free to use however you want under license."
