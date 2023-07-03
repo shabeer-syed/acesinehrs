@@ -104,22 +104,23 @@ Visit:
 
 ## Suggested implementation of indicators
 
-
 Whilst most indicators are ready to use by merging the correct code list with your data, some indicators requires rule-based algorithms as listed below. 
 
 ### 1-2. Merge code lists with the data file containing the target population
-e.g. ensure correct ages for children/mothers
-
-![alt text](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/merge%20codelist.png)
-
-### 3.1 Convert continuous measures to binary indicators using the additional "cut-off" variable provided (i.e. data > cut_off)**
 
 ```ruby
-e.g. Example "one liner" in R or Python with dplyr:
+e.g. ensure correct ages for children/mothers
 ```
+![alt text](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/merge%20codelist.png)
 
- `e.g. mmhps_alcohol <- merged_data %>% filter(Domain=="mMHPs" & Indicator 1=="Alcohol misuse" & scale=="1" & data1 > cut_off)`
+### 3.1 Convert continuous measures to binary indicators**
 
+Use the additional "cut-off" variable provided in code lists (i.e. data > cut_off):
+
+```ruby
+ Example "one liner" in R or Python with dplyr:
+mmhps_alcohol <- merged_data %>% filter(Domain=="mMHPs" & Indicator 1=="Alcohol misuse" & scale=="1" & data1 > cut_off)
+```
 ### 3.2 Apply more advanced [control flow methods](https://adv-r.hadley.nz/control-flow.html)
 
 Apply multiple rule-based algorithims (age critera, accident exclusions etc) using control flow (data dependent "if then assumptions") are widley covered by the data science community ([1](https://adv-r.hadley.nz/control-flow.html) [2](https://advanced-r-solutions.rbind.io/control-flow.html)).
