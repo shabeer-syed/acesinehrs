@@ -114,7 +114,9 @@ e.g. ensure correct ages for children/mothers
 
 ### 3.1 Convert continuous measures to binary indicators using the additional "cut-off" variable provided (i.e. data > cut_off)**
 
+```ruby
 e.g. Example "one liner" in R or Python with dplyr:
+```
 
  `e.g. mmhps_alcohol <- merged_data %>% filter(Domain=="mMHPs" & Indicator 1=="Alcohol misuse" & scale=="1" & data1 > cut_off)`
 
