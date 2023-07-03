@@ -1,9 +1,11 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
     url: https://shabeer-syed.github.io/acesinehrs/about/
+  - title: "Quick-Start Guide"
+    url: https://shabeer-syed.github.io/acesinehrs/research/
+  - title: "Research"
+    url: https://shabeer-syed.github.io/acesinehrs/codelist/
   - title: "Browse code list"
     url: https://shabeer-syed.github.io/acesinehrs/codelist/
   - title: "View domains & indicators"
