@@ -1,5 +1,6 @@
 ---
-layout: splash
+layout: single
+classes: wide
 permalink: /
 header:
   overlay_color: "#5e616c"
