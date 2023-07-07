@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: single
 title: "Quick-Start Guide"
 permalink: /starterguide/
 header:
