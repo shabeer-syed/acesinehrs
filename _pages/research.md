@@ -13,6 +13,11 @@ excerpt: 'A library of indicators for identifying Adverse Childhood Experiences 
 
 ---
 
+[Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext)
+
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="150725211"></div>
+
+
 [Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study](https://doi.org/10.1016/S2589-7500(22)00061-9)
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="128460919"></div>
