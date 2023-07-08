@@ -4,7 +4,7 @@ title: "About"
 permalink: /about/
 header:
   overlay_color: "#074667"
-  overlay_image: /images/ACEsinEHRs about page.jpg
+  overlay_image: /images/ACEsinEHRs about page overlay.jpg
   cta_label: 
   cta_url: 
   caption:
