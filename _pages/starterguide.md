@@ -1,7 +1,6 @@
 ---
 layout: single
 classes:
-  - wide
 title: "Getting started"
 permalink: /starterguide/
 header:
