@@ -1,6 +1,6 @@
 ---
 layout: splash
-permalink: /codelist/
+permalink: /codelistbrowse/
 title: "Code list browser ACEs"
 author_profile: false
 ---
