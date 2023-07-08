@@ -1,5 +1,7 @@
 ---
 layout: single
+classes:
+  - wide
 title: "Getting started"
 permalink: /starterguide/
 header:
@@ -24,11 +26,11 @@ Welcome to the marvellous world of *ACEs in EHRs*! We provide clinically validat
 
 ## How does it work?
 To use the ACE indicators, you will need:
-* Access to EHR data source: Obtain authorised and de-identified data of children and parents for research purposes. Most ACEs are captured in primary care. Several data sources in the UK provide linked primary care data of children and parents, including the [Clinical Practice Research Datalink (CPRD)](https://cprd.com/),[The Health Improvement Network (THIN)](https://www.the-health-improvement-network.com/), [QResearch](https://www.qresearch.org/). Explore more data sources at the [Health Data Research Innovation Gateway](https://www.healthdatagateway.org).
-* Data linkage of child and parent data: Implement robust data linkage of child and parent EHRs. Providers like CPRD allows you to access already established linkages of mother-child data. For linkage of mother child data in other EHR databases, please see methods described elsewhere ([1](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0164667],[2](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext),[3](https://onlinelibrary.wiley.com/doi/full/10.1002/pds.4811). For paternal linkage, please see methods described [here](https://www.thelancet.com/cms/10.1016/S2468-2667(23)00119-6/attachment/9c50602c-ebd2-445f-ae3b-de30e2a1db14/mmc1.pdf)
-* ACE Indicators: You are in the right place. We describe the ACEs below. Once you're ready please head over to the [download section](https://acesinehrs.com/starterguide/#download-code-lists), where we provide a comprehensive list of validated ACE indicators based on established research and definitions.
-* Data extraction and preparation: Extract the necessary data elements from the EHRs related to ACE indicators, and relevant health outcomes. Prepare the data by cleaning and structuring it in a format ready for merging with relevant ACEs code list.
-* Apply algorithms for ACE indicators: Apply appropriate ACE algorithms using R, Python or any data management language to ensure you obtain validated indicators in the linked child and parent data.
+* **Access to EHR data source:** Obtain authorised and de-identified data of children and parents for research purposes. Most ACEs are captured in primary care. Several data sources in the UK provide linked primary care data of children and parents, including the [Clinical Practice Research Datalink (CPRD)](https://cprd.com/),[The Health Improvement Network (THIN)](https://www.the-health-improvement-network.com/), [QResearch](https://www.qresearch.org/). Explore more data sources at the [Health Data Research Innovation Gateway](https://www.healthdatagateway.org).
+* **Data linkage of child and parent data:** Implement robust data linkage of child and parent EHRs. Providers like CPRD allows you to access already established linkages of mother-child data. For linkage of mother child data in other EHR databases, please see methods described elsewhere [1] (https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0164667),[2](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext),[3](https://onlinelibrary.wiley.com/doi/full/10.1002/pds.4811). For paternal linkage, please see methods described [here](https://www.thelancet.com/cms/10.1016/S2468-2667(23)00119-6/attachment/9c50602c-ebd2-445f-ae3b-de30e2a1db14/mmc1.pdf)
+* **ACE Indicators:** You are in the right place. We describe the ACEs below. Once you're ready please head over to the [download section](https://acesinehrs.com/starterguide/#download-code-lists), where we provide a comprehensive list of validated ACE indicators based on established research and definitions.
+* **Data extraction and preparation:** Extract the necessary data elements from the EHRs related to ACE indicators, and relevant health outcomes. Prepare the data by cleaning and structuring it in a format ready for merging with relevant ACEs code list.
+* **Apply algorithms for ACE indicators:** Apply appropriate ACE algorithms using R, Python or any data management language to ensure you obtain validated indicators in the linked child and parent data.
 
 ![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/implement%20centered1.png)
 
