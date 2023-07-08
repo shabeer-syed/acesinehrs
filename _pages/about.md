@@ -50,11 +50,11 @@ Each ACE indicator represents a variable of grouped codes or measures for a pote
 [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains.png)](https://shabeer-syed.github.io/ACEs/domains) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/definitions%20NEW.png)](https://shabeer-syed.github.io/ACEs/definitions)
 
 # Aims / mission statement
-We are passionate about using routinely recorded electronic health records (EHRs) as an instrument to advance health care, social justice and policy for families and young people affected by adversity.
+We are passionate about using electronic health records (EHRs) to advance health care, social justice and policy for families and young people affected by adversity.
 
-Whilst EHRs are readily available, there are significant challenges in accessing and using EHRs to inform practice and policy. EHRs are commonly stored in different databases, organisations and coding systems that can result in a complex and messy web of information, requiring specialist data management skills before it can be used. This becomes more complex when trying to study EHRs of families, which depends on accurate data linkage between parents and children.
+Whilst EHRs are routinely collected and readily available, there are significant challenges in using EHRs to inform practice and policy. EHRs are often stored in different databases, organisations and coding systems that can result in a complex and messy web of information, requiring specialist data management skills before it can be used. This becomes more complex when trying to study EHRs of families, which depends on accurate data linkage between parents and children.
 
-> **Our mission is to help improve the health of families and young people by enhancing the methodological standard, accessibility and utility of data-driven [*think-family*](https://www.scie.org.uk/publications/guides/guide30/) approaches using EHRs to study adversity.**
+> **Our mission is to help improve the health of families and young people by enhancing the methodological standard, accessibility and utility of data-driven [*think-family*](https://www.scie.org.uk/publications/guides/guide30/) approaches to study adversity using EHRs.**
 
 > **The ACE indicators aim to provide a validated system to measure intervenable and clinically relevant ACEs with the potential to support [trauma-informed](https://store.samhsa.gov/product/SAMHSA-s-Concept-of-Trauma-and-Guidance-for-a-Trauma-Informed-Approach/SMA14-4884) data-driven research, public health, policy and health care.**
 
@@ -62,7 +62,7 @@ Whilst EHRs are readily available, there are significant challenges in accessing
 
 All platform activity is publicly logged. All code for data management and analysis is shared under open licenses.
 
-We follow the [Minsk Declaration](https://www.euro.who.int/en/publications/policy-documents/the-minsk-declaration) by the WHO and view all ACEs through a *"life-course"* and a *"trauma-informed"* lens. This approach acknowledges that risk is not static and depends on the interaction of multiple unmeasured promotive, protective, and risk factors throughout generations and people's lives.
+We follow WHO's [Minsk Declaration](https://www.euro.who.int/en/publications/policy-documents/the-minsk-declaration) and view ACEs through a *"life-course"* and a *"trauma-informed"* lens. This approach acknowledges that risk is not static and depends on the interaction of multiple unmeasured promotive, protective, and risk factors throughout generations and people's lives.
 
 # Limitations of ACE indicators 
 It is essential to note that ACE indicators:
