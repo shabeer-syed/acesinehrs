@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Domains and indicators"
+title: "Domains, indicators & code lists"
 permalink: /domains/
 entries_layout: grid
 header:
