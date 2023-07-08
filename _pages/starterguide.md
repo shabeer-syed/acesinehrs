@@ -8,7 +8,7 @@ header:
   cta_label: 
   cta_url: 
   caption:
-excerpt: 'Adverse childhood experiences (ACEs) are potentially traumatic, neglectful or violent experiences in childhood which can have profound impact on children and families lives and long-term health.<br /> <small><a> Incoperating information on ACEs into electronic health records (EHRs) can help public health and healthcare organisations, and clinicians to enhance patient care. </a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'We are passionate about using EHRs to advance healthcare, social justice, and policy for families and young people affected by adversity. This guide will give you a quick introduction to incorporating validated indicators, code lists and scripts for measuring intervenable and clinically relevant ACEs using EHRs.<br /> <small><a> EHRs are often stored in different databases, organisations, and coding systems, resulting in a complex and fragmented web of information. In addition, EHRs from families require a "think-family" approach to implementation, including accurate data linkage between parents and children. </a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 last_modified_at: 2021-06-07T08:48:05-04:00
 redirect_from:
   - /theme-setup/
