@@ -22,6 +22,9 @@ excerpt: 'A library of indicators for identifying Adverse Childhood Experiences 
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="128460919"></div>
 
+[An external validation of coding for childhood maltreatment in routinely collected primary and secondary care data](https://www.nature.com/articles/s41598-023-34011-3)
+
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="148625842"></div>
 
 [Predictive value of indicators for identifying child maltreatment and intimate partner violence in coded electronic health records: a systematic review and meta-analysis](http://dx.doi.org/10.1136/archdischild-2020-319027)
 
