@@ -132,9 +132,9 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
+    - label: "NIHR Children and Families Policy Research Unit"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: "https://www.ucl.ac.uk/children-policy-research/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
