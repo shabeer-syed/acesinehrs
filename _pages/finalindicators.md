@@ -12,7 +12,7 @@ excerpt: 'Definition <br /> <small><a>  </a></small> Any act of commission or om
 
 ---
 {% include base_path %}
-
+[Download code lists](/finalindicators/#download-code-lists){: .btn .btn--info}{: .align-right}
 <div class="flourish-embed flourish-table" data-src="visualisation/8622661"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
 ## Download code lists
