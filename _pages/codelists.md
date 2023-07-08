@@ -1,0 +1,26 @@
+---
+layout: splash
+title: "Download code lists"
+permalink: /codelists/
+entries_layout: grid
+header:
+  overlay_color: "#5e616c"
+  overlay_image: /images/ACEsinEHRs home page 2023.jpg
+  cta_label: "<i class='fa fa-download'></i> What is ACEsinEHRs?"
+  cta_url: "/docs/quick-start-guide/"
+  caption:
+excerpt: 'A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs) <br /> <small><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext">New study out in Lancet Public Health!</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+
+github:
+  - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+
+---
+
+{% include base_path %}
+
+# Domains and indicators of ACEs
+
+ [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20indicators.png)](https://shabeer-syed.github.io/acesinehrs/finalindicators/) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/child%20maltreatment.png)](https://shabeer-syed.github.io/acesinehrs/CM/)
+ [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Intimate%20partner%20violence.png)](https://shabeer-syed.github.io/acesinehrs/IPV/) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/parental%20mental%20health%20problems.png)](https://shabeer-syed.github.io/acesinehrs/MHPs/)
+ [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Parental%20substance%20misuse.png)](https://shabeer-syed.github.io/acesinehrs/SM/) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/adverse%20family%20environments.png)](https://shabeer-syed.github.io/acesinehrs/AFE/)
+[![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/high-risk%20presentattion%20of%20child%20maltreatment.png)](https://shabeer-syed.github.io/acesinehrs/HRPCM/) | -  
