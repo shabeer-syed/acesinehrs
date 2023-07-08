@@ -62,7 +62,7 @@ Whilst EHRs are routinely collected and readily available, there are significant
 
 All platform activity is publicly logged. All code for data management and analysis is shared under open licenses.
 
-We follow WHO's [Minsk Declaration](https://www.euro.who.int/en/publications/policy-documents/the-minsk-declaration) and view ACEs through a *"life-course"* and a *"trauma-informed"* lens. This approach acknowledges that risk is not static and depends on the interaction of multiple unmeasured promotive, protective, and risk factors throughout generations and people's lives.
+We follow WHO's [Minsk Declaration](https://apps.who.int/iris/bitstream/handle/10665/349095/WHO-EURO-2015-4177-43936-61918-eng.pdf?sequence=1) and view ACEs through a *"life-course"* and a *"trauma-informed"* lens. This approach acknowledges that risk is not static and depends on the interaction of multiple unmeasured promotive, protective, and risk factors throughout generations and people's lives.
 
 # Limitations of ACE indicators 
 It is essential to note that ACE indicators:
