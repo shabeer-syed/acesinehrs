@@ -3,7 +3,7 @@ layout: splash
 title: "About"
 permalink: /about/
 header:
-  overlay_color: "#5e616c"
+  overlay_color: "#074667"
   overlay_image: /images/ACEsinEHRs about page.jpg
   cta_label: 
   cta_url: 
