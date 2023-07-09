@@ -136,7 +136,7 @@ footer:
       icon: "fas fa-university"
       url: "https://www.ucl.ac.uk/children-policy-research/"
     - label: "NIHR CPRU"
-      icon: "fad fa-circle"
+      icon: "fas fa-dot-circle"
       url: "https://www.ucl.ac.uk/children-policy-research/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
