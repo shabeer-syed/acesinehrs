@@ -83,7 +83,7 @@ We have converted several original codes so the codelists contains one column of
 
 | Code | Coding  term  | Indicator 1 | Indicator 2 |  domain | severity | scale | reference | individual | coding system |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 912 | [D]Anorexia	Anorexia | Anorexia | Eating disorders | Maternal mental health problem | diagnostic |  |  | 2 | Read | 
+| 912 | [D]Anorexia	Anorexia | Anorexia | Eating disorders | Parental mental health problem | diagnostic |  |  | 2 | Read | 
 
 # Data preparation and standardisation
 Implementing the ACE indicators using the provided code lists requires preparing and re-structuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms. 
