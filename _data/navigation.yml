@@ -35,11 +35,13 @@ docs:
 
   - title: Data preparation
     children:
-      - title: "Data preparation and standardisation"
+      - title: "Introduction"
         url: /starterguide/#data-preparation-and-standardisation
-      - title: "Data cleaning and code standardisation"
+      - title: "Data extraction & re-structering"
         url: /starterguide/#data-cleaning-and-code-standardisation
-      - title: "Prefixes for converted codes"
+      - title: "Data cleaning & code standardisation"
+        url: /starterguide/#data-cleaning-and-code-standardisation
+      - title: "Converting codes - Prefixes"
         url: /starterguide/#data-cleaning-and-code-standardisation
       - title: "Data integration & retrieving ACEs"
         url: /starterguide/#data-integration-and-aces-retrival-process
