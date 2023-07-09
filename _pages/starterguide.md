@@ -38,13 +38,20 @@ To use the ACE indicators, you will need:
 We developed two measures of ACEs for electronic health records (EHRs):
 * Domains (ie, grouped indicators) and;
 * Indicators (ie, grouped codes or measures)
+  * Indicator 2
+    * Indicator 1
+      * Most specific indicator
+        * Code  
+
+Indicators represent a variable of grouped codes or measures for a potential recorded ACE in mothers, fathers or children. The ACEs follows a hierarchical structure, and has three levels of specificity of the underlying ACE construct. The structure ranging from the most specific ACE category (specific indicator), to broader categories (indicator 2), to six overall ACE domains consistent with the original [ACE study](/about/).
 
 [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/domains%20and%20indicators%201.png)](https://shabeer-syed.github.io/ACEs/domains)
 
-Indicators represent a variable of grouped codes or measures for a potential recorded ACE in mothers, fathers or children. Each ACE indicator has three levels of specificity of the underlying ACE construct, ranging from the most specific ACE category to broader categories (indicator 2).  Indicators are further grouped into six overall ACE domains consistent with the original [ACE study](/about/).
-
 **Note:** The ability to use specific indicators depends on your sample size. We recommend restricting the disaggregation of specific indicators to those present in 250 or more unique children. For many studies, it will be most appropriate to use the six ACE domains only and avoid disaggregation into specific indicators unless required to answer your research question.
 {: .notice--danger}
+
+## Code lists to derive indicators
+As mentioned above, ACEs are derived by identifying patients with codes linked to each ACE indicator. Codes represent a clinical or event description, and are stored in donwloadble code lists.
 
 For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
 
