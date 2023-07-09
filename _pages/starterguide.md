@@ -88,7 +88,6 @@ We have converted several original codes so the codelists contains one column of
 # Data preparation and standardisation
 Implementing the ACE indicators using code lists requires preparing and re-structuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms.
 
-
 **Skills check** <i class="fas fa-exclamation-triangle" style="color: #e3740d;"></i> Implementing the ACE indicators in more complex data sets like primary care data (GP records) requires knowledge of how to re-structure, manipulate and combine multiple large data sets into one or multiple new files. Depending on resources available, we recommend beginner to intermediate skills in a programming language of choice (e.g., Python, R). Many data management tasks involves a [split-apply-combine strategy](https://www.jstatsoft.org/article/view/v059i10), that is, the ability to "..break up a big problem into manageable pieces, operate on each piece independently and then put all the pieces back together. (Wickham, 2014, p1)"
 {: .notice--danger}
 
@@ -96,16 +95,47 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
 * Having identified your cohort, extract only the relevant patient data from each large EHR file across the different sources
 * Restructure all files and data fields (variables) into the same long format, and rename variable into consistent names. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.
 * Keep only essential data fields/variables to reduce file size. e.g. In the CPRD clinical file, the vairables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
-* Add an extra variable depiciting the original data source (HES episodes, CPRD clinical), as the data will be compiled into one file in the end.
+* Add an extra variable to each data file to label the original data source (HES, CPRD clinical), as the data will be compiled into one file later.
 
 ## Data cleaning and code standardisation
-* Clean and remove any punctuation, white spaces or trailing alphanumerics from data fields with relevant codes
-* Make sure you convert all data to the same class e.g. character, date (in the appropriate format so R or Python understand, e.g, date: year-month-date)
-* Make sure to convert codes (see code list dictionary) that share the same alphanumeric code as others into unique codes to avoid deduplication and preserve their orginal linked ACE indicator. For example, Prodcodes (i.e. medications/prescriptions), medcodes (i.e. diagnoses/symptoms) and ICD-9 codes share thousands of codes with the exact the same alphanumeric but they mean different things.
+* Clean and remove any punctuations, white spaces or trailing alphanumerics from data fields with relevant codes
+* For each file, convert all data fields into the same classes ( e.g. character, date) and machine readible format (e.g., R and Python likes dates as: year-month-day)
+* Make sure to convert codes (see code list dictionary for pre-fixes) that share the same alphanumeric code as other codes into new unique codes to avoid deduplication, preserving their orginal linked ACE indicator. For example, Prodcodes (i.e. medications/prescriptions), medcodes (i.e. diagnoses/symptoms) and ICD-9 codes share thousands of the same alphanumeric codes but with different meanings and event descriptions.
   ```ruby
   For example: "11246 (prodcode) - Lofexidine 200 microgram tablets" vs. 11246 (medcode) – At risk violence in the home"
   ```
-  * To perserve each code's uniqueness, each code lists already come with added pre-fixes to following coding systems: "prodcodes", "ICD-9 codes", "HES-A&E", "HES-OP", "OPCS-4", and HES-APC speciality fields (e.g. discharge/admission source). For prodcodes, we add the prefix “d_” to the coding column to the therapy file and your code list. Similarly, for ICD-9 add the prefix, “e_”.
+  * To perserve each code's uniqueness, we have added pre-fixes to each relevant code lists.
+
+| Data source & Coding system | Prefix added | example | 
+| --- | --- | --- |
+| CPRD GOLD: Prodcode (Gemscript product code) | d_ | d_727 - Sertraline 100mg tablets | 
+| ONS Mortality data collected ≤2000 & HES-APC ≤1998: ICD-9 | e_ | e_5713 - Alcoholic liver damage unspecified | 
+| HES-APC: OPCS-4 | p_ | p_X66 - Cognitive behavioural therapy | 
+| HES-A&E: A&E specific diagnosis system | aed_ | aed_144 - Poisoning (inc overdose) - other, inc alcohol | 
+| HES-A&E: A&E speciality field "treatment" | aet_ | aet_54 - Social worker intervention | 
+| HES-A&E: A&E specific diagnosis system | aed_ | aear_2 - Local authority social services,aepatgroup
+ | 
+| HES-A&E: A&E specific diagnosis system | aed_ | aed_144  Poisoning (inc overdose) - other, inc alcohol | 
+| HES-APC: OPCS-4 | p_ | p_X66 - Cognitive behavioural therapy | 
+| HES-APC: OPCS-4 | p_ | p_X66 - Cognitive behavioural therapy | 
+| HES-APC: OPCS-4 | p_ | p_X66 - Cognitive behavioural therapy | 
+
+
+opt_711	  Child and Adolescent Psychiatry Service
+tretspef
+ opm_710 mainspef
+aear_2
+aed_144  Poisoning (inc overdose) - other, inc alcohol
+aei_21  Pregnancy test
+invest
+![image](https://github.com/shabeer-syed/acesinehrs/assets/82370997/60255982-1ba4-4446-8c5d-6ece8a2cce38)
+
+
+
+
+Adult Mental Illness
+
+  *  "", " codes", "HES-A&E", "HES-OP", "OPCS-4", and HES-APC speciality fields (e.g. discharge/admission source). For prodcodes, we add the prefix “d_” to the coding column to the therapy file and your code list. Similarly, for ICD-9 add the prefix, “e_”.
 
 * Develop a data integration process to combine all the EHR data into a unified format.
 •	Standardize the coding systems across different data sources to a common coding system (e.g., mapping CPRD GOLD codes to ICd-10 codes).
