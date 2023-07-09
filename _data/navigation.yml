@@ -28,14 +28,8 @@ docs:
     children:
       - title: "Code list dictionary"
         url: /starterguide/#code-list-dictionary
-      - title: "Navigation"
-        url: /docs/navigation/
       - title: "Example"
         url: /starterguide/#example-code-attached-to-ace-indicator
-      - title: "Authors"
-        url: /docs/authors/
-      - title: "Layouts"
-        url: /docs/layouts/
 
   - title: Applications
     children:
