@@ -94,8 +94,8 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
 
 ## Data extraction and re-structering 
 * Having identified your cohort, extract only the relevant patient data from each large EHR file across the different sources
-* Restructure the files into and variables into the same long format wtih consistent variable names. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.
-* Keep only columns/variables you need to reduce size. e.g. In the CPRD clinical file, the vairables "constype, sysdate, data8" can easily be omitted, as they are rarely used for the ACEs.
+* Restructure all files and data fields (variables) into the same long format, and rename variable into consistent names. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.
+* Keep only essential data fields/variables to reduce file size. e.g. In the CPRD clinical file, the vairables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
 * Add an extra variable depiciting the original data source (HES episodes, CPRD clinical), as the data will be compiled into one file in the end.
 
 ## Data cleaning and code standardisation
