@@ -88,6 +88,7 @@ We have converted several original codes so the codelists contains one column of
 
 # Data preparation and standardisation
 ---
+Lets get the data ready for analysis!
 Implementing the ACE indicators using code lists requires preparing and re-structuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms.
 
 **Skills check** <i class="fas fa-exclamation-triangle" style="color: #e3740d;"></i> Implementing the ACE indicators in more complex data sets like primary care data (GP records) requires knowledge of how to re-structure, manipulate and combine multiple large data sets into one or multiple new files. Depending on resources available, we recommend beginner to intermediate skills in a programming language of choice (e.g., Python, R). Many data management tasks involves a [split-apply-combine strategy](https://www.jstatsoft.org/article/view/v059i10), that is, the ability to "..break up a big problem into manageable pieces, operate on each piece independently and then put all the pieces back together. (Wickham, 2014, p1)"
@@ -106,7 +107,7 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
   ```ruby
   For example: "11246 (prodcode) - Lofexidine 200 microgram tablets" vs. 11246 (medcode) – At risk violence in the home"
   ```
-  
+
 ## Conversation table for codes with pre-fixes
 * To perserve each code's uniqueness, we have added pre-fixes to each relevant code list, which affect most data sources coding systems. We list all prefixes for data preparation below.
 
@@ -120,12 +121,14 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
 | HES-A&E: A&E speciality field "investigations" | aei_ | aei_21 - Pregnancy test |  
 | HES-OP: OP speciality field "treatment" | opt_ | opt_711 - child and Adolescent Psychiatry Service |  
 
-## Data integration and ACEs retrival process
-* Once you've cleaned and restructured the multiple separate files, we recommend you re-apply the streaming approach to new files and extracting only relevant ACE data by matching the data fiels with codes in each file against your ACEs code lists.
-* Depending on research purposes, we recommend binding all files into one combined "master database" with all relevant ACE data which should now follow a consistent unified format for easier retrival.
 
-# Algorithms
+# Deriving variables
 ---
+##  ACE specific data file
+* Once you've cleaned and restructured the multiple separate files, we recommend you re-apply the streaming approach to new files and extracting only relevant ACE data by matching the data fiels with codes in each file against your ACEs code lists.
+* Depending on research purposes, we recommend binding all retrived ACE files into one combined "master database" with all relevant ACE data which should now follow a consistent unified format for easier retrival.
+
+## Algorithms
 Most indicators are derived using algorithms that identify and extract information from EHRs using clinically coded healthcare information (for example ICD-10, Read codes, SNOMED-CT). Algorithms are freely available on this webpage.
 
 For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
