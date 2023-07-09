@@ -57,7 +57,7 @@ reCaptcha:
   siteKey                :
   secret                 :
 atom_feed:
-  path                   : # blank (default) uses feed.xml
+  path                   : " " #blank (default) uses feed.xml
   hide                   : true
 search                   : true
 search_full_content      : true
@@ -132,12 +132,12 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "NIHR Children and Families Policy Research Unit"
-      icon: "https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/NIHR%20CPRU%20logo%20ACEs%20in%20EHRs%20small.png"
+    - label: "UCL Great Ormond Street Institute of Child Health"
+      icon: "fas fa-university"
       url: "https://www.ucl.ac.uk/children-policy-research/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
+    - label: "NIHR CPRU"
+      icon: "class="fad fa-circle"
+      url: "https://www.ucl.ac.uk/children-policy-research/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       # url:
