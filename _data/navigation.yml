@@ -38,7 +38,7 @@ docs:
       - title: "Introduction"
         url: /starterguide/#data-preparation-and-standardisation
       - title: "Data extraction & re-structering"
-        url: /starterguide/#data-cleaning-and-code-standardisation
+        url: /starterguide/#data-extraction-and-re-structering
       - title: "Data cleaning & code standardisation"
         url: /starterguide/#data-cleaning-and-code-standardisation
       - title: "Converting codes - Prefixes"
