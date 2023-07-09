@@ -23,30 +23,30 @@ docs:
         url: /starterguide/#how-does-it-work
       - title: "ACE indicators"
         url: /starterguide/#how-does-it-work
-      - title: "Installation"
-        url: /docs/installation/
+      - title: "Domains and indicators"
+        url: /starterguide/#domains-and-indicators
       - title: "Upgrading"
         url: /docs/upgrading/
 
-  - title: Customization
+  - title: Code lists
     children:
-      - title: "Configuration"
-        url: /docs/configuration/
+      - title: "Code list dictionary"
+        url: /starterguide/#code-list-dictionary
       - title: "Navigation"
         url: /docs/navigation/
-      - title: "UI Text"
-        url: /docs/ui-text/
+      - title: "Example"
+        url: /starterguide/#example-code-attached-to-ace-indicator
       - title: "Authors"
         url: /docs/authors/
       - title: "Layouts"
         url: /docs/layouts/
 
-  - title: Content
+  - title: Applications
     children:
-      - title: "Working with Posts"
-        url: /docs/posts/
-      - title: "Working with Pages"
-        url: /docs/pages/
+      - title: "Data preparation and standardisation"
+        url: /starterguide/#data-preparation-and-standardisation
+      - title: "Data cleaning and code standardisation"
+        url: /starterguide/#data-cleaning-and-code-standardisation
       - title: "Working with Collections"
         url: /docs/collections/
       - title: "Helpers"
