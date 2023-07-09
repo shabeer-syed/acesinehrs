@@ -106,10 +106,10 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
   ```ruby
   For example: "11246 (prodcode) - Lofexidine 200 microgram tablets" vs. 11246 (medcode) – At risk violence in the home"
   ```
-* To perserve each code's uniqueness, we have added pre-fixes to each relevant code list, which affect most data sources coding systems. 
-We list all prefixes for data preparation below.
+  
+## Conversation table for codes with pre-fixes
+* To perserve each code's uniqueness, we have added pre-fixes to each relevant code list, which affect most data sources coding systems. We list all prefixes for data preparation below.
 
-### Conversation table for codes with pre-fixes
 | Data source & Coding system | Prefix added | example | 
 | --- | --- | --- |
 | CPRD GOLD: Prodcode (Gemscript product code) | d_ | d_727 - Sertraline 100mg tablets | 
