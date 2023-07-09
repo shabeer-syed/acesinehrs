@@ -91,7 +91,20 @@ Implementing the ACE indicators using the provided code lists requires preparing
 **Skills check:** Implementing the ACE indicators using more complex data sets like primary care data (GP records) requires knowledge of how to re-structure, manipulate and combine multiple large data sets into one or multiple new files. Depending on resources available, we recommend beginner to intermediate skills in a programming language of choice (e.g., Python, R). Many data management tasks involves a [split-apply-combine strategy](https://www.jstatsoft.org/article/view/v059i10), that is, the ability to "..break up a big problem into manageable pieces, operate on each piece independently and then put all the pieces back together. (Wickham, 2014, p1)" 
 {: .notice--danger}
 
-•	Gather the EHR data from different sources using its own coding system.
+### Data extraction and re-structering 
+* Having identified your cohort, extract only the relevant patient data from each large EHR file from the different sources
+* Restructure the files into the same long format and with the same consistent variable names. For example, ONS mortality data and HES-APC is provided by CPRD in wide format and needs restructuring.
+* Keep only columns/variables you need to reduce size. e.g. In the CPRD clinical file, the vairables "constype, sysdate, data8" can easily be omitted, as they are rarely used for the ACEs.
+* Add an extra variable depiciting the original data source (HES episodes, CPRD clinical), as the data will be compiled into one file in the end.
+
+### Data cleaning and code standardisation
+* Clean and remove any punctuation, white spaces or trailing alphanumerics from data fields with relevant codes
+* Make sure you convert all data to the same class e.g. character, date (in the appropriate format so R or Python understand, e.g, date: year-month-date)
+
+![image](https://github.com/shabeer-syed/acesinehrs/assets/82370997/03006d03-2095-482e-9a66-bbc3e9a989dc)
+
+![image](https://github.com/shabeer-syed/acesinehrs/assets/82370997/0706cc0a-5f5d-4016-a37b-9a42dcdc2625)
+
 •	Develop a data integration process to combine all the EHR data into a unified format.
 •	Standardize the coding systems across different data sources to a common coding system (e.g., mapping CPRD GOLD codes to ICd-10 codes).
 •	Create a master database or data repository where all the standardized EHR data will be stored.
