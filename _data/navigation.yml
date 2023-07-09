@@ -19,10 +19,10 @@ main:
 docs:
   - title: Getting Started
     children:
-      - title: "Quick-Start Guide"
-        url: /docs/quick-start-guide/
-      - title: "Structure"
-        url: /docs/structure/
+      - title: "Overview: how does it work?"
+        url: /starterguide/#how-does-it-work
+      - title: "ACE indicators"
+        url: /starterguide/#how-does-it-work
       - title: "Installation"
         url: /docs/installation/
       - title: "Upgrading"
