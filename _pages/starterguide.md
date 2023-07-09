@@ -129,7 +129,7 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
 * Depending on research purposes, we recommend binding all retrived ACE files into one combined "master database" with all relevant ACE data which should now follow a consistent unified format for easier retrival.
 
 ## Merge code lists
-* Nost indicators are ready to use by merging the correct code list with your prepared ACE data file
+* Most indicators are ready to use by merging the correct code list with your prepared ACE data file
 * Having merged the code lists, keep only one ACE indicator or domain per each unique child within relevant study period
 
 **Time restrictions:** The validated ACE indicators are time sensitive and applies any time between 2 years before birth and 10 years after birth. However, most child maltreatment and high-risk presentations of child maltreatment are limited to 2 years before to 3, or 5 years after birth. Acertaining correct time periods in relation children's birthdate is essential.
@@ -140,7 +140,7 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
  * For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
  * For hospital and death registration records, we define indicators by combining codes from the International Classification of Diseases 9th/10th edition (ICD-9/10), the Classification of Interventions and Procedures (OPCS-4) and HES-APC discharge/admission fields. We also provide cross-mapped unvalidated indicators for newer systems (ICD-11/SNOMED CT) for further evaluation. Browse code lists [here](https://acesinehrs.com/codelistbrowse/).
 
-# Apply if-then assumptions based on the code list
+## Apply if-then assumptions based on the code list
  * We recommend using [control flow methods](https://advanced-r-solutions.rbind.io/control-flow.html) to apply "if-then" assumptions to rows where the "Code" column value is present in the code list and additional conditions are met. We recommend using "dplyr::case_when()" function to apply multiple if-then assumptions based input from a separate code list or by the using merged variables.
 
 ```ruby
@@ -151,6 +151,7 @@ data <- data %>%
     TRUE ~ NA
   ))
 ```
+
  * You can add more conditions using & (logical AND) or | (logical OR) operators, and assign the desired binary variable values (1 or 0) accordingly.
 
 # Download code lists
