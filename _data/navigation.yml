@@ -21,100 +21,30 @@ docs:
     children:
       - title: "Overview: how does it work?"
         url: /starterguide/#how-does-it-work
-      - title: "ACE indicators"
-        url: /starterguide/#how-does-it-work
-      - title: "Installation"
-        url: /docs/installation/
-      - title: "Upgrading"
-        url: /docs/upgrading/
+      - title: "Domains and indicators"
+        url: /starterguide/#domains-and-indicators
+        
+    - title: Code lists
+      children:
+        - title: "Code list dictionary"
+          url: /starterguide/#code-list-dictionary
+        - title: "Example"
+          url: /starterguide/#example-code-attached-to-ace-indicator
 
-  - title: Customization
+  - title: Applications
     children:
-      - title: "Configuration"
-        url: /docs/configuration/
-      - title: "Navigation"
-        url: /docs/navigation/
-      - title: "UI Text"
-        url: /docs/ui-text/
-      - title: "Authors"
-        url: /docs/authors/
-      - title: "Layouts"
-        url: /docs/layouts/
+      - title: "Data preparation and standardisation"
+        url: /starterguide/#data-preparation-and-standardisation
+      - title: "Data cleaning and code standardisation"
+        url: /starterguide/#data-cleaning-and-code-standardisation
+      - title: "Prefixes for converted codes"
+        url: /starterguide/#data-cleaning-and-code-standardisation
+      - title: "Data integration & retrieving ACEs"
+        url: /starterguide/#data-integration-and-aces-retrival-process
+      - title: "Algorithms"
+        url: /starterguide/#algorithms
 
-  - title: Content
+  - title: Downloads
     children:
-      - title: "Working with Posts"
-        url: /docs/posts/
-      - title: "Working with Pages"
-        url: /docs/pages/
-      - title: "Working with Collections"
-        url: /docs/collections/
-      - title: "Helpers"
-        url: /docs/helpers/
-      - title: "Utility Classes"
-        url: /docs/utility-classes/
-
-  - title: Extras
-    children:
-      - title: "Stylesheets"
-        url: /docs/stylesheets/
-      - title: "JavaScript"
-        url: /docs/javascript/
-
-  - title: Meta
-    children:
-      - title: "History"
-        url: /docs/history/
-      - title: "Contributing"
-        url: /docs/contributing/
-      - title: "Old 2.2 Docs"
-        url: /docs/docs-2-2/
-      - title: "License"
-        url: /docs/license/
-      - title: "Terms &amp; Privacy Policy"
-        url: /terms/
-  - title: Customization
-    children:
-      - title: "Configuration"
-        url: /docs/configuration/
-      - title: "Navigation"
-        url: /docs/navigation/
-      - title: "UI Text"
-        url: /docs/ui-text/
-      - title: "Authors"
-        url: /docs/authors/
-      - title: "Layouts"
-        url: /docs/layouts/
-
-  - title: Content
-    children:
-      - title: "Working with Posts"
-        url: /docs/posts/
-      - title: "Working with Pages"
-        url: /docs/pages/
-      - title: "Working with Collections"
-        url: /docs/collections/
-      - title: "Helpers"
-        url: /docs/helpers/
-      - title: "Utility Classes"
-        url: /docs/utility-classes/
-
-  - title: Extras
-    children:
-      - title: "Stylesheets"
-        url: /docs/stylesheets/
-      - title: "JavaScript"
-        url: /docs/javascript/
-
-  - title: Meta
-    children:
-      - title: "History"
-        url: /docs/history/
-      - title: "Contributing"
-        url: /docs/contributing/
-      - title: "Old 2.2 Docs"
-        url: /docs/docs-2-2/
-      - title: "License"
-        url: /docs/license/
-      - title: "Terms &amp; Privacy Policy"
-        url: /terms/
+      - title: "Download code lists"
+        url: /starterguide/#download-code-lists
