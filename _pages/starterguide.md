@@ -128,40 +128,30 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
 * Once you've cleaned and restructured the multiple separate files, we recommend you re-apply the streaming approach to new files and extracting only relevant ACE data by matching the data fiels with codes in each file against your ACEs code lists.
 * Depending on research purposes, we recommend binding all retrived ACE files into one combined "master database" with all relevant ACE data which should now follow a consistent unified format for easier retrival.
 
-## Algorithms
- we assume that the if-then assumptions should be applied to the rows where the "Code" column value is present in the code list and additional conditions are met.
+## Merge code lists
+* Nost indicators are ready to use by merging the correct code list with your prepared ACE data file
+* Having merged the code lists, keep only one ACE indicator or domain per each unique child within relevant study period
 
-Adjust the code list and the assumptions within the case_when() statement based on your specific requirements. You can add more conditions using & (logical AND) or | (logical OR) operators, and assign the desired binary variable values (1 or 0) accordingly.
-
-Make sure to adjust the column names and conditions within the case_when() statement to match your data structure and requirements.
-
-
-For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
-
-For hospital and death registration records, we define indicators by combining codes from the International Classification of Diseases 9th/10th edition (ICD-9/10), the Classification of Interventions and Procedures (OPCS-4) and HES-APC discharge/admission fields. We also provide cross-mapped unvalidated indicators for newer systems (ICD-11/SNOMED CT) for further evaluation. Browse code lists [here](https://acesinehrs.com/codelistbrowse/).
-
-**Note:** The indicators uses [control flow methods](https://advanced-r-solutions.rbind.io/control-flow.html) to implement rule-based algorithms must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
+**Time restrictions:** The validated ACE indicators are time sensitive and applies any time between 2 years before birth and 10 years after birth. However, most child maltreatment and high-risk presentations of child maltreatment are limited to 2 years before to 3, or 5 years after birth. Acertaining correct time periods in relation children's birthdate is essential.
 {: .notice--danger}
 
-Whilst most indicators are ready to use by merging the correct code list with your data, some indicators requires rule-based algorithms as listed below. 
+## Algorithms
+ * A significant proportion of indicators rely on rule-based algorithms to ensure coded measures meet appropriate cut-off criteria and preventing misclassifications. Algorithms include age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
+ * For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
+ * For hospital and death registration records, we define indicators by combining codes from the International Classification of Diseases 9th/10th edition (ICD-9/10), the Classification of Interventions and Procedures (OPCS-4) and HES-APC discharge/admission fields. We also provide cross-mapped unvalidated indicators for newer systems (ICD-11/SNOMED CT) for further evaluation. Browse code lists [here](https://acesinehrs.com/codelistbrowse/).
 
-* 1-2. Merge code lists with the data file containing the target population
-
-```ruby
-e.g. ensure correct ages for children/mothers
-```
-* 3.1 Convert continuous measures to binary indicators**
-
-Use the additional "cut-off" variable provided in code lists (i.e. data > cut_off):
+# Apply if-then assumptions based on the code list
+ * We recommend using [control flow methods](https://advanced-r-solutions.rbind.io/control-flow.html) to apply "if-then" assumptions to rows where the "Code" column value is present in the code list and additional conditions are met. We recommend using "dplyr::case_when()" function to apply multiple if-then assumptions based input from a separate code list or by the using merged variables.
 
 ```ruby
- Example "one liner" in R or Python with dplyr:
-mmhps_alcohol <- merged_data %>% filter(Domain=="mMHPs" & Indicator 1=="Alcohol misuse" & scale=="1" & data1 > cut_off)
+data <- data %>%
+  mutate(Binary_Variable = case_when(
+    Code %in% code_list & Field1 > 10 & Field2 == "Value" ~ 1,
+    Code %in% code_list & Field1 <= 10 & Field2 != "Value" ~ 0,
+    TRUE ~ NA
+  ))
 ```
-* 3.2 Apply more advanced [control flow methods](https://adv-r.hadley.nz/control-flow.html)
-
-Apply multiple rule-based algorithims (age critera, accident exclusions etc) using control flow (data dependent "if then assumptions") are widley covered by the data science community ([1](https://adv-r.hadley.nz/control-flow.html) [2](https://advanced-r-solutions.rbind.io/control-flow.html)).
-
+ * You can add more conditions using & (logical AND) or | (logical OR) operators, and assign the desired binary variable values (1 or 0) accordingly.
 
 # Download code lists
 * [ACEsinEHRs control documentation / release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
