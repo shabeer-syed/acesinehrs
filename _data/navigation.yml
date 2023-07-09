@@ -21,12 +21,8 @@ docs:
     children:
       - title: "Overview: how does it work?"
         url: /starterguide/#how-does-it-work
-      - title: "ACE indicators"
-        url: /starterguide/#how-does-it-work
       - title: "Domains and indicators"
         url: /starterguide/#domains-and-indicators
-      - title: "Upgrading"
-        url: /docs/upgrading/
 
   - title: Code lists
     children:
