@@ -23,7 +23,7 @@ sidebar:
 
 Welcome to the marvellous world of EHRs! We provide clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course. In the UK, parents' and children's EHRs can be linked across services. The ability to link parents' and children's records allows for measuring ACEs before pregnancy, throughout childhood and intergenerationally. This is important because measuring ACEs requires a "think-family" approach - we need both children's and parents' data! Think-family means we recognise that the health and well-being of children are intricately tied to their parents' experiences and health outcomes.
 
-## How does it work?
+# How does it work?
 To use the ACE indicators, you will need:
 * **Access to an EHR data source for research:** Obtain authorised and de-identified data of children and parents for research purposes. Most ACEs are captured in primary care. Several data sources in the UK provide linked primary care data of children and parents , including the [Clinical Practice Research Datalink (CPRD)](https://cprd.com/),[The Health Improvement Network (THIN)](https://www.the-health-improvement-network.com/), [QResearch](https://www.qresearch.org/).  Access to CPRD requires [protocol approval](https://cprd.com/research-applications) via CPRD’s Research Data Governance Process. Please visit the [Health Data Research Innovation Gateway](https://www.healthdatagateway.org) for more information on available data sources.
 * **OR: Access to your organisation's locally stored EHR data:** Obtain authorised access to your service's/NHS trust's locally stored EHRs of children and parents for service-related and research purposes. Many NHS trusts provide streamlined processes to access data sources like Clinical Record Interactive Search([1](https://slam.nhs.uk/clinical-record-interactive-search),[2](https://www.oxfordhealth.nhs.uk/research/toolkit/cris/),[3](https://www.southernhealth.nhs.uk/about-us/research/research-and-innovation/clinical-record-interactive-search). These local data sources often have a data structure consistent with national data sources like [HES-APC](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/hospital-episode-statistics). Contact your local contact person for academic support, process regarding data extraction, and data information analyses. 
@@ -34,7 +34,7 @@ To use the ACE indicators, you will need:
 
 ![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/implement%20centered1.png)
 
-## Domains and indicators
+# Domains and indicators
 We developed two measures of ACEs for electronic health records (EHRs):
 * Domains (ie, grouped indicators) and;
 * Indicators (ie, grouped codes or measures)
@@ -56,12 +56,12 @@ Indicators represent a variable of grouped codes or measures for a potential rec
 ![alt text](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/ehrs%20of%20aces%20indicator.png "workflow")
 <div class="flourish-embed flourish-hierarchy" data-src="visualisation/7087179"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-## Code lists
+# Code lists
 Codes of each ACE indicator are stored in [code lists](/domains/). Each data source will have different coding systems. The current ACEs indicators include ICD-9/10 codes (hospital/death records), Read codes, SNOMED-CT codes, medcodes, prodcodes, gemscripts (general practice), and codes for obtaining continuous data or coded information from speciality fields in CPRD GOLD, HES-APC, HES-A&E and HES-OP.
 
 We have converted several original codes so the codelists contains one column of research ready codes which ensures  efficieint intergration of information from multiple coding systems without accidental de-duplication. See code list dictionary for more information.
 
-### Code list dictionary
+## Code list dictionary
 
  | Provided variable | Description | 
  | --- | --- | 
@@ -85,19 +85,19 @@ We have converted several original codes so the codelists contains one column of
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 912 | [D]Anorexia	Anorexia | Anorexia | Eating disorders | Maternal mental health problem | diagnostic |  |  | 2 | Read | 
 
-## Data preparation and standardisation
+# Data preparation and standardisation
 Implementing the ACE indicators using the provided code lists requires preparing and re-structuring your data sets into a uniform standard. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms. 
 
 :warning: **Skills check:** Implementing the ACE indicators using more complex data sets like primary care data (GP records) requires knowledge of how to re-structure, manipulate and combine multiple large data sets into one or multiple new files. Depending on resources available, we recommend beginner to intermediate skills in a programming language of choice (e.g., Python, R). Many data management tasks involves a [split-apply-combine strategy](https://www.jstatsoft.org/article/view/v059i10), that is, the ability to "..break up a big problem into manageable pieces, operate on each piece independently and then put all the pieces back together. (Wickham, 2014, p1)" 
 {: .notice--danger}
 
-### Data extraction and re-structering 
+## Data extraction and re-structering 
 * Having identified your cohort, extract only the relevant patient data from each large EHR file from the different sources
 * Restructure the files into the same long format and with the same consistent variable names. For example, ONS mortality data and HES-APC is provided by CPRD in wide format and needs restructuring.
 * Keep only columns/variables you need to reduce size. e.g. In the CPRD clinical file, the vairables "constype, sysdate, data8" can easily be omitted, as they are rarely used for the ACEs.
 * Add an extra variable depiciting the original data source (HES episodes, CPRD clinical), as the data will be compiled into one file in the end.
 
-### Data cleaning and code standardisation
+## Data cleaning and code standardisation
 * Clean and remove any punctuation, white spaces or trailing alphanumerics from data fields with relevant codes
 * Make sure you convert all data to the same class e.g. character, date (in the appropriate format so R or Python understand, e.g, date: year-month-date)
 * Make sure to convert codes (see code list dictionary) that share the same alphanumeric code as others into unique codes to avoid deduplication and preserve their orginal linked ACE indicator. For example, Prodcodes (i.e. medications/prescriptions), medcodes (i.e. diagnoses/symptoms) and ICD-9 codes share thousands of codes with the exact the same alphanumeric but they mean different things.
