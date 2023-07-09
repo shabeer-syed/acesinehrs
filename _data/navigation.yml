@@ -25,8 +25,7 @@ docs:
         url: /starterguide/#domains-and-indicators
         
     - title: "Code lists"
-      url: /starterguide/#code-lists
-     children:
+      children:
       - title: "Code list dictionary"
         url: /starterguide/#code-list-dictionary
       - title: "Example"
