@@ -47,8 +47,6 @@ Each ACE indicator represents a variable of grouped codes or measures for a pote
 
 <div class="flourish-embed flourish-hierarchy" data-src="visualisation/7087179"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-[![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains.png)](https://shabeer-syed.github.io/ACEs/domains) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/definitions%20NEW.png)](https://shabeer-syed.github.io/ACEs/definitions)
-
 # Aims / mission statement
 We are passionate about using electronic health records (EHRs) to advance health care, social justice and policy for families and young people affected by adversity.
 
