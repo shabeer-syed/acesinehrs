@@ -28,7 +28,7 @@ To use the ACE indicators, you will need:
 * **Access to an EHR data source for research:** Obtain authorised and de-identified data of children and parents for research purposes. Most ACEs are captured in primary care. Several data sources in the UK provide linked primary care data of children and parents , including the [Clinical Practice Research Datalink (CPRD)](https://cprd.com/),[The Health Improvement Network (THIN)](https://www.the-health-improvement-network.com/), [QResearch](https://www.qresearch.org/).  Access to CPRD requires [protocol approval](https://cprd.com/research-applications) via CPRD’s Research Data Governance Process. Please visit the [Health Data Research Innovation Gateway](https://www.healthdatagateway.org) for more information on available data sources.
 * **OR: Access to your organisation's locally stored EHR data:** Obtain authorised access to your service's/NHS trust's locally stored EHRs of children and parents for service-related and research purposes. Many NHS trusts provide streamlined processes to access data sources like Clinical Record Interactive Search ([1](https://slam.nhs.uk/clinical-record-interactive-search),[2](https://www.oxfordhealth.nhs.uk/research/toolkit/cris/),[3](https://www.southernhealth.nhs.uk/about-us/research/research-and-innovation/clinical-record-interactive-search)). These local data sources often have a data structure consistent with national data sources like [HES-APC](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/hospital-episode-statistics). Contact your local contact person for academic support, process regarding data extraction, and data information analyses. 
 * **Data linkage of child and parent data:** Implement robust data linkage of child and parent EHRs. Providers like CPRD allows you to access already established linkages of mother-child data. For linkage of mother child data in other EHR databases, please see methods described elsewhere [1](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0164667),[2](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext),[3](https://onlinelibrary.wiley.com/doi/full/10.1002/pds.4811). For paternal linkage, please see methods described [here](https://www.thelancet.com/cms/10.1016/S2468-2667(23)00119-6/attachment/9c50602c-ebd2-445f-ae3b-de30e2a1db14/mmc1.pdf)
-* **ACE Indicators:** You are in the right place. We describe the ACEs below. Once you're ready please head over to the [download section](https://acesinehrs.com/starterguide/#download-code-lists), where we provide a comprehensive list of validated ACE indicators based on established research and definitions.
+* **ACE Indicators:** You are in the right place. Most indicators are derived using algorithms that identify and extract information from EHRs using clinically coded healthcare information (for example ICD-10, Read codes, SNOMED-CT). We describe the ACEs and algorithms below. Once you're ready please head over to the [download section](https://acesinehrs.com/starterguide/#download-code-lists), where we provide a comprehensive list of validated ACE indicators based on established research and definitions.
 * **Data preparation and standardisation:** Extract the necessary data elements from the EHRs related to ACE indicators, and relevant health outcomes. Prepare the data by cleaning and structuring it in a format ready for merging with relevant ACEs code list.
 * **Apply algorithms for ACE indicators:** Apply appropriate ACE algorithms using R, Python or any data management language to ensure you obtain validated indicators in the linked child and parent data.
 
@@ -43,7 +43,7 @@ We developed two measures of ACEs for electronic health records (EHRs):
       * Most specific indicator
         * Code (alphanumerical code attached to an event description)
 
-Indicators represent a variable of grouped codes or measures for a potential recorded ACE in mothers, fathers or children. The ACEs follows a hierarchical structure, with three levels of specificity of the underlying ACE construct. The structure range from the most specific ACE category (specific indicator), to broader categories (indicator 1 and 2), to the six overall ACE domains consistent with the original [ACE study](/about/).
+Indicators represent a variable of grouped codes or measures for a potential recorded ACE in mothers, fathers or children. The ACEs follows a hierarchical structure, with three levels of specificity of the underlying ACE construct. The structure range from the most specific ACE category (specific indicator), to broader categories (indicator 1 and 2), to the six overall ACE domains consistent with the original [ACE study](/about/). 
 
 [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/domains%20and%20indicators%201.png)](/domains/)
 
@@ -129,7 +129,12 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
 * Depending on research purposes, we recommend binding all retrived ACE files into one combined "master database" with all relevant ACE data which should now follow a consistent unified format for easier retrival.
 
 ## Algorithms
-Most indicators are derived using algorithms that identify and extract information from EHRs using clinically coded healthcare information (for example ICD-10, Read codes, SNOMED-CT). Algorithms are freely available on this webpage.
+ we assume that the if-then assumptions should be applied to the rows where the "Code" column value is present in the code list and additional conditions are met.
+
+Adjust the code list and the assumptions within the case_when() statement based on your specific requirements. You can add more conditions using & (logical AND) or | (logical OR) operators, and assign the desired binary variable values (1 or 0) accordingly.
+
+Make sure to adjust the column names and conditions within the case_when() statement to match your data structure and requirements.
+
 
 For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
 
