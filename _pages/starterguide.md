@@ -41,7 +41,7 @@ We developed two measures of ACEs for electronic health records (EHRs):
   * Indicator 2
     * Indicator 1
       * Most specific indicator
-        * Code
+        * Code (alphanumerical code attached to an event description)
 
 Indicators represent a variable of grouped codes or measures for a potential recorded ACE in mothers, fathers or children. The ACEs follows a hierarchical structure, with three levels of specificity of the underlying ACE construct. The structure range from the most specific ACE category (specific indicator), to broader categories (indicator 1 and 2), to the six overall ACE domains consistent with the original [ACE study](/about/).
 
@@ -50,19 +50,20 @@ Indicators represent a variable of grouped codes or measures for a potential rec
 **Note:** The ability to use specific indicators depends on your sample size. We recommend restricting the disaggregation of specific indicators to those present in 250 or more unique children. For many studies, it will be most appropriate to use the six ACE domains only and avoid disaggregation into specific indicators unless required to answer your research question.
 {: .notice--danger}
 
-## Code lists to derive indicators
-As mentioned above, ACEs are derived by identifying patients with codes linked to each ACE indicator. Codes represent a clinical or event description, and are stored in donwloadble code lists.
-
-For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
-
-For hospital and death registration records, we define indicators by combining codes from the International Classification of Diseases 9th/10th edition (ICD-9/10), the Classification of Interventions and Procedures (OPCS-4) and HES-APC discharge/admission fields. We also provide cross-mapped unvalidated indicators for newer systems (ICD-11/SNOMED CT) for further evaluation. Browse code lists [here](https://acesinehrs.com/codelistbrowse/).
-
+## Code lists
+All codes of the ACE indicators are stored in [code lists](/domains/). Each data source will have different coding systems. The current ACEs indicators include ICD-9/10 (hospital/death records), Read, SNOMED-CT, medcodes, prodcodes, gemscripts (general practice), and codes for obtaining continuous data or coded information from speciality fields in CPRD GOLD, HES-APC, HES-A&E and HES-OP.
 
 ![alt text](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/ehrs%20of%20aces%20indicator.png "workflow")
 <div class="flourish-embed flourish-hierarchy" data-src="visualisation/7087179"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
 ## Algorithms
 Most indicators are derived using algorithms that identify and extract information from EHRs using clinically coded healthcare information (for example ICD-10, Read codes, SNOMED-CT). Algorithms are freely available on this webpage.
+
+
+
+For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
+
+For hospital and death registration records, we define indicators by combining codes from the International Classification of Diseases 9th/10th edition (ICD-9/10), the Classification of Interventions and Procedures (OPCS-4) and HES-APC discharge/admission fields. We also provide cross-mapped unvalidated indicators for newer systems (ICD-11/SNOMED CT) for further evaluation. Browse code lists [here](https://acesinehrs.com/codelistbrowse/).
 
 
 
