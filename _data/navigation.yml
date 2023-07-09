@@ -47,16 +47,16 @@ docs:
         url: /starterguide/#data-preparation-and-standardisation
       - title: "Data cleaning and code standardisation"
         url: /starterguide/#data-cleaning-and-code-standardisation
-      - title: "Working with Collections"
-        url: /docs/collections/
-      - title: "Helpers"
-        url: /docs/helpers/
-      - title: "Utility Classes"
-        url: /docs/utility-classes/
+      - title: "Prefixes for converted codes"
+        url: /starterguide/#data-cleaning-and-code-standardisation
+      - title: "Data integration & retrieving ACEs"
+        url: /starterguide/#data-integration-and-aces-retrival-process
+      - title: "Algorithms"
+        url: /starterguide/#algorithms
 
-  - title: Extras
+  - title: Donwloads
     children:
-      - title: "Stylesheets"
+      - title: "Download code lists"
         url: /docs/stylesheets/
       - title: "JavaScript"
         url: /docs/javascript/
