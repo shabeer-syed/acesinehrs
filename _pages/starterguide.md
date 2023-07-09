@@ -102,13 +102,14 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
 ## Data cleaning and code standardisation
 * Clean and remove any punctuations, white spaces or trailing alphanumerics from data fields with relevant codes
 * For each file, convert all data fields into the same classes (e.g. character, date) and machine readible format (e.g., R and Python likes dates as: year-month-day)
-* Make sure to convert codes (see code list dictionary for pre-fixes) that share the same alphanumeric code as other codes into new unique codes to avoid deduplication, preserving their orginal linked ACE indicator. For example, Prodcodes (i.e. medications/prescriptions), medcodes (i.e. diagnoses/symptoms) and ICD-9 codes share thousands of the same alphanumeric codes but with different meanings and event descriptions.
+* Make sure to convert codes (see pre-fixes below) that share the same alphanumeric code as other codes into new unique codes to avoid deduplication to preserve their orginal linked ACE indicator. For example, Prodcodes (i.e. medications/prescriptions), medcodes (i.e. diagnoses/symptoms) and ICD-9 codes share thousands of the same alphanumeric codes but with different meanings and event descriptions.
   ```ruby
   For example: "11246 (prodcode) - Lofexidine 200 microgram tablets" vs. 11246 (medcode) – At risk violence in the home"
   ```
-* To perserve each code's uniqueness, we have added pre-fixes to each relevant code list, which affect most data sources coding systems. We list all prefixes for data preparation below.
-* Save all new files.
+* To perserve each code's uniqueness, we have added pre-fixes to each relevant code list, which affect most data sources coding systems. 
+We list all prefixes for data preparation below.
 
+### Conversation table for codes with pre-fixes
 | Data source & Coding system | Prefix added | example | 
 | --- | --- | --- |
 | CPRD GOLD: Prodcode (Gemscript product code) | d_ | d_727 - Sertraline 100mg tablets | 
