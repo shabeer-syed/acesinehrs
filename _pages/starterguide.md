@@ -41,9 +41,9 @@ We developed two measures of ACEs for electronic health records (EHRs):
   * Indicator 2
     * Indicator 1
       * Most specific indicator
-        * Code  
+        * Code
 
-Indicators represent a variable of grouped codes or measures for a potential recorded ACE in mothers, fathers or children. The ACEs follows a hierarchical structure, and has three levels of specificity of the underlying ACE construct. The structure ranging from the most specific ACE category (specific indicator), to broader categories (indicator 2), to six overall ACE domains consistent with the original [ACE study](/about/).
+Indicators represent a variable of grouped codes or measures for a potential recorded ACE in mothers, fathers or children. The ACEs follows a hierarchical structure, with three levels of specificity of the underlying ACE construct. The structure range from the most specific ACE category (specific indicator), to broader categories (indicator 1 and 2), to the six overall ACE domains consistent with the original [ACE study](/about/).
 
 [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/domains%20and%20indicators%201.png)](https://shabeer-syed.github.io/ACEs/domains)
 
