@@ -21,7 +21,7 @@ sidebar:
 
 {% include base_path %}
 
-Welcome to the marvellous world of EHRs! We provide clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course. In the UK, parents' and children's EHRs can be linked across services. The ability to link parents' and children's records allows for measuring ACEs before pregnancy, throughout childhood and intergenerationally. This is important because measuring ACEs requires a "think-family" approach - we need both children's and parents' data! Think-family means we recognise that the health and well-being of children are intricately tied to their parents' experiences and health outcomes.
+Welcome to the marvellous world of EHRs! We provide a tutorial in how to implement clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course.
 
 # How does it work?
 To use the ACE indicators, you will need:
@@ -50,14 +50,14 @@ Indicators represent a variable of grouped codes or measures for a potential rec
 **Note:** The ability to use specific indicators depends on your sample size. We recommend restricting the disaggregation of specific indicators to those present in 250 or more unique children. For many studies, it will be most appropriate to use the six ACE domains only and avoid disaggregation into specific indicators unless required to answer your research question.
 {: .notice--danger}
 
-**Think-family approach:** Unless specified, indicators refers to information recorded in the child, mother and father.
+**Think-family approach:** Unless specified, indicators refers to information recorded in the child, mother and father. To properly study ACEs requires a "think-family" approach - that is, we need both children's and parents' data! Think-family means we recognise that the health and well-being of children are intricately tied to their parents' experiences and health outcomes.
 {: .notice--info}
 
 ![alt text](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/ehrs%20of%20aces%20indicator.png "workflow")
 <div class="flourish-embed flourish-hierarchy" data-src="visualisation/7087179"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
 # Code lists
-Codes of each ACE indicator are stored in [code lists](/domains/). Each data source will have different coding systems. The current ACEs indicators include ICD-9/10 codes (hospital/death records), Read codes, SNOMED-CT codes, medcodes, prodcodes, gemscripts (general practice), and codes for obtaining continuous data or coded information from speciality fields in CPRD GOLD, HES-APC, HES-A&E and HES-OP.
+Mapped Codes attached to each ACE indicator are stored in [code lists](/domains/). Each data source will have different coding systems. The current ACEs indicators include ICD-9/10 codes (hospital/death records), Read codes, SNOMED-CT codes, medcodes, prodcodes, gemscripts (general practice), and codes for obtaining continuous data or coded information from speciality fields in CPRD GOLD, HES-APC, HES-A&E and HES-OP.
 
 We have converted several original codes so the codelists contains one column of research ready codes which ensures  efficieint intergration of information from multiple coding systems without accidental de-duplication. See code list dictionary for more information.
 
