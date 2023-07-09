@@ -92,19 +92,20 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
 {: .notice--danger}
 
 ## Data extraction and re-structering 
-* Having identified your cohort, extract only the relevant patient data from each large EHR file across the different sources
+* Having identified your cohort, we recommend using a streaming approach to first extract only relevant patient data from the different files  by matching the patient IDs in each file against your separate list of patient IDs (i.e. cohort). This is an intermediate step which allows for data cleaning on smaller data files before applying the coded ACE indicators. The "streaming approach" refers to reading and processing data in chunks or sequentially, rather than loading the entire dataset into memory at once. In R the streaming approach is achieved by using *data.table::fread()* function with the *data.table = FALSE argument.*
+* * Keep only essential data fields/variables to reduce file size. e.g. In the CPRD clinical file, the vairables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
 * Restructure all files and data fields (variables) into the same long format, and rename variable into consistent names. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.
-* Keep only essential data fields/variables to reduce file size. e.g. In the CPRD clinical file, the vairables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
 * Add an extra variable to each data file to label the original data source (HES, CPRD clinical), as the data will be compiled into one file later.
 
 ## Data cleaning and code standardisation
 * Clean and remove any punctuations, white spaces or trailing alphanumerics from data fields with relevant codes
-* For each file, convert all data fields into the same classes ( e.g. character, date) and machine readible format (e.g., R and Python likes dates as: year-month-day)
+* For each file, convert all data fields into the same classes (e.g. character, date) and machine readible format (e.g., R and Python likes dates as: year-month-day)
 * Make sure to convert codes (see code list dictionary for pre-fixes) that share the same alphanumeric code as other codes into new unique codes to avoid deduplication, preserving their orginal linked ACE indicator. For example, Prodcodes (i.e. medications/prescriptions), medcodes (i.e. diagnoses/symptoms) and ICD-9 codes share thousands of the same alphanumeric codes but with different meanings and event descriptions.
   ```ruby
   For example: "11246 (prodcode) - Lofexidine 200 microgram tablets" vs. 11246 (medcode) – At risk violence in the home"
   ```
-  * To perserve each code's uniqueness, we have added pre-fixes to each relevant code lists.
+* To perserve each code's uniqueness, we have added pre-fixes to each relevant code list, which affect most data sources coding systems. We list all prefixes for data preparation below.
+* Save all new files.
 
 | Data source & Coding system | Prefix added | example | 
 | --- | --- | --- |
@@ -113,59 +114,47 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
 | HES-APC: OPCS-4 | p_ | p_X66 - Cognitive behavioural therapy | 
 | HES-A&E: A&E specific diagnosis system | aed_ | aed_144 - Poisoning (inc overdose) - other, inc alcohol | 
 | HES-A&E: A&E speciality field "treatment" | aet_ | aet_54 - Social worker intervention | 
-| HES-A&E: A&E specific diagnosis system | aed_ | aear_2 - Local authority social services,aepatgroup
- | 
-| HES-A&E: A&E specific diagnosis system | aed_ | aed_144  Poisoning (inc overdose) - other, inc alcohol | 
-| HES-APC: OPCS-4 | p_ | p_X66 - Cognitive behavioural therapy | 
-| HES-APC: OPCS-4 | p_ | p_X66 - Cognitive behavioural therapy | 
-| HES-APC: OPCS-4 | p_ | p_X66 - Cognitive behavioural therapy | 
+| HES-A&E: A&E speciality field "investigations" | aei_ | aei_21 - Pregnancy test |  
+| HES-OP: OP speciality field "treatment" | opt_ | opt_711 - child and Adolescent Psychiatry Service |  
 
+## Data integration and ACEs retrival process
+* Once you've cleaned and restructured the multiple separate files, we recommend you re-apply the streaming approach to new files and extracting only relevant ACE data by matching the data fiels with codes in each file against your ACEs code lists.
+* Depending on research purposes, we recommend binding all files into one combined "master database" with all relevant ACE data which should now follow a consistent unified format for easier retrival.
 
-opt_711	  Child and Adolescent Psychiatry Service
-tretspef
- opm_710 mainspef
-aear_2
-aed_144  Poisoning (inc overdose) - other, inc alcohol
-aei_21  Pregnancy test
-invest
-![image](https://github.com/shabeer-syed/acesinehrs/assets/82370997/60255982-1ba4-4446-8c5d-6ece8a2cce38)
-
-
-
-
-Adult Mental Illness
-
-  *  "", " codes", "HES-A&E", "HES-OP", "OPCS-4", and HES-APC speciality fields (e.g. discharge/admission source). For prodcodes, we add the prefix “d_” to the coding column to the therapy file and your code list. Similarly, for ICD-9 add the prefix, “e_”.
-
-* Develop a data integration process to combine all the EHR data into a unified format.
-•	Standardize the coding systems across different data sources to a common coding system (e.g., mapping CPRD GOLD codes to ICd-10 codes).
-•	Create a master database or data repository where all the standardized EHR data will be stored.
-
-## Algorithms
-Once you've indentified the Most indicators are derived using algorithms that identify and extract information from EHRs using clinically coded healthcare information (for example ICD-10, Read codes, SNOMED-CT). Algorithms are freely available on this webpage.
-
-
+# Algorithms
+Most indicators are derived using algorithms that identify and extract information from EHRs using clinically coded healthcare information (for example ICD-10, Read codes, SNOMED-CT). Algorithms are freely available on this webpage.
 
 For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
 
 For hospital and death registration records, we define indicators by combining codes from the International Classification of Diseases 9th/10th edition (ICD-9/10), the Classification of Interventions and Procedures (OPCS-4) and HES-APC discharge/admission fields. We also provide cross-mapped unvalidated indicators for newer systems (ICD-11/SNOMED CT) for further evaluation. Browse code lists [here](https://acesinehrs.com/codelistbrowse/).
 
-
-
-
-
 **Note:** The indicators uses [control flow methods](https://advanced-r-solutions.rbind.io/control-flow.html) to implement rule-based algorithms must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
 {: .notice--danger}
 
-## Control documentation
+Whilst most indicators are ready to use by merging the correct code list with your data, some indicators requires rule-based algorithms as listed below. 
 
+* 1-2. Merge code lists with the data file containing the target population
+
+```ruby
+e.g. ensure correct ages for children/mothers
+```
+* 3.1 Convert continuous measures to binary indicators**
+
+Use the additional "cut-off" variable provided in code lists (i.e. data > cut_off):
+
+```ruby
+ Example "one liner" in R or Python with dplyr:
+mmhps_alcohol <- merged_data %>% filter(Domain=="mMHPs" & Indicator 1=="Alcohol misuse" & scale=="1" & data1 > cut_off)
+```
+* 3.2 Apply more advanced [control flow methods](https://adv-r.hadley.nz/control-flow.html)
+
+Apply multiple rule-based algorithims (age critera, accident exclusions etc) using control flow (data dependent "if then assumptions") are widley covered by the data science community ([1](https://adv-r.hadley.nz/control-flow.html) [2](https://advanced-r-solutions.rbind.io/control-flow.html)).
+
+
+# Download code lists
 * [ACEsinEHRs control documentation / release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
-
-## Download code lists
 Right click on link to save as a ".txt" file (i.e. using option "save link as")
-
 *Total number of included ACE codes: 8802 (ACEs) + 8808 (covariates)*
-
 *Total number of excluded/tested codes: 7671*
 
 ## All ACE indicators:
@@ -196,30 +185,3 @@ Right click on link to save as a ".txt" file (i.e. using option "save link as")
 ### Need more code lists?
 Visit:
 [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/hdruk%20small.png)](https://phenotypes.healthdatagateway.org/)
-
-## Suggested implementation of indicators
-
-Whilst most indicators are ready to use by merging the correct code list with your data, some indicators requires rule-based algorithms as listed below. 
-
-### 1-2. Merge code lists with the data file containing the target population
-
-```ruby
-e.g. ensure correct ages for children/mothers
-```
-![alt text](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/merge%20codelist.png)
-
-### 3.1 Convert continuous measures to binary indicators**
-
-Use the additional "cut-off" variable provided in code lists (i.e. data > cut_off):
-
-```ruby
- Example "one liner" in R or Python with dplyr:
-mmhps_alcohol <- merged_data %>% filter(Domain=="mMHPs" & Indicator 1=="Alcohol misuse" & scale=="1" & data1 > cut_off)
-```
-### 3.2 Apply more advanced [control flow methods](https://adv-r.hadley.nz/control-flow.html)
-
-Apply multiple rule-based algorithims (age critera, accident exclusions etc) using control flow (data dependent "if then assumptions") are widley covered by the data science community ([1](https://adv-r.hadley.nz/control-flow.html) [2](https://advanced-r-solutions.rbind.io/control-flow.html)).
-
-![alt text](![alt text](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/case%20when.jpg)
-
-[![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains.png)](https://shabeer-syed.github.io/ACEs/domains) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png)](https://shabeer-syed.github.io/ACEs/codelist)
