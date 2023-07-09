@@ -100,12 +100,11 @@ Implementing the ACE indicators using the provided code lists requires preparing
 ### Data cleaning and code standardisation
 * Clean and remove any punctuation, white spaces or trailing alphanumerics from data fields with relevant codes
 * Make sure you convert all data to the same class e.g. character, date (in the appropriate format so R or Python understand, e.g, date: year-month-date)
+* Make sure all different coding system have unique codes to avoid deduplication and preserve their orginal linked ACE indicator. For example, Prodcodes (i.e. medications/prescriptions), medcodes (i.e. CPRD converted codes diagnoses/symptoms) and ICD-9 codes share thousands of codes with the exact the same alphanumeric but they mean different things.
+ ![image](https://github.com/shabeer-syed/acesinehrs/assets/82370997/3f291944-acbe-49f3-86c6-12888dd6a765)
 
-![image](https://github.com/shabeer-syed/acesinehrs/assets/82370997/03006d03-2095-482e-9a66-bbc3e9a989dc)
 
-![image](https://github.com/shabeer-syed/acesinehrs/assets/82370997/0706cc0a-5f5d-4016-a37b-9a42dcdc2625)
-
-•	Develop a data integration process to combine all the EHR data into a unified format.
+* Develop a data integration process to combine all the EHR data into a unified format.
 •	Standardize the coding systems across different data sources to a common coding system (e.g., mapping CPRD GOLD codes to ICd-10 codes).
 •	Create a master database or data repository where all the standardized EHR data will be stored.
 
