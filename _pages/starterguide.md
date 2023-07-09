@@ -29,7 +29,7 @@ To use the ACE indicators, you will need:
 * **Access to your organisation's locally stored EHR data:** Obtain authorised access to your service's/NHS trust's locally stored EHRs of children and parents for service-related and research purposes. Many NHS trusts provide streamlined processes to access data sources like Clinical Record Interactive Search([1](https://slam.nhs.uk/clinical-record-interactive-search),[2](https://www.oxfordhealth.nhs.uk/research/toolkit/cris/),[3](https://www.southernhealth.nhs.uk/about-us/research/research-and-innovation/clinical-record-interactive-search). These local data sources often have a data structure consistent with national data sources like [HES-APC](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/hospital-episode-statistics). Contact your local contact person for academic support, process regarding data extraction, and data information analyses. 
 * **Data linkage of child and parent data:** Implement robust data linkage of child and parent EHRs. Providers like CPRD allows you to access already established linkages of mother-child data. For linkage of mother child data in other EHR databases, please see methods described elsewhere [1] (https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0164667),[2](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext),[3](https://onlinelibrary.wiley.com/doi/full/10.1002/pds.4811). For paternal linkage, please see methods described [here](https://www.thelancet.com/cms/10.1016/S2468-2667(23)00119-6/attachment/9c50602c-ebd2-445f-ae3b-de30e2a1db14/mmc1.pdf)
 * **ACE Indicators:** You are in the right place. We describe the ACEs below. Once you're ready please head over to the [download section](https://acesinehrs.com/starterguide/#download-code-lists), where we provide a comprehensive list of validated ACE indicators based on established research and definitions.
-* **Data extraction and preparation:** Extract the necessary data elements from the EHRs related to ACE indicators, and relevant health outcomes. Prepare the data by cleaning and structuring it in a format ready for merging with relevant ACEs code list.
+* **Data preparation and standardisation:** Extract the necessary data elements from the EHRs related to ACE indicators, and relevant health outcomes. Prepare the data by cleaning and structuring it in a format ready for merging with relevant ACEs code list.
 * **Apply algorithms for ACE indicators:** Apply appropriate ACE algorithms using R, Python or any data management language to ensure you obtain validated indicators in the linked child and parent data.
 
 ![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/implement%20centered1.png)
@@ -57,7 +57,9 @@ Indicators represent a variable of grouped codes or measures for a potential rec
 <div class="flourish-embed flourish-hierarchy" data-src="visualisation/7087179"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
 ## Code lists
-Codes of each ACE indicator are stored in [code lists](/domains/). Each data source will have different coding systems. The current ACEs indicators include ICD-9/10 (hospital/death records), Read, SNOMED-CT, medcodes, prodcodes, gemscripts (general practice), and codes for obtaining continuous data or coded information from speciality fields in CPRD GOLD, HES-APC, HES-A&E and HES-OP.
+Codes of each ACE indicator are stored in [code lists](/domains/). Each data source will have different coding systems. The current ACEs indicators include ICD-9/10 codes (hospital/death records), Read codes, SNOMED-CT codes, medcodes, prodcodes, gemscripts (general practice), and codes for obtaining continuous data or coded information from speciality fields in CPRD GOLD, HES-APC, HES-A&E and HES-OP.
+
+We have converted several original codes so the codelists contains one column of research ready codes which ensures  efficieint intergration of information from multiple coding systems without accidental de-duplication. See code list dictionary for more information.
 
 ### Code list dictionary
 
@@ -83,6 +85,16 @@ Codes of each ACE indicator are stored in [code lists](/domains/). Each data sou
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 912 | [D]Anorexia	Anorexia | Anorexia | Eating disorders | Maternal mental health problem | diagnostic |  |  | 2 | Read | 
 
+## Data preparation and standardisation
+Implementing the ACE indicators using the provided code lists requires preparing and re-structuring your data sets into a uniform standard. The data standardisation allows you to directly merge code lists and indicators to the data set and then apply their attached algorithms. 
+
+**Skills check:** Implementing the ACE indicators using more complex data sets like primary care data (GP records) requires knowledge of how to re-structure, manipulate and combine multiple large data sets into one or multiple new files. Depending on resources available, we recommend beginner to intermediate skills in a programming language of choice (e.g., Python, R). Many data management tasks involves a [split-apply-combine strategy](https://www.jstatsoft.org/article/view/v059i10), that is, the ability to "..break up a big problem into manageable pieces, operate on each piece independently and then put all the pieces back together. (Wickham, 2014, p1)" 
+{: .notice--danger}
+
+•	Gather the EHR data from different sources using its own coding system.
+•	Develop a data integration process to combine all the EHR data into a unified format.
+•	Standardize the coding systems across different data sources to a common coding system (e.g., mapping CPRD GOLD codes to ICd-10 codes).
+•	Create a master database or data repository where all the standardized EHR data will be stored.
 
 ## Algorithms
 Once you've indentified the Most indicators are derived using algorithms that identify and extract information from EHRs using clinically coded healthcare information (for example ICD-10, Read codes, SNOMED-CT). Algorithms are freely available on this webpage.
