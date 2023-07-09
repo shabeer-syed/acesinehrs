@@ -26,10 +26,10 @@ docs:
         
     - title: "Code lists"
       children:
-      - title: "Code list dictionary"
-        url: /starterguide/#code-list-dictionary
-      - title: "Example"
-        url: /starterguide/#example-code-attached-to-ace-indicator
+        - title: "Code list dictionary"
+          url: /starterguide/#code-list-dictionary
+        - title: "Example"
+          url: /starterguide/#example-code-attached-to-ace-indicator
 
   - title: Applications
     children:
