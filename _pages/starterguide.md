@@ -154,6 +154,7 @@ aces_data <- aces_data %>% mutate_all(as.character) %>%
 
 ## Conversation table of codes requiring prefixes
 * To perserve each code's uniqueness, we have added prefixes to each relevant code list, which affect most data sources coding systems. We list all prefixes for data preparation below.
+* In R or Python, we recommend using the "dplyr::unite" function. In Stata, use the "Concatenation" function (see Stata documentation).
 
 | Data source & Coding system | Prefix added | example | 
 | --- | --- | --- |
@@ -165,6 +166,8 @@ aces_data <- aces_data %>% mutate_all(as.character) %>%
 | HES-A&E: A&E speciality field "investigations" | aei_ | aei_21 - Pregnancy test |  
 | HES-OP: OP speciality field "treatment" | opt_ | opt_711 - child and Adolescent Psychiatry Service |  
 
+### Conversion method
+* In R, Stata, or Python, 
 
 # Deriving variables
 ---
