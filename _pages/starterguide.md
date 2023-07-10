@@ -36,8 +36,8 @@ To use the ACE indicators, you will need:
 
 # Domains and indicators
 We developed two measures of ACEs for electronic health records (EHRs):
-* Domains (ie, grouped indicators) and;
-* Indicators (ie, grouped codes or measures)
+* **Domains** (ie, grouped indicators) and;
+* **Indicators** (ie, grouped codes or measures)
   * Indicator 2
     * Indicator 1
       * Most specific indicator
@@ -88,14 +88,45 @@ We have converted several original codes so the codelists contains one column of
 
 # Data preparation and standardisation
 ---
-Lets get the data ready for analysis!
+Now, lets get the data ready for analysis!
 Implementing the ACE indicators using code lists requires preparing and re-structuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms.
 
 **Skills check** <i class="fas fa-exclamation-triangle" style="color: #e3740d;"></i> Implementing the ACE indicators in more complex data sets like primary care data (GP records) requires knowledge of how to re-structure, manipulate and combine multiple large data sets into one or multiple new files. Depending on resources available, we recommend beginner to intermediate skills in a programming language of choice (e.g., Python, R). Many data management tasks involves a [split-apply-combine strategy](https://www.jstatsoft.org/article/view/v059i10), that is, the ability to "..break up a big problem into manageable pieces, operate on each piece independently and then put all the pieces back together. (Wickham, 2014, p1)"
 {: .notice--danger}
 
-## Data extraction and re-structering 
-* Having identified your cohort, we recommend using a streaming approach to first extract only relevant patient data from the different files  by matching the patient IDs in each file against your separate list of patient IDs (i.e. cohort). This is an intermediate step which allows for data cleaning on smaller data files before applying the coded ACE indicators. The "streaming approach" refers to reading and processing data in chunks or sequentially, rather than loading the entire dataset into memory at once. In R the streaming approach is achieved by using *data.table::fread()* function with the *data.table = FALSE argument.*
+## Data extraction and restructuring 
+* **Streaming data extraction.** Having identified your cohort, we recommend using a streaming approach to first extract only relevant patient data from the different files by matching the patient IDs in each file against your separate list of patient IDs (i.e. cohort). This is an essential intermediate step which allows for data restructuring and cleaning of smaller data files before applying the coded ACE indicators. A "streaming approach" refers to reading and processing data in chunks or sequentially, rather than loading the entire dataset into memory at once. In R or Python, the streaming approach is achieved by first loading your list of relevant patient IDs and then extract relevant data by combining the functions *data.table::fread(.... ,data.table=F)* with *dplyr::filter* and *fastmatch::%fin%*. Here is an example:
+```ruby
+# Step 1: Set up the working directory
+setwd("path/to/ehr/files")
+
+# Step 2: Install and load required packages
+install.packages(c("data.table", "readr"))
+library(data.table)
+library(readr)
+
+# Step 3: Read the patient ID list and code list
+patient_id_list <- read_csv("patient_id_list.csv")  # Adjust the file name and format as per your data
+code_list <- read_csv("code_list.csv")  # Adjust the file name and format as per your data
+
+# Step 4: Initialize the combined data file
+combined_file <- "combined_ehr_data.csv"
+file.create(combined_file)
+
+# Step 5: Stream through EHR files, match with patient IDs and code list, and extract relevant data
+for (ehr_file in list.files(pattern = "*.csv")) {  # Adjust the pattern as per your file extension
+  ehr_stream <- data.table::fread(ehr_file, header = TRUE, data.table = FALSE)
+  
+  if ("patient_id" %in% names(ehr_stream) && "diagnosis" %in% names(ehr_stream)) {
+    relevant_data <- ehr_stream[data.table(patient_id = patient_id_list$patient_id), on = "patient_id"]
+    relevant_data <- relevant_data[data.table(diagnosis = code_list$diagnosis), on = "diagnosis"]
+    
+    if (!is.null(relevant_data) && nrow(relevant_data) > 0) {
+      fwrite(relevant_data, combined_file, append = TRUE, quote = FALSE, row.names = FALSE)
+    }
+  }
+}
+```
 * * Keep only essential data fields/variables to reduce file size. e.g. In the CPRD clinical file, the vairables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
 * Restructure all files and data fields (variables) into the same long format, and rename variable into consistent names. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.
 * Add an extra variable to each data file to label the original data source (HES, CPRD clinical), as the data will be compiled into one file later.
