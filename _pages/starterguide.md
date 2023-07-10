@@ -204,21 +204,23 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
       fwrite(relevant_data, combined_file, append = T, quote = F, row.names = F,col.names=T)
 }
 ```
-
-## Merge code lists
-* Most indicators are ready to use by merging the correct code list with your prepared ACE data file. In the above R script example, the code list is already automatically merged with the new combined "ACE specific data file"
-* Having merged the code lists, keep only one ACE indicator or domain per each unique child within relevant study period
+## Algorithms
+ * A significant proportion of indicators rely on rule-based algorithms to ensure coded measures meet appropriate cut-off criteria and preventing misclassifications. Algorithms include age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
+ * For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
+ * For hospital and death registration records, we define indicators by combining codes from the International Classification of Diseases 9th/10th edition (ICD-9/10), the Classification of Interventions and Procedures (OPCS-4) and HES-APC discharge/admission fields.
 
 **Time restrictions:** The validated ACE indicators are time sensitive and applies any time between 2 years before birth and 10 years after birth. However, most child maltreatment and high-risk presentations of child maltreatment are limited to 2 years before to 3, or 5 years after birth. Acertaining correct time periods in relation children's birthdate is essential.
 {: .notice--danger}
 
-## Algorithms
- * A significant proportion of indicators rely on rule-based algorithms to ensure coded measures meet appropriate cut-off criteria and preventing misclassifications. Algorithms include age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
- * For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
- * For hospital and death registration records, we define indicators by combining codes from the International Classification of Diseases 9th/10th edition (ICD-9/10), the Classification of Interventions and Procedures (OPCS-4) and HES-APC discharge/admission fields. We also provide cross-mapped unvalidated indicators for newer systems (ICD-11/SNOMED CT) for further evaluation. Browse code lists [here](https://acesinehrs.com/codelistbrowse/).
+## Applying algorithms using the code lists built-in helper functions
 
-## Apply if-then assumptions based on the code list
- * We recommend using [control flow methods](https://advanced-r-solutions.rbind.io/control-flow.html) to apply "if-then" assumptions to rows where the "Code" column value is present in the code list and additional conditions are met. We recommend using "dplyr::case_when()" function to apply multiple if-then assumptions based input from a separate code list or by the using merged variables.
+The ACEs code list were developed to make it easier to apply algorithms and provides built in "helper variables". Most indicators are therefore ready to be used after merging the correct code list with your prepared ACE data file.  We outline the steps below:
+* **1. Merge code lists.** Merge the new combined "ACE specific data file" with your relevant code list. *Note: In the above R script example, the code list is already automatically merged with the new combined "ACE specific data file"*.
+* Keep only unique recordings. Having merged the code lists, many recordings will be duplicated as each ACE code is iterated over both childrens and parents IDs. In R or Python, we recommend  removing duplicate recordings using  e.g. "aces_data %>% dplyr::distinct(patid,medcode,eventdate,system,source,individual,.keep_all=T)
+* * We recommend using [control flow methods](https://advanced-r-solutions.rbind.io/control-flow.html) to apply "if-then" assumptions to rows where the "Code" column value is present in the code list and additional conditions are met. We recommend using "dplyr::case_when()" function to apply multiple if-then assumptions based input from a separate code list or by the using merged variables.
+
+* only one ACE indicator or domain per each unique child within the relevant study period.
+
 
 ```ruby
 data <- data %>%
