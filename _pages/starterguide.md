@@ -21,7 +21,7 @@ sidebar:
 
 {% include base_path %}
 
-Welcome to the marvellous world of EHRs! We provide a tutorial in how to implement clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course. 
+Welcome to the marvellous world of EHRs! On this page, we provide a guide to get your started in using the clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course. 
 
 # How does it work?
 To use the ACE indicators, you will need:
