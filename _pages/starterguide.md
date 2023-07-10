@@ -21,15 +21,15 @@ sidebar:
 
 {% include base_path %}
 
-Welcome to the marvellous world of EHRs! On this page, we provide a guide to get your started in using the clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course. 
+Welcome to the marvellous world of EHRs! This page provides a guide to get you started using the clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course.
 
 # How does it work?
 To use the ACE indicators, you will need:
-* **Access to an EHR data source for research:** Obtain authorised and de-identified data of children and parents for research purposes. Most ACEs are captured in primary care. Several data sources in the UK provide linked primary care data of children and parents , including the [Clinical Practice Research Datalink (CPRD)](https://cprd.com/),[The Health Improvement Network (THIN)](https://www.the-health-improvement-network.com/), [QResearch](https://www.qresearch.org/).  Access to CPRD requires [protocol approval](https://cprd.com/research-applications) via CPRD’s Research Data Governance Process. Please visit the [Health Data Research Innovation Gateway](https://www.healthdatagateway.org) for more information on available data sources.
-* **OR: Access to your organisation's locally stored EHR data:** Obtain authorised access to your service's/NHS trust's locally stored EHRs of children and parents for service-related and research purposes. Many NHS trusts provide streamlined processes to access data sources like Clinical Record Interactive Search ([1](https://slam.nhs.uk/clinical-record-interactive-search),[2](https://www.oxfordhealth.nhs.uk/research/toolkit/cris/),[3](https://www.southernhealth.nhs.uk/about-us/research/research-and-innovation/clinical-record-interactive-search)). These local data sources often have a data structure consistent with national data sources like [HES-APC](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/hospital-episode-statistics). Contact your local contact person for academic support, process regarding data extraction, and data information analyses. 
-* **Data linkage of child and parent data:** Implement robust data linkage of child and parent EHRs. Providers like CPRD allows you to access already established linkages of mother-child data. For linkage of mother child data in other EHR databases, please see methods described elsewhere [1](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0164667),[2](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext),[3](https://onlinelibrary.wiley.com/doi/full/10.1002/pds.4811). For paternal linkage, please see methods described [here](https://www.thelancet.com/cms/10.1016/S2468-2667(23)00119-6/attachment/9c50602c-ebd2-445f-ae3b-de30e2a1db14/mmc1.pdf)
-* **ACE Indicators:** You are in the right place. Most indicators are derived using algorithms that identify and extract information from EHRs using clinically coded healthcare information (for example ICD-10, Read codes, SNOMED-CT). We describe the ACEs and how to apply the algorithms below. Once you're ready please head over to the [download section](https://acesinehrs.com/starterguide/#download-code-lists), where we provide a comprehensive list of validated ACE indicators based on established research and definitions.
-* **Data preparation and standardisation:** Extract the necessary data elements from the EHRs related to ACE indicators, and relevant health outcomes. Prepare the data by cleaning and structuring it in a format ready for merging with relevant ACEs code list.
+* **Access to an EHR data source for research:** Obtain authorised and de-identified data of children and parents for research purposes. Most ACEs are captured in primary care. Several data sources in the UK provide linked primary care data of children and parents, including the [Clinical Practice Research Datalink (CPRD)](https://cprd.com/),[The Health Improvement Network (THIN)](https://www.the-health-improvement-network.com/), [QResearch](https://www.qresearch.org/).  Access to CPRD requires [protocol approval](https://cprd.com/research-applications) via CPRD’s Research Data Governance Process. Please visit the [Health Data Research Innovation Gateway](https://www.healthdatagateway.org) for more information on available data sources.
+* **OR: Access to your organisation's locally stored EHR data:** Obtain authorised access to your service's/NHS trust's locally stored EHRs of children and parents for service-related and research purposes. Many NHS trusts provide streamlined processes to access data sources like Clinical Record Interactive Search ([1](https://slam.nhs.uk/clinical-record-interactive-search),[2](https://www.oxfordhealth.nhs.uk/research/toolkit/cris/),[3](https://www.southernhealth.nhs.uk/about-us/research/research-and-innovation/clinical-record-interactive-search)). These local data sources often have a data structure consistent with national data sources like [HES-APC](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/hospital-episode-statistics). Contact your local contact person for academic and research support relevant to data information analyses.
+* **Data linkage of child and parent data:** Implement robust data linkage of child and parent EHRs. Providers like CPRD allow you to access already established linkages of mother-child data. For linkage of mother-child data in other EHR databases, please see methods described elsewhere [1](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0164667),[2](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext),[3](https://onlinelibrary.wiley.com/doi/full/10.1002/pds.4811). For paternal linkage, please see methods described [here](https://www.thelancet.com/cms/10.1016/S2468-2667(23)00119-6/attachment/9c50602c-ebd2-445f-ae3b-de30e2a1db14/mmc1.pdf).
+* **ACE Indicators:** You are in the right place. Most indicators are derived using algorithms that identify and extract information from EHRs using clinically coded healthcare information (for example, ICD-10, Read codes, SNOMED-CT). We describe the ACEs and how to apply the algorithms below. Once you're ready, please head over to the [download section](https://acesinehrs.com/starterguide/#download-code-lists), where we provide a comprehensive list of validated ACE indicators based on established research and definitions.
+* **Data preparation and standardisation:** Extract the necessary data elements from the EHRs related to ACE indicators and relevant health outcomes. Prepare the data by cleaning and structuring it in a format ready for merging with the appropriate ACEs code list.
 * **Apply algorithms for ACE indicators:** Apply appropriate ACE algorithms using R, Python or any data management language to ensure you obtain validated indicators in the linked child and parent data.
 
 ![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/implement%20centered1.png)
@@ -43,14 +43,14 @@ We developed two measures of ACEs for electronic health records (EHRs):
       * Most specific indicator
         * Code (alphanumerical code attached to an event description)
 
-Indicators represent a variable of grouped codes or measures for a potential recorded ACE in mothers, fathers or children. The ACEs follows a hierarchical structure, with three levels of specificity of the underlying ACE construct. The structure range from the most specific ACE category (specific indicator), to broader categories (indicator 1 and 2), to the six overall ACE domains consistent with the original [ACE study](/about/). 
+Indicators represent a variable of grouped codes or measures for a potential recorded ACE in mothers, fathers or children. The ACEs follow a hierarchical structure, with three levels of specificity of the underlying ACE construct. The structure ranges from the most specific ACE category (specific indicator) to broader categories (indicators 1 and 2), to the six overall ACE domains consistent with the original [ACE study](/about/). 
 
 [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/domains%20and%20indicators%201.png)](/domains/)
 
 **Note:** The ability to use specific indicators depends on your sample size. We recommend restricting the disaggregation of specific indicators to those present in 250 or more unique children. For many studies, it will be most appropriate to use the six ACE domains only and avoid disaggregation into specific indicators unless required to answer your research question.
 {: .notice--danger}
 
-**Think-family approach:** Unless specified, indicators refers to information recorded in the child, mother and father. To properly study ACEs requires a "think-family" approach - that is, we need both children's and parents' data! Think-family means we recognise that the health and well-being of children are intricately tied to their parents' experiences and health outcomes.
+**Think-family approach:** Unless specified, indicators refer to information recorded in the child's, the mother's and the father's records. Properly studying ACEs requires a "think-family" approach - we need both children's and parents' data! Think-family means we recognise that the health and well-being of children are intricately tied to their parents' experiences and health outcomes.
 {: .notice--info}
 
 ![alt text](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/ehrs%20of%20aces%20indicator.png "workflow")
@@ -59,7 +59,7 @@ Indicators represent a variable of grouped codes or measures for a potential rec
 # Code lists
 We provide mapped codes for each ACE indicator stored in [code lists](/domains/). Each data source will have different coding systems. The current ACEs indicators include ICD-9/10 codes (hospital/death records), Read codes, SNOMED-CT codes, medcodes, prodcodes, gemscripts (general practice), and codes for obtaining continuous data or coded information from speciality fields in CPRD GOLD, HES-APC, HES-A&E and HES-OP.
 
-We have converted several original codes so the code lists contains one column of research ready codes which ensures efficient integration of information from multiple coding systems without accidental de-duplication. See code list dictionary for more information.
+We have converted several original codes so the code lists contain one column of research-ready codes. This ensures efficient information integration from multiple coding systems without accidental deduplication. See code list dictionary and conversion table below for more information.
 
 ## Code list dictionary
 
@@ -88,17 +88,17 @@ We have converted several original codes so the code lists contains one column o
 
 # Data preparation and standardisation
 ---
-Now, lets get the data ready for analysis!
+Now, let's get the data ready for analysis!
 Implementing the ACE indicators using code lists requires preparing and restructuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms.
 
-**IMPORTANT!** <i class="fas fa-exclamation-triangle" style="color: #e3740d;"></i> Implementing the ACE indicators in more complex data sets like primary care data (GP records) requires knowledge of how to restructure, manipulate and combine multiple large data sets into one or multiple new files using a programming language of choice (e.g., Python, R). In this section, we provide only brief information on data management related-tasks specific to the implementation of the ACE indicators. Many data management tasks involves a [split-apply-combine strategy](https://www.jstatsoft.org/article/view/v059i10), that is, the ability to "..break up a big problem into manageable pieces, operate on each piece independently and then put all the pieces back together (Wickham, 2014, p1)".  This information is therefore intended as supplementary recommendations to users who already have skills in  programming languages like R, Python, or SQL. To learn how to use R for data management, we recommend ["R for Data Science (2e)" by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund](https://r4ds.hadley.nz/) free to read online.
+**IMPORTANT!** <i class="fas fa-exclamation-triangle" style="color: #e3740d;"></i> IImplementing the ACE indicators in more complex data sets like primary care data (GP records) requires restructuring, manipulating and combining multiple large data sets into one or multiple new files using a programming language of choice (e.g., Python, R). This section provides only brief information on data management specific to the implementation of the ACE indicators. Many data management tasks involve a [split-apply-combine strategy](https://www.jstatsoft.org/article/view/v059i10), that is, the ability to "..break up a big problem into manageable pieces, operate on each piece independently and then put all the pieces back together (Wickham, 2014, p1)".  This information is therefore intended as supplementary recommendations to users who already have skills in  programming languages like R, Python, or SQL. To learn how to use R for data management, we recommend reading [*"R for Data Science (2e)*" by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund](https://r4ds.hadley.nz/), freely available online.
 {: .notice--danger}
 
 ## Data extraction and restructuring 
 ### Streaming data extraction
-* *Streaming data extraction.* Having identified your cohort, we recommend using a streaming approach to first extract only relevant patient data from the different files by iterating over (i.e. repeating the matching) each patient ID in each file against your separate list of patient IDs (i.e. cohort). This is an essential intermediate step which allows for data restructuring and cleaning of smaller data files before applying the coded ACE indicators.
+* *Streaming data extraction.* Having identified your cohort, we recommend using a streaming approach to first extract only relevant patient data from the different files by iterating over (i.e. repeating the matching) each patient ID in each file against your separate list of patient IDs (i.e. cohort). This essential intermediate step allows for data restructuring and cleaning of smaller data files before applying the coded ACE indicators.
 
-  A "streaming approach" refers to reading and processing data in chunks or sequentially, rather than loading the entire dataset into memory at once. Whilst *SQL* is recommended for larger databases, R or Python can also be used to apply streaming by first loading your list of relevant patient IDs and then extract relevant data by combining package functions like: *data.table::fread(.... ,data.table=F)* with *dplyr::filter* and *fastmatch::%fin%*. Here is an example in R which extract relevant patient data from multiple files (assuming they have the same underlying file structure) into one new file without loading everything into working memory:
+  A "streaming approach" refers to reading and processing data in chunks or sequentially rather than loading the entire dataset into memory at once. Whilst *SQL* is useful for handling larger databases, R or Python can also apply *streaming* by first loading your list of relevant patient IDs and then extracting relevant data using package functions like: *data.table::fread(.... ,data.table=F)* with *dplyr::filter* and *fastmatch::%fin%*. Here is an example in R which extract relevant patient data from multiple files (assuming they have the same underlying file structure) into one new file without loading everything into working memory:
 
 ```ruby
 # Step 1: Set up the working directory
@@ -133,7 +133,7 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
 * Make sure to add an extra variable to each data file to label the original data source (HES, CPRD clinical) before saving it.
 
 ## Data cleaning and code standardisation
-Most large EHR files contain various types of errors, such as missing values, inconsistent formats, or invalid entries. Data cleaning the  ensures consistency across different variables and datasets. It involves standardizing formats, resolving inconsistencies, and handling missing values. Consistent data is crucial for accurate analysis and interpretation of ACEs indicators.
+Most large EHR files contain various types of errors, such as missing values, inconsistent formats, or invalid entries. Data cleaning ensures consistency across different variables and datasets.
 
 * Clean and remove any punctuations, white spaces or trailing alphanumeric from data fields with relevant codes
 
@@ -142,7 +142,7 @@ aces_data$medcode <- gsub("\\s+","",aces_data$medcode) #removes white/blank spac
 aces_data$medcode <- gsub("\\.","",aces_data$medcode) #removes punctuations
 ```
 
-* For each file, convert all data fields into the same classes (e.g. character, date) and machine readable format (e.g., R and Python likes dates as: year-month-day)
+* For each file, convert all data fields into the same classes (e.g. character, date) and machine-readable format (e.g., R and Python likes dates as: year-month-day)
 
 ```ruby
 # R dplyr example of converting a data frame to character class
@@ -156,8 +156,8 @@ aces_data <- aces_data %>% mutate_all(as.character) %>%
 * `For example: "11246 (prodcode) - Lofexidine 200 microgram tablets" vs. 11246 (medcode) – At risk violence in the home`
 
 ## Conversation table of codes requiring prefixes
-* To preserve each code's uniqueness, we have added prefixes to each relevant code list, which affect most data sources coding systems. We list all prefixes for data preparation below.
-* In R or Python, we recommend using the "dplyr::unite" function or "R::paste0()". In Stata, use the "Concatenation" function (see Stata documentation).
+* To preserve each code's uniqueness, we have added prefixes to each relevant code list, which affect most coding systems. We list all prefixes for data preparation below.
+* In R or Python, we recommend using the "dplyr::unite" function or "R::paste0()". In Stata, you can use the "Concatenation" function (see Stata documentation).
 
 | Data source & Coding system | Prefix added | example | 
 | --- | --- | --- |
@@ -172,9 +172,9 @@ aces_data <- aces_data %>% mutate_all(as.character) %>%
 
 # Deriving variables
 ---
-##  ACE specific data file
-* Once you've cleaned and restructured the multiple separate files, we recommend you re-apply the streaming approach to new files and extracting only relevant ACE data by matching the data fields with codes in each file against your ACEs code lists.
-* Depending on research purposes, we recommend binding all retrieved ACE files into one combined "master database" with all relevant ACE data which should now follow a consistent unified format for easier retrieval.
+##  Create ACE-specific file
+* Once you've cleaned and restructured the multiple separate files, we recommend you re-apply the streaming approach to new files and extract only relevant ACE data by matching the data fields with codes in each file against your ACEs code lists.
+* Depending on research purposes, we recommend binding all retrieved ACE files into one combined "master database" with all relevant ACE data, which should now follow a consistent unified format for easier retrieval.
 
 ```ruby
 # Step 1: Set up the working directory
@@ -202,20 +202,20 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
 ```
 ## Algorithms
 ### Introduction
- *  Most indicators are ready to be used after merging the correct code list with your prepared ACE data file. However, a significant proportion of indicators rely on rule-based algorithms to ensure coded measures meet appropriate cut-off criteria and preventing misclassifications. Algorithms include age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
+* Most indicators are ready to be used after merging the correct code list with your prepared ACE data file. However, many indicators rely on rule-based algorithms to ensure coded measures meet appropriate cut-off criteria and prevent misclassifications. Algorithms include age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
  * For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
  * For hospital and death registration records, we define indicators by combining codes from the International Classification of Diseases 9th/10th edition (ICD-9/10), the Classification of Interventions and Procedures (OPCS-4) and HES-APC discharge/admission fields.
 
-**Time restrictions:** The validated ACE indicators are time sensitive and applies any time between 2 years before birth and 10 years after birth. However, most child maltreatment and high-risk presentations of child maltreatment are limited to 2 years before to 3, or 5 years after birth. Ascertaining correct time periods in relation children's birthdate is essential.
+**Time restrictions:** The validated ACE indicators are time sensitive and apply any time between 2 years before birth and 10 years after birth. However, most child maltreatment and high-risk presentations of child maltreatment are limited to 2 years before to 3, or 5 years after birth. Ascertaining the correct exposure time in relation to children's birthdate is essential.
 {: .notice--danger}
 
 ## Applying algorithms using the code lists built-in helper functions
 Here, we list steps to apply rule-based algorithms and obtain valid indicators:
 
 * **1. Merge code lists.** Merge the new combined "ACE specific data file" with your relevant code list. *Note: In the above R script example, the code list is already automatically merged with the new combined "ACE specific data file"*.
-* *Keep only unique recordings.* Having merged the code lists, many recordings will be duplicated as each ACE code is iterated over both children’s and parents IDs. In R or Python, we recommend  removing duplicate recordings using  `e.g. "aces_data %>% dplyr::distinct(patid,medcode,eventdate,system,source,individual,.keep_all=T)`
+* *Keep only unique recordings.* After merging the code lists, many recordings will be duplicated as the ACE codes are iterated over both children’s and parents IDs. In R or Python, we recommend  removing duplicate recordings using  `e.g. "aces_data %>% dplyr::distinct(patid,medcode,eventdate,system,source,individual,.keep_all=T)`
 
-* **2. Filter/subset the data against 1-2 criteria** The ACEs code list were developed with built-in "helper variables". After merging the code lists with your ACE specific file you should have extra variables to filter or subset values against, and retaining only data with valid indicators. We provide an example below using "if-then" assumptions to rows where the "Code" column value is present in the code list and additional conditions are met.
+* **2. Filter/subset the data against 1-2 criteria** The ACEs code lists were developed with built-in "helper variables". After merging the code lists with your ACE-specific file, you should have extra variables to filter or subset values against and retain only data with valid indicators. We provide an example below using "if-then" assumptions to rows where the "Code" column value is present in the code list, and additional conditions are met.
 
 ```ruby
 mmhps_depres_anx <- merged_data %>% filter(Domain=="mMHPs" & scale=="1" & data1 > cut_off
@@ -236,8 +236,8 @@ data <- data %>%
     TRUE ~ NA
   ))
 ```
-* **3.Apply multiple criteria.** Some indicator requires creating new variables to apply multiple rules at the same time.  
-* An example includes the algorithm for depression based on medication and non-diagnostic symptoms. Here, you will need to filter the data based on the presence of any of the coded depressive symptoms or medications and the co-occurrence of any diagnosis or intervention received in the within the past 2 years.
+* **3. Applying multiple rule-based criteria.** Some indicator requires creating new variables to apply multiple rules simultaneously.  
+* An example includes the algorithm for depression based on medication and non-diagnostic symptoms. Here, you will need to filter the data based on the presence of any of the coded depressive symptoms or medications and the co-occurrence of any diagnosis or intervention received within the past 2 years.
 
 ```ruby
 # Step 1: Load the required packages
@@ -269,8 +269,7 @@ depression_cases <- ehr_data %>%
 summary(depression_cases)
 ```
 
-* Finally, make sure you keep only one ACE indicator or domain per each unique child within the relevant study period before merging it back to your cohort.
-
+* Finally, once you applied the algorithms, keep only one ACE indicator or domain per each unique child (e.g., using "dplyr's  "distinct()" function) within the relevant study period before merging it back to your cohort.
 
 # Download code lists
 * [ACEsinEHRs control documentation / release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
