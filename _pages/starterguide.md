@@ -152,9 +152,7 @@ aces_data <- aces_data %>% mutate_all(as.character) %>%
 ```
 
 * Make sure to convert codes (see prefixes below) that share the same alphanumeric code as other codes into new unique codes to avoid deduplication to preserve their orginal linked ACE indicator. For example, Prodcodes (i.e. medications/prescriptions), medcodes (i.e. diagnoses/symptoms) and ICD-9 codes share thousands of the same alphanumeric codes but with different meanings and event descriptions.
-  ```ruby
-  For example: "11246 (prodcode) - Lofexidine 200 microgram tablets" vs. 11246 (medcode) – At risk violence in the home"
-  ```
+* `For example: "11246 (prodcode) - Lofexidine 200 microgram tablets" vs. 11246 (medcode) – At risk violence in the home`
 
 ## Conversation table of codes requiring prefixes
 * To perserve each code's uniqueness, we have added prefixes to each relevant code list, which affect most data sources coding systems. We list all prefixes for data preparation below.
