@@ -125,16 +125,7 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
       # Append relevant data to output file
     fwrite(relevant_data, output_file, append = TRUE, quote = FALSE, row.names = FALSE,col.names=T)
 }
-# Step 4: Initialise the combined new data file where the retrive
-combined_file <- "combined_ehr_data.csv"
-file.create(combined_file)
 
-# Step 5: Stream through EHR files, match with patient IDs and code list, and extract relevant data
-for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per your file extension
-  ehr_stream <- data.table::fread(ehr_file, header = T, data.table =F,colClasses="character",nThread=8)
-    relevant_data <- ehr_stream %>% filter(patient_id %fin% patient_id_list$patient_id)
-      fwrite(relevant_data, combined_file, append = T, quote = F, row.names = F,col.names=T)
-}
 
 ```
 ### Restructuring the data
@@ -150,8 +141,8 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
   For example: "11246 (prodcode) - Lofexidine 200 microgram tablets" vs. 11246 (medcode) – At risk violence in the home"
   ```
 
-## Conversation table for codes with pre-fixes
-* To perserve each code's uniqueness, we have added pre-fixes to each relevant code list, which affect most data sources coding systems. We list all prefixes for data preparation below.
+## Conversation table of codes requiring prefixes
+* To perserve each code's uniqueness, we have added prefixes to each relevant code list, which affect most data sources coding systems. We list all prefixes for data preparation below.
 
 | Data source & Coding system | Prefix added | example | 
 | --- | --- | --- |
@@ -169,9 +160,33 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
 ##  ACE specific data file
 * Once you've cleaned and restructured the multiple separate files, we recommend you re-apply the streaming approach to new files and extracting only relevant ACE data by matching the data fiels with codes in each file against your ACEs code lists.
 * Depending on research purposes, we recommend binding all retrived ACE files into one combined "master database" with all relevant ACE data which should now follow a consistent unified format for easier retrival.
+```ruby
+# Step 1: Set up the working directory
+setwd("path/to/ehr/files")
+# Step 2: Install and load required packages
+install.packages(c("data.table", "readr","tidyverse","fastmatch"))
+library(data.table)
+library(readr)
+library(tidyverse)
+library(fastmatch)
+# Step 3: Read the patient ID list and code list
+patient_id_list <- read_csv("patient_id_list.csv")  # Adjust the file name and format as per your data
+code_list <- read_csv("code_list.csv")  # Adjust the file name and format as per your data
+
+# Step 4: Initialise the combined new data file where the retrive
+combined_file <- "combined_ehr_data.csv"
+file.create(combined_file)
+
+# Step 5: Stream through EHR files, match with patient IDs and code list, and extract relevant data
+for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per your file extension
+  ehr_stream <- data.table::fread(ehr_file, header = T, data.table =F,colClasses="character",nThread=8)
+    relevant_data <- ehr_stream %>% filter(patient_id %fin% patient_id_list$patient_id)
+      fwrite(relevant_data, combined_file, append = T, quote = F, row.names = F,col.names=T)
+}
+```
 
 ## Merge code lists
-* Most indicators are ready to use by merging the correct code list with your prepared ACE data file
+* Most indicators are ready to use by merging the correct code list with your prepared ACE data file. In the above R script example, the code list is already automatically merged with the new combined "ACE specific data file"
 * Having merged the code lists, keep only one ACE indicator or domain per each unique child within relevant study period
 
 **Time restrictions:** The validated ACE indicators are time sensitive and applies any time between 2 years before birth and 10 years after birth. However, most child maltreatment and high-risk presentations of child maltreatment are limited to 2 years before to 3, or 5 years after birth. Acertaining correct time periods in relation children's birthdate is essential.
