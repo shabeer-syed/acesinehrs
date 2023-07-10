@@ -179,6 +179,7 @@ aces_data <- aces_data %>% mutate_all(as.character) %>%
 ##  ACE specific data file
 * Once you've cleaned and restructured the multiple separate files, we recommend you re-apply the streaming approach to new files and extracting only relevant ACE data by matching the data fiels with codes in each file against your ACEs code lists.
 * Depending on research purposes, we recommend binding all retrived ACE files into one combined "master database" with all relevant ACE data which should now follow a consistent unified format for easier retrival.
+
 ```ruby
 # Step 1: Set up the working directory
 setwd("path/to/ehr/files")
