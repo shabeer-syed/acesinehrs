@@ -124,7 +124,8 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
     relevant_data <- ehr_stream %>% filter(patient_id %fin% patient_id_list$patient_id)
       # Append relevant data to output file
     fwrite(relevant_data, output_file, append = TRUE, quote = FALSE, row.names = FALSE,col.names=T)
-} ```
+}
+```
 ### Restructuring the data
 * *Restructuring data files and fields*. Now, restructure all files and data fields (variables) into the same long format, and rename variable into consistent names. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.Now, its time to rest Keep only essential data fields/variables to reduce file size. e.g. In the CPRD clinical file, the vairables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
 
@@ -148,7 +149,6 @@ aces_data <- aces_data %>% mutate_all(as.character) %>%
  separate(date_example_variable,c("day","month","year"),sep="-",remove=T) %>% 
  unite(new_date_variable,c("year","month","day"),sep="-",remove=T) 
 ```
-
 * Make sure to convert codes (see prefixes below) that share the same alphanumeric code as other codes into new unique codes to avoid deduplication to preserve their orginal linked ACE indicator. For example, Prodcodes (i.e. medications/prescriptions), medcodes (i.e. diagnoses/symptoms) and ICD-9 codes share thousands of the same alphanumeric codes but with different meanings and event descriptions.
 * `For example: "11246 (prodcode) - Lofexidine 200 microgram tablets" vs. 11246 (medcode) – At risk violence in the home`
 
