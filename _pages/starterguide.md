@@ -127,11 +127,13 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
 }
 ```
 ### Restructuring the data
-* *Restructuring data files and fields*. Now, restructure all files and data fields (variables) into the same long format, and rename variable into consistent names. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.Now, its time to rest Keep only essential data fields/variables to reduce file size. e.g. In the CPRD clinical file, the vairables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
-
-* Make sure to add an extra variable to each data file to label the original data source (HES, CPRD clinical), as the data will be compiled into one file later.
+* *Restructuring data files and fields*. Now, we need to restructure all files and data fields (variables) into a consistent "long format", and rename variable into consistent names. The consitent structure ensures we can easily bind all files into one combined file later. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.
+* Drop any irrelevant data fields/variables to reduce file size. e.g. In the CPRD clinical file, the vairables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
+* Make sure to add an extra variable to each data file to label the original data source (HES, CPRD clinical) before saving it.
 
 ## Data cleaning and code standardisation
+Most large EHR files contain various types of errors, such as missing values, inconsistent formats, or invalid entries. Data cleaning the  ensures consistency across different variables and datasets. It involves standardizing formats, resolving inconsistencies, and handling missing values. Consistent data is crucial for accurate analysis and interpretation of ACEs indicators.
+
 * Clean and remove any punctuations, white spaces or trailing alphanumerics from data fields with relevant codes
 
 ```ruby
