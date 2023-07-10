@@ -142,7 +142,8 @@ aces_data$medcode <- gsub("\\.","",aces_data$medcode) #removes punctuations
 * For each file, convert all data fields into the same classes (e.g. character, date) and machine readible format (e.g., R and Python likes dates as: year-month-day)
 
 ```ruby
-# R dplyr example of converting data frame to character and restructure date variable provided in the incorrect format
+# R dplyr example of converting dataframe to character class
+# and restructuring a date variable provided in the incorrect format
  
 aces_data <- aces_data %>% mutate_all(as.character) %>% 
  separate(date_example_variable,c("day","month","year"),sep="-",remove=T) %>% 
