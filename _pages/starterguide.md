@@ -205,7 +205,8 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
 }
 ```
 ## Algorithms
- * A significant proportion of indicators rely on rule-based algorithms to ensure coded measures meet appropriate cut-off criteria and preventing misclassifications. Algorithms include age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
+### Introduction
+ *  Most indicators are ready to be used after merging the correct code list with your prepared ACE data file. However, a significant proportion of indicators rely on rule-based algorithms to ensure coded measures meet appropriate cut-off criteria and preventing misclassifications. Algorithms include age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
  * For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
  * For hospital and death registration records, we define indicators by combining codes from the International Classification of Diseases 9th/10th edition (ICD-9/10), the Classification of Interventions and Procedures (OPCS-4) and HES-APC discharge/admission fields.
 
@@ -213,14 +214,23 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
 {: .notice--danger}
 
 ## Applying algorithms using the code lists built-in helper functions
+Here, we list steps to apply rule-based algorithms and obtain valid indicators:
 
-The ACEs code list were developed to make it easier to apply algorithms and provides built in "helper variables". Most indicators are therefore ready to be used after merging the correct code list with your prepared ACE data file.  We outline the steps below:
 * **1. Merge code lists.** Merge the new combined "ACE specific data file" with your relevant code list. *Note: In the above R script example, the code list is already automatically merged with the new combined "ACE specific data file"*.
-* Keep only unique recordings. Having merged the code lists, many recordings will be duplicated as each ACE code is iterated over both childrens and parents IDs. In R or Python, we recommend  removing duplicate recordings using  e.g. "aces_data %>% dplyr::distinct(patid,medcode,eventdate,system,source,individual,.keep_all=T)
-* * We recommend using [control flow methods](https://advanced-r-solutions.rbind.io/control-flow.html) to apply "if-then" assumptions to rows where the "Code" column value is present in the code list and additional conditions are met. We recommend using "dplyr::case_when()" function to apply multiple if-then assumptions based input from a separate code list or by the using merged variables.
+* *Keep only unique recordings.* Having merged the code lists, many recordings will be duplicated as each ACE code is iterated over both childrens and parents IDs. In R or Python, we recommend  removing duplicate recordings using  `e.g. "aces_data %>% dplyr::distinct(patid,medcode,eventdate,system,source,individual,.keep_all=T)`
 
-* only one ACE indicator or domain per each unique child within the relevant study period.
+* **2. Filter/subset the data against 1-2 criteria** The ACEs code list were developed with built-in "helper variables". After merging the code lists with your ACE specific file you should have extra variables to filter or subset values against, and retaining only data with valid indicators. We provide an example below using  "if-then" assumptions to rows where the "Code" column value is present in the code list and additional conditions are met.
 
+```ruby
+mmhps_depres_anx <- merged_data %>% filter(Domain=="mMHPs" & scale=="1" & data1 > cut_off
+
+#In this case we retained only mental health measures/scales that met validated cut-off critera
+# In addition to selecting the specific domain, helper variables include:
+#"Scale==1" (keep measures with continious data) 
+# data1 "cut_off" (keep only values in data1 above cut-off score)
+```
+
+* To apply multiple if-then assumptions against a standalone code list we rely on [control flow methods](https://advanced-r-solutions.rbind.io/control-flow.html). Here is a generic example using "dplyr:case_when:"
 
 ```ruby
 data <- data %>%
@@ -230,8 +240,41 @@ data <- data %>%
     TRUE ~ NA
   ))
 ```
+* **3.Apply multiple criteria.** Some indicator requires creating new variables to apply multiple rules at the same time.  
+* An example includes the algorithm for depression based on medication and non-diagnostic symptoms. Here, you will need to filter the data based on the presence of any of the coded depressive symptoms or medications and the co-occurrence of any diagnosis or intervention received in the within the past 2 years.
 
- * You can add more conditions using & (logical AND) or | (logical OR) operators, and assign the desired binary variable values (1 or 0) accordingly.
+```ruby
+# Step 1: Load the required packages
+library(dplyr)
+
+# Step 2: Import the EHR data
+ehr_data <- read.csv("ehr_data.csv")  # Replace "ehr_data.csv" with the actual file path and name
+
+# Step 3: Define the criteria for depression
+# Define the symptoms or medications associated with depression
+depression_symptoms <- c("symptom1", "symptom2", "symptom3")
+depression_medications <- c("medication1", "medication2", "medication3")
+
+# Define the previous collection of codes within the past 2 years
+previous_codes <- c("code1", "code2", "code3")
+
+# Step 4: Apply the algorithm to identify depression cases
+depression_cases <- ehr_data %>%
+  filter(
+    # Check if any of the depression symptoms or medications are present
+    any_of(depression_symptoms) |
+    any_of(depression_medications),
+    
+    # Check if any of the previous codes are present within the past 2 years
+    any_of(previous_codes) & visit_date >= (Sys.Date() - 365 * 2)
+  )
+
+# Step 5: Explore the identified depression cases
+summary(depression_cases)
+```
+
+* Finally, make sure you keep only one ACE indicator or domain per each unique child within the relevant study period before merging it back to your cohort.
+
 
 # Download code lists
 * [ACEsinEHRs control documentation / release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
