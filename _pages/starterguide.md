@@ -21,7 +21,7 @@ sidebar:
 
 {% include base_path %}
 
-Welcome to the marvellous world of EHRs! We provide a tutorial in how to implement clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course.
+Welcome to the marvellous world of EHRs! We provide a tutorial in how to implement clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course. 
 
 # How does it work?
 To use the ACE indicators, you will need:
@@ -89,9 +89,13 @@ We have converted several original codes so the codelists contains one column of
 # Data preparation and standardisation
 ---
 Now, lets get the data ready for analysis!
-Implementing the ACE indicators using code lists requires preparing and re-structuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms.
+Implementing the ACE indicators using code lists requires preparing and restructuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms.
 
-**Skills check** <i class="fas fa-exclamation-triangle" style="color: #e3740d;"></i> Implementing the ACE indicators in more complex data sets like primary care data (GP records) requires knowledge of how to re-structure, manipulate and combine multiple large data sets into one or multiple new files. Depending on resources available, we recommend beginner to intermediate skills in a programming language of choice (e.g., Python, R). Many data management tasks involves a [split-apply-combine strategy](https://www.jstatsoft.org/article/view/v059i10), that is, the ability to "..break up a big problem into manageable pieces, operate on each piece independently and then put all the pieces back together. (Wickham, 2014, p1)"
+**IMPORTANT!**  For we recommend you read [R for Data Science chater 12 tidy data by ](https://r4ds.had.co.nz/tidy-data.html)
+
+**IMPORTANT!** <i class="fas fa-exclamation-triangle" style="color: #e3740d;"></i> Implementing the ACE indicators in more complex data sets like primary care data (GP records) requires knowledge of how to restructure, manipulate and combine multiple large data sets into one or multiple new files using a programming language of choice (e.g., Python, R). In this section, we provide only brief information on data manangement related to the specific implementation of the ACE indicators. Many data management tasks involves a [split-apply-combine strategy](https://www.jstatsoft.org/article/view/v059i10), that is, the ability to "..break up a big problem into manageable pieces, operate on each piece independently and then put all the pieces back together (Wickham, 2014, p1)". 
+
+This information is therefore intended as supplementary recommendations to users who already have skills in  programming languages like R, Python, or SQL. To learn how to use R for data management, we recommend ["R for Data Science (2e)" by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund](https://r4ds.hadley.nz/) free to read online.
 {: .notice--danger}
 
 ## Data extraction and restructuring 
@@ -127,7 +131,8 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
 }
 ```
 ### Restructuring the data
-* *Restructuring data files and fields*. Now, we need to restructure all files and data fields (variables) into a consistent "long format", and rename variable into consistent names. The consitent structure ensures we can easily bind all files into one combined file later. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.
+
+* *Restructuring data files and fields*. Now, we need to restructure all files and data fields (variables) into a consistent "long format", and rename variable into consistent names. The consistent structure ensures we can easily bind all files into one combined file later. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.
 * Drop any irrelevant data fields/variables to reduce file size. e.g. In the CPRD clinical file, the vairables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
 * Make sure to add an extra variable to each data file to label the original data source (HES, CPRD clinical) before saving it.
 
