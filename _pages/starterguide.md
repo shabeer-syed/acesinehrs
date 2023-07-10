@@ -59,7 +59,7 @@ Indicators represent a variable of grouped codes or measures for a potential rec
 # Code lists
 We provide mapped codes for each ACE indicator stored in [code lists](/domains/). Each data source will have different coding systems. The current ACEs indicators include ICD-9/10 codes (hospital/death records), Read codes, SNOMED-CT codes, medcodes, prodcodes, gemscripts (general practice), and codes for obtaining continuous data or coded information from speciality fields in CPRD GOLD, HES-APC, HES-A&E and HES-OP.
 
-We have converted several original codes so the codelists contains one column of research ready codes which ensures  efficieint intergration of information from multiple coding systems without accidental de-duplication. See code list dictionary for more information.
+We have converted several original codes so the code lists contains one column of research ready codes which ensures efficient integration of information from multiple coding systems without accidental de-duplication. See code list dictionary for more information.
 
 ## Code list dictionary
 
@@ -129,34 +129,34 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
 ### Restructuring the data
 
 * *Restructuring data files and fields*. Now, we need to restructure all files and data fields (variables) into a consistent "long format", and rename variable into consistent names. The consistent structure ensures we can easily bind all files into one combined file later. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.
-* Drop any irrelevant data fields/variables to reduce file size. e.g. In the CPRD clinical file, the vairables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
+* Drop any irrelevant data fields/variables to reduce file size. e.g. In the CPRD clinical file, the variables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
 * Make sure to add an extra variable to each data file to label the original data source (HES, CPRD clinical) before saving it.
 
 ## Data cleaning and code standardisation
 Most large EHR files contain various types of errors, such as missing values, inconsistent formats, or invalid entries. Data cleaning the  ensures consistency across different variables and datasets. It involves standardizing formats, resolving inconsistencies, and handling missing values. Consistent data is crucial for accurate analysis and interpretation of ACEs indicators.
 
-* Clean and remove any punctuations, white spaces or trailing alphanumerics from data fields with relevant codes
+* Clean and remove any punctuations, white spaces or trailing alphanumeric from data fields with relevant codes
 
 ```ruby
 aces_data$medcode <- gsub("\\s+","",aces_data$medcode) #removes white/blank spaces
 aces_data$medcode <- gsub("\\.","",aces_data$medcode) #removes punctuations
 ```
 
-* For each file, convert all data fields into the same classes (e.g. character, date) and machine readible format (e.g., R and Python likes dates as: year-month-day)
+* For each file, convert all data fields into the same classes (e.g. character, date) and machine readable format (e.g., R and Python likes dates as: year-month-day)
 
 ```ruby
-# R dplyr example of converting dataframe to character class
+# R dplyr example of converting a data frame to character class
 # and restructuring a date variable provided in the incorrect format
  
 aces_data <- aces_data %>% mutate_all(as.character) %>% 
  separate(date_example_variable,c("day","month","year"),sep="-",remove=T) %>% 
  unite(new_date_variable,c("year","month","day"),sep="-",remove=T) 
 ```
-* Make sure to convert codes (see prefixes below) that share the same alphanumeric code as other codes into new unique codes to avoid deduplication to preserve their orginal linked ACE indicator. For example, Prodcodes (i.e. medications/prescriptions), medcodes (i.e. diagnoses/symptoms) and ICD-9 codes share thousands of the same alphanumeric codes but with different meanings and event descriptions.
+* Make sure to convert codes (see prefixes below) that share the same alphanumeric code as other codes into new unique codes to avoid deduplication to preserve their original linked ACE indicator. For example, Prodcodes (i.e. medications/prescriptions), medcodes (i.e. diagnoses/symptoms) and ICD-9 codes share thousands of the same alphanumeric codes but with different meanings and event descriptions.
 * `For example: "11246 (prodcode) - Lofexidine 200 microgram tablets" vs. 11246 (medcode) – At risk violence in the home`
 
 ## Conversation table of codes requiring prefixes
-* To perserve each code's uniqueness, we have added prefixes to each relevant code list, which affect most data sources coding systems. We list all prefixes for data preparation below.
+* To preserve each code's uniqueness, we have added prefixes to each relevant code list, which affect most data sources coding systems. We list all prefixes for data preparation below.
 * In R or Python, we recommend using the "dplyr::unite" function or "R::paste0()". In Stata, use the "Concatenation" function (see Stata documentation).
 
 | Data source & Coding system | Prefix added | example | 
@@ -173,8 +173,8 @@ aces_data <- aces_data %>% mutate_all(as.character) %>%
 # Deriving variables
 ---
 ##  ACE specific data file
-* Once you've cleaned and restructured the multiple separate files, we recommend you re-apply the streaming approach to new files and extracting only relevant ACE data by matching the data fiels with codes in each file against your ACEs code lists.
-* Depending on research purposes, we recommend binding all retrived ACE files into one combined "master database" with all relevant ACE data which should now follow a consistent unified format for easier retrival.
+* Once you've cleaned and restructured the multiple separate files, we recommend you re-apply the streaming approach to new files and extracting only relevant ACE data by matching the data fields with codes in each file against your ACEs code lists.
+* Depending on research purposes, we recommend binding all retrieved ACE files into one combined "master database" with all relevant ACE data which should now follow a consistent unified format for easier retrieval.
 
 ```ruby
 # Step 1: Set up the working directory
@@ -206,16 +206,16 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
  * For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
  * For hospital and death registration records, we define indicators by combining codes from the International Classification of Diseases 9th/10th edition (ICD-9/10), the Classification of Interventions and Procedures (OPCS-4) and HES-APC discharge/admission fields.
 
-**Time restrictions:** The validated ACE indicators are time sensitive and applies any time between 2 years before birth and 10 years after birth. However, most child maltreatment and high-risk presentations of child maltreatment are limited to 2 years before to 3, or 5 years after birth. Acertaining correct time periods in relation children's birthdate is essential.
+**Time restrictions:** The validated ACE indicators are time sensitive and applies any time between 2 years before birth and 10 years after birth. However, most child maltreatment and high-risk presentations of child maltreatment are limited to 2 years before to 3, or 5 years after birth. Ascertaining correct time periods in relation children's birthdate is essential.
 {: .notice--danger}
 
 ## Applying algorithms using the code lists built-in helper functions
 Here, we list steps to apply rule-based algorithms and obtain valid indicators:
 
 * **1. Merge code lists.** Merge the new combined "ACE specific data file" with your relevant code list. *Note: In the above R script example, the code list is already automatically merged with the new combined "ACE specific data file"*.
-* *Keep only unique recordings.* Having merged the code lists, many recordings will be duplicated as each ACE code is iterated over both childrens and parents IDs. In R or Python, we recommend  removing duplicate recordings using  `e.g. "aces_data %>% dplyr::distinct(patid,medcode,eventdate,system,source,individual,.keep_all=T)`
+* *Keep only unique recordings.* Having merged the code lists, many recordings will be duplicated as each ACE code is iterated over both children’s and parents IDs. In R or Python, we recommend  removing duplicate recordings using  `e.g. "aces_data %>% dplyr::distinct(patid,medcode,eventdate,system,source,individual,.keep_all=T)`
 
-* **2. Filter/subset the data against 1-2 criteria** The ACEs code list were developed with built-in "helper variables". After merging the code lists with your ACE specific file you should have extra variables to filter or subset values against, and retaining only data with valid indicators. We provide an example below using  "if-then" assumptions to rows where the "Code" column value is present in the code list and additional conditions are met.
+* **2. Filter/subset the data against 1-2 criteria** The ACEs code list were developed with built-in "helper variables". After merging the code lists with your ACE specific file you should have extra variables to filter or subset values against, and retaining only data with valid indicators. We provide an example below using "if-then" assumptions to rows where the "Code" column value is present in the code list and additional conditions are met.
 
 ```ruby
 mmhps_depres_anx <- merged_data %>% filter(Domain=="mMHPs" & scale=="1" & data1 > cut_off
@@ -289,7 +289,7 @@ Right click on link to save as a ".txt" file (i.e. using option "save link as")
 
 * [Child maltreatment (1312)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/CM_2023ACEsinEHRs.txt)
 * [Intimate partner violence (972 including 519 codes for assault algorithm)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/IPV_2023ACEsinEHRs.txt)
-	* [Intimate partner violence (453 - excluding codes requring algorithms)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/IPV_no_algo_2023ACEsinEHRs.txt)
+	* [Intimate partner violence (453 - excluding codes requiring algorithms)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/IPV_no_algo_2023ACEsinEHRs.txt)
 * [High-risk presentation of CM (801)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/HRPCM_2023ACEsinEHRs.txt)
 * [Adverse family environment (977)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/AFE_2023ACEsinEHRs.txt)
 * [Parental mental health problems (3711)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/MHP_2023ACEsinEHRs.txt)
