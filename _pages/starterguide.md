@@ -272,8 +272,8 @@ summary(depression_cases)
 * Finally, once you applied the algorithms, keep only one ACE indicator or domain per each unique child (e.g., using "dplyr's  "distinct()" function) within the relevant study period before merging it back to your cohort.
 
 # Download code lists
-* [ACEsinEHRs control documentation / release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
-Right click on link to save as a ".txt" file (i.e. using option "save link as")
+* [ACEsinEHRs control documentation/release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
+Right-click on link to save as a ".txt" file (i.e. using option "save link as")
 *Total number of included ACE codes: 8802 (ACEs) + 8808 (covariates)*
 *Total number of excluded/tested codes: 7671*
 
