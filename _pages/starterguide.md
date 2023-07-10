@@ -95,25 +95,22 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
 {: .notice--danger}
 
 ## Data extraction and restructuring 
-* **Streaming data extraction.** Having identified your cohort, we recommend using a streaming approach to first extract only relevant patient data from the different files by iterating over (i.e. repeating the matching) each patient ID in each file against your separate list of patient IDs (i.e. cohort). This is an essential intermediate step which allows for data restructuring and cleaning of smaller data files before applying the coded ACE indicators.
+### Streaming data extraction
+* *Streaming data extraction.* Having identified your cohort, we recommend using a streaming approach to first extract only relevant patient data from the different files by iterating over (i.e. repeating the matching) each patient ID in each file against your separate list of patient IDs (i.e. cohort). This is an essential intermediate step which allows for data restructuring and cleaning of smaller data files before applying the coded ACE indicators.
 
   A "streaming approach" refers to reading and processing data in chunks or sequentially, rather than loading the entire dataset into memory at once. Whilst *SQL* is recommended for larger databases, R or Python can also be used to apply streaming by first loading your list of relevant patient IDs and then extract relevant data by combining package functions like: *data.table::fread(.... ,data.table=F)* with *dplyr::filter* and *fastmatch::%fin%*. Here is an example in R which extract relevant patient data from multiple files (assuming they have the same underlying file structure) into one new file without loading everything into working memory:
 
 ```ruby
 # Step 1: Set up the working directory
 setwd("path/to/ehr/files")
-
 # Step 2: Install and load required packages
 install.packages(c("data.table", "readr","tidyverse","fastmatch"))
 library(data.table)
 library(readr)
 library(tidyverse)
 library(fastmatch)
-
-
 # Step 3: Read the patient ID list and code list
 patient_id_list <- read_csv("patient_id_list.csv")  # Adjust the file name and format as per your data
-
 # Step 4: Stream through EHR files, match with patient ID, and save relevant data to new files
 for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per your file extension
   output_file <- paste0("output_", ehr_file)  # Generate output file name
@@ -124,16 +121,10 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
   
   # Stream through EHR file and extract relevant data
   ehr_stream <- data.table::fread(ehr_file, header = TRUE, data.table = FALSE, header = T, data.table =F,colClasses="character",nThread=8)
-  
     relevant_data <- ehr_stream %>% filter(patient_id %fin% patient_id_list$patient_id)
-  
-    # Append relevant data to output file
+      # Append relevant data to output file
     fwrite(relevant_data, output_file, append = TRUE, quote = FALSE, row.names = FALSE,col.names=T)
-
 }
-
-
-
 # Step 4: Initialise the combined new data file where the retrive
 combined_file <- "combined_ehr_data.csv"
 file.create(combined_file)
@@ -144,10 +135,12 @@ for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per y
     relevant_data <- ehr_stream %>% filter(patient_id %fin% patient_id_list$patient_id)
       fwrite(relevant_data, combined_file, append = T, quote = F, row.names = F,col.names=T)
 }
-```
-* **Restructure all files and data fields**. Now, restructure all files and data fields (variables) into the same long format, and rename variable into consistent names. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.Now, its time to rest Keep only essential data fields/variables to reduce file size. e.g. In the CPRD clinical file, the vairables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
 
-* Add an extra variable to each data file to label the original data source (HES, CPRD clinical), as the data will be compiled into one file later.
+```
+### Restructuring the data
+* *Restructuring data files and fields*. Now, restructure all files and data fields (variables) into the same long format, and rename variable into consistent names. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.Now, its time to rest Keep only essential data fields/variables to reduce file size. e.g. In the CPRD clinical file, the vairables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
+
+* Make sure to add an extra variable to each data file to label the original data source (HES, CPRD clinical), as the data will be compiled into one file later.
 
 ## Data cleaning and code standardisation
 * Clean and remove any punctuations, white spaces or trailing alphanumerics from data fields with relevant codes
