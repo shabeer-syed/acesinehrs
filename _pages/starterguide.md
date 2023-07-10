@@ -96,6 +96,7 @@ Implementing the ACE indicators using code lists requires preparing and re-struc
 
 ## Data extraction and restructuring 
 * **Streaming data extraction.** Having identified your cohort, we recommend using a streaming approach to first extract only relevant patient data from the different files by matching the patient IDs in each file against your separate list of patient IDs (i.e. cohort). This is an essential intermediate step which allows for data restructuring and cleaning of smaller data files before applying the coded ACE indicators. A "streaming approach" refers to reading and processing data in chunks or sequentially, rather than loading the entire dataset into memory at once. In R or Python, the streaming approach is achieved by first loading your list of relevant patient IDs and then extract relevant data by combining the functions *data.table::fread(.... ,data.table=F)* with *dplyr::filter* and *fastmatch::%fin%*. Here is an example:
+
 ```ruby
 # Step 1: Set up the working directory
 setwd("path/to/ehr/files")
@@ -127,6 +128,7 @@ for (ehr_file in list.files(pattern = "*.csv")) {  # Adjust the pattern as per y
   }
 }
 ```
+
 * * Keep only essential data fields/variables to reduce file size. e.g. In the CPRD clinical file, the vairables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
 * Restructure all files and data fields (variables) into the same long format, and rename variable into consistent names. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.
 * Add an extra variable to each data file to label the original data source (HES, CPRD clinical), as the data will be compiled into one file later.
