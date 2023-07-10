@@ -1,7 +1,7 @@
 ---
 layout: splash
 permalink: /
-title: "ACEs in EHRs"
+title: "Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)"
 header:
   overlay_color: "#5e616c"
   overlay_image: /images/ACEsinEHRs home page 2023.jpg
