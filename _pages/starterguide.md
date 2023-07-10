@@ -144,7 +144,9 @@ aces_data$medcode <- gsub("\\.","",aces_data$medcode) #removes punctuations
 ```ruby
 # R dplyr example of converting data frame to character and restructure date variable provided in the incorrect format
  
-aces_data <- aces_data %>% mutate_all(as.character) %>% separate(date_example_variable,c("day","month","year"),sep="-",remove=T) %>% unite(new_date_variable,c("year","month","day"),sep="-",remove=T) 
+aces_data <- aces_data %>% mutate_all(as.character) %>% 
+ separate(date_example_variable,c("day","month","year"),sep="-",remove=T) %>% 
+ unite(new_date_variable,c("year","month","day"),sep="-",remove=T) 
 
 ```
 
