@@ -12,7 +12,7 @@ excerpt: 'A library of indicators for identifying Adverse Childhood Experiences 
 
 feature_row:
 intro:
-  - excerpt: 'We have developed and validated indicators for identifying ACEs in routinely collected non-identifiable health care data of mothers and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
+  - excerpt: 'We have developed and validated indicators for identifying ACEs in routinely collected non-identifiable health care data of parents and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
 ---
 
 {% include feature_row id="intro" type="center" %}
