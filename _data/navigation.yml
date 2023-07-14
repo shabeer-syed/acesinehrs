@@ -42,11 +42,9 @@ https://acesinehrs.com/starterguide/
       - title: "Streaming data extraction"
         url: /starterguide/#streaming-data-extraction
       - title: "Restructuring the data"
-        url: /starterguide/#restructuring-the-datan
+        url: /starterguide/#restructuring-the-data
       - title: "Streaming data extraction"
         url: /starterguide/#streaming-data-extraction
-      - title: "Streaming data extraction"
-        url: /starterguide/#streaming-data-extraction       
       - title: "Data cleaning & code standardisation"
         url: /starterguide/#data-cleaning-and-code-standardisation
       - title: "Converating code prefixes"
