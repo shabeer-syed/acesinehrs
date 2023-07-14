@@ -23,7 +23,7 @@ docs:
         url: /starterguide/#how-does-it-work
       - title: "Domains and indicators"
         url: /starterguide/#domains-and-indicators
-
+https://acesinehrs.com/starterguide/
   - title: Code lists
     children:
       - title: "Code list"
@@ -37,20 +37,30 @@ docs:
     children:
       - title: "Introduction"
         url: /starterguide/#data-preparation-and-standardisation
-      - title: "Data extraction & re-structering"
-        url: /starterguide/#data-extraction-and-re-structering
+      - title: "Data extraction & restructuring"
+        url: /starterguide/#data-extraction-and-restructuring
+      - title: "Streaming data extraction"
+        url: /starterguide/#streaming-data-extraction
+      - title: "Restructuring the data"
+        url: /starterguide/#restructuring-the-datan
+      - title: "Streaming data extraction"
+        url: /starterguide/#streaming-data-extraction
+      - title: "Streaming data extraction"
+        url: /starterguide/#streaming-data-extraction       
       - title: "Data cleaning & code standardisation"
         url: /starterguide/#data-cleaning-and-code-standardisation
-      - title: "Converting codes - Prefixes"
-        url: /starterguide/#data-cleaning-and-code-standardisation
-      - title: "Data integration & retrieving ACEs"
-        url: /starterguide/#data-integration-and-aces-retrival-process
+      - title: "Converating code prefixes"
+        url: /starterguide/#conversation-table-of-codes-requiring-prefix
+      - title: "Deriving variables"
+        url: /starterguide/#deriving-variables
+      - title: "Create ACE-specific files"
+      - url: starterguide/#create-ace-specific-file/
       - title: "Algorithms"
-        url: /starterguide/#algorithms
+      - url: starterguide/starterguide/#algorithms
+      - title: "Using code list helper functions"
+      - url: /starterguide/#applying-algorithms-using-the-code-lists-built-in-helper-functions
 
   - title: Donwloads
     children:
       - title: "Download code lists"
-        url: /docs/stylesheets/
-      - title: "JavaScript"
-        url: /docs/javascript/
+        url: /starterguide/#download-code-lists
