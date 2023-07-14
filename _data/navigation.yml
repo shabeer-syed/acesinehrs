@@ -54,11 +54,11 @@ https://acesinehrs.com/starterguide/
       - title: "Deriving variables"
         url: /starterguide/#deriving-variables
       - title: "Create ACE-specific files"
-      - url: starterguide/#create-ace-specific-file/
+        url: starterguide/#create-ace-specific-file/
       - title: "Algorithms"
-      - url: starterguide/starterguide/#algorithms
+        url: starterguide/starterguide/#algorithms
       - title: "Using code list helper functions"
-      - url: /starterguide/#applying-algorithms-using-the-code-lists-built-in-helper-functions
+        url: /starterguide/#applying-algorithms-using-the-code-lists-built-in-helper-functions
 
   - title: Donwloads
     children:
