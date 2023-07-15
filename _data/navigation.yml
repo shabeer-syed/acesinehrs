@@ -19,11 +19,11 @@ main:
 docs:
   - title: Getting Started
     children:
-      - title: "Overview: how does it work?"
+      - title:c"Overview: how does it work?"
         url: /starterguide/#how-does-it-work
       - title: "Domains and indicators"
         url: /starterguide/#domains-and-indicators
-https://acesinehrs.com/starterguide/
+
   - title: Code lists
     children:
       - title: "Code list"
