@@ -51,10 +51,10 @@ docs:
         url: /starterguide/#conversation-table-of-codes-requiring-prefix
       - title: "Deriving variables"
         url: /starterguide/#deriving-variables
-      - title: "Create ACE-specific files"
-        url: starterguide/#create-ace-specific-file/
+      - title: "Create ACE-specific file"
+        url: starterguide/#create-ace-specific-file
       - title: "Algorithms"
-        url: starterguide/starterguide/#algorithms
+        url: starterguide/#algorithms
       - title: "Using code list helper functions"
         url: /starterguide/#applying-algorithms-using-the-code-lists-built-in-helper-functions
 
