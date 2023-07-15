@@ -4,7 +4,7 @@ title: "Child maltreatment"
 permalink: /CM/
 header:
   overlay_color: "#5e616c"
-  overlay_image: /images/ACEsinEHRs home page 2023.jpg
+  overlay_image: /images/Child maltreatment aces in ehrs.jpg
   cta_label: 
   cta_url: 
   caption:
