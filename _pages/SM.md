@@ -4,7 +4,7 @@ title: "Parental substance misuse"
 permalink: /SM/
 header:
   overlay_color: "#5e616c"
-  overlay_image: /images/ACEsinEHRs home page 2023.jpg
+  overlay_image: /images/parental substance misuse aces in ehrs.jpg
   cta_label: 
   cta_url: 
   caption:
