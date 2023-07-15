@@ -34,3 +34,6 @@ Right click on link to save as a ".txt" file (i.e. using option "save link as")
 
 **Note:** The indicators uses [control flow methods](https://advanced-r-solutions.rbind.io/control-flow.html) to implement rule-based algorithms must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
 {: .notice--danger}
+
+### [Go back](https://shabeer-syed.github.io/acesinehrs/domains/)
+
