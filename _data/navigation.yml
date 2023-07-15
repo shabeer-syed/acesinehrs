@@ -19,7 +19,7 @@ main:
 docs:
   - title: Getting Started
     children:
-      - title:c"Overview: how does it work?"
+      - title: "How does it work?"
         url: /starterguide/#how-does-it-work
       - title: "Domains and indicators"
         url: /starterguide/#domains-and-indicators
