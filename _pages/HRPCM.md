@@ -4,7 +4,7 @@ title: "High-risk presentations of child maltreatment"
 permalink: /HRPCM/
 header:
   overlay_color: "#5e616c"
-  overlay_image: /images/ACEsinEHRs home page 2023.jpg
+  overlay_image: /images/high risk presentations of child maltreatment aces in ehrs.jpg
   cta_label: 
   cta_url: 
   caption:
