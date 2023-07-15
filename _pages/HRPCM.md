@@ -30,7 +30,7 @@ This domain includes indicators consistent with NICE Clinical guidelines [CG89](
 --------------------------------
 ## Code list
 
-#### [High-risk presentation of CM (801)](https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/HRP_CM_codelist.txt)
+#### [High-risk presentation of CM (801)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/HRPCM_2023ACEsinEHRs.txt)
 
 * [ACEsinEHRs control documentation / release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
 
@@ -50,7 +50,10 @@ This domain includes indicators consistent with NICE Clinical guidelines [CG89](
 
 [Syed S, Ashwick R, Schlosser M, Gonzalez-Izquierdo A, Li L, Gilbert R. Predictive value of indicators for identifying child maltreatment and intimate partner violence in coded electronic health records: a systematic review and meta-analysis. Archives of disease in childhood. 2021 Jan 1;106(1):44-53.](https://adc.bmj.com/content/106/1/44.full)
 
+### [Go back](https://acesinehrs.com/domains/)
 
-### [Go back](https://shabeer-syed.github.io/ACEs/domains)
+---
+<span style="color:red"> The information is not intended for clinical use. No data is stored in this library.</span>
+<span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
 
-<script src="http://code.jquery.com/jquery-1.4.2.min.js"></script> <script> var x = document.getElementsByClassName("site-footer-credits"); setTimeout(() => { x[0].remove(); }, 10); </script>
+  [![](/images/logos/NIHR CPRU logo aces in ehrs footer.png)](https://www.ucl.ac.uk/children-policy-research/) | [![](/images/logos/ucl ich logo aces in ehrs.png)](https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0) | [![](/images/logos/university of oxford logo aces in ehrs.png)](https://www.ox.ac.uk/) | [![](/images/logos/NIHR Great ormond street hospital biomedical research centre logo aces in ehrs.png)](https://www.gosh.nhs.uk/our-research/our-research-infrastructure/nihr-great-ormond-street-hospital-brc/) | [![](/images/logos/GOSH logo aces in ehrs.png)](https://www.gosh.nhs.uk/) | [![](/images/logos/University of bristol logo aces in ehrs.png)](https://www.bristol.ac.uk/) | [![](/images/logos/hdruk logo aces in ehrs.png)](https://www.hdruk.ac.uk/) | [![](/images/logos/caliber ucl logo aces in ehrs.png)](https://www.ucl.ac.uk/health-informatics/research/caliber) 
