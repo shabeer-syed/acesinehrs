@@ -36,7 +36,7 @@ Suspected CM included any maltreatment-related indicator with codes or measures 
 --------------------------------
 ## Code list
 
-#### [Child maltreatment (1308)](https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/CM_codelist.txt)
+#### [Child maltreatment (1312)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/CM_2023ACEsinEHRs.txt)
 
 * [ACEsinEHRs control documentation / release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
 
@@ -60,8 +60,10 @@ Suspected CM included any maltreatment-related indicator with codes or measures 
 
 [Royal College of General Practitioners. Child safeguarding toolkit.](https://elearning.rcgp.org.uk/mod/book/view.php?id=12531)
 
+### [Go back](https://acesinehrs.com/domains/)
 
+---
+<span style="color:red"> The information is not intended for clinical use. No data is stored in this library.</span>
+<span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
 
-### [Go back](https://shabeer-syed.github.io/ACEs/domains)
-
-<script src="http://code.jquery.com/jquery-1.4.2.min.js"></script> <script> var x = document.getElementsByClassName("site-footer-credits"); setTimeout(() => { x[0].remove(); }, 10); </script>
+  [![](/images/logos/NIHR CPRU logo aces in ehrs footer.png)](https://www.ucl.ac.uk/children-policy-research/) | [![](/images/logos/ucl ich logo aces in ehrs.png)](https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0) | [![](/images/logos/university of oxford logo aces in ehrs.png)](https://www.ox.ac.uk/) | [![](/images/logos/NIHR Great ormond street hospital biomedical research centre logo aces in ehrs.png)](https://www.gosh.nhs.uk/our-research/our-research-infrastructure/nihr-great-ormond-street-hospital-brc/) | [![](/images/logos/GOSH logo aces in ehrs.png)](https://www.gosh.nhs.uk/) | [![](/images/logos/University of bristol logo aces in ehrs.png)](https://www.bristol.ac.uk/) | [![](/images/logos/hdruk logo aces in ehrs.png)](https://www.hdruk.ac.uk/) | [![](/images/logos/caliber ucl logo aces in ehrs.png)](https://www.ucl.ac.uk/health-informatics/research/caliber) 
