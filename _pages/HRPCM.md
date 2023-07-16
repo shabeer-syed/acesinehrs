@@ -8,8 +8,7 @@ header:
   cta_label: 
   cta_url: 
   caption:
-excerpt: 'Definition <br /> <small><a>  </a></small> This domain includes indicators consistent with NICE Clinical guidelines [CG89](https://www.nice.org.uk/guidance/cg89/chapter/Recommendations) and [NG76](https://www.nice.org.uk/guidance/ng76/chapter/Recommendations#recognising-child-abuse-and-neglect) on alerting features (risk presentations) that should raise clinical suspicions for CM. All indicators are recorded in the child, except for non-attendance of child appointments which uses both parent and child records.
- <br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'Definition <br /> <small><a>  </a></small> This domain includes indicators consistent with NICE Clinical guidelines [CG89](https://www.nice.org.uk/guidance/cg89/chapter/Recommendations) and [NG76](https://www.nice.org.uk/guidance/ng76/chapter/Recommendations#recognising-child-abuse-and-neglect) on alerting features (risk presentations) that should raise clinical suspicions for CM. All indicators are recorded in the child, except for non-attendance of child appointments which uses both parent and child records. <br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 ---
 
