@@ -10,19 +10,13 @@ header:
   caption:
 excerpt: 'Definition <br /> <small><a>  </a></small> Any act of commission or omission by a parent or other caregiver that results in harm, potential for harm, or threat of harm to a child. Harm does not need to be intended <br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
-github:
-  - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
-
-intro:
-  - excerpt: 'We have developed and validated indicators for identifying ACEs in routinely collected non-identifiable health care data of mothers and children presenting to GPs, A&E, hospitals before and after birth. This website provides information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See the publication here.](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext) See also the published [systematic review.](https://adc.bmj.com/content/archdischild/106/1/44.full.pdf)'
 
 ---
 
 ## Definition
 
-This domain contains indicators of mutually exclusive symptom clusters aligning with disorder classifications laid out by DSM-5/ICD-10 excluding substance misuse. Some codes for self-harm (e.g. overdose) may be represented across both maternal mental health problems (mMHPs) and maternal substance misuse (MSM) domains. mMHPs indicators are ascertained using read codes, prescriptions, ICD-10 codes or by meeting the higher cut-off score on a validated self-report instrument or validated algorithms with prescriptions.[1](https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-016-0274-7). Validated codes for mMHPs and MSM are also available via the [HDR UK CALIBER phenotype library](https://phenotypes.healthdatagateway.org/), with the mapping process described by [Kuan et al.](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(19)30012-3/fulltext)
+This domain contains indicators of mutually exclusive symptom clusters aligning with disorder classifications laid out by DSM-5/ICD-10 excluding substance misuse. Some codes for self-harm (e.g. overdose) may be represented across both parental mental health problems (MHPs) and parental substance misuse (SM) domains. MHPs indicators are ascertained using read codes, prescriptions, ICD-10 codes or by meeting the higher cut-off score on a validated self-report instrument or validated algorithms with prescriptions.[1](https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-016-0274-7). Validated codes for parental MHPs and parental SM are also available via the [HDR UK CALIBER phenotype library](https://phenotypes.healthdatagateway.org/), with the mapping process described by [Kuan et al.](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(19)30012-3/fulltext)
 
-Indicators are currently restricted to the mother's or child's record (e.g. maternal substance misuse)  due to methodological challenges in accurately linking children to their fathers (a long-standing issue of anonymised secondary and primary care data). However, once reliably linkage of fathers becomes available, the domains "parental mental health problems" and "parental substance misuse" will be updated to include potential fathers.
 
 --------------------------------
 ## Indicator list
