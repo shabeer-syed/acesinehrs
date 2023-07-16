@@ -13,15 +13,18 @@ excerpt: 'A library of indicators for identifying Adverse Childhood Experiences 
 feature_row:
 intro:
   - excerpt: 'We have developed and validated indicators for identifying ACEs in routinely collected non-identifiable health care data of parents and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
+
+feature_row:
+navigations:
+  - excerpt: 'We have developed and validated indicators for identifying ACEs in routinely collected non-identifiable health care data of parents and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
+ 
 ---
 
 {% include feature_row id="intro" type="center" %}
 
- [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Introduction%20aces%20net.png)](https://shabeer-syed.github.io/acesinehrs/about/){: .align-center}
- 
- 
- | [![](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png)](https://shabeer-syed.github.io//acesinehrs/starterguide/) | [![](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20research%20outputs.png)](https://shabeer-syed.github.io/acesinehrs/research/) 
- [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png)](https://shabeer-syed.github.io/acesinehrs/codelistbrowse/) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains%20with%20download2.png)](https://shabeer-syed.github.io/acesinehrs/domains/) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/definitions%20NEW.png)](https://shabeer-syed.github.io/acesinehrs/theory/) 
+ [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Introduction%20aces%20net.png)](https://shabeer-syed.github.io/acesinehrs/about/) | [![](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png)](https://shabeer-syed.github.io//acesinehrs/starterguide/) 
+ [![](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20research%20outputs.png)](https://shabeer-syed.github.io/acesinehrs/research/) |  [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png)](https://shabeer-syed.github.io/acesinehrs/codelistbrowse/) 
+ [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains%20with%20download2.png)](https://shabeer-syed.github.io/acesinehrs/domains/) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/definitions%20NEW.png)](https://shabeer-syed.github.io/acesinehrs/theory/) 
 
 ---
 
