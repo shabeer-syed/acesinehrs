@@ -8,14 +8,14 @@ header:
   cta_label: 
   cta_url: 
   caption:
-excerpt: 'Definition <br /> <small><a>  </a></small> The [WHO](https://www.sciencedirect.com/science/article/abs/pii/S0140673602111330) defines intimate partner violence (IPV) refers to any behaviour within an intimate relationship that causes physical, psychological or sexual harm to those in the relationship. IPV indicators are restricted to parents aged ≥16. <br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'Definition <br /> <small><a>  </a></small> This domain includes indicators of intimate partner violence (IPV). [WHO](https://www.sciencedirect.com/science/article/abs/pii/S0140673602111330) defines IPV as any behaviour within an intimate relationship that causes physical, psychological or sexual harm to those in the relationship. IPV indicators are restricted to parents aged ≥16. <br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 
 ---
 
 ## Definition
 
-The [WHO] defines IPV as  any behaviour within an intimate relationship that causes physical, psychological or sexual harm adults who are, or have been, intimate partners or family members.[1](https://www.sciencedirect.com/science/article/abs/pii/S0140673602111330) We restricted IPV indicators to parents aged ≥16 and their corresponding children to prevent misclassification of child maltreatment by the parents of younger parents.
+The [WHO](https://www.sciencedirect.com/science/article/abs/pii/S0140673602111330) defines IPV as  any behaviour within an intimate relationship that causes physical, psychological or sexual harm adults who are, or have been, intimate partners or family members. We restricted IPV indicators to parents aged ≥16 and their corresponding children to prevent misclassification of child maltreatment by the parents of younger parents.
 
 Includes suspected indicators with coding terms mentioning historic IPV or maltreatment by an unspecified person. For instance, the “suspected IPV, NOS” indicator contains codes mentioning “[X]Maltreatment, by acquaintance or friend”,” Risk of non-accidental injury”, “Assault in the home”.
 
