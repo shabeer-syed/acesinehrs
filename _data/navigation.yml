@@ -22,7 +22,7 @@ docs:
       - title: "How does it work?"
         url: /starterguide/#how-does-it-work
 
-  - title: ACE indicators
+  - title: ACEs
     children:
       - title: "Domains and indicators"
         url: /starterguide/#domains-and-indicators
