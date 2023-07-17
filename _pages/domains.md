@@ -13,7 +13,6 @@ excerpt: 'A library of indicators for identifying Adverse Childhood Experiences 
 
 ---
 
-{% include base_path %}
 
 # Domains, indicators & code lists of ACEs
 
