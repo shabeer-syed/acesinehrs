@@ -22,7 +22,7 @@ docs:
       - title: "How does it work?"
         url: /starterguide/#how-does-it-work
 
-  - title: ACEs
+  - title: ACEs in EHRs
     children:
       - title: "Domains and indicators"
         url: /starterguide/#domains-and-indicators
