@@ -23,7 +23,7 @@ sidebar:
 
 Welcome to the marvellous world of EHRs! This page provides a guide to get you started using measuring intervenable and clinically relevant ACEs using EHRs of families presenting to healthcare throughout the early life course.
 
-# How does it work?
+# How does it work <i class="fas fa-question"></i>
 ---
 To use the ACE indicators, you will need:
 * **Access to an EHR data source for research:** Obtain authorised and de-identified data of children and parents for research purposes. Most ACEs are captured in primary care. Several data sources in the UK provide linked primary care data of children and parents, including the [Clinical Practice Research Datalink (CPRD)](https://cprd.com/),[The Health Improvement Network (THIN)](https://www.the-health-improvement-network.com/), [QResearch](https://www.qresearch.org/).  Access to CPRD requires [protocol approval](https://cprd.com/research-applications) via CPRD’s Research Data Governance Process. Please visit the [Health Data Research Innovation Gateway](https://www.healthdatagateway.org) for more information on available data sources.
@@ -35,7 +35,7 @@ To use the ACE indicators, you will need:
 
 ![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/implement%20centered1.png)
 
-# <i class="fas fa-bolt"></i> ACE indicators 
+# ACE indicators <i class="fas fa-bolt"></i> 
 ---
 ## Domains and indicators
 We developed two measures of ACEs for electronic health records (EHRs):
@@ -89,7 +89,7 @@ We have converted several original codes so the code lists contain one column of
 | 912 | [D]Anorexia	Anorexia | Anorexia | Eating disorders | Parental mental health problem | diagnostic |  |  | 2 | Read | 
 
 
-# Data preparation and standardisation
+# Data preparation and standardisation <i class="fas fa-database"></i>
 ---
 Now, let's get the data ready for analysis!
 Implementing the ACE indicators using code lists requires preparing and restructuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms.
@@ -173,7 +173,7 @@ aces_data <- aces_data %>% mutate_all(as.character) %>%
 | HES-OP: OP speciality field "treatment" | opt_ | opt_711 - child and Adolescent Psychiatry Service |  
 
 
-# Deriving variables
+# Deriving variables <i class="fas fa-tools"></i>
 ---
 ##  Create ACE-specific file
 * Once you've cleaned and restructured the multiple separate files, we recommend you re-apply the streaming approach to new files and extract only relevant ACE data by matching the data fields with codes in each file against your ACEs code lists.
@@ -274,7 +274,7 @@ summary(depression_cases)
 
 * Finally, once you applied the algorithms, keep only one ACE indicator or domain per each unique child (e.g., using "dplyr's  "distinct()" function) within the relevant study period before merging it back to your cohort.
 
-# Download code lists
+# Download code lists <i class="fas fa-file-download"></i>
 * [ACEsinEHRs control documentation/release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
 Right-click on link to save as a ".txt" file (i.e. using option "save link as")
 *Total number of included ACE codes: 8802 (ACEs) + 8808 (covariates)*
