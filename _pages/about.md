@@ -97,29 +97,21 @@ We are continuously working to make this platform and the ACE indicators easier 
  
 If you would like to contribute or provide feedback, please get in touch at s.syed.16@ucl.ac.uk
 
-
 # Acknowledgements
 This webpage accompanies a study that uses patients' data collected by the NHS as part of their care [#DataSavesLives](https://twitter.com/hashtag/DataSavesLives?src=hashtag_click). We are extremely grateful to the generosity of the patients and their families, along with the participating GP practices and NHS staff, for their ongoing contribution to mental health and family violence research.
-
-This study was approved by the MHRA (UK) Independent Scientific Advisory Committee (now called RDG) [[ISAC protocol. 19_162R]](https://www.cprd.com/protocol/adverse-childhood-experiences-incidence-prevalence-determinants-and-outcomes-across-primary), under Section 251 (NHS Social Care Act 2006). This study was carried out as part of the CALIBER© resource. [CALIBER, led by the UCL Institute of Health Informatics](https://academic.oup.com/jamia/article/26/12/1545/5536916), is a research resource providing validated electronic health record phenotyping algorithms and tools for national structured data sources.
-
-This study is based on data from the CPRD obtained under licence from the UK Medicines and Healthcare products Regulatory Agency. The interpretation and conclusions contained in this study are those of the author/s alone HES, and ONS are under copyright © (2020), re-used with the permission of The Health & Social Care Information Centre. All rights reserved.
-
+The ACEs studies (protocols: [19_162R](https://www.cprd.com/protocol/adverse-childhood-experiences-incidence-prevalence-determinants-and-outcomes-across-primary), [21_000587](https://cprd.com/protocol/intimate-partner-violence-parental-substance-misuse-and-mental-health-parents-children)) were approved by the MHRA (UK) Independent Scientific Advisory Committee, under Section 251 (NHS Social Care Act 2006).
+The ACEs studies were carried out as part of the CALIBER© resource. [CALIBER, led by the UCL Institute of Health Informatics](https://academic.oup.com/jamia/article/26/12/1545/5536916), is a research resource providing validated electronic health record phenotyping algorithms and tools for national structured data sources.
+The ACEs studies are based on data from the CPRD obtained under licence from the UK Medicines and Healthcare products Regulatory Agency. The interpretation and conclusions contained in this study are those of the author/s alone HES, and ONS are under copyright © (2020), re-used with the permission of The Health & Social Care Information Centre. All rights reserved.
 The research was supported in part by the NIHR Great Ormond Street Hospital Biomedical Research Centre.
-
 This research benefits from and contributes to the [NIHR Children and Families Policy Research Unit](https://www.ucl.ac.uk/children-policy-research/), but was not commissioned by the National Institute for Health Research (NIHR) Policy Research Programme. The views expressed are those of the author(s) and not necessarily those of the NHS, the National Institute for Health Research, the Department of Health and Social Care or its arm's length bodies, and other Government Departments.
 
 ## More information about ACEs 
 For further information about research on ACEs and their uses, please visit:
 
 * [CDC](https://www.cdc.gov/violenceprevention/aces/index.html)
-
 * [British Psychological Society](https://www.bps.org.uk/sites/www.bps.org.uk/files/Policy/Policy%20-%20Files/Briefing%20Paper%20-%20Adverse%20Childhood%20Experiences.pdf)
-
 * [World Health Organization - Prevention of Violence](https://www.who.int/teams/social-determinants-of-health/violence-prevention)
-
 * [University College London reports](https://www.instituteofhealthequity.org/resources-reports/the-impact-of-adverse-experiences-in-the-home-on-children-and-young-people)
-
 * [The BMJ](https://www.bmj.com/content/371/bmj.m3048)
 
 The Lancet research collections:
@@ -153,7 +145,12 @@ World Health Organization:
 
 * [INSPIRE: Seven strategies for Ending Violence Against Children](https://www.who.int/publications/i/item/inspire-seven-strategies-for-ending-violence-against-children)
 
-[![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/logo%20affil.png)](https://www.ucl.ac.uk/children-policy-research/research)
+<span style="color:red"> Users must cite the www.ACEsinEHRs.com library and the accompanying [Lancet Digital Health publication](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext) in all research outputs, presentations and reports. </span>
+<span style="color:red"> The information is not intended for clinical use. No data is stored in this library.</span>
+<span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
 
 ### [Go back](https://acesinehrs.com/)
+
 ---
+
+  [![](/images/logos/NIHR CPRU logo aces in ehrs footer.png)](https://www.ucl.ac.uk/children-policy-research/) | [![](/images/logos/ucl ich logo aces in ehrs.png)](https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0) | [![](/images/logos/university of oxford logo aces in ehrs.png)](https://www.ox.ac.uk/) | [![](/images/logos/NIHR Great ormond street hospital biomedical research centre logo aces in ehrs.png)](https://www.gosh.nhs.uk/our-research/our-research-infrastructure/nihr-great-ormond-street-hospital-brc/) | [![](/images/logos/GOSH logo aces in ehrs.png)](https://www.gosh.nhs.uk/) | [![](/images/logos/University of bristol logo aces in ehrs.png)](https://www.bristol.ac.uk/) | [![](/images/logos/hdruk logo aces in ehrs.png)](https://www.hdruk.ac.uk/) | [![](/images/logos/caliber ucl logo aces in ehrs.png)](https://www.ucl.ac.uk/health-informatics/research/caliber) 
