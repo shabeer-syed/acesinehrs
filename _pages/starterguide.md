@@ -34,7 +34,9 @@ To use the ACE indicators, you will need:
 
 ![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/implement%20centered1.png)
 
-# Domains and indicators
+# ACE indicators
+
+## Domains and indicators
 We developed two measures of ACEs for electronic health records (EHRs):
 * **Domains** (ie, grouped indicators) and;
 * **Indicators** (ie, grouped codes or measures)
@@ -56,7 +58,6 @@ Indicators represent a variable of grouped codes or measures for a potential rec
 ![alt text](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/ehrs%20of%20aces%20indicator.png "workflow")
 <div class="flourish-embed flourish-hierarchy" data-src="visualisation/7087179"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-# ACE indicators
 ## Code lists
 We provide mapped codes for each ACE indicator stored in [code lists](/domains/). Each data source will have different coding systems. The current ACEs indicators include ICD-9/10 codes (hospital/death records), Read codes, SNOMED-CT codes, medcodes, prodcodes, gemscripts (general practice), and codes for obtaining continuous data or coded information from speciality fields in CPRD GOLD, HES-APC, HES-A&E and HES-OP.
 
