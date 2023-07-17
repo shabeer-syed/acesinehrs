@@ -29,7 +29,7 @@ If you are a researcher or healthcare provider, you can use the ACE indicators t
 
 We hope you will join us in our mission to improve the lives of children and families affected by ACEs.
 
-# Background and aims
+# Mission statement/aims
 EHRs are routinely collected and readily available. However, there are significant challenges in using EHRs to inform practice and policy about ACEs. EHRs are often stored in different databases, organisations, and coding systems. This can result in a complex and messy web of information that requires specialist data management skills to use. Another challenge is that there was no previously well-defined and validated set of indicators for identifying ACEs in EHRs using both parent and child data.
 
 Our mission is:
@@ -40,7 +40,7 @@ Our mission is:
 > * To provide a validated system to measure intervenable and clinically relevant ACEs with the potential to support trauma-informed data-driven research, public health, policy, and health care.
 > * To continuously develop the www.ACEsinEHRs.com platform to improve resources for researchers, professionals, and policymakers.
 
-Achivements: 
+Achievements - ACEs in EHRs: 
 > * Developed common data standards and coding systems for ACEs in EHRs.
 > * Developed  data management tools and resources to make ACE indicators in EHR more accessible and usable.
 > * Developed methods for linking and studying EHR data across families.
@@ -53,7 +53,8 @@ We follow WHO's [Minsk Declaration](https://apps.who.int/iris/bitstream/handle/1
 
 # Advantages of EHRs
 [ACEs are preventable](https://www.cdc.gov/violenceprevention/pdf/preventingACES.pdf). However, many ACEs are very difficult to identify in childhood. Most studies rely on adults’ self-reports many years after the event and are prone to memory biases. This “time gap” also means data is collected when it’s more challenging to prevent the harmful effects of ACEs.
-**EHRs** are routinely collected data from hospitals, GPs and other health systems. The data is often recorded "prospectively" or as  events happen and as part of routine care. The information is available shortly after a health care presentation and poses less burden to patients than completing a traditional research survey. All data is made non-identifiable and stored securely (watch the video below to find out more). EHRs also provide researchers with larger samples than self-report or interview-based samples. 
+**EHRs** are routinely collected data from hospitals, GPs and other health systems. The data is often recorded "prospectively" or as  events happen and as part of routine care. The information is available shortly after a health care presentation and poses less burden to patients than completing a traditional research survey. All data is made non-identifiable and stored securely (watch the video below to find out more). EHRs also provide researchers with larger samples than self-report or interview-based samples.
+
 In the UK, mothers' and children's EHRs can be linked across services. The ability to link mothers' and children's records allows for measuring ACEs before pregnancy, throughout childhood and intergenerationally.
 
 <iframe width="600" height="380" src="https://mediacentral.ucl.ac.uk//Player?autostart=n&fullscreen=y&width=0&height=0&videoId=CFGDc8DB&quality=hi&captions=y&chapterId=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
