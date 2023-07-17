@@ -35,7 +35,7 @@ To use the ACE indicators, you will need:
 
 ![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/implement%20centered1.png)
 
-# ACE indicators
+# <i class="fa-solid fa-bolt-lightning"></i> ACE indicators 
 ---
 ## Domains and indicators
 We developed two measures of ACEs for electronic health records (EHRs):
