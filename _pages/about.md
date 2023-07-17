@@ -34,17 +34,26 @@ EHRs are routinely collected and readily available. However, there are significa
 
 Our mission is:
 > To improve the health of families and young people by using electronic health records (EHRs) to identify and measure adverse childhood experiences (ACEs).
+
 > To advocate for early support and family centred services for families with ACEs.
+
 > To work with researchers, professionals, and policymakers to promote trauma-informed care and public health policies that support families affected by ACEs.
+
 > To enhance the methodological standard, accessibility, and utility of data-driven think-family approaches to study adversity using EHRs.
+
 > To provide a validated system to measure intervenable and clinically relevant ACEs with the potential to support trauma-informed data-driven research, public health, policy, and health care.
+
 > To continuously develop the www.ACEsinEHRs.com platform to improve resources for researchers, professionals, and policymakers.
 
 Achivements: 
 > Developed common data standards and coding systems for ACEs in EHRs.
+
 > Developed  data management tools and resources to make ACE indicators in EHR more accessible and usable.
+
 > Developed methods for linking and studying EHR data across families.
+
 > Supporting research on the use of EHRs to identify and measure ACEs.
+
 > Disseminated research findings to healthcare providers, policymakers, and the public.
 
 All platform activity is publicly logged. All code for data management and analysis is shared under open licenses.
