@@ -24,7 +24,7 @@ docs:
       - title: "Domains and indicators"
         url: /starterguide/#domains-and-indicators
 
-  - title: Code lists
+  - title: ACE indicators
     children:
       - title: "Code list"
         url: /starterguide/#code-lists
