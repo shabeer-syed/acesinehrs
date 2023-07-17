@@ -21,11 +21,11 @@ docs:
     children:
       - title: "How does it work?"
         url: /starterguide/#how-does-it-work
-      - title: "Domains and indicators"
-        url: /starterguide/#domains-and-indicators
 
   - title: ACE indicators
     children:
+      - title: "Domains and indicators"
+        url: /starterguide/#domains-and-indicators
       - title: "Code list"
         url: /starterguide/#code-lists
       - title: "Code list dictionary"
