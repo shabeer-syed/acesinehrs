@@ -59,9 +59,6 @@ Visit:
 
 ### [Go back](https://acesinehrs.com/domains/) 
 
-
-### [Go back](https://shabeer-syed.github.io/acesinehrs/domains/)
-
 ---
 <span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
 
