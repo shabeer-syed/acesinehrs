@@ -26,11 +26,18 @@ ACEs in EHRs is a platform that provides indicators to identify ACEs among famil
 ACEs in EHRs uses clinically validated indicators to identify ACEs in EHRs. These indicators are based on the Adverse Childhood Experiences (ACE) Study, which is a landmark study that found that exposure to ACEs is associated with a wide range of health problems, including chronic diseases, mental health problems, and substance abuse.
 
 Everyone recognises the significant challenges of identifying and monitoring ACEs across individual services and nationally.
-We know NHS trusts, GPs, clinical teams and researchers are at the forefront of this challenge.
-
-If you are a researcher or healthcare provider, you can use the ACE indicators to identify ACEs at a population level to identify at-risk groups to inform allocation of resources, monitoring of trends and outcomes. Clinically, ACE indicators in EHRs have the potential to support streamlining workflows, assisting decision-making, and enhancing patient care. ACEs in EHRs is a valuable tool that can help to improve the health and well-being of children and families.
+We know NHS trusts, GPs, clinical teams and researchers are at the forefront of this challenge. If you are a researcher or healthcare provider, you can use the ACE indicators to identify ACEs at a population level to identify at-risk groups to inform allocation of resources, monitoring of trends and outcomes. Clinically, ACE indicators in EHRs have the potential to support streamlining workflows, assisting decision-making, and enhancing patient care. ACEs in EHRs is a valuable tool that can help to improve the health and well-being of children and families.
 
 We hope you will join us in our mission to improve the lives of children and families affected by ACEs.
+
+# Aims / mission statements
+Our mission is:
+> To improve the health of families and young people by using electronic health records (EHRs) to identify and measure adverse childhood experiences (ACEs).
+> To advocate for early support and family centred services for families with ACEs.
+> To work with researchers, professionals, and policymakers to promote trauma-informed care and public health policies that support families affected by ACEs.
+> To enhance the methodological standard, accessibility, and utility of data-driven think-family approaches to study adversity using EHRs.
+> To provide a validated system to measure intervenable and clinically relevant ACEs with the potential to support trauma-informed data-driven research, public health, policy, and health care.
+> To continuously develop the www.ACEsinEHRs.com platform to improve resources for researchers, professionals, and policymakers.
 
 ## How can EHRs - routinely collected non-identifiable patient data help?
 ACEs are preventable. However, many ACEs are very difficult to identify in childhood. Most studies rely on adults’ self-reports many years after the event and are prone to memory biases. This “time gap” also means data is collected when it’s more challenging to prevent the harmful effects of ACEs.
@@ -41,7 +48,6 @@ In the UK, mothers' and children's EHRs can be linked across services. The abili
 <iframe width="600" height="380" src="https://mediacentral.ucl.ac.uk//Player?autostart=n&fullscreen=y&width=0&height=0&videoId=CFGDc8DB&quality=hi&captions=y&chapterId=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-# Aims / mission statement
 Whilst EHRs are routinely collected and readily available, there are significant challenges in using EHRs to inform practice and policy about ACEs. EHRs are often stored in different databases, organisations and coding systems that can result in a complex and messy web of information, requiring specialist data management skills before it can be used. This becomes more complex when trying to study EHRs of families, which depends on accurate data linkage between parents and children.
 
 > **Our mission is to help improve the health of families and young people by enhancing the methodological standard, accessibility and utility of data-driven [*think-family*](https://www.scie.org.uk/publications/guides/guide30/) approaches to study adversity using EHRs.**
