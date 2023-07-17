@@ -8,7 +8,7 @@ header:
   cta_label: 
   cta_url: 
   caption:
-excerpt: 'Definition <br /> <small><a>  </a></small> A substance use disorder is a cluster of cognitive, behavioral, and physiological symptoms indicating that the individual continues using the substance despite significant substance-related problem <br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'Definition <br /> <small><a>  </a></small> This domain includes indicators of parental substance misuse (SM) / substance use disorder. SM refers to a cluster of cognitive, behavioral, and physiological symptoms associated with continued use of substances despite the significant substance-related problem <br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 ---
 
