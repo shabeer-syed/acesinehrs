@@ -23,6 +23,7 @@ gallery_1:
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains%20with%20download2.png
     alt: "ACEs in EHRs Domains"
     title: "Image 2 title caption"
+
 gallery_2:
   - url: https://shabeer-syed.github.io//acesinehrs/starterguide/
     image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png
@@ -32,6 +33,7 @@ gallery_2:
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png
     alt: "ACEs in EHRs Browse code list"
     title: "Image 2 title caption"
+
 gallery_3:
   - url: https://shabeer-syed.github.io/acesinehrs/theory/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/definitions%20NEW.png
