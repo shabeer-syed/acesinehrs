@@ -17,11 +17,10 @@ excerpt: 'View definitions of domains and indicators. Download code lists.<br />
 <div class="flourish-embed flourish-table" data-src="visualisation/8622661"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
 # Download code lists
-* [ACEsinEHRs control documentation/release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
+* [ACEsinEHRs control documentation/release information](assets/control_documentation/ACEsinEHRs Control documentation v2.pdf)
 Right-click on link to save as a ".txt" file (i.e. using option "save link as")
 *Total number of included ACE codes: 8802 (ACEs) + 8808 (covariates)*
 *Total number of excluded/tested codes: 7671*
-
 **Think-family approach:** Unless specified, indicators refers to information recorded in the child, mother and father.
 {: .notice--info}
 
