@@ -15,8 +15,8 @@ intro:
   - excerpt: 'We have developed and validated indicators for identifying ACEs in routinely collected non-identifiable health care data of parents and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
 
 gallery:
-  - url: https://uktraumacouncil.org/resources?cn-reloaded=1
-    image_path: /assets/images/unsplash-gallery-image-1-th.jpg
+  - url: https://shabeer-syed.github.io/acesinehrs/about/
+    image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Introduction%20aces%20net.png
     alt: "placeholder image 1"
     title: "Image 1 title caption"
   - url: /assets/images/unsplash-gallery-image-2.jpg
@@ -27,7 +27,7 @@ gallery:
     image_path: /assets/images/unsplash-gallery-image-3-th.jpg
     alt: "placeholder image 3"
     title: "Image 3 title caption"
-    
+
 ---
 {% include feature_row id="intro" type="center" %}
 
