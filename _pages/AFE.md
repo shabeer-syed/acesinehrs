@@ -27,7 +27,7 @@ The term "adverse family environments" refers to any clinically intervenable psy
 Right-click on link to save as a ".txt" file (i.e. using option "save link as")
 #### [Adverse family environment (977)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/AFE_2023ACEsinEHRs.txt)
 
-* [ACEsinEHRs control documentation / release information](https://github.com/shabeer-syed/ACEs/raw/main/ACEsinEHRs%20v1.2.pdf)
+* [ACEsinEHRs control documentation / release information](assets/control_documentation/ACEsinEHRs Control documentation v2.pdf)
 
 --------------------------------
 ## Implementation
