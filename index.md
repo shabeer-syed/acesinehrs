@@ -56,8 +56,6 @@ gallerythree:
 
 [![](/assets/images/pixel_tracker_logo_80px.png "This is some hover text"){: .align-center style="width: 80%;"}](https://shabeer-syed.github.io/acesinehrs/about/))
 
-[![styled-image](images/About aces in ehrs.png "This is some hover text"){: .align-center style="width: 10%;"}](/images/About aces in ehrs.png "Title shown in gallery view")
-
 {% include gallery id="galleryone" %}
 {% include gallery id="gallerytwo" %}
 {% include gallery id="gallerythree" %}
