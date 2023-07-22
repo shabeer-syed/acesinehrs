@@ -23,16 +23,16 @@ galleryone:
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains%20with%20download2.png
     alt: "ACEs in EHRs Domains"
     title: "Image 2 title caption"
-  - url: https://shabeer-syed.github.io//acesinehrs/starterguide/
-    image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png
-    alt: "ACEs in EHRs getting started"
-    title: "Image 1 title caption"
 
 gallerytwo:
   - url: https://shabeer-syed.github.io/acesinehrs/codelistbrowse/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png
     alt: "ACEs in EHRs Browse code list"
     title: "Image 2 title caption"
+  - url: https://shabeer-syed.github.io//acesinehrs/starterguide/
+    image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png
+    alt: "ACEs in EHRs getting started"
+    title: "Image 1 title caption"
 
 gallerythree:
   - url: https://shabeer-syed.github.io/acesinehrs/theory/
@@ -53,7 +53,7 @@ gallerythree:
 
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-{% include gallery id="galleryone" type="center" %}
+{% include gallery id="galleryone" %}
 {% include gallery id="gallerytwo" %}
 {% include gallery id="gallerythree" %}
 
