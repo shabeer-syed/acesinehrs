@@ -54,6 +54,12 @@ gallerythree:
 
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
+[![styled-image](/assets/images/pixel_tracker_logo_80px.png "This is some hover text"){: .align-center style="width: 10%;"}](/assets/images/pixel_tracker_logo_80px.png "Title shown in gallery view")
+Some custom styled caption with a [_link_](#via-markdown).
+{: .align-caption}
+
+[![styled-image](images/About aces in ehrs.png "This is some hover text"){: .align-center style="width: 10%;"}](/images/About aces in ehrs.png "Title shown in gallery view")
+
 {% include gallery id="galleryone" %}
 {% include gallery id="gallerytwo" %}
 {% include gallery id="gallerythree" %}
