@@ -53,7 +53,7 @@ gallerythree:
 
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-{% include gallery id="galleryone" width="10" height="40" %}
+{% include gallery id="galleryone" %}{ width="800" height="600" style="display: block; margin: 0 auto" }
 {% include gallery id="gallerytwo" %}
 {% include gallery id="gallerythree" %}
 
