@@ -47,9 +47,9 @@ gallerythree:
 ---
 {% include feature_row id="intro" type="center" %}
 
- [![](images/About aces in ehrs.png)](https://shabeer-syed.github.io/acesinehrs/about/) |  [![](images/ACEs in EHRs view indicators and domains.png)](https://shabeer-syed.github.io/acesinehrs/domains/) 
-  [![](images/ACEs implementation and downloads.png)](https://shabeer-syed.github.io//acesinehrs/starterguide/) | [![](images/browse code lists aces in ehrs.png)](https://shabeer-syed.github.io/acesinehrs/codelistbrowse/) 
-  [![](images/Theoretical framework and definition aces in ehrs.png)](https://shabeer-syed.github.io/acesinehrs/theory/) | [![](images/ACEsinEHRs research outputs.png)](https://shabeer-syed.github.io/acesinehrs/research/) 
+ [![](images/About aces in ehrs.png){: .align-center style="width: 40%;"}](https://shabeer-syed.github.io/acesinehrs/about/) |  [![](images/ACEs in EHRs view indicators and domains.png){: .align-center style="width: 40%;"}](https://shabeer-syed.github.io/acesinehrs/domains/) 
+  [![](images/ACEs implementation and downloads.png){: .align-center style="width: 40%;"}](https://shabeer-syed.github.io//acesinehrs/starterguide/) | [![](images/browse code lists aces in ehrs.png){: .align-center style="width: 40%;"}](https://shabeer-syed.github.io/acesinehrs/codelistbrowse/) 
+  [![](images/Theoretical framework and definition aces in ehrs.png){: .align-center style="width: 40%;"}](https://shabeer-syed.github.io/acesinehrs/theory/) | [![](images/ACEsinEHRs research outputs.png){: .align-center style="width: 40%;"}](https://shabeer-syed.github.io/acesinehrs/research/) 
 
 
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
