@@ -14,7 +14,7 @@ feature_row:
 intro:
   - excerpt: 'We have developed and validated indicators for identifying ACEs in routinely collected non-identifiable health care data of parents and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
 
-gallery_1:
+galleryone:
   - url: https://shabeer-syed.github.io/acesinehrs/about/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Introduction%20aces%20net.png
     alt: "ACEs in EHRs About"
@@ -24,7 +24,7 @@ gallery_1:
     alt: "ACEs in EHRs Domains"
     title: "Image 2 title caption"
 
-gallery_2:
+gallerytwo:
   - url: https://shabeer-syed.github.io//acesinehrs/starterguide/
     image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png
     alt: "ACEs in EHRs getting started"
@@ -34,7 +34,7 @@ gallery_2:
     alt: "ACEs in EHRs Browse code list"
     title: "Image 2 title caption"
 
-gallery_3:
+gallerythree:
   - url: https://shabeer-syed.github.io/acesinehrs/theory/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/definitions%20NEW.png
     alt: "ACEs in EHRs Theory"
@@ -53,9 +53,9 @@ gallery_3:
  
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-{% include gallery_1 caption="" %}
-{% include gallery_2 caption="" %}
-{% include gallery_3 caption="" %}
+{% include galleryone caption="" %}
+{% include gallerytwo caption="" %}
+{% include gallerythree caption="" %}
 
 This library stores ACE indicators and algorithms accompanying the paper published in Lancet Digital Health [*"Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study, (2022). Shabeer Syed, Arturo Gonzalez-Izquierd, Janice Allister, Gene Feder, Leah Li, Ruth Gilbert."*](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext).
 
