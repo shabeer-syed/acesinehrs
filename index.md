@@ -54,7 +54,7 @@ gallerythree:
 
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-[![](/assets/images/pixel_tracker_logo_80px.png "This is some hover text"){: .align-center style="width: 80%;"}](https://shabeer-syed.github.io/acesinehrs/about/))
+[![](images/About aces in ehrs.png){: .align-center style="width: 80%;"}](https://shabeer-syed.github.io/acesinehrs/about/))
 
 {% include gallery id="galleryone" %}
 {% include gallery id="gallerytwo" %}
