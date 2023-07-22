@@ -54,11 +54,8 @@ gallerythree:
 
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-[![](images/About aces in ehrs.png){: .align-center style="width: 80%;"}](https://shabeer-syed.github.io/acesinehrs/about/))
+[![](images/About aces in ehrs.png){: .align-center style="width: 40%;"}](https://shabeer-syed.github.io/acesinehrs/about/)
 
-{% include gallery id="galleryone" %}
-{% include gallery id="gallerytwo" %}
-{% include gallery id="gallerythree" %}
 
 This library stores ACE indicators and algorithms accompanying the paper published in Lancet Digital Health [*"Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study, (2022). Shabeer Syed, Arturo Gonzalez-Izquierd, Janice Allister, Gene Feder, Leah Li, Ruth Gilbert."*](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext).
 
