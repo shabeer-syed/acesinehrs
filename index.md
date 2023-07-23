@@ -18,31 +18,23 @@ galleryone:
   - url: https://shabeer-syed.github.io/acesinehrs/about/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Introduction%20aces%20net.png
     alt: "ACEs in EHRs About"
-    title: "Image 1 title caption"
   - url: https://shabeer-syed.github.io/acesinehrs/domains/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains%20with%20download2.png
     alt: "ACEs in EHRs Domains"
-    title: "Image 2 title caption"
   - url: https://shabeer-syed.github.io/acesinehrs/codelistbrowse/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png
     alt: "ACEs in EHRs Browse code list"
-    title: "Image 2 title caption"
 
 gallerytwo:
   - url: https://shabeer-syed.github.io//acesinehrs/starterguide/
     image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png
     alt: "ACEs in EHRs getting started"
-    title: "Image 1 title caption"
-
-gallerythree:
   - url: https://shabeer-syed.github.io/acesinehrs/theory/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/definitions%20NEW.png
     alt: "ACEs in EHRs Theory"
-    title: "Image 1 title caption"
   - url: https://shabeer-syed.github.io/acesinehrs/research/
     image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20research%20outputs.png
     alt: "ACEs in EHRs Research"
-    title: "Image 2 title caption"
 
 ---
 {% include feature_row id="feature_row_1" type="center" %}
@@ -54,6 +46,8 @@ gallerythree:
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
 {% include gallery id="galleryone" type="center" layout="half" %}
+{% include gallery id="gallerytwo" type="center" layout="half" %}
+
 
 This library stores ACE indicators and algorithms accompanying the paper published in Lancet Digital Health [*"Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study, (2022). Shabeer Syed, Arturo Gonzalez-Izquierd, Janice Allister, Gene Feder, Leah Li, Ruth Gilbert."*](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext).
 
