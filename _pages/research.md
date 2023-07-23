@@ -14,14 +14,14 @@ feature_row_1:
   - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Syed%202023%20Family%20adversity%20and%20IPV%20and%20lancet%20public%20health.png
     alt: "Family adversity and health characteristics associated with intimate partner violence"
     title: "Clinical characteristics of families affected by intimate partner violence"
-    excerpt: "Intimate partner violence (IPV) is a deeply concerning issue that affects millions of women worldwide. One in three women experiences IPV, translating to over 800 million women globally..."
+    excerpt: "Intimate partner violence (IPV) is a violation against human rights that affects millions of women worldwide. One in three women experiences IPV, translating to over 800 million women globally..."
     url: "/research-aces-ipv/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20research%20validation%20study.png
     alt: "ACEs in EHRs development and validation study"
     title: "ACEs in EHRs development and validation study"
-    excerpt: "Adverse childhood experiences (ACEs) are deeply impactful and potentially traumatic events that can significantly affect a child's health and development. They encompass a range of negative experiences, from child maltreatment and neglect to growing up in households with parental mental health issues and intimate partner violence..."
+    excerpt: "Adverse childhood experiences (ACEs) are traumatic, violent or neglectful events that can significantly affect a child's health and development. ACEs can include child maltreatment, growing up in households with parental mental health problems and intimate partner violence..."
     url: "/research-acesinehrs-validation/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
