@@ -25,7 +25,7 @@ feature_row_1:
     url: "/research-acesinehrs-validation/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Syed%202023%20Family%20adversity%20and%20IPV%20and%20lancet%20public%20health.png
+  - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20research%20review%20CM%20IPV.png
     alt: "State of the art review: indicators of child maltreatment and intimate partner violence"
     title: "State of the art review: indicators of child maltreatment and intimate partner violence"
     excerpt: "Intimate partner violence (IPV) and child maltreatment (CM) are forms of family violence that often go unnoticed by services, despite recommendations to improve monitoring efforts by the World Health Organization (WHO).."
@@ -38,7 +38,9 @@ feature_row_1:
 
 {% include feature_row id="feature_row_1" %}
 
-[Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext)
+# Publication list
+
+[Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England](https://doi.org/10.1016/S2468-2667(23)00119-6)
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="150725211"></div>
 
@@ -47,7 +49,7 @@ feature_row_1:
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="128460919"></div>
 
-[An external validation of coding for childhood maltreatment in routinely collected primary and secondary care data](https://www.nature.com/articles/s41598-023-34011-3)
+[An external validation of coding for childhood maltreatment in routinely collected primary and secondary care data](https://doi.org/10.1038/s41598-023-34011-3)
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="148625842"></div>
 
