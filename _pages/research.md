@@ -11,7 +11,7 @@ header:
 excerpt: 'A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs) <br /> <small><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext">New study out in Lancet Public Health!</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row_1:
-  - image_path: images/Syed 2023 Family adversity and IPV and lancet public health.png
+  - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Syed%202023%20Family%20adversity%20and%20IPV%20and%20lancet%20public%20health.png
     alt: "Family adversity and health characteristics associated with intimate partner violence"
     title: "Family adversity and health characteristics associated with intimate partner violence in children and parents"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
