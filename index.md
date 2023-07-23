@@ -40,7 +40,11 @@ gallerytwo:
 {% include feature_row id="feature_row_1" type="center" %}
 
 {% include gallery id="galleryone" type="center" layout="half" %}
+
+---
 {% include gallery id="gallerytwo" type="center" layout="half" %}
+
+---
 
 This library stores ACE indicators and algorithms accompanying the paper published in Lancet Digital Health [*"Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study, (2022). Shabeer Syed, Arturo Gonzalez-Izquierd, Janice Allister, Gene Feder, Leah Li, Ruth Gilbert."*](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext).
 
