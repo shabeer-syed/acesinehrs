@@ -14,7 +14,7 @@ feature_row_1:
   - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Syed%202023%20Family%20adversity%20and%20IPV%20and%20lancet%20public%20health.png
     alt: "Family adversity and health characteristics associated with intimate partner violence"
     title: "Clinical characteristics of families affected by intimate partner violence"
-    excerpt: "Intimate Partner Violence (IPV) poses a significant risk to the health and well-being of families, particularly during the critical period of the first 1000 days after a child's birth. In the United Kingdom..."
+    excerpt: "Intimate partner violence (IPV) is a deeply concerning issue that affects millions of women worldwide. One in three women experiences IPV, translating to over 800 million women globally..."
     url: "/research-aces-ipv/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
