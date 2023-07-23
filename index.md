@@ -14,23 +14,6 @@ excerpt: 'A library of indicators for identifying Adverse Childhood Experiences 
 feature_row_1:
   - excerpt: 'We have developed and validated indicators for identifying ACEs in routinely collected non-identifiable health care data of parents and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
 
-feature_row_2:
-  - image_path: assets/images/unsplash-gallery-image-1-th.jpg
-    alt: "placeholder image 1"
-    title: "Placeholder 1"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
-    alt: "placeholder image 2"
-    title: "Placeholder 2"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    title: "Placeholder 3"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-
 galleryone:
   - url: https://shabeer-syed.github.io/acesinehrs/about/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Introduction%20aces%20net.png
@@ -70,7 +53,7 @@ gallerythree:
 
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-{% include feature_row id="feature_row_2" type="center" %}
+{% include gallery id="galleryone" type="center" %}
 
 This library stores ACE indicators and algorithms accompanying the paper published in Lancet Digital Health [*"Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study, (2022). Shabeer Syed, Arturo Gonzalez-Izquierd, Janice Allister, Gene Feder, Leah Li, Ruth Gilbert."*](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext).
 
