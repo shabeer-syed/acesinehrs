@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "Family adversity and health characteristics associated with intimate partner violence in children and parents"
-permalink: /research_aces_ipv/
+permalink: /research-aces-ipv/
 header:
   overlay_color: "#5e616c"
   overlay_image: /images/ACEsinEHRs getting started page.jpg
