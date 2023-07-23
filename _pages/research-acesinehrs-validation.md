@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study"
-permalink: /research_acesinehrs_validation/
+permalink: /research-acesinehrs-validation/
 header:
   overlay_color: "#5e616c"
   overlay_image: /images/ACEsinEHRs getting started page.jpg
