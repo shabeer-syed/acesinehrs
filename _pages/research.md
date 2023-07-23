@@ -4,7 +4,7 @@ title: "Research & Outputs"
 permalink: /research/
 header:
   overlay_color: "#5e616c"
-  overlay_image: /images/ACEsinEHRs getting started page.jpg
+  overlay_image: /images/ACEsinEHRs home page 2023.jpg
   cta_label: 
   cta_url: 
   caption:
