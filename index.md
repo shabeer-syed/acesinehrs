@@ -11,9 +11,25 @@ header:
   caption: 
 excerpt: 'A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs) <br/> <small> Search, discover and access tools and resources to implement clinically relevant and validated indicators of ACEs in your research using EHRs. Join the millions of researchers worldwide passionate about improving the lives of children and families affected by ACEs through advancing research. <br/> <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext">New study out in Lancet Public Health!</a><br/> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
-feature_row:
-intro:
+feature_row_1:
   - excerpt: 'We have developed and validated indicators for identifying ACEs in routinely collected non-identifiable health care data of parents and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
+
+feature_row_2:
+  - image_path: assets/images/unsplash-gallery-image-1-th.jpg
+    alt: "placeholder image 1"
+    title: "Placeholder 1"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+    image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
+    alt: "placeholder image 2"
+    title: "Placeholder 2"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
+    title: "Placeholder 3"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
 
 galleryone:
   - url: https://shabeer-syed.github.io/acesinehrs/about/
@@ -46,7 +62,7 @@ gallerythree:
     title: "Image 2 title caption"
 
 ---
-{% include feature_row id="intro" type="center" %}
+{% include feature_row id="feature_row_1" type="center" %}
 
   [![](images/About aces in ehrs.png)](https://shabeer-syed.github.io/acesinehrs/about/) | [![](images/ACEs in EHRs view indicators and domains.png)](https://shabeer-syed.github.io/acesinehrs/domains/) 
   [![](images/ACEs implementation and downloads.png)](https://shabeer-syed.github.io//acesinehrs/starterguide/) | [![](images/browse code lists aces in ehrs.png)](https://shabeer-syed.github.io/acesinehrs/codelistbrowse/) 
@@ -54,7 +70,7 @@ gallerythree:
 
 <div class="flourish-embed flourish-survey" data-src="visualisation/7342295"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-{% include gallery id="galleryone" layout="half" %}
+{% include feature_row id="feature_row_2" type="center" %}
 
 This library stores ACE indicators and algorithms accompanying the paper published in Lancet Digital Health [*"Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study, (2022). Shabeer Syed, Arturo Gonzalez-Izquierd, Janice Allister, Gene Feder, Leah Li, Ruth Gilbert."*](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext).
 
