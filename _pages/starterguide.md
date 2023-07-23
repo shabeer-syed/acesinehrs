@@ -97,7 +97,7 @@ We have converted several original codes so the code lists contain one column of
 Now, let's get the data ready for analysis! 
 Unlike data sets such as the [Hospital Episode Statistics](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/hospital-episode-statistics) where everything is nicely placed into one file, EHRs from primary care are messier and located in multiple separate files with different structures and format. Therefore, implementing the ACE indicators using code lists requires preparing and restructuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms.
 
-## Steps - data preparation:
+## Data preparation steps:
 * **Extract the raw data files using SQL** 
 * **Restructure each data file** (ie. creating new data files with consistent format)
   * **Data clean & standardise each file** (ie, add prefixes to codes, remove waste etc)
@@ -134,11 +134,11 @@ aces_data <- aces_data %>% mutate_all(as.character) %>%
  separate(date_example_variable,c("day","month","year"),sep="-",remove=T) %>% 
  unite(new_date_variable,c("year","month","day"),sep="-",remove=T) 
 ```
-* Make sure to convert codes (see prefixes below) that share the same alphanumeric code as other codes into new unique codes to avoid deduplication to preserve their original linked ACE indicator. For example, Prodcodes (i.e. medications/prescriptions), medcodes (i.e. diagnoses/symptoms) and ICD-9 codes share thousands of the same alphanumeric codes but with different meanings and event descriptions.
-* `For example: "11246 (prodcode) - Lofexidine 200 microgram tablets" vs. 11246 (medcode) – At risk violence in the home`
 
 ## Conversation table of codes requiring prefixes
-* To preserve each code's uniqueness, we have added prefixes to each relevant code list, which affect most coding systems. We list all prefixes for data preparation below.
+* A substantial proportion of codes from the different coding systems share the same alphanumeric code as others. For example, prodcodes (i.e. medications/prescriptions), medcodes (i.e. diagnoses/symptoms) and ICD-9 codes (old hospital coding) share thousands of the same alphanumeric codes, but they mean different things with unique event descriptions. 
+* `For example: "11246 (prodcode) - Lofexidine 200 microgram tablets" vs. 11246 (medcode) – At risk violence in the home`
+* To preserve each code's uniqueness, we have converted the relevant codes into new unique codes by adding prefixes to relevant code lists, which affect most coding systems. We list the prefixes below and their affected data files, as you will need to convert the codes in each data file to match the converted code lists.
 * In R or Python, we recommend using the "dplyr::unite" function or "R::paste0()". In Stata, you can use the "Concatenation" function (see Stata documentation).
 
 | Data source & Coding system | Prefix added | example | 
