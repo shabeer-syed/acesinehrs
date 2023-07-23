@@ -23,11 +23,11 @@ galleryone:
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains%20with%20download2.png
     alt: "ACEs in EHRs Domains"
     title: "Image 2 title caption"
-
-gallerytwo:
   - url: https://shabeer-syed.github.io/acesinehrs/codelistbrowse/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png
     alt: "ACEs in EHRs Browse code list"
+    
+gallerytwo:
     title: "Image 2 title caption"
   - url: https://shabeer-syed.github.io//acesinehrs/starterguide/
     image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png
