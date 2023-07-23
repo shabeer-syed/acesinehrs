@@ -3,6 +3,7 @@ layout: single
 classes: wide
 permalink: /
 title: "ACEs in EHRs"
+author_profile: false
 header:
   overlay_color: "#5e616c"
   overlay_image: /images/ACEsinEHRs home page 2023.jpg
