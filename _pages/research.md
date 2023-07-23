@@ -15,18 +15,23 @@ feature_row_1:
     alt: "Family adversity and health characteristics associated with intimate partner violence"
     title: "Family adversity and health characteristics associated with intimate partner violence in children and parents"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
-    alt: "placeholder image 2"
-    title: "Placeholder 2"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    url: "#test-link"
-    btn_label: "Read More"
+    url: "/docs/configuration/"
     btn_class: "btn--primary"
-  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    title: "Placeholder 3"
+    btn_label: "Learn more"
+  - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Syed%202023%20Family%20adversity%20and%20IPV%20and%20lancet%20public%20health.png
+    alt: "Family adversity and health characteristics associated with intimate partner violence"
+    title: "Family adversity and health characteristics associated with intimate partner violence in children and parents"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
-
+    url: "/docs/configuration/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+  - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Syed%202023%20Family%20adversity%20and%20IPV%20and%20lancet%20public%20health.png
+    alt: "Family adversity and health characteristics associated with intimate partner violence"
+    title: "Family adversity and health characteristics associated with intimate partner violence in children and parents"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    url: "/docs/configuration/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
 ---
 
 {% include base_path %}
