@@ -38,7 +38,7 @@ body {
 .page {
   @include breakpoint($large) {
     float: right;
-    width: calc(10% - #{$right-sidebar-width-narrow});
+    width: calc(100% - #{$right-sidebar-width-narrow});
     padding-right: $right-sidebar-width-narrow;
   }
 
@@ -55,7 +55,8 @@ body {
     width: 100%;
     clear: both;
 
-    .page__content,
+    .page__content {
+      float: left;
     .page__meta,
     .page__share {
       position: relative;
