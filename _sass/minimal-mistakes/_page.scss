@@ -38,13 +38,11 @@ body {
 .page {
   @include breakpoint($large) {
     float: right;
-    width: 10% ;
-    padding-right: ;
+    width: 10%;
   }
 
   @include breakpoint($x-large) {
     width: 10%;
-    padding-right: ;
   }
 
   .page__inner-wrap {
