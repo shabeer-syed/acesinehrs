@@ -91,47 +91,23 @@ We have converted several original codes so the code lists contain one column of
 
 # Data preparation and standardisation
 ---
-Now, let's get the data ready for analysis!
-Implementing the ACE indicators using code lists requires preparing and restructuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms.
+Now, let's get the data ready for analysis! 
+Unlike hospital episode statistics, EHRs from primary care are located in multiple separate files with different structures and format. Therefore, implementing the ACE indicators using code lists requires preparing and restructuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms. 
+
+## Data preparation steps:
+* **Extract the raw data files using SQL** 
+* **Restructure each data file** (ie. creating data file with uniform format)
+  * **Data clean & standardise each file** (ie, grouped codes or measures)
+    * Retrieve  relevant data & bind into a "master ACE data file"
+      * Merge code list with master file
+        * Apply algorithms & keep relevant record
 
 **IMPORTANT!** <i class="fas fa-exclamation-triangle" style="color: #e3740d;"></i> IImplementing the ACE indicators in more complex data sets like primary care data (GP records) requires restructuring, manipulating and combining multiple large data sets into one or multiple new files using a programming language of choice (e.g., Python, R). This section provides only brief information on data management specific to the implementation of the ACE indicators. Many data management tasks involve a [split-apply-combine strategy](https://www.jstatsoft.org/article/view/v059i10), that is, the ability to "..break up a big problem into manageable pieces, operate on each piece independently and then put all the pieces back together (Wickham, 2014, p1)".  This information is therefore intended as supplementary recommendations to users who already have skills in  programming languages like R, Python, or SQL. To learn how to use R for data management, we recommend reading [*"R for Data Science (2e)*" by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund](https://r4ds.hadley.nz/), freely available online.
 {: .notice--danger}
 
 ## Data extraction and restructuring 
-### Streaming data extraction
-* *Streaming data extraction.* Having identified your cohort, we recommend using a streaming approach to first extract only relevant patient data from the different files by iterating over (i.e. repeating the matching) each patient ID in each file against your separate list of patient IDs (i.e. cohort). This essential intermediate step allows for data restructuring and cleaning of smaller data files before applying the coded ACE indicators.
-
-  A "streaming approach" refers to reading and processing data in chunks or sequentially rather than loading the entire dataset into memory at once. Whilst *SQL* is useful for handling larger databases, R or Python can also apply *streaming* by first loading your list of relevant patient IDs and then extracting relevant data using package functions like: *data.table::fread(.... ,data.table=F)* with *dplyr::filter* and *fastmatch::%fin%*. Here is an example in R which extract relevant patient data from multiple files (assuming they have the same underlying file structure) into one new file without loading everything into working memory:
-
-```ruby
-# Step 1: Set up the working directory
-setwd("path/to/ehr/files")
-# Step 2: Install and load required packages
-install.packages(c("data.table", "readr","tidyverse","fastmatch"))
-library(data.table)
-library(readr)
-library(tidyverse)
-library(fastmatch)
-# Step 3: Read the patient ID list and code list
-patient_id_list <- read_csv("patient_id_list.csv")  # Adjust the file name and format as per your data
-# Step 4: Stream through EHR files, match with patient ID, and save relevant data to new files
-for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per your file extension
-  output_file <- paste0("output_", ehr_file)  # Generate output file name
-
-  # Create output file and write column names
-  fwrite(data.frame(), output_file)  # Creates an empty file
-  fwrite(names(data.table::fread(ehr_file, nrows = 0, header = TRUE, data.table = FALSE)), output_file, append = TRUE)  # Write column names
-  
-  # Stream through EHR file and extract relevant data
-  ehr_stream <- data.table::fread(ehr_file, header = TRUE, data.table = FALSE, header = T, data.table =F,colClasses="character",nThread=8)
-    relevant_data <- ehr_stream %>% filter(patient_id %fin% patient_id_list$patient_id)
-      # Append relevant data to output file
-    fwrite(relevant_data, output_file, append = TRUE, quote = FALSE, row.names = FALSE,col.names=T)
-}
-```
 ### Restructuring the data
-
-* *Restructuring data files and fields*. Now, we need to restructure all files and data fields (variables) into a consistent "long format", and rename variable into consistent names. The consistent structure ensures we can easily bind all files into one combined file later. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.
+* *Restructuring data files and fields*. Having extracted your raw files, we need to restructure all files and data fields (variables) into a consistent "long format", and rename variable into consistent names. The consistent structure ensures we can easily bind all files into one combined file later. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.
 * Drop any irrelevant data fields/variables to reduce file size. e.g. In the CPRD clinical file, the variables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
 * Make sure to add an extra variable to each data file to label the original data source (HES, CPRD clinical) before saving it.
 
@@ -172,12 +148,13 @@ aces_data <- aces_data %>% mutate_all(as.character) %>%
 | HES-A&E: A&E speciality field "investigations" | aei_ | aei_21 - Pregnancy test |  
 | HES-OP: OP speciality field "treatment" | opt_ | opt_711 - child and Adolescent Psychiatry Service |  
 
+## Derive ACEs "master file" with only relevant data
+* Having identified your cohort and restructured the multiple separate files, the next step is to extract the relevant data from each file and bind this into a new one "combined file" with only ACE data.
+* *Streaming data extraction.*  To extract only relevant patient ACE data, we  recommend you apply a streaming approach to the new standardise files by iterating over (i.e. repeating the matching) each patient ID in each file against your separate list of patient IDs (i.e. cohort) and your separare ACEs code lists.
 
-# Deriving variables
----
-##  Create ACE-specific file
-* Once you've cleaned and restructured the multiple separate files, we recommend you re-apply the streaming approach to new files and extract only relevant ACE data by matching the data fields with codes in each file against your ACEs code lists.
-* Depending on research purposes, we recommend binding all retrieved ACE files into one combined "master database" with all relevant ACE data, which should now follow a consistent unified format for easier retrieval.
+* A "streaming approach" refers to reading and processing data in chunks or sequentially rather than loading the entire dataset into memory at once. Whilst *SQL* is useful for handling larger databases, R or Python can also apply *streaming* by first loading your list of relevant patient IDs and then extracting relevant data using package functions like: *data.table::fread(.... ,data.table=F)* with *dplyr::filter* and *fastmatch::%fin%*.
+
+* In the final step, we recommend (depending on research purposes) binding all retrieved ACE files into one combined "master database" with only relevant ACE data, which should now follow a consistent unified format for easier retrieval. The above steps can be incoperated into one step. Here is an example in R which extract relevant patient data from multiple files (assuming they have the same underlying file structure) into one new file without loading everything into working memory:
 
 ```ruby
 # Step 1: Set up the working directory
@@ -190,20 +167,23 @@ library(tidyverse)
 library(fastmatch)
 # Step 3: Read the patient ID list and code list
 patient_id_list <- read_csv("patient_id_list.csv")  # Adjust the file name and format as per your data
-code_list <- read_csv("code_list.csv")  # Adjust the file name and format as per your data
-
-# Step 4: Initialise the combined new data file where the retrive
-combined_file <- "combined_ehr_data.csv"
-file.create(combined_file)
-
-# Step 5: Stream through EHR files, match with patient IDs and code list, and extract relevant data
+# Step 4: Stream through EHR files, match with patient ID, and save relevant data to new files
 for (ehr_file in list.files(pattern = "*.txt")) {  # Adjust the pattern as per your file extension
-  ehr_stream <- data.table::fread(ehr_file, header = T, data.table =F,colClasses="character",nThread=8)
+  output_file <- paste0("output_", ehr_file)  # Generate output file name
+
+  # Create output file and write column names
+  fwrite(data.frame(), output_file)  # Creates an empty file
+  fwrite(names(data.table::fread(ehr_file, nrows = 0, header = TRUE, data.table = FALSE)), output_file, append = TRUE)  # Write column names
+  
+  # Stream through EHR file and extract relevant data
+  ehr_stream <- data.table::fread(ehr_file, header = TRUE, data.table = FALSE, header = T, data.table =F,colClasses="character",nThread=8)
     relevant_data <- ehr_stream %>% filter(patient_id %fin% patient_id_list$patient_id)
-      fwrite(relevant_data, combined_file, append = T, quote = F, row.names = F,col.names=T)
+      # Append relevant data to output file
+    fwrite(relevant_data, output_file, append = TRUE, quote = FALSE, row.names = FALSE,col.names=T)
 }
 ```
-## Algorithms
+
+## Deriving variables
 ### Introduction
 * Most indicators are ready to be used after merging the correct code list with your prepared ACE data file. However, many indicators rely on rule-based algorithms to ensure coded measures meet appropriate cut-off criteria and prevent misclassifications. Algorithms include age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth (see below).
  * For GP records, we define indicators by combining information recorded in Read codes, prescriptions, referral fields and validated self-report measures (continuous variables needing re-coding) routinely administered by GPs or nurses (e.g. alcohol use).
