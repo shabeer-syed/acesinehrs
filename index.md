@@ -1,6 +1,6 @@
 ---
 layout: single
-class: wide
+classes: wide
 permalink: /
 title: "ACEs in EHRs"
 header:
