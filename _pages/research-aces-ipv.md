@@ -19,21 +19,33 @@ excerpt: 'A library of indicators for identifying Adverse Childhood Experiences 
 Link to publication: [https://doi.org/10.1016/S2468-2667(23)00119-6](https://doi.org/10.1016/S2468-2667(23)00119-6)
 
 ## Introduction:
+Intimate partner violence (IPV) is a deeply concerning issue that affects millions of women worldwide. One in three women experiences IPV, translating to over 800 million women globally. These women endure a harrowing reality where they feel trapped, restricted, and fear losing their children.
 
-Intimate Partner Violence (IPV) poses a significant risk to the health and well-being of families, particularly during the critical period of the first 1000 days after a child's birth. In the United Kingdom, parents and children routinely attend health care appointments for antenatal, maternity, and childhood vaccinations, providing an opportunity to identify and address IPV through a comprehensive think-family approach. This study aimed to evaluate the association between family adversities, parental health problems, and IPV during the first 1000 days to inform early identification and prioritize family-child interventions.
+The World Health Organization (WHO) defines IPV as any behavior causing physical, psychological, or sexual harm within intimate relationships. IPV is often linked to other family adversities and can lead to various mental and physical health problems, increased health and social care needs, and even premature death. Despite the increased healthcare needs of affected families, IPV is often overlooked in general practice, missing an opportunity to support vulnerable families.
 
 ## Methods:
-
-The researchers conducted a population-based birth cohort study using linked electronic health records (EHRs) of children, mothers, and potential fathers. The cohort included mother-child pairs and mother-father-child triads. Data from various sources, such as the Clinical Practice Research Datalink GOLD, Hospital Episodes Statistics, and the Index of Multiple Deprivation, were utilized. The study included families with births between April 1, 2008, and Jan 30, 2019, with a minimum of 1-year follow-up after birth.
+The researchers used a population-based birth cohort of mothers and children, linked to electronic health records (EHRs), to evaluate IPV and family adversities during the first 1000 days of a child's life. They examined associations between different adversities and IPV and assessed the prevalence of parental physical and mental health problems among families with and without IPV.
 
 ## Results:
+Two in five children and parents had recorded family adversities, while 2.1% had recorded IPV during the study period. 
 
-The cohort comprised 129,948 children and parents from 106,442 families. The prevalence of recorded IPV during the first 1000 days was found to be 2.1%. Additionally, 41.2% of families had experienced various family adversities during the same period. Maternal records captured most of the IPV and family adversities. The study revealed a strong association between family adversities and IPV, with an increased probability of IPV in families facing multiple adversities.
+The probability of IPV increased with the number of different family adversities, with the highest probability observed in families experiencing three or more adversities.
+Families with IPV had increased risks of parental physical and mental health problems compared to families without IPV.
 
-Moreover, families affected by IPV demonstrated a higher risk of parental physical and mental health problems, including chronic pain and depression. The likelihood of IPV increased with the number of different family adversities recorded and with each additional family member facing adversities.
+## Discussion:
+The study highlights the co-occurrence of IPV with other adverse childhood experiences and emphasizes the importance of early identification and support for vulnerable families. Healthcare professionals should be trained to ask about IPV and family adversities during clinical encounters and respond appropriately to ensure the safety and well-being of affected families. Integrated think-family functions in electronic health record systems and adequate resources for health and social care professionals are essential for effective intervention and support.
 
-## Conclusion:
+## Limitations:
+The low prevalence of recorded IPV may underestimate the actual extent of the problem.
+Some parents may not disclose IPV, leading to underreporting in the electronic health records.
+Associations between adversities, health problems, and IPV might reflect surveillance bias rather than differences in the underlying risk of IPV.
+The study excluded same-sex couples, limiting the generalizability of findings to these families.
 
-This large UK birth cohort study sheds light on the crucial link between family adversities, parental health problems, and IPV during the first 1000 days of a child's life. The findings underscore the importance of adopting a think-family approach in healthcare settings to identify and address potential IPV cases. Healthcare professionals, particularly in primary and secondary care, should be trained to safely inquire about IPV when families present with adversities or associated health problems. Integrated think-family functions in electronic health record systems can aid clinicians in recognizing adversities across household records. To provide effective support, there is a need for sufficient trained professionals to respond to family adversities and IPV.
+## Relevant Implications:
+Overall, the study provides valuable insights into the prevalence and associations of IPV and family adversities, offering important implications for early identification and support of affected families through healthcare settings. It emphasizes the need for a comprehensive and integrated approach to address the complex issue of intimate partner violence.
 
-The study's insights can significantly impact UK policy and inform guidelines for prioritizing family-centered interventions and improving the health and development of parents and children during this critical period. By implementing caring and supportive responses to IPV disclosures, timely and accessible support services can be offered to families in need.
+* Healthcare professionals in primary and secondary care settings should be vigilant in asking about IPV when families present with indicators of family adversity or associated health problems.
+*  A "think-family" approach is essential, involving a comprehensive review of both parents' and children's electronic health records to inform clinical responses to IPV effectively.
+*  Healthcare providers should implement integrated think-family functions in electronic health record systems, allowing clinicians to search for adversity across household records securely.
+*  National policies should prioritise family-centered interventions to support families experiencing adversity, offering emotional support, risk assessment, safety planning, and appropriate referrals to specialists and long-term support.
+*  Adequate training and resources for health and social care professionals are necessary to respond effectively to family adversities and IPV disclosures.
