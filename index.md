@@ -12,7 +12,7 @@ header:
 excerpt: 'A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs) <br/> <small> Search, discover and access tools and resources to implement clinically relevant and validated indicators of ACEs in your research using EHRs. Join the millions of researchers worldwide passionate about improving the lives of children and families affected by ACEs through advancing research. <br/> <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext">New study out in Lancet Public Health!</a><br/> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row_1:
-  - excerpt: 'We have developed and validated indicators for identifying ACEs in routinely collected non-identifiable health care data of parents and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
+  - excerpt: 'We have developed and validated indicators for identifying ACEs in routinely collected non-identifiable healthcare data of parents and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
 
 galleryone:
   - url: https://shabeer-syed.github.io/acesinehrs/about/
@@ -47,9 +47,9 @@ gallerytwo:
 ---
 
 This library stores ACE indicators and algorithms accompanying the paper published in Lancet Digital Health [*"Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study, (2022). Shabeer Syed, Arturo Gonzalez-Izquierd, Janice Allister, Gene Feder, Leah Li, Ruth Gilbert."*](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext).
-{: .notice--info}
 
-Users must cite the www.ACEsinEHRs.com library and the accompanying [Lancet Digital Health publication](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext) in all research outputs, presentations and reports. The information is not intended for clinical use. No data is stored in this library.
+**Users must cite the www.ACEsinEHRs.com library and the accompanying [Lancet Digital Health publication](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext) in all research outputs, presentations and reports.** 
+The information is not intended for clinical use. No data is stored in this library.
 {: .notice--danger}
 
 <span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
