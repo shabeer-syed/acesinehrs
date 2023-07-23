@@ -13,7 +13,7 @@ excerpt: 'A library of indicators for identifying Adverse Childhood Experiences 
 feature_row_1:
   - image_path: images/Syed 2023 Family adversity and IPV and lancet public health.png
     alt: "Family adversity and health characteristics associated with intimate partner violence"
-    title: "Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England"
+    title: "Family adversity and health characteristics associated with intimate partner violence in children and parents"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
