@@ -32,9 +32,15 @@ feature_row_1:
     url: "/research-review-ipv-cm/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
+
+feature_row_2:
+  - excerpt: 'Selected publications and outputs using indicators from the ACEs in EHRs library.'
+
 ---
 
 {% include base_path %}
+
+{% include feature_row id="feature_row_2" type="center" %}
 
 {% include feature_row id="feature_row_1" %}
 
