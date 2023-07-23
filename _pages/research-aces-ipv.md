@@ -49,3 +49,10 @@ Overall, the study provides valuable insights into the prevalence and associatio
 *  Healthcare providers should implement integrated think-family functions in electronic health record systems, allowing clinicians to search for adversity across household records securely.
 *  National policies should prioritise family-centered interventions to support families experiencing adversity, offering emotional support, risk assessment, safety planning, and appropriate referrals to specialists and long-term support.
 *  Adequate training and resources for health and social care professionals are necessary to respond effectively to family adversities and IPV disclosures.
+
+<span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
+
+---
+
+  [![](/images/logos/NIHR CPRU logo aces in ehrs footer.png)](https://www.ucl.ac.uk/children-policy-research/) | [![](/images/logos/ucl ich logo aces in ehrs.png)](https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0) | [![](/images/logos/university of oxford logo aces in ehrs.png)](https://www.ox.ac.uk/) | [![](/images/logos/NIHR Great ormond street hospital biomedical research centre logo aces in ehrs.png)](https://www.gosh.nhs.uk/our-research/our-research-infrastructure/nihr-great-ormond-street-hospital-brc/) | [![](/images/logos/GOSH logo aces in ehrs.png)](https://www.gosh.nhs.uk/) | [![](/images/logos/University of bristol logo aces in ehrs.png)](https://www.bristol.ac.uk/) | [![](/images/logos/hdruk logo aces in ehrs.png)](https://www.hdruk.ac.uk/) | [![](/images/logos/caliber ucl logo aces in ehrs.png)](https://www.ucl.ac.uk/health-informatics/research/caliber) 
+
