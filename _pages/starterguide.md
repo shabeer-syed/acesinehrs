@@ -108,13 +108,13 @@ Unlike data sets such as the [Hospital Episode Statistics](https://digital.nhs.u
 
 To learn how to use R of Python for data management related to EHR research, we recommend reading [*"R for Data Science (2e)*" by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund](https://r4ds.hadley.nz/), freely available online.
 
-## Data extraction and restructuring 
+## Data restructuring
 ### Restructuring the data
 * *Restructuring data files and fields*. Having extracted your raw files, we need to restructure all files and data fields (variables) into a consistent "long format", and rename variable into consistent names. The consistent structure ensures we can easily bind all files into one combined file later. For example, the ONS mortality and HES-APC databases are provided by CPRD in wide format and needs restructuring.
 * Drop any irrelevant data fields/variables to reduce file size. e.g. In the CPRD clinical file, the variables *"constype, sysdate, data8"* can easily be omitted, as they are rarely used for the ACEs.
 * Make sure to add an extra variable to each data file to label the original data source (HES, CPRD clinical) before saving it.
 
-## Data cleaning and code standardisation
+## Data cleaning and standardisation
 Most large EHR files contain various types of errors, such as missing values, inconsistent formats, or invalid entries. Data cleaning ensures consistency across different variables and datasets.
 
 * Clean and remove any punctuations, white spaces or trailing alphanumeric from data fields with relevant codes
@@ -151,9 +151,9 @@ aces_data <- aces_data %>% mutate_all(as.character) %>%
 | HES-A&E: A&E speciality field "investigations" | aei_ | aei_21 - Pregnancy test |  
 | HES-OP: OP speciality field "treatment" | opt_ | opt_711 - child and Adolescent Psychiatry Service |  
 
-## Derive ACEs "master file" with only relevant data
-* Having identified your cohort and restructured the multiple separate files, the next step is to extract the relevant data from each file and bind this into a new one "combined file" with only ACE data.
-* *Streaming data extraction.*  To extract only relevant patient ACE data, we  recommend you apply a streaming approach to the new standardise files by iterating over (i.e. repeating the matching) each patient ID in each file against your separate list of patient IDs (i.e. cohort) and your separare ACEs code lists.
+## Create ACE specific "master file"
+* Having identified your cohort and restructured the multiple separate files, the next step is to extract the relevant data from each file and bind this into a new one combined "master file" with only ACE data.
+* *Streaming data extraction.* To extract only relevant patient ACE data, we  recommend you apply a streaming approach to the new standardise files by iterating over (i.e. repeating the matching) each patient ID in each file against your separate list of patient IDs (i.e. cohort) and your separare ACEs code lists.
 
 * A "streaming approach" refers to reading and processing data in chunks or sequentially rather than loading the entire dataset into memory at once. Whilst *SQL* is useful for handling larger databases, R or Python can also apply *streaming* by first loading your list of relevant patient IDs and then extracting relevant data using package functions like: *data.table::fread(.... ,data.table=F)* with *dplyr::filter* and *fastmatch::%fin%*.
 
