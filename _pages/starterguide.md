@@ -92,14 +92,14 @@ We have converted several original codes so the code lists contain one column of
 # Data preparation and standardisation
 ---
 Now, let's get the data ready for analysis! 
-Unlike hospital episode statistics, EHRs from primary care are located in multiple separate files with different structures and format. Therefore, implementing the ACE indicators using code lists requires preparing and restructuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms. 
+Unlike data sets such as the [Hospital Episode Statistics](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/hospital-episode-statistics) where everything is nicely placed into one file, EHRs from primary care are messier and located in multiple separate files with different structures and format. Therefore, implementing the ACE indicators using code lists requires preparing and restructuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms.
 
-## Data preparation steps:
+## Steps - data preparation:
 * **Extract the raw data files using SQL** 
-* **Restructure each data file** (ie. creating data file with uniform format)
-  * **Data clean & standardise each file** (ie, grouped codes or measures)
-    * Retrieve  relevant data & bind into a "master ACE data file"
-      * Merge code list with master file
+* **Restructure each data file** (ie. creating new data files with consistent format)
+  * **Data clean & standardise each file** (ie, add prefixes to codes, remove waste etc)
+    * Retrieve data from standardised files & bind into a "master ACE data file"
+      * Merge code list with the master file
         * Apply algorithms & keep relevant record
 
 **IMPORTANT!** <i class="fas fa-exclamation-triangle" style="color: #e3740d;"></i> IImplementing the ACE indicators in more complex data sets like primary care data (GP records) requires restructuring, manipulating and combining multiple large data sets into one or multiple new files using a programming language of choice (e.g., Python, R). This section provides only brief information on data management specific to the implementation of the ACE indicators. Many data management tasks involve a [split-apply-combine strategy](https://www.jstatsoft.org/article/view/v059i10), that is, the ability to "..break up a big problem into manageable pieces, operate on each piece independently and then put all the pieces back together (Wickham, 2014, p1)".  This information is therefore intended as supplementary recommendations to users who already have skills in  programming languages like R, Python, or SQL. To learn how to use R for data management, we recommend reading [*"R for Data Science (2e)*" by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund](https://r4ds.hadley.nz/), freely available online.
