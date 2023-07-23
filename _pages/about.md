@@ -8,22 +8,19 @@ header:
   cta_label: 
   cta_url: 
   caption:
-excerpt: 'Welcome to ACEs in EHRs. We are passionate about using electronic health records (EHRs) to advance health care, social justice and policy for families and young people affected by adverse childhood experiences (ACEs).<br /> <small><a> ACEs in EHRs is a platform with clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course. </a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'Welcome to ACEs in EHRs. ACEs in EHRs is a platform with clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course. .<br /> <small><a>  We are passionate about using electronic health records (EHRs) to advance health care, social justice and policy for families and young people affected by adverse childhood experiences (ACEs) </a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 ---
 
 {% include base_path %}
-
-Welcome to ACEs in EHRs! We are passionate about using electronic health records (EHRs) to advance health care, social justice and policy for families and young people affected by adverse childhood experiences (ACEs).
 
 # Adverse childhood experiences
 <img style="float: right;" src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/smaller%20overview%20aces.png">
 Adverse childhood experiences (ACEs) are potentially traumatic, [violent](https://www.who.int/violenceprevention/approach/definition/en/), or neglectful experiences in childhood that can have a profound impact on a child's health and development [(1)](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext). ACEs can include child maltreatment, witnessing domestic violence, or living with a parent who has a substance use disorder, mental health problem, or criminal involvement [(2)](https://www.cdc.gov/violenceprevention/aces/fastfact.html).
 
 # ACEs in EHRs
-ACEs in EHRs is a platform that provides indicators to identify ACEs among families using EHRs. EHRs are the electronic medical records that healthcare providers use to document patient care. They contain a wealth of information about patients, including their medical history, medications, and social history.
-
-We provde clinically relevant and validated indicators to identify ACEs in EHRs. These indicators are based on several studies ([3](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext), [4](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667%2823%2900119-6/fulltext), [5](https://adc.bmj.com/content/106/1/44.full)) and inspired by the Adverse Childhood Experiences (ACE) Study, which is a landmark study that found that exposure to ACEs is associated with a wide range of health problems, including chronic diseases, mental health problems, and substance abuse.
+Electronic health records contain a wealth of routinely collected information about patients, including their medical history, medications, and social history.
+ACEs in EHRs is a platform that provide clinically relevant and validated indicators to identify ACEs in EHRs. These indicators are based on several studies ([3](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext), [4](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667%2823%2900119-6/fulltext), [5](https://adc.bmj.com/content/106/1/44.full)) and inspired by the Adverse Childhood Experiences (ACE) Study, which is a landmark study that found that exposure to ACEs is associated with a wide range of health problems, including chronic diseases, mental health problems, and substance abuse.
 
 If you are a researcher or healthcare provider, you can use the ACE indicators to identify ACEs at a population level to identify at-risk groups to inform allocation of resources, monitoring of trends and outcomes. Clinically, ACE indicators in EHRs have the potential to support streamlining workflows, assisting decision-making, and enhancing patient care. ACEs in EHRs is a valuable tool that can help to improve the health and well-being of children and families.
 
