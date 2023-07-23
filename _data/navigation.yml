@@ -44,7 +44,7 @@ docs:
       - title: "Converating code prefixes"
         url: /starterguide/#conversation-table-of-codes-requiring-prefix
       - title: "Create ACE-specific master file"
-        url: starterguide/#create-ace-specific-file
+        url: starterguide/#create-ace-specific-master-file
       - title: "Deriving variables"
         url: /starterguide/#deriving-variables
       - title: "Algorithms"
