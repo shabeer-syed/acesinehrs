@@ -98,9 +98,10 @@ Unlike data sets such as the [Hospital Episode Statistics](https://digital.nhs.u
 * **Extract the raw data files using SQL** 
 * **Restructure each data file** (ie. creating new data files with consistent format)
   * **Data clean & standardise each file** (ie, add prefixes to codes, remove waste etc)
-    * Retrieve data from standardised files & bind into a "master ACE data file"
-      * Merge code list with the master file
-        * Apply algorithms & keep relevant record
+    * Retrieve data from standardised files & bind into a **"master ACE data file"**
+      * Merge ACEs code list with the master file
+        * Apply algorithms & retain your ACE indicator (final variable)
+          * Merge the ACE indicator onto your selected cohort for analysis
 
 **IMPORTANT!** <i class="fas fa-exclamation-triangle" style="color: #e3740d;"></i> IImplementing the ACE indicators in more complex data sets like primary care data (GP records) requires restructuring, manipulating and combining multiple large data sets into one or multiple new files using a programming language of choice (e.g., Python, R). This section provides only brief information on data management specific to the implementation of the ACE indicators. Many data management tasks involve a [split-apply-combine strategy](https://www.jstatsoft.org/article/view/v059i10), that is, the ability to "..break up a big problem into manageable pieces, operate on each piece independently and then put all the pieces back together (Wickham, 2014, p1)".  This information is therefore intended as supplementary recommendations to users who already have skills in  programming languages like R, Python, or SQL. To learn how to use R for data management, we recommend reading [*"R for Data Science (2e)*" by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund](https://r4ds.hadley.nz/), freely available online.
 {: .notice--danger}
