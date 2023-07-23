@@ -45,7 +45,10 @@ docs:
         url: /starterguide/#conversation-table-of-codes-requiring-prefix
       - title: "Create ACE-specific master file"
         url: starterguide/#create-ace-specific-master-file
-      - title: "Deriving variables"
+
+  - title: Deriving variables
+    children:
+      - title: "Introduction"
         url: /starterguide/#deriving-variables
       - title: "Algorithms"
         url: starterguide/#algorithms
