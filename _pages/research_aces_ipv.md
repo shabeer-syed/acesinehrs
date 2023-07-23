@@ -16,6 +16,8 @@ excerpt: 'A library of indicators for identifying Adverse Childhood Experiences 
 
 # Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England
 
+Link to publication: [https://doi.org/10.1016/S2468-2667(23)00119-6](https://doi.org/10.1016/S2468-2667(23)00119-6)
+
 ## Introduction:
 
 Intimate Partner Violence (IPV) poses a significant risk to the health and well-being of families, particularly during the critical period of the first 1000 days after a child's birth. In the United Kingdom, parents and children routinely attend health care appointments for antenatal, maternity, and childhood vaccinations, providing an opportunity to identify and address IPV through a comprehensive think-family approach. This study aimed to evaluate the association between family adversities, parental health problems, and IPV during the first 1000 days to inform early identification and prioritize family-child interventions.
