@@ -32,3 +32,10 @@ The study highlights the utility of using routinely coded medical data to evalua
 
 ## Implications:
 Using EHRs to identify family violence can improve targeted care and support for at-risk individuals. Coded indicators of family violence could be integrated into computerized clinical decision support systems to flag potential at-risk cases. Linking family members' EHRs allows for a "Think-Family" approach, aiding in identifying vulnerable children through mothers or vice versa. Despite potential benefits, careful consideration of potential harms, such as stigma, legal consequences, trust, and reduced help-seeking, is necessary before implementing automated EHR systems for family violence identification.
+
+<span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
+
+---
+
+  [![](/images/logos/NIHR CPRU logo aces in ehrs footer.png)](https://www.ucl.ac.uk/children-policy-research/) | [![](/images/logos/ucl ich logo aces in ehrs.png)](https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0) | [![](/images/logos/university of oxford logo aces in ehrs.png)](https://www.ox.ac.uk/) | [![](/images/logos/NIHR Great ormond street hospital biomedical research centre logo aces in ehrs.png)](https://www.gosh.nhs.uk/our-research/our-research-infrastructure/nihr-great-ormond-street-hospital-brc/) | [![](/images/logos/GOSH logo aces in ehrs.png)](https://www.gosh.nhs.uk/) | [![](/images/logos/University of bristol logo aces in ehrs.png)](https://www.bristol.ac.uk/) | [![](/images/logos/hdruk logo aces in ehrs.png)](https://www.hdruk.ac.uk/) | [![](/images/logos/caliber ucl logo aces in ehrs.png)](https://www.ucl.ac.uk/health-informatics/research/caliber) 
+
