@@ -14,15 +14,15 @@ feature_row_1:
   - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Syed%202023%20Family%20adversity%20and%20IPV%20and%20lancet%20public%20health.png
     alt: "Family adversity and health characteristics associated with intimate partner violence"
     title: "Clinical characteristics of families affected by intimate partner violence"
-    excerpt: "Intimate Partner Violence (IPV) poses a significant risk to the health and well-being of families, particularly during the critical period of the first 1000 days after a child's birth. In the United Kingdom...."
-    url: "/aces_ipv/"
+    excerpt: "Intimate Partner Violence (IPV) poses a significant risk to the health and well-being of families, particularly during the critical period of the first 1000 days after a child's birth. In the United Kingdom..."
+    url: "/research_aces_ipv/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Syed%202023%20Family%20adversity%20and%20IPV%20and%20lancet%20public%20health.png
+  - image_path: https://www.thelancet.com/cms/attachment/82826710-5aaa-43c6-91bb-dd891c8bb5a6/gr4.jpg
     alt: "Family adversity and health characteristics associated with intimate partner violence"
-    title: "Family adversity and health characteristics associated with intimate partner violence in children and parents"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    url: "/docs/configuration/"
+    title: "ACEs in EHRs development and validation study"
+    excerpt: "Adverse childhood experiences (ACEs) are deeply impactful and potentially traumatic events that can significantly affect a child's health and development. They encompass a range of negative experiences, from child maltreatment and neglect to growing up in households with parental mental health issues and intimate partner violence..."
+    url: "/research_acesinehrs_validation/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Syed%202023%20Family%20adversity%20and%20IPV%20and%20lancet%20public%20health.png
