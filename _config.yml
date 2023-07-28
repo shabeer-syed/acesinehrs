@@ -61,13 +61,13 @@ atom_feed:
   hide                   : true
 search                   : true
 search_full_content      : true
-search_provider          : algolia
+search_provider          : "algolia"
 lunr:
   search_within_pages    : # true, false (default)
 algolia:
-  application_id         : 65AUBXHVJY
+  application_id         : "65AUBXHVJY"
   index_name             : acesinehrs
-  search_only_api_key    : f2b7640337f24a468647c61343decc43
+  search_only_api_key    : "f2b7640337f24a468647c61343decc43"
   powered_by             : false # true (default), false
 google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
