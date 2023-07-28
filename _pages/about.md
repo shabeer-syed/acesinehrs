@@ -68,7 +68,7 @@ is not captured in coded data.
 
 The limitations of the "ACE" concept have been summarised [elsewhere](https://www.cambridge.org/core/journals/social-policy-and-society/article/introduction-adverse-childhood-experiences-aces-implications-and-challenges/A1E57E800C74406E84F93AB9F8CB125D).
 
-## About us / Contact
+## Contributors/ Contact
 This project was developed by a range of researchers and clinical experts:
 
 * Dr Shabeer Syed, Senior Research Associate (s.syed.16@ucl.ac.uk), 1,2 
@@ -78,8 +78,13 @@ This project was developed by a range of researchers and clinical experts:
 * Dr Leah Li,  Associate Professor in Medical Statistics and Epidemiology, 1
 * Dr Matthew Jay, Senior Research Associate, 1
 * Prof Gene Feder, Professor of Primary Care, 4
+* Dr Louise Johns, Consultant Academic Clinical Psychologist
 * Dr Richard F Howard, Consultant in Anaesthesia and Pain Medicine, 6,7
 * Prof Ruth Gilbert, Professor of Clinical Epidemiology (r.gilbert@ucl.ac.uk), 1,3
+* Dr Rebecca E Lacey, Associate Professor of Life Course Epidemiology
+* Prof Laura D Howe, Professor of Epidemiology and Medical Statistics
+* Prof Jessica Deighton, Professor in Child Mental Health and Wellbeing
+* Mr Muhammad Qummer ul Arfeen, Data Manager, UCL Institute of Health Informatics,  3
 
 *1. UCL Great Ormond Street Institute of Child Health, Population, Policy and Practice, Faculty of Population Health Sciences London WC1N 1EH*
 *2. Oxford Institute of Clinical Psychology Training and Research, University of Oxford, Oxford, UK*
