@@ -46,7 +46,10 @@ gallerytwo:
 
 ---
 
-This library stores ACE indicators and algorithms accompanying the paper published in Lancet Digital Health [*"Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study, (2022). Shabeer Syed, Arturo Gonzalez-Izquierd, Janice Allister, Gene Feder, Leah Li, Ruth Gilbert. The Lancet Digital Health, 4(7), e482-e496."*](https://doi.org/10.1016/S2589-7500(22)00061-9). **UPDATE July 2023:** To derive ACEs using combined maternal and paternal data, please see paper published in the Lancet Public Health  [*"Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England*](https://doi.org/10.1016/S2468-2667(23)00119-6)
+This library stores ACE indicators and algorithms accompanying the paper published in Lancet Digital Health [*"Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study, (2022). Shabeer Syed, Arturo Gonzalez-Izquierd, Janice Allister, Gene Feder, Leah Li, Ruth Gilbert. The Lancet Digital Health, 4(7), e482-e496."*](https://doi.org/10.1016/S2589-7500(22)00061-9).
+{: .notice}
+
+**UPDATE July 2023:** To derive ACEs using combined maternal and paternal data, please see paper published in the Lancet Public Health  [*"Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England*](https://doi.org/10.1016/S2468-2667(23)00119-6)
 {: .notice}
 
 **Users must cite the www.ACEsinEHRs.com library and the accompanying [Lancet Digital Health publication](https://doi.org/10.1016/S2589-7500(22)00061-9) in all research outputs, presentations and reports.** The information is not intended for clinical use. No data is stored in this library.
