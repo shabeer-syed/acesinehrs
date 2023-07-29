@@ -42,7 +42,7 @@ docs:
       - title: "Data cleaning & standardisation"
         url: /starterguide/#data-cleaning-and-standardisation
       - title: "Converating code prefixes"
-        url: /starterguide/#conversation-table-of-codes-requiring-prefix
+        url: /starterguide/#conversation-table-of-codes-requiring-prefixes
       - title: "Create ACE-specific master file"
         url: starterguide/#create-ace-specific-master-file
 
@@ -51,7 +51,7 @@ docs:
       - title: "Introduction"
         url: /starterguide/#deriving-variables
       - title: "Algorithms"
-        url: starterguide/#algorithms
+        url: starterguide/#applying-algorithms-using-the-code-lists-built-in-helper-functions
       - title: "Using code list helper functions"
         url: /starterguide/#applying-algorithms-using-the-code-lists-built-in-helper-functions
 
