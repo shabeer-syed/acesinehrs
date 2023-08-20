@@ -14,6 +14,7 @@ excerpt: 'Search, discover and access tools, codelists and resources to implemen
 feature_row_1:
   - excerpt: 'ACEs in EHRs?
   {: .blue .bold}
+
 We have developed and validated indicators and codelists for identifying ACEs in routinely collected non-identifiable healthcare data of parents and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
 
 galleryone:
