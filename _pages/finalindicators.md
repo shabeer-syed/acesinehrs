@@ -18,9 +18,7 @@ excerpt: 'View definitions of domains and indicators. Download code lists.<br />
 
 # Download code lists
 * [ACEsinEHRs control documentation/release information](https://github.com/shabeer-syed/acesinehrs/raw/master/assets/control_documentation/ACEsinEHRs%20Control%20documentation%20v2.pdf) 
-Right-click on link to save as a ".txt" file (i.e. using option "save link as")
-*Total number of included ACE codes: 8802 (ACEs) + 8808 (covariates)*
-*Total number of excluded/tested codes: 7671*
+
 
 **Think-family approach:** Unless specified, indicators refers to information recorded in the child, mother and father.
 {: .notice--info}
@@ -29,6 +27,9 @@ Right-click on link to save as a ".txt" file (i.e. using option "save link as")
 {: .notice--danger}
 
 ## All ACE indicators:
+Right-click on link to save as a ".txt" file (i.e. using option "save link as")
+*Total number of included ACE codes: 8802 (ACEs) + 8808 (covariates)*
+*Total number of excluded/tested codes: 7671*
 
 * [All ACEs (8864)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/ACEs_2023ACEsinEHRs.txt)
 * [All ACEs + crossmapped SNOMED CT (8864)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/ACEs_2023_cross_mapped_snomed_medcode_prodcode_ICD910_ACEsinEHRs.txt)
@@ -63,13 +64,3 @@ Visit:
 <span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
 
   [![](/images/logos/NIHR CPRU logo aces in ehrs footer.png)](https://www.ucl.ac.uk/children-policy-research/) | [![](/images/logos/ucl ich logo aces in ehrs.png)](https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0) | [![](/images/logos/university of oxford logo aces in ehrs.png)](https://www.ox.ac.uk/) | [![](/images/logos/NIHR Great ormond street hospital biomedical research centre logo aces in ehrs.png)](https://www.gosh.nhs.uk/our-research/our-research-infrastructure/nihr-great-ormond-street-hospital-brc/) | [![](/images/logos/GOSH logo aces in ehrs.png)](https://www.gosh.nhs.uk/) | [![](/images/logos/University of bristol logo aces in ehrs.png)](https://www.bristol.ac.uk/) | [![](/images/logos/hdruk logo aces in ehrs.png)](https://www.hdruk.ac.uk/) | [![](/images/logos/caliber ucl logo aces in ehrs.png)](https://www.ucl.ac.uk/health-informatics/research/caliber) 
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKLPGD444V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HKLPGD444V');
-</script>
