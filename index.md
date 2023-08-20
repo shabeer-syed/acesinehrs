@@ -4,11 +4,12 @@ permalink: /
 title: "A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)"
 author_profile: false
 header:
-  overlay_color: "#5e616c"
+  overlay_color: "#10bccd"
   overlay_image: /images/ACEsinEHRs home page 2023.jpg
   cta_label: "Download code lists <i class='fas fa-file-download'></i>"
   cta_url: "/finalindicators/#download-code-lists" 
-  caption:  
+  caption:   [Text](#link){: .btn .btn--info}
+
 excerpt: '<span style="color: #b8d6ff">Search, discover and access tools, code lists and resources to implement clinically relevant and validated indicators of ACEs in your research using EHRs.</span> <br/><small><a href="https://doi.org/10.1016/S2468-2667(23)00119-6">New study out in Lancet Public Health!</a><small><br/> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row_1:
