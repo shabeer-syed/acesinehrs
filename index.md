@@ -1,7 +1,7 @@
 ---
 layout: splash
 permalink: /
-title: "Adverse childhood experiences in electronic health records"
+title: "A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)"
 author_profile: false
 header:
   overlay_color: "#5e616c"
@@ -9,7 +9,7 @@ header:
   cta_label: "Download code lists <i class='fas fa-file-download'></i>"
   cta_url: "/finalindicators/#download-code-lists" 
   caption:  
-excerpt: 'A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs) <br/> <small> Search, discover and access tools, codelists and resources to implement clinically relevant and validated indicators of ACEs in your research using EHRs. Join the millions of researchers worldwide passionate about improving the lives of children and families affected by ACEs through advancing research. <br/> <a href="https://doi.org/10.1016/S2468-2667(23)00119-6">New study out in Lancet Public Health!</a><br/> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'Search, discover and access tools, codelists and resources to implement clinically relevant and validated indicators of ACEs in your research using EHRs. <br/> <small>  Join the millions of researchers worldwide passionate about improving the lives of children and families affected by ACEs through advancing research. <br/> <a href="https://doi.org/10.1016/S2468-2667(23)00119-6">New study out in Lancet Public Health!</a><br/> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row_1:
   - excerpt: 'We have developed and validated indicators and codelists for identifying ACEs in routinely collected non-identifiable healthcare data of parents and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
