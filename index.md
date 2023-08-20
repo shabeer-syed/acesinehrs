@@ -12,7 +12,7 @@ header:
 excerpt: 'Search, discover and access tools, codelists and resources to implement clinically relevant and validated indicators of ACEs in your research using EHRs. <br/> <a href="https://doi.org/10.1016/S2468-2667(23)00119-6">New study out in Lancet Public Health!</a><br/> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row_1:
-  - excerpt: 'The ACEsinEHRs platform contains developed and validated indicators and codelists for identifying ACEs in routinely collected non-identifiable healthcare data of parents and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
+  - excerpt: '**The ACEsinEHRs platform contains developed and validated indicators and codelists for identifying ACEs** in routinely collected non-identifiable healthcare data of parents and children presenting to GPs, A&E, hospitals before and after birth. This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
 
 galleryone:
   - url: https://shabeer-syed.github.io/acesinehrs/about/
@@ -41,7 +41,7 @@ gallerytwo:
 
   [![](/images/logos/NIHR CPRU logo aces in ehrs footer.png)](https://www.ucl.ac.uk/children-policy-research/) | [![](/images/logos/ucl ich logo aces in ehrs.png)](https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0) | [![](/images/logos/university of oxford logo aces in ehrs.png)](https://www.ox.ac.uk/) | [![](/images/logos/NIHR Great ormond street hospital biomedical research centre logo aces in ehrs.png)](https://www.gosh.nhs.uk/our-research/our-research-infrastructure/nihr-great-ormond-street-hospital-brc/) | [![](/images/logos/GOSH logo aces in ehrs.png)](https://www.gosh.nhs.uk/) | [![](/images/logos/University of bristol logo aces in ehrs.png)](https://www.bristol.ac.uk/) | [![](/images/logos/hdruk logo aces in ehrs.png)](https://www.hdruk.ac.uk/) | [![](/images/logos/caliber ucl logo aces in ehrs.png)](https://www.ucl.ac.uk/health-informatics/research/caliber) 
 
-## <span style="color: #305476">ACEs in EHRs?</span>
+## <span style="color: #273d5a">ACEs in EHRs?</span>
 {: .text-center}
 {% include feature_row id="feature_row_1" type="center" %}
 
