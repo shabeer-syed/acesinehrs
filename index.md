@@ -1,7 +1,7 @@
 ---
 layout: splash
 permalink: /
-title: "Adverse childhood experiences in Electronic Health Records"
+title: "ACEs in EHRs"
 author_profile: false
 header:
   overlay_color: "#5e616c"
