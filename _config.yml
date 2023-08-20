@@ -134,10 +134,10 @@ footer:
   links:
     - label: "UCL Great Ormond Street Institute of Child Health"
       icon: "fas fa-university"
-      url: "https://www.ucl.ac.uk/children-policy-research/"
+      url: "https://twitter.com/UCLchildhealth"
     - label: "NIHR CPRU"
       icon: "fas fa-dot-circle"
-      url: "https://www.ucl.ac.uk/children-policy-research/"
+      url: "https://twitter.com/UCL_CPRU"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       # url:
