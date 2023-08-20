@@ -12,7 +12,7 @@ header:
 excerpt: '<span style="color: #9fc5f9">Search, discover and access tools, code lists and resources to implement clinically relevant and validated indicators of ACEs in your research using EHRs.</span> <br/> <a href="https://doi.org/10.1016/S2468-2667(23)00119-6">New study out in Lancet Public Health!</a><br/> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row_1:
-  - excerpt: '<span style="color: #273d5a">**The ACEsinEHRs platform provides validated indicators and code lists for identifying ACEs in routinely collected non-identifiable healthcare data of parents and children before and after birth.**</span> This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
+  - excerpt: '<span style="color: #9fc5f9">**The ACEsinEHRs platform provides validated indicators and code lists for identifying ACEs in routinely collected non-identifiable healthcare data of parents and children before and after birth.**</span> This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
 
 galleryone:
   - url: https://shabeer-syed.github.io/acesinehrs/about/
