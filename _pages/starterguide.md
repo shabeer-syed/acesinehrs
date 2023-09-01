@@ -21,7 +21,7 @@ sidebar:
 
 {% include base_path %}
 
-Welcome to the marvellous world of EHRs! This page provides a guide to get you started using measuring intervenable and clinically relevant ACEs using EHRs of families presenting to healthcare throughout the early life course.
+Welcome to the marvellous world of Electronic Health Records (EHRs)! This page provides a guide to get you started incorporating validated indicators, code lists and scripts for measuring intervenable and clinically relevant ACEs in EHRs.
 
 # How does it work?
 ---
