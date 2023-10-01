@@ -56,7 +56,7 @@ Right-click on link to save as a ".txt" file (i.e. using option "save link as")
 
 ### Need more code lists?
 Visit:
-[![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/hdruk%20small.png)](https://phenotypes.healthdatagateway.org/)
+[![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/hdruk%20small.png)](https://www.healthdatagateway.org/)
 
 ### [Go back](https://acesinehrs.com/domains/) 
 
