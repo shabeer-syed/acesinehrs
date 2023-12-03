@@ -8,7 +8,7 @@ header:
   cta_label: 
   cta_url: 
   caption:
-excerpt: 'Welcome to ACEs in EHRs. ACEs in EHRs is a platform with clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course. .<br /> <small><a>  We are passionate about using electronic health records (EHRs) to advance health care, social justice and policy for families and young people affected by adverse childhood experiences (ACEs) </a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'Welcome to ACEs in EHRs. ACEs in EHRs is a platform with clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course.<br /> <small><a>  We are passionate about using electronic health records (EHRs) to advance health care, social justice and policy for families and young people affected by adverse childhood experiences (ACEs) </a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 ---
 
