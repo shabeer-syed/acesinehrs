@@ -13,7 +13,7 @@ excerpt: '<span style="color: #b8d6ff">Search, discover and access tools, code l
 
 feature_row_1:
   - excerpt: '<span style="color: #193E72">**The ACEsinEHRs platform provides validated indicators and code lists for identifying adverse childhood experiences (ACEs) in routinely collected non-identifiable healthcare data of parents and children before and after birth.**</span> ACEs include a range of potentially traumatic, neglectful, or violent experiences in childhood that can have a profound impact on an individual's physical and mental health, social development, and overall well-being. Examples of recorded ACEs include child maltreatment (e.g. child protection), exposure to domestic violence, and growing up with a parent with a mental health or substance use problem (e.g. trio of vulnerabilities). This website is continuously updated and provide information on definitions, concepts, measures, and  standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
-S
+
 galleryone:
   - url: https://shabeer-syed.github.io/acesinehrs/about/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Introduction%20aces%20net.png
