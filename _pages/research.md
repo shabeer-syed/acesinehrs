@@ -11,6 +11,13 @@ header:
 excerpt: 'A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs) <br /> <small><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext">New study out in Lancet Public Health!</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row_1:
+  - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/acamh%20seminar%20ipv%20and%20aces%202023%20thumbnail.jpg
+    alt: "ACAMH Seminar - Interrelationships between parental mental health, intimate partner violence and child mental health – implications for practice (recording)"
+    title: "ACAMH Seminar - Interrelationships between parental mental health, intimate partner violence and child mental health"
+    excerpt: "Watch our ACAMH presentation of our recent publication exploring clinically relevant family adversity indicators of IPV aimed at improving responses to IPV among children and parents who present to healthcare before, during, and after pregnancy..."
+    url: "/research-acamh-ipv/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
   - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Syed%202023%20Family%20adversity%20and%20IPV%20and%20lancet%20public%20health.png
     alt: "Family adversity and health characteristics associated with intimate partner violence"
     title: "Clinical characteristics of families affected by intimate partner violence"
@@ -18,13 +25,15 @@ feature_row_1:
     url: "/research-aces-ipv/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20research%20validation%20study.png
+ - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20research%20validation%20study.png
     alt: "ACEs in EHRs development and validation study"
     title: "ACEs in EHRs development and validation study"
     excerpt: "Adverse childhood experiences (ACEs) are traumatic, violent or neglectful events that can significantly affect a child's health and development. ACEs can include child maltreatment, growing up in households with parental mental health problems and intimate partner violence..."
     url: "/research-acesinehrs-validation/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
+
+feature_row_2:
   - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20research%20review%20CM%20IPV.png
     alt: "State of the art review: indicators of child maltreatment and intimate partner violence"
     title: "State of the art review: indicators of child maltreatment and intimate partner violence"
@@ -33,20 +42,20 @@ feature_row_1:
     btn_class: "btn--primary"
     btn_label: "Learn more"
 
-feature_row_2:
+feature_row_3:
   - excerpt: '**Selected publications and outputs using indicators from the ACEs in EHRs library.**'
+
 
 ---
 
 {% include base_path %}
 
-<iframe src="https://player.vimeo.com/video/840480281?h=0ea3958d16" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/840480281">Final, Interrelationships between parental mental health</a> from <a href="https://vimeo.com/user43305017">ACAMH</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-
-{% include feature_row id="feature_row_2" type="center" %}
+{% include feature_row id="feature_row_3" type="center" %}
 
 {% include feature_row id="feature_row_1" %}
+
+{% include feature_row id="feature_row_2" %}
+
 
 # Publication list
 
