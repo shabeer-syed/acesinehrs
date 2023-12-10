@@ -8,7 +8,7 @@ header:
   cta_label: 
   cta_url: 
   caption:
-excerpt: 'Welcome to ACEs in EHRs. ACEs in EHRs is a platform with clinically validated indicators for identifying ACEs among families using EHRs of mothers, fathers and children presenting to healthcare throughout the early life course.<br /> <small><a>  We are passionate about using electronic health records (EHRs) to advance health care, social justice and policy for families and young people affected by adverse childhood experiences (ACEs) </a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'The ACEsinEHRs platform provides validated indicators and code lists for identifying adverse childhood experiences (ACEs) in routinely collected non-identifiable healthcare data of parents and children before and after birth.<br /> <small><a> This website is continuously updated and provide information on definitions, concepts, measures, and standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. </a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 ---
 
@@ -16,7 +16,7 @@ excerpt: 'Welcome to ACEs in EHRs. ACEs in EHRs is a platform with clinically va
 
 # Adverse childhood experiences
 <img style="float: right;" src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/smaller%20overview%20aces.png">
-Adverse childhood experiences (ACEs) are potentially traumatic, [violent](https://apps.who.int/violence-info/), or neglectful experiences in childhood that can have a profound impact on a child's health and development [(1)](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext). ACEs can include child maltreatment, witnessing domestic violence, or living with a parent who has a substance use disorder, mental health problem, or criminal involvement [(2)](https://www.cdc.gov/violenceprevention/aces/fastfact.html).
+Adverse childhood experiences (ACEs) are potentially traumatic, [violent](https://apps.who.int/violence-info/), or neglectful experiences in childhood that can have a profound impact on a child's health and development [(1)](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext). Examples of recorded ACEs include child maltreatment (e.g. child protection), exposure to domestic violence, and growing up with a parent with a mental health or substance use problem (e.g. trio of vulnerabilities).[(2)](https://www.cdc.gov/violenceprevention/aces/fastfact.html).
 
 # ACEs in EHRs
 Electronic health records (EHRs) contain a wealth of routinely collected information about patients, including their medical history, medications, and social history.
