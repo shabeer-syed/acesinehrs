@@ -14,7 +14,7 @@ feature_row_1:
   - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/acamh%20seminar%20ipv%20and%20aces%202023%20thumbnail.jpg
     alt: "ACAMH Seminar - Interrelationships between parental mental health, intimate partner violence and child mental health – implications for practice (recording)"
     title: "ACAMH Seminar - Interrelationships between parental mental health, intimate partner violence and child mental health"
-    excerpt: "Watch our ACAMH presentation of our recent publication exploring clinically relevant family adversity indicators of IPV aimed at improving responses to IPV among children and parents who present to healthcare before, during, and after pregnancy..."
+    excerpt: "Watch our recent ACAMH presentation of our  publication exploring clinically relevant family adversity indicators of IPV aimed at improving responses to affected families presenting to healthcare..."
     url: "/research-acamh-ipv/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
