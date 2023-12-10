@@ -20,6 +20,9 @@ excerpt: 'A library of indicators for identifying Adverse Childhood Experiences 
 
 ## More info:
 
+This free webinar is open to all, and is organised by ACAMH’s Adverse Childhood Experiences (ACEs) Special Interest Group Monthly seminars.
+This webinar ‘Interrelationships between parental mental health, intimate partner violence and child mental health – implications for practice’ will be led by Prof Gene Feder, Dr Shabeer Syed, and Dr Claire Powell on behalf of the NIHR Children and Families Policy Research Unit.
+
 - [Link to ACAMH event](https://www.acamh.org/freeview/pmi-violence-recording/)
 - [Link to ACAMH presentation slides](https://www.acamh.org/app/uploads/2023/06/Shabeer-Syed-ACAMH-ACE-Seminar-presentation-Shabeer-Syed-27.06.2023.pdf)
 - [Link to research publication](https://doi.org/10.1016/S2468-2667(23)00119-6)
