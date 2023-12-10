@@ -25,7 +25,7 @@ feature_row_1:
     url: "/research-aces-ipv/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
- - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20research%20validation%20study.png
+  - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20research%20validation%20study.png
     alt: "ACEs in EHRs development and validation study"
     title: "ACEs in EHRs development and validation study"
     excerpt: "Adverse childhood experiences (ACEs) are traumatic, violent or neglectful events that can significantly affect a child's health and development. ACEs can include child maltreatment, growing up in households with parental mental health problems and intimate partner violence..."
