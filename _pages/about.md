@@ -68,7 +68,7 @@ is not captured in coded data.
 
 The limitations of the "ACE" concept have been summarised [elsewhere](https://www.cambridge.org/core/journals/social-policy-and-society/article/introduction-adverse-childhood-experiences-aces-implications-and-challenges/A1E57E800C74406E84F93AB9F8CB125D).
 
-## Contributors/ Contact
+## Team & Contributors 
 This project was developed by a range of researchers and clinical experts:
 
 * Dr Shabeer Syed, Senior Research Associate (s.syed.16@ucl.ac.uk), 1,2 
