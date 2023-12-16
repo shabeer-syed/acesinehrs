@@ -73,10 +73,17 @@ feature_row_3:
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="148625842"></div>
 
-
 [Predictive value of indicators for identifying child maltreatment and intimate partner violence in coded electronic health records: a systematic review and meta-analysis](http://dx.doi.org/10.1136/archdischild-2020-319027)
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="88250923"></div>
+
+[Leveraging administrative data to better understand and address child maltreatment: a scoping review of data linkage studies](https://journals.sagepub.com/doi/full/10.1177/10775595221079308)
+
+[Association of pregnancy-specific alcohol policies with infant morbidities and maltreatment](https://jamanetwork.com/journals/jamanetworkopen/article-abstract/2807932)
+
+[The risk of COVID-19 in survivors of domestic violence and abuse](https://link.springer.com/article/10.1186/s12916-021-02119-w)
+
+[The measurement of intimate partner violence using International Classification of Diseases diagnostic codes: a systematic review](https://journals.sagepub.com/doi/abs/10.1177/15248380221090977)
 
 [Are children who are home from school at an increased risk of child maltreatment?](https://doi.org/10.1093/pubmed/fdaa115)
 
