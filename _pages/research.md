@@ -63,6 +63,7 @@ feature_row_3:
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="150725211"></div>
 
+[Association of interparental violence and maternal depression with depression among adolescents at the population and individual level](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2801832)
 
 [Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study](https://doi.org/10.1016/S2589-7500(22)00061-9)
 
@@ -71,6 +72,7 @@ feature_row_3:
 [An external validation of coding for childhood maltreatment in routinely collected primary and secondary care data](https://doi.org/10.1038/s41598-023-34011-3)
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="148625842"></div>
+
 
 [Predictive value of indicators for identifying child maltreatment and intimate partner violence in coded electronic health records: a systematic review and meta-analysis](http://dx.doi.org/10.1136/archdischild-2020-319027)
 
