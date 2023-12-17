@@ -18,7 +18,7 @@ galleryone:
   - url: https://shabeer-syed.github.io/acesinehrs/about/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Introduction%20aces%20net.png
     alt: "ACEs in EHRs About"
-  - url: https://shabeer-syed.github.io/acesinehrs/domains/
+  - url: https://shabeer-syed.github.io/acesinehrs/ACE-domains/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains%20with%20download2.png
     alt: "ACEs in EHRs Domains"
   - url: https://shabeer-syed.github.io/acesinehrs/codelistbrowse/
