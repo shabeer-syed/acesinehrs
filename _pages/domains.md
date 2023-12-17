@@ -15,7 +15,7 @@ excerpt: 'A library of indicators for identifying Adverse Childhood Experiences 
 
 # View and download ACE domains, indicators and code lists
 
- [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20indicators.png)](https://shabeer-syed.github.io/acesinehrs/finalindicators/) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/child%20maltreatment.png)](https://shabeer-syed.github.io/acesinehrs/CM/)
+ [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20indicators.png)](https://shabeer-syed.github.io/acesinehrs/indicators/) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/child%20maltreatment.png)](https://shabeer-syed.github.io/acesinehrs/CM/)
  [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Intimate%20partner%20violence.png)](https://shabeer-syed.github.io/acesinehrs/IPV/) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/parental%20mental%20health%20problems.png)](https://shabeer-syed.github.io/acesinehrs/MHPs/)
  [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Parental%20substance%20misuse.png)](https://shabeer-syed.github.io/acesinehrs/SM/) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/adverse%20family%20environments.png)](https://shabeer-syed.github.io/acesinehrs/AFE/)
 [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/high-risk%20presentattion%20of%20child%20maltreatment.png)](https://shabeer-syed.github.io/acesinehrs/HRPCM/) | -  
