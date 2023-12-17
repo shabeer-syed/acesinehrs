@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "View and download ACE domains, indicators and code lists"
+title: "All ACE domains & indicators"
 permalink: /ACE-domains/
 entries_layout: grid
 header:
@@ -13,7 +13,7 @@ excerpt: 'A library of indicators for identifying Adverse Childhood Experiences 
 
 ---
 
-# View and download ACE domains, indicators and code lists
+# All ACE domains & indicators: definitions and code lists
 
  [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20indicators.png)](https://shabeer-syed.github.io/acesinehrs/indicators/) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/child%20maltreatment.png)](https://shabeer-syed.github.io/acesinehrs/CM/)
  [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Intimate%20partner%20violence.png)](https://shabeer-syed.github.io/acesinehrs/IPV/) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/parental%20mental%20health%20problems.png)](https://shabeer-syed.github.io/acesinehrs/MHPs/)
