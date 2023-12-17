@@ -56,7 +56,7 @@ Right-click on link to save as a ".txt" file (i.e. using option "save link as")
 Visit:
 [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/hdruk%20small.png)](https://phenotypes.healthdatagateway.org/)
 
-### [Go back](https://shabeer-syed.github.io/acesinehrs/domains/)
+### [Go back]( https://shabeer-syed.github.io/acesinehrs/ACE-domains/)
 
 ---
 <span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
@@ -69,6 +69,5 @@ Visit:
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-HKLPGD444V');
 </script>
