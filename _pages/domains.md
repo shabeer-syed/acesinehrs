@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "View and download ACE domains, indicators and code lists"
-permalink: /domains/
+permalink: /ACE-domains/
 entries_layout: grid
 header:
   overlay_color: "#5e616c"
