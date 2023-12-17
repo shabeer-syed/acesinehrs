@@ -52,7 +52,7 @@ MHPs indicators are ascertained using read codes, prescriptions, ICD-10 codes or
 
 [Syed S, Ashwick R, Schlosser M, Gonzalez-Izquierdo A, Li L, Gilbert R. Predictive value of indicators for identifying child maltreatment and intimate partner violence in coded electronic health records: a systematic review and meta-analysis. Archives of disease in childhood. 2021 Jan 1;106(1):44-53.](https://adc.bmj.com/content/106/1/44.full)
 
-### [Go back](https://acesinehrs.com/domains/)
+### [Go back](https://acesinehrs.com/ACE-domains/)
 
 ---
 <span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
@@ -65,6 +65,5 @@ MHPs indicators are ascertained using read codes, prescriptions, ICD-10 codes or
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-HKLPGD444V');
 </script>
