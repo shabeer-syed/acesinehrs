@@ -8,7 +8,7 @@ header:
   cta_label: 
   cta_url: 
   caption:
-excerpt: 'The ACEsinEHRs platform provides validated indicators and code lists for identifying adverse childhood experiences (ACEs) in routinely collected non-identifiable healthcare data of parents and children before and after birth.<br /> <small><a> This website is continuously updated and provide information on definitions, concepts, measures, and standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. </a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'The ACEsinEHRs platform provides validated domains, indicators and code lists to identify adverse childhood experiences (ACEs) in routinely collected non-identifiable electronic healthcare records of parents and children before and after birth.<br /> <small><a> This website is continuously updated and provide information on definitions, concepts, measures, and standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. </a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 ---
 
