@@ -5,7 +5,7 @@ title: "A library of indicators for identifying Adverse Childhood Experiences (A
 author_profile: false
 header:
   overlay_color: "#10bccd"
-  overlay_image: /images/ACEsinEHRs home page 2023.jpg
+  overlay_image: /images/ACEsinEHRs home page 2024.jpg
   cta_label: "Download code lists <i class='fas fa-file-download'></i>"
   cta_url: "/indicators/#download-code-lists"
   caption:  
