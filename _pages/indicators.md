@@ -13,7 +13,7 @@ excerpt: 'View definitions of domains and indicators. Download code lists.<br />
 ---
 
 {% include base_path %}
-[Download code lists](/finalindicators/#download-code-lists){: .btn .btn--info}{: .align-right}
+[Download code lists](/indicators/#download-code-lists){: .btn .btn--info}{: .align-right}
 <div class="flourish-embed flourish-table" data-src="visualisation/8622661"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
 # Download code lists
