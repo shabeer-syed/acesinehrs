@@ -23,7 +23,7 @@ sidebar:
 
   [![](/images/logos/NIHR CPRU logo aces in ehrs footer.png)](https://www.ucl.ac.uk/children-policy-research/) | [![](/images/logos/ucl ich logo aces in ehrs.png)](https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0) | [![](/images/logos/university of oxford logo aces in ehrs.png)](https://www.ox.ac.uk/) | [![](/images/logos/NIHR Great ormond street hospital biomedical research centre logo aces in ehrs.png)](https://www.gosh.nhs.uk/our-research/our-research-infrastructure/nihr-great-ormond-street-hospital-brc/) | [![](/images/logos/GOSH logo aces in ehrs.png)](https://www.gosh.nhs.uk/) | [![](/images/logos/University of bristol logo aces in ehrs.png)](https://www.bristol.ac.uk/) | [![](/images/logos/hdruk logo aces in ehrs.png)](https://www.hdruk.ac.uk/) | [![](/images/logos/caliber ucl logo aces in ehrs.png)](https://www.ucl.ac.uk/health-informatics/research/caliber) 
 
-<span style="color: #193E72">**Welcome to the marvellous world of Electronic Health Records (EHRs)! This page provides a guide to get you started incorporating validated indicators, code lists and scripts for measuring intervenable and clinically relevant ACEs in EHRs.**</span> 
+<span style="color: #193E72">**Welcome to the marvellous world of Electronic Health Records (EHRs)! This page provides a guide to get you started incorporating validated indicators, s and scripts for measuring intervenable and clinically relevant ACEs in EHRs.**</span> 
 
 # How does it work?
 ---
@@ -86,15 +86,6 @@ We have converted several original codes so the code lists contain one column of
  | **Reference** | `1`=code is part of family violence reference standard, `2`=code can be used as a broader measure of family violence |
  | **Individual** | `1`=code applies to child only, `2`=code applies to mother only, `3`=code applies to mother or child (i.e. either), `4`=code only applicable to female children |
  | **Coding systems** | `GP/primary care:` Read, OXMIS, Prodcode (prescriptions or items), CPRD REFERRAL FHSASPEC (field specific), CPRD REFERRAL NHSSPEC (field specific). `HES-APC/secondary care/ONS:` ICD-10, OPCS-4, ICD-9 (applies to ONS < year 2000), HES-APC DISDEST OR ADMISORC (field specific) |
- 
-
-| fruit  | price  |
-|--------|--------|
-| apple  | 2.05   |
-| pear   | 1.37   |
-| orange | 3.09   |
-
-: Fruit prices {.striped .hover}
 
 ### Example code attached to ACE indicator
 
