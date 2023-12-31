@@ -152,6 +152,7 @@ aces_data <- aces_data %>% mutate_all(as.character) %>%
 | HES-A&E: A&E speciality field "treatment" | aet_ | aet_54 - Social worker intervention | 
 | HES-A&E: A&E speciality field "investigations" | aei_ | aei_21 - Pregnancy test |  
 | HES-OP: OP speciality field "treatment" | opt_ | opt_711 - child and Adolescent Psychiatry Service |  
+{: .centered .striped .highlight}
 
 ## Create ACE specific "master file"
 * Having identified your cohort and restructured the multiple separate files, the next step is to extract the relevant data from each file and bind this into a new one combined "master file" with only ACE data.
