@@ -56,9 +56,9 @@ In the UK, mothers' and children's EHRs can be linked across services. The abili
 
 <iframe width="600" height="380" src="https://mediacentral.ucl.ac.uk//Player?autostart=n&fullscreen=y&width=0&height=0&videoId=CFGDc8DB&quality=hi&captions=y&chapterId=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-# Limitations of ACE indicators 
-It is essential to note that ACE indicators:
-* There are methodological challenges in accurately linking children to their fathers (a long-standing issue of anonymised secondary and primary care data).
+# Limitations of ACEs in EHRs 
+It is essential to note:
+* There are methodological challenges in accurately linking children's EHRs to their fathers' EHRs (a long-standing issue of anonymised secondary and primary care data), meaning ACEs in EHR research have primarily been based on linked maternal and child data.
 * Only identify experiences recorded in semi-structured coded non-identifiable data. Many children might have concerns recorded only in free-text data that
 is not captured in coded data.
 * Do not represent an exhaustive list of all possible adversities experienced by children
@@ -71,7 +71,7 @@ The limitations of the "ACE" concept have been summarised [elsewhere](https://ww
 ## Team & Contributors 
 This project was developed by a range of researchers and clinical experts:
 
-* Dr Shabeer Syed, Senior Research Associate (s.syed.16@ucl.ac.uk), 1,2 
+* Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate (s.syed.16@ucl.ac.uk), 1,2 
 * Dr Arturo Gonzalez-Izquierdo, Senior Research Associate, 1, 3
 * Dr Linda Wijlaars, Senior Research Associate, 1, 3
 * Dr Janice Allister, General Practitioner, 5
@@ -84,6 +84,7 @@ This project was developed by a range of researchers and clinical experts:
 * Dr Rebecca E Lacey, Associate Professor of Life Course Epidemiology
 * Prof Laura D Howe, Professor of Epidemiology and Medical Statistics
 * Prof Jessica Deighton, Professor in Child Mental Health and Wellbeing
+* Dr Rachel Ashwick, Clinical Psychologist
 * Mr Muhammad Qummer ul Arfeen, Data Manager, UCL Institute of Health Informatics,  3
 
 *1. UCL Great Ormond Street Institute of Child Health, Population, Policy and Practice, Faculty of Population Health Sciences London WC1N 1EH*
