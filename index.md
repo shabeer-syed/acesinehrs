@@ -9,10 +9,10 @@ header:
   cta_label: "Download code lists <i class='fas fa-file-download'></i>"
   cta_url: "/indicators/#download-code-lists"
   caption:  
-excerpt: '<span style="color: #b8d6ff">Search, discover and access tools, code lists and resources to implement clinically relevant and validated indicators of ACEs in your research using electronic health records.</span> <br/> <small><a href="https://doi.org/10.1016/S2468-2667(23)00119-6">New study out in Lancet Public Health!</a><br/> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: '<span style="color: #b8d6ff">Search, discover and access tools, code lists and resources to implement clinically relevant and validated indicators of ACEs in your research using de-identified electronic health records.</span> <br/> <small><a href="https://doi.org/10.1016/S2468-2667(23)00119-6">New study out in Lancet Public Health!</a><br/> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row_1:
-  - excerpt: '<span style="color: #193E72">**The ACEsinEHRs platform provides validated domains, indicators and code lists to identify adverse childhood experiences (ACEs) in routinely collected non-identifiable electronic health records of parents and children before and after birth.**</span> Examples of recorded ACEs include child maltreatment (e.g. child protection), exposure to domestic violence and abuse, and growing up with parental mental health problems or substance use problems (e.g. trio of vulnerabilities). This website is continuously updated and provide information on definitions, concepts, measures, and standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
+  - excerpt: '<span style="color: #193E72">**The ACEsinEHRs platform provides validated domains, indicators and code lists to identify adverse childhood experiences (ACEs) in routinely collected de-identified electronic health records of parents and children before and after birth.**</span> Examples of recorded ACEs include child maltreatment (e.g. child protection), exposure to domestic violence and abuse, and growing up with parental mental health problems or substance use problems (e.g. trio of vulnerabilities). This website is continuously updated and provide information on definitions, concepts, measures, and standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. [See publications here.](/research/)'
 
 galleryone:
   - url: https://shabeer-syed.github.io/acesinehrs/about/
@@ -59,7 +59,7 @@ This library stores ACE indicators and algorithms accompanying the paper publish
 **Users must cite the www.ACEsinEHRs.com library and the accompanying [Lancet Digital Health publication](https://doi.org/10.1016/S2589-7500(22)00061-9) in all research outputs, presentations and reports.**
 {: .notice--danger}
 
-**No EHR data is stored in this library.** The information is not intended for clinical use.
+**No EHR or patient data is stored in this library.** The information is not intended for clinical use.
 {: .notice--danger}
 
 <span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
