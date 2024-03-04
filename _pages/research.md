@@ -43,7 +43,7 @@ feature_row_2:
     btn_label: "Learn more"
 
 feature_row_3:
-  - excerpt: '**Selected publications and outputs using indicators from the ACEs in EHRs library.**'
+  - excerpt: '**[Selected publications](https://acesinehrs.com/research/#publication-list) and outputs using the ACEs in EHRs library.**'
 
 
 ---
