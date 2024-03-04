@@ -66,15 +66,15 @@ Indicators represent a variable of grouped codes or measures for a potential rec
 <div class="flourish-embed flourish-hierarchy" data-src="visualisation/7087179"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
 ## Code lists
-We provide mapped codes for each ACE indicator stored in [code lists](/domains/). Each data source will have different coding systems. The current ACEs indicators include ICD-9/10 codes (hospital/death records), Read codes, SNOMED-CT codes, medcodes, prodcodes, gemscripts (general practice), and codes for obtaining continuous data or coded information from speciality fields in CPRD GOLD, HES-APC, HES-A&E and HES-OP.
+The ACE indicators are mapped onto codes stored in [code lists](/domains/). Each data source will have different coding systems. The current ACEs indicators include ICD-9/10 codes (hospital/death records), Read codes, SNOMED-CT codes, medcodes, prodcodes, gemscripts (general practice), and codes for obtaining continuous data or coded information from speciality fields in CPRD GOLD, HES-APC, HES-A&E and HES-OP.
 
-We have converted several original codes so the code lists contain one column of research-ready codes. This ensures efficient information integration from multiple coding systems without accidental deduplication. See code list dictionary and conversion table below for more information.
+We have converted several original codes so the code lists contain one column of research-ready codes. This ensures efficient information integration from multiple coding systems without accidental deduplication. See code list dictionary and [conversion table below](https://acesinehrs.com/research/#publication-list) for more information.
 
 ## Code list dictionary
 
  | Provided variable | Description | 
  | --- | --- | 
- | **Code** | Data ready code. Contains CPRD GOLD medcodes and prodcodes (as used in the data provided by CPRD with added prefixes to prodcode), ICD-9/10 (removed punctuations for ICD), and OPSC-4 codes. Prefixes *`d_`* added to prodcodes and *`p_`* to OPSC-4 codes. Prefixes prevents de-duplication as different systems may use the same code for different descriptions. |
+ | **Code** | Data ready code. Contains CPRD GOLD medcodes and prodcodes (as used in the data provided by CPRD with added prefixes to prodcode), ICD-9/10 (removed punctuations for ICD), and OPSC-4 codes. Prefixes *`d_`* added to prodcodes and *`p_`* to OPSC-4 codes. Prefixes [prevents de-duplication](https://acesinehrs.com/research/#publication-list) as different systems may use the same code for different descriptions. |
  | **Code original** | Original code as entered into respective system (removed punctuations for ICD) |
  | **Coding term** | Original code description |
  | **Indicator code** | Indicator code name | 
@@ -88,7 +88,7 @@ We have converted several original codes so the code lists contain one column of
  | **Individual** | `1`=code applies to child only, `2`=code applies to mother only, `3`=code applies to mother or child (i.e. either), `4`=code only applicable to female children |
  | **Coding systems** | `GP/primary care:` Read, OXMIS, Prodcode (prescriptions or items), CPRD REFERRAL FHSASPEC (field specific), CPRD REFERRAL NHSSPEC (field specific). `HES-APC/secondary care/ONS:` ICD-10, OPCS-4, ICD-9 (applies to ONS < year 2000), HES-APC DISDEST OR ADMISORC (field specific) |
 
-### Example code attached to ACE indicator
+### Example ACE indicator in the code list
 
 | Code | Coding  term  | Indicator 1 | Indicator 2 |  domain | severity | scale | reference | individual | coding system |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -98,10 +98,10 @@ We have converted several original codes so the code lists contain one column of
 # Data preparation and standardisation
 ---
 Now, let's get the data ready for analysis! 
-Unlike data sets such as the [Hospital Episode Statistics](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/hospital-episode-statistics) where everything is nicely placed into one file, EHRs from primary care are messier and located in multiple separate files with different structures and format. Therefore, implementing the ACE indicators using code lists requires preparing and restructuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms.
+Unlike data sets such as the [Hospital Episode Statistics](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/hospital-episode-statistics) where everything is nicely placed into a few files, EHRs from primary care are messier and located in multiple separate files with different structures and formats. Therefore, implementing the ACE indicators using code lists requires preparing and restructuring your data sets into a uniform format. The data standardisation allows you to directly merge code lists and indicators to the data set to apply their attached algorithms.
 
 ## Data preparation steps:
-* **Extract the raw data files using SQL** 
+* **Extract the raw data files using SQL (or other programming)** 
 * **Restructure each data file** (ie. creating new data files with consistent format)
   * **Data clean & standardise each file** (ie, add prefixes to codes, remove waste etc)
     * Retrieve data from standardised files & bind into a **"master ACE data file"**
