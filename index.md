@@ -56,7 +56,10 @@ gallerytwo:
 This library stores ACE indicators and algorithms accompanying the paper published in Lancet Digital Health [*"Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study, (2022). Shabeer Syed, Arturo Gonzalez-Izquierd, Janice Allister, Gene Feder, Leah Li, Ruth Gilbert. The Lancet Digital Health, 4(7), e482-e496."*](https://doi.org/10.1016/S2589-7500(22)00061-9).
 {: .notice--info}
 
-**Users must cite the www.ACEsinEHRs.com library and the accompanying [Lancet Digital Health publication](https://doi.org/10.1016/S2589-7500(22)00061-9) in all research outputs, presentations and reports.** The information is not intended for clinical use. No data is stored in this library.
+**Users must cite the www.ACEsinEHRs.com library and the accompanying [Lancet Digital Health publication](https://doi.org/10.1016/S2589-7500(22)00061-9) in all research outputs, presentations and reports.**
+{: .notice--danger}
+
+**No EHR data is stored in this library.** The information is not intended for clinical use.
 {: .notice--danger}
 
 <span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
