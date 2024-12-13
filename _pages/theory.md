@@ -82,6 +82,6 @@ We assessed the relevance of identified candidate ACE indicators based on their 
 
 Consistent with our theoretical model, we predicted that the final ACE indicators would reflect a continuum of clinical relevance, ranging from a  high risk of family violence (i.e. high need for intervention) to lower relevance, consistent with previously studied ACEs domains.
 
-[![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains.png)](https://shabeer-syed.github.io/ACEs/domains) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png)](https://shabeer-syed.github.io/ACEs/codelist)
+[![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains.png)](https://acesinehrs.com/ACE-domains/)) | [![](https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png)](https://acesinehrs.com/codelistbrowse/)
 
 ### [Go back](https://acesinehrs.com/)
