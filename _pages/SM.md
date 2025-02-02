@@ -23,7 +23,7 @@ The DSM-5 defines a substance use disorder as a cluster of cognitive, behavioral
 --------------------------------
 ## Code list
 
-#### [Parental substance misuse (1091)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/SM_2023ACEsinEHRs.txt)
+#### [Parental substance misuse (2886)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/SM_2025ACEsinEHRs.txt)
 
 * [ACEsinEHRs control documentation / release information](https://github.com/shabeer-syed/acesinehrs/raw/master/assets/control_documentation/ACEsinEHRs%20Control%20documentation%20v2.pdf)
 
