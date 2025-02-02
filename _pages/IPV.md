@@ -27,7 +27,9 @@ Includes suspected indicators with coding terms mentioning historic IPV or maltr
 --------------------------------
 ## Code list
 
-#### [Intimate partner violence (453 - excluding codes requiring algorithms)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/codelists/IPV_no_algo_2023ACEsinEHRs.txt)
+#### [Intimate partner violence (2044 - excluding codes requiring algorithms)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/IPV_no_algo_2025ACEsinEHRs.txt)
+
+#### [Intimate partner violence (3281 - incl. codes requiring algorithms)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/IPV_2025ACEsinEHRs.txt)
 
 * [ACEsinEHRs control documentation / release information](https://github.com/shabeer-syed/acesinehrs/raw/master/assets/control_documentation/ACEsinEHRs%20Control%20documentation%20v2.pdf)
 
@@ -36,8 +38,8 @@ Includes suspected indicators with coding terms mentioning historic IPV or maltr
 
  | ACE domain, Indicator(s) |  Rule-based algorithms | Scrip/code* |
  | --- | --- | --- | 
- | **Susp.mIPV,** Assault NOS (algo); mIPV NOS (Assault and high-risk algo, 30/100 days) | Include as mIPV  if assault recording co-occurs with any “high-risk presentation recording” 30 days before the assault or in 100-days post the assault recording. High-risk recordings are a composite variable of recordings related to parental conflicts, health visitors being sent to the home, nurse partnership referrals, superficial head injuries and bruises. We developed the composite variable using results from our systematic review.51  In the current study the algorithm showed PPVs ranging from 18%-30% of definitive mIPV (derivation cohort). |
- | **mIPV,** Assault NOS (algo), mIPV NOS (Assault and preg. incident and CM algo, 45 days) | Include as mIPV if assault recording co-occurs with any recordings of a safeguarding referral, child protection recording, or definitive CM indicator, or “pregnant state, incidental” (marked in codelist) within 45 days of the assault. UK guidelines state 45 days is the maximum timeframe for an initial outcome following a children’s social care assessment from the date of received safeguarding referral (see point 82, [“working together to safe guard children”](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/942454/Working_together_to_safeguard_children_inter_agency_guidance.pdf)). | 
+ | **Susp.IPV,** Assault NOS (algo); IPV NOS (Assault and high-risk algo, 30/100 days) | Include as IPV  if assault recording co-occurs with any “high-risk presentation recording” 30 days before the assault or in 100-days post the assault recording. High-risk recordings are a composite variable of recordings related to parental conflicts, health visitors being sent to the home, nurse partnership referrals, superficial head injuries and bruises. We developed the composite variable using results from our systematic review.51  In the current study the algorithm showed PPVs ranging from 18%-30% of definitive IPV (derivation cohort). |
+ | **IPV,** Assault NOS (algo), IPV NOS (Assault and preg. incident and CM algo, 45 days) | Include as IPV if assault recording co-occurs with any recordings of a safeguarding referral, child protection recording, or definitive CM indicator, or “pregnant state, incidental” (marked in codelist) within 45 days of the assault. UK guidelines state 45 days is the maximum timeframe for an initial outcome following a children’s social care assessment from the date of received safeguarding referral (see point 82, [“working together to safe guard children”](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/942454/Working_together_to_safeguard_children_inter_agency_guidance.pdf)). | 
 
 --------------------------------
 ## Publications
