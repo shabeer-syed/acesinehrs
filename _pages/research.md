@@ -11,6 +11,13 @@ header:
 excerpt: 'A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs) <br /> <small><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext">New study out in Lancet Public Health!</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row_1:
+  - image_path: https://www.ucl.ac.uk/news/sites/news/files/styles/large_image/public/boy_shadows-fotor-2025020410261.png?itok=JKqj-dAX
+    alt: "Adverse childhood experiences in firstborns and mental health risk and health-care use in siblings"
+    title: "Adverse childhood experiences in firstborns and mental health risk and health-care use in siblings"
+    excerpt: "Children are nearly three-quarters (71%) more likely to develop mental health problems between the ages of five and 18, if the firstborn child in their family experienced adversity during their first...."
+    url: "/research-aces-firstborns-siblings/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
   - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/acamh%20seminar%20ipv%20and%20aces%202023%20thumbnail.jpg
     alt: "ACAMH Seminar - Interrelationships between parental mental health, intimate partner violence and child mental health – implications for practice (recording)"
     title: "ACAMH Seminar - Interrelationships between parental mental health, intimate partner violence and child mental health"
@@ -25,13 +32,6 @@ feature_row_1:
     url: "/research-aces-ipv/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20research%20validation%20study.png
-    alt: "ACEs in EHRs development and validation study"
-    title: "ACEs in EHRs development and validation study"
-    excerpt: "Adverse childhood experiences (ACEs) are traumatic, violent or neglectful events that can significantly affect a child's health and development. ACEs can include child maltreatment, growing up in households with parental mental health problems and intimate partner violence..."
-    url: "/research-acesinehrs-validation/"
-    btn_class: "btn--primary"
-    btn_label: "Learn more"
 
 feature_row_2:
   - image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20research%20review%20CM%20IPV.png
@@ -41,6 +41,7 @@ feature_row_2:
     url: "/research-review-ipv-cm/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
+
 
 feature_row_3:
   - excerpt: '**[Selected publications](https://acesinehrs.com/research/#publication-list) and outputs using the ACEs in EHRs library.**'
