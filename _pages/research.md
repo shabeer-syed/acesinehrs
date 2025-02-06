@@ -61,7 +61,7 @@ feature_row_3:
 
 [Adverse childhood experiences in firstborns and mental health risk and health-care use in siblings: a population-based birth cohort study of half a million children in England](https://doi.org/10.1016/S2468-2667(24)00301-3)
 
-<div data-badge-popover="right" data-badge-type="medium-donut" data-doi="10.1016/S2468-2667(24)00301-3" data-hide-no-mentions="true" class="altmetric-embed"></div>
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="173795607"></div>
 
 [Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England](https://doi.org/10.1016/S2468-2667(23)00119-6)
 
