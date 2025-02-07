@@ -30,7 +30,7 @@ gallerytwo:
     image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png
     alt: "ACEs in EHRs getting started"
   - url: https://shabeer-syed.github.io/acesinehrs/theory/
-    image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/definitions%20NEW.png
+    image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/aces%20in%20ehrs%20definitions%20theories.png
     alt: "ACEs in EHRs Theory"
   - url: https://shabeer-syed.github.io/acesinehrs/research/
     image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20research%20outputs.png
