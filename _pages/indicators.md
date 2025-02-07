@@ -28,8 +28,7 @@ excerpt: 'View definitions of domains and indicators. Download code lists.<br />
 
 ## All ACE indicators:
 Right-click on link to save as a ".txt" file (i.e. using option "save link as")
-*Total number of included ACE codes: 8802 (ACEs) + 8808 (covariates)*
-*Total number of excluded/tested codes: 7671*
+*Total number of included ACE codes: 23164 (ACEs)
 
 * [All ACEs (23164)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/ACEs_2025ACEsinEHRs.txt)
 * [All ACEs GP/CPRD GOLD/AURUM only: medcodes, prodcodes, measures only (20925)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/ACEs_2025_medcode_prodcode_CPRD_GOLD_Aurum_ACEsinEHRs.txt)
