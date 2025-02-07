@@ -31,9 +31,9 @@ Right-click on link to save as a ".txt" file (i.e. using option "save link as")
 *Total number of included ACE codes: 8802 (ACEs) + 8808 (covariates)*
 *Total number of excluded/tested codes: 7671*
 
-* [All ACEs (8864)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/ACEs_2025ACEsinEHRs.txt)
-* [All ACEs GP/CPRD GOLD/AURUM only: medcodes, prodcodes, measures only (6618)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/ACEs_2025_medcode_prodcode_CPRD_GOLD_Aurum_ACEsinEHRs.txt)
-* [All ACEs Hospital only: ICD, OPCS and HES-APC specific fields (2246)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/ACEs_2025_ICD910_special_fields_HES_ACEsinEHRs.txt)
+* [All ACEs (23164)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/ACEs_2025ACEsinEHRs.txt)
+* [All ACEs GP/CPRD GOLD/AURUM only: medcodes, prodcodes, measures only (20925)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/ACEs_2025_medcode_prodcode_CPRD_GOLD_Aurum_ACEsinEHRs.txt)
+* [All ACEs Hospital only: ICD, OPCS and HES-APC specific fields (2239)](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/ACEs_2025_ICD910_special_fields_HES_ACEsinEHRs.txt)
 
 ### By ACE domain:
 
