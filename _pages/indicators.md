@@ -17,7 +17,7 @@ excerpt: 'View definitions of domains and indicators. Download code lists.<br />
 <div class="flourish-embed flourish-table" data-src="visualisation/8622661"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
 # Download code lists
-* [ACEsinEHRs control documentation/release information](https://github.com/shabeer-syed/acesinehrs/raw/master/assets/control_documentation/ACEsinEHRs%20Control%20documentation%20v2.pdf) 
+* [ACEsinEHRs control documentation/release information](https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/assets/control_documentation/ACEsinEHRs%20Control%20documentation%20v3.pdf) 
 
 
 **Think-family approach:** Unless specified, indicators refers to information recorded in the child, mother and father.
