@@ -16,10 +16,10 @@ feature_row_1:
 
 galleryone:
   - url: https://shabeer-syed.github.io/acesinehrs/about/
-    image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Introduction%20aces%20net.png
+    image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/Introduction%20aces%20small.png
     alt: "ACEs in EHRs About"
   - url: https://shabeer-syed.github.io/acesinehrs/ACE-domains/
-    image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains%20with%20download2.png
+    image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/home%20view%20domain%20download%20small.png
     alt: "ACEs in EHRs Domains"
   - url: https://shabeer-syed.github.io/acesinehrs/codelistbrowse/
     image_path: https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png
@@ -33,7 +33,7 @@ gallerytwo:
     image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/aces%20in%20ehrs%20definitions%20theories.png
     alt: "ACEs in EHRs Theory"
   - url: https://shabeer-syed.github.io/acesinehrs/research/
-    image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20research%20outputs.png
+    image_path: https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/ACEsinEHRs%20research%20outputs%20small.png
     alt: "ACEs in EHRs Research"
 
 ---
