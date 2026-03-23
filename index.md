@@ -243,7 +243,7 @@ title: "Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)
     <div class="max-w-4xl mx-auto px-6">
       <!-- Hidden text for indexing -->
       <p class="mb-1 text-slate-900 font-medium text-lg select-none">Dr Shabeer Syed</p>
-      <p class="text-sm text-slate-900 select-none">Clinical Psychologist & Senior Research Associate</p>
+      <p class="text-sm text-slate-900 select-none">Clinical Psychologist & Senior Research Fellow</p>
       
       <div class="w-16 h-px bg-slate-900 mx-auto my-6"></div>
       
