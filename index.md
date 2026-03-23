@@ -3,7 +3,6 @@ layout: none
 permalink: /
 title: "Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)"
 ---
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
