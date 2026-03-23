@@ -3,6 +3,7 @@ layout: none
 permalink: /
 title: "Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)"
 ---
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -26,8 +27,8 @@ title: "Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)
         <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/logos/acesinehrs-logo.png" alt="ACEs in EHRs Logo" class="h-5 sm:h-6 object-contain hover:opacity-80 transition duration-300">
       </a>
       
-      <!-- Main Links (Desktop) -->
-      <div class="hidden lg:flex items-center justify-end flex-grow gap-5 xl:gap-8 mr-6 text-[15px] font-medium text-gray-500">
+      <!-- Main Links (Desktop) - Font size increased to text-base (16px) -->
+      <div class="hidden lg:flex items-center justify-end flex-grow gap-5 xl:gap-8 mr-6 text-base font-medium text-gray-500">
         <a href="https://shabeer-syed.github.io/acesinehrs/about/" class="hover:text-gray-900 transition">About</a>
         <a href="https://shabeer-syed.github.io/acesinehrs/starterguide/" class="hover:text-gray-900 transition">Getting started</a>
         <a href="https://shabeer-syed.github.io/acesinehrs/research/" class="hover:text-gray-900 transition">Research</a>
@@ -46,9 +47,9 @@ title: "Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)
       </div>
     </div>
 
-    <!-- Mobile/Dropdown Menu -->
+    <!-- Mobile/Dropdown Menu - Font size increased to text-base (16px) -->
     <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 shadow-md z-40">
-      <div class="flex flex-col px-6 py-4 space-y-4 text-sm font-medium text-gray-600">
+      <div class="flex flex-col px-6 py-4 space-y-4 text-base font-medium text-gray-600">
         <a href="https://shabeer-syed.github.io/acesinehrs/about/" class="hover:text-gray-900 transition">About</a>
         <a href="https://shabeer-syed.github.io/acesinehrs/starterguide/" class="hover:text-gray-900 transition">Getting started</a>
         <a href="https://shabeer-syed.github.io/acesinehrs/research/" class="hover:text-gray-900 transition">Research</a>
@@ -90,17 +91,33 @@ title: "Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)
     </div>
   </header>
 
-  <!-- Logos Section -->
+  <!-- Logos Section WITH LINKS -->
   <section class="bg-white border-b border-gray-200 py-8 shadow-sm relative z-10">
     <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20CPRU%20logo%20aces%20in%20ehrs%20footer.png" alt="NIHR CPRU" class="h-10 object-contain hover:scale-105 transition-transform">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/ucl%20ich%20logo%20aces%20in%20ehrs.png" alt="UCL ICH" class="h-10 object-contain hover:scale-105 transition-transform">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/university%20of%20oxford%20logo%20aces%20in%20ehrs.png" alt="Oxford" class="h-10 object-contain hover:scale-105 transition-transform">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20Great%20ormond%20street%20hospital%20biomedical%20research%20centre%20logo%20aces%20in%20ehrs.png" alt="NIHR GOSH BRC" class="h-10 object-contain hover:scale-105 transition-transform">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/GOSH%20logo%20aces%20in%20ehrs.png" alt="GOSH" class="h-10 object-contain hover:scale-105 transition-transform">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/University%20of%20bristol%20logo%20aces%20in%20ehrs.png" alt="Bristol" class="h-10 object-contain hover:scale-105 transition-transform">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/hdruk%20logo%20aces%20in%20ehrs.png" alt="HDRUK" class="h-10 object-contain hover:scale-105 transition-transform">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/caliber%20ucl%20logo%20aces%20in%20ehrs.png" alt="Caliber UCL" class="h-10 object-contain hover:scale-105 transition-transform">
+      <a href="https://www.ucl.ac.uk/children-policy-research/" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20CPRU%20logo%20aces%20in%20ehrs%20footer.png" alt="NIHR CPRU" class="h-10 object-contain hover:scale-105 transition-transform">
+      </a>
+      <a href="https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/ucl%20ich%20logo%20aces%20in%20ehrs.png" alt="UCL ICH" class="h-10 object-contain hover:scale-105 transition-transform">
+      </a>
+      <a href="https://www.ox.ac.uk/" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/university%20of%20oxford%20logo%20aces%20in%20ehrs.png" alt="Oxford" class="h-10 object-contain hover:scale-105 transition-transform">
+      </a>
+      <a href="https://www.gosh.nhs.uk/our-research/our-research-infrastructure/nihr-great-ormond-street-hospital-brc/" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20Great%20ormond%20street%20hospital%20biomedical%20research%20centre%20logo%20aces%20in%20ehrs.png" alt="NIHR GOSH BRC" class="h-10 object-contain hover:scale-105 transition-transform">
+      </a>
+      <a href="https://www.gosh.nhs.uk/" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/GOSH%20logo%20aces%20in%20ehrs.png" alt="GOSH" class="h-10 object-contain hover:scale-105 transition-transform">
+      </a>
+      <a href="https://www.bristol.ac.uk/" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/University%20of%20bristol%20logo%20aces%20in%20ehrs.png" alt="Bristol" class="h-10 object-contain hover:scale-105 transition-transform">
+      </a>
+      <a href="https://www.hdruk.ac.uk/" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/hdruk%20logo%20aces%20in%20ehrs.png" alt="HDRUK" class="h-10 object-contain hover:scale-105 transition-transform">
+      </a>
+      <a href="https://www.ucl.ac.uk/health-informatics/research/caliber" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/caliber%20ucl%20logo%20aces%20in%20ehrs.png" alt="Caliber UCL" class="h-10 object-contain hover:scale-105 transition-transform">
+      </a>
     </div>
   </section>
 
@@ -243,7 +260,7 @@ title: "Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)
     <div class="max-w-4xl mx-auto px-6">
       <!-- Hidden text for indexing -->
       <p class="mb-1 text-slate-900 font-medium text-lg select-none">Dr Shabeer Syed</p>
-      <p class="text-sm text-slate-900 select-none">Clinical Psychologist & Senior Research Fellow</p>
+      <p class="text-sm text-slate-900 select-none">Clinical Psychologist & Senior Research Associate</p>
       
       <div class="w-16 h-px bg-slate-900 mx-auto my-6"></div>
       
