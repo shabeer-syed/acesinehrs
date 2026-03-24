@@ -230,8 +230,8 @@ author_profile: false
  <header class="relative bg-slate-700 bg-opacity-50 text-white" 
    style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20home%20page%202024.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;">
    
-  <!-- Banner Content (Adjusted padding to be just slightly taller than the original) -->
-  <div class="relative z-10 max-w-5xl mx-auto px-6 py-20 md:py-24 text-center">
+  <!-- Banner Content (Precision adjusted padding for exactly 2mm increase) -->
+  <div class="relative z-10 max-w-5xl mx-auto px-6 py-[84px] md:py-[100px] text-center">
    <h1 class="hero-title drop-shadow-lg">
     Adverse Childhood Experiences (ACEs) <br> 
     <span style="color: #bfdbfe !important;">in Electronic Health Records</span>
@@ -273,8 +273,8 @@ author_profile: false
  </section>
 
  <main class="flex-grow">
-  <!-- Intro Section (Pulled up using pt-10 instead of py-16) -->
-  <section class="max-w-4xl mx-auto px-6 pt-10 pb-12 text-center">
+  <!-- Intro Section (Reduced max-width to max-w-3xl to match exact padding/wrapping) -->
+  <section class="max-w-3xl mx-auto px-6 pt-10 pb-12 text-center">
    <h2 class="section-title">What is ACEs in EHRs?</h2>
    <p class="intro-bold-text">
     The ACEsinEHRs platform provides validated domains, indicators, and code lists to identify adverse childhood experiences (ACEs) in routinely collected de-identified electronic health records of parents and children before and after birth.
