@@ -83,7 +83,7 @@ author_profile: false
  }
   
  /* Reset link styles BUT ignore buttons/cards */
- .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.feature-card):not(.scholar-link):not(.text-blue-600):not(.text-blue-400) { 
+ .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.feature-card):not(.scholar-link):not(.text-blue-600):not(.text-blue-400):not(.notice-card) { 
   border-bottom: none !important; 
   text-decoration: none !important; 
   box-shadow: none !important; 
@@ -594,15 +594,21 @@ author_profile: false
    </div>
   </div>
 
-  <!-- Mandatory Citation Warning -->
-  <div class="mt-8 max-w-4xl mx-auto">
-   <div class="notice-card p-4 items-center gap-3 bg-white">
-    <div class="absolute left-0 top-0 bottom-0 w-1 bg-rose-500 rounded-l-xl"></div>
-    <div class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-rose-50 text-rose-500"><i class="fas fa-exclamation-circle text-sm"></i></div>
-    <div class="flex-1 text-sm text-slate-700">
-     <strong class="text-slate-900">Users must cite</strong> the www.ACEsinEHRs.com library and the accompanying Lancet Digital Health publication in all research outputs, presentations and reports.
+  <!-- Mandatory Citation Warning (Matched to Home Page) -->
+  <div class="mt-12 max-w-4xl mx-auto">
+   <a href="https://doi.org/10.1016/S2589-7500(22)00061-9" target="_blank" class="notice-card p-6 items-start gap-4 sm:gap-5">
+    <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #ef4444 !important; border-top-left-radius: 1.25rem; border-bottom-left-radius: 1.25rem;"></div>
+    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mt-0.5" style="background-color: #fef2f2 !important; color: #ef4444 !important;">
+     <i class="fas fa-exclamation-triangle text-lg"></i>
     </div>
-   </div>
+    <div class="flex-1">
+     <p style="font-size: 15px !important; color: #334155 !important; margin: 0 !important;">
+      <strong style="color: #0f172a !important; font-weight: 600 !important;">Users must cite</strong> the www.ACEsinEHRs.com library and the accompanying 
+      <span style="color: #dc2626 !important; font-weight: 500 !important; text-decoration: underline !important; text-decoration-color: #fecaca !important; text-underline-offset: 4px !important;">Lancet Digital Health publication</span> 
+      in all research outputs, presentations and reports.
+     </p>
+    </div>
+   </a>
   </div>
    
   </div>
