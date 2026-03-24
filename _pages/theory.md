@@ -119,7 +119,7 @@ author_profile: false
      <p class="content-text">The initial ACEs predominately referred to domains of adversity in the home environment. They are typically categorised into three main groups:</p>
      
      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
+      <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
        <h4 class="text-blue-800 font-bold mb-3 flex items-center"><i class="fas fa-child mr-2 text-blue-500"></i> Abuse</h4>
        <ul class="space-y-2 list-disc pl-4" style="font-size: 17px !important; color: #475569 !important;">
         <li>Psychological abuse</li>
@@ -127,7 +127,7 @@ author_profile: false
         <li>Sexual abuse</li>
        </ul>
       </div>
-      <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
+      <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
        <h4 class="text-emerald-800 font-bold mb-3 flex items-center"><i class="fas fa-house-damage mr-2 text-emerald-500"></i> Dysfunction</h4>
        <ul class="space-y-2 list-disc pl-4" style="font-size: 17px !important; color: #475569 !important;">
         <li>Substance abuse</li>
@@ -137,7 +137,7 @@ author_profile: false
         <li>Parental separation</li>
        </ul>
       </div>
-      <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
+      <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
        <h4 class="text-rose-800 font-bold mb-3 flex items-center"><i class="fas fa-user-times mr-2 text-rose-500"></i> Neglect</h4>
        <ul class="space-y-2 list-disc pl-4" style="font-size: 17px !important; color: #475569 !important;">
         <li>Physical neglect</li>
