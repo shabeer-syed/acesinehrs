@@ -82,8 +82,8 @@ author_profile: false
     font-family: 'Inter', sans-serif !important; 
   }
   
-  /* Reset link styles BUT ignore the buttons so we don't break borders! */
-  .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.grid-card) { 
+  /* Reset link styles BUT ignore the buttons/cards so we don't break borders! */
+  .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.grid-card):not(.notice-card) { 
     border-bottom: none !important; 
     text-decoration: none !important; 
     box-shadow: none !important; 
@@ -104,7 +104,7 @@ author_profile: false
     font-weight: 400 !important;
     color: rgb(241, 245, 249) !important;
     margin-bottom: 32px !important;
-    max-width: 720px !important; 
+    max-width: 820px !important; /* Perfect width to start under the 'D' */
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -146,6 +146,7 @@ author_profile: false
     display: inline-flex !important;
     align-items: center !important;
     box-sizing: border-box !important; 
+    margin: 4px !important;
     transition: all 0.3s ease !important;
     text-decoration: none !important;
   }
@@ -172,17 +173,24 @@ author_profile: false
     overflow: hidden !important;
     display: flex !important;
   }
+  
   /* EXACT SAME HOVER EFFECT FOR BOTH */
   .grid-card:hover, .notice-card:hover {
     transform: translateY(-4px) !important;
     box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
   }
   
-  /* specific grid-card internal hovers */
-  .grid-card img { transition: transform 0.5s ease !important; }
+  /* Small & tight card settings */
+  .grid-card img { 
+    transition: transform 0.5s ease !important; 
+    width: 100% !important; 
+    height: auto !important; 
+    object-fit: contain !important; 
+    display: block !important; 
+  }
   .grid-card:hover img { transform: scale(1.05) !important; }
   .grid-card .card-title {
-    font-size: 20px !important;
+    font-size: 16px !important;
     font-weight: 700 !important;
     color: #1f2937 !important;
     margin: 0 !important;
@@ -218,12 +226,12 @@ author_profile: false
 <!-- 4. The HTML Content -->
 <div class="full-bleed tailwind-wrap text-gray-800 antialiased flex flex-col min-h-screen">
 
-  <!-- Hero Section (Reduced Height) -->
+  <!-- Hero Section (Restored Original py-24 md:py-32 Height) -->
   <header class="relative bg-slate-700 bg-opacity-50 text-white" 
       style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20home%20page%202024.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;">
      
     <!-- Banner Content -->
-    <div class="relative z-10 max-w-5xl mx-auto px-6 py-12 md:py-16 text-center">
+    <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-32 text-center">
       <h1 class="hero-title drop-shadow-lg">
         Adverse Childhood Experiences (ACEs) <br> 
         <span style="color: #bfdbfe !important;">in Electronic Health Records</span>
@@ -250,8 +258,8 @@ author_profile: false
     </div>
   </header>
 
-  <!-- Logos Section -->
-  <section class="bg-white border-b border-gray-200 py-4 shadow-sm relative z-10">
+  <!-- Logos Section (Restored Original py-8 spacing) -->
+  <section class="bg-white border-b border-gray-200 py-8 shadow-sm relative z-10">
     <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500">
       <a href="https://www.ucl.ac.uk/children-policy-research/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20CPRU%20logo%20aces%20in%20ehrs%20footer.png" alt="NIHR CPRU" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
       <a href="https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/ucl%20ich%20logo%20aces%20in%20ehrs.png" alt="UCL ICH" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
@@ -265,8 +273,8 @@ author_profile: false
   </section>
 
   <main class="flex-grow">
-    <!-- Intro Section (Wider max-width, pulled up to match old HTML) -->
-    <section class="max-w-[960px] mx-auto px-6 pt-6 pb-10 text-center">
+    <!-- Intro Section (Restored original max-w-4xl bounding box and py-16 spacing) -->
+    <section class="max-w-4xl mx-auto px-6 py-16 text-center">
       <h2 class="section-title">What is ACEs in EHRs?</h2>
       <p class="intro-bold-text">
         The ACEsinEHRs platform provides validated domains, indicators, and code lists to identify adverse childhood experiences (ACEs) in routinely collected de-identified electronic health records of parents and children before and after birth.
@@ -277,60 +285,60 @@ author_profile: false
       <a href="https://shabeer-syed.github.io/acesinehrs/research/" style="color: #1d4ed8 !important; font-weight: 600 !important; text-decoration: underline !important; text-underline-offset: 4px !important; font-size: 16px !important;">See publications here</a>
     </section>
 
-    <!-- Grid Cards Section -->
+    <!-- Grid Cards Section (Tighter layout, Natural Image Heights) -->
     <section class="max-w-6xl mx-auto px-6 pb-16">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         
         <a href="https://shabeer-syed.github.io/acesinehrs/about/" class="grid-card group">
-          <div class="h-48 overflow-hidden bg-gray-100 relative">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/Introduction%20aces%20small.png" alt="About" class="w-full h-full object-cover" style="margin: 0 !important;">
+          <div class="relative overflow-hidden bg-white">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/Introduction%20aces%20small.png" alt="About" style="margin: 0 !important;">
           </div>
-          <div class="p-6 flex-grow bg-white z-10">
+          <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
             <h3 class="card-title">About ACEs in EHRs</h3>
           </div>
         </a>
 
         <a href="https://shabeer-syed.github.io/acesinehrs/ACE-domains/" class="grid-card group">
-          <div class="h-48 overflow-hidden bg-gray-100 relative">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/home%20view%20domain%20download%20small.png" alt="Domains" class="w-full h-full object-cover" style="margin: 0 !important;">
+          <div class="relative overflow-hidden bg-white">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/home%20view%20domain%20download%20small.png" alt="Domains" style="margin: 0 !important;">
           </div>
-          <div class="p-6 flex-grow bg-white z-10">
+          <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
             <h3 class="card-title">ACE Domains</h3>
           </div>
         </a>
 
         <a href="https://shabeer-syed.github.io/acesinehrs/codelistbrowse/" class="grid-card group">
-          <div class="h-48 overflow-hidden bg-gray-100 relative">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png" alt="Code Lists" class="w-full h-full object-cover" style="margin: 0 !important;">
+          <div class="relative overflow-hidden bg-white">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png" alt="Code Lists" style="margin: 0 !important;">
           </div>
-          <div class="p-6 flex-grow bg-white z-10">
+          <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
             <h3 class="card-title">Browse Code Lists</h3>
           </div>
         </a>
 
         <a href="https://shabeer-syed.github.io/acesinehrs/starterguide/" class="grid-card group">
-          <div class="h-48 overflow-hidden bg-gray-100 relative">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png" alt="Getting Started" class="w-full h-full object-cover" style="margin: 0 !important;">
+          <div class="relative overflow-hidden bg-white">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png" alt="Getting Started" style="margin: 0 !important;">
           </div>
-          <div class="p-6 flex-grow bg-white z-10">
+          <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
             <h3 class="card-title">Starter Guide</h3>
           </div>
         </a>
 
         <a href="https://shabeer-syed.github.io/acesinehrs/theory/" class="grid-card group">
-          <div class="h-48 overflow-hidden bg-gray-100 relative">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/aces%20in%20ehrs%20definitions%20theories.png" alt="Theory" class="w-full h-full object-cover" style="margin: 0 !important;">
+          <div class="relative overflow-hidden bg-white">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/aces%20in%20ehrs%20definitions%20theories.png" alt="Theory" style="margin: 0 !important;">
           </div>
-          <div class="p-6 flex-grow bg-white z-10">
+          <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
             <h3 class="card-title">Theory & Definitions</h3>
           </div>
         </a>
 
         <a href="https://shabeer-syed.github.io/acesinehrs/research/" class="grid-card group">
-          <div class="h-48 overflow-hidden bg-gray-100 relative">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/ACEsinEHRs%20research%20outputs%20small.png" alt="Research" class="w-full h-full object-cover" style="margin: 0 !important;">
+          <div class="relative overflow-hidden bg-white">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/ACEsinEHRs%20research%20outputs%20small.png" alt="Research" style="margin: 0 !important;">
           </div>
-          <div class="p-6 flex-grow bg-white z-10">
+          <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
             <h3 class="card-title">Research Outputs</h3>
           </div>
         </a>
@@ -341,7 +349,7 @@ author_profile: false
     <section class="max-w-4xl mx-auto px-6 pb-20 space-y-6">
        
       <!-- Notice 1: Update -->
-      <div class="notice-card p-6 items-start gap-4 sm:gap-5">
+      <a href="https://doi.org/10.1016/S2468-2667(23)00119-6" target="_blank" class="notice-card p-6 items-start gap-4 sm:gap-5">
         <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #3b82f6 !important; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"></div>
         <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mt-0.5" style="background-color: #eff6ff !important; color: #2563eb !important;">
           <i class="fas fa-info-circle text-lg"></i>
@@ -349,13 +357,13 @@ author_profile: false
         <div class="flex-1">
           <p style="font-size: 15px !important; color: #475569 !important; margin: 0 !important;">
             <strong style="color: #1e293b !important; font-weight: 600 !important;">UPDATE July 2023:</strong> To derive ACEs using combined maternal and paternal data, please see the paper published in the Lancet Public Health: <br class="hidden sm:block">
-            <a href="https://doi.org/10.1016/S2468-2667(23)00119-6" target="_blank" style="color: #2563eb !important; font-weight: 500 !important; text-decoration: underline !important; text-decoration-color: #bfdbfe !important; text-underline-offset: 4px !important;">"Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England"</a>.
+            <span style="color: #2563eb !important; font-weight: 500 !important; text-decoration: underline !important; text-decoration-color: #bfdbfe !important; text-underline-offset: 4px !important;">"Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England"</span>.
           </p>
         </div>
-      </div>
+      </a>
 
       <!-- Notice 2: Core Study -->
-      <div class="notice-card p-6 items-start gap-4 sm:gap-5">
+      <a href="https://doi.org/10.1016/S2589-7500(22)00061-9" target="_blank" class="notice-card p-6 items-start gap-4 sm:gap-5">
         <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #3b82f6 !important; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"></div>
         <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mt-0.5" style="background-color: #eff6ff !important; color: #2563eb !important;">
           <i class="fas fa-book-medical text-lg"></i>
@@ -363,13 +371,13 @@ author_profile: false
         <div class="flex-1">
           <p style="font-size: 15px !important; color: #475569 !important; margin: 0 !important;">
             <strong style="color: #1e293b !important; font-weight: 600 !important;">Core Study:</strong> This library stores ACE indicators and algorithms accompanying the paper published in Lancet Digital Health: <br class="hidden sm:block">
-            <a href="https://doi.org/10.1016/S2589-7500(22)00061-9" target="_blank" style="color: #2563eb !important; font-weight: 500 !important; text-decoration: underline !important; text-decoration-color: #bfdbfe !important; text-underline-offset: 4px !important;">"Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study, (2022)."</a>
+            <span style="color: #2563eb !important; font-weight: 500 !important; text-decoration: underline !important; text-decoration-color: #bfdbfe !important; text-underline-offset: 4px !important;">"Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study, (2022)."</span>
           </p>
         </div>
-      </div>
+      </a>
 
       <!-- Notice 3: Red Citation Warning -->
-      <div class="notice-card p-6 items-start gap-4 sm:gap-5">
+      <a href="https://doi.org/10.1016/S2589-7500(22)00061-9" target="_blank" class="notice-card p-6 items-start gap-4 sm:gap-5">
         <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #ef4444 !important; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"></div>
         <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mt-0.5" style="background-color: #fef2f2 !important; color: #ef4444 !important;">
           <i class="fas fa-exclamation-triangle text-lg"></i>
@@ -377,14 +385,14 @@ author_profile: false
         <div class="flex-1">
           <p style="font-size: 15px !important; color: #334155 !important; margin: 0 !important;">
             <strong style="color: #0f172a !important; font-weight: 600 !important;">Users must cite</strong> the www.ACEsinEHRs.com library and the accompanying 
-            <a href="https://doi.org/10.1016/S2589-7500(22)00061-9" target="_blank" style="color: #dc2626 !important; font-weight: 500 !important; text-decoration: underline !important; text-decoration-color: #fecaca !important; text-underline-offset: 4px !important;">Lancet Digital Health publication</a> 
+            <span style="color: #dc2626 !important; font-weight: 500 !important; text-decoration: underline !important; text-decoration-color: #fecaca !important; text-underline-offset: 4px !important;">Lancet Digital Health publication</span> 
             in all research outputs, presentations and reports.
           </p>
         </div>
-      </div>
+      </a>
 
       <!-- Notice 4: Red Disclaimer -->
-      <div class="notice-card p-6 items-center gap-4 sm:gap-5">
+      <div class="notice-card p-6 items-center gap-4 sm:gap-5" style="cursor: default !important;">
         <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #ef4444 !important; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"></div>
         <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full" style="background-color: #fef2f2 !important; color: #ef4444 !important;">
           <i class="fas fa-shield-alt text-lg"></i>
