@@ -17,7 +17,7 @@ author_profile: false
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- 3. The "Iron Shield" Overrides (Exact match to Home Page) -->
+<!-- 3. The "Iron Shield" Overrides -->
 <style>
  /* === FIX THE MENU & LOGO === */
  .masthead__inner-wrap .site-logo img {
@@ -114,7 +114,7 @@ author_profile: false
   font-size: 32px !important;
   font-weight: 700 !important;
   color: #0f172a !important; /* Slate 900 */
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1rem !important; /* Tighter gap */
   letter-spacing: -0.025em !important;
   border-bottom: none !important;
  }
@@ -122,7 +122,7 @@ author_profile: false
   font-size: 17px !important;
   line-height: 1.7 !important;
   color: #475569 !important; /* Slate 600 */
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.25rem !important; /* Tighter gap */
  }
  
  /* Modern Info Cards */
@@ -131,7 +131,7 @@ author_profile: false
   border-radius: 1.25rem !important;
   border: 1px solid #e2e8f0 !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
-  padding: 2.5rem !important;
+  padding: 2rem !important; /* Slightly tighter padding inside cards */
   transition: transform 0.3s ease, box-shadow 0.3s ease !important;
  }
  .feature-card:hover {
@@ -170,7 +170,7 @@ author_profile: false
    style="background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; background-blend-mode: multiply;">
    
   <!-- Banner Content -->
-  <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-[120px] text-center">
+  <div class="relative z-10 max-w-5xl mx-auto px-6 py-20 md:py-24 text-center">
    <h1 class="hero-title drop-shadow-lg">
     About ACEs <span style="color: #bfdbfe !important;">in EHRs</span>
    </h1>
@@ -182,9 +182,9 @@ author_profile: false
 
  <main class="flex-grow">
   
-  <!-- Section 1: Introduction & Infographic -->
-  <section class="max-w-6xl mx-auto px-6 py-20 md:py-24">
-   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+  <!-- Section 1: Introduction & Infographic (Reduced padding for tighter spacing) -->
+  <section class="max-w-6xl mx-auto px-6 py-10 md:py-16">
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
     <div>
      <h2 class="content-heading">Adverse childhood experiences</h2>
      <p class="content-text">
@@ -194,7 +194,7 @@ author_profile: false
       Examples of recorded ACEs include child maltreatment (e.g., child protection interventions), exposure to domestic violence, and growing up with a parent experiencing mental health or substance use problems (often referred to as the 'trio of vulnerabilities') <a href="#" class="text-blue-600 hover:underline">(2)</a>.
      </p>
      
-     <h2 class="content-heading mt-12">ACEs in EHRs</h2>
+     <h2 class="content-heading mt-10">ACEs in EHRs</h2>
      <p class="content-text">
       Electronic health records (EHRs) contain a wealth of routinely collected information about patients, including their medical, medication, and social histories. ACEsinEHRs is a platform that provides clinically relevant and validated indicators to identify these experiences within EHRs. 
      </p>
@@ -203,7 +203,7 @@ author_profile: false
      </p>
     </div>
     
-    <!-- Infographic Placeholder (Replace src with your actual infographic URL) -->
+    <!-- Infographic -->
     <div class="flex justify-center md:justify-end">
      <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 shadow-sm w-full max-w-md">
       <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20definitions%20theories.png" alt="ACEs Infographic" class="w-full h-auto object-contain rounded-xl mix-blend-multiply" style="margin: 0 !important;">
@@ -212,11 +212,12 @@ author_profile: false
    </div>
   </section>
 
-  <!-- Section 2: Mission & Achievements (Premium Gray Background) -->
-  <section class="bg-slate-50 py-20 md:py-24 border-y border-slate-200">
+  <!-- Section 2: Mission & Achievements -->
+  <section class="bg-slate-50 py-10 md:py-16 border-y border-slate-200">
    <div class="max-w-6xl mx-auto px-6">
     
-    <div class="max-w-3xl mx-auto text-center mb-16">
+    <!-- Tighter margin bottom on the header -->
+    <div class="max-w-3xl mx-auto text-center mb-10">
      <h2 class="content-heading">Mission statement and aims</h2>
      <p class="content-text">
       EHRs are routinely collected and readily available. However, there are significant challenges in using them to inform practice and policy. EHRs are often stored across disparate databases, organisations, and coding systems, resulting in a complex web of data requiring specialist management skills. Prior to this platform, there was no validated set of indicators for identifying ACEs in EHRs using both parent and child data.
@@ -289,8 +290,8 @@ author_profile: false
   </section>
 
   <!-- Section 3: Advantages & Data Linkage -->
-  <section class="max-w-6xl mx-auto px-6 py-20 md:py-24">
-   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+  <section class="max-w-6xl mx-auto px-6 py-10 md:py-16">
+   <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
     
     <!-- Text Content -->
     <div>
@@ -306,24 +307,25 @@ author_profile: false
      </p>
     </div>
 
-    <!-- Video Placeholder -->
-    <div class="relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer border border-slate-200">
-     <!-- Replace this image with your actual video thumbnail -->
-     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Data Linkage Video" class="w-full h-auto object-cover opacity-90 transition-opacity group-hover:opacity-100" style="margin: 0 !important;">
+    <!-- REAL WORKING HTML5 VIDEO PLAYER -->
+    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200">
      
-     <div class="absolute inset-0 bg-slate-900 bg-opacity-30 flex flex-col items-center justify-center transition-all group-hover:bg-opacity-20">
-      <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110">
-       <i class="fas fa-play text-blue-600 text-2xl ml-1"></i>
-      </div>
-      <span class="mt-4 text-white font-bold text-lg tracking-wide drop-shadow-md">DATA LINKAGE</span>
-     </div>
+     <!-- 
+       IMPORTANT: Paste the actual link to your video file inside the src="" below! 
+       (If your video is hosted on YouTube instead, simply delete this entire <video> block and paste your YouTube <iframe> here.)
+     -->
+     <video controls class="w-full h-auto" poster="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Data%20linkage%20video%20thumbnail.jpg">
+      <source src="YOUR_VIDEO_URL_HERE.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+     </video>
+     
     </div>
 
    </div>
   </section>
 
   <!-- Section 4: Limitations (Warning Style) -->
-  <section class="max-w-4xl mx-auto px-6 pb-20">
+  <section class="max-w-4xl mx-auto px-6 pb-12">
    <div class="bg-white rounded-2xl border border-rose-100 shadow-md overflow-hidden relative">
     <!-- Red top accent line -->
     <div class="h-2 w-full bg-rose-500 absolute top-0 left-0"></div>
@@ -369,9 +371,9 @@ author_profile: false
   </section>
 
   <!-- Section 5: Team & Contributors -->
-  <section class="max-w-4xl mx-auto px-6 pb-24">
+  <section class="max-w-4xl mx-auto px-6 pb-16">
    <h2 class="content-heading text-center">Team & Contributors</h2>
-   <p class="content-text text-center mb-10">This project was developed by a diverse range of researchers and clinical experts:</p>
+   <p class="content-text text-center mb-8">This project was developed by a diverse range of researchers and clinical experts:</p>
    
    <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm mb-8">
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-slate-700 font-medium text-sm">
@@ -406,4 +408,4 @@ author_profile: false
   </section>
 
  </main>
-</di
+</div>
