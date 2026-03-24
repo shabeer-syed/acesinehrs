@@ -216,7 +216,7 @@ author_profile: false
  <main class="flex-grow">
   
  <!-- Section 1: Introduction & Infographic -->
- <section class="max-w-6xl mx-auto px-6 py-10 md:py-16">
+ <section class="max-w-6xl mx-auto px-6 py-12 md:py-16">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
   <div>
    <h2 class="content-heading">Adverse childhood experiences</h2>
@@ -236,17 +236,21 @@ author_profile: false
    </p>
   </div>
    
-  <!-- Infographic -->
+  <!-- Clickable Infographic -->
   <div class="flex justify-center md:justify-end">
-   <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 shadow-sm w-full max-w-md">
-   <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20definitions%20theories.png" alt="ACEs Infographic" class="w-full h-auto object-contain rounded-xl mix-blend-multiply" style="margin: 0 !important;">
-   </div>
+   <a href="https://acesinehrs.com/theory/" class="block bg-slate-50 p-6 rounded-3xl border border-slate-100 shadow-sm w-full max-w-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-blue-200 group relative">
+    <!-- Hover Icon -->
+    <div class="absolute top-5 right-5 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+     <i class="fas fa-external-link-alt text-lg"></i>
+    </div>
+    <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20definitions%20theories.png" alt="ACEs Infographic" class="w-full h-auto object-contain rounded-xl mix-blend-multiply transition-transform duration-300 group-hover:scale-[1.02]" style="margin: 0 !important;">
+   </a>
   </div>
   </div>
  </section>
 
  <!-- Section 2: Mission & Achievements -->
- <section class="bg-slate-50 py-10 md:py-16 border-y border-slate-200">
+ <section class="bg-slate-50 py-12 md:py-16 border-y border-slate-200">
   <div class="max-w-6xl mx-auto px-6">
    
   <div class="max-w-3xl mx-auto text-center mb-10">
@@ -443,8 +447,8 @@ author_profile: false
   </div>
  </section>
 
- <!-- Section 4: Advantages & Data Linkage -->
- <section class="max-w-6xl mx-auto px-6 py-10 md:py-16">
+ <!-- Section 4: Advantages & Data Linkage (White Background) -->
+ <section class="max-w-6xl mx-auto px-6 py-12 md:py-16">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
    
   <!-- Text Content -->
@@ -461,61 +465,63 @@ author_profile: false
    </p>
   </div>
 
-  <!-- Responsive UCL Iframe Player -->
-  <div class="relative w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-900" style="padding-top: 63.33%;">
-   <iframe class="absolute top-0 left-0 w-full h-full" src="https://mediacentral.ucl.ac.uk//Player?autostart=n&fullscreen=y&width=0&height=0&videoId=CFGDc8DB&quality=hi&captions=y&chapterId=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <!-- Responsive UCL Iframe Player with Light Grey Frame -->
+  <div class="relative w-full rounded-2xl overflow-hidden shadow-sm border-2 border-slate-100 bg-slate-50" style="padding-top: 63.33%;">
+   <iframe class="absolute top-0 left-0 w-full h-full rounded-xl" src="https://mediacentral.ucl.ac.uk//Player?autostart=n&fullscreen=y&width=0&height=0&videoId=CFGDc8DB&quality=hi&captions=y&chapterId=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
   </div>
  </section>
 
- <!-- Section 5: Limitations -->
- <section class="max-w-4xl mx-auto px-6 py-10 md:py-12">
-  <div class="bg-white rounded-2xl border border-rose-100 shadow-md overflow-hidden relative">
-  <div class="h-2 w-full bg-rose-500 absolute top-0 left-0"></div>
-   
-  <div class="p-8 md:p-10">
-   <div class="flex items-center mb-8">
-   <div class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 mr-4">
-    <i class="fas fa-exclamation-triangle text-xl"></i>
+ <!-- Section 5: Limitations (Light Grey Background for contrast) -->
+ <section class="bg-slate-50 py-12 md:py-16 border-y border-slate-200">
+  <div class="max-w-4xl mx-auto px-6">
+   <div class="bg-white rounded-2xl border border-rose-100 shadow-md overflow-hidden relative">
+   <div class="h-2 w-full bg-rose-500 absolute top-0 left-0"></div>
+    
+   <div class="p-8 md:p-10">
+    <div class="flex items-center mb-8">
+    <div class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 mr-4">
+     <i class="fas fa-exclamation-triangle text-xl"></i>
+    </div>
+    <h2 class="text-2xl font-bold text-slate-900 m-0 border-none">Limitations of ACEs in EHRs</h2>
+    </div>
+    
+    <p class="content-text font-medium text-slate-800 mb-6">When utilising this library, it is essential to note:</p>
+    
+    <ul class="custom-list">
+    <li>
+     <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+     There are methodological challenges in accurately linking children’s EHRs to their fathers’ EHRs (a long-standing limitation of anonymised secondary and primary care data). Consequently, current ACE research using EHRs has primarily been based on linked maternal and child data.
+    </li>
+    <li>
+     <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+     The platform only identifies experiences recorded in semi-structured, coded non-identifiable data. Serious concerns recorded solely in free-text clinical notes will not be captured by these coded indicators.
+    </li>
+    <li>
+     <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+     The indicators do not represent an exhaustive list of all possible adversities experienced by children.
+    </li>
+    <li>
+     <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+     <strong>Cannot make inferences about an individual.</strong> This means that indicators cannot be used to guide individual-level clinical decision-making, including screening, diagnosing, or labelling children or families to be at risk of harm.
+    </li>
+    <li>
+     <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+     Do not assume children with ACEs will inevitably develop poorer health outcomes. Most children with ACEs <strong>do not</strong> develop poorer health outcomes and show profound resilience.
+    </li>
+    <li>
+     <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+     These records do not account for mitigating protective factors and wider systemic contexts.
+    </li>
+    </ul>
    </div>
-   <h2 class="text-2xl font-bold text-slate-900 m-0 border-none">Limitations of ACEs in EHRs</h2>
    </div>
-   
-   <p class="content-text font-medium text-slate-800 mb-6">When utilising this library, it is essential to note:</p>
-   
-   <ul class="custom-list">
-   <li>
-    <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-    There are methodological challenges in accurately linking children’s EHRs to their fathers’ EHRs (a long-standing limitation of anonymised secondary and primary care data). Consequently, current ACE research using EHRs has primarily been based on linked maternal and child data.
-   </li>
-   <li>
-    <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-    The platform only identifies experiences recorded in semi-structured, coded non-identifiable data. Serious concerns recorded solely in free-text clinical notes will not be captured by these coded indicators.
-   </li>
-   <li>
-    <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-    The indicators do not represent an exhaustive list of all possible adversities experienced by children.
-   </li>
-   <li>
-    <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-    <strong>Cannot make inferences about an individual.</strong> This means that indicators cannot be used to guide individual-level clinical decision-making, including screening, diagnosing, or labelling children or families to be at risk of harm.
-   </li>
-   <li>
-    <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-    Do not assume children with ACEs will inevitably develop poorer health outcomes. Most children with ACEs <strong>do not</strong> develop poorer health outcomes and show profound resilience.
-   </li>
-   <li>
-    <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-    These records do not account for mitigating protective factors and wider systemic contexts.
-   </li>
-   </ul>
-  </div>
   </div>
  </section>
 
- <!-- Section 6: Team & Contributors -->
- <section class="max-w-4xl mx-auto px-6 py-10">
+ <!-- Section 6: Team & Contributors (White Background) -->
+ <section class="max-w-4xl mx-auto px-6 py-12 md:py-16">
   <h2 class="content-heading text-center">Team & Contributors</h2>
   <p class="content-text text-center mb-8">This project was developed by a range of researchers and clinical experts:</p>
   
@@ -551,8 +557,8 @@ author_profile: false
   </div>
  </section>
 
- <!-- Section 7: Feedback & Acknowledgements -->
- <section class="bg-slate-50 py-12 md:py-16 border-t border-slate-200 mt-10">
+ <!-- Section 7: Feedback & Acknowledgements (Light Grey Background) -->
+ <section class="bg-slate-50 py-12 md:py-16 border-t border-slate-200">
   <div class="max-w-5xl mx-auto px-6">
    
   <!-- Feedback -->
