@@ -77,8 +77,7 @@ author_profile: false
  .tailwind-wrap { box-sizing: border-box; }
   
  .tailwind-wrap h1, .tailwind-wrap h2, .tailwind-wrap h3, 
- .tailwind
--wrap p, .tailwind-wrap a, .tailwind-wrap span, 
+ .tailwind-wrap p, .tailwind-wrap a, .tailwind-wrap span, 
  .tailwind-wrap div, .tailwind-wrap strong { 
   font-family: 'Inter', sans-serif !important; 
  }
@@ -168,47 +167,49 @@ author_profile: false
   overflow: hidden !important;
  }
  .grid-card:hover {
-  transform: translateY(-5px) !important;
+  transform: translateY(-6px) !important;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
   border-color: #cbd5e1 !important;
  }
   
- /* Premium 2-Tone Image Wrapper */
+ /* TOP: White background so JPG white boxes vanish seamlessly */
  .grid-card .img-wrapper {
-  background-color: #f8fafc !important; /* Soft slate background */
+  background-color: #ffffff !important; 
   padding: 2.5rem 2rem 1.5rem 2rem !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
  }
 
- /* Shrink images to perfect icon size */
+ /* Images made larger */
  .grid-card img { 
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important; 
   width: auto !important; 
-  height: 120px !important; /* Locks height to a small size */
-  max-height: 120px !important;
+  height: 160px !important; /* Increased from 120px */
+  max-height: 160px !important;
   object-fit: contain !important; 
   display: block !important; 
   margin: 0 auto !important;
  }
- .grid-card:hover img { transform: scale(1.08) !important; }
+ .grid-card:hover img { transform: scale(1.06) !important; }
 
- /* Content Section */
+ /* BOTTOM: Soft gray background, centered text */
  .grid-card .content-wrapper {
-  padding: 1.75rem !important;
+  padding: 1.5rem 1.5rem 2rem 1.5rem !important;
   display: flex !important;
   flex-direction: column !important;
+  align-items: center !important; /* Horizontally centers content */
   flex-grow: 1 !important;
-  background-color: #ffffff !important;
-  text-align: left !important; /* Editorial alignment */
+  background-color: #f8fafc !important; /* Premium soft slate gray */
+  text-align: center !important; /* Centers the text */
+  border-top: 1px solid #f1f5f9 !important;
  }
 
  .grid-card .card-title {
   font-size: 19px !important;
   font-weight: 700 !important;
   color: #0f172a !important; /* Dark slate */
-  margin: 0 0 8px 0 !important;
+  margin: 0 0 10px 0 !important;
   border: none !important;
   transition: color 0.3s ease !important;
   line-height: 1.3 !important;
@@ -216,26 +217,32 @@ author_profile: false
  .grid-card:hover .card-title { color: #2563eb !important; }
  
  .grid-card .card-description {
-  font-size: 15px !important;
+  font-size: 14px !important;
   line-height: 1.6 !important;
-  color: #64748b !important; /* Highly legible slate */
+  color: #475569 !important; /* Highly legible slate */
   margin: 0 !important;
   font-weight: 400 !important;
   flex-grow: 1 !important;
  }
 
- /* NIHR-inspired bottom corner arrow */
+ /* Centered circular premium action icon */
  .grid-card .action-arrow {
   margin-top: 1.5rem !important;
   display: flex !important;
-  justify-content: flex-end !important;
-  color: #cbd5e1 !important; /* Light slate default */
-  font-size: 16px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  background-color: #e2e8f0 !important; /* Subtle gray circle */
+  color: #64748b !important; 
+  font-size: 14px !important;
   transition: all 0.3s ease !important;
  }
  .grid-card:hover .action-arrow {
-  color: #2563eb !important; /* Blue on hover */
-  transform: translateX(6px) !important; /* Slides slightly right */
+  background-color: #2563eb !important; /* Pops to blue */
+  color: #ffffff !important; /* White arrow */
+  transform: scale(1.1) !important; /* Slight grow effect */
  }
 
  /* === NOTICE CARDS (Updated to match border radius) === */
@@ -341,8 +348,8 @@ author_profile: false
    <a href="https://shabeer-syed.github.io/acesinehrs/research/" style="color: #1d4ed8 !important; font-weight: 600 !important; text-decoration: underline !important; text-underline-offset: 4px !important; font-size: 16px !important;">See publications here</a>
   </section>
 
-  <!-- Grid Cards Section (Revamped Premium Design) -->
-  <section class="max-w-6xl mx-auto px-6 pb-16">
+  <!-- Grid Cards Section (Reduced max-width to max-w-5xl to make cards slightly tighter/smaller) -->
+  <section class="max-w-5xl mx-auto px-6 pb-16">
    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
      
     <a href="https://shabeer-syed.github.io/acesinehrs/about/" class="grid-card group">
