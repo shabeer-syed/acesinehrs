@@ -300,7 +300,7 @@ author_profile: false
 
     <a href="https://shabeer-syed.github.io/acesinehrs/ACE-domains/" class="grid-card group">
      <div class="relative overflow-hidden bg-white">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/home%20view%20domain%20download%20small.png" alt="Domains" style="margin: 0 !important;">
+      <img src="images/view domains indicators no text.png" alt="Domains" style="margin: 0 !important;">
      </div>
      <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
       <h3 class="card-title">ACE Domains</h3>
