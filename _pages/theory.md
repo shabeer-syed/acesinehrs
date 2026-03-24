@@ -116,12 +116,12 @@ author_profile: false
      </h3>
     </div>
     <div class="p-6 md:p-8">
-     <p class="text-slate-700 mb-6">The initial ACEs predominately referred to domains of adversity in the home environment. They are typically categorised into three main groups:</p>
+     <p class="content-text">The initial ACEs predominately referred to domains of adversity in the home environment. They are typically categorised into three main groups:</p>
      
      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
        <h4 class="text-blue-800 font-bold mb-3 flex items-center"><i class="fas fa-child mr-2 text-blue-500"></i> Abuse</h4>
-       <ul class="text-sm text-slate-600 space-y-2 list-disc pl-4">
+       <ul class="space-y-2 list-disc pl-4" style="font-size: 17px !important; color: #475569 !important;">
         <li>Psychological abuse</li>
         <li>Physical abuse</li>
         <li>Sexual abuse</li>
@@ -129,7 +129,7 @@ author_profile: false
       </div>
       <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
        <h4 class="text-emerald-800 font-bold mb-3 flex items-center"><i class="fas fa-house-damage mr-2 text-emerald-500"></i> Dysfunction</h4>
-       <ul class="text-sm text-slate-600 space-y-2 list-disc pl-4">
+       <ul class="space-y-2 list-disc pl-4" style="font-size: 17px !important; color: #475569 !important;">
         <li>Substance abuse</li>
         <li>Mental illness</li>
         <li>Domestic violence</li>
@@ -139,7 +139,7 @@ author_profile: false
       </div>
       <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
        <h4 class="text-rose-800 font-bold mb-3 flex items-center"><i class="fas fa-user-times mr-2 text-rose-500"></i> Neglect</h4>
-       <ul class="text-sm text-slate-600 space-y-2 list-disc pl-4">
+       <ul class="space-y-2 list-disc pl-4" style="font-size: 17px !important; color: #475569 !important;">
         <li>Physical neglect</li>
         <li>Emotional neglect</li>
        </ul>
@@ -193,7 +193,7 @@ author_profile: false
       <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3"><i class="fas fa-city text-lg"></i></div>
       Society & community level
      </h3>
-     <p class="text-slate-600 text-sm leading-relaxed mb-0">Social determinants of health encompass socioeconomic conditions that shape health outcomes for individuals, families and communities. Children with ACEs are more likely to grow up in environments where raising a family and coping with everyday challenges is harder. Families may live in communities with high unemployment and a lack of local resources for families, with parents having to travel long distances to work, or family members may be more likely to suffer from health problems that make it difficult to work.</p>
+     <p class="content-text" style="margin-bottom: 0 !important;">Social determinants of health encompass socioeconomic conditions that shape health outcomes for individuals, families and communities. Children with ACEs are more likely to grow up in environments where raising a family and coping with everyday challenges is harder. Families may live in communities with high unemployment and a lack of local resources for families, with parents having to travel long distances to work, or family members may be more likely to suffer from health problems that make it difficult to work.</p>
     </div>
 
     <!-- Arrow connecting the ecological levels -->
@@ -213,30 +213,32 @@ author_profile: false
       <!-- Attachment -->
       <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
        <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-link text-emerald-500 mr-2"></i> Attachment and learning theory</h4>
-       <p class="text-slate-600 text-sm leading-relaxed mb-0">Social risk factors can negatively influence carers' ability to respond, such as being available and responsive to a child's attachment cues. Children with ACEs may be more likely to develop insecure attachments from reduced caregiving responses of emotional validation (e.g., "my pain matters") and reduced experiences of healthy parental modelling of emotion regulation. This can also mean a child loses friends and the support of adults and misses out on opportunities to grow social support networks.</p>
+       <p class="content-text" style="margin-bottom: 0 !important;">Social risk factors can negatively influence carers' ability to respond, such as being available and responsive to a child's attachment cues. Children with ACEs may be more likely to develop insecure attachments from reduced caregiving responses of emotional validation (e.g., "my pain matters") and reduced experiences of healthy parental modelling of emotion regulation. This can also mean a child loses friends and the support of adults and misses out on opportunities to grow social support networks.</p>
       </div>
 
       <!-- Life Course -->
       <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
        <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-road text-emerald-500 mr-2"></i> Life-course approach</h4>
-       <p class="text-slate-600 text-sm leading-relaxed mb-0">Taken together, the model views ACEs as a complex social phenomenon and considers families as resilient and constantly striving to cope using different strategies and resources at hand. The model helps separate the <em>adverse experience</em> from the <em>adverse stress</em> response, overcoming previous limitations of reverse causality when looking at long-term outcomes. We consider ACEs recorded at the family level amenable to service intervention and relevant to EHRs.</p>
+       <p class="content-text" style="margin-bottom: 0 !important;">Taken together, the model views ACEs as a complex social phenomenon and considers families as resilient and constantly striving to cope using different strategies and resources at hand. The model helps separate the <em>adverse experience</em> from the <em>adverse stress</em> response, overcoming previous limitations of reverse causality when looking at long-term outcomes. We consider ACEs recorded at the family level amenable to service intervention and relevant to EHRs.</p>
       </div>
       
       <!-- Cognitive & Behavioural (Full Width inside grid) -->
       <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 lg:col-span-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
        <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-brain text-emerald-500 mr-2"></i> Cognitive and behavioural theories</h4>
-       <p class="text-slate-600 text-sm leading-relaxed mb-4">
-        People cope with stress and perceived threats using various survival strategies—such as avoidance, escape, or fighting—to minimise negative consequences. Children who grow up in dangerous, unpredictable, or highly stressful environments are more likely to perceive the world as unsafe and doubt their ability to manage challenges. To cope, children may develop cognitive biases towards threats, suppress their emotions, and avoid situations they fear will cause distress (aligning with <a href="https://psycnet.apa.org/record/1986-15090-001" target="_blank" class="text-blue-600 hover:underline">theories on emotional processing</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/10402694/" target="_blank" class="text-blue-600 hover:underline">selective attention and overestimation of threat</a>). 
+       
+       <p class="content-text">
+        People cope with stress and perceived threats using various survival strategies—such as avoidance, escape, or fighting—to minimise negative consequences. Children who grow up in dangerous, unpredictable, or highly stressful environments are more likely to perceive the world as unsafe and doubt their ability to manage challenges. To cope, children may develop cognitive biases towards threats, suppress their emotions, and avoid situations they fear will cause distress (aligning with <a href="https://psycnet.apa.org/record/1986-15090-001" target="_blank" class="text-blue-600 hover:underline">theories on emotional processing</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/10402694/" target="_blank" class="text-blue-600 hover:underline">selective attention and overestimation of threat</a>).
        </p>
-       <p class="text-slate-600 text-sm leading-relaxed mb-4">
+       <p class="content-text">
         While these coping mechanisms hold functional value and provide a short-term sense of safety, they can increase the long-term risk of health problems. First, these strategies overemphasise threats, creating a heightened state of alert that becomes difficult to "turn off" even in safer, normative environments where the behaviours are no longer effective. These children have a smaller window of tolerance to stress and perceived threat. Second, survival responses like avoidance, withdrawal, or reactive hostility prevent opportunities for new learning and the development of balanced cognitive appraisals (such as realising, "I can cope"). As these children grow, their trauma responses and behaviour can drive peers away, stripping them of protective social networks and increasing their vulnerability. This creates a maintenance cycle of stress <a href="https://doi.org/10.1111/jcpp.12713" target="_blank" class="text-blue-600 hover:underline">(4)</a>, <a href="https://doi.org/10.1016/j.chiabu.2016.08.003" target="_blank" class="text-blue-600 hover:underline">(5)</a>.
        </p>
-       <p class="text-slate-600 text-sm leading-relaxed mb-4">
-        For some families, these social risk factors and coping responses are carried over across generations as children become parents themselves. Whilst strategies are perceived as logical at the moment, over time, they can leave families in a cycle that perpetuates stress. As underlying stress increases, caregivers and children have fewer resources to cope and regulate responses (e.g. reduced response inhibition/executive functioning) <a href="https://pubmed.ncbi.nlm.nih.gov/12212647/" target="_blank" class="text-blue-600 hover:underline">(6)</a>, increasing the risk of more immediate coping responses to escape or regaining control (e.g. shouting, violence, neglect).
+       <p class="content-text">
+        For some families, these social risk factors and coping responses are carried over across generations as children become parents themselves. Whilst strategies are perceived as logical at the moment, over time, they can leave families in a cycle that perpetuates stress. As underlying stress increases, caregivers and children have fewer resources to cope and regulate responses (e.g. reduced response inhibition/executive functioning) <a href="https://pubmed.ncbi.nlm.nih.gov/12212647/" target="_blank" class="text-blue-600 hover:underline">(6)</a>, increasing the risk of more immediate coping responses to escape or re-gaining control (e.g. shouting, violence, neglect).
        </p>
-       <p class="text-slate-600 text-sm leading-relaxed mb-0">
+       <p class="content-text" style="margin-bottom: 0 !important;">
         Coping responses may vary as a function of the level of need to escape distress and harm, ranging from immediate escape (e.g. violence, substance misuse, abandonment/neglect) to stronger forms of avoidance (e.g. avoiding going out, which reduces social support systems in the longer-term) <a href="https://link.springer.com/article/10.1023/B:JOBA.0000007455.08539.94" target="_blank" class="text-blue-600 hover:underline">(7)</a>.
        </p>
+       
       </div>
      </div>
     </div>
