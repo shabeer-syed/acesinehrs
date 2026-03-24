@@ -77,7 +77,8 @@ author_profile: false
  .tailwind-wrap { box-sizing: border-box; }
   
  .tailwind-wrap h1, .tailwind-wrap h2, .tailwind-wrap h3, 
- .tailwind-wrap p, .tailwind-wrap a, .tailwind-wrap span, 
+ .tailwind
+-wrap p, .tailwind-wrap a, .tailwind-wrap span, 
  .tailwind-wrap div, .tailwind-wrap strong { 
   font-family: 'Inter', sans-serif !important; 
  }
@@ -154,59 +155,104 @@ author_profile: false
   background-color: rgba(15, 23, 42, 0.8) !important;
  }
 
- /* === GRID CARDS & NOTICE CARDS PERFECT HOVER === */
- .grid-card, .notice-card {
+ /* === MODERN PREMIUM GRID CARDS === */
+ .grid-card {
   background-color: #ffffff !important;
-  border-radius: 1rem !important;
+  border-radius: 1.25rem !important; /* Premium softer rounded corners */
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; /* Apple-like smooth bezier */
+  text-decoration: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+ }
+ .grid-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  border-color: #cbd5e1 !important;
+ }
+  
+ /* Premium 2-Tone Image Wrapper */
+ .grid-card .img-wrapper {
+  background-color: #f8fafc !important; /* Soft slate background */
+  padding: 2.5rem 2rem 1.5rem 2rem !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+ }
+
+ /* Shrink images to perfect icon size */
+ .grid-card img { 
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important; 
+  width: auto !important; 
+  height: 120px !important; /* Locks height to a small size */
+  max-height: 120px !important;
+  object-fit: contain !important; 
+  display: block !important; 
+  margin: 0 auto !important;
+ }
+ .grid-card:hover img { transform: scale(1.08) !important; }
+
+ /* Content Section */
+ .grid-card .content-wrapper {
+  padding: 1.75rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  background-color: #ffffff !important;
+  text-align: left !important; /* Editorial alignment */
+ }
+
+ .grid-card .card-title {
+  font-size: 19px !important;
+  font-weight: 700 !important;
+  color: #0f172a !important; /* Dark slate */
+  margin: 0 0 8px 0 !important;
+  border: none !important;
+  transition: color 0.3s ease !important;
+  line-height: 1.3 !important;
+ }
+ .grid-card:hover .card-title { color: #2563eb !important; }
+ 
+ .grid-card .card-description {
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: #64748b !important; /* Highly legible slate */
+  margin: 0 !important;
+  font-weight: 400 !important;
+  flex-grow: 1 !important;
+ }
+
+ /* NIHR-inspired bottom corner arrow */
+ .grid-card .action-arrow {
+  margin-top: 1.5rem !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  color: #cbd5e1 !important; /* Light slate default */
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+ }
+ .grid-card:hover .action-arrow {
+  color: #2563eb !important; /* Blue on hover */
+  transform: translateX(6px) !important; /* Slides slightly right */
+ }
+
+ /* === NOTICE CARDS (Updated to match border radius) === */
+ .notice-card {
+  background-color: #ffffff !important;
+  border-radius: 1.25rem !important;
   border: 1px solid #f3f4f6 !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04) !important;
   transition: all 0.3s ease !important;
   text-decoration: none !important;
- }
- .grid-card {
-  overflow: hidden !important;
-  display: flex !important;
-  flex-direction: column !important;
- }
- .notice-card {
   position: relative !important;
   overflow: hidden !important;
   display: flex !important;
  }
-  
- /* EXACT SAME HOVER EFFECT FOR BOTH */
- .grid-card:hover, .notice-card:hover {
+ .notice-card:hover {
   transform: translateY(-4px) !important;
   box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
- }
-  
- /* Small & tight card settings */
- .grid-card img { 
-  transition: transform 0.5s ease !important; 
-  width: 100% !important; 
-  height: auto !important; 
-  object-fit: contain !important; 
-  display: block !important; 
- }
- .grid-card:hover img { transform: scale(1.05) !important; }
- .grid-card .card-title {
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  color: #1f2937 !important;
-  margin: 0 !important;
-  border: none !important;
-  transition: color 0.3s ease !important;
- }
- .grid-card:hover .card-title { color: #2563eb !important; }
- 
- /* NEW: Description text beneath the card title */
- .grid-card .card-description {
-  font-size: 14px !important;
-  line-height: 22px !important;
-  color: #475569 !important; /* Slate 600 */
-  margin-top: 8px !important;
-  margin-bottom: 0 !important;
-  font-weight: 400 !important;
  }
 
  /* === CONTENT TYPOGRAPHY (EXACT MATCH) === */
@@ -240,7 +286,7 @@ author_profile: false
  <header class="relative bg-slate-700 bg-opacity-50 text-white" 
    style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20home%20page%202024.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;">
    
-  <!-- Banner Content (Precision adjusted to shave exactly 0.5cm off the height) -->
+  <!-- Banner Content -->
   <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-[120px] text-center">
    <h1 class="hero-title drop-shadow-lg">
     Adverse Childhood Experiences (ACEs) <br> 
@@ -283,7 +329,7 @@ author_profile: false
  </section>
 
  <main class="flex-grow">
-  <!-- Intro Section (Maintained max-w-3xl to perfectly match original text wrapping/padding) -->
+  <!-- Intro Section -->
   <section class="max-w-3xl mx-auto px-6 pt-10 pb-12 text-center">
    <h2 class="section-title">What is ACEs in EHRs?</h2>
    <p class="intro-bold-text">
@@ -295,67 +341,73 @@ author_profile: false
    <a href="https://shabeer-syed.github.io/acesinehrs/research/" style="color: #1d4ed8 !important; font-weight: 600 !important; text-decoration: underline !important; text-underline-offset: 4px !important; font-size: 16px !important;">See publications here</a>
   </section>
 
-  <!-- Grid Cards Section -->
+  <!-- Grid Cards Section (Revamped Premium Design) -->
   <section class="max-w-6xl mx-auto px-6 pb-16">
    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
      
     <a href="https://shabeer-syed.github.io/acesinehrs/about/" class="grid-card group">
-     <div class="relative overflow-hidden bg-white">
+     <div class="img-wrapper">
       <img src="images/Introduction aces new no text.png" alt="About" style="margin: 0 !important;">
      </div>
-     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50 flex flex-col">
+     <div class="content-wrapper">
       <h3 class="card-title">About ACEs in EHRs</h3>
       <p class="card-description">Learn about the background, core definitions, and inclusion criteria underpinning the ACEsinEHRs platform.</p>
+      <div class="action-arrow"><i class="fas fa-arrow-right"></i></div>
      </div>
     </a>
 
     <a href="https://shabeer-syed.github.io/acesinehrs/ACE-domains/" class="grid-card group">
-     <div class="relative overflow-hidden bg-white">
+     <div class="img-wrapper">
       <img src="images/view domains indicators no text.png" alt="Domains" style="margin: 0 !important;">
      </div>
-     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50 flex flex-col">
+     <div class="content-wrapper">
       <h3 class="card-title">ACE Domains</h3>
       <p class="card-description">View and download comprehensive lists of selected and excluded indicators, complete with clinical relevance rankings.</p>
+      <div class="action-arrow"><i class="fas fa-arrow-right"></i></div>
      </div>
     </a>
 
     <a href="https://shabeer-syed.github.io/acesinehrs/codelistbrowse/" class="grid-card group">
-     <div class="relative overflow-hidden bg-white">
+     <div class="img-wrapper">
       <img src="images/code lists browse no text.png" alt="Code Lists" style="margin: 0 !important;">
      </div>
-     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50 flex flex-col">
+     <div class="content-wrapper">
       <h3 class="card-title">Browse Code Lists</h3>
       <p class="card-description">Search, filter, and access clinical code lists seamlessly cross-mapped across multiple healthcare coding systems.</p>
+      <div class="action-arrow"><i class="fas fa-arrow-right"></i></div>
      </div>
     </a>
 
     <a href="https://shabeer-syed.github.io/acesinehrs/starterguide/" class="grid-card group">
-     <div class="relative overflow-hidden bg-white">
+     <div class="img-wrapper">
       <img src="images/ACEs implementation and downloads no text.png" alt="Getting Started" style="margin: 0 !important;">
      </div>
-     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50 flex flex-col">
+     <div class="content-wrapper">
       <h3 class="card-title">Starter Guide</h3>
       <p class="card-description">Access our quick-start guide and practical resources for implementing ACE indicators and code lists in your research.</p>
+      <div class="action-arrow"><i class="fas fa-arrow-right"></i></div>
      </div>
     </a>
 
     <a href="https://shabeer-syed.github.io/acesinehrs/theory/" class="grid-card group">
-     <div class="relative overflow-hidden bg-white">
+     <div class="img-wrapper">
       <img src="images/aces in ehrs definitions theories no text.png" alt="Theory" style="margin: 0 !important;">
      </div>
-     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50 flex flex-col">
+     <div class="content-wrapper">
       <h3 class="card-title">Theory & Definitions</h3>
       <p class="card-description">Explore the foundational definitions, theoretical frameworks, and data workflows used to conceptualize ACEs.</p>
+      <div class="action-arrow"><i class="fas fa-arrow-right"></i></div>
      </div>
     </a>
 
     <a href="https://shabeer-syed.github.io/acesinehrs/research/" class="grid-card group">
-     <div class="relative overflow-hidden bg-white">
+     <div class="img-wrapper">
       <img src="images/ACEsinEHRs research outputs no text.png" alt="Research" style="margin: 0 !important;">
      </div>
-     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50 flex flex-col">
+     <div class="content-wrapper">
       <h3 class="card-title">Research Outputs</h3>
       <p class="card-description">Discover published papers, project presentations, and academic outputs generated using the ACEsinEHRs platform.</p>
+      <div class="action-arrow"><i class="fas fa-arrow-right"></i></div>
      </div>
     </a>
    </div>
@@ -366,7 +418,7 @@ author_profile: false
     
    <!-- Notice 1: Update -->
    <a href="https://doi.org/10.1016/S2468-2667(23)00119-6" target="_blank" class="notice-card p-6 items-start gap-4 sm:gap-5">
-    <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #3b82f6 !important; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"></div>
+    <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #3b82f6 !important; border-top-left-radius: 1.25rem; border-bottom-left-radius: 1.25rem;"></div>
     <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mt-0.5" style="background-color: #eff6ff !important; color: #2563eb !important;">
      <i class="fas fa-info-circle text-lg"></i>
     </div>
@@ -380,7 +432,7 @@ author_profile: false
 
    <!-- Notice 2: Core Study -->
    <a href="https://doi.org/10.1016/S2589-7500(22)00061-9" target="_blank" class="notice-card p-6 items-start gap-4 sm:gap-5">
-    <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #3b82f6 !important; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"></div>
+    <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #3b82f6 !important; border-top-left-radius: 1.25rem; border-bottom-left-radius: 1.25rem;"></div>
     <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mt-0.5" style="background-color: #eff6ff !important; color: #2563eb !important;">
      <i class="fas fa-book-medical text-lg"></i>
     </div>
@@ -394,7 +446,7 @@ author_profile: false
 
    <!-- Notice 3: Red Citation Warning -->
    <a href="https://doi.org/10.1016/S2589-7500(22)00061-9" target="_blank" class="notice-card p-6 items-start gap-4 sm:gap-5">
-    <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #ef4444 !important; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"></div>
+    <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #ef4444 !important; border-top-left-radius: 1.25rem; border-bottom-left-radius: 1.25rem;"></div>
     <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mt-0.5" style="background-color: #fef2f2 !important; color: #ef4444 !important;">
      <i class="fas fa-exclamation-triangle text-lg"></i>
     </div>
@@ -409,7 +461,7 @@ author_profile: false
 
    <!-- Notice 4: Red Disclaimer -->
    <div class="notice-card p-6 items-center gap-4 sm:gap-5" style="cursor: default !important;">
-    <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #ef4444 !important; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"></div>
+    <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #ef4444 !important; border-top-left-radius: 1.25rem; border-bottom-left-radius: 1.25rem;"></div>
     <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full" style="background-color: #fef2f2 !important; color: #ef4444 !important;">
      <i class="fas fa-shield-alt text-lg"></i>
     </div>
