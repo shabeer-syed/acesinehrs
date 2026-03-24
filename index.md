@@ -21,7 +21,7 @@ author_profile: false
 <style>
   /* === FIX THE MENU & LOGO === */
   .masthead__inner-wrap .site-logo img {
-    max-height: 24px !important; /* Safety net: but uploading a smaller logo is best! */
+    max-height: 24px !important; 
     width: auto !important;
   }
   .masthead__menu-item a {
@@ -43,27 +43,53 @@ author_profile: false
     margin-left: -50vw;
     margin-right: -50vw;
     background-color: #f9fafb !important; /* Exact bg-gray-50 tint */
+    margin-bottom: 0 !important;
+    padding-bottom: 5rem !important;
   }
-  #main { padding-top: 0 !important; }
+  
+  /* Remove Jekyll's forced padding/margins that cause the white gap */
+  #main { 
+    padding-top: 0 !important; 
+    padding-bottom: 0 !important; 
+    margin-bottom: 0 !important; 
+  }
+
+  /* === OVERRIDE JEKYLL FOOTER TO MATCH HTML DESIGN === */
+  .page__footer {
+    background-color: #0f172a !important; /* Slate 900 */
+    color: #94a3b8 !important; /* Slate 400 */
+    margin-top: 0 !important; /* Eliminates the white gap! */
+    padding: 3rem 0 !important;
+    border-top: none !important;
+  }
+  .page__footer a {
+    color: #cbd5e1 !important;
+    text-decoration: none !important;
+  }
+  .page__footer a:hover {
+    color: #ffffff !important;
+  }
+  .page__footer-copyright {
+    color: #64748b !important;
+  }
 
   /* === PROTECT TAILWIND FROM JEKYLL === */
   .tailwind-wrap { box-sizing: border-box; }
   
-  /* Apply font only to text tags so we don't break <i> icons! */
   .tailwind-wrap h1, .tailwind-wrap h2, .tailwind-wrap h3, 
   .tailwind-wrap p, .tailwind-wrap a, .tailwind-wrap span, 
   .tailwind-wrap div, .tailwind-wrap strong { 
     font-family: 'Inter', sans-serif !important; 
   }
   
-  /* Remove Jekyll link underlines */
-  .tailwind-wrap a { 
+  /* Reset link styles BUT ignore the buttons so we don't break borders! */
+  .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.grid-card) { 
     border-bottom: none !important; 
     text-decoration: none !important; 
     box-shadow: none !important; 
   }
 
-  /* === HERO TYPOGRAPHY EXACT MATCH === */
+  /* === HERO TYPOGRAPHY === */
   .hero-title {
     font-size: 48px !important;
     line-height: 48px !important;
@@ -72,7 +98,6 @@ author_profile: false
     margin-bottom: 24px !important;
     border: none !important;
   }
-  
   .hero-subtitle {
     font-size: 20px !important;
     line-height: 28px !important;
@@ -81,19 +106,21 @@ author_profile: false
     margin-bottom: 32px !important;
   }
 
-  /* === BUTTON STYLES EXACT MATCH === */
+  /* === EXACT MATCH BUTTONS === */
   .btn-primary {
     background-color: #ffffff !important;
-    color: rgb(30, 41, 59) !important; /* #1e293b */
+    color: rgb(30, 41, 59) !important;
     font-size: 18px !important;
     line-height: 28px !important;
     font-weight: 600 !important;
-    padding: 16px 32px !important;
+    padding: 12px 32px !important;
     border-radius: 9999px !important;
     display: inline-flex !important;
     align-items: center !important;
+    border: none !important;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
     transition: all 0.3s ease !important;
+    text-decoration: none !important;
   }
   .btn-primary:hover {
     transform: translateY(-2px) !important;
@@ -105,9 +132,9 @@ author_profile: false
   }
 
   .btn-secondary {
-    background-color: rgba(15, 23, 42, 0.6) !important;
+    background-color: rgba(15, 23, 42, 0.4) !important; 
     border: 1px solid #60a5fa !important;
-    color: rgb(255, 255, 255) !important; /* #ffffff */
+    color: rgb(255, 255, 255) !important;
     font-size: 14px !important;
     line-height: 20px !important;
     font-weight: 500 !important;
@@ -115,16 +142,51 @@ author_profile: false
     border-radius: 9999px !important;
     display: inline-flex !important;
     align-items: center !important;
-    backdrop-filter: blur(4px) !important;
+    box-sizing: border-box !important; 
     transition: all 0.3s ease !important;
+    text-decoration: none !important;
   }
   .btn-secondary:hover {
     background-color: rgba(15, 23, 42, 0.8) !important;
   }
 
+  /* === GRID CARDS WITH PERFECT HOVER === */
+  .grid-card {
+    background-color: #ffffff !important;
+    border-radius: 1rem !important;
+    border: 1px solid #f3f4f6 !important;
+    overflow: hidden !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-decoration: none !important;
+  }
+  .grid-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  }
+  .grid-card img {
+    transition: transform 0.5s ease !important;
+  }
+  .grid-card:hover img {
+    transform: scale(1.05) !important;
+  }
+  .grid-card .card-title {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    margin: 0 !important;
+    border: none !important;
+    transition: color 0.3s ease !important;
+  }
+  /* TEXT TURNS BLUE ON HOVER */
+  .grid-card:hover .card-title {
+    color: #2563eb !important; 
+  }
+
   /* === CONTENT TYPOGRAPHY === */
-  .section-title { font-size: 30px !important; font-weight: 700 !important; color: #1e293b !important; margin-bottom: 24px !important; border: none !important; }
-  .card-title { font-size: 20px !important; font-weight: 700 !important; color: #1f2937 !important; margin: 0 !important; border: none !important; }
+  .section-title { font-size: 30px !important; font-weight: 700 !important; color: #1e293b !important; margin-bottom: 20px !important; border: none !important; }
   .section-text { font-size: 18px !important; line-height: 28px !important; margin-bottom: 24px !important; }
 </style>
 
@@ -163,8 +225,8 @@ author_profile: false
     </div>
   </header>
 
-  <!-- Logos Section -->
-  <section class="bg-white border-b border-gray-200 py-8 shadow-sm relative z-10">
+  <!-- Logos Section (Reduced Padding to py-5) -->
+  <section class="bg-white border-b border-gray-200 py-5 shadow-sm relative z-10">
     <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500">
       <a href="https://www.ucl.ac.uk/children-policy-research/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20CPRU%20logo%20aces%20in%20ehrs%20footer.png" alt="NIHR CPRU" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
       <a href="https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/ucl%20ich%20logo%20aces%20in%20ehrs.png" alt="UCL ICH" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
@@ -178,8 +240,8 @@ author_profile: false
   </section>
 
   <main class="flex-grow">
-    <!-- Intro Section -->
-    <section class="max-w-4xl mx-auto px-6 py-16 text-center">
+    <!-- Intro Section (Pulled up tighter using pt-10 pb-12) -->
+    <section class="max-w-4xl mx-auto px-6 pt-10 pb-12 text-center">
       <h2 class="section-title">What is ACEs in EHRs?</h2>
       <p class="section-text">
         <strong style="color: #1e3a8a !important; font-weight: 600 !important;">The ACEsinEHRs platform provides validated domains, indicators, and code lists to identify adverse childhood experiences (ACEs) in routinely collected de-identified electronic health records of parents and children before and after birth.</strong>
@@ -190,60 +252,61 @@ author_profile: false
       <a href="https://shabeer-syed.github.io/acesinehrs/research/" style="color: #1d4ed8 !important; font-weight: 600 !important; text-decoration: underline !important; text-underline-offset: 4px !important; font-size: 16px !important;">See publications here</a>
     </section>
 
-    <!-- Grid Cards Section -->
+    <!-- Grid Cards Section (With specific grid-card class) -->
     <section class="max-w-6xl mx-auto px-6 pb-16">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <a href="https://shabeer-syed.github.io/acesinehrs/about/" class="group bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden transition duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-          <div class="h-48 overflow-hidden bg-gray-100">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/Introduction%20aces%20small.png" alt="About" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" style="margin: 0 !important;">
+        
+        <a href="https://shabeer-syed.github.io/acesinehrs/about/" class="grid-card group">
+          <div class="h-48 overflow-hidden bg-gray-100 relative">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/Introduction%20aces%20small.png" alt="About" class="w-full h-full object-cover" style="margin: 0 !important;">
           </div>
-          <div class="p-6 flex-grow">
-            <h3 class="card-title group-hover:text-blue-600 transition">About ACEs in EHRs</h3>
-          </div>
-        </a>
-
-        <a href="https://shabeer-syed.github.io/acesinehrs/ACE-domains/" class="group bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden transition duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-          <div class="h-48 overflow-hidden bg-gray-100">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/home%20view%20domain%20download%20small.png" alt="Domains" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" style="margin: 0 !important;">
-          </div>
-          <div class="p-6 flex-grow">
-            <h3 class="card-title group-hover:text-blue-600 transition">ACE Domains</h3>
+          <div class="p-6 flex-grow bg-white z-10">
+            <h3 class="card-title">About ACEs in EHRs</h3>
           </div>
         </a>
 
-        <a href="https://shabeer-syed.github.io/acesinehrs/codelistbrowse/" class="group bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden transition duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-          <div class="h-48 overflow-hidden bg-gray-100">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png" alt="Code Lists" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" style="margin: 0 !important;">
+        <a href="https://shabeer-syed.github.io/acesinehrs/ACE-domains/" class="grid-card group">
+          <div class="h-48 overflow-hidden bg-gray-100 relative">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/home%20view%20domain%20download%20small.png" alt="Domains" class="w-full h-full object-cover" style="margin: 0 !important;">
           </div>
-          <div class="p-6 flex-grow">
-            <h3 class="card-title group-hover:text-blue-600 transition">Browse Code Lists</h3>
-          </div>
-        </a>
-
-        <a href="https://shabeer-syed.github.io/acesinehrs/starterguide/" class="group bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden transition duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-          <div class="h-48 overflow-hidden bg-gray-100">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png" alt="Getting Started" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" style="margin: 0 !important;">
-          </div>
-          <div class="p-6 flex-grow">
-            <h3 class="card-title group-hover:text-blue-600 transition">Starter Guide</h3>
+          <div class="p-6 flex-grow bg-white z-10">
+            <h3 class="card-title">ACE Domains</h3>
           </div>
         </a>
 
-        <a href="https://shabeer-syed.github.io/acesinehrs/theory/" class="group bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden transition duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-          <div class="h-48 overflow-hidden bg-gray-100">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/aces%20in%20ehrs%20definitions%20theories.png" alt="Theory" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" style="margin: 0 !important;">
+        <a href="https://shabeer-syed.github.io/acesinehrs/codelistbrowse/" class="grid-card group">
+          <div class="h-48 overflow-hidden bg-gray-100 relative">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png" alt="Code Lists" class="w-full h-full object-cover" style="margin: 0 !important;">
           </div>
-          <div class="p-6 flex-grow">
-            <h3 class="card-title group-hover:text-blue-600 transition">Theory & Definitions</h3>
+          <div class="p-6 flex-grow bg-white z-10">
+            <h3 class="card-title">Browse Code Lists</h3>
           </div>
         </a>
 
-        <a href="https://shabeer-syed.github.io/acesinehrs/research/" class="group bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden transition duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-          <div class="h-48 overflow-hidden bg-gray-100">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/ACEsinEHRs%20research%20outputs%20small.png" alt="Research" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" style="margin: 0 !important;">
+        <a href="https://shabeer-syed.github.io/acesinehrs/starterguide/" class="grid-card group">
+          <div class="h-48 overflow-hidden bg-gray-100 relative">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png" alt="Getting Started" class="w-full h-full object-cover" style="margin: 0 !important;">
           </div>
-          <div class="p-6 flex-grow">
-            <h3 class="card-title group-hover:text-blue-600 transition">Research Outputs</h3>
+          <div class="p-6 flex-grow bg-white z-10">
+            <h3 class="card-title">Starter Guide</h3>
+          </div>
+        </a>
+
+        <a href="https://shabeer-syed.github.io/acesinehrs/theory/" class="grid-card group">
+          <div class="h-48 overflow-hidden bg-gray-100 relative">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/aces%20in%20ehrs%20definitions%20theories.png" alt="Theory" class="w-full h-full object-cover" style="margin: 0 !important;">
+          </div>
+          <div class="p-6 flex-grow bg-white z-10">
+            <h3 class="card-title">Theory & Definitions</h3>
+          </div>
+        </a>
+
+        <a href="https://shabeer-syed.github.io/acesinehrs/research/" class="grid-card group">
+          <div class="h-48 overflow-hidden bg-gray-100 relative">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/ACEsinEHRs%20research%20outputs%20small.png" alt="Research" class="w-full h-full object-cover" style="margin: 0 !important;">
+          </div>
+          <div class="p-6 flex-grow bg-white z-10">
+            <h3 class="card-title">Research Outputs</h3>
           </div>
         </a>
       </div>
