@@ -3,7 +3,6 @@ layout: splash
 permalink: /about/
 title: "About ACEs in EHRs"
 author_profile: false
-
 ---
 
 <!-- 1. Load Tailwind Safely -->
@@ -237,7 +236,7 @@ author_profile: false
    </p>
   </div>
    
-  <!-- Infographic (From Light Version) -->
+  <!-- Infographic -->
   <div class="flex justify-center md:justify-end">
    <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 shadow-sm w-full max-w-md">
    <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20definitions%20theories.png" alt="ACEs Infographic" class="w-full h-auto object-contain rounded-xl mix-blend-multiply" style="margin: 0 !important;">
@@ -259,7 +258,7 @@ author_profile: false
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
    
-   <!-- Mission Card (Streamlined from Light version) -->
+   <!-- Mission Card -->
    <div class="feature-card h-full">
    <div class="flex items-center mb-6">
     <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4 shrink-0">
@@ -291,7 +290,7 @@ author_profile: false
    </ul>
    </div>
 
-   <!-- Achievements Card (Streamlined from Light version) -->
+   <!-- Achievements Card -->
    <div class="feature-card h-full relative overflow-hidden">
    <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-50 rounded-full opacity-50 pointer-events-none"></div>
     
@@ -318,7 +317,7 @@ author_profile: false
    </div>
   </div>
 
-  <!-- WHO & Open Source Callout (Kept from Heavy) -->
+  <!-- WHO & Open Source Callout -->
   <div class="bg-white rounded-xl p-6 md:p-8 border border-slate-200 shadow-sm max-w-4xl mx-auto mt-8 flex items-start gap-5">
    <i class="fas fa-globe-europe text-3xl text-blue-500 mt-1 shrink-0"></i>
    <div>
@@ -334,34 +333,8 @@ author_profile: false
   </div>
  </section>
 
- <!-- Section 3: Advantages & Data Linkage -->
- <section class="max-w-6xl mx-auto px-6 py-10 md:py-16">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-   
-  <!-- Text Content (Streamlined from Light version) -->
-  <div>
-   <h2 class="content-heading">Advantages of EHRs</h2>
-   <p class="content-text">
-   ACEs are preventable. However, many are exceptionally difficult to identify during childhood. Most traditional studies rely on adults' retrospective self-reports many years after the event, which are prone to memory biases. This "time gap" means data is collected too late to prevent the immediate harmful effects.
-   </p>
-   <p class="content-text">
-   Conversely, EHRs provide prospectively recorded data from hospitals, GPs, and other health systems as events naturally happen during routine care. This information becomes available shortly after a healthcare presentation and poses far less burden on patients than completing complex research surveys. 
-   </p>
-   <p class="content-text font-semibold text-slate-800">
-   Crucially, in the UK, mothers' and children's EHRs can be securely linked across services. This unique capability allows researchers to seamlessly measure ACEs before pregnancy, throughout childhood, and intergenerationally.
-   </p>
-  </div>
-
-  <!-- Responsive UCL Iframe Player (Kept from Heavy) -->
-  <div class="relative w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-900" style="padding-top: 63.33%;">
-   <iframe class="absolute top-0 left-0 w-full h-full" src="https://mediacentral.ucl.ac.uk//Player?autostart=n&fullscreen=y&width=0&height=0&videoId=CFGDc8DB&quality=hi&captions=y&chapterId=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-
-  </div>
- </section>
-
- <!-- Section 4: Impact & Real-World Results -->
- <section class="bg-slate-900 text-white py-12 md:py-16 my-8">
+ <!-- Section 3: Impact & Real-World Results -->
+ <section class="bg-slate-900 text-white py-12 md:py-16">
   <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
    
   <!-- Left Column: Impact Text -->
@@ -470,7 +443,33 @@ author_profile: false
   </div>
  </section>
 
- <!-- Section 5: Limitations (Streamlined from Light version) -->
+ <!-- Section 4: Advantages & Data Linkage -->
+ <section class="max-w-6xl mx-auto px-6 py-10 md:py-16">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+   
+  <!-- Text Content -->
+  <div>
+   <h2 class="content-heading">Advantages of EHRs</h2>
+   <p class="content-text">
+   ACEs are preventable. However, many are exceptionally difficult to identify during childhood. Most traditional studies rely on adults' retrospective self-reports many years after the event, which are prone to memory biases. This "time gap" means data is collected too late to prevent the immediate harmful effects.
+   </p>
+   <p class="content-text">
+   Conversely, EHRs provide prospectively recorded data from hospitals, GPs, and other health systems as events naturally happen during routine care. This information becomes available shortly after a healthcare presentation and poses far less burden on patients than completing complex research surveys. 
+   </p>
+   <p class="content-text font-semibold text-slate-800">
+   Crucially, in the UK, mothers' and children's EHRs can be securely linked across services. This unique capability allows researchers to seamlessly measure ACEs before pregnancy, throughout childhood, and intergenerationally.
+   </p>
+  </div>
+
+  <!-- Responsive UCL Iframe Player -->
+  <div class="relative w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-900" style="padding-top: 63.33%;">
+   <iframe class="absolute top-0 left-0 w-full h-full" src="https://mediacentral.ucl.ac.uk//Player?autostart=n&fullscreen=y&width=0&height=0&videoId=CFGDc8DB&quality=hi&captions=y&chapterId=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  </div>
+ </section>
+
+ <!-- Section 5: Limitations -->
  <section class="max-w-4xl mx-auto px-6 py-10 md:py-12">
   <div class="bg-white rounded-2xl border border-rose-100 shadow-md overflow-hidden relative">
   <div class="h-2 w-full bg-rose-500 absolute top-0 left-0"></div>
@@ -554,38 +553,50 @@ author_profile: false
 
  <!-- Section 7: Feedback & Acknowledgements -->
  <section class="bg-slate-50 py-12 md:py-16 border-t border-slate-200 mt-10">
-  <div class="max-w-4xl mx-auto px-6">
+  <div class="max-w-5xl mx-auto px-6">
    
-  <div class="mb-12 text-center">
+  <!-- Feedback -->
+  <div class="mb-12 text-center max-w-3xl mx-auto">
    <h3 class="text-2xl font-bold text-slate-900 mb-4 border-none">Feedback & Contributions</h3>
    <p class="text-slate-600 mb-4">We are continuously working to make this platform and the ACE indicators easier to access and implement. This website is open source and hosted via Github.</p>
    <p class="text-slate-600 font-medium">If you would like to contribute or provide feedback, please get in touch at <a href="mailto:s.syed.16@ucl.ac.uk" class="text-blue-600 hover:underline">s.syed.16@ucl.ac.uk</a></p>
   </div>
 
-  <!-- Acknowledgements Fine Print -->
-  <div class="text-xs text-slate-500 leading-relaxed space-y-4">
-   <p><strong class="text-slate-700">Acknowledgements:</strong> This webpage accompanies a study that uses patients' data collected by the NHS as part of their care <span class="text-blue-600 font-semibold">#DataSavesLives</span>. We are extremely grateful to the generosity of the patients and their families, along with the participating GP practices and NHS staff, for their ongoing contribution to mental health and family violence research.</p>
-   <p>The ACEs studies (protocols: 19_162R, 21_000587) were approved by the MHRA (UK) Independent Scientific Advisory Committee, under Section 251 (NHS Social Care Act 2006). The studies were carried out as part of the CALIBER© resource. CALIBER, led by the UCL Institute of Health Informatics, is a research resource providing validated electronic health record phenotyping algorithms and tools for national structured data sources.</p>
-   <p>The ACEs studies are based on data from the CPRD obtained under licence from the UK Medicines and Healthcare products Regulatory Agency. The interpretation and conclusions contained in this study are those of the author/s alone. HES, and ONS are under copyright © (2020), re-used with the permission of The Health & Social Care Information Centre. All rights reserved.</p>
-   <p>The research was supported in part by the NIHR Great Ormond Street Hospital Biomedical Research Centre. This research benefits from and contributes to the NIHR Children and Families Policy Research Unit, but was not commissioned by the National Institute for Health Research (NIHR) Policy Research Programme. The views expressed are those of the author(s) and not necessarily those of the NHS, the National Institute for Health Research, the Department of Health and Social Care or its arm's length bodies, and other Government Departments.</p>
+  <hr class="border-slate-200 my-12">
+
+  <!-- Acknowledgements -->
+  <div class="mb-10">
+   <h3 class="text-2xl font-bold text-slate-900 mb-8 border-none text-center">Acknowledgements</h3>
+   
+   <!-- Banner of Logos -->
+   <div class="flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500 mb-10">
+    <a href="https://www.ucl.ac.uk/children-policy-research/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20CPRU%20logo%20aces%20in%20ehrs%20footer.png" alt="NIHR CPRU" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
+    <a href="https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/ucl%20ich%20logo%20aces%20in%20ehrs.png" alt="UCL ICH" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
+    <a href="https://www.ox.ac.uk/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/university%20of%20oxford%20logo%20aces%20in%20ehrs.png" alt="Oxford" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
+    <a href="https://www.gosh.nhs.uk/our-research/our-research-infrastructure/nihr-great-ormond-street-hospital-brc/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20Great%20ormond%20street%20hospital%20biomedical%20research%20centre%20logo%20aces%20in%20ehrs.png" alt="NIHR GOSH BRC" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
+    <a href="https://www.gosh.nhs.uk/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/GOSH%20logo%20aces%20in%20ehrs.png" alt="GOSH" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
+    <a href="https://www.bristol.ac.uk/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/University%20of%20bristol%20logo%20aces%20in%20ehrs.png" alt="Bristol" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
+    <a href="https://www.hdruk.ac.uk/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/hdruk%20logo%20aces%20in%20ehrs.png" alt="HDRUK" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
+    <a href="https://www.ucl.ac.uk/health-informatics/research/caliber" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/caliber%20ucl%20logo%20aces%20in%20ehrs.png" alt="Caliber UCL" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
+   </div>
+
+   <!-- Acknowledgements Fine Print -->
+   <div class="text-xs text-slate-500 leading-relaxed space-y-4 max-w-4xl mx-auto">
+    <p><strong class="text-slate-700">Study Support:</strong> This webpage accompanies a study that uses patients' data collected by the NHS as part of their care <span class="text-blue-600 font-semibold">#DataSavesLives</span>. We are extremely grateful to the generosity of the patients and their families, along with the participating GP practices and NHS staff, for their ongoing contribution to mental health and family violence research.</p>
+    <p>The ACEs studies (protocols: 19_162R, 21_000587) were approved by the MHRA (UK) Independent Scientific Advisory Committee, under Section 251 (NHS Social Care Act 2006). The studies were carried out as part of the CALIBER© resource. CALIBER, led by the UCL Institute of Health Informatics, is a research resource providing validated electronic health record phenotyping algorithms and tools for national structured data sources.</p>
+    <p>The ACEs studies are based on data from the CPRD obtained under licence from the UK Medicines and Healthcare products Regulatory Agency. The interpretation and conclusions contained in this study are those of the author/s alone. HES, and ONS are under copyright © (2020), re-used with the permission of The Health & Social Care Information Centre. All rights reserved.</p>
+    <p>The research was supported in part by the NIHR Great Ormond Street Hospital Biomedical Research Centre. This research benefits from and contributes to the NIHR Children and Families Policy Research Unit, but was not commissioned by the National Institute for Health Research (NIHR) Policy Research Programme. The views expressed are those of the author(s) and not necessarily those of the NHS, the National Institute for Health Research, the Department of Health and Social Care or its arm's length bodies, and other Government Departments.</p>
+   </div>
   </div>
 
-  <!-- Mandatory Citation Warnings -->
-  <div class="mt-8 space-y-3">
+  <!-- Mandatory Citation Warning -->
+  <div class="mt-8 max-w-4xl mx-auto">
    <div class="notice-card p-4 items-center gap-3">
-   <div class="absolute left-0 top-0 bottom-0 w-1 bg-rose-500 rounded-l-xl"></div>
-   <div class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-rose-50 text-rose-500"><i class="fas fa-exclamation-circle text-sm"></i></div>
-   <div class="flex-1 text-sm text-slate-700">
-    <strong class="text-slate-900">Users must cite</strong> the www.ACEsinEHRs.com library and the accompanying Lancet Digital Health publication in all research outputs, presentations and reports.
-   </div>
-   </div>
-
-   <div class="notice-card p-4 items-center gap-3">
-   <div class="absolute left-0 top-0 bottom-0 w-1 bg-amber-500 rounded-l-xl"></div>
-   <div class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-amber-50 text-amber-500"><i class="fas fa-shield-alt text-sm"></i></div>
-   <div class="flex-1 text-sm text-slate-700">
-    <strong class="text-slate-900">Not for clinical use.</strong> The information is not intended for clinical decision making. No data is stored in this library.
-   </div>
+    <div class="absolute left-0 top-0 bottom-0 w-1 bg-rose-500 rounded-l-xl"></div>
+    <div class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-rose-50 text-rose-500"><i class="fas fa-exclamation-circle text-sm"></i></div>
+    <div class="flex-1 text-sm text-slate-700">
+     <strong class="text-slate-900">Users must cite</strong> the www.ACEsinEHRs.com library and the accompanying Lancet Digital Health publication in all research outputs, presentations and reports.
+    </div>
    </div>
   </div>
    
