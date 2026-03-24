@@ -1,159 +1,409 @@
 ---
 layout: splash
-title: "About"
 permalink: /about/
-header:
-  overlay_color: "#074667"
-  overlay_image: /images/ACEsinEHRs about page overlay.jpg
-  cta_label: 
-  cta_url: 
-  caption:
-excerpt: 'The ACEsinEHRs platform provides validated domains, indicators and code lists to identify adverse childhood experiences (ACEs) in routinely collected non-identifiable electronic healthcare records of parents and children before and after birth.<br /> <small><a> This website is continuously updated and provide information on definitions, concepts, measures, and standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets. </a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
-
+title: "About ACEs in EHRs"
+author_profile: false
 ---
 
-{% include base_path %}
+<!-- 1. Load Tailwind Safely -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+ tailwind.config = {
+  corePlugins: { preflight: false } 
+ }
+</script>
 
-# Adverse childhood experiences
-<img style="float: right;" src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/smaller%20overview%20aces.png">
-Adverse childhood experiences (ACEs) are potentially traumatic, [violent](https://apps.who.int/violence-info/), or neglectful experiences in childhood that can have a profound impact on a child's health and development [(1)](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext). Examples of recorded ACEs include child maltreatment (e.g. child protection), exposure to domestic violence, and growing up with a parent with a mental health or substance use problem (e.g. trio of vulnerabilities).[(2)](https://www.cdc.gov/violenceprevention/aces/fastfact.html).
+<!-- 2. Load Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-# ACEs in EHRs
-Electronic health records (EHRs) contain a wealth of routinely collected information about patients, including their medical history, medications, and social history.
-ACEs in EHRs is a platform that provide clinically relevant and validated indicators to identify ACEs in EHRs. These indicators are based on several studies ([3](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext), [4](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667%2823%2900119-6/fulltext), [5](https://adc.bmj.com/content/106/1/44.full)) and inspired by the Adverse Childhood Experiences (ACE) Study, which is a landmark study that found that exposure to ACEs is associated with a wide range of health problems, including chronic diseases, mental health problems, and substance abuse.
+<!-- 3. The "Iron Shield" Overrides (Exact match to Home Page) -->
+<style>
+ /* === FIX THE MENU & LOGO === */
+ .masthead__inner-wrap .site-logo img {
+  max-height: 24px !important; 
+  width: auto !important;
+ }
+ .masthead__menu-item a {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #6b7280 !important;
+ }
+ .masthead__menu-item a:hover {
+  color: #111827 !important;
+ }
 
-If you are a researcher or healthcare provider, you can use the ACE indicators to identify ACEs at a population level to identify at-risk groups to inform allocation of resources, monitoring of trends and outcomes. Clinically, ACE indicators in EHRs have the potential to support streamlining workflows, assisting decision-making, and enhancing patient care. ACEs in EHRs is a valuable tool that can help to improve the health and well-being of children and families.
+ /* === BREAK OUT TO FULL SCREEN === */
+ .full-bleed {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #ffffff !important; 
+  margin-bottom: 0 !important;
+  padding-bottom: 5rem !important;
+ }
+  
+ /* Remove Jekyll's forced padding/margins */
+ #main { 
+  padding-top: 0 !important; 
+  padding-bottom: 0 !important; 
+  margin-bottom: 0 !important; 
+ }
 
-We hope you will join us in our mission to improve the lives of children and families affected by ACEs.
+ /* === OVERRIDE JEKYLL FOOTER TO MATCH HTML DESIGN === */
+ .page__footer {
+  background-color: #0f172a !important; /* Slate 900 */
+  color: #94a3b8 !important; /* Slate 400 */
+  margin-top: 0 !important; 
+  padding: 3rem 0 !important;
+  border-top: none !important;
+ }
+ .page__footer a {
+  color: #cbd5e1 !important;
+  text-decoration: none !important;
+ }
+ .page__footer a:hover {
+  color: #ffffff !important;
+ }
+ .page__footer-copyright {
+  color: #64748b !important;
+ }
 
-# Mission statement and aims
-EHRs are routinely collected and readily available. However, there are significant challenges in using EHRs to inform practice and policy about ACEs. EHRs are often stored in different databases, organisations, and coding systems. This can result in a complex and messy web of information that requires specialist data management skills to use. Another challenge is that there was no previously well-defined and validated set of indicators for identifying ACEs in EHRs using both parent and child data.
+ /* === PROTECT TAILWIND FROM JEKYLL === */
+ .tailwind-wrap { box-sizing: border-box; }
+  
+ .tailwind-wrap h1, .tailwind-wrap h2, .tailwind-wrap h3, 
+ .tailwind-wrap p, .tailwind-wrap a, .tailwind-wrap span, 
+ .tailwind-wrap div, .tailwind-wrap li, .tailwind-wrap ul { 
+  font-family: 'Inter', sans-serif !important; 
+ }
+  
+ /* Reset link styles BUT ignore buttons/cards */
+ .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.feature-card) { 
+  border-bottom: none !important; 
+  text-decoration: none !important; 
+  box-shadow: none !important; 
+ }
 
-**Our mission is:**
-> * To improve the health of families and young people by using electronic health records (EHRs) to identify and measure adverse childhood experiences (ACEs).
-> * To advocate for early support and family centred services for families with ACEs.
-> * To work with researchers, professionals, and policymakers to promote trauma-informed care and public health policies that support families affected by ACEs.
-> * To enhance the methodological standard, accessibility, and utility of data-driven think-family approaches to study adversity using EHRs.
-> * To provide a validated system to measure intervenable and clinically relevant ACEs with the potential to support trauma-informed data-driven research, public health, policy, and health care.
-> * To continuously develop the www.ACEsinEHRs.com platform to improve resources for researchers, professionals, and policymakers.
+ /* === HERO TYPOGRAPHY === */
+ .hero-title {
+  font-size: 48px !important;
+  line-height: 1.1 !important;
+  font-weight: 700 !important;
+  color: rgb(255, 255, 255) !important;
+  margin-bottom: 24px !important;
+  border: none !important;
+ }
+ .hero-subtitle {
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+  font-weight: 400 !important;
+  color: rgb(241, 245, 249) !important;
+  margin-bottom: 0 !important;
+  max-width: 820px !important; 
+  margin-left: auto !important;
+  margin-right: auto !important;
+ }
 
-**Achievements - ACEs in EHRs:**
-> * Developed common data standards and coding systems for ACEs in EHRs.
-> * Developed  data management tools and resources to make ACE indicators in EHR more accessible and usable.
-> * Developed methods for linking and studying EHR data across families.
-> * Supporting research on the use of EHRs to identify and measure ACEs.
-> * Disseminated research findings to healthcare providers, policymakers, and the public.
-
-All platform activity is publicly logged. All code for data management and analysis is shared under open licenses.
-
-We follow WHO's [Minsk Declaration](https://apps.who.int/iris/bitstream/handle/10665/349095/WHO-EURO-2015-4177-43936-61918-eng.pdf?sequence=1) and view ACEs through a *"life-course"* and a *"trauma-informed"* lens. This approach acknowledges that risk is not static and depends on the interaction of multiple unmeasured promotive, protective, and risk factors throughout generations and people's lives.
-
-# Advantages of EHRs
-[ACEs are preventable](https://www.cdc.gov/violenceprevention/pdf/preventingACES.pdf). However, many ACEs are very difficult to identify in childhood. Most studies rely on adults’ self-reports many years after the event and are prone to memory biases. This “time gap” also means data is collected when it’s more challenging to prevent the harmful effects of ACEs.
-EHRs are routinely collected data from hospitals, GPs and other health systems. The data is often recorded "prospectively" or as  events happen and as part of routine care. The information is available shortly after a health care presentation and poses less burden to patients than completing a traditional research survey. All data is made non-identifiable and stored securely (watch the video below to find out more). EHRs also provide researchers with larger samples than self-report or interview-based samples.
-
-In the UK, mothers' and children's EHRs can be linked across services. The ability to link mothers' and children's records allows for measuring ACEs before pregnancy, throughout childhood and intergenerationally.
-
-<iframe width="600" height="380" src="https://mediacentral.ucl.ac.uk//Player?autostart=n&fullscreen=y&width=0&height=0&videoId=CFGDc8DB&quality=hi&captions=y&chapterId=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-# Limitations of ACEs in EHRs 
-It is essential to note:
-* There are methodological challenges in accurately linking children's EHRs to their fathers' EHRs (a long-standing issue of anonymised secondary and primary care data), meaning ACEs in EHR research have primarily been based on linked maternal and child data.
-* Only identify experiences recorded in semi-structured coded non-identifiable data. Many children might have concerns recorded only in free-text data that
-is not captured in coded data.
-* Do not represent an exhaustive list of all possible adversities experienced by children
-* Cannot make inferences about an individual. This means that indicators cannot be used to guide individual-level clinical decision-making, including screening, diagnosing or labelling children or families to be at risk of harm.
-* Do not assume children with ACEs will develop poorer health outcomes. Most children with ACEs **do not** develop poorer health outcomes and show resilience.
-* Do not account for different protective factors and contexts
-
-The limitations of the "ACE" concept have been summarised [elsewhere](https://www.cambridge.org/core/journals/social-policy-and-society/article/introduction-adverse-childhood-experiences-aces-implications-and-challenges/A1E57E800C74406E84F93AB9F8CB125D).
-
-## Team & Contributors 
-This project was developed by a range of researchers and clinical experts:
-
-* Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate (s.syed.16@ucl.ac.uk), 1,2 
-* Dr Arturo Gonzalez-Izquierdo, Senior Research Associate, 1, 3
-* Dr Linda Wijlaars, Senior Research Associate, 1, 3
-* Dr Janice Allister, General Practitioner, 5
-* Dr Leah Li,  Associate Professor in Medical Statistics and Epidemiology, 1
-* Dr Matthew Jay, Senior Research Associate, 1
-* Prof Gene Feder, Professor of Primary Care, 4
-* Dr Louise Johns, Consultant Academic Clinical Psychologist
-* Dr Richard F Howard, Consultant in Anaesthesia and Pain Medicine, 6,7
-* Prof Ruth Gilbert, Professor of Clinical Epidemiology (r.gilbert@ucl.ac.uk), 1,3
-* Dr Rebecca E Lacey, Associate Professor of Life Course Epidemiology
-* Prof Laura D Howe, Professor of Epidemiology and Medical Statistics
-* Prof Jessica Deighton, Professor in Child Mental Health and Wellbeing
-* Dr Rachel Ashwick, Clinical Psychologist
-* Mr Muhammad Qummer ul Arfeen, Data Manager, UCL Institute of Health Informatics,  3
-
-*1. UCL Great Ormond Street Institute of Child Health, Population, Policy and Practice, Faculty of Population Health Sciences London WC1N 1EH*
-*2. Oxford Institute of Clinical Psychology Training and Research, University of Oxford, Oxford, UK*
-*3. Institute of Health Informatics and Health Data Research UK, University College London*
-*4. Bristol Medical School, Bristol Population Health Science Institute Centre for Academic Primary Care, University of Bristol*
-*5. General Practitioner, NHS*
-*6. Paediatric Pain Research Group, University College London Great Ormond Street, Institute of Child Health, London WC1N 1EH*
-*7. Department of Anaesthesia & Pain Medicine, Great Ormond Street Hospital for Children NHS Foundation Trust*
-
-## Feedback & Contributions
-We are continuously working to make this platform and the ACE indicators easier to access and implement. All platform activity is publicly logged. All code for data management and analysis is shared under open licenses. This website is open source and hosted via [Github](https://github.com/shabeer-syed/ACEs/tree/gh-pages).
+ /* === PREMIUM CONTENT STYLES === */
+ .content-heading {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  color: #0f172a !important; /* Slate 900 */
+  margin-bottom: 1.5rem !important;
+  letter-spacing: -0.025em !important;
+  border-bottom: none !important;
+ }
+ .content-text {
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+  color: #475569 !important; /* Slate 600 */
+  margin-bottom: 1.5rem !important;
+ }
  
-If you would like to contribute or provide feedback, please get in touch at s.syed.16@ucl.ac.uk
+ /* Modern Info Cards */
+ .feature-card {
+  background: #ffffff !important;
+  border-radius: 1.25rem !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+  padding: 2.5rem !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+ }
+ .feature-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+ }
 
-# Acknowledgements
-This webpage accompanies a study that uses patients' data collected by the NHS as part of their care [#DataSavesLives](https://twitter.com/hashtag/DataSavesLives?src=hashtag_click). We are extremely grateful to the generosity of the patients and their families, along with the participating GP practices and NHS staff, for their ongoing contribution to mental health and family violence research.
-The ACEs studies (protocols: [19_162R](https://www.cprd.com/protocol/adverse-childhood-experiences-incidence-prevalence-determinants-and-outcomes-across-primary), [21_000587](https://cprd.com/protocol/intimate-partner-violence-parental-substance-misuse-and-mental-health-parents-children)) were approved by the MHRA (UK) Independent Scientific Advisory Committee, under Section 251 (NHS Social Care Act 2006).
-The ACEs studies were carried out as part of the CALIBER© resource. [CALIBER, led by the UCL Institute of Health Informatics](https://academic.oup.com/jamia/article/26/12/1545/5536916), is a research resource providing validated electronic health record phenotyping algorithms and tools for national structured data sources.
-The ACEs studies are based on data from the CPRD obtained under licence from the UK Medicines and Healthcare products Regulatory Agency. The interpretation and conclusions contained in this study are those of the author/s alone HES, and ONS are under copyright © (2020), re-used with the permission of The Health & Social Care Information Centre. All rights reserved.
-The research was supported in part by the NIHR Great Ormond Street Hospital Biomedical Research Centre.
-This research benefits from and contributes to the [NIHR Children and Families Policy Research Unit](https://www.ucl.ac.uk/children-policy-research/), but was not commissioned by the National Institute for Health Research (NIHR) Policy Research Programme. The views expressed are those of the author(s) and not necessarily those of the NHS, the National Institute for Health Research, the Department of Health and Social Care or its arm's length bodies, and other Government Departments.
+ /* Clean Lists */
+ .custom-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+ }
+ .custom-list li {
+  position: relative !important;
+  padding-left: 2.5rem !important;
+  margin-bottom: 1.25rem !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  color: #334155 !important;
+ }
+ .custom-list li svg {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0.25rem !important;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+ }
+</style>
 
-## More information about ACEs 
-For further information about research on ACEs and their uses, please visit:
+<!-- 4. The HTML Content -->
+<div class="full-bleed tailwind-wrap text-gray-800 antialiased flex flex-col min-h-screen">
 
-* [CDC](https://www.cdc.gov/violenceprevention/aces/index.html)
-* [British Psychological Society](https://www.bps.org.uk/sites/www.bps.org.uk/files/Policy/Policy%20-%20Files/Briefing%20Paper%20-%20Adverse%20Childhood%20Experiences.pdf)
-* [World Health Organization - Prevention of Violence](https://www.who.int/teams/social-determinants-of-health/violence-prevention)
-* [University College London reports](https://www.instituteofhealthequity.org/resources-reports/the-impact-of-adverse-experiences-in-the-home-on-children-and-young-people)
-* [The BMJ](https://www.bmj.com/content/371/bmj.m3048)
+ <!-- Hero Section -->
+ <header class="relative bg-slate-800 bg-opacity-60 text-white" 
+   style="background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; background-blend-mode: multiply;">
+   
+  <!-- Banner Content -->
+  <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-[120px] text-center">
+   <h1 class="hero-title drop-shadow-lg">
+    About ACEs <span style="color: #bfdbfe !important;">in EHRs</span>
+   </h1>
+   <p class="hero-subtitle drop-shadow-md">
+    The ACEsinEHRs platform provides validated domains, indicators, and code lists to identify adverse childhood experiences (ACEs) in routinely collected, non-identifiable electronic healthcare records of parents and children before and after birth.
+   </p>
+  </div>
+ </header>
 
-The Lancet research collections:
-* [Violence](https://www.thelancet.com/series/violence)
-* [Child maltreatment](https://www.thelancet.com/series/child-maltreatment)
-* [Violence against women and girls](https://www.thelancet.com/series/violence-against-women-and-girls)
-* [Family planning](https://www.thelancet.com/series/family-planning)
-* [Women’s and Children’s Health in Conflict Settings](https://www.thelancet.com/series/conflict-health)
+ <main class="flex-grow">
+  
+  <!-- Section 1: Introduction & Infographic -->
+  <section class="max-w-6xl mx-auto px-6 py-20 md:py-24">
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <div>
+     <h2 class="content-heading">Adverse childhood experiences</h2>
+     <p class="content-text">
+      Adverse childhood experiences (ACEs) are potentially traumatic, violent, or neglectful events in childhood that can have a profound impact on a child’s health and development <a href="#" class="text-blue-600 hover:underline">(1)</a>. 
+     </p>
+     <p class="content-text">
+      Examples of recorded ACEs include child maltreatment (e.g., child protection interventions), exposure to domestic violence, and growing up with a parent experiencing mental health or substance use problems (often referred to as the 'trio of vulnerabilities') <a href="#" class="text-blue-600 hover:underline">(2)</a>.
+     </p>
+     
+     <h2 class="content-heading mt-12">ACEs in EHRs</h2>
+     <p class="content-text">
+      Electronic health records (EHRs) contain a wealth of routinely collected information about patients, including their medical, medication, and social histories. ACEsinEHRs is a platform that provides clinically relevant and validated indicators to identify these experiences within EHRs. 
+     </p>
+     <p class="content-text">
+      These indicators are based on several rigorous studies <a href="#" class="text-blue-600 hover:underline">(3, 4, 5)</a> and inspired by the landmark Adverse Childhood Experiences (ACE) Study, which established that exposure to ACEs is strongly associated with a wide range of adverse health outcomes.
+     </p>
+    </div>
+    
+    <!-- Infographic Placeholder (Replace src with your actual infographic URL) -->
+    <div class="flex justify-center md:justify-end">
+     <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 shadow-sm w-full max-w-md">
+      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20definitions%20theories.png" alt="ACEs Infographic" class="w-full h-auto object-contain rounded-xl mix-blend-multiply" style="margin: 0 !important;">
+     </div>
+    </div>
+   </div>
+  </section>
 
-JAMA research collections:
-* [Violence](https://jamanetwork.com/collections/5957/violence)
-* [Child maltreatment](https://jamanetwork.com/collections/5555/child-abuse)
-* [Intimate partner violence](https://jamanetwork.com/collections/5711/intimate-partner-violence)
+  <!-- Section 2: Mission & Achievements (Premium Gray Background) -->
+  <section class="bg-slate-50 py-20 md:py-24 border-y border-slate-200">
+   <div class="max-w-6xl mx-auto px-6">
+    
+    <div class="max-w-3xl mx-auto text-center mb-16">
+     <h2 class="content-heading">Mission statement and aims</h2>
+     <p class="content-text">
+      EHRs are routinely collected and readily available. However, there are significant challenges in using them to inform practice and policy. EHRs are often stored across disparate databases, organisations, and coding systems, resulting in a complex web of data requiring specialist management skills. Prior to this platform, there was no validated set of indicators for identifying ACEs in EHRs using both parent and child data.
+     </p>
+    </div>
 
-### Policy implications related to ACEs:
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+     
+     <!-- Mission Card -->
+     <div class="feature-card">
+      <div class="flex items-center mb-6">
+       <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+        <i class="fas fa-bullseye text-xl"></i>
+       </div>
+       <h3 class="text-2xl font-bold text-slate-900 m-0 border-none">Our Mission</h3>
+      </div>
+      <ul class="custom-list">
+       <li>
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        To improve the health of families and young people by utilising electronic health records (EHRs) to identify and measure ACEs.
+       </li>
+       <li>
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        To advocate for early support and family-centred services for families affected by ACEs.
+       </li>
+       <li>
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        To collaborate with researchers, professionals, and policymakers to promote trauma-informed care and public health policies.
+       </li>
+       <li>
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        To enhance the methodological standards, accessibility, and utility of data-driven, 'think-family' approaches.
+       </li>
+       <li>
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        To continuously develop the ACEsinEHRs platform to improve resources for the wider clinical and research community.
+       </li>
+      </ul>
+     </div>
 
-Public Health England/Wales:
+     <!-- Achievements Card -->
+     <div class="feature-card relative overflow-hidden">
+      <!-- Decorative background element -->
+      <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-50 rounded-full opacity-50 pointer-events-none"></div>
+      
+      <div class="flex items-center mb-6 relative z-10">
+       <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 mr-4">
+        <i class="fas fa-trophy text-xl"></i>
+       </div>
+       <h3 class="text-2xl font-bold text-slate-900 m-0 border-none">Key Achievements</h3>
+      </div>
+      <ul class="custom-list relative z-10">
+       <li>
+        <svg class="text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        Developed common data standards and comprehensive coding systems for tracking ACEs in EHRs.
+       </li>
+       <li>
+        <svg class="text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        Created sophisticated data management tools and resources, making ACE indicators readily accessible and usable for external researchers.
+       </li>
+       <li>
+        <svg class="text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        Pioneered methodologies for reliably linking and studying EHR data across multiple family members.
+       </li>
+      </ul>
+     </div>
 
-* [Vulnerability in childhood: a public health informed approach](https://www.gov.uk/government/publications/vulnerability-in-childhood-a-public-health-informed-approach)
-* [Promoting children and young people’s emotional health and wellbeing](https://www.gov.uk/government/publications/promoting-children-and-young-peoples-emotional-health-and-wellbeing)
-* [Public Health Wales](https://phw.nhs.wales/topics/adverse-childhood-experiences/)
-* [Public Health Wales study on routine screening of ACEs at GP practices](https://www.wales.nhs.uk/sitesplus/documents/888/Asking%20about%20ACEs%20in%20General%20Practice.pdf)
+    </div>
+   </div>
+  </section>
 
+  <!-- Section 3: Advantages & Data Linkage -->
+  <section class="max-w-6xl mx-auto px-6 py-20 md:py-24">
+   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    
+    <!-- Text Content -->
+    <div>
+     <h2 class="content-heading">Advantages of EHRs</h2>
+     <p class="content-text">
+      ACEs are preventable. However, many are exceptionally difficult to identify during childhood. Most traditional studies rely on adults' retrospective self-reports many years after the event, which are prone to memory biases. This "time gap" means data is collected too late to prevent the immediate harmful effects.
+     </p>
+     <p class="content-text">
+      Conversely, EHRs provide prospectively recorded data from hospitals, GPs, and other health systems as events naturally happen during routine care. This information becomes available shortly after a healthcare presentation and poses far less burden on patients than completing complex research surveys. 
+     </p>
+     <p class="content-text font-semibold text-slate-800">
+      Crucially, in the UK, mothers' and children's EHRs can be securely linked across services. This unique capability allows researchers to seamlessly measure ACEs before pregnancy, throughout childhood, and intergenerationally.
+     </p>
+    </div>
 
-UK, HM Government or Home office:
+    <!-- Video Placeholder -->
+    <div class="relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer border border-slate-200">
+     <!-- Replace this image with your actual video thumbnail -->
+     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Data Linkage Video" class="w-full h-auto object-cover opacity-90 transition-opacity group-hover:opacity-100" style="margin: 0 !important;">
+     
+     <div class="absolute inset-0 bg-slate-900 bg-opacity-30 flex flex-col items-center justify-center transition-all group-hover:bg-opacity-20">
+      <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110">
+       <i class="fas fa-play text-blue-600 text-2xl ml-1"></i>
+      </div>
+      <span class="mt-4 text-white font-bold text-lg tracking-wide drop-shadow-md">DATA LINKAGE</span>
+     </div>
+    </div>
 
-* [Working together to safeguard children: statutory framework](https://www.gov.uk/government/publications/working-together-to-safeguard-children--2)
-* [Domestic Abuse Act 2021](https://www.gov.uk/government/publications/domestic-abuse-bill-2020-factsheets)
+   </div>
+  </section>
 
-World Health Organization:
+  <!-- Section 4: Limitations (Warning Style) -->
+  <section class="max-w-4xl mx-auto px-6 pb-20">
+   <div class="bg-white rounded-2xl border border-rose-100 shadow-md overflow-hidden relative">
+    <!-- Red top accent line -->
+    <div class="h-2 w-full bg-rose-500 absolute top-0 left-0"></div>
+    
+    <div class="p-8 md:p-10">
+     <div class="flex items-center mb-8">
+      <div class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 mr-4">
+       <i class="fas fa-exclamation-triangle text-xl"></i>
+      </div>
+      <h2 class="text-2xl font-bold text-slate-900 m-0 border-none">Limitations of ACEs in EHRs</h2>
+     </div>
+     
+     <p class="content-text font-medium text-slate-800 mb-6">When utilising this library, it is essential to note:</p>
+     
+     <ul class="custom-list">
+      <li>
+       <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+       There are methodological challenges in accurately linking children’s EHRs to their fathers’ EHRs (a long-standing limitation of anonymised secondary and primary care data). Consequently, current ACE research using EHRs has primarily been based on linked maternal and child data.
+      </li>
+      <li>
+       <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+       The platform only identifies experiences recorded in semi-structured, coded non-identifiable data. Serious concerns recorded solely in free-text clinical notes will not be captured by these coded indicators.
+      </li>
+      <li>
+       <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+       The indicators do not represent an exhaustive list of all possible adversities experienced by children.
+      </li>
+      <li>
+       <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+       <strong>Cannot make inferences about an individual.</strong> This means that indicators cannot be used to guide individual-level clinical decision-making, including screening, diagnosing, or labelling children or families to be at risk of harm.
+      </li>
+      <li>
+       <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+       Do not assume children with ACEs will inevitably develop poorer health outcomes. Most children with ACEs <strong>do not</strong> develop poorer health outcomes and show profound resilience.
+      </li>
+      <li>
+       <svg class="text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+       These records do not account for mitigating protective factors and wider systemic contexts.
+      </li>
+     </ul>
+    </div>
+   </div>
+  </section>
 
-* [INSPIRE: Seven strategies for Ending Violence Against Children](https://www.who.int/publications/i/item/inspire-seven-strategies-for-ending-violence-against-children)
+  <!-- Section 5: Team & Contributors -->
+  <section class="max-w-4xl mx-auto px-6 pb-24">
+   <h2 class="content-heading text-center">Team & Contributors</h2>
+   <p class="content-text text-center mb-10">This project was developed by a diverse range of researchers and clinical experts:</p>
+   
+   <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm mb-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-slate-700 font-medium text-sm">
+     <div>Dr Shabeer Syed <sup>1, 2</sup></div>
+     <div>Dr Arturo Gonzalez-Izquierdo <sup>1, 3</sup></div>
+     <div>Dr Linda Wijlaars <sup>1, 3</sup></div>
+     <div>Dr Janice Allister <sup>5</sup></div>
+     <div>Dr Leah Li <sup>1</sup></div>
+     <div>Dr Matthew Jay <sup>1</sup></div>
+     <div>Prof Gene Feder <sup>4</sup></div>
+     <div>Dr Louise Johns</div>
+     <div>Dr Richard F Howard <sup>6, 7</sup></div>
+     <div>Prof Ruth Gilbert <sup>1, 3</sup></div>
+     <div>Dr Rebecca E Lacey</div>
+     <div>Prof Laura D Howe</div>
+     <div>Prof Jessica Deighton</div>
+     <div>Dr Rachel Ashwick</div>
+     <div>Mr Muhammad Qummer ul Arfeen <sup>3</sup></div>
+    </div>
+   </div>
 
-<span style="color:red"> Users must cite the www.ACEsinEHRs.com library and the accompanying [Lancet Digital Health publication](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext) in all research outputs, presentations and reports. </span>
-<span style="color:red"> The information is not intended for clinical use. No data is stored in this library.</span>
-<span style="color:white"> Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate </span>
+   <!-- Affiliations Footnotes -->
+   <div class="text-xs text-slate-500 leading-relaxed border-t border-slate-200 pt-6">
+    <p class="mb-2"><strong>1.</strong> UCL Great Ormond Street Institute of Child Health, Population, Policy and Practice, Faculty of Population Health Sciences London WC1N 1EH.</p>
+    <p class="mb-2"><strong>2.</strong> Oxford Institute of Clinical Psychology Training and Research, University of Oxford, Oxford, UK.</p>
+    <p class="mb-2"><strong>3.</strong> Institute of Health Informatics and Health Data Research UK, University College London.</p>
+    <p class="mb-2"><strong>4.</strong> Bristol Medical School, Bristol Population Health Science Institute Centre for Academic Primary Care, University of Bristol.</p>
+    <p class="mb-2"><strong>5.</strong> General Practitioner, NHS.</p>
+    <p class="mb-2"><strong>6.</strong> Paediatric Pain Research Group, University College London Great Ormond Street, Institute of Child Health, London WC1N 1EH.</p>
+    <p class="mb-0"><strong>7.</strong> Department of Anaesthesia & Pain Medicine, Great Ormond Street Hospital for Children NHS Foundation Trust.</p>
+   </div>
+  </section>
 
-### [Go back](https://acesinehrs.com/)
-
----
-
-  [![](/images/logos/NIHR CPRU logo aces in ehrs footer.png)](https://www.ucl.ac.uk/children-policy-research/) | [![](/images/logos/ucl ich logo aces in ehrs.png)](https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0) | [![](/images/logos/university of oxford logo aces in ehrs.png)](https://www.ox.ac.uk/) | [![](/images/logos/NIHR Great ormond street hospital biomedical research centre logo aces in ehrs.png)](https://www.gosh.nhs.uk/our-research/our-research-infrastructure/nihr-great-ormond-street-hospital-brc/) | [![](/images/logos/GOSH logo aces in ehrs.png)](https://www.gosh.nhs.uk/) | [![](/images/logos/University of bristol logo aces in ehrs.png)](https://www.bristol.ac.uk/) | [![](/images/logos/hdruk logo aces in ehrs.png)](https://www.hdruk.ac.uk/) | [![](/images/logos/caliber ucl logo aces in ehrs.png)](https://www.ucl.ac.uk/health-informatics/research/caliber) 
+ </main>
+</di
