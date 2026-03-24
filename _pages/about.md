@@ -83,7 +83,7 @@ author_profile: false
  }
   
  /* Reset link styles BUT ignore buttons/cards */
- .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.feature-card):not(.scholar-link):not(.text-blue-600) { 
+ .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.feature-card):not(.scholar-link):not(.text-blue-600):not(.text-blue-400) { 
   border-bottom: none !important; 
   text-decoration: none !important; 
   box-shadow: none !important; 
@@ -392,7 +392,7 @@ author_profile: false
    </div>
 
    <!-- Scrollable Feed -->
-   <div class="scholar-feed max-h-[300px] overflow-y-auto pr-3 space-y-4">
+   <div class="scholar-feed max-h-[300px] overflow-y-auto pr-3 space-y-4 text-slate-800">
     
     <div class="group">
     <h4 class="text-blue-700 font-semibold text-base leading-snug mb-1 group-hover:underline cursor-pointer">Developing machine models predicting childhood mental health issues</h4>
@@ -557,25 +557,25 @@ author_profile: false
   </div>
  </section>
 
- <!-- Section 7: Feedback & Acknowledgements (Light Grey Background) -->
- <section class="bg-slate-50 py-12 md:py-16 border-t border-slate-200">
+ <!-- Section 7: Feedback & Acknowledgements (Dark Background to match Footer) -->
+ <section class="bg-slate-900 py-12 md:py-16 border-t border-slate-800">
   <div class="max-w-5xl mx-auto px-6">
    
   <!-- Feedback -->
   <div class="mb-12 text-center max-w-3xl mx-auto">
-   <h3 class="text-2xl font-bold text-slate-900 mb-4 border-none">Feedback & Contributions</h3>
-   <p class="text-slate-600 mb-4">We are continuously working to make this platform and the ACE indicators easier to access and implement. This website is open source and hosted via Github.</p>
-   <p class="text-slate-600 font-medium">If you would like to contribute or provide feedback, please get in touch at <a href="mailto:s.syed.16@ucl.ac.uk" class="text-blue-600 hover:underline">s.syed.16@ucl.ac.uk</a></p>
+   <h3 class="text-2xl font-bold text-white mb-4 border-none">Feedback & Contributions</h3>
+   <p class="text-slate-300 mb-4">We are continuously working to make this platform and the ACE indicators easier to access and implement. This website is open source and hosted via Github.</p>
+   <p class="text-slate-300 font-medium">If you would like to contribute or provide feedback, please get in touch at <a href="mailto:s.syed.16@ucl.ac.uk" class="text-blue-400 hover:text-blue-300 hover:underline">s.syed.16@ucl.ac.uk</a></p>
   </div>
 
-  <hr class="border-slate-200 my-12">
+  <hr class="border-slate-700 my-12">
 
   <!-- Acknowledgements -->
   <div class="mb-10">
-   <h3 class="text-2xl font-bold text-slate-900 mb-8 border-none text-center">Acknowledgements</h3>
+   <h3 class="text-2xl font-bold text-white mb-8 border-none text-center">Acknowledgements</h3>
    
-   <!-- Banner of Logos -->
-   <div class="flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500 mb-10">
+   <!-- Banner of Logos (Wrapped in a soft white container so dark logos stay visible) -->
+   <div class="bg-slate-50 rounded-2xl p-6 md:p-8 flex flex-wrap justify-center items-center gap-8 opacity-90 grayscale hover:grayscale-0 transition duration-500 mb-10 shadow-inner">
     <a href="https://www.ucl.ac.uk/children-policy-research/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20CPRU%20logo%20aces%20in%20ehrs%20footer.png" alt="NIHR CPRU" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
     <a href="https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/ucl%20ich%20logo%20aces%20in%20ehrs.png" alt="UCL ICH" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
     <a href="https://www.ox.ac.uk/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/university%20of%20oxford%20logo%20aces%20in%20ehrs.png" alt="Oxford" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
@@ -587,8 +587,8 @@ author_profile: false
    </div>
 
    <!-- Acknowledgements Fine Print -->
-   <div class="text-xs text-slate-500 leading-relaxed space-y-4 max-w-4xl mx-auto">
-    <p><strong class="text-slate-700">Study Support:</strong> This webpage accompanies a study that uses patients' data collected by the NHS as part of their care <span class="text-blue-600 font-semibold">#DataSavesLives</span>. We are extremely grateful to the generosity of the patients and their families, along with the participating GP practices and NHS staff, for their ongoing contribution to mental health and family violence research.</p>
+   <div class="text-xs text-slate-400 leading-relaxed space-y-4 max-w-4xl mx-auto">
+    <p><strong class="text-slate-200">Study Support:</strong> This webpage accompanies a study that uses patients' data collected by the NHS as part of their care <span class="text-blue-400 font-semibold">#DataSavesLives</span>. We are extremely grateful to the generosity of the patients and their families, along with the participating GP practices and NHS staff, for their ongoing contribution to mental health and family violence research.</p>
     <p>The ACEs studies (protocols: 19_162R, 21_000587) were approved by the MHRA (UK) Independent Scientific Advisory Committee, under Section 251 (NHS Social Care Act 2006). The studies were carried out as part of the CALIBER© resource. CALIBER, led by the UCL Institute of Health Informatics, is a research resource providing validated electronic health record phenotyping algorithms and tools for national structured data sources.</p>
     <p>The ACEs studies are based on data from the CPRD obtained under licence from the UK Medicines and Healthcare products Regulatory Agency. The interpretation and conclusions contained in this study are those of the author/s alone. HES, and ONS are under copyright © (2020), re-used with the permission of The Health & Social Care Information Centre. All rights reserved.</p>
     <p>The research was supported in part by the NIHR Great Ormond Street Hospital Biomedical Research Centre. This research benefits from and contributes to the NIHR Children and Families Policy Research Unit, but was not commissioned by the National Institute for Health Research (NIHR) Policy Research Programme. The views expressed are those of the author(s) and not necessarily those of the NHS, the National Institute for Health Research, the Department of Health and Social Care or its arm's length bodies, and other Government Departments.</p>
