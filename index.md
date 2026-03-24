@@ -226,12 +226,12 @@ author_profile: false
 <!-- 4. The HTML Content -->
 <div class="full-bleed tailwind-wrap text-gray-800 antialiased flex flex-col min-h-screen">
 
-  <!-- Hero Section (Restored Original py-24 md:py-32 Height) -->
+  <!-- Hero Section (Reduced padding for shorter banner height) -->
   <header class="relative bg-slate-700 bg-opacity-50 text-white" 
       style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20home%20page%202024.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;">
      
     <!-- Banner Content -->
-    <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-32 text-center">
+    <div class="relative z-10 max-w-5xl mx-auto px-6 py-16 md:py-20 text-center">
       <h1 class="hero-title drop-shadow-lg">
         Adverse Childhood Experiences (ACEs) <br> 
         <span style="color: #bfdbfe !important;">in Electronic Health Records</span>
@@ -258,8 +258,8 @@ author_profile: false
     </div>
   </header>
 
-  <!-- Logos Section (Restored Original py-8 spacing) -->
-  <section class="bg-white border-b border-gray-200 py-8 shadow-sm relative z-10">
+  <!-- Logos Section (Reduced vertical padding to py-5 to make the strip shorter) -->
+  <section class="bg-white border-b border-gray-200 py-5 shadow-sm relative z-10">
     <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500">
       <a href="https://www.ucl.ac.uk/children-policy-research/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20CPRU%20logo%20aces%20in%20ehrs%20footer.png" alt="NIHR CPRU" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
       <a href="https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/ucl%20ich%20logo%20aces%20in%20ehrs.png" alt="UCL ICH" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
@@ -273,8 +273,8 @@ author_profile: false
   </section>
 
   <main class="flex-grow">
-    <!-- Intro Section (Restored original max-w-4xl bounding box and py-16 spacing) -->
-    <section class="max-w-4xl mx-auto px-6 py-16 text-center">
+    <!-- Intro Section (Pulled up using pt-10 instead of py-16) -->
+    <section class="max-w-4xl mx-auto px-6 pt-10 pb-12 text-center">
       <h2 class="section-title">What is ACEs in EHRs?</h2>
       <p class="intro-bold-text">
         The ACEsinEHRs platform provides validated domains, indicators, and code lists to identify adverse childhood experiences (ACEs) in routinely collected de-identified electronic health records of parents and children before and after birth.
@@ -285,7 +285,7 @@ author_profile: false
       <a href="https://shabeer-syed.github.io/acesinehrs/research/" style="color: #1d4ed8 !important; font-weight: 600 !important; text-decoration: underline !important; text-underline-offset: 4px !important; font-size: 16px !important;">See publications here</a>
     </section>
 
-    <!-- Grid Cards Section (Tighter layout, Natural Image Heights) -->
+    <!-- Grid Cards Section -->
     <section class="max-w-6xl mx-auto px-6 pb-16">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         
