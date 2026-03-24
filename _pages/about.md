@@ -83,7 +83,7 @@ author_profile: false
  }
   
  /* Reset link styles BUT ignore buttons/cards */
- .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.feature-card) { 
+ .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.feature-card):not(.scholar-link) { 
   border-bottom: none !important; 
   text-decoration: none !important; 
   box-shadow: none !important; 
@@ -114,7 +114,7 @@ author_profile: false
   font-size: 32px !important;
   font-weight: 700 !important;
   color: #0f172a !important; /* Slate 900 */
-  margin-bottom: 1rem !important; /* Tighter gap */
+  margin-bottom: 1rem !important; 
   letter-spacing: -0.025em !important;
   border-bottom: none !important;
  }
@@ -122,7 +122,7 @@ author_profile: false
   font-size: 17px !important;
   line-height: 1.7 !important;
   color: #475569 !important; /* Slate 600 */
-  margin-bottom: 1.25rem !important; /* Tighter gap */
+  margin-bottom: 1.25rem !important; 
  }
  
  /* Modern Info Cards */
@@ -131,7 +131,7 @@ author_profile: false
   border-radius: 1.25rem !important;
   border: 1px solid #e2e8f0 !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
-  padding: 2rem !important; /* Slightly tighter padding inside cards */
+  padding: 2rem !important; 
   transition: transform 0.3s ease, box-shadow 0.3s ease !important;
  }
  .feature-card:hover {
@@ -160,6 +160,22 @@ author_profile: false
   width: 1.25rem !important;
   height: 1.25rem !important;
  }
+
+ /* Scholar Feed Scrollbar */
+ .scholar-feed::-webkit-scrollbar {
+  width: 6px;
+ }
+ .scholar-feed::-webkit-scrollbar-track {
+  background: #f1f5f9; 
+  border-radius: 4px;
+ }
+ .scholar-feed::-webkit-scrollbar-thumb {
+  background: #cbd5e1; 
+  border-radius: 4px;
+ }
+ .scholar-feed::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; 
+ }
 </style>
 
 <!-- 4. The HTML Content -->
@@ -182,7 +198,7 @@ author_profile: false
 
  <main class="flex-grow">
   
-  <!-- Section 1: Introduction & Infographic (Reduced padding for tighter spacing) -->
+  <!-- Section 1: Introduction & Infographic -->
   <section class="max-w-6xl mx-auto px-6 py-10 md:py-16">
    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
     <div>
@@ -216,7 +232,6 @@ author_profile: false
   <section class="bg-slate-50 py-10 md:py-16 border-y border-slate-200">
    <div class="max-w-6xl mx-auto px-6">
     
-    <!-- Tighter margin bottom on the header -->
     <div class="max-w-3xl mx-auto text-center mb-10">
      <h2 class="content-heading">Mission statement and aims</h2>
      <p class="content-text">
@@ -309,23 +324,133 @@ author_profile: false
 
     <!-- REAL WORKING HTML5 VIDEO PLAYER -->
     <div class="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200">
-     
-     <!-- 
-       IMPORTANT: Paste the actual link to your video file inside the src="" below! 
-       (If your video is hosted on YouTube instead, simply delete this entire <video> block and paste your YouTube <iframe> here.)
-     -->
      <video controls class="w-full h-auto" poster="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Data%20linkage%20video%20thumbnail.jpg">
       <source src="YOUR_VIDEO_URL_HERE.mp4" type="video/mp4">
       Your browser does not support the video tag.
      </video>
-     
     </div>
 
    </div>
   </section>
 
+  <!-- NEW SECTION: Impact & Real-World Results (BMJ-Inspired) -->
+  <section class="bg-slate-900 text-white py-16 md:py-20 my-8">
+   <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    
+    <!-- Left Column: Impact Text -->
+    <div class="lg:col-span-5">
+     <h2 class="text-3xl font-bold mb-6 text-white border-none leading-tight">
+      Real-World Impact:<br><span class="text-blue-400">From Research to Results</span>
+     </h2>
+     
+     <div class="flex gap-4 mb-8">
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 flex-1 text-center">
+       <div class="text-2xl font-bold text-white">100+</div>
+       <div class="text-xs text-slate-400 uppercase tracking-wide mt-1">Weekly Global Visits</div>
+      </div>
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 flex-1 text-center">
+       <div class="text-2xl font-bold text-emerald-400">40+</div>
+       <div class="text-xs text-slate-400 uppercase tracking-wide mt-1">Peer-Reviewed Citations</div>
+      </div>
+     </div>
+
+     <p class="text-slate-300 text-base leading-relaxed mb-6">
+      The ACEsinEHRs open-access platform shares essential coding algorithms, tutorials, and theoretical frameworks that have been widely adopted by researchers globally.
+     </p>
+     
+     <div class="space-y-4 text-sm text-slate-300">
+      <div class="flex items-start">
+       <i class="fas fa-check-circle text-blue-400 mt-1 mr-3 text-base"></i>
+       <div>
+        <strong class="text-white">Advancing predictive algorithms:</strong> Our code lists have facilitated the creation of the first externally validated algorithms for identifying child maltreatment in routine care, and developed machine learning models predicting childhood mental health issues.
+       </div>
+      </div>
+      <div class="flex items-start">
+       <i class="fas fa-check-circle text-blue-400 mt-1 mr-3 text-base"></i>
+       <div>
+        <strong class="text-white">Informing population health:</strong> Our family-linkage methodologies actively support evaluating health visiting models for ACE mitigation, optimising ACE screening protocols, and integrating healthcare responses to intimate partner violence.
+       </div>
+      </div>
+     </div>
+    </div>
+
+    <!-- Right Column: Simulated Google Scholar Widget -->
+    <div class="lg:col-span-7">
+     <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
+      
+      <!-- Widget Header -->
+      <div class="flex items-center justify-between border-b border-slate-200 pb-4 mb-4">
+       <div class="flex items-center text-slate-900">
+        <i class="fas fa-graduation-cap text-blue-600 text-2xl mr-3"></i>
+        <h3 class="text-lg font-bold m-0 border-none">Latest Citing Research</h3>
+       </div>
+       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/512px-Google_Scholar_logo.svg.png" alt="Google Scholar" class="h-6">
+      </div>
+
+      <!-- Scrollable Feed -->
+      <div class="scholar-feed max-h-[300px] overflow-y-auto pr-3 space-y-4">
+       
+       <!-- Citation Item -->
+       <div class="group">
+        <h4 class="text-blue-700 font-semibold text-base leading-snug mb-1 group-hover:underline cursor-pointer">Developing machine models predicting childhood mental health issues</h4>
+        <p class="text-emerald-700 text-xs font-medium mb-1">Crowley et al. - <span class="text-slate-500 font-normal">2025</span></p>
+        <p class="text-slate-500 text-sm leading-relaxed line-clamp-2">Utilising ACEsinEHRs indicators to train predictive models identifying risk factors for adolescent psychiatric presentations.</p>
+       </div>
+
+       <!-- Citation Item -->
+       <div class="group">
+        <h4 class="text-blue-700 font-semibold text-base leading-snug mb-1 group-hover:underline cursor-pointer">Analysing maternal vulnerabilities in the family court system</h4>
+        <p class="text-emerald-700 text-xs font-medium mb-1">Ireland et al. - <span class="text-slate-500 font-normal">2024</span></p>
+        <p class="text-slate-500 text-sm leading-relaxed line-clamp-2">A data-driven think-family approach investigating the intersection of domestic adversity and legal interventions.</p>
+       </div>
+
+       <!-- Citation Item -->
+       <div class="group">
+        <h4 class="text-blue-700 font-semibold text-base leading-snug mb-1 group-hover:underline cursor-pointer">Optimising ACE screening in clinical practice</h4>
+        <p class="text-emerald-700 text-xs font-medium mb-1">Danese et al. - <span class="text-slate-500 font-normal">2024</span></p>
+        <p class="text-slate-500 text-sm leading-relaxed line-clamp-2">Evaluating routine care screening protocols against validated electronic health record phenotyping algorithms.</p>
+       </div>
+
+       <!-- Citation Item -->
+       <div class="group">
+        <h4 class="text-blue-700 font-semibold text-base leading-snug mb-1 group-hover:underline cursor-pointer">Integrating healthcare responses to intimate partner violence</h4>
+        <p class="text-emerald-700 text-xs font-medium mb-1">Fanslow - <span class="text-slate-500 font-normal">2023</span></p>
+        <p class="text-slate-500 text-sm leading-relaxed line-clamp-2">Policy integration leveraging linked maternal and child health records to inform population-level interventions.</p>
+       </div>
+
+       <!-- Citation Item -->
+       <div class="group">
+        <h4 class="text-blue-700 font-semibold text-base leading-snug mb-1 group-hover:underline cursor-pointer">Externally validating algorithms for identifying child maltreatment</h4>
+        <p class="text-emerald-700 text-xs font-medium mb-1">John et al. - <span class="text-slate-500 font-normal">2023</span></p>
+        <p class="text-slate-500 text-sm leading-relaxed line-clamp-2">The first external validation of coding algorithms designed to reliably identify safeguarding interventions in routine care.</p>
+       </div>
+       
+       <!-- Citation Item -->
+       <div class="group">
+        <h4 class="text-blue-700 font-semibold text-base leading-snug mb-1 group-hover:underline cursor-pointer">Evaluating health visiting models for ACE mitigation</h4>
+        <p class="text-emerald-700 text-xs font-medium mb-1">Woodman et al. - <span class="text-slate-500 font-normal">2022</span></p>
+        <p class="text-slate-500 text-sm leading-relaxed line-clamp-2">Utilising standard data classifications to assess the efficacy of early-years public health visiting interventions.</p>
+       </div>
+
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 pt-4 border-t border-slate-100">
+       <a href="https://scholar.google.co.uk/scholar?cites=17825954885314129992&as_sdt=2005&sciodt=0,5&hl=en" target="_blank" class="scholar-link flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-3 px-4 rounded-lg flex items-center justify-center transition-colors">
+        View Core Study 1 Citations <i class="fas fa-external-link-alt ml-2"></i>
+       </a>
+       <a href="https://scholar.google.co.uk/scholar?cites=15768036519941313473&as_sdt=2005&sciodt=0,5&hl=en" target="_blank" class="scholar-link flex-1 bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-semibold py-3 px-4 rounded-lg flex items-center justify-center transition-colors">
+        View Core Study 2 Citations <i class="fas fa-external-link-alt ml-2"></i>
+       </a>
+      </div>
+
+     </div>
+    </div>
+   </div>
+  </section>
+
   <!-- Section 4: Limitations (Warning Style) -->
-  <section class="max-w-4xl mx-auto px-6 pb-12">
+  <section class="max-w-4xl mx-auto px-6 pb-12 pt-8">
    <div class="bg-white rounded-2xl border border-rose-100 shadow-md overflow-hidden relative">
     <!-- Red top accent line -->
     <div class="h-2 w-full bg-rose-500 absolute top-0 left-0"></div>
