@@ -104,6 +104,9 @@ author_profile: false
     font-weight: 400 !important;
     color: rgb(241, 245, 249) !important;
     margin-bottom: 32px !important;
+    max-width: 720px !important; /* Forces the text to wrap like old HTML */
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   /* === EXACT MATCH BUTTONS === */
@@ -180,14 +183,32 @@ author_profile: false
     border: none !important;
     transition: color 0.3s ease !important;
   }
-  /* TEXT TURNS BLUE ON HOVER */
   .grid-card:hover .card-title {
     color: #2563eb !important; 
   }
 
-  /* === CONTENT TYPOGRAPHY === */
-  .section-title { font-size: 30px !important; font-weight: 700 !important; color: #1e293b !important; margin-bottom: 20px !important; border: none !important; }
-  .section-text { font-size: 18px !important; line-height: 28px !important; margin-bottom: 24px !important; }
+  /* === CONTENT TYPOGRAPHY (EXACT MATCH) === */
+  .section-title { 
+    font-size: 28px !important; 
+    font-weight: 700 !important; 
+    color: #1e293b !important; 
+    margin-bottom: 24px !important; 
+    border: none !important; 
+  }
+  .intro-bold-text {
+    font-size: 18px !important;
+    line-height: 29px !important;
+    font-weight: 700 !important;
+    color: rgb(30, 58, 138) !important; 
+    margin-bottom: 24px !important;
+  }
+  .intro-normal-text {
+    font-size: 16px !important;
+    line-height: 26px !important;
+    font-weight: 400 !important;
+    color: rgb(75, 85, 99) !important; 
+    margin-bottom: 24px !important;
+  }
 </style>
 
 <!-- 4. The HTML Content -->
@@ -203,7 +224,7 @@ author_profile: false
         Adverse Childhood Experiences (ACEs) <br> 
         <span style="color: #bfdbfe !important;">in Electronic Health Records</span>
       </h1>
-      <p class="hero-subtitle max-w-3xl mx-auto drop-shadow-md">
+      <p class="hero-subtitle drop-shadow-md">
         A library of indicators for ACEs in EHRs. Search, discover, and access tools, code lists, and resources to implement clinically relevant and validated indicators of ACEs in your research using de-identified electronic health records.
       </p>
        
@@ -225,8 +246,8 @@ author_profile: false
     </div>
   </header>
 
-  <!-- Logos Section (Reduced Padding to py-5) -->
-  <section class="bg-white border-b border-gray-200 py-5 shadow-sm relative z-10">
+  <!-- Logos Section (Reduced height padding to py-3) -->
+  <section class="bg-white border-b border-gray-200 py-3 shadow-sm relative z-10">
     <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500">
       <a href="https://www.ucl.ac.uk/children-policy-research/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20CPRU%20logo%20aces%20in%20ehrs%20footer.png" alt="NIHR CPRU" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
       <a href="https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/ucl%20ich%20logo%20aces%20in%20ehrs.png" alt="UCL ICH" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
@@ -240,19 +261,19 @@ author_profile: false
   </section>
 
   <main class="flex-grow">
-    <!-- Intro Section (Pulled up tighter using pt-10 pb-12) -->
-    <section class="max-w-4xl mx-auto px-6 pt-10 pb-12 text-center">
+    <!-- Intro Section (Constrained Width to 800px, Pulled higher to pt-8) -->
+    <section class="max-w-[800px] mx-auto px-6 pt-8 pb-10 text-center">
       <h2 class="section-title">What is ACEs in EHRs?</h2>
-      <p class="section-text">
-        <strong style="color: #1e3a8a !important; font-weight: 600 !important;">The ACEsinEHRs platform provides validated domains, indicators, and code lists to identify adverse childhood experiences (ACEs) in routinely collected de-identified electronic health records of parents and children before and after birth.</strong>
+      <p class="intro-bold-text">
+        The ACEsinEHRs platform provides validated domains, indicators, and code lists to identify adverse childhood experiences (ACEs) in routinely collected de-identified electronic health records of parents and children before and after birth.
       </p>
-      <p class="section-text" style="color: #4b5563 !important;">
+      <p class="intro-normal-text">
         Examples of recorded ACEs include child maltreatment (e.g., child protection), exposure to domestic violence and abuse, and growing up with parental mental health problems or substance use problems (e.g., trio of vulnerabilities). This website is continuously updated and provides information on definitions, concepts, measures, and standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets.
       </p>
       <a href="https://shabeer-syed.github.io/acesinehrs/research/" style="color: #1d4ed8 !important; font-weight: 600 !important; text-decoration: underline !important; text-underline-offset: 4px !important; font-size: 16px !important;">See publications here</a>
     </section>
 
-    <!-- Grid Cards Section (With specific grid-card class) -->
+    <!-- Grid Cards Section -->
     <section class="max-w-6xl mx-auto px-6 pb-16">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         
