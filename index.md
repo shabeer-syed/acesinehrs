@@ -291,7 +291,7 @@ author_profile: false
      
     <a href="https://shabeer-syed.github.io/acesinehrs/about/" class="grid-card group">
      <div class="relative overflow-hidden bg-white">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/Introduction%20aces%20small.png" alt="About" style="margin: 0 !important;">
+      <img src="images/Introduction aces new no text.png" alt="About" style="margin: 0 !important;">
      </div>
      <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
       <h3 class="card-title">About ACEs in EHRs</h3>
@@ -318,7 +318,7 @@ author_profile: false
 
     <a href="https://shabeer-syed.github.io/acesinehrs/starterguide/" class="grid-card group">
      <div class="relative overflow-hidden bg-white">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png" alt="Getting Started" style="margin: 0 !important;">
+      <img src="images/ACEs implementation and downloads no text.png" alt="Getting Started" style="margin: 0 !important;">
      </div>
      <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
       <h3 class="card-title">Starter Guide</h3>
@@ -327,7 +327,7 @@ author_profile: false
 
     <a href="https://shabeer-syed.github.io/acesinehrs/theory/" class="grid-card group">
      <div class="relative overflow-hidden bg-white">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/aces%20in%20ehrs%20definitions%20theories.png" alt="Theory" style="margin: 0 !important;">
+      <img src="images/aces in ehrs definitions theories no text.png" alt="Theory" style="margin: 0 !important;">
      </div>
      <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
       <h3 class="card-title">Theory & Definitions</h3>
@@ -336,7 +336,7 @@ author_profile: false
 
     <a href="https://shabeer-syed.github.io/acesinehrs/research/" class="grid-card group">
      <div class="relative overflow-hidden bg-white">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/ACEsinEHRs%20research%20outputs%20small.png" alt="Research" style="margin: 0 !important;">
+      <img src="images/ACEsinEHRs research outputs no text.png" alt="Research" style="margin: 0 !important;">
      </div>
      <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
       <h3 class="card-title">Research Outputs</h3>
