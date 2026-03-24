@@ -9,7 +9,7 @@ author_profile: false
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
-    corePlugins: { preflight: false } // Protects the rest of your site
+    corePlugins: { preflight: false } 
   }
 </script>
 
@@ -20,9 +20,8 @@ author_profile: false
 <!-- 3. The "Iron Shield" Overrides -->
 <style>
   /* === FIX THE MENU & LOGO === */
-  .masthead__inner-wrap .site-logo img,
-  .masthead__inner-wrap .site-title img {
-    max-height: 22px !important; /* Makes the logo exactly the size you had in HTML */
+  .masthead__inner-wrap .site-logo img {
+    max-height: 24px !important; /* Safety net: but uploading a smaller logo is best! */
     width: auto !important;
   }
   .masthead__menu-item a {
@@ -45,29 +44,88 @@ author_profile: false
     margin-right: -50vw;
     background-color: #f9fafb !important; /* Exact bg-gray-50 tint */
   }
-  
-  /* Remove Jekyll's default spacing */
   #main { padding-top: 0 !important; }
 
   /* === PROTECT TAILWIND FROM JEKYLL === */
-  .tailwind-wrap * { font-family: 'Inter', sans-serif !important; box-sizing: border-box; }
+  .tailwind-wrap { box-sizing: border-box; }
   
-  /* Reset all link interference */
-  #main .tailwind-wrap a { 
+  /* Apply font only to text tags so we don't break <i> icons! */
+  .tailwind-wrap h1, .tailwind-wrap h2, .tailwind-wrap h3, 
+  .tailwind-wrap p, .tailwind-wrap a, .tailwind-wrap span, 
+  .tailwind-wrap div, .tailwind-wrap strong { 
+    font-family: 'Inter', sans-serif !important; 
+  }
+  
+  /* Remove Jekyll link underlines */
+  .tailwind-wrap a { 
     border-bottom: none !important; 
     text-decoration: none !important; 
     box-shadow: none !important; 
   }
-  #main .tailwind-wrap a:hover { 
-    text-decoration: none !important; 
+
+  /* === HERO TYPOGRAPHY EXACT MATCH === */
+  .hero-title {
+    font-size: 48px !important;
+    line-height: 48px !important;
+    font-weight: 700 !important;
+    color: rgb(255, 255, 255) !important;
+    margin-bottom: 24px !important;
+    border: none !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 20px !important;
+    line-height: 28px !important;
+    font-weight: 400 !important;
+    color: rgb(241, 245, 249) !important;
+    margin-bottom: 32px !important;
   }
 
-  /* Lock in Header Fonts so Jekyll doesn't change them */
-  .tailwind-wrap h1 { font-size: 2.5rem !important; line-height: 1.2 !important; font-weight: 700 !important; color: white !important; margin-bottom: 1.5rem !important; border: none !important; }
-  @media (min-width: 768px) { .tailwind-wrap h1 { font-size: 3rem !important; } }
-  .tailwind-wrap h2 { font-size: 1.875rem !important; font-weight: 700 !important; color: #1e293b !important; margin-bottom: 1.5rem !important; border: none !important; }
-  .tailwind-wrap h3 { font-size: 1.25rem !important; font-weight: 700 !important; color: #1f2937 !important; margin: 0 !important; border: none !important; }
-  .tailwind-wrap p { font-size: 1.125rem !important; line-height: 1.75 !important; margin-bottom: 1.5rem !important; }
+  /* === BUTTON STYLES EXACT MATCH === */
+  .btn-primary {
+    background-color: #ffffff !important;
+    color: rgb(30, 41, 59) !important; /* #1e293b */
+    font-size: 18px !important;
+    line-height: 28px !important;
+    font-weight: 600 !important;
+    padding: 16px 32px !important;
+    border-radius: 9999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s ease !important;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  }
+  .btn-primary i {
+    color: #2563eb !important;
+    margin-left: 8px !important;
+  }
+
+  .btn-secondary {
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid #60a5fa !important;
+    color: rgb(255, 255, 255) !important; /* #ffffff */
+    font-size: 14px !important;
+    line-height: 20px !important;
+    font-weight: 500 !important;
+    padding: 10px 20px !important;
+    border-radius: 9999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    backdrop-filter: blur(4px) !important;
+    transition: all 0.3s ease !important;
+  }
+  .btn-secondary:hover {
+    background-color: rgba(15, 23, 42, 0.8) !important;
+  }
+
+  /* === CONTENT TYPOGRAPHY === */
+  .section-title { font-size: 30px !important; font-weight: 700 !important; color: #1e293b !important; margin-bottom: 24px !important; border: none !important; }
+  .card-title { font-size: 20px !important; font-weight: 700 !important; color: #1f2937 !important; margin: 0 !important; border: none !important; }
+  .section-text { font-size: 18px !important; line-height: 28px !important; margin-bottom: 24px !important; }
 </style>
 
 <!-- 4. The HTML Content -->
@@ -79,22 +137,22 @@ author_profile: false
      
     <!-- Banner Content -->
     <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-32 text-center">
-      <h1 class="tracking-tight drop-shadow-lg text-white">
+      <h1 class="hero-title drop-shadow-lg">
         Adverse Childhood Experiences (ACEs) <br> 
         <span style="color: #bfdbfe !important;">in Electronic Health Records</span>
       </h1>
-      <p class="max-w-3xl mx-auto leading-relaxed drop-shadow-md" style="color: #f1f5f9 !important;">
+      <p class="hero-subtitle max-w-3xl mx-auto drop-shadow-md">
         A library of indicators for ACEs in EHRs. Search, discover, and access tools, code lists, and resources to implement clinically relevant and validated indicators of ACEs in your research using de-identified electronic health records.
       </p>
        
       <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="/indicators/#download-code-lists" class="inline-flex items-center justify-center px-8 py-4 bg-white rounded-full transition duration-300 transform hover:-translate-y-1" style="color: #1e293b !important; font-weight: 600 !important; font-size: 1.125rem !important; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;">
-          Download code lists <i class="fas fa-file-download ml-2" style="color: #2563eb !important;"></i>
+        <a href="/indicators/#download-code-lists" class="btn-primary">
+          Download code lists <i class="fas fa-file-download"></i>
         </a>
       </div>
 
       <div class="mt-8">
-        <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(24)00301-3/fulltext" target="_blank" class="inline-flex items-center px-5 py-2.5 rounded-full transition duration-300 backdrop-blur-sm" style="background-color: rgba(15, 23, 42, 0.6) !important; border: 1px solid #60a5fa !important; color: #ffffff !important; font-size: 0.875rem !important; font-weight: 500 !important;">
+        <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(24)00301-3/fulltext" target="_blank" class="btn-secondary">
           <span class="flex h-2.5 w-2.5 relative mr-3">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background-color: #93c5fd !important;"></span>
             <span class="relative inline-flex rounded-full h-2.5 w-2.5" style="background-color: #60a5fa !important;"></span>
@@ -122,14 +180,14 @@ author_profile: false
   <main class="flex-grow">
     <!-- Intro Section -->
     <section class="max-w-4xl mx-auto px-6 py-16 text-center">
-      <h2>What is ACEs in EHRs?</h2>
-      <p>
+      <h2 class="section-title">What is ACEs in EHRs?</h2>
+      <p class="section-text">
         <strong style="color: #1e3a8a !important; font-weight: 600 !important;">The ACEsinEHRs platform provides validated domains, indicators, and code lists to identify adverse childhood experiences (ACEs) in routinely collected de-identified electronic health records of parents and children before and after birth.</strong>
       </p>
-      <p style="color: #4b5563 !important;">
+      <p class="section-text" style="color: #4b5563 !important;">
         Examples of recorded ACEs include child maltreatment (e.g., child protection), exposure to domestic violence and abuse, and growing up with parental mental health problems or substance use problems (e.g., trio of vulnerabilities). This website is continuously updated and provides information on definitions, concepts, measures, and standardised tools to help users apply the developed ACE indicators to create “research-ready” datasets.
       </p>
-      <a href="https://shabeer-syed.github.io/acesinehrs/research/" style="color: #1d4ed8 !important; font-weight: 600 !important; text-decoration: underline !important; text-underline-offset: 4px !important;">See publications here</a>
+      <a href="https://shabeer-syed.github.io/acesinehrs/research/" style="color: #1d4ed8 !important; font-weight: 600 !important; text-decoration: underline !important; text-underline-offset: 4px !important; font-size: 16px !important;">See publications here</a>
     </section>
 
     <!-- Grid Cards Section -->
@@ -140,7 +198,7 @@ author_profile: false
             <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/Introduction%20aces%20small.png" alt="About" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" style="margin: 0 !important;">
           </div>
           <div class="p-6 flex-grow">
-            <h3 class="group-hover:text-blue-600 transition">About ACEs in EHRs</h3>
+            <h3 class="card-title group-hover:text-blue-600 transition">About ACEs in EHRs</h3>
           </div>
         </a>
 
@@ -149,7 +207,7 @@ author_profile: false
             <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/home%20view%20domain%20download%20small.png" alt="Domains" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" style="margin: 0 !important;">
           </div>
           <div class="p-6 flex-grow">
-            <h3 class="group-hover:text-blue-600 transition">ACE Domains</h3>
+            <h3 class="card-title group-hover:text-blue-600 transition">ACE Domains</h3>
           </div>
         </a>
 
@@ -158,7 +216,7 @@ author_profile: false
             <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png" alt="Code Lists" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" style="margin: 0 !important;">
           </div>
           <div class="p-6 flex-grow">
-            <h3 class="group-hover:text-blue-600 transition">Browse Code Lists</h3>
+            <h3 class="card-title group-hover:text-blue-600 transition">Browse Code Lists</h3>
           </div>
         </a>
 
@@ -167,7 +225,7 @@ author_profile: false
             <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEs%20implementation%20and%20downloads.png" alt="Getting Started" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" style="margin: 0 !important;">
           </div>
           <div class="p-6 flex-grow">
-            <h3 class="group-hover:text-blue-600 transition">Starter Guide</h3>
+            <h3 class="card-title group-hover:text-blue-600 transition">Starter Guide</h3>
           </div>
         </a>
 
@@ -176,7 +234,7 @@ author_profile: false
             <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/aces%20in%20ehrs%20definitions%20theories.png" alt="Theory" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" style="margin: 0 !important;">
           </div>
           <div class="p-6 flex-grow">
-            <h3 class="group-hover:text-blue-600 transition">Theory & Definitions</h3>
+            <h3 class="card-title group-hover:text-blue-600 transition">Theory & Definitions</h3>
           </div>
         </a>
 
@@ -185,7 +243,7 @@ author_profile: false
             <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/ACEsinEHRs%20research%20outputs%20small.png" alt="Research" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" style="margin: 0 !important;">
           </div>
           <div class="p-6 flex-grow">
-            <h3 class="group-hover:text-blue-600 transition">Research Outputs</h3>
+            <h3 class="card-title group-hover:text-blue-600 transition">Research Outputs</h3>
           </div>
         </a>
       </div>
