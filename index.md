@@ -198,6 +198,16 @@ author_profile: false
   transition: color 0.3s ease !important;
  }
  .grid-card:hover .card-title { color: #2563eb !important; }
+ 
+ /* NEW: Description text beneath the card title */
+ .grid-card .card-description {
+  font-size: 14px !important;
+  line-height: 22px !important;
+  color: #475569 !important; /* Slate 600 */
+  margin-top: 8px !important;
+  margin-bottom: 0 !important;
+  font-weight: 400 !important;
+ }
 
  /* === CONTENT TYPOGRAPHY (EXACT MATCH) === */
  .section-title { 
@@ -293,8 +303,9 @@ author_profile: false
      <div class="relative overflow-hidden bg-white">
       <img src="images/Introduction aces new no text.png" alt="About" style="margin: 0 !important;">
      </div>
-     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
+     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50 flex flex-col">
       <h3 class="card-title">About ACEs in EHRs</h3>
+      <p class="card-description">Learn about the background, core definitions, and inclusion criteria underpinning the ACEsinEHRs platform.</p>
      </div>
     </a>
 
@@ -302,8 +313,9 @@ author_profile: false
      <div class="relative overflow-hidden bg-white">
       <img src="images/view domains indicators no text.png" alt="Domains" style="margin: 0 !important;">
      </div>
-     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
+     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50 flex flex-col">
       <h3 class="card-title">ACE Domains</h3>
+      <p class="card-description">View and download comprehensive lists of selected and excluded indicators, complete with clinical relevance rankings.</p>
      </div>
     </a>
 
@@ -311,8 +323,9 @@ author_profile: false
      <div class="relative overflow-hidden bg-white">
       <img src="images/code lists browse no text.png" alt="Code Lists" style="margin: 0 !important;">
      </div>
-     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
+     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50 flex flex-col">
       <h3 class="card-title">Browse Code Lists</h3>
+      <p class="card-description">Search, filter, and access clinical code lists seamlessly cross-mapped across multiple healthcare coding systems.</p>
      </div>
     </a>
 
@@ -320,8 +333,9 @@ author_profile: false
      <div class="relative overflow-hidden bg-white">
       <img src="images/ACEs implementation and downloads no text.png" alt="Getting Started" style="margin: 0 !important;">
      </div>
-     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
+     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50 flex flex-col">
       <h3 class="card-title">Starter Guide</h3>
+      <p class="card-description">Access our quick-start guide and practical resources for implementing ACE indicators and code lists in your research.</p>
      </div>
     </a>
 
@@ -329,8 +343,9 @@ author_profile: false
      <div class="relative overflow-hidden bg-white">
       <img src="images/aces in ehrs definitions theories no text.png" alt="Theory" style="margin: 0 !important;">
      </div>
-     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
+     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50 flex flex-col">
       <h3 class="card-title">Theory & Definitions</h3>
+      <p class="card-description">Explore the foundational definitions, theoretical frameworks, and data workflows used to conceptualize ACEs.</p>
      </div>
     </a>
 
@@ -338,8 +353,9 @@ author_profile: false
      <div class="relative overflow-hidden bg-white">
       <img src="images/ACEsinEHRs research outputs no text.png" alt="Research" style="margin: 0 !important;">
      </div>
-     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
+     <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50 flex flex-col">
       <h3 class="card-title">Research Outputs</h3>
+      <p class="card-description">Discover published papers, project presentations, and academic outputs generated using the ACEsinEHRs platform.</p>
      </div>
     </a>
    </div>
