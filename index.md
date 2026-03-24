@@ -230,8 +230,8 @@ author_profile: false
  <header class="relative bg-slate-700 bg-opacity-50 text-white" 
    style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20home%20page%202024.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;">
    
-  <!-- Banner Content (Increased py padding to add height here) -->
-  <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-32 text-center">
+  <!-- Banner Content (Adjusted padding to be just slightly taller than the original) -->
+  <div class="relative z-10 max-w-5xl mx-auto px-6 py-20 md:py-24 text-center">
    <h1 class="hero-title drop-shadow-lg">
     Adverse Childhood Experiences (ACEs) <br> 
     <span style="color: #bfdbfe !important;">in Electronic Health Records</span>
@@ -258,7 +258,7 @@ author_profile: false
   </div>
  </header>
 
- <!-- Logos Section (Reduced vertical padding to py-5 to make the strip shorter) -->
+ <!-- Logos Section -->
  <section class="bg-white border-b border-gray-200 py-5 shadow-sm relative z-10">
   <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500">
    <a href="https://www.ucl.ac.uk/children-policy-research/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20CPRU%20logo%20aces%20in%20ehrs%20footer.png" alt="NIHR CPRU" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
