@@ -47,7 +47,7 @@ author_profile: false
     padding-bottom: 5rem !important;
   }
   
-  /* Remove Jekyll's forced padding/margins that cause the white gap */
+  /* Remove Jekyll's forced padding/margins */
   #main { 
     padding-top: 0 !important; 
     padding-bottom: 0 !important; 
@@ -104,7 +104,7 @@ author_profile: false
     font-weight: 400 !important;
     color: rgb(241, 245, 249) !important;
     margin-bottom: 32px !important;
-    max-width: 720px !important; /* Forces the text to wrap like old HTML */
+    max-width: 720px !important; 
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -153,28 +153,34 @@ author_profile: false
     background-color: rgba(15, 23, 42, 0.8) !important;
   }
 
-  /* === GRID CARDS WITH PERFECT HOVER === */
-  .grid-card {
+  /* === GRID CARDS & NOTICE CARDS PERFECT HOVER === */
+  .grid-card, .notice-card {
     background-color: #ffffff !important;
     border-radius: 1rem !important;
     border: 1px solid #f3f4f6 !important;
-    overflow: hidden !important;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04) !important;
     transition: all 0.3s ease !important;
-    display: flex !important;
-    flex-direction: column !important;
     text-decoration: none !important;
   }
-  .grid-card:hover {
+  .grid-card {
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .notice-card {
+    position: relative !important;
+    overflow: hidden !important;
+    display: flex !important;
+  }
+  /* EXACT SAME HOVER EFFECT FOR BOTH */
+  .grid-card:hover, .notice-card:hover {
     transform: translateY(-4px) !important;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
   }
-  .grid-card img {
-    transition: transform 0.5s ease !important;
-  }
-  .grid-card:hover img {
-    transform: scale(1.05) !important;
-  }
+  
+  /* specific grid-card internal hovers */
+  .grid-card img { transition: transform 0.5s ease !important; }
+  .grid-card:hover img { transform: scale(1.05) !important; }
   .grid-card .card-title {
     font-size: 20px !important;
     font-weight: 700 !important;
@@ -183,9 +189,7 @@ author_profile: false
     border: none !important;
     transition: color 0.3s ease !important;
   }
-  .grid-card:hover .card-title {
-    color: #2563eb !important; 
-  }
+  .grid-card:hover .card-title { color: #2563eb !important; }
 
   /* === CONTENT TYPOGRAPHY (EXACT MATCH) === */
   .section-title { 
@@ -214,12 +218,12 @@ author_profile: false
 <!-- 4. The HTML Content -->
 <div class="full-bleed tailwind-wrap text-gray-800 antialiased flex flex-col min-h-screen">
 
-  <!-- Hero Section -->
+  <!-- Hero Section (Reduced Height) -->
   <header class="relative bg-slate-700 bg-opacity-50 text-white" 
       style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20home%20page%202024.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;">
      
     <!-- Banner Content -->
-    <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-32 text-center">
+    <div class="relative z-10 max-w-5xl mx-auto px-6 py-12 md:py-16 text-center">
       <h1 class="hero-title drop-shadow-lg">
         Adverse Childhood Experiences (ACEs) <br> 
         <span style="color: #bfdbfe !important;">in Electronic Health Records</span>
@@ -246,8 +250,8 @@ author_profile: false
     </div>
   </header>
 
-  <!-- Logos Section (Reduced height padding to py-3) -->
-  <section class="bg-white border-b border-gray-200 py-3 shadow-sm relative z-10">
+  <!-- Logos Section -->
+  <section class="bg-white border-b border-gray-200 py-4 shadow-sm relative z-10">
     <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500">
       <a href="https://www.ucl.ac.uk/children-policy-research/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20CPRU%20logo%20aces%20in%20ehrs%20footer.png" alt="NIHR CPRU" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
       <a href="https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/ucl%20ich%20logo%20aces%20in%20ehrs.png" alt="UCL ICH" class="h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
@@ -261,8 +265,8 @@ author_profile: false
   </section>
 
   <main class="flex-grow">
-    <!-- Intro Section (Constrained Width to 800px, Pulled higher to pt-8) -->
-    <section class="max-w-[800px] mx-auto px-6 pt-8 pb-10 text-center">
+    <!-- Intro Section (Wider max-width, pulled up to match old HTML) -->
+    <section class="max-w-[960px] mx-auto px-6 pt-6 pb-10 text-center">
       <h2 class="section-title">What is ACEs in EHRs?</h2>
       <p class="intro-bold-text">
         The ACEsinEHRs platform provides validated domains, indicators, and code lists to identify adverse childhood experiences (ACEs) in routinely collected de-identified electronic health records of parents and children before and after birth.
@@ -337,9 +341,9 @@ author_profile: false
     <section class="max-w-4xl mx-auto px-6 pb-20 space-y-6">
        
       <!-- Notice 1: Update -->
-      <div class="relative bg-white rounded-2xl p-6 border border-slate-100 flex items-start gap-4 sm:gap-5 transition duration-300 overflow-hidden group hover:shadow-md" style="box-shadow: 0 2px 10px -3px rgba(6,81,237,0.1) !important;">
-        <div class="absolute left-0 top-0 bottom-0 w-1.5 rounded-l-2xl" style="background-color: #3b82f6 !important;"></div>
-        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mt-0.5 transition-colors" style="background-color: #eff6ff !important; color: #2563eb !important;">
+      <div class="notice-card p-6 items-start gap-4 sm:gap-5">
+        <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #3b82f6 !important; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"></div>
+        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mt-0.5" style="background-color: #eff6ff !important; color: #2563eb !important;">
           <i class="fas fa-info-circle text-lg"></i>
         </div>
         <div class="flex-1">
@@ -351,9 +355,9 @@ author_profile: false
       </div>
 
       <!-- Notice 2: Core Study -->
-      <div class="relative bg-white rounded-2xl p-6 border border-slate-100 flex items-start gap-4 sm:gap-5 transition duration-300 overflow-hidden group hover:shadow-md" style="box-shadow: 0 2px 10px -3px rgba(6,81,237,0.1) !important;">
-        <div class="absolute left-0 top-0 bottom-0 w-1.5 rounded-l-2xl" style="background-color: #3b82f6 !important;"></div>
-        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mt-0.5 transition-colors" style="background-color: #eff6ff !important; color: #2563eb !important;">
+      <div class="notice-card p-6 items-start gap-4 sm:gap-5">
+        <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #3b82f6 !important; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"></div>
+        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mt-0.5" style="background-color: #eff6ff !important; color: #2563eb !important;">
           <i class="fas fa-book-medical text-lg"></i>
         </div>
         <div class="flex-1">
@@ -365,9 +369,9 @@ author_profile: false
       </div>
 
       <!-- Notice 3: Red Citation Warning -->
-      <div class="relative bg-white rounded-2xl p-6 border border-slate-100 flex items-start gap-4 sm:gap-5 transition duration-300 overflow-hidden group hover:shadow-md" style="box-shadow: 0 2px 10px -3px rgba(239,68,68,0.1) !important;">
-        <div class="absolute left-0 top-0 bottom-0 w-1.5 rounded-l-2xl" style="background-color: #ef4444 !important;"></div>
-        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mt-0.5 transition-colors" style="background-color: #fef2f2 !important; color: #ef4444 !important;">
+      <div class="notice-card p-6 items-start gap-4 sm:gap-5">
+        <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #ef4444 !important; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"></div>
+        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full mt-0.5" style="background-color: #fef2f2 !important; color: #ef4444 !important;">
           <i class="fas fa-exclamation-triangle text-lg"></i>
         </div>
         <div class="flex-1">
@@ -380,9 +384,9 @@ author_profile: false
       </div>
 
       <!-- Notice 4: Red Disclaimer -->
-      <div class="relative bg-white rounded-2xl p-6 border border-slate-100 flex items-center gap-4 sm:gap-5 transition duration-300 overflow-hidden group hover:shadow-md" style="box-shadow: 0 2px 10px -3px rgba(239,68,68,0.1) !important;">
-        <div class="absolute left-0 top-0 bottom-0 w-1.5 rounded-l-2xl" style="background-color: #ef4444 !important;"></div>
-        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full transition-colors" style="background-color: #fef2f2 !important; color: #ef4444 !important;">
+      <div class="notice-card p-6 items-center gap-4 sm:gap-5">
+        <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: #ef4444 !important; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"></div>
+        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full" style="background-color: #fef2f2 !important; color: #ef4444 !important;">
           <i class="fas fa-shield-alt text-lg"></i>
         </div>
         <div class="flex-1">
