@@ -231,7 +231,7 @@ author_profile: false
    style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20home%20page%202024.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;">
    
   <!-- Banner Content (Precision adjusted to shave exactly 0.5cm off the height) -->
-  <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-[102px] text-center">
+  <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-[98px] text-center">
    <h1 class="hero-title drop-shadow-lg">
     Adverse Childhood Experiences (ACEs) <br> 
     <span style="color: #bfdbfe !important;">in Electronic Health Records</span>
