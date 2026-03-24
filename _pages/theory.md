@@ -96,10 +96,16 @@ author_profile: false
   <section class="max-w-4xl mx-auto px-6 py-12 md:py-16">
    <h2 class="content-heading mt-0">Background</h2>
    <p class="content-text">
-    Adverse childhood experiences (ACEs) are potentially traumatic, neglectful or <a href="https://www.who.int/violenceprevention/approach/definition/en/" target="_blank" class="text-blue-600 font-medium hover:underline">violent</a> experiences in childhood. Examples of ACEs range from child maltreatment and witnessing violence in the home to growing up with a parent with a mental health problem <a href="https://www.cdc.gov/violenceprevention/aces/fastfact.html" target="_blank" class="text-blue-600 font-medium hover:underline">(1)</a>.
+    Adverse childhood experiences (ACEs) are potentially traumatic, neglectful or <a href="https://www.who.int/violenceprevention/approach/definition/en/" target="_blank" class="text-blue-600 font-medium hover:underline">violent</a> experiences in childhood. Examples of ACEs range from child maltreatment and witnessing violence in the home to growing up with a parent with a mental health problem <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">(1)</a>.
    </p>
    <p class="content-text">
-    The concept of adversity is not new. However, the term "ACEs" was first introduced by a groundbreaking <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">study published in 1998</a> by the Centers for Disease Control and the Kaiser Permanente health care organization in USA, California. The concept of ACEs helped bring together and measure a diverse set of preventable adverse childhood experiences that can lead to considerable long-term health problems, and can substantially pressure families, health and social care systems <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">(3)</a>. 
+    The concept of adversity is not new. However, the term "ACEs" was first introduced by a groundbreaking <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">study published in 1998</a> by the Centers for Disease Control and Prevention (CDC) and the Kaiser Permanente health care organisation in California, USA <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">(2)</a>. Led by co-principal investigators Dr Vincent Felitti and Dr Robert Anda, the study originated from repeated clinical observations within an obesity treatment programme during the 1980s. As doctors gathered patient histories, they noticed that severe weight gain, smoking, and substance use were frequently linked to early abuse or household dysfunction <a href="https://www.sciencedirect.com/science/article/pii/S074937971930100X#bib0002" target="_blank" class="text-blue-600 font-medium hover:underline">(3)</a>.
+   </p>
+   <p class="content-text">
+    They hypothesised that for many people, severe weight gain may be the result of an unconscious coping mechanism to manage unrecognised childhood trauma <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">(2)</a>. This led to a study evaluating over 17,000 adult patients, where the researchers established a strong dose-response relationship between the number of ACEs and health problems in adults, including premature death.
+   </p>
+   <p class="content-text">
+    The concept of ACEs helped bring together and measure a diverse set of preventable adverse childhood experiences that can lead to considerable long-term health problems, and can substantially pressure families, health and social care systems <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">(1)</a>.
    </p>
    
    <!-- CDC Style Callout Box for the 10 ACEs -->
@@ -141,7 +147,6 @@ author_profile: false
      </div>
     </div>
    </div>
-   <p class="content-text italic text-slate-500">This page provides a comprehensive overview of the key theoretical frameworks used to understand the impact of these ACEs on individuals and their development.</p>
   </section>
 
   <!-- SECTION 2: Conceptual Model & Diagram -->
@@ -151,10 +156,13 @@ author_profile: false
     
     <div class="max-w-4xl mx-auto">
      <p class="content-text text-center">
-      We developed a "testable" conceptual, integrative biopsychosocial model to help better understand ACEs and generate theoretically informed predictions of which ACE indicators might be more relevant than others. In this model, we integrate theories from the socio-ecological system theory by <a href="https://psycnet.apa.org/record/1978-06857-001" target="_blank" class="text-blue-600 font-medium hover:underline">Bronfenbrenner (1977)</a> and <a href="https://psycnet.apa.org/record/1980-12117-001" target="_blank" class="text-blue-600 font-medium hover:underline">Belsky (1980)</a> as a platform to map other theories relevant to ACEs within two ecological levels (the individual and the family environment). By focusing on the first two ecological levels, we restricted ACEs to clinically measurable and intervenable indicators at a family level.
+      The concept of ACEs is not based on a single theory. Instead, it is best understood through an integrative biopsychosocial model that combines psychological, biological, and sociological perspectives. The goal of this model is to explain why ACEs occur, how they lead to long-term health and social problems, and why their effects vary depending on the specific type or number of adversities experienced.
      </p>
      <p class="content-text text-center">
-      Across these two "ecological" levels, we make predictions of relevant ACEs based on attachment theory (Bowlby, 1969–82; Ainsworth et al., 1978), the <a href="https://pubmed.ncbi.nlm.nih.gov/22201156/" target="_blank" class="text-blue-600 font-medium hover:underline">cumulative stress model</a> (includes the <a href="https://www.nejm.org/doi/10.1056/NEJM199801153380307" target="_blank" class="text-blue-600 font-medium hover:underline">"allostatic load" model</a> and the <a href="https://www.publications.aap.org/pediatrics/article-split/129/1/e232/31628/The-Lifelong-Effects-of-Early-Childhood-Adversity" target="_blank" class="text-blue-600 font-medium hover:underline">"ecobiodevelopmental" framework</a>), and <a href="https://psycnet.apa.org/record/1989-26231-001" target="_blank" class="text-blue-600 font-medium hover:underline">cognitive behavioural theories of emotions</a>.
+      This model uses the socio-ecological systems theories of <a href="https://psycnet.apa.org/record/1978-06857-001" target="_blank" class="text-blue-600 font-medium hover:underline">Bronfenbrenner (1977)</a> and <a href="https://psycnet.apa.org/record/1980-12117-001" target="_blank" class="text-blue-600 font-medium hover:underline">Belsky (1980)</a> as a foundational platform. By focusing specifically on the first two ecological levels—the individual and the family environment—this approach deliberately restricts the definition of ACEs to those that are clinically measurable and intervenable at the family level, whilst acknowledging that other adversities occur in the wider community.
+     </p>
+     <p class="content-text text-center">
+      Across these two ecological levels, the model integrates several key frameworks to predict and understand relevant ACEs. These include attachment theory (Bowlby, 1969–1982; Ainsworth et al., 1978), the <a href="https://pubmed.ncbi.nlm.nih.gov/22201156/" target="_blank" class="text-blue-600 font-medium hover:underline">cumulative stress model</a> (encompassing both the <a href="https://www.nejm.org/doi/10.1056/NEJM199801153380307" target="_blank" class="text-blue-600 font-medium hover:underline">"allostatic load"</a> and <a href="https://www.publications.aap.org/pediatrics/article-split/129/1/e232/31628/The-Lifelong-Effects-of-Early-Childhood-Adversity" target="_blank" class="text-blue-600 font-medium hover:underline">"ecobiodevelopmental"</a> frameworks), and <a href="https://psycnet.apa.org/record/1989-26231-001" target="_blank" class="text-blue-600 font-medium hover:underline">cognitive behavioural theories of emotion</a>.
      </p>
     </div>
 
@@ -216,6 +224,38 @@ author_profile: false
        <p class="text-slate-600 text-sm leading-relaxed mb-4">For some families, these social risk factors and coping responses are carried over across generations as children become parents themselves. Whilst strategies are perceived as logical at the moment, over time, they can leave families in a cycle that perpetuates stress. As underlying stress increases, caregivers and children have fewer resources to cope and regulate responses (e.g. reduced response inhibition/executive functioning) <a href="https://pubmed.ncbi.nlm.nih.gov/12212647/" target="_blank" class="text-blue-600 hover:underline">(6)</a>, increasing the risk of more immediate coping responses to escape or re-gaining control (e.g. shouting, violence, neglect).</p>
        
        <p class="text-slate-600 text-sm leading-relaxed mb-0">Coping responses may vary as a function of the level of need to escape distress and harm, ranging from immediate escape (e.g. violence, substance misuse, abandonment/neglect) to stronger forms of avoidance (e.g. avoiding going out, which reduces social support systems in the longer-term) <a href="https://link.springer.com/article/10.1023/B:JOBA.0000007455.08539.94" target="_blank" class="text-blue-600 hover:underline">(7)</a>.</p>
+      </div>
+     </div>
+    </div>
+
+    <!-- New Highlight Box: Latent Vulnerability & Social Thinning -->
+    <div class="mt-12 bg-amber-50 rounded-2xl border border-amber-200 overflow-hidden shadow-sm">
+     <div class="bg-amber-500 px-6 py-4">
+      <h3 class="text-xl font-bold text-white m-0 border-none flex items-center">
+       <i class="fas fa-network-wired mr-3 opacity-90"></i> Latent Vulnerability & Social Thinning
+      </h3>
+     </div>
+     <div class="p-6 md:p-8">
+      <p class="text-slate-700 mb-6 leading-relaxed">
+       Recent studies have expanded our understanding of how ACEs may embed long-term risk through interconnected mechanisms:
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+       <!-- Latent Vulnerability -->
+       <div>
+        <h4 class="text-amber-900 font-bold mb-2 flex items-center"><i class="fas fa-shield-virus mr-2 text-amber-600"></i> Latent Vulnerability</h4>
+        <p class="text-sm text-slate-700 leading-relaxed">
+         Childhood maltreatment is thought to alter neurocognitive systems (such as threat and reward processing). While these biological adaptations may hold functional value for a child navigating a dangerous or neglectful home environment in the short term, they may cease to be adaptive in safer, more normative environments. This "maladaptive calibration" is hypothesized to embed a <strong>latent vulnerability</strong>, which may be associated with an increased risk of future psychiatric disorders <a href="https://doi.org/10.1111/jcpp.12713" target="_blank" class="text-blue-600 hover:underline">(McCrory et al., 2017)</a>.
+        </p>
+       </div>
+       
+       <!-- Social Thinning / Cycle of Victimization -->
+       <div>
+        <h4 class="text-amber-900 font-bold mb-2 flex items-center"><i class="fas fa-user-minus mr-2 text-amber-600"></i> Social Thinning & Revictimization</h4>
+        <p class="text-sm text-slate-700 leading-relaxed">
+         Research suggests that maltreated children may develop difficulties with emotional regulation or a hostile attribution style, potentially leading to submissive, socially withdrawn, or isolated behaviors. Over time, this can result in a <strong>"social thinning"</strong> of protective peer networks. Consequently, youth with histories of abuse may face a "cycle of victimization," as they have been found to be more likely to experience intimidation and physical assault by peers during adolescence <a href="https://doi.org/10.1016/j.chiabu.2016.08.003" target="_blank" class="text-blue-600 hover:underline">(Benedini et al., 2016)</a>.
+        </p>
+       </div>
       </div>
      </div>
     </div>
