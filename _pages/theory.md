@@ -99,7 +99,7 @@ author_profile: false
     Adverse childhood experiences (ACEs) are potentially traumatic, neglectful or <a href="https://www.who.int/violenceprevention/approach/definition/en/" target="_blank" class="text-blue-600 font-medium hover:underline">violent</a> experiences in childhood. Examples of ACEs range from child maltreatment and witnessing violence in the home to growing up with a parent with a mental health problem <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">(1)</a>.
    </p>
    <p class="content-text">
-    The concept of adversity is not new. However, the term "ACEs" was first introduced by a groundbreaking <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">study published in 1998</a> by the Centers for Disease Control and Prevention (CDC) and the Kaiser Permanente health care organisation in California, USA <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">(2)</a>. Led by co-principal investigators Dr Vincent Felitti and Dr Robert Anda, the study originated from repeated clinical observations within an obesity treatment programme during the 1980s. As doctors gathered patient histories, they noticed that severe weight gain, smoking, and substance use were frequently linked to early abuse or household dysfunction <a href="https://www.sciencedirect.com/science/article/pii/S074937971930100X#bib0002" target="_blank" class="text-blue-600 font-medium hover:underline">(3)</a>.
+    The concept of adversity is not new. However, the term "ACEs" was first introduced by a groundbreaking <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">study published</a> in 1998 by the Centers for Disease Control and Prevention (CDC) and the Kaiser Permanente health care organisation in California, USA <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">(2)</a>. Led by co-principal investigators Dr Vincent Felitti and Dr Robert Anda, the study originated from repeated clinical observations within an obesity treatment programme during the 1980s. As doctors gathered patient histories, they noticed that severe weight gain, smoking, and substance use were frequently linked to early abuse or household dysfunction <a href="https://www.sciencedirect.com/science/article/pii/S074937971930100X#bib0002" target="_blank" class="text-blue-600 font-medium hover:underline">(3)</a>.
    </p>
    <p class="content-text">
     They hypothesised that for many people, severe weight gain may be the result of an unconscious coping mechanism to manage unrecognised childhood trauma <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">(2)</a>. This led to a study evaluating over 17,000 adult patients, where the researchers established a strong dose-response relationship between the number of ACEs and health problems in adults, including premature death.
@@ -185,15 +185,20 @@ author_profile: false
     <p class="content-text max-w-3xl mx-auto">Below, we summarise different key theories and mechanisms hypothesised to play a role in ACEs. It does not represent an exhaustive list.</p>
    </div>
 
-   <div class="space-y-8">
+   <div class="space-y-0">
     
     <!-- Society Level -->
-    <div class="feature-card border-l-4 border-l-blue-500">
+    <div class="feature-card border-l-4 border-l-blue-500 relative z-10">
      <h3 class="content-subheading mt-0 flex items-center">
       <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3"><i class="fas fa-city text-lg"></i></div>
       Society & community level
      </h3>
-     <p class="content-text mb-0">Social determinants of health encompass socioeconomic conditions that shape health outcomes for individuals, families and communities. Children with ACEs are more likely to grow up in environments where raising a family and coping with everyday challenges is harder. Families may live in communities with high unemployment and a lack of local resources for families, with parents having to travel long distances to work, or family members may be more likely to suffer from health problems that make it difficult to work.</p>
+     <p class="text-slate-600 text-sm leading-relaxed mb-0">Social determinants of health encompass socioeconomic conditions that shape health outcomes for individuals, families and communities. Children with ACEs are more likely to grow up in environments where raising a family and coping with everyday challenges is harder. Families may live in communities with high unemployment and a lack of local resources for families, with parents having to travel long distances to work, or family members may be more likely to suffer from health problems that make it difficult to work.</p>
+    </div>
+
+    <!-- Arrow connecting the ecological levels -->
+    <div class="ml-10 my-4 text-slate-300 text-3xl">
+     <i class="fas fa-long-arrow-alt-down"></i>
     </div>
 
     <!-- Individual & Family Level Container -->
@@ -204,58 +209,38 @@ author_profile: false
      </h3>
      
      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      
       <!-- Attachment -->
-      <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
        <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-link text-emerald-500 mr-2"></i> Attachment and learning theory</h4>
        <p class="text-slate-600 text-sm leading-relaxed mb-0">Social risk factors can negatively influence carers' ability to respond, such as being available and responsive to a child's attachment cues. Children with ACEs may be more likely to develop insecure attachments from reduced caregiving responses of emotional validation (e.g., "my pain matters") and reduced experiences of healthy parental modelling of emotion regulation. This can also mean a child loses friends and the support of adults and misses out on opportunities to grow social support networks.</p>
       </div>
 
       <!-- Life Course -->
-      <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
        <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-road text-emerald-500 mr-2"></i> Life-course approach</h4>
        <p class="text-slate-600 text-sm leading-relaxed mb-0">Taken together, the model views ACEs as a complex social phenomenon and considers families as resilient and constantly striving to cope using different strategies and resources at hand. The model helps separate the <em>adverse experience</em> from the <em>adverse stress</em> response, overcoming previous limitations of reverse causality when looking at long-term outcomes. We consider ACEs recorded at the family level amenable to service intervention and relevant to EHRs.</p>
       </div>
       
       <!-- Cognitive & Behavioural (Full Width inside grid) -->
-      <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 lg:col-span-2">
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 lg:col-span-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
        <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-brain text-emerald-500 mr-2"></i> Cognitive and behavioural theories</h4>
-       <p class="text-slate-600 text-sm leading-relaxed mb-4">People cope with stress and perceived threats using different preventative strategies (e.g. avoidance, escape, fight) to minimise negative consequences. Children who grew up in environments with increased levels of stress and unpredictability can be more likely to perceive the world as less safe and feel less confident they can manage. To cope, children may develop cognitive biases toward threats, learn to suppress emotions, and avoid situations they fear will cause further distress (e.g. see <a href="https://psycnet.apa.org/record/1986-15090-001" target="_blank" class="text-blue-600 hover:underline">theories on emotional processing</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/10402694/" target="_blank" class="text-blue-600 hover:underline">selective attention and overestimation of threat</a>). Over time, however, this interaction prevents new learning of balanced threat appraisals (e.g. "I can cope"), creating a maintenance cycle of stress.</p>
+       <p class="text-slate-600 text-sm leading-relaxed mb-4">People cope with stress and perceived threats using different survival strategies (e.g. avoidance, escape, fight) to minimise negative consequences. Children who grew up in environments with increased levels of stress and unpredictability can be more likely to perceive the world as less safe and feel less confident they can manage. To cope, children may develop cognitive biases toward threats, learn to suppress emotions, and avoid situations they fear will cause further distress (e.g. see <a href="https://psycnet.apa.org/record/1986-15090-001" target="_blank" class="text-blue-600 hover:underline">theories on emotional processing</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/10402694/" target="_blank" class="text-blue-600 hover:underline">selective attention and overestimation of threat</a>). Over time, however, this interaction prevents new learning of balanced threat appraisals (e.g. "I can cope"), creating a maintenance cycle of stress.</p>
        
        <p class="text-slate-600 text-sm leading-relaxed mb-4">For some families, these social risk factors and coping responses are carried over across generations as children become parents themselves. Whilst strategies are perceived as logical at the moment, over time, they can leave families in a cycle that perpetuates stress. As underlying stress increases, caregivers and children have fewer resources to cope and regulate responses (e.g. reduced response inhibition/executive functioning) <a href="https://pubmed.ncbi.nlm.nih.gov/12212647/" target="_blank" class="text-blue-600 hover:underline">(6)</a>, increasing the risk of more immediate coping responses to escape or re-gaining control (e.g. shouting, violence, neglect).</p>
        
-       <p class="text-slate-600 text-sm leading-relaxed mb-0">Coping responses may vary as a function of the level of need to escape distress and harm, ranging from immediate escape (e.g. violence, substance misuse, abandonment/neglect) to stronger forms of avoidance (e.g. avoiding going out, which reduces social support systems in the longer-term) <a href="https://link.springer.com/article/10.1023/B:JOBA.0000007455.08539.94" target="_blank" class="text-blue-600 hover:underline">(7)</a>.</p>
-      </div>
-     </div>
-    </div>
-
-    <!-- New Highlight Box: Latent Vulnerability & Social Thinning -->
-    <div class="mt-12 bg-amber-50 rounded-2xl border border-amber-200 overflow-hidden shadow-sm">
-     <div class="bg-amber-500 px-6 py-4">
-      <h3 class="text-xl font-bold text-white m-0 border-none flex items-center">
-       <i class="fas fa-network-wired mr-3 opacity-90"></i> Latent Vulnerability & Social Thinning
-      </h3>
-     </div>
-     <div class="p-6 md:p-8">
-      <p class="text-slate-700 mb-6 leading-relaxed">
-       Recent studies have expanded our understanding of how ACEs may embed long-term risk through interconnected mechanisms:
-      </p>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-       <!-- Latent Vulnerability -->
-       <div>
-        <h4 class="text-amber-900 font-bold mb-2 flex items-center"><i class="fas fa-shield-virus mr-2 text-amber-600"></i> Latent Vulnerability</h4>
-        <p class="text-sm text-slate-700 leading-relaxed">
-         Childhood maltreatment is thought to alter neurocognitive systems (such as threat and reward processing). While these biological adaptations may hold functional value for a child navigating a dangerous or neglectful home environment in the short term, they may cease to be adaptive in safer, more normative environments. This "maladaptive calibration" is hypothesized to embed a <strong>latent vulnerability</strong>, which may be associated with an increased risk of future psychiatric disorders <a href="https://doi.org/10.1111/jcpp.12713" target="_blank" class="text-blue-600 hover:underline">(McCrory et al., 2017)</a>.
-        </p>
-       </div>
+       <p class="text-slate-600 text-sm leading-relaxed mb-6">Coping responses may vary as a function of the level of need to escape distress and harm, ranging from immediate escape (e.g. violence, substance misuse, abandonment/neglect) to stronger forms of avoidance (e.g. avoiding going out, which reduces social support systems in the longer-term) <a href="https://link.springer.com/article/10.1023/B:JOBA.0000007455.08539.94" target="_blank" class="text-blue-600 hover:underline">(7)</a>.</p>
        
-       <!-- Social Thinning / Cycle of Victimization -->
-       <div>
-        <h4 class="text-amber-900 font-bold mb-2 flex items-center"><i class="fas fa-user-minus mr-2 text-amber-600"></i> Social Thinning & Revictimization</h4>
-        <p class="text-sm text-slate-700 leading-relaxed">
-         Research suggests that maltreated children may develop difficulties with emotional regulation or a hostile attribution style, potentially leading to submissive, socially withdrawn, or isolated behaviors. Over time, this can result in a <strong>"social thinning"</strong> of protective peer networks. Consequently, youth with histories of abuse may face a "cycle of victimization," as they have been found to be more likely to experience intimidation and physical assault by peers during adolescence <a href="https://doi.org/10.1016/j.chiabu.2016.08.003" target="_blank" class="text-blue-600 hover:underline">(Benedini et al., 2016)</a>.
+       <!-- Integrated Latent Vulnerability & Social Thinning -->
+       <div class="bg-slate-50 p-5 rounded-lg border border-slate-100">
+        <h5 class="text-sm font-bold text-slate-800 mb-2 flex items-center">
+         <i class="fas fa-project-diagram text-slate-500 mr-2"></i> Latent Vulnerability & Social Thinning
+        </h5>
+        <p class="text-slate-600 text-sm leading-relaxed mb-0">
+         These survival strategies can ultimately lead to a <strong>"social thinning"</strong> of protective peer networks as children become increasingly withdrawn or reactive. Over time, this maladaptive calibration to early adversity is thought to embed a <strong>latent vulnerability</strong>. While initially holding functional value in a dangerous environment, these biological and behavioural adaptations may significantly increase the longer-term risk of both psychiatric disorders <a href="https://doi.org/10.1111/jcpp.12713" target="_blank" class="text-blue-600 hover:underline">(McCrory et al., 2017)</a> and a continued cycle of peer victimization during adolescence <a href="https://doi.org/10.1016/j.chiabu.2016.08.003" target="_blank" class="text-blue-600 hover:underline">(Benedini et al., 2016)</a>.
         </p>
        </div>
+
       </div>
      </div>
     </div>
