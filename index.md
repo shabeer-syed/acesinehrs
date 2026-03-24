@@ -309,7 +309,7 @@ author_profile: false
 
     <a href="https://shabeer-syed.github.io/acesinehrs/codelistbrowse/" class="grid-card group">
      <div class="relative overflow-hidden bg-white">
-      <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png" alt="Code Lists" style="margin: 0 !important;">
+      <img src="images/code lists browse no text.png" alt="Code Lists" style="margin: 0 !important;">
      </div>
      <div class="p-5 flex-grow bg-white z-10 border-t border-gray-50">
       <h3 class="card-title">Browse Code Lists</h3>
