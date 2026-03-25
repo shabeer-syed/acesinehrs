@@ -80,7 +80,7 @@ author_profile: false
     font-size: 16px !important; line-height: 1.75 !important; color: #475569 !important; margin-bottom: 1.25rem !important;
   }
 
-  /* Notice Cards - FORCE static 15px max size */
+  /* Notice Cards */
   .notice-card {
     background-color: #ffffff !important; border-radius: 0.75rem !important; border: 1px solid #e2e8f0 !important;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important; padding: 1.25rem 1.5rem !important;
@@ -102,13 +102,6 @@ author_profile: false
   .dl-card:hover .dl-title { color: #2563eb !important; }
   .dl-meta { font-size: 13px !important; color: #64748b !important; margin-top: 0.25rem !important; }
 
-  /* Tables */
-  .custom-table-wrap { overflow-x: auto !important; margin-bottom: 2rem !important; border-radius: 0.75rem !important; border: 1px solid #e2e8f0 !important; box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important; background-color: #ffffff !important; }
-  .custom-table { width: 100% !important; border-collapse: collapse !important; text-align: left !important; }
-  .custom-table th { background-color: #f8fafc !important; padding: 1rem !important; font-size: 13px !important; font-weight: 600 !important; color: #334155 !important; text-transform: uppercase !important; border-bottom: 1px solid #e2e8f0 !important; }
-  .custom-table td { padding: 1rem !important; font-size: 14px !important; color: #475569 !important; border-bottom: 1px solid #e2e8f0 !important; vertical-align: middle !important; }
-  .custom-table tr:last-child td { border-bottom: none !important; }
-
   /* Code Blocks */
   .code-container {
     background: #0d1117 !important; border-radius: 0.5rem !important; overflow: hidden !important;
@@ -119,6 +112,7 @@ author_profile: false
   }
   .syntax-keyword { color: #ff7b72 !important; }
   .syntax-string { color: #a5d6ff !important; }
+  .syntax-function { color: #d2a8ff !important; }
 
   /* PUBLICATION LIST */
   .pub-item {
@@ -131,12 +125,6 @@ author_profile: false
     text-decoration: none !important; transition: color 0.2s !important; border: none !important; display: block !important;
   }
   .pub-link:hover { color: #1d4ed8 !important; text-decoration: underline !important; text-underline-offset: 3px !important; }
-
-  /* FLOURISH CONTAINER OVERRIDES */
-  .flourish-container-wrap {
-    background: #ffffff !important; border-radius: 1rem !important; border: 1px solid #e2e8f0 !important;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important; padding: 1.5rem !important; overflow: hidden !important;
-  }
 
   html { scroll-behavior: smooth; }
 </style>
@@ -185,7 +173,7 @@ author_profile: false
         </div>
         <div>
           <h4 class="text-[16px] !important text-blue-900">Suspected CM</h4>
-          <p class="text-[15px] !important text-slate-700">
+          <p class="text-[16px] !important text-slate-700 leading-relaxed">
             Suspected CM includes any maltreatment-related indicator with codes or measures describing presentations likely to refer to CM, but without mentioning the underlying cause (e.g., harm caused by non-specified person), safeguarding procedures, or child social service interventions. For instance, the "suspected CM, NOS" indicator contains codes mentioning <em>"Victim of sexual abuse"</em>, <em>"Multi-professional risk assessment done"</em>, and <em>"Assault in the home"</em>.
           </p>
         </div>
@@ -195,9 +183,9 @@ author_profile: false
 
   <!-- SECTION 2: INDICATOR LIST & DOWNLOADS -->
   <section class="bg-slate-50 py-16 border-b border-slate-200 shadow-inner">
-    <div class="max-w-5xl mx-auto px-6">
+    <div class="max-w-6xl mx-auto px-6">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
         
         <!-- Left Column: Downloads & Implementation -->
         <div class="lg:col-span-5 flex flex-col">
@@ -211,46 +199,85 @@ author_profile: false
             <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-rose-600 group-hover:bg-rose-50 transition-colors"><i class="fas fa-download"></i></div>
           </a>
           
-          <a href="https://github.com/shabeer-syed/acesinehrs/raw/master/assets/control_documentation/ACEsinEHRs%20Control%20documentation%20v2.pdf" target="_blank" class="text-sm text-blue-600 hover:underline font-medium mb-10 flex items-center">
+          <a href="https://github.com/shabeer-syed/acesinehrs/raw/master/assets/control_documentation/ACEsinEHRs%20Control%20documentation%20v2.pdf" target="_blank" class="text-sm text-blue-600 hover:underline font-medium mb-12 flex items-center">
             <i class="fas fa-file-pdf text-slate-400 mr-2"></i> ACEsinEHRs control documentation
           </a>
 
           <h3 class="content-subheading !mt-0">Implementation Rules</h3>
           <p class="content-text text-sm text-slate-600 mb-4">Certain specific indicators within this domain require rule-based algorithms to prevent misclassification.</p>
           
-          <div class="custom-table-wrap !mb-0">
-            <table class="custom-table">
+          <!-- Modern Code Card (Replaces awkward table) -->
+          <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden mb-0">
+            <div class="bg-slate-100 border-b border-slate-200 px-5 py-3">
+              <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Indicator:</span>
+              <span class="ml-2 font-bold text-slate-800">CM, FGM</span>
+            </div>
+            <div class="p-5">
+              <p class="text-[14px] text-slate-600 mb-4 leading-relaxed mt-0">
+                Apply codes mentioning circumcision to female children only (e.g. <em>"54314 - routine or ritual circumcision"</em>). Code list includes markers for rule inclusion.
+              </p>
+              <div class="code-container !mb-0">
+                <pre class="code-pre"><code>cm_fgm &lt;- merged_data %&gt;% 
+  <span class="syntax-function">filter</span>(Domain==<span class="syntax-string">"CM"</span> & individual==<span class="syntax-string">"4"</span> & gender==<span class="syntax-string">"female"</span>)</code></pre>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Indicator List Manual Table -->
+        <div class="lg:col-span-7">
+          <h3 class="content-subheading !mt-0">Indicator list</h3>
+          
+          <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden overflow-x-auto">
+            <table class="w-full text-left border-collapse min-w-[600px]">
               <thead>
-                <tr>
-                  <th style="width: 30%;">Indicator</th>
-                  <th>Rule / Algorithm</th>
+                <tr class="bg-slate-50 border-b border-slate-200 text-slate-800">
+                  <th class="p-4 font-bold text-sm uppercase tracking-wider w-24">ACE domain</th>
+                  <th class="p-4 font-bold text-sm uppercase tracking-wider w-32">Indicator code</th>
+                  <th class="p-4 font-bold text-sm uppercase tracking-wider">Indicator name</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td><strong class="text-slate-800">CM, FGM</strong></td>
-                  <td class="text-[13px]">
-                    <p class="mb-3">Apply codes mentioning circumcision to female children only (e.g. <em>"54314 - routine or ritual circumcision"</em>). Code list includes markers for rule inclusion.</p>
-                    <div class="code-container">
-                      <pre class="code-pre"><code>cm_fgm &lt;- merged_data %&gt;% 
-  <span class="syntax-function">filter</span>(Domain==<span class="syntax-string">"CM"</span> & individual==<span class="syntax-string">"4"</span> & gender==<span class="syntax-string">"female"</span>)</code></pre>
-                    </div>
-                  </td>
+              <tbody class="text-[15px] text-slate-700">
+                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                  <td class="bg-[#c4325a] border-b border-white/20 text-white font-semibold px-4 py-3 text-center">CM</td>
+                  <td class="p-4">CM1</td>
+                  <td class="p-4">Child protection/safeguarding</td>
+                </tr>
+                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                  <td class="bg-[#c4325a] border-b border-white/20 text-white font-semibold px-4 py-3 text-center">CM</td>
+                  <td class="p-4">CM2</td>
+                  <td class="p-4">CM NOS, incl. physical or sexual abuse (merged)</td>
+                </tr>
+                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                  <td class="bg-[#c4325a] border-b border-white/20 text-white font-semibold px-4 py-3 text-center">CM</td>
+                  <td class="p-4">CM3</td>
+                  <td class="p-4">Neglect (incl. NAS/FASD) and emotional/psychological abuse</td>
+                </tr>
+                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                  <td class="bg-[#c4325a] border-b border-white/20 text-white font-semibold px-4 py-3 text-center">CM</td>
+                  <td class="p-4">CM4</td>
+                  <td class="p-4">Social service involved (incl. parental imprisonment/criminal activity)</td>
+                </tr>
+                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                  <td class="bg-[#c4325a] border-b border-white/20 text-white font-semibold px-4 py-3 text-center">CM</td>
+                  <td class="p-4">CM5</td>
+                  <td class="p-4">Child in care</td>
+                </tr>
+                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                  <td class="bg-[#c4325a] border-b border-white/20 text-white font-semibold px-4 py-3 text-center">CM</td>
+                  <td class="p-4">CM6</td>
+                  <td class="p-4">Suspected CM NOS (incl. neglect and social service involvements)</td>
+                </tr>
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="bg-[#c4325a] text-white font-semibold px-4 py-3 text-center">CM</td>
+                  <td class="p-4">CM7</td>
+                  <td class="p-4">Child assaulted NOS (incl. physical/sexual abuse ≤10, rib fractures ≤3†)</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-        </div>
-
-        <!-- Right Column: Flourish Embed -->
-        <div class="lg:col-span-7">
-          <h3 class="content-subheading !mt-0">Indicator list</h3>
-          <div class="flourish-container-wrap">
-            <div class="flourish-embed flourish-table" data-src="visualisation/9799589">
-              <script src="https://public.flourish.studio/resources/embed.js"></script>
-            </div>
-          </div>
         </div>
 
       </div>
