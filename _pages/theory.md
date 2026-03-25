@@ -82,6 +82,15 @@ author_profile: false
     font-size: 17px !important; line-height: 1.75 !important; color: #cbd5e1 !important; margin-bottom: 1.5rem !important;
   }
 
+  /* SUPERSCRIPT RESET (Prevents line-height warping) */
+  sup {
+    font-size: 0.75em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    top: -0.5em;
+  }
+
   /* Modern Info Cards */
   .feature-card {
     background: #ffffff !important; border-radius: 1rem !important; border: 1px solid #e2e8f0 !important;
@@ -180,16 +189,16 @@ author_profile: false
     <section class="max-w-4xl mx-auto px-6 py-12 md:py-16">
       <h2 class="content-heading mt-0">Background</h2>
       <p class="content-text">
-        Adverse childhood experiences (ACEs) are potentially traumatic, neglectful or <a href="https://www.who.int/violenceprevention/approach/definition/en/" target="_blank" class="text-blue-600 font-medium hover:underline">violent</a> experiences in childhood. Examples of ACEs range from child maltreatment and witnessing violence in the home to growing up with a parent with a mental health problem <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">(1)</a>.
+        Adverse childhood experiences (ACEs) are potentially traumatic, neglectful or <a href="https://www.who.int/violenceprevention/approach/definition/en/" target="_blank" class="text-blue-600 font-medium hover:underline">violent</a> experiences in childhood. Examples of ACEs range from child maltreatment and witnessing violence in the home to growing up with a parent with a mental health problem<sup><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">1</a></sup>.
       </p>
       <p class="content-text">
-        The concept of adversity is not new. However, the term "ACEs" was first introduced by a groundbreaking <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">study published</a> in 1998 by the Centers for Disease Control and Prevention (CDC) and the Kaiser Permanente health care organisation in California, USA <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">(2)</a>. Led by co-principal investigators Dr Vincent Felitti and Dr Robert Anda, the study originated from repeated clinical observations within an obesity treatment programme during the 1980s. As doctors gathered patient histories, they noticed that severe weight gain, smoking, and substance use were frequently linked to early abuse or household dysfunction <a href="https://www.sciencedirect.com/science/article/pii/S074937971930100X#bib0002" target="_blank" class="text-blue-600 font-medium hover:underline">(3)</a>.
+        The concept of adversity is not new. However, the term "ACEs" was first introduced by a groundbreaking <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">study published</a> in 1998 by the Centers for Disease Control and Prevention (CDC) and the Kaiser Permanente health care organisation in California, USA<sup><a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">2</a></sup>. Led by co-principal investigators Dr Vincent Felitti and Dr Robert Anda, the study originated from repeated clinical observations within an obesity treatment programme during the 1980s. As doctors gathered patient histories, they noticed that severe weight gain, smoking, and substance use were frequently linked to early abuse or household dysfunction<sup><a href="https://www.sciencedirect.com/science/article/pii/S074937971930100X#bib0002" target="_blank" class="text-blue-600 font-medium hover:underline">3</a></sup>.
       </p>
       <p class="content-text">
-        They hypothesised that for many people, severe weight gain may be the result of an unconscious coping mechanism to manage unrecognised childhood trauma <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">(2)</a>. This led to a study evaluating over 17,000 adult patients, where the researchers established a strong dose-response relationship between the number of ACEs and health problems in adults, including premature death.
+        They hypothesised that for many people, severe weight gain may be the result of an unconscious coping mechanism to manage unrecognised childhood trauma<sup><a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 font-medium hover:underline">2</a></sup>. This led to a study evaluating over 17,000 adult patients, where the researchers established a strong dose-response relationship between the number of ACEs and health problems in adults, including premature death.
       </p>
       <p class="content-text mb-10">
-        The concept of ACEs helped bring together and measure a diverse set of preventable adverse childhood experiences that can lead to considerable long-term health problems, and can substantially pressure families, health and social care systems <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">(1)</a>.
+        The concept of ACEs helped bring together and measure a diverse set of preventable adverse childhood experiences that can lead to considerable long-term health problems, and can substantially pressure families, health and social care systems<sup><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">1</a></sup>.
       </p>
 
       <!-- CDC Style Callout Box for the 10 ACEs -->
@@ -261,7 +270,7 @@ author_profile: false
             </li>
             <li>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              <span>Amenable to health or social care intervention at a family level (i.e. excluding wider factors such as socioeconomic status, community violence, school bullying etc; see <a href="https://jamanetwork.com/journals/jama/fullarticle/2783975" target="_blank" class="text-blue-400 hover:underline">1</a>, <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2022-to-2025/chapter-4-identifying-and-working-with-families" target="_blank" class="text-blue-400 hover:underline">2</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749379719300315" target="_blank" class="text-blue-400 hover:underline">3</a>).</span>
+              <span>Amenable to health or social care intervention at a family level (i.e. excluding wider factors such as socioeconomic status, community violence, school bullying etc.)<sup><a href="https://jamanetwork.com/journals/jama/fullarticle/2783975" target="_blank" class="text-blue-400 hover:underline">1</a>, <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2022-to-2025/chapter-4-identifying-and-working-with-families" target="_blank" class="text-blue-400 hover:underline">2</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749379719300315" target="_blank" class="text-blue-400 hover:underline">3</a></sup>.</span>
             </li>
           </ul>
           <a href="#definitions-and-inclusions" class="inline-flex items-center text-blue-400 font-semibold hover:text-blue-300 hover:underline transition-colors mt-2 text-[16px]">
@@ -275,7 +284,11 @@ author_profile: false
     <!-- SECTION 2: Conceptual Model & Diagram (Slate 50) -->
     <section class="bg-slate-50 py-12 md:py-16 border-y border-slate-200 shadow-inner">
       <div class="max-w-5xl mx-auto px-6">
-        <h2 class="content-heading text-center mt-0 mb-6">A conceptual model of ACEs: the biopsychosocial approach</h2>
+        
+        <!-- UPDATED HEADER HIERARCHY -->
+        <h2 class="content-heading text-center mt-0 mb-4 border-none">Theory and frameworks</h2>
+        <h3 class="content-subheading text-center mt-0 mb-8 border-none text-slate-600">A conceptual model of ACEs: the biopsychosocial approach</h3>
+        
         <div class="max-w-4xl mx-auto">
           <p class="content-text text-center">
             The concept of ACEs is not based on a single theory. Instead, it is best understood through an integrative biopsychosocial model that combines psychological, biological, and sociological perspectives. The goal of this model is to explain why ACEs occur, how they lead to long-term health and social problems, and why their effects vary depending on the specific type or number of adversities experienced.
@@ -382,13 +395,13 @@ author_profile: false
                 People cope with stress and perceived threats using various survival strategies—such as <strong>avoidance, escape, or fighting</strong>—to minimise negative consequences. Children who grow up in dangerous, unpredictable, or highly stressful environments are more likely to perceive the world as unsafe and doubt their ability to manage challenges. To cope, children may develop <strong>cognitive biases towards threats</strong>, suppress their emotions, and avoid situations they fear will cause distress (aligning with <a href="https://psycnet.apa.org/record/1986-15090-001" target="_blank" class="text-blue-600 hover:underline">theories on emotional processing</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/10402694/" target="_blank" class="text-blue-600 hover:underline">selective attention and overestimation of threat</a>).
               </p>
               <p class="content-text">
-                While these coping mechanisms hold functional value and provide a short-term sense of safety, they can increase the long-term risk of health problems. <strong>First,</strong> these strategies overemphasise threats, creating a heightened state of alert that becomes difficult to "turn off" even in safer, normative environments where the behaviours are no longer effective. These children have a smaller window of tolerance to stress and perceived threat. <strong>Second,</strong> survival responses like avoidance, withdrawal, or reactive hostility prevent opportunities for new learning and the development of balanced cognitive appraisals (such as realising, "I can cope"). As these children grow, their trauma responses and behaviour can drive peers away, stripping them of protective social networks and increasing their vulnerability. This creates a <strong>maintenance cycle of stress</strong> <a href="https://doi.org/10.1111/jcpp.12713" target="_blank" class="text-blue-600 hover:underline">(4)</a>, <a href="https://doi.org/10.1016/j.chiabu.2016.08.003" target="_blank" class="text-blue-600 hover:underline">(5)</a>.
+                While these coping mechanisms hold functional value and provide a short-term sense of safety, they can increase the long-term risk of health problems. <strong>First,</strong> these strategies overemphasise threats, creating a heightened state of alert that becomes difficult to "turn off" even in safer, normative environments where the behaviours are no longer effective. These children have a smaller window of tolerance to stress and perceived threat. <strong>Second,</strong> survival responses like avoidance, withdrawal, or reactive hostility prevent opportunities for new learning and the development of balanced cognitive appraisals (such as realising, "I can cope"). As these children grow, their trauma responses and behaviour can drive peers away, stripping them of protective social networks and increasing their vulnerability. This creates a <strong>maintenance cycle of stress</strong><sup><a href="https://doi.org/10.1111/jcpp.12713" target="_blank" class="text-blue-600 hover:underline">4</a>, <a href="https://doi.org/10.1016/j.chiabu.2016.08.003" target="_blank" class="text-blue-600 hover:underline">5</a></sup>.
               </p>
               <p class="content-text">
-                For some families, these social risk factors and coping responses are <strong>carried over across generations</strong> as children become parents themselves. Whilst strategies are perceived as logical at the moment, over time, they can leave families in a cycle that perpetuates stress. As underlying stress increases, caregivers and children have fewer resources to cope and regulate responses (e.g. reduced response inhibition/executive functioning) <a href="https://pubmed.ncbi.nlm.nih.gov/12212647/" target="_blank" class="text-blue-600 hover:underline">(6)</a>, increasing the risk of more immediate coping responses to escape or re-gaining control (e.g. shouting, violence, neglect).
+                For some families, these social risk factors and coping responses are <strong>carried over across generations</strong> as children become parents themselves. Whilst strategies are perceived as logical at the moment, over time, they can leave families in a cycle that perpetuates stress. As underlying stress increases, caregivers and children have fewer resources to cope and regulate responses (e.g. reduced response inhibition/executive functioning)<sup><a href="https://pubmed.ncbi.nlm.nih.gov/12212647/" target="_blank" class="text-blue-600 hover:underline">6</a></sup>, increasing the risk of more immediate coping responses to escape or re-gaining control (e.g. shouting, violence, neglect).
               </p>
               <p class="content-text" style="margin-bottom: 0 !important;">
-                Coping responses may vary as a function of the level of need to escape distress and harm, ranging from immediate escape (e.g. violence, substance misuse, abandonment/neglect) to stronger forms of avoidance (e.g. avoiding going out, which reduces social support systems in the longer-term) <a href="https://link.springer.com/article/10.1023/B:JOBA.0000007455.08539.94" target="_blank" class="text-blue-600 hover:underline">(7)</a>.
+                Coping responses may vary as a function of the level of need to escape distress and harm, ranging from immediate escape (e.g. violence, substance misuse, abandonment/neglect) to stronger forms of avoidance (e.g. avoiding going out, which reduces social support systems in the longer-term)<sup><a href="https://link.springer.com/article/10.1023/B:JOBA.0000007455.08539.94" target="_blank" class="text-blue-600 hover:underline">7</a></sup>.
               </p>
             </div>
           </div>
@@ -400,7 +413,6 @@ author_profile: false
     <section class="bg-slate-100 py-12 md:py-16 border-y border-slate-200">
       <div class="max-w-4xl mx-auto px-6">
         
-        <!-- NEW ADDED TITLE HERE -->
         <h2 class="content-heading text-center mt-0 mb-12 border-none">Adverse Childhood Experiences (ACEs) using Electronic Health Records (EHRs)</h2>
 
         <h3 class="content-subheading mt-0 border-none"><i class="fas fa-chart-line text-blue-500 mr-2"></i> A multistage risk prediction model to determine relevance of candidate ACEs</h3>
@@ -416,13 +428,13 @@ author_profile: false
           Since the late 1990s, the initial "ACE domains" have undergone numerous expansions across studies. Whilst this variation helped innovate and adapt indicators of ACEs to different goals, there is currently little consistency in the definition and inclusion of ACEs. The large variation of measured ACEs also means there is no agreed reference standard for developing new measures of ACEs.
         </p>
         <p class="content-text">
-          Previous studies have mainly assessed the validity and relevance of ACEs based on their risk association with poorer health outcomes in adulthood. However, most studies reporting on the negative health effects of ACEs are based on cross-sectional samples of adults asked to recall experiences from childhood <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">(1)</a>. Recent birth cohort studies, however, reveal that ACEs are relatively poor predictors of negative health outcomes in adulthood relative to other socioeconomic factors <a href="https://jamanetwork.com/journals/jamapediatrics/article-abstract/2775420" target="_blank" class="text-blue-600 font-medium hover:underline">(2)</a>. 
+          Previous studies have mainly assessed the validity and relevance of ACEs based on their risk association with poorer health outcomes in adulthood. However, most studies reporting on the negative health effects of ACEs are based on cross-sectional samples of adults asked to recall experiences from childhood<sup><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">1</a></sup>. Recent birth cohort studies, however, reveal that ACEs are relatively poor predictors of negative health outcomes in adulthood relative to other socioeconomic factors<sup><a href="https://jamanetwork.com/journals/jamapediatrics/article-abstract/2775420" target="_blank" class="text-blue-600 font-medium hover:underline">2</a></sup>. 
         </p>
 
         <!-- ADDED PULL QUOTE FOR READABILITY -->
         <div class="border-l-4 border-l-blue-400 bg-blue-50 p-5 rounded-r-lg my-6">
           <p class="text-blue-900 font-medium mb-0" style="font-size: 16px; line-height: 1.6;">
-            <i class="fas fa-quote-left text-blue-300 mr-2"></i> Global studies by the World Health Organization show that traumatic stress symptoms naturally resolve on average six years after a linked traumatic event (e.g., an ACE) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5632781/" target="_blank" class="text-blue-600 hover:underline">(3)</a>, <a href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2595039" target="_blank" class="text-blue-600 hover:underline">(4)</a>.
+            <i class="fas fa-quote-left text-blue-300 mr-2"></i> Global studies by the World Health Organization show that traumatic stress symptoms naturally resolve on average six years after a linked traumatic event (e.g., an ACE)<sup><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5632781/" target="_blank" class="text-blue-600 hover:underline">3</a>, <a href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2595039" target="_blank" class="text-blue-600 hover:underline">4</a></sup>.
           </p>
         </div>
 
@@ -432,7 +444,7 @@ author_profile: false
 
         <h3 class="content-subheading mt-10 border-none"><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Establishing a consistent definition</h3>
         <p class="content-text mb-0">
-          To enhance consistency in developing clinically relevant ACE indicators for different data sources, we conducted several studies <a href="https://linkinghub.elsevier.com/retrieve/pii/S2589750022000619" target="_blank" class="text-blue-600 font-medium hover:underline">(4)</a> to establish a definition of ACEs based on a set of criteria. We also developed a testable theoretical biopsychosocial model of ACEs. This model facilitates theoretically informed predictions of which ACE indicators might be more relevant than others.
+          To enhance consistency in developing clinically relevant ACE indicators for different data sources, we conducted several studies<sup><a href="https://linkinghub.elsevier.com/retrieve/pii/S2589750022000619" target="_blank" class="text-blue-600 font-medium hover:underline">4</a></sup> to establish a definition of ACEs based on a set of criteria. We also developed a testable theoretical biopsychosocial model of ACEs. This model facilitates theoretically informed predictions of which ACE indicators might be more relevant than others.
         </p>
       </div>
     </section>
@@ -464,7 +476,7 @@ author_profile: false
               </li>
               <li>
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                Amenable to health or social care intervention at a family level (i.e. excluding wider factors such as socioeconomic status, community violence, school bullying etc; see <a href="https://jamanetwork.com/journals/jama/fullarticle/2783975" target="_blank" class="text-blue-400 hover:underline">1</a>, <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2022-to-2025/chapter-4-identifying-and-working-with-families" target="_blank" class="text-blue-400 hover:underline">2</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749379719300315" target="_blank" class="text-blue-400 hover:underline">3</a>).
+                Amenable to health or social care intervention at a family level (i.e. excluding wider factors such as socioeconomic status, community violence, school bullying etc.)<sup><a href="https://jamanetwork.com/journals/jama/fullarticle/2783975" target="_blank" class="text-blue-400 hover:underline">1</a>, <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2022-to-2025/chapter-4-identifying-and-working-with-families" target="_blank" class="text-blue-400 hover:underline">2</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749379719300315" target="_blank" class="text-blue-400 hover:underline">3</a></sup>.
               </li>
             </ul>
           </div>
@@ -479,7 +491,7 @@ author_profile: false
         </p>
 
         <p class="content-text-dark">
-          Given the substantial under-recording of CM and IPV (e.g. see <a href="https://www.cambridge.org/core/journals/the-british-journal-of-psychiatry/article/barriers-and-facilitators-of-disclosures-of-domestic-violence-by-mental-health-service-users-qualitative-study/7A690CCBC0322D045442549A5FA3C4CF" target="_blank" class="text-blue-400 hover:underline">1</a>, <a href="https://bjgp.org/content/67/659/e437.long" target="_blank" class="text-blue-400 hover:underline">2</a>), we also added the domain “high-risk presentations of CM” (HRP-CM). HRP-CM encompassed indicators from the <a href="https://www.nice.org.uk/guidance/cg89/chapter/1-Guidance" target="_blank" class="text-blue-400 font-medium hover:underline">National Institute for Health and Care Excellence (NICE)</a> and <a href="https://www.rcgp.org.uk/clinical-and-research/resources/toolkits/child-safeguarding-toolkit.aspx" target="_blank" class="text-blue-400 font-medium hover:underline">Royal College of General Practitioners (RGCP)</a> that should raise clinical suspicion for CM.
+          Given the substantial under-recording of CM and IPV<sup><a href="https://www.cambridge.org/core/journals/the-british-journal-of-psychiatry/article/barriers-and-facilitators-of-disclosures-of-domestic-violence-by-mental-health-service-users-qualitative-study/7A690CCBC0322D045442549A5FA3C4CF" target="_blank" class="text-blue-400 hover:underline">1</a>, <a href="https://bjgp.org/content/67/659/e437.long" target="_blank" class="text-blue-400 hover:underline">2</a></sup>, we also added the domain “high-risk presentations of CM” (HRP-CM). HRP-CM encompassed indicators from the <a href="https://www.nice.org.uk/guidance/cg89/chapter/1-Guidance" target="_blank" class="text-blue-400 font-medium hover:underline">National Institute for Health and Care Excellence (NICE)</a> and <a href="https://www.rcgp.org.uk/clinical-and-research/resources/toolkits/child-safeguarding-toolkit.aspx" target="_blank" class="text-blue-400 font-medium hover:underline">Royal College of General Practitioners (RGCP)</a> that should raise clinical suspicion for CM.
         </p>
 
         <div class="mt-8 bg-slate-800 p-6 rounded-xl border-l-4 border-l-emerald-500">
