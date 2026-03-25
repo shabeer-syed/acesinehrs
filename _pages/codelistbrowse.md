@@ -100,7 +100,7 @@ author_profile: false
       <!-- Action Bar: Legend & Download Button -->
       <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 md:p-6 mb-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
         
-        <!-- Rebuilt HTML Legend (Replaces old static image) -->
+        <!-- Rebuilt HTML Legend -->
         <div class="flex-1">
           <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3 m-0 border-none">Domain Abbreviations</h3>
           <div class="flex flex-wrap gap-2.5">
@@ -131,10 +131,10 @@ author_profile: false
           </div>
         </div>
 
-        <!-- Download Button -->
+        <!-- Download Button (Forced White Text) -->
         <div class="flex-shrink-0">
-          <a href="https://acesinehrs.com/starterguide/#downloads" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-[15px] font-semibold rounded-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
-            <i class="fas fa-file-download mr-2"></i> Download code lists
+          <a href="https://acesinehrs.com/starterguide/#downloads" style="color: #ffffff !important;" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-[15px] font-semibold rounded-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+            <i class="fas fa-file-download mr-2" style="color: #ffffff !important;"></i> Download code lists
           </a>
         </div>
       </div>
