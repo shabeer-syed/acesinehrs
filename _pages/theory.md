@@ -145,16 +145,6 @@ author_profile: false
   html { scroll-behavior: smooth; }
 </style>
 
-<!-- HIDDEN SVG DEFINITIONS FOR ARROWHEAD MARKERS -->
-<svg style="width:0; height:0; position:absolute;" aria-hidden="true" focusable="false">
-  <defs>
-    <!-- Solid Red Marker for Inter-Box Flow -->
-    <marker id="arrowhead-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444" />
-    </marker>
-  </defs>
-</svg>
-
 <!-- 4. The HTML Content -->
 <div class="full-bleed tailwind-wrap text-gray-800 antialiased flex flex-col min-h-screen">
 
@@ -212,9 +202,9 @@ author_profile: false
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            <!-- Child Maltreatment Card (Merged Abuse & Neglect) - Custom Red Accent -->
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-rose-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <h4 class="text-rose-600 font-bold mb-3 flex items-center text-lg"><i class="fas fa-child mr-2 text-rose-500"></i> Child maltreatment</h4>
+            <!-- Child Maltreatment Card (Reduced padding for less top breathing room) -->
+            <div class="bg-white px-5 pt-4 pb-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-rose-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <h4 class="text-rose-600 font-bold mb-2 flex items-center text-lg"><i class="fas fa-child mr-2 text-rose-500"></i> Child maltreatment</h4>
               <ul class="space-y-2 list-disc pl-5" style="font-size: 15px !important; color: #475569 !important;">
                 <li>Psychological abuse</li>
                 <li>Physical abuse</li>
@@ -224,9 +214,9 @@ author_profile: false
               </ul>
             </div>
 
-            <!-- Household Dysfunction Card -->
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-emerald-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <h4 class="text-emerald-700 font-bold mb-3 flex items-center text-lg"><i class="fas fa-house-damage mr-2 text-emerald-500"></i> Household dysfunction</h4>
+            <!-- Household Dysfunction Card (Reduced padding for less top breathing room) -->
+            <div class="bg-white px-5 pt-4 pb-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-emerald-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <h4 class="text-emerald-700 font-bold mb-2 flex items-center text-lg"><i class="fas fa-house-damage mr-2 text-emerald-500"></i> Household dysfunction</h4>
               <ul class="space-y-2 list-disc pl-5" style="font-size: 15px !important; color: #475569 !important;">
                 <li>Substance abuse</li>
                 <li>Mental illness</li>
@@ -238,12 +228,12 @@ author_profile: false
 
           </div>
           
-          <!-- Redesigned Tiny Footnotes (9px exactly) -->
+          <!-- Redesigned Tiny Footnotes (Aggressively forced to 10px so Jekyll cannot override) -->
           <div class="mt-8 pt-4 border-t border-slate-200 space-y-2">
-            <p class="text-[9px] text-slate-500 italic mb-0 leading-snug">
+            <p style="font-size: 10px !important; line-height: 1.4 !important; margin: 0 !important;" class="text-slate-500 italic">
               *Not included in the initial ACE domains <sup><a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 hover:underline">2</a></sup>; added in later studies to form the "Ten ACEs."
             </p>
-            <p class="text-[9px] text-slate-500 italic mb-0 leading-snug">
+            <p style="font-size: 10px !important; line-height: 1.4 !important; margin: 0 !important;" class="text-slate-500 italic">
               <sup>†</sup>In the UK, children exposed to intimate partner violence are legally recognised as victims of domestic abuse in their own right, and this exposure is classified as a form of child abuse <sup><a href="https://www.gov.uk/government/publications/domestic-abuse-bill-2020-factsheets/statutory-definition-of-domestic-abuse-factsheet" target="_blank" class="text-blue-600 hover:underline">4</a></sup>.
             </p>
           </div>
@@ -351,38 +341,48 @@ author_profile: false
           <!-- The Theory Boxes Grid -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 relative z-10 pt-6">
             
-            <!-- STATIC SOLID RED ARROW 1: Top Arrow (Right to Left / Life Course to Attachment) -->
-            <!-- Drawn as a sweeping 'C' curve to mimic a hand-drawn bend -->
-            <svg class="absolute hidden lg:block z-20 pointer-events-none opacity-90" 
-                 style="top: -10px; left: 40%; width: 20%; height: 50px; overflow: visible;" 
-                 viewBox="0 0 100 50" preserveAspectRatio="none">
-              <path d="M 100 50 C 90 -10, 10 -10, 0 50" fill="none" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowhead-red)" stroke-linecap="round" />
-            </svg>
-
-            <!-- STATIC SOLID RED ARROW 2: Bottom Left (Attachment to Cognitive) -->
-            <!-- Curves outward to the left then down -->
-            <svg class="absolute hidden lg:block z-20 pointer-events-none opacity-90" 
-                 style="top: 45%; left: 15%; width: 60px; height: 12%; overflow: visible;" 
-                 viewBox="0 0 60 100" preserveAspectRatio="none">
-              <path d="M 40 0 C -10 30, -10 70, 40 100" fill="none" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowhead-red)" stroke-linecap="round" />
-            </svg>
-
-            <!-- STATIC SOLID RED ARROW 3: Bottom Right (Life Course to Cognitive) -->
-            <!-- Curves outward to the right then down -->
-            <svg class="absolute hidden lg:block z-20 pointer-events-none opacity-90" 
-                 style="top: 45%; right: 15%; width: 60px; height: 12%; overflow: visible;" 
-                 viewBox="0 0 60 100" preserveAspectRatio="none">
-              <path d="M 20 0 C 70 30, 70 70, 20 100" fill="none" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowhead-red)" stroke-linecap="round" />
-            </svg>
-
             <!-- Card 1: Attachment (Col 1) -->
+            <!-- Embedded SVG drops downward out of this card -->
             <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-10">
+              
+              <!-- Bottom-Left Snaking Arrow (Drops into Cognitive Card) -->
+              <svg class="absolute hidden lg:block pointer-events-none z-0" style="bottom: -50px; left: 40px; width: 40px; height: 50px; overflow: visible;" viewBox="0 0 40 50">
+                <defs>
+                  <marker id="arrow-down-left" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444" />
+                  </marker>
+                </defs>
+                <path d="M 20 0 C -10 25, -10 25, 20 50" fill="none" stroke="#ef4444" stroke-width="3" marker-end="url(#arrow-down-left)" stroke-linecap="round" />
+              </svg>
+
               <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-link text-emerald-500 mr-2"></i> Attachment and learning theory</h4>
               <p class="content-text" style="margin-bottom: 0 !important; font-size: 15px !important;">Social risk factors can negatively influence carers' ability to respond, such as being available and responsive to a child's attachment cues. Children with ACEs may be more likely to develop insecure attachments from reduced caregiving responses of emotional validation (e.g., "my pain matters") and reduced experiences of healthy parental modelling of emotion regulation. This can also mean a child loses friends and the support of adults and misses out on opportunities to grow social support networks.</p>
             </div>
 
             <!-- Card 2: Life Course (Col 2) -->
+            <!-- Embedded SVGs branch Left (to Card 1) and Down (to Card 3) -->
             <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-10">
+              
+              <!-- Top-Left Snaking Arrow (Shoots out leftward into Attachment Card) -->
+              <svg class="absolute hidden lg:block pointer-events-none z-0" style="top: -20px; left: -80px; width: 80px; height: 40px; overflow: visible;" viewBox="0 0 80 40">
+                <defs>
+                  <marker id="arrow-left-top" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444" />
+                  </marker>
+                </defs>
+                <path d="M 80 40 C 60 10, 20 10, 0 40" fill="none" stroke="#ef4444" stroke-width="3" marker-end="url(#arrow-left-top)" stroke-linecap="round" />
+              </svg>
+
+              <!-- Bottom-Right Snaking Arrow (Drops into Cognitive Card) -->
+              <svg class="absolute hidden lg:block pointer-events-none z-0" style="bottom: -50px; right: 40px; width: 40px; height: 50px; overflow: visible;" viewBox="0 0 40 50">
+                <defs>
+                  <marker id="arrow-down-right" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444" />
+                  </marker>
+                </defs>
+                <path d="M 20 0 C 50 25, 50 25, 20 50" fill="none" stroke="#ef4444" stroke-width="3" marker-end="url(#arrow-down-right)" stroke-linecap="round" />
+              </svg>
+
               <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-road text-emerald-500 mr-2"></i> Life-course approach</h4>
               <p class="content-text" style="margin-bottom: 0 !important; font-size: 15px !important;">Taken together, the model views ACEs as a complex social phenomenon and considers families as resilient and constantly striving to cope using different strategies and resources at hand. The model helps separate the <em>adverse experience</em> from the <em>adverse stress</em> response, overcoming previous limitations of reverse causality when looking at long-term outcomes. We consider ACEs recorded at the family level amenable to service intervention and relevant to EHRs.</p>
             </div>
