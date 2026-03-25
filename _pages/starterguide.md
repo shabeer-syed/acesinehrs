@@ -45,12 +45,12 @@ author_profile: false
   .tailwind-wrap { box-sizing: border-box; }
   .tailwind-wrap h1, .tailwind-wrap h2, .tailwind-wrap h3, .tailwind-wrap h4,
   .tailwind-wrap p, .tailwind-wrap a, .tailwind-wrap span, .tailwind-wrap div,
-  .tailwind-wrap li, .tailwind-wrap ul {
+  .tailwind-wrap li, .tailwind-wrap ul, .tailwind-wrap td, .tailwind-wrap th {
     font-family: 'Inter', sans-serif !important;
   }
   
   /* Reset link styles BUT ignore custom components */
-  .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.dl-card):not(.step-link):not(.text-blue-600) {
+  .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.dl-card):not(.step-link):not(.grid-card):not(.text-blue-600) {
     border-bottom: none !important; text-decoration: none !important; box-shadow: none !important;
   }
 
@@ -65,32 +65,42 @@ author_profile: false
     max-width: 820px !important; margin-left: auto !important; margin-right: auto !important;
   }
 
-  /* === PREMIUM CONTENT STYLES === */
+  /* === PREMIUM CONTENT STYLES (Strictly locked to 16px to prevent Jekyll inflation) === */
   .content-heading {
     font-size: 28px !important; font-weight: 700 !important; color: #0f172a !important;
     margin-bottom: 1.5rem !important; margin-top: 4rem !important; border-bottom: 2px solid #e2e8f0 !important; padding-bottom: 0.5rem !important;
+    scroll-margin-top: 100px !important; /* Prevents anchor links from hiding under navbars */
   }
   .content-subheading {
     font-size: 20px !important; font-weight: 600 !important; color: #1e293b !important;
     margin-bottom: 1rem !important; margin-top: 2rem !important; border: none !important;
   }
-  /* STRICT font sizing to prevent Jekyll inflation */
-  .content-text {
+  
+  /* FORCE all main content paragraphs to static 16px */
+  .tailwind-wrap p.content-text, 
+  .tailwind-wrap .page__content p {
     font-size: 16px !important; line-height: 1.75 !important; color: #475569 !important; margin-bottom: 1.25rem !important;
   }
 
-  /* Notice Cards - Forced Static Sizes */
+  /* Notice Cards - FORCE static 15px max size */
   .notice-card {
-    background-color: #ffffff !important; border-radius: 1rem !important; border: 1px solid #e2e8f0 !important;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important; padding: 1.5rem !important;
+    background-color: #ffffff !important; border-radius: 0.75rem !important; border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important; padding: 1.25rem 1.5rem !important;
     margin-bottom: 1.5rem !important; display: flex !important; align-items: flex-start !important; gap: 1rem !important;
   }
-  .notice-danger { border-left: 6px solid #f97316 !important; }
-  .notice-info { border-left: 6px solid #3b82f6 !important; }
-  .notice-card h4 { font-size: 16px !important; font-weight: 700 !important; color: #0f172a !important; margin: 0 0 0.25rem 0 !important; border: none !important; }
-  .notice-card p { font-size: 15px !important; line-height: 1.6 !important; color: #475569 !important; margin: 0 !important; }
+  .notice-danger { border-left: 5px solid #f97316 !important; }
+  .notice-info { border-left: 5px solid #3b82f6 !important; }
+  
+  .tailwind-wrap .notice-card h4 { 
+    font-size: 16px !important; font-weight: 700 !important; color: #0f172a !important; margin: 0 0 0.25rem 0 !important; border: none !important; 
+  }
+  .tailwind-wrap .notice-card p, 
+  .tailwind-wrap .notice-card a, 
+  .tailwind-wrap .notice-card span { 
+    font-size: 15px !important; line-height: 1.6 !important; color: #475569 !important; margin: 0 !important; 
+  }
 
-  /* Custom Lists - Forced Static Sizes */
+  /* Custom Lists - FORCE static 16px */
   .custom-list { list-style: none !important; padding: 0 !important; margin: 0 0 1.5rem 0 !important; }
   .custom-list li {
     position: relative !important; padding-left: 2rem !important; margin-bottom: 1rem !important;
@@ -102,13 +112,13 @@ author_profile: false
 
   /* BMJ-Style Stepper Container */
   .stepper-scroll-container {
-    width: 100%; overflow-x: auto; padding-bottom: 1.5rem; scrollbar-width: thin;
+    width: 100%; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: thin;
   }
   .stepper-container {
-    display: flex; justify-content: space-between; position: relative; min-width: 900px;
+    display: flex; justify-content: space-between; position: relative; min-width: 900px; padding: 0 2rem;
   }
   .stepper-line {
-    position: absolute; top: 28px; left: 5%; right: 5%; height: 3px; background-color: #cbd5e1; z-index: 0;
+    position: absolute; top: 28px; left: 8%; right: 8%; height: 3px; background-color: #cbd5e1; z-index: 0;
   }
   .step-link {
     display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important;
@@ -168,6 +178,30 @@ author_profile: false
   .dl-title { font-size: 16px !important; font-weight: 600 !important; color: #0f172a !important; margin: 0 !important; transition: color 0.2s !important; }
   .dl-card:hover .dl-title { color: #2563eb !important; }
   .dl-meta { font-size: 13px !important; color: #64748b !important; margin-top: 0.25rem !important; }
+  
+  /* Modern Bottom Grid Cards (Matched to Theory page) */
+  .grid-card {
+    background-color: #ffffff !important; border-radius: 1.25rem !important; border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    text-decoration: none !important; display: flex !important; flex-direction: column !important; overflow: hidden !important;
+  }
+  .grid-card:hover {
+    transform: translateY(-6px) !important; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important; border-color: #cbd5e1 !important;
+  }
+  .grid-card .img-wrapper {
+    background-color: #ffffff !important; padding: 2.5rem 2rem 1.5rem 2rem !important; display: flex !important; justify-content: center !important; align-items: center !important;
+  }
+  .grid-card img {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important; width: auto !important; height: 120px !important; object-fit: contain !important; margin: 0 auto !important;
+  }
+  .grid-card:hover img { transform: scale(1.06) !important; }
+  .grid-card .content-wrapper {
+    padding: 1.5rem !important; flex-grow: 1 !important; background-color: #f8fafc !important; text-align: center !important; border-top: 1px solid #f1f5f9 !important;
+  }
+  .grid-card .card-title {
+    font-size: 19px !important; font-weight: 700 !important; color: #0f172a !important; margin: 0 0 10px 0 !important; border: none !important; transition: color 0.3s ease !important;
+  }
+  .grid-card:hover .card-title { color: #2563eb !important; }
 
   html { scroll-behavior: smooth; }
 </style>
@@ -207,7 +241,7 @@ author_profile: false
 
   <!-- BMJ-Style Horizontal Navigation Stepper -->
   <section class="bg-slate-50 py-10 border-b border-slate-200 shadow-inner">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-5xl mx-auto px-6">
       <div class="stepper-scroll-container">
         <div class="stepper-container">
           <div class="stepper-line"></div>
@@ -247,11 +281,21 @@ author_profile: false
     </div>
   </section>
 
-  <!-- Main Content Flow (No Sidebar, Max readability width) -->
-  <div class="max-w-4xl mx-auto px-6 pb-20 w-full">
+  <!-- Main Content Flow (Single Column, Highly Legible) -->
+  <div class="max-w-4xl mx-auto px-6 pb-20 w-full mt-10">
+
+    <!-- Re-instated small Blue Info Callout -->
+    <div class="bg-blue-50 border border-blue-100 rounded-lg py-3 px-4 mb-10 flex items-center gap-3 shadow-sm">
+      <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
+        <i class="fas fa-info text-sm"></i>
+      </div>
+      <p class="text-blue-900 font-medium m-0 text-[15px] !important border-none" style="font-size: 15px !important; line-height: 1.4 !important; margin: 0 !important;">
+        This page provides a guide to get you started incorporating validated indicators to identify ACEs in EHRs.
+      </p>
+    </div>
 
     <!-- 1. PREREQUISITES & GOVERNANCE -->
-    <h2 id="prerequisites" class="content-heading mt-10">1. Prerequisites & Governance</h2>
+    <h2 id="prerequisites" class="content-heading mt-0">1. Prerequisites & Governance</h2>
     <p class="content-text font-medium text-slate-800">Everything the researcher needs before touching the data. To use the ACE indicators, you will need:</p>
     
     <ul class="custom-list">
@@ -282,12 +326,12 @@ author_profile: false
       <li><i class="fas fa-sitemap"></i> <strong>Indicators:</strong> Specific grouped codes or measures.</li>
     </ul>
     
-    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-8 font-mono text-sm text-slate-700">
-      <div class="flex flex-col space-y-2">
-        <div class="flex items-center"><i class="fas fa-level-down-alt rotate-[-90deg] text-slate-400 mr-2"></i> Indicator 2</div>
-        <div class="flex items-center ml-6"><i class="fas fa-level-down-alt rotate-[-90deg] text-slate-400 mr-2"></i> Indicator 1</div>
-        <div class="flex items-center ml-12"><i class="fas fa-level-down-alt rotate-[-90deg] text-slate-400 mr-2"></i> Most specific indicator</div>
-        <div class="flex items-center ml-18 text-blue-600"><i class="fas fa-level-down-alt rotate-[-90deg] text-blue-400 mr-2"></i> Code (alphanumerical code attached to event)</div>
+    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-8 font-mono text-sm text-slate-700 shadow-sm">
+      <div class="flex flex-col space-y-3">
+        <div class="flex items-center font-semibold text-slate-800"><i class="fas fa-level-down-alt rotate-[-90deg] text-slate-400 mr-2"></i> Indicator 2</div>
+        <div class="flex items-center ml-6 text-slate-600"><i class="fas fa-level-down-alt rotate-[-90deg] text-slate-400 mr-2"></i> Indicator 1</div>
+        <div class="flex items-center ml-12 text-slate-500"><i class="fas fa-level-down-alt rotate-[-90deg] text-slate-400 mr-2"></i> Most specific indicator</div>
+        <div class="flex items-center ml-18 text-blue-600 font-medium bg-blue-50 px-2 py-1 rounded inline-block w-max"><i class="fas fa-level-down-alt rotate-[-90deg] text-blue-400 mr-2"></i> Code (alphanumerical code attached to event)</div>
       </div>
     </div>
 
@@ -297,28 +341,24 @@ author_profile: false
 
     <!-- Info Notice -->
     <div class="notice-card notice-info">
-      <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 mt-1">
-        <i class="fas fa-users text-xl"></i>
+      <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 mt-0.5">
+        <i class="fas fa-users text-sm"></i>
       </div>
       <div>
-        <h4>The "Think-Family" Approach</h4>
-        <p>Unless specified, indicators refer to information recorded in the child's, the mother's and the father's records. Properly studying ACEs requires a "think-family" approach. We recognise that the health and well-being of children are intricately tied to their parents' experiences and health outcomes.</p>
+        <h4 class="text-[16px] !important">The "Think-Family" Approach</h4>
+        <p class="text-[15px] !important">Unless specified, indicators refer to information recorded in the child's, the mother's and the father's records. Properly studying ACEs requires a "think-family" approach. We recognise that the health and well-being of children are intricately tied to their parents' experiences and health outcomes.</p>
       </div>
     </div>
 
     <!-- Danger Notice -->
     <div class="notice-card notice-danger">
-      <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 shrink-0 mt-1">
-        <i class="fas fa-exclamation-circle text-xl"></i>
+      <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 shrink-0 mt-0.5">
+        <i class="fas fa-exclamation-circle text-sm"></i>
       </div>
       <div>
-        <h4>Sample Size Guidelines</h4>
-        <p>The ability to use specific indicators depends on your sample size. We recommend restricting the disaggregation of specific indicators to those present in 250 or more unique children. For many studies, it will be most appropriate to use the six broad ACE domains only.</p>
+        <h4 class="text-[16px] !important">Sample Size Guidelines</h4>
+        <p class="text-[15px] !important">The ability to use specific indicators depends on your sample size. We recommend restricting the disaggregation of specific indicators to those present in 250 or more unique children. For many studies, it will be most appropriate to use the six broad ACE domains only.</p>
       </div>
-    </div>
-
-    <div class="my-8 rounded-xl overflow-hidden border border-slate-200 shadow-sm">
-      <div class="flourish-embed flourish-hierarchy" data-src="visualisation/7087179"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
     </div>
 
     <!-- 3. WORKING WITH CODE LISTS -->
@@ -461,12 +501,12 @@ aces_data &lt;- aces_data %&gt;% <span class="syntax-function">mutate_all</span>
     
     <!-- Danger Notice -->
     <div class="notice-card notice-danger">
-      <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 shrink-0 mt-1">
-        <i class="fas fa-clock text-xl"></i>
+      <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 shrink-0 mt-0.5">
+        <i class="fas fa-clock text-sm"></i>
       </div>
       <div>
-        <h4>Time Restrictions</h4>
-        <p>The validated ACE indicators are time sensitive and generally apply anytime between 2 years before birth and 10 years after birth. However, most child maltreatment algorithms are strictly limited to 2 years before birth up to 5 years after birth. Ascertaining correct exposure times is essential.</p>
+        <h4 class="text-[16px] !important">Time Restrictions</h4>
+        <p class="text-[15px] !important">The validated ACE indicators are time sensitive and generally apply anytime between 2 years before birth and 10 years after birth. However, most child maltreatment algorithms are strictly limited to 2 years before birth up to 5 years after birth. Ascertaining correct exposure times is essential.</p>
       </div>
     </div>
 
@@ -499,6 +539,19 @@ aces_data &lt;- aces_data %&gt;% <span class="syntax-function">mutate_all</span>
         <i class="fas fa-file-pdf text-rose-500 mr-2"></i> ACEsinEHRs control documentation & release information
       </a>
     </p>
+
+    <!-- Danger Notice -->
+    <div class="notice-card notice-danger mt-6">
+      <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 shrink-0 mt-0.5">
+        <i class="fas fa-code-branch text-sm"></i>
+      </div>
+      <div>
+        <h4 class="text-[16px] !important">Implementation Note</h4>
+        <p class="text-[15px] !important">
+          The indicators use <a href="https://advanced-r-solutions.rbind.io/control-flow.html" target="_blank" class="text-blue-600 hover:underline">control flow methods</a> to implement rule-based algorithms must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions, traumatic birth injuries or maternal-child transmissions.
+        </p>
+      </div>
+    </div>
 
     <h3 class="text-xl font-bold text-slate-800 mt-10 mb-4 border-none">Master Code Lists</h3>
     <p class="text-sm text-slate-500 mb-4">Right-click on link to save as a ".txt" file.</p>
@@ -629,17 +682,42 @@ aces_data &lt;- aces_data %&gt;% <span class="syntax-function">mutate_all</span>
       </a>
     </div>
 
-    <div class="flex gap-4 border-t border-slate-200 pt-8 mt-12 pb-10">
-      <a href="https://acesinehrs.com/" class="inline-flex items-center text-slate-500 hover:text-blue-600 font-medium transition-colors bg-slate-50 hover:bg-blue-50 px-4 py-2 rounded-lg border border-slate-200">
-        <i class="fas fa-arrow-left mr-2"></i> Homepage
-      </a>
-    </div>
+    <!-- SECTION 7: Next Steps / Navigation Grid (Copied from Theory page) -->
+    <section class="mt-16 pt-10 border-t border-slate-200">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
+        <a href="https://acesinehrs.com/ACE-domains/" class="grid-card group">
+          <div class="img-wrapper" style="padding-bottom: 0 !important;">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains.png" alt="View Domains" style="height: 180px !important;">
+          </div>
+          <div class="content-wrapper mt-4">
+            <h3 class="card-title">Explore ACE Domains</h3>
+            <p class="text-sm text-slate-500 mb-0">View comprehensive lists of selected indicators.</p>
+          </div>
+        </a>
+
+        <a href="https://acesinehrs.com/codelistbrowse/" class="grid-card group">
+          <div class="img-wrapper" style="padding-bottom: 0 !important;">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png" alt="Code Lists" style="height: 180px !important;">
+          </div>
+          <div class="content-wrapper mt-4">
+            <h3 class="card-title">Browse Code Lists</h3>
+            <p class="text-sm text-slate-500 mb-0">Search and access clinical code lists seamlessly.</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="text-center pb-10">
+        <a href="https://acesinehrs.com/" class="inline-flex items-center text-slate-500 hover:text-blue-600 font-medium transition-colors">
+          <i class="fas fa-arrow-left mr-2"></i> Go back to homepage
+        </a>
+      </div>
+    </section>
 
   </div>
 </div>
 
 <script>
-// Simple script to slightly style the active stepper item on click
+// Simple script to highlight the active stepper item on click
 document.addEventListener('DOMContentLoaded', () => {
   const steps = document.querySelectorAll('.step-link');
   
