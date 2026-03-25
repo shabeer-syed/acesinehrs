@@ -250,8 +250,8 @@ author_profile: false
         </div>
       </div>
 
-      <!-- Definition of ACEs Box (Redesigned matching snippet) -->
-      <div class="mt-10 bg-[#f8fafc] rounded-2xl border border-slate-200 overflow-hidden shadow-md">
+      <!-- Definition of ACEs Box (Added top border accent matching bottom box) -->
+      <div class="mt-10 bg-[#f8fafc] rounded-2xl border border-slate-200 border-t-[6px] border-t-blue-500 overflow-hidden shadow-md">
         <div class="bg-slate-100 px-6 py-4 border-b border-slate-200">
           <h3 class="text-xl font-bold text-slate-800 m-0 border-none flex items-center tracking-wide">
             <i class="fas fa-book-open mr-3 text-blue-600 opacity-90 text-lg"></i> Definition of ACEs
@@ -333,10 +333,10 @@ author_profile: false
       </div>
       
       <div class="space-y-0">
-        <!-- Society Level -->
-        <div class="feature-card border-t-4 border-t-blue-500 relative z-10 border-x-slate-200 border-b-slate-200 bg-white">
+        <!-- Society Level (Subtle Purple Tint) -->
+        <div class="bg-purple-50 p-6 rounded-xl shadow-sm border border-purple-100 border-t-4 border-t-purple-400 relative z-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
           <h3 class="content-subheading mt-0 flex items-center">
-            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3"><i class="fas fa-city text-lg"></i></div>
+            <div class="w-10 h-10 rounded-full bg-purple-200 text-purple-600 flex items-center justify-center mr-3"><i class="fas fa-city text-lg"></i></div>
             Society & community level
           </h3>
           <p class="content-text" style="margin-bottom: 0 !important;">Social determinants of health encompass socioeconomic conditions that shape health outcomes for individuals, families and communities. Children with ACEs are more likely to grow up in environments where raising a family and coping with everyday challenges is harder. Families may live in communities with high unemployment and a lack of local resources for families, with parents having to travel long distances to work, or family members may be more likely to suffer from health problems that make it difficult to work.</p>
@@ -351,27 +351,27 @@ author_profile: false
         <div class="bg-[#f8fafc] rounded-2xl p-6 md:p-10 border border-slate-200 shadow-sm relative">
           
           <h3 class="content-subheading mt-0 mb-8 flex items-center border-none relative z-20">
-            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mr-3"><i class="fas fa-users text-lg"></i></div>
+            <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center mr-3"><i class="fas fa-users text-lg"></i></div>
             Individual & family level
           </h3>
 
           <!-- The Theory Boxes Grid -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 relative z-10 pt-6">
             
-            <!-- Card 1: Attachment (Col 1) -->
-            <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-20">
+            <!-- Card 1: Attachment (Subtle Teal Tint) -->
+            <div class="bg-teal-50 p-6 rounded-xl shadow-md border border-teal-100 border-t-4 border-t-teal-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-20">
               
               <!-- GREY ARROW 2: Anchored to Bottom of Card 1 (Drops down into Cognitive Card) -->
               <svg class="absolute hidden lg:block pointer-events-none z-10" style="top: 100%; left: 20%; width: 40px; height: 60px; overflow: visible;" viewBox="0 0 40 60">
                 <path d="M 20 0 C -10 30, -10 30, 20 60" fill="none" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow-grey)" stroke-linecap="round" />
               </svg>
 
-              <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-link text-emerald-500 mr-2"></i> Attachment and learning theory</h4>
+              <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-link text-teal-600 mr-2"></i> Attachment and learning theory</h4>
               <p class="content-text" style="margin-bottom: 0 !important; font-size: 15px !important;">Social risk factors can negatively influence carers' ability to respond, such as being available and responsive to a child's attachment cues. Children with ACEs may be more likely to develop insecure attachments from reduced caregiving responses of emotional validation (e.g., "my pain matters") and reduced experiences of healthy parental modelling of emotion regulation. This can also mean a child loses friends and the support of adults and misses out on opportunities to grow social support networks.</p>
             </div>
 
-            <!-- Card 2: Life Course (Col 2) -->
-            <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-20">
+            <!-- Card 2: Life Course (Subtle Amber/Yellow Tint) -->
+            <div class="bg-amber-50 p-6 rounded-xl shadow-md border border-amber-100 border-t-4 border-t-amber-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-20">
               
               <!-- GREY ARROW 1: Anchored to Left side of Card 2 (Arcs over to Card 1) -->
               <svg class="absolute hidden lg:block pointer-events-none z-10" style="top: 40px; right: 100%; width: 60px; height: 30px; overflow: visible;" viewBox="0 0 60 30">
@@ -383,19 +383,19 @@ author_profile: false
                 <path d="M 20 0 C 50 30, 50 30, 20 60" fill="none" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow-grey)" stroke-linecap="round" />
               </svg>
 
-              <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-road text-emerald-500 mr-2"></i> Life-course approach</h4>
+              <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-road text-amber-600 mr-2"></i> Life-course approach</h4>
               <p class="content-text" style="margin-bottom: 0 !important; font-size: 15px !important;">Taken together, the model views ACEs as a complex social phenomenon and considers families as resilient and constantly striving to cope using different strategies and resources at hand. The model helps separate the <em>adverse experience</em> from the <em>adverse stress</em> response, overcoming previous limitations of reverse causality when looking at long-term outcomes. We consider ACEs recorded at the family level amenable to service intervention and relevant to EHRs.</p>
             </div>
             
-            <!-- Card 3: Cognitive & Behavioural (Spans both columns) -->
-            <div class="bg-white p-6 md:p-8 rounded-xl shadow-md border border-slate-100 lg:col-span-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-20 mt-4 lg:mt-0">
-              <h4 class="text-lg font-bold text-slate-800 mb-4"><i class="fas fa-brain text-emerald-500 mr-2"></i> Cognitive and behavioural theories</h4>
+            <!-- Card 3: Cognitive & Behavioural (Subtle Rose/Red Tint, Spans both columns) -->
+            <div class="bg-rose-50 p-6 md:p-8 rounded-xl shadow-md border border-rose-100 border-t-4 border-t-rose-400 lg:col-span-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-20 mt-4 lg:mt-0">
+              <h4 class="text-lg font-bold text-slate-800 mb-4"><i class="fas fa-brain text-rose-600 mr-2"></i> Cognitive and behavioural theories</h4>
               
               <p class="content-text" style="font-size: 15px !important;">
                 People cope with stress and perceived threats using various survival strategies—such as <strong>avoidance, escape, or fighting</strong>—to minimise negative consequences. Children who grow up in dangerous, unpredictable, or highly stressful environments are more likely to perceive the world as unsafe and doubt their ability to manage challenges. To cope, children may develop <strong>cognitive biases towards threats</strong>, suppress their emotions, and avoid situations they fear will cause distress (aligning with <a href="https://psycnet.apa.org/record/1986-15090-001" target="_blank" class="text-blue-600 hover:underline">theories on emotional processing</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/10402694/" target="_blank" class="text-blue-600 hover:underline">selective attention and overestimation of threat</a>).
               </p>
               <p class="content-text" style="font-size: 15px !important;">
-                While these coping mechanisms hold functional value and provide a short-term sense of safety, they can increase the long-term risk of health problems. <strong>First,</strong> these strategies overemphasise threats, creating a heightened state of alert that becomes difficult to "turn off" even in safer, normative environments where the behaviours are no longer effective. These children have a smaller window of tolerance to stress and perceived threat. <strong>Second,</strong> survival responses like avoidance, withdrawal, or reactive hostility prevent opportunities for new learning and the development of balanced cognitive appraisals (such as realising, "I can cope"). As these children grow, their trauma responses and behaviour can drive peers away, stripping them of protective social networks and increasing their vulnerability. This creates a <strong>maintenance cycle of stress</strong><sup><a href="https://doi.org/10.1111/jcpp.12713" target="_blank" class="text-blue-600 hover:underline">4</a>, <a href="https://doi.org/10.1016/j.chiabu.2016.08.003" target="_blank" class="text-blue-600 hover:underline">5</a></sup>.
+                While these coping mechanisms hold functional value and provide a short-term sense of safety, they can increase the long-term risk of health problems. <strong>First,</strong> these strategies overemphasise threats, creating a heightened state of alert that becomes difficult to "turn off" even in safer, normative environments where the behaviours are no longer effective. These children have a smaller window of tolerance to stress and perceived threat. <strong>Second,</strong> survival responses like avoidance, withdrawal, or reactive hostility prevent opportunities for new learning and the development of balanced cognitive appraisals (such as realising: "I'm safe", "I can cope"). As these children grow, their trauma responses and behaviour can drive peers away, stripping them of protective social networks and increasing their vulnerability. This creates a <strong>maintenance cycle of stress</strong><sup><a href="https://doi.org/10.1111/jcpp.12713" target="_blank" class="text-blue-600 hover:underline">4</a>, <a href="https://doi.org/10.1016/j.chiabu.2016.08.003" target="_blank" class="text-blue-600 hover:underline">5</a></sup>.
               </p>
               <p class="content-text" style="font-size: 15px !important;">
                 For some families, these social risk factors and coping responses are <strong>carried over across generations</strong> as children become parents themselves. Whilst strategies are perceived as logical at the moment, over time, they can leave families in a cycle that perpetuates stress. As underlying stress increases, caregivers and children have fewer resources to cope and regulate responses (e.g. reduced response inhibition/executive functioning)<sup><a href="https://pubmed.ncbi.nlm.nih.gov/12212647/" target="_blank" class="text-blue-600 hover:underline">6</a></sup>, increasing the risk of more immediate coping responses to escape or re-gaining control (e.g. shouting, violence, neglect).
