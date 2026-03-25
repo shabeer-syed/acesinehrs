@@ -50,7 +50,7 @@ author_profile: false
   }
   
   /* Reset link styles BUT ignore custom components */
-  .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.pub-link):not(.text-blue-600) {
+  .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.pub-link):not(.text-blue-600):not(.scholar-link) {
     border-bottom: none !important; text-decoration: none !important; box-shadow: none !important;
   }
 
@@ -62,7 +62,7 @@ author_profile: false
   .hero-subtitle {
     font-size: 20px !important; line-height: 1.6 !important; font-weight: 400 !important;
     color: rgb(241, 245, 249) !important; margin-bottom: 0 !important;
-    max-width: 820px !important;
+    max-width: 820px !important; margin-left: auto !important; margin-right: auto !important;
   }
 
   /* === PREMIUM CONTENT STYLES === */
@@ -121,6 +121,12 @@ author_profile: false
     text-decoration: none !important; transition: color 0.2s !important; border: none !important; display: block !important;
   }
   .pub-link:hover { color: #1d4ed8 !important; text-decoration: underline !important; text-underline-offset: 3px !important; }
+
+  /* WIDGET STYLES */
+  .scholar-feed::-webkit-scrollbar { width: 6px; }
+  .scholar-feed::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+  .scholar-feed::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+  .scholar-feed::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
   html { scroll-behavior: smooth; }
 </style>
@@ -218,7 +224,117 @@ author_profile: false
     </div>
   </section>
 
-  <!-- SECTION 2: Publication List -->
+  <!-- SECTION 2: Impact & Real-World Results (PORTED FROM ABOUT.MD) -->
+  <section class="bg-slate-900 text-white py-16 md:py-20 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Impact Text -->
+      <div class="lg:col-span-5">
+        <h2 class="text-3xl font-bold mb-6 text-white border-none leading-tight">
+          Real-World Impact:<br><span class="text-blue-400">From Research to Results</span>
+        </h2>
+        
+        <div class="flex gap-4 mb-8">
+          <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 flex-1 text-center">
+            <div class="text-2xl font-bold text-white">100+</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wide mt-1">Weekly Global Visits</div>
+          </div>
+          <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 flex-1 text-center">
+            <div class="text-2xl font-bold text-emerald-400">40+</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wide mt-1">Peer-Reviewed Citations</div>
+          </div>
+        </div>
+
+        <p class="text-slate-300 text-[15px] leading-relaxed mb-6">
+          The ACEsinEHRs open-access platform shares essential coding algorithms, tutorials, and theoretical frameworks that have been widely adopted by researchers globally.
+        </p>
+        
+        <div class="space-y-4 text-sm text-slate-300">
+          <div class="flex items-start">
+            <i class="fas fa-check-circle text-blue-400 mt-1 mr-3 text-[15px]"></i>
+            <div style="line-height: 1.6;">
+              <strong class="text-white">Advancing predictive algorithms:</strong> Our code lists have facilitated the creation of the first externally validated algorithms for identifying child maltreatment in routine care, and developed machine learning models predicting childhood mental health issues.
+            </div>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-check-circle text-blue-400 mt-1 mr-3 text-[15px]"></i>
+            <div style="line-height: 1.6;">
+              <strong class="text-white">Informing population health:</strong> Our family-linkage methodologies actively support evaluating health visiting models for ACE mitigation, optimising ACE screening protocols, and integrating healthcare responses to intimate partner violence.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Simulated Google Scholar Widget -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
+          
+          <!-- Widget Header -->
+          <div class="flex items-center justify-between border-b border-slate-200 pb-4 mb-4">
+            <div class="flex items-center text-slate-900">
+              <i class="fas fa-graduation-cap text-blue-600 text-2xl mr-3"></i>
+              <h3 class="text-lg font-bold m-0 border-none">Latest Citing Research</h3>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/512px-Google_Scholar_logo.svg.png" alt="Google Scholar" class="h-6">
+          </div>
+
+          <!-- Scrollable Feed -->
+          <div class="scholar-feed max-h-[300px] overflow-y-auto pr-3 space-y-5 text-slate-800">
+            
+            <div class="group">
+              <h4 class="text-blue-700 font-semibold text-[15px] leading-snug mb-1 group-hover:underline cursor-pointer">Developing machine models predicting childhood mental health issues</h4>
+              <p class="text-emerald-700 text-xs font-medium mb-1.5">Crowley et al. - <span class="text-slate-500 font-normal">2025</span></p>
+              <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2">Utilising ACEsinEHRs indicators to train predictive models identifying risk factors for adolescent psychiatric presentations.</p>
+            </div>
+
+            <div class="group">
+              <h4 class="text-blue-700 font-semibold text-[15px] leading-snug mb-1 group-hover:underline cursor-pointer">Analysing maternal vulnerabilities in the family court system</h4>
+              <p class="text-emerald-700 text-xs font-medium mb-1.5">Ireland et al. - <span class="text-slate-500 font-normal">2024</span></p>
+              <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2">A data-driven think-family approach investigating the intersection of domestic adversity and legal interventions.</p>
+            </div>
+
+            <div class="group">
+              <h4 class="text-blue-700 font-semibold text-[15px] leading-snug mb-1 group-hover:underline cursor-pointer">Optimising ACE screening in clinical practice</h4>
+              <p class="text-emerald-700 text-xs font-medium mb-1.5">Danese et al. - <span class="text-slate-500 font-normal">2024</span></p>
+              <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2">Evaluating routine care screening protocols against validated electronic health record phenotyping algorithms.</p>
+            </div>
+
+            <div class="group">
+              <h4 class="text-blue-700 font-semibold text-[15px] leading-snug mb-1 group-hover:underline cursor-pointer">Integrating healthcare responses to intimate partner violence</h4>
+              <p class="text-emerald-700 text-xs font-medium mb-1.5">Fanslow - <span class="text-slate-500 font-normal">2023</span></p>
+              <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2">Policy integration leveraging linked maternal and child health records to inform population-level interventions.</p>
+            </div>
+
+            <div class="group">
+              <h4 class="text-blue-700 font-semibold text-[15px] leading-snug mb-1 group-hover:underline cursor-pointer">Externally validating algorithms for identifying child maltreatment</h4>
+              <p class="text-emerald-700 text-xs font-medium mb-1.5">John et al. - <span class="text-slate-500 font-normal">2023</span></p>
+              <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2">The first external validation of coding algorithms designed to reliably identify safeguarding interventions in routine care.</p>
+            </div>
+            
+            <div class="group">
+              <h4 class="text-blue-700 font-semibold text-[15px] leading-snug mb-1 group-hover:underline cursor-pointer">Evaluating health visiting models for ACE mitigation</h4>
+              <p class="text-emerald-700 text-xs font-medium mb-1.5">Woodman et al. - <span class="text-slate-500 font-normal">2022</span></p>
+              <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2">Utilising standard data classifications to assess the efficacy of early-years public health visiting interventions.</p>
+            </div>
+
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="mt-6 flex flex-col sm:flex-row gap-3 pt-5 border-t border-slate-100">
+            <a href="https://scholar.google.co.uk/scholar?cites=17825954885314129992&as_sdt=2005&sciodt=0,5&hl=en" target="_blank" class="scholar-link flex-1 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 text-[13px] font-semibold py-3 px-4 rounded-lg flex items-center justify-center transition-colors">
+              View Core Study 1 Citations <i class="fas fa-external-link-alt ml-2 text-[11px]"></i>
+            </a>
+            <a href="https://scholar.google.co.uk/scholar?cites=15768036519941313473&as_sdt=2005&sciodt=0,5&hl=en" target="_blank" class="scholar-link flex-1 bg-blue-50 hover:bg-blue-100 border border-blue-100 text-blue-700 text-[13px] font-semibold py-3 px-4 rounded-lg flex items-center justify-center transition-colors">
+              View Core Study 2 Citations <i class="fas fa-external-link-alt ml-2 text-[11px]"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Publication List -->
   <section id="publication-list" class="bg-white py-16 md:py-24">
     <div class="max-w-4xl mx-auto px-6">
       
@@ -236,7 +352,7 @@ author_profile: false
           <a href="https://doi.org/10.1016/S2468-2667(24)00301-3" target="_blank" class="pub-link pr-4">
             Adverse childhood experiences in firstborns and mental health risk and health-care use in siblings: a population-based birth cohort study of half a million children in England
           </a>
-          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end">
+          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
             <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="173795607"></div>
           </div>
         </div>
@@ -246,7 +362,7 @@ author_profile: false
           <a href="https://doi.org/10.1016/S2468-2667(23)00119-6" target="_blank" class="pub-link pr-4">
             Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England
           </a>
-          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end">
+          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
             <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="150725211"></div>
           </div>
         </div>
@@ -264,7 +380,7 @@ author_profile: false
           <a href="https://doi.org/10.1016/S2589-7500(22)00061-9" target="_blank" class="pub-link pr-4">
             Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study
           </a>
-          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end">
+          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
             <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="128460919"></div>
           </div>
         </div>
@@ -274,7 +390,7 @@ author_profile: false
           <a href="https://doi.org/10.1038/s41598-023-34011-3" target="_blank" class="pub-link pr-4">
             An external validation of coding for childhood maltreatment in routinely collected primary and secondary care data
           </a>
-          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end">
+          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
             <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="148625842"></div>
           </div>
         </div>
@@ -284,7 +400,7 @@ author_profile: false
           <a href="http://dx.doi.org/10.1136/archdischild-2020-319027" target="_blank" class="pub-link pr-4">
             Predictive value of indicators for identifying child maltreatment and intimate partner violence in coded electronic health records: a systematic review and meta-analysis
           </a>
-          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end">
+          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
             <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="88250923"></div>
           </div>
         </div>
@@ -326,7 +442,7 @@ author_profile: false
           <a href="https://doi.org/10.1093/pubmed/fdaa115" target="_blank" class="pub-link pr-4">
             Are children who are home from school at an increased risk of child maltreatment?
           </a>
-          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end">
+          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
             <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="86946201"></div>
           </div>
         </div>
@@ -336,7 +452,7 @@ author_profile: false
           <a href="http://dx.doi.org/10.1136/bmjopen-2019-036564" target="_blank" class="pub-link pr-4">
             Association between health indicators of maternal adversity and the rate of infant entry to local authority care in England: a longitudinal ecological study
           </a>
-          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end">
+          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
             <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="88240312"></div>
           </div>
         </div>
@@ -346,7 +462,7 @@ author_profile: false
           <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)31045-0/fulltext" target="_blank" class="pub-link pr-4">
             Causes of death up to 10 years after admissions to hospitals for self-inflicted, drug-related or alcohol-related, or violent injury during adolescence: a retrospective, nationwide, cohort study
           </a>
-          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end">
+          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
             <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="20533675"></div>
           </div>
         </div>
@@ -356,7 +472,7 @@ author_profile: false
           <a href="https://bmjopen.bmj.com/content/5/2/e006079" target="_blank" class="pub-link pr-4">
             Violence, self-harm and drug or alcohol misuse in adolescents admitted to hospitals in England for injury: a retrospective cohort study
           </a>
-          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end">
+          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
             <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="3443408"></div>
           </div>
         </div>
@@ -366,7 +482,7 @@ author_profile: false
           <a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001931" target="_blank" class="pub-link pr-4">
             10-y Risks of Death and Emergency Re-admission in Adolescents Hospitalised with Violent, Drug- or Alcohol-Related, or Self-Inflicted Injury: A Population-Based Cohort Study
           </a>
-          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end">
+          <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
             <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="4934607"></div>
           </div>
         </div>
