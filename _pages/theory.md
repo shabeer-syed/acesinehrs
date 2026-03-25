@@ -149,12 +149,23 @@ author_profile: false
 
   /* SVG Arrow Flow Animation */
   @keyframes dash-flow {
-    to { stroke-dashoffset: -12; }
+    from { stroke-dashoffset: 16; }
+    to { stroke-dashoffset: 0; }
   }
-  .animate-dash {
+  .flowing-dash {
     animation: dash-flow 0.8s linear infinite;
   }
 </style>
+
+<!-- HIDDEN SVG DEFINITIONS FOR ARROWHEAD MARKER -->
+<svg style="width:0; height:0; position:absolute;" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Using hex #3b82f6 (Tailwind blue-500) directly to ensure arrowhead matches the line -->
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6" />
+    </marker>
+  </defs>
+</svg>
 
 <!-- 4. The HTML Content -->
 <div class="full-bleed tailwind-wrap text-gray-800 antialiased flex flex-col min-h-screen">
@@ -205,44 +216,44 @@ author_profile: false
       <div class="bg-blue-50 rounded-2xl border border-blue-100 overflow-hidden shadow-sm">
         <div class="bg-blue-600 px-6 py-4">
           <h3 class="text-xl font-bold text-white m-0 border-none flex items-center">
-            <i class="fas fa-clipboard-list mr-3 opacity-80"></i> The Original "Ten ACEs" Domains
+            <i class="fas fa-clipboard-list mr-3 opacity-80"></i> The Original Ten ACEs
           </h3>
         </div>
         <div class="p-6 md:p-8">
-          <p class="content-text">The initial ACEs predominately referred to domains of adversity in the home environment. They are typically categorised into three main groups:</p>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <p class="content-text">The initial ACEs predominately referred to domains of adversity in the home environment. They are typically categorised into the following main groups:</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            <!-- Abuse Card (Color Coded Border) -->
+            <!-- Child Maltreatment Card (Merged Abuse & Neglect) -->
             <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-blue-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <h4 class="text-blue-800 font-bold mb-3 flex items-center"><i class="fas fa-child mr-2 text-blue-500"></i> Abuse</h4>
+              <h4 class="text-blue-800 font-bold mb-3 flex items-center"><i class="fas fa-child mr-2 text-blue-500"></i> Child maltreatment</h4>
               <ul class="space-y-2 list-disc pl-4" style="font-size: 16px !important; color: #475569 !important;">
                 <li>Psychological abuse</li>
                 <li>Physical abuse</li>
                 <li>Sexual abuse</li>
+                <li>Physical neglect*</li>
+                <li>Emotional neglect*</li>
               </ul>
             </div>
 
-            <!-- Dysfunction Card (Color Coded Border) -->
+            <!-- Household Dysfunction Card -->
             <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-emerald-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <h4 class="text-emerald-800 font-bold mb-3 flex items-center"><i class="fas fa-house-damage mr-2 text-emerald-500"></i> Dysfunction</h4>
+              <h4 class="text-emerald-800 font-bold mb-3 flex items-center"><i class="fas fa-house-damage mr-2 text-emerald-500"></i> Household dysfunction</h4>
               <ul class="space-y-2 list-disc pl-4" style="font-size: 16px !important; color: #475569 !important;">
                 <li>Substance abuse</li>
                 <li>Mental illness</li>
                 <li>Domestic violence</li>
                 <li>Criminal behaviour</li>
-                <li>Parental separation</li>
+                <li>Parental separation*</li>
               </ul>
             </div>
 
-            <!-- Neglect Card (Color Coded Border) -->
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-rose-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <h4 class="text-rose-800 font-bold mb-3 flex items-center"><i class="fas fa-user-times mr-2 text-rose-500"></i> Neglect</h4>
-              <ul class="space-y-2 list-disc pl-4" style="font-size: 16px !important; color: #475569 !important;">
-                <li>Physical neglect</li>
-                <li>Emotional neglect</li>
-              </ul>
-            </div>
           </div>
+          
+          <!-- Tiny Footnote -->
+          <p class="mt-6 text-[13px] text-slate-500 italic mb-0 leading-snug">
+            *Not included in the initial ACE domains; added in later studies to form the "Ten ACEs."
+          </p>
         </div>
       </div>
 
@@ -258,7 +269,7 @@ author_profile: false
           <ul class="custom-list-dark mb-6">
             <li>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              <span>Frightening, violent, traumatic or neglectful <a href="https://apps.who.int/iris/bitstream/handle/10665/42495/9241545615_eng.pdf" target="_blank" class="text-blue-400 hover:underline">(see WHO violence definition)</a>, with potential for immediate or longer-term harm to a child's biopsychosocial development (intentionally or unintentionally) <a href="https://assets.publishing.service.gov.uk/media/65cb4349a7ded0000c79e4e1/Working_together_to_safeguard_children_2023_-_statutory_guidance.pdf" target="_blank" class="text-blue-400 hover:underline">(see UK government definition)</a>;</span>
+              <span>Frightening, violent, traumatic or neglectful (<a href="https://apps.who.int/iris/bitstream/handle/10665/42495/9241545615_eng.pdf" target="_blank" class="text-blue-400 hover:underline">see WHO violence definition</a>), with potential for immediate or longer-term harm to a child's biopsychosocial development (intentionally or unintentionally) (<a href="https://assets.publishing.service.gov.uk/media/65cb4349a7ded0000c79e4e1/Working_together_to_safeguard_children_2023_-_statutory_guidance.pdf" target="_blank" class="text-blue-400 hover:underline">see UK government definition</a>);</span>
             </li>
             <li>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -341,39 +352,30 @@ author_profile: false
             <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mr-3"><i class="fas fa-users text-lg"></i></div>
             Individual & family level
           </h3>
-          
-          <!-- CYCLICAL ARROWS SVG DEFINITIONS & OVERLAYS -->
-          <svg width="0" height="0" class="absolute">
-            <defs>
-              <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
-              </marker>
-            </defs>
-          </svg>
 
           <!-- The Theory Boxes Grid -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
             
-            <!-- Top Arrow: Life-course (Right) to Attachment (Left) -->
-            <div class="hidden lg:block absolute -top-8 left-[25%] right-[25%] h-12 text-blue-400 opacity-60 pointer-events-none z-0">
-              <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path class="animate-dash" d="M 90 80 Q 50 0 10 80" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrowhead)" />
-              </svg>
-            </div>
+            <!-- TOP ARROW (Life Course -> Attachment) -->
+            <svg class="absolute hidden lg:block z-30 pointer-events-none text-blue-500" 
+                 style="top: -25px; left: 25%; right: 25%; width: 50%; height: 50px; overflow: visible;" 
+                 viewBox="0 0 100 50" preserveAspectRatio="none">
+              <path class="flowing-dash" d="M 90 45 Q 50 -10 10 45" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="8,8" marker-end="url(#arrowhead)" />
+            </svg>
 
-            <!-- Left Arrow: Attachment (Top) to Cognitive (Bottom) -->
-            <div class="hidden lg:block absolute top-[15%] bottom-[20%] -left-8 w-12 text-blue-400 opacity-60 pointer-events-none z-0">
-              <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path class="animate-dash" d="M 80 10 Q 0 50 80 90" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrowhead)" />
-              </svg>
-            </div>
+            <!-- LEFT ARROW (Attachment -> Cognitive) -->
+            <svg class="absolute hidden lg:block z-30 pointer-events-none text-blue-500" 
+                 style="top: 25%; bottom: 25%; left: -30px; width: 60px; height: 50%; overflow: visible;" 
+                 viewBox="0 0 50 100" preserveAspectRatio="none">
+              <path class="flowing-dash" d="M 40 10 Q -10 50 40 90" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="8,8" marker-end="url(#arrowhead)" />
+            </svg>
 
-            <!-- Right Arrow: Cognitive (Bottom) to Life-course (Top) -->
-            <div class="hidden lg:block absolute top-[25%] bottom-[30%] -right-8 w-12 text-blue-400 opacity-60 pointer-events-none z-0">
-              <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path class="animate-dash" d="M 20 90 Q 100 50 20 10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrowhead)" />
-              </svg>
-            </div>
+            <!-- RIGHT ARROW (Cognitive -> Life Course) -->
+            <svg class="absolute hidden lg:block z-30 pointer-events-none text-blue-500" 
+                 style="top: 25%; bottom: 25%; right: -30px; width: 60px; height: 50%; overflow: visible;" 
+                 viewBox="0 0 50 100" preserveAspectRatio="none">
+              <path class="flowing-dash" d="M 10 90 Q 60 50 10 10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="8,8" marker-end="url(#arrowhead)" />
+            </svg>
 
             <!-- Card 1: Attachment (Col 1) -->
             <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md relative z-10">
@@ -413,6 +415,7 @@ author_profile: false
     <section class="bg-slate-100 py-12 md:py-16 border-y border-slate-200">
       <div class="max-w-4xl mx-auto px-6">
         
+        <!-- NEW ADDED TITLE HERE -->
         <h2 class="content-heading text-center mt-0 mb-12 border-none">Adverse Childhood Experiences (ACEs) using Electronic Health Records (EHRs)</h2>
 
         <h3 class="content-subheading mt-0 border-none"><i class="fas fa-chart-line text-blue-500 mr-2"></i> A multistage risk prediction model to determine relevance of candidate ACEs</h3>
