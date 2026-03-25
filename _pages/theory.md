@@ -143,25 +143,12 @@ author_profile: false
   .grid-card:hover .card-title { color: #2563eb !important; }
   
   html { scroll-behavior: smooth; }
-
-  /* SVG Arrow Flow Animation */
-  @keyframes dash-flow {
-    from { stroke-dashoffset: 16; }
-    to { stroke-dashoffset: 0; }
-  }
-  .flowing-dash {
-    animation: dash-flow 0.8s linear infinite;
-  }
 </style>
 
 <!-- HIDDEN SVG DEFINITIONS FOR ARROWHEAD MARKERS -->
 <svg style="width:0; height:0; position:absolute;" aria-hidden="true" focusable="false">
   <defs>
-    <!-- Original Blue Marker (Optional) -->
-    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6" />
-    </marker>
-    <!-- New Red Marker for Animated Interactive Flow -->
+    <!-- Solid Red Marker for Inter-Box Flow -->
     <marker id="arrowhead-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444" />
     </marker>
@@ -251,12 +238,12 @@ author_profile: false
 
           </div>
           
-          <!-- Redesigned Tiny Footnotes -->
+          <!-- Redesigned Tiny Footnotes (9px exactly) -->
           <div class="mt-8 pt-4 border-t border-slate-200 space-y-2">
-            <p class="text-xs text-slate-500 italic mb-0 leading-snug">
+            <p class="text-[9px] text-slate-500 italic mb-0 leading-snug">
               *Not included in the initial ACE domains <sup><a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 hover:underline">2</a></sup>; added in later studies to form the "Ten ACEs."
             </p>
-            <p class="text-xs text-slate-500 italic mb-0 leading-snug">
+            <p class="text-[9px] text-slate-500 italic mb-0 leading-snug">
               <sup>†</sup>In the UK, children exposed to intimate partner violence are legally recognised as victims of domestic abuse in their own right, and this exposure is classified as a form of child abuse <sup><a href="https://www.gov.uk/government/publications/domestic-abuse-bill-2020-factsheets/statutory-definition-of-domestic-abuse-factsheet" target="_blank" class="text-blue-600 hover:underline">4</a></sup>.
             </p>
           </div>
@@ -317,13 +304,16 @@ author_profile: false
           </p>
         </div>
 
-        <!-- Image Card -->
+        <!-- Image Card with matching button -->
         <div class="mt-10 bg-white p-4 md:p-8 rounded-2xl shadow-md border border-slate-200 text-center relative overflow-hidden group">
           <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/formulation%20lower%20res%201.png" alt="Biopsychosocial model of ACEs formulation" class="w-full h-auto object-contain rounded-lg mx-auto transition-transform duration-500 group-hover:scale-[1.02]" style="max-width: 800px; margin: 0 auto !important;">
-          <p class="text-sm text-slate-500 mt-6 mb-2 italic">The figure does not represent an exhaustive list of potential mechanisms behind ACEs.</p>
-          <a href="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/formulation.png" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm mt-2">
+          <p class="text-sm text-slate-500 mt-6 mb-4 italic">The figure does not represent an exhaustive list of potential mechanisms behind ACEs.</p>
+          
+          <!-- Styled "View Figure" Button matched to platform aesthetics -->
+          <a href="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/formulation.png" target="_blank" class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
             <i class="fas fa-search-plus mr-2"></i> View Figure in High Resolution
           </a>
+
         </div>
       </div>
     </section>
@@ -361,28 +351,28 @@ author_profile: false
           <!-- The Theory Boxes Grid -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 relative z-10 pt-6">
             
-            <!-- INTERACTIVE RED ARROW 1: Top Arrow (Right to Left / Life Course to Attachment) -->
+            <!-- STATIC SOLID RED ARROW 1: Top Arrow (Right to Left / Life Course to Attachment) -->
+            <!-- Drawn as a sweeping 'C' curve to mimic a hand-drawn bend -->
             <svg class="absolute hidden lg:block z-20 pointer-events-none opacity-90" 
-                 style="top: -15px; left: 45%; width: 10%; height: 60px; overflow: visible;" 
-                 viewBox="0 0 100 60" preserveAspectRatio="none">
-              <!-- Curves from right origin, arches up, points left -->
-              <path class="flowing-dash" d="M 100 40 Q 50 -20 0 40" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="8,8" marker-end="url(#arrowhead-red)" stroke-linecap="round" />
+                 style="top: -10px; left: 40%; width: 20%; height: 50px; overflow: visible;" 
+                 viewBox="0 0 100 50" preserveAspectRatio="none">
+              <path d="M 100 50 C 90 -10, 10 -10, 0 50" fill="none" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowhead-red)" stroke-linecap="round" />
             </svg>
 
-            <!-- INTERACTIVE RED ARROW 2: Bottom Left (Attachment to Cognitive) -->
+            <!-- STATIC SOLID RED ARROW 2: Bottom Left (Attachment to Cognitive) -->
+            <!-- Curves outward to the left then down -->
             <svg class="absolute hidden lg:block z-20 pointer-events-none opacity-90" 
-                 style="top: 42%; left: 20%; width: 60px; height: 12%; overflow: visible;" 
+                 style="top: 45%; left: 15%; width: 60px; height: 12%; overflow: visible;" 
                  viewBox="0 0 60 100" preserveAspectRatio="none">
-              <!-- Drops down from left origin, bulges left, points at bottom block -->
-              <path class="flowing-dash" d="M 30 0 Q -30 50 30 100" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="8,8" marker-end="url(#arrowhead-red)" stroke-linecap="round" />
+              <path d="M 40 0 C -10 30, -10 70, 40 100" fill="none" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowhead-red)" stroke-linecap="round" />
             </svg>
 
-            <!-- INTERACTIVE RED ARROW 3: Bottom Right (Life Course to Cognitive) -->
+            <!-- STATIC SOLID RED ARROW 3: Bottom Right (Life Course to Cognitive) -->
+            <!-- Curves outward to the right then down -->
             <svg class="absolute hidden lg:block z-20 pointer-events-none opacity-90" 
-                 style="top: 42%; right: 20%; width: 60px; height: 12%; overflow: visible;" 
+                 style="top: 45%; right: 15%; width: 60px; height: 12%; overflow: visible;" 
                  viewBox="0 0 60 100" preserveAspectRatio="none">
-              <!-- Drops down from right origin, bulges right, points at bottom block -->
-              <path class="flowing-dash" d="M 30 0 Q 90 50 30 100" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="8,8" marker-end="url(#arrowhead-red)" stroke-linecap="round" />
+              <path d="M 20 0 C 70 30, 70 70, 20 100" fill="none" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowhead-red)" stroke-linecap="round" />
             </svg>
 
             <!-- Card 1: Attachment (Col 1) -->
