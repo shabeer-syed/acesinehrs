@@ -120,23 +120,19 @@ author_profile: false
         All ACE domains <span style="color: #bfdbfe !important;">& indicators</span>
       </h1>
       <p class="hero-subtitle drop-shadow-md mx-auto md:mx-0">
-        A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)
+        Browse and access comprehensive lists of validated ACE indicators, organized by clinical domain, complete with definitions and relevance rankings.
       </p>
       
       <div class="mt-8 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
         
-        <!-- Primary CTA -->
+        <!-- Primary CTA 1 -->
         <a href="https://acesinehrs.com/starterguide/" class="inline-flex items-center px-6 py-3 bg-white text-slate-900 text-base font-bold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
           Need help getting started? <i class="fas fa-arrow-right ml-2 text-blue-600"></i>
         </a>
 
-        <!-- Secondary Badge -->
-        <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext" target="_blank" class="inline-flex items-center px-5 py-3 bg-slate-900 bg-opacity-60 hover:bg-opacity-80 border border-slate-700 rounded-full text-blue-200 text-sm font-medium transition-all backdrop-blur-md">
-          <span class="flex h-2.5 w-2.5 relative mr-3">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
-          </span>
-          New study out in Lancet Public Health!
+        <!-- Primary CTA 2 -->
+        <a href="https://acesinehrs.com/theory/" class="inline-flex items-center px-6 py-3 bg-white text-slate-900 text-base font-bold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+          Theories & frameworks of ACEs? <i class="fas fa-arrow-right ml-2 text-blue-600"></i>
         </a>
 
       </div>
@@ -171,7 +167,7 @@ author_profile: false
             <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/child%20maltreatment.png" alt="Child Maltreatment">
           </div>
           <div class="card-content">
-            <h3 class="card-title">View domain & indicators</h3>
+            <h3 class="card-title">Child maltreatment</h3>
             <p class="card-desc">Lists all selected indicators.</p>
           </div>
         </a>
@@ -182,7 +178,7 @@ author_profile: false
             <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Intimate%20partner%20violence.png" alt="Intimate Partner Violence">
           </div>
           <div class="card-content">
-            <h3 class="card-title">View domain & indicators</h3>
+            <h3 class="card-title">Intimate partner violence</h3>
             <p class="card-desc">Lists all selected indicators.</p>
           </div>
         </a>
@@ -193,7 +189,7 @@ author_profile: false
             <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/parental%20mental%20health%20problems.png" alt="Parental Mental Health Problems">
           </div>
           <div class="card-content">
-            <h3 class="card-title">View domain & indicators</h3>
+            <h3 class="card-title">Parental mental health problems</h3>
             <p class="card-desc">Lists all selected indicators.</p>
           </div>
         </a>
@@ -204,7 +200,7 @@ author_profile: false
             <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/Parental%20substance%20misuse.png" alt="Parental Substance Misuse">
           </div>
           <div class="card-content">
-            <h3 class="card-title">View domain & indicators</h3>
+            <h3 class="card-title">Parental substance misuse</h3>
             <p class="card-desc">Lists all selected indicators.</p>
           </div>
         </a>
@@ -215,7 +211,7 @@ author_profile: false
             <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/adverse%20family%20environments.png" alt="Adverse Family Environments">
           </div>
           <div class="card-content">
-            <h3 class="card-title">View domain & indicators</h3>
+            <h3 class="card-title">Adverse family environments</h3>
             <p class="card-desc">Lists all selected indicators.</p>
           </div>
         </a>
@@ -226,7 +222,7 @@ author_profile: false
             <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/high-risk%20presentattion%20of%20child%20maltreatment.png" alt="High-risk Presentation of Child Maltreatment">
           </div>
           <div class="card-content">
-            <h3 class="card-title">View domain & indicators</h3>
+            <h3 class="card-title">High-risk presentation of child maltreatment</h3>
             <p class="card-desc">Lists all selected indicators.</p>
           </div>
         </a>
