@@ -67,9 +67,8 @@ author_profile: false
 
   /* === HERO TYPOGRAPHY === */
   .hero-title {
-    font-size: 48px !important; line-height: 1.1 !important; font-weight: 800 !important;
+    font-size: 48px !important; line-height: 1.1 !important; font-weight: 700 !important;
     color: rgb(255, 255, 255) !important; margin-bottom: 24px !important; border: none !important;
-    letter-spacing: -0.02em !important;
   }
   .hero-subtitle {
     font-size: 20px !important; line-height: 1.6 !important; font-weight: 400 !important;
@@ -90,14 +89,6 @@ author_profile: false
   .content-text {
     font-size: 16px !important; line-height: 1.75 !important; color: #475569 !important; margin-bottom: 1.25rem !important;
   }
-
-  /* Notice Cards */
-  .notice-card {
-    background-color: #ffffff !important; border-radius: 1rem !important; border: 1px solid #e2e8f0 !important;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important; padding: 1.5rem !important;
-    margin-bottom: 1.5rem !important; display: flex !important; align-items: flex-start !important; gap: 1rem !important;
-  }
-  .notice-info { border-left: 4px solid #3b82f6 !important; }
 
   /* Premium Box Panels (For Downloads & Rules) */
   .panel-card {
@@ -167,19 +158,11 @@ author_profile: false
 <!-- 4. The HTML Content -->
 <div class="full-bleed tailwind-wrap text-gray-800 antialiased flex flex-col min-h-screen">
 
-  <!-- Hero Section -->
-  <header class="relative bg-slate-900 overflow-hidden">
-    <!-- Overlay Image -->
-    <div class="absolute inset-0 opacity-40 mix-blend-multiply" style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Child%20maltreatment%20aces%20in%20ehrs.jpg'); background-size: cover; background-position: center;"></div>
-    <!-- Gradient Overlay for readability -->
-    <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40"></div>
-    
+  <!-- ORIGINAL HERO SECTION RESTORED -->
+  <header class="relative bg-slate-800 bg-opacity-70 text-white" style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Child%20maltreatment%20aces%20in%20ehrs.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;">
     <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-32 text-center md:text-left">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/20 text-rose-200 border border-rose-500/30 text-sm font-semibold mb-6">
-        <i class="fas fa-shield-alt"></i> ACE Domain Reference
-      </div>
       <h1 class="hero-title drop-shadow-lg">
-        Child <span class="text-rose-400">maltreatment</span>
+        Child <span style="color: #bfdbfe !important;">maltreatment</span>
       </h1>
       <p class="hero-subtitle drop-shadow-md mx-auto md:mx-0">
         This domain includes indicators of child maltreatment (CM). CM refers to any act of commission or omission by a parent or other caregiver that results in harm, potential for harm, or threat of harm to a child. Harm does not need to be intended.
