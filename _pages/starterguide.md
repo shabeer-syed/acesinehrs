@@ -67,7 +67,7 @@ author_profile: false
 
   /* === PREMIUM CONTENT STYLES === */
   .content-section {
-    scroll-margin-top: 0px !important; /* Adjust if you add a sticky header later */
+    scroll-margin-top: 160px !important; /* Prevents sticky nav from hiding section headers */
   }
   .content-heading {
     font-size: 30px !important; font-weight: 700 !important; color: #0f172a !important;
@@ -114,31 +114,31 @@ author_profile: false
 
   /* BMJ-Style Stepper Container */
   .stepper-scroll-container {
-    width: 100%; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: thin;
+    width: 100%; overflow-x: auto; padding-bottom: 0.5rem; scrollbar-width: thin;
   }
   .stepper-container {
     display: flex; justify-content: space-between; position: relative; min-width: 900px; padding: 0 2rem;
   }
   .stepper-line {
-    position: absolute; top: 28px; left: 8%; right: 8%; height: 3px; background-color: #cbd5e1; z-index: 0;
+    position: absolute; top: 24px; left: 8%; right: 8%; height: 3px; background-color: #cbd5e1; z-index: 0;
   }
   .step-link {
     display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important;
     width: 16% !important; z-index: 10 !important; text-decoration: none !important; group;
   }
   .step-circle {
-    width: 56px !important; height: 56px !important; border-radius: 50% !important; background-color: #ffffff !important;
-    border: 4px solid #cbd5e1 !important; display: flex !important; justify-content: center !important; align-items: center !important;
-    color: #64748b !important; font-size: 1.25rem !important; transition: all 0.3s ease !important; margin-bottom: 1rem !important;
+    width: 48px !important; height: 48px !important; border-radius: 50% !important; background-color: #ffffff !important;
+    border: 3px solid #cbd5e1 !important; display: flex !important; justify-content: center !important; align-items: center !important;
+    color: #64748b !important; font-size: 1.1rem !important; transition: all 0.3s ease !important; margin-bottom: 0.75rem !important;
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05) !important;
   }
-  .step-link:hover .step-circle {
-    border-color: #2563eb !important; background-color: #2563eb !important; color: #ffffff !important; transform: translateY(-4px) !important; box-shadow: 0 10px 15px -3px rgba(37,99,235,0.3) !important;
+  .step-link:hover .step-circle, .step-link.active .step-circle {
+    border-color: #2563eb !important; background-color: #2563eb !important; color: #ffffff !important; transform: translateY(-3px) !important; box-shadow: 0 10px 15px -3px rgba(37,99,235,0.3) !important;
   }
   .step-title {
-    font-size: 14px !important; font-weight: 600 !important; color: #334155 !important; line-height: 1.3 !important; margin: 0 !important; transition: color 0.3s !important;
+    font-size: 13px !important; font-weight: 600 !important; color: #334155 !important; line-height: 1.3 !important; margin: 0 !important; transition: color 0.3s !important;
   }
-  .step-link:hover .step-title { color: #2563eb !important; }
+  .step-link:hover .step-title, .step-link.active .step-title { color: #2563eb !important; }
 
   /* Code Blocks */
   .code-container {
@@ -228,39 +228,39 @@ author_profile: false
     </div>
   </header>
 
-  <!-- BMJ-Style Horizontal Navigation Stepper -->
-  <section class="bg-white py-10 border-b border-slate-200 shadow-sm relative z-20">
+  <!-- BMJ-Style Horizontal Navigation Stepper (STICKY) -->
+  <section class="sticky top-0 z-50 bg-white/95 backdrop-blur-md py-6 border-b border-slate-200 shadow-sm transition-all duration-300">
     <div class="max-w-5xl mx-auto px-6">
       <div class="stepper-scroll-container">
         <div class="stepper-container">
           <div class="stepper-line"></div>
           
-          <a href="#prerequisites" class="step-link group">
+          <a href="#prerequisites" class="step-link group nav-item">
             <div class="step-circle"><i class="fas fa-clipboard-check"></i></div>
             <p class="step-title">1. Prerequisites<br>& Governance</p>
           </a>
           
-          <a href="#framework" class="step-link group">
+          <a href="#framework" class="step-link group nav-item">
             <div class="step-circle"><i class="fas fa-sitemap"></i></div>
             <p class="step-title">2. The ACE<br>Framework</p>
           </a>
           
-          <a href="#code-lists" class="step-link group">
+          <a href="#code-lists" class="step-link group nav-item">
             <div class="step-circle"><i class="fas fa-list-ul"></i></div>
             <p class="step-title">3. Working with<br>Code Lists</p>
           </a>
           
-          <a href="#data-pipeline" class="step-link group">
+          <a href="#data-pipeline" class="step-link group nav-item">
             <div class="step-circle"><i class="fas fa-database"></i></div>
             <p class="step-title">4. The Data<br>Pipeline</p>
           </a>
           
-          <a href="#algorithms" class="step-link group">
+          <a href="#algorithms" class="step-link group nav-item">
             <div class="step-circle"><i class="fas fa-laptop-code"></i></div>
             <p class="step-title">5. Applying<br>Algorithms</p>
           </a>
           
-          <a href="#downloads" class="step-link group">
+          <a href="#downloads" class="step-link group nav-item">
             <div class="step-circle"><i class="fas fa-download"></i></div>
             <p class="step-title">6. Downloads<br>& Resources</p>
           </a>
@@ -276,12 +276,12 @@ author_profile: false
   <section id="prerequisites" class="content-section bg-slate-50 py-16 md:py-20 border-b border-slate-200">
     <div class="max-w-4xl mx-auto px-6">
       
-      <!-- Info Callout -->
-      <div class="bg-white border border-blue-100 rounded-lg py-4 px-5 mb-10 flex items-center gap-4 shadow-sm border-l-4 border-l-blue-500">
+      <!-- Re-instated soft Blue Info Callout (Matching requested screenshot) -->
+      <div class="bg-blue-50 border border-blue-100 rounded-lg py-4 px-5 mb-10 flex items-center gap-4 shadow-sm">
         <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
           <i class="fas fa-info text-sm"></i>
         </div>
-        <p class="text-slate-700 font-medium m-0 text-[15px] !important border-none" style="font-size: 15px !important; line-height: 1.5 !important; margin: 0 !important;">
+        <p class="text-blue-900 font-medium m-0 text-[15px] !important border-none" style="font-size: 15px !important; line-height: 1.5 !important; margin: 0 !important;">
           This page provides a guide to get you started incorporating validated indicators to identify ACEs in EHRs.
         </p>
       </div>
@@ -639,7 +639,7 @@ aces_data &lt;- aces_data %&gt;% <span class="syntax-function">mutate_all</span>
       </div>
 
       <h3 class="text-xl font-bold text-slate-800 mt-10 mb-4 border-none">Exclusion & Context Code Lists</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-0">
         <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/Accident_excl_2025ACEsinEHRs.txt" target="_blank" class="dl-card bg-rose-50 border-rose-100 hover:border-rose-300">
           <div>
             <h4 class="dl-title text-rose-800">Accidents</h4>
@@ -678,18 +678,10 @@ aces_data &lt;- aces_data %&gt;% <span class="syntax-function">mutate_all</span>
           <i class="fas fa-file-alt text-slate-400"></i>
         </a>
       </div>
-
-      <!-- HDRUK Callout -->
-      <div class="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm mb-0 flex flex-col items-center">
-        <h4 class="text-lg font-bold text-slate-800 mb-3 m-0 border-none">Need more code lists?</h4>
-        <a href="https://www.healthdatagateway.org/" target="_blank" class="inline-block hover:opacity-80 transition-opacity">
-          <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/hdruk%20small.png" alt="HDRUK Gateway" class="h-12 object-contain mx-auto">
-        </a>
-      </div>
     </div>
   </section>
 
-  <!-- SECTION 7: Next Steps / Navigation Grid (Matched to Theory page) -->
+  <!-- SECTION 7: Next Steps / Navigation Grid -->
   <section class="bg-slate-50 py-16 border-t border-slate-200">
     <div class="max-w-4xl mx-auto px-6">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
@@ -725,22 +717,39 @@ aces_data &lt;- aces_data %&gt;% <span class="syntax-function">mutate_all</span>
 </div>
 
 <script>
-// Simple script to slightly style the active stepper item on click
+// Advanced script to handle sticky nav highlighting based on scroll position
 document.addEventListener('DOMContentLoaded', () => {
-  const steps = document.querySelectorAll('.step-link');
+  const navItems = document.querySelectorAll('.nav-item');
+  const sections = document.querySelectorAll('.content-section');
   
-  steps.forEach(step => {
-    step.addEventListener('click', function() {
-      // Reset all
-      steps.forEach(s => {
-        s.querySelector('.step-circle').style.backgroundColor = '#ffffff';
-        s.querySelector('.step-circle').style.color = '#64748b';
-        s.querySelector('.step-circle').style.borderColor = '#cbd5e1';
-      });
-      // Set active
-      this.querySelector('.step-circle').style.backgroundColor = '#2563eb';
-      this.querySelector('.step-circle').style.color = '#ffffff';
-      this.querySelector('.step-circle').style.borderColor = '#2563eb';
+  // Setup click behaviors
+  navItems.forEach(step => {
+    step.addEventListener('click', function(e) {
+      // Remove active class from all
+      navItems.forEach(s => s.classList.remove('active'));
+      // Add active to clicked
+      this.classList.add('active');
+    });
+  });
+
+  // Setup scroll behavior to highlight active section
+  window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      // 200px offset accommodates the sticky header
+      if (pageYOffset >= (sectionTop - 200)) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navItems.forEach(item => {
+      item.classList.remove('active');
+      if (item.getAttribute('href') === `#${current}`) {
+        item.classList.add('active');
+      }
     });
   });
 });
