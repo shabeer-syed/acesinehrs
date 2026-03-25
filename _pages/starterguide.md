@@ -455,23 +455,47 @@ author_profile: false
       <h2 class="content-heading text-blue-900">4. The Data Pipeline (Preparation)</h2>
       <p class="content-text font-medium text-slate-800">Getting the messy raw data ready for analysis.</p>
 
-      <ul class="custom-list">
+      <ul class="custom-list mb-6">
         <li><i class="fas fa-wrench"></i> <strong>Extraction & Restructuring:</strong> Extract your raw files via SQL. Restructure all files and variables into a consistent "long format". Drop irrelevant data fields to reduce memory weight.</li>
         <li><i class="fas fa-broom"></i> <strong>Cleaning & Standardization:</strong> Remove white space/punctuation from codes and standardize date formats.</li>
+        <li><i class="fas fa-file-export"></i> <strong>Code list data extraction of larger files:</strong> Implement robust strategies to filter and extract patient data against specific code lists without crashing your system's memory.</li>
       </ul>
 
-      <p class="text-sm font-medium text-slate-700 mb-2 mt-4">Example: Cleaning codes and standardizing dates (R)</p>
-      <div class="code-container">
-        <div class="code-header">
-          <div class="code-window-dot bg-rose-500"></div><div class="code-window-dot bg-amber-500"></div><div class="code-window-dot bg-emerald-500"></div>
-        </div>
-        <pre class="code-pre"><code>aces_data$medcode &lt;- <span class="syntax-function">gsub</span>(<span class="syntax-string">"\\s+"</span>,<span class="syntax-string">""</span>,aces_data$medcode) <span class="syntax-comment"># remove space</span>
-aces_data$medcode &lt;- <span class="syntax-function">gsub</span>(<span class="syntax-string">"\\."</span>,<span class="syntax-string">""</span>,aces_data$medcode) <span class="syntax-comment"># remove punctuation</span>
+      <!-- Expandable Box: Cleaning Example -->
+      <details class="group mb-12 bg-white rounded-lg border border-indigo-200 shadow-sm overflow-hidden">
+        <summary class="flex justify-between items-center font-medium cursor-pointer list-none bg-indigo-50 text-indigo-900 px-5 py-4 hover:bg-indigo-100 transition-colors text-[16px]">
+          <span class="flex items-center">
+            <i class="fas fa-broom mr-3 text-indigo-500 text-lg"></i>
+            Example: Cleaning codes and standardizing dates (R)
+          </span>
+          <span>
+            <i class="fas fa-chevron-down opacity-70 transition-transform duration-300 group-open:rotate-180"></i>
+          </span>
+        </summary>
+        <div class="p-5 border-t border-indigo-100 bg-slate-50">
+          <p class="content-text text-[15px] !important mb-4">
+            This uses the modern <code>stringr</code> and <code>lubridate</code> packages. It cleanly converts your date string into a genuine Date object (which natively formats as YYYY-MM-DD) and cleans the codes in one step, without ruining the rest of your columns.
+          </p>
+          <div class="code-container mb-0">
+            <div class="code-header">
+              <div class="code-window-dot bg-rose-500"></div><div class="code-window-dot bg-amber-500"></div><div class="code-window-dot bg-emerald-500"></div>
+              <span class="text-xs text-slate-400 font-mono ml-2">R Script</span>
+            </div>
+            <pre class="code-pre"><code><span class="syntax-keyword">library</span>(dplyr)
+<span class="syntax-keyword">library</span>(stringr)
+<span class="syntax-keyword">library</span>(lubridate)
 
-aces_data &lt;- aces_data %&gt;% <span class="syntax-function">mutate_all</span>(as.character) %&gt;% 
- <span class="syntax-function">separate</span>(date_var,<span class="syntax-function">c</span>(<span class="syntax-string">"day"</span>,<span class="syntax-string">"month"</span>,<span class="syntax-string">"year"</span>),sep=<span class="syntax-string">"-"</span>) %&gt;% 
- <span class="syntax-function">unite</span>(new_date,<span class="syntax-function">c</span>(<span class="syntax-string">"year"</span>,<span class="syntax-string">"month"</span>,<span class="syntax-string">"day"</span>),sep=<span class="syntax-string">"-"</span>)</code></pre>
-      </div>
+aces_data &lt;- aces_data %&gt;%
+  <span class="syntax-function">mutate</span>(
+    <span class="syntax-comment"># Clean codes: removes both spaces and periods in a single pass</span>
+    medcode = <span class="syntax-function">str_remove_all</span>(medcode, <span class="syntax-string">"[\\s\\.]"</span>),
+    
+    <span class="syntax-comment"># Standardize dates: smartly parses DD-MM-YYYY into a proper R Date object</span>
+    date_var = <span class="syntax-function">dmy</span>(date_var) 
+  )</code></pre>
+          </div>
+        </div>
+      </details>
 
       <p class="content-text mt-10 font-bold text-slate-800">
         Data Extraction Strategies: In-Memory vs. Chunking
