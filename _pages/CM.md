@@ -90,7 +90,7 @@ author_profile: false
   font-size: 16px !important; line-height: 1.75 !important; color: #475569 !important; margin-bottom: 1.25rem !important;
  }
 
- /* Premium Box Panels (Height restriction removed to stop stretching) */
+ /* Premium Box Panels */
  .panel-card {
   background-color: #ffffff !important; border-radius: 1.25rem !important; border: 1px solid #e2e8f0 !important;
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02), 0 10px 15px -3px rgba(0,0,0,0.03) !important;
@@ -201,18 +201,9 @@ author_profile: false
      In the UK, <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/942454/Working_together_to_safeguard_children_inter_agency_guidance.pdf" target="_blank" class="text-blue-600 hover:underline font-medium">statutory guidelines of CM</a> include child exposure to IPV, and maternal evidence for omission or commission during pregnancy such as Neonatal Abstinence Syndrome (NAS) and Fetal Alcohol Syndrome (FAS). It includes indicators such as neglect (pre- and post-birth), child protection recordings, or out-of-home placements by social care services.
     </p>
 
-    <!-- Integrated Suspected CM block -->
-    <div class="mt-8 border-l-4 border-brand-rose pl-5 py-1">
-     <h3 class="text-lg font-bold text-slate-900 mb-2 flex items-center">
-      <i class="fas fa-search text-brand-rose mr-2 text-base"></i> Suspected CM
-     </h3>
-     <p class="content-text text-slate-600 !mb-2">
-      Includes any maltreatment-related indicator with codes describing presentations likely to refer to CM, but without mentioning the underlying cause (e.g., harm caused by non-specified person), safeguarding procedures, or social interventions.
-     </p>
-     <p class="content-text !mb-0">
-      <em class="text-rose-800 font-medium">E.g., "Victim of sexual abuse", "Assault in the home".</em>
-     </p>
-    </div>
+    <p class="content-text text-slate-600 !mb-0">
+     <strong class="text-slate-800">Suspected CM:</strong> Includes any maltreatment-related indicator with codes describing presentations likely to refer to CM, but without mentioning the underlying cause (e.g., harm caused by non-specified person), safeguarding procedures, or social interventions. <em class="text-rose-800">E.g., "Victim of sexual abuse", "Assault in the home".</em>
+    </p>
 
    </div>
   </section>
