@@ -62,7 +62,7 @@ author_profile: false
   .hero-subtitle {
     font-size: 20px !important; line-height: 1.6 !important; font-weight: 400 !important;
     color: rgb(241, 245, 249) !important; margin-bottom: 0 !important;
-    max-width: 820px !important; margin-left: auto !important; margin-right: auto !important;
+    max-width: 820px !important;
   }
 
   /* === PREMIUM CONTENT STYLES === */
@@ -137,15 +137,16 @@ author_profile: false
       <h1 class="hero-title drop-shadow-lg">
         Research <span style="color: #bfdbfe !important;">& Outputs</span>
       </h1>
-      <p class="hero-subtitle drop-shadow-md max-w-3xl">
-        A library of indicators for identifying Adverse Childhood Experiences (ACEs) in Electronic Health Records (EHRs)
+      <!-- Added md:mx-0 to perfectly align left on desktop -->
+      <p class="hero-subtitle drop-shadow-md mx-auto md:mx-0">
+        Explore peer-reviewed publications, academic presentations, and research outputs generated using the ACEs in EHRs framework.
       </p>
       
-      <div class="mt-6 flex flex-col md:flex-row items-center md:justify-start gap-4">
-        <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext" target="_blank" class="inline-flex items-center px-4 py-2 bg-blue-50 bg-opacity-10 hover:bg-opacity-20 border border-blue-200 border-opacity-30 rounded-full text-blue-100 text-sm font-medium transition-all backdrop-blur-sm">
-          <span class="flex h-2 w-2 relative mr-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-300 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
+      <div class="mt-8 flex flex-col md:flex-row items-center md:justify-start gap-4">
+        <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext" target="_blank" class="inline-flex items-center px-5 py-2.5 bg-slate-900 bg-opacity-60 hover:bg-opacity-80 border border-slate-700 rounded-full text-blue-200 text-sm font-medium transition-all backdrop-blur-md">
+          <span class="flex h-2.5 w-2.5 relative mr-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
           </span>
           New study out in Lancet Public Health!
         </a>
