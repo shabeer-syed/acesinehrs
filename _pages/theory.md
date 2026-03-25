@@ -51,7 +51,7 @@ author_profile: false
   }
 
   /* Reset link styles BUT ignore custom components */
-  .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.feature-card):not(.grid-card):not(.text-blue-600):not(.text-blue-400) {
+  .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.feature-card):not(.grid-card):not(.text-blue-600):not(.text-blue-400):not(.text-indigo-700) {
     border-bottom: none !important; text-decoration: none !important; box-shadow: none !important;
   }
 
@@ -78,10 +78,6 @@ author_profile: false
   .content-text {
     font-size: 17px !important; line-height: 1.75 !important; color: #475569 !important; margin-bottom: 1.5rem !important;
   }
-  /* Variations for dark mode */
-  .content-text-dark {
-    font-size: 17px !important; line-height: 1.75 !important; color: #cbd5e1 !important; margin-bottom: 1.5rem !important;
-  }
 
   /* Modern Info Cards */
   .feature-card {
@@ -101,16 +97,6 @@ author_profile: false
   }
   .custom-list li svg {
     position: absolute !important; left: 0 !important; top: 0.25rem !important; width: 1.5rem !important; height: 1.5rem !important;
-  }
-  
-  /* Dark Mode List */
-  .custom-list-dark { list-style: none !important; padding: 0 !important; margin: 0 !important; }
-  .custom-list-dark li {
-    position: relative !important; padding-left: 2.5rem !important; margin-bottom: 1.25rem !important;
-    font-size: 16px !important; line-height: 1.6 !important; color: #e2e8f0 !important;
-  }
-  .custom-list-dark li svg {
-    position: absolute !important; left: 0 !important; top: 0.25rem !important; width: 1.5rem !important; height: 1.5rem !important; color: #60a5fa !important;
   }
 
   /* Modern Bottom Grid Cards */
@@ -136,6 +122,10 @@ author_profile: false
     font-size: 19px !important; font-weight: 700 !important; color: #0f172a !important; margin: 0 0 10px 0 !important; border: none !important; transition: color 0.3s ease !important;
   }
   .grid-card:hover .card-title { color: #2563eb !important; }
+  
+  html {
+    scroll-behavior: smooth;
+  }
 </style>
 
 <!-- 4. The HTML Content -->
@@ -221,6 +211,40 @@ author_profile: false
           </div>
         </div>
       </div>
+
+      <!-- Concise Definitions Box (Indigo Theme) -->
+      <div class="mt-8 bg-indigo-50 rounded-2xl border border-indigo-100 overflow-hidden shadow-sm">
+        <div class="bg-indigo-600 px-6 py-4">
+          <h3 class="text-xl font-bold text-white m-0 border-none flex items-center">
+            <i class="fas fa-search mr-3 opacity-80"></i> How we define ACEs in EHRs
+          </h3>
+        </div>
+        <div class="p-6 md:p-8">
+          <p class="content-text mb-5 text-indigo-950 font-medium">For our electronic health record indicators, we concisely define an ACE as any experience within the family environment that is:</p>
+          <ul class="space-y-3 list-none pl-0 mb-6" style="font-size: 17px !important; color: #475569 !important;">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3 shrink-0"></i> 
+              <span>Frightening, violent, traumatic, or neglectful with potential for harm.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3 shrink-0"></i> 
+              <span>Caused by a single event or repeated exposure.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3 shrink-0"></i> 
+              <span>Caused by external factors (not the child themselves).</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3 shrink-0"></i> 
+              <span>Amenable to health or social care intervention at the family level.</span>
+            </li>
+          </ul>
+          <a href="#definitions-and-inclusions" class="inline-flex items-center text-indigo-700 font-semibold hover:text-indigo-900 hover:underline transition-colors mt-2 text-[16px]">
+            Read full inclusion criteria and rationale <i class="fas fa-arrow-down ml-2"></i>
+          </a>
+        </div>
+      </div>
+
     </section>
 
     <!-- SECTION 2: Conceptual Model & Diagram (Slate 50) -->
@@ -340,87 +364,89 @@ author_profile: false
       </div>
     </section>
 
-    <!-- SECTION 5: Definitions and Inclusions (DARK MODE - High Premium Contrast) -->
-    <section class="bg-slate-900 py-16 md:py-20 border-b border-slate-800">
+    <!-- SECTION 5: Definitions and Inclusions (Reverted to White Theme) -->
+    <section id="definitions-and-inclusions" class="bg-white py-12 md:py-16 border-b border-slate-200">
       <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-white mb-10 text-center border-none">Definitions and Inclusions</h2>
+        <h2 class="content-heading text-center mt-0 mb-10 border-none">Definitions and Inclusions</h2>
         
-        <div class="bg-slate-800 rounded-2xl border border-blue-500 shadow-2xl overflow-hidden relative mb-10">
+        <div class="bg-white rounded-2xl border border-blue-100 shadow-md overflow-hidden relative mb-10">
           <div class="h-2 w-full bg-blue-500 absolute top-0 left-0"></div>
           <div class="p-8 md:p-10">
-            <p class="content-text-dark font-semibold text-white mb-6">
+            <p class="content-text font-semibold text-slate-800 mb-6">
               We defined ACE indicators as any experience within the family environment recorded in the child or the parent data source (e.g. health record) considered to be:
             </p>
             
-            <ul class="custom-list-dark">
+            <ul class="custom-list">
               <li>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                Frightening, violent, traumatic or neglectful <a href="https://apps.who.int/iris/bitstream/handle/10665/42495/9241545615_eng.pdf" target="_blank" class="text-blue-400 hover:underline">(see WHO violence definition)</a>, with potential for immediate or longer-term harm to a child's biopsychosocial development (intentionally or unintentionally) <a href="https://assets.publishing.service.gov.uk/media/65cb4349a7ded0000c79e4e1/Working_together_to_safeguard_children_2023_-_statutory_guidance.pdf" target="_blank" class="text-blue-400 hover:underline">(see UK government definition)</a>;
+                <svg class="text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Frightening, violent, traumatic or neglectful <a href="https://apps.who.int/iris/bitstream/handle/10665/42495/9241545615_eng.pdf" target="_blank" class="text-blue-600 hover:underline">(see WHO violence definition)</a>, with potential for immediate or longer-term harm to a child's biopsychosocial development (intentionally or unintentionally) <a href="https://assets.publishing.service.gov.uk/media/65cb4349a7ded0000c79e4e1/Working_together_to_safeguard_children_2023_-_statutory_guidance.pdf" target="_blank" class="text-blue-600 hover:underline">(see UK government definition)</a>;
               </li>
               <li>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <svg class="text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 Caused by a single event or through repeated exposure;
               </li>
               <li>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <svg class="text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 Caused by external factors and not the child themselves, such as self-harm; and
               </li>
               <li>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                Amenable to health or social care intervention at a family level (i.e. excluding wider factors such as socioeconomic status, community violence, school bullying etc; see <a href="https://jamanetwork.com/journals/jama/fullarticle/2783975" target="_blank" class="text-blue-400 hover:underline">1</a>, <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2022-to-2025/chapter-4-identifying-and-working-with-families" target="_blank" class="text-blue-400 hover:underline">2</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749379719300315" target="_blank" class="text-blue-400 hover:underline">3</a>).
+                <svg class="text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Amenable to health or social care intervention at a family level (i.e. excluding wider factors such as socioeconomic status, community violence, school bullying etc; see <a href="https://jamanetwork.com/journals/jama/fullarticle/2783975" target="_blank" class="text-blue-600 hover:underline">1</a>, <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2022-to-2025/chapter-4-identifying-and-working-with-families" target="_blank" class="text-blue-600 hover:underline">2</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749379719300315" target="_blank" class="text-blue-600 hover:underline">3</a>).
               </li>
             </ul>
           </div>
         </div>
 
-        <p class="content-text-dark">
-          We made several adaptations to previously studied ACEs for feasible ascertainment in electronic health records (EHRs). We defined indicators as variables of grouped codes and measures. We aimed to develop ACE indicators that reflected clinically meaningful risk groups of adversity to identify families that may be eligible for targeted maternal-child care interventions in England (e.g. <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2021-to-2022" target="_blank" class="text-blue-400 font-medium hover:underline">Supporting Families programme</a>, or previously "targeted care pathway" of <a href="https://www.gov.uk/government/publications/healthy-child-programme-0-to-19-health-visitor-and-school-nurse-commissioning" target="_blank" class="text-blue-400 font-medium hover:underline">the Healthy Child Programme</a>. See also WHO for <a href="https://www.who.int/teams/social-determinants-of-health/violence-prevention/global-status-report-on-violence-against-children-2020" target="_blank" class="text-blue-400 font-medium hover:underline">intervention studies</a>).
+        <p class="content-text">
+          We made several adaptations to previously studied ACEs for feasible ascertainment in electronic health records (EHRs). We defined indicators as variables of grouped codes and measures. We aimed to develop ACE indicators that reflected clinically meaningful risk groups of adversity to identify families that may be eligible for targeted maternal-child care interventions in England (e.g. <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2021-to-2022" target="_blank" class="text-blue-600 font-medium hover:underline">Supporting Families programme</a>, or previously "targeted care pathway" of <a href="https://www.gov.uk/government/publications/healthy-child-programme-0-to-19-health-visitor-and-school-nurse-commissioning" target="_blank" class="text-blue-600 font-medium hover:underline">the Healthy Child Programme</a>. See also WHO for <a href="https://www.who.int/teams/social-determinants-of-health/violence-prevention/global-status-report-on-violence-against-children-2020" target="_blank" class="text-blue-600 font-medium hover:underline">intervention studies</a>).
         </p>
 
-        <p class="content-text-dark">
-          We manually grouped indicators into broader ACE domains consistent with the <a href="https://www.ajpmonline.org/article/S0749-3797(98)00017-8/fulltext" target="_blank" class="text-blue-400 font-medium hover:underline">original study</a> by <a href="https://www.cdc.gov/violenceprevention/aces/index.html" target="_blank" class="text-blue-400 font-medium hover:underline">Kaiser Permanente and CDC</a>. Due to the lack of recordings, we collapsed all types of child abuse and neglect into child maltreatment (CM). We collapsed "imprisonment of household members" and "household challenges" into Adverse family environments. We created a separate indicator, "Social service involvement" (SSI), for social care-related codes that did not contain descriptions of CM or IPV. Due to few recordings and high intercorrelations, SSI was merged with CM in the final selection process.
+        <p class="content-text">
+          We manually grouped indicators into broader ACE domains consistent with the <a href="https://www.ajpmonline.org/article/S0749-3797(98)00017-8/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">original study</a> by <a href="https://www.cdc.gov/violenceprevention/aces/index.html" target="_blank" class="text-blue-600 font-medium hover:underline">Kaiser Permanente and CDC</a>. Due to the lack of recordings, we collapsed all types of child abuse and neglect into child maltreatment (CM). We collapsed "imprisonment of household members" and "household challenges" into Adverse family environments. We created a separate indicator, "Social service involvement" (SSI), for social care-related codes that did not contain descriptions of CM or IPV. Due to few recordings and high intercorrelations, SSI was merged with CM in the final selection process.
         </p>
 
-        <p class="content-text-dark">
-          Given the substantial under-recording of CM and IPV (e.g. see <a href="https://www.cambridge.org/core/journals/the-british-journal-of-psychiatry/article/barriers-and-facilitators-of-disclosures-of-domestic-violence-by-mental-health-service-users-qualitative-study/7A690CCBC0322D045442549A5FA3C4CF" target="_blank" class="text-blue-400 hover:underline">1</a>, <a href="https://bjgp.org/content/67/659/e437.long" target="_blank" class="text-blue-400 hover:underline">2</a>), we also added the domain “high-risk presentations of CM” (HRP-CM). HRP-CM encompassed indicators from the <a href="https://www.nice.org.uk/guidance/cg89/chapter/1-Guidance" target="_blank" class="text-blue-400 font-medium hover:underline">National Institute for Health and Care Excellence (NICE)</a> and <a href="https://www.rcgp.org.uk/clinical-and-research/resources/toolkits/child-safeguarding-toolkit.aspx" target="_blank" class="text-blue-400 font-medium hover:underline">Royal College of General Practitioners (RGCP)</a> that should raise clinical suspicion for CM.
+        <p class="content-text">
+          Given the substantial under-recording of CM and IPV (e.g. see <a href="https://www.cambridge.org/core/journals/the-british-journal-of-psychiatry/article/barriers-and-facilitators-of-disclosures-of-domestic-violence-by-mental-health-service-users-qualitative-study/7A690CCBC0322D045442549A5FA3C4CF" target="_blank" class="text-blue-600 hover:underline">1</a>, <a href="https://bjgp.org/content/67/659/e437.long" target="_blank" class="text-blue-600 hover:underline">2</a>), we also added the domain “high-risk presentations of CM” (HRP-CM). HRP-CM encompassed indicators from the <a href="https://www.nice.org.uk/guidance/cg89/chapter/1-Guidance" target="_blank" class="text-blue-600 font-medium hover:underline">National Institute for Health and Care Excellence (NICE)</a> and <a href="https://www.rcgp.org.uk/clinical-and-research/resources/toolkits/child-safeguarding-toolkit.aspx" target="_blank" class="text-blue-600 font-medium hover:underline">Royal College of General Practitioners (RGCP)</a> that should raise clinical suspicion for CM.
         </p>
 
-        <div class="mt-8 bg-slate-800 p-6 rounded-xl border-l-4 border-l-emerald-500">
-          <p class="content-text-dark mb-0 italic">
+        <div class="mt-8 bg-emerald-50 p-6 rounded-xl border-l-4 border-l-emerald-500">
+          <p class="content-text text-emerald-900 mb-0 italic">
             <strong>Note:</strong> ACEs can be recorded in both parents’ and children’s records. ACEs are considered based on each specific child’s time from birth. Children are, therefore, considered unexposed if no relevant recording occurs during the study period, regardless of previous exposure to children within the same family. This approach mirrors changes in stress levels as the family moves through different life stages.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 6: Next Steps / Navigation Grid (White) -->
-    <section class="max-w-4xl mx-auto px-6 py-16">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-        <a href="https://acesinehrs.com/ACE-domains/" class="grid-card group">
-          <div class="img-wrapper" style="padding-bottom: 0 !important;">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains.png" alt="View Domains" style="height: 180px !important;">
-          </div>
-          <div class="content-wrapper mt-4">
-            <h3 class="card-title">Explore ACE Domains</h3>
-            <p class="text-sm text-slate-500 mb-0">View comprehensive lists of selected indicators.</p>
-          </div>
-        </a>
+    <!-- SECTION 6: Next Steps / Navigation Grid (Slate 50) -->
+    <section class="bg-slate-50 max-w-full mx-auto px-6 py-16">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <a href="https://acesinehrs.com/ACE-domains/" class="grid-card group">
+            <div class="img-wrapper" style="padding-bottom: 0 !important;">
+              <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains.png" alt="View Domains" style="height: 180px !important;">
+            </div>
+            <div class="content-wrapper mt-4">
+              <h3 class="card-title">Explore ACE Domains</h3>
+              <p class="text-sm text-slate-500 mb-0">View comprehensive lists of selected indicators.</p>
+            </div>
+          </a>
 
-        <a href="https://acesinehrs.com/codelistbrowse/" class="grid-card group">
-          <div class="img-wrapper" style="padding-bottom: 0 !important;">
-            <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png" alt="Code Lists" style="height: 180px !important;">
-          </div>
-          <div class="content-wrapper mt-4">
-            <h3 class="card-title">Browse Code Lists</h3>
-            <p class="text-sm text-slate-500 mb-0">Search and access clinical code lists seamlessly.</p>
-          </div>
-        </a>
-      </div>
-      
-      <div class="text-center mt-12">
-        <a href="https://acesinehrs.com/" class="inline-flex items-center text-slate-500 hover:text-blue-600 font-medium transition-colors">
-          <i class="fas fa-arrow-left mr-2"></i> Go back to homepage
-        </a>
+          <a href="https://acesinehrs.com/codelistbrowse/" class="grid-card group">
+            <div class="img-wrapper" style="padding-bottom: 0 !important;">
+              <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png" alt="Code Lists" style="height: 180px !important;">
+            </div>
+            <div class="content-wrapper mt-4">
+              <h3 class="card-title">Browse Code Lists</h3>
+              <p class="text-sm text-slate-500 mb-0">Search and access clinical code lists seamlessly.</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="https://acesinehrs.com/" class="inline-flex items-center text-slate-500 hover:text-blue-600 font-medium transition-colors">
+            <i class="fas fa-arrow-left mr-2"></i> Go back to homepage
+          </a>
+        </div>
       </div>
     </section>
 
