@@ -8,7 +8,18 @@ author_profile: false
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
-    corePlugins: { preflight: false }
+    corePlugins: { preflight: false },
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            rose: '#e11d48', // Primary CM Domain Color
+            light: '#ffe4e6',
+            dark: '#be123c',
+          }
+        }
+      }
+    }
   }
 </script>
 
@@ -27,7 +38,7 @@ author_profile: false
   .full-bleed {
     width: 100vw; position: relative; left: 50%; right: 50%;
     margin-left: -50vw; margin-right: -50vw;
-    background-color: #ffffff !important;
+    background-color: #f8fafc !important; /* Soft premium background */
     margin-bottom: 0 !important; padding-bottom: 0 !important;
   }
   #main { padding-top: 0 !important; padding-bottom: 0 !important; margin-bottom: 0 !important; }
@@ -50,14 +61,15 @@ author_profile: false
   }
   
   /* Reset link styles BUT ignore custom components */
-  .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.dl-card):not(.pub-link):not(.text-blue-600) {
+  .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.pub-link):not(.text-blue-600) {
     border-bottom: none !important; text-decoration: none !important; box-shadow: none !important;
   }
 
   /* === HERO TYPOGRAPHY === */
   .hero-title {
-    font-size: 48px !important; line-height: 1.1 !important; font-weight: 700 !important;
+    font-size: 48px !important; line-height: 1.1 !important; font-weight: 800 !important;
     color: rgb(255, 255, 255) !important; margin-bottom: 24px !important; border: none !important;
+    letter-spacing: -0.02em !important;
   }
   .hero-subtitle {
     font-size: 20px !important; line-height: 1.6 !important; font-weight: 400 !important;
@@ -68,61 +80,81 @@ author_profile: false
   /* === PREMIUM CONTENT STYLES === */
   .content-heading {
     font-size: 28px !important; font-weight: 700 !important; color: #0f172a !important;
-    margin-top: 0 !important; margin-bottom: 1.5rem !important; border: none !important; padding: 0 !important;
+    margin-top: 0 !important; margin-bottom: 1rem !important; border: none !important; padding: 0 !important;
+    letter-spacing: -0.02em !important;
   }
   .content-subheading {
     font-size: 20px !important; font-weight: 600 !important; color: #1e293b !important;
-    margin-bottom: 1rem !important; margin-top: 2rem !important; border: none !important;
+    margin-bottom: 1rem !important; margin-top: 0 !important; border: none !important;
   }
-  
-  /* FORCE all main content paragraphs to static 16px */
   .content-text {
     font-size: 16px !important; line-height: 1.75 !important; color: #475569 !important; margin-bottom: 1.25rem !important;
   }
 
   /* Notice Cards */
   .notice-card {
-    background-color: #ffffff !important; border-radius: 0.75rem !important; border: 1px solid #e2e8f0 !important;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important; padding: 1.25rem 1.5rem !important;
+    background-color: #ffffff !important; border-radius: 1rem !important; border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important; padding: 1.5rem !important;
     margin-bottom: 1.5rem !important; display: flex !important; align-items: flex-start !important; gap: 1rem !important;
   }
-  .notice-info { border-left: 5px solid #3b82f6 !important; }
-  
-  /* Download Cards */
-  .dl-card {
-    display: flex !important; align-items: center !important; justify-content: space-between !important;
-    background-color: #ffffff !important; border: 1px solid #e2e8f0 !important; border-radius: 0.75rem !important;
-    padding: 1.25rem !important; transition: all 0.2s ease !important; text-decoration: none !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important; margin-bottom: 1rem !important;
+  .notice-info { border-left: 4px solid #3b82f6 !important; }
+
+  /* Premium Box Panels (For Downloads & Rules) */
+  .panel-card {
+    background-color: #ffffff !important; border-radius: 1.25rem !important; border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02), 0 10px 15px -3px rgba(0,0,0,0.03) !important;
+    padding: 2rem !important; height: 100% !important; display: flex !important; flex-direction: column !important;
   }
-  .dl-card:hover {
-    border-color: #93c5fd !important; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05) !important; transform: translateY(-2px) !important;
-  }
-  .dl-title { font-size: 16px !important; font-weight: 600 !important; color: #0f172a !important; margin: 0 !important; transition: color 0.2s !important; }
-  .dl-card:hover .dl-title { color: #2563eb !important; }
-  .dl-meta { font-size: 13px !important; color: #64748b !important; margin-top: 0.25rem !important; }
 
   /* Code Blocks */
   .code-container {
-    background: #0d1117 !important; border-radius: 0.5rem !important; overflow: hidden !important;
+    background: #0f172a !important; border-radius: 0.75rem !important; overflow: hidden !important;
+    border: 1px solid #334155 !important; margin-top: auto !important;
   }
   .code-pre {
-    padding: 1rem !important; overflow-x: auto !important; margin: 0 !important;
-    font-family: 'Fira Code', monospace !important; font-size: 13px !important; line-height: 1.6 !important; color: #c9d1d9 !important;
+    padding: 1.25rem !important; overflow-x: auto !important; margin: 0 !important;
+    font-family: 'Fira Code', monospace !important; font-size: 13px !important; line-height: 1.6 !important; color: #e2e8f0 !important;
   }
-  .syntax-keyword { color: #ff7b72 !important; }
-  .syntax-string { color: #a5d6ff !important; }
-  .syntax-function { color: #d2a8ff !important; }
+  .syntax-keyword { color: #f43f5e !important; }
+  .syntax-string { color: #7dd3fc !important; }
+  .syntax-function { color: #a78bfa !important; }
+
+  /* SaaS Table Styles */
+  .table-wrapper {
+    background: #ffffff !important; border-radius: 1.25rem !important; border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02), 0 10px 15px -3px rgba(0,0,0,0.03) !important;
+    overflow: hidden !important; overflow-x: auto !important;
+  }
+  .custom-table { width: 100% !important; border-collapse: collapse !important; text-align: left !important; }
+  .custom-table th { 
+    background-color: #f8fafc !important; padding: 1.25rem 1.5rem !important; font-size: 13px !important; 
+    font-weight: 700 !important; color: #475569 !important; text-transform: uppercase !important; 
+    letter-spacing: 0.05em !important; border-bottom: 2px solid #e2e8f0 !important; white-space: nowrap !important;
+  }
+  .custom-table td { 
+    padding: 1.25rem 1.5rem !important; font-size: 15px !important; color: #334155 !important; 
+    border-bottom: 1px solid #f1f5f9 !important; vertical-align: middle !important;
+  }
+  .custom-table tr:last-child td { border-bottom: none !important; }
+  .custom-table tr:hover { background-color: #f8fafc !important; }
+
+  /* Domain Pill Badge */
+  .domain-badge {
+    display: inline-flex !important; align-items: center !important; justify-content: center !important;
+    padding: 0.25rem 0.75rem !important; border-radius: 9999px !important; font-size: 12px !important;
+    font-weight: 700 !important; letter-spacing: 0.025em !important;
+  }
 
   /* PUBLICATION LIST */
   .pub-item {
     display: flex !important; flex-direction: column !important; gap: 0.5rem !important;
-    padding: 1.25rem 0 !important; border-bottom: 1px solid #e2e8f0 !important;
+    padding: 1.5rem !important; border: 1px solid #e2e8f0 !important; border-radius: 1rem !important;
+    background: #ffffff !important; margin-bottom: 1rem !important; transition: all 0.2s ease !important;
   }
-  .pub-item:last-child { border-bottom: none !important; }
+  .pub-item:hover { border-color: #cbd5e1 !important; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05) !important; }
   .pub-link {
-    font-size: 15px !important; font-weight: 600 !important; color: #2563eb !important; line-height: 1.5 !important;
-    text-decoration: none !important; transition: color 0.2s !important; border: none !important; display: block !important;
+    font-size: 16px !important; font-weight: 600 !important; color: #2563eb !important; line-height: 1.5 !important;
+    text-decoration: none !important; transition: color 0.2s !important; border: none !important;
   }
   .pub-link:hover { color: #1d4ed8 !important; text-decoration: underline !important; text-underline-offset: 3px !important; }
 
@@ -136,10 +168,18 @@ author_profile: false
 <div class="full-bleed tailwind-wrap text-gray-800 antialiased flex flex-col min-h-screen">
 
   <!-- Hero Section -->
-  <header class="relative bg-slate-800 bg-opacity-70 text-white" style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Child%20maltreatment%20aces%20in%20ehrs.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;">
+  <header class="relative bg-slate-900 overflow-hidden">
+    <!-- Overlay Image -->
+    <div class="absolute inset-0 opacity-40 mix-blend-multiply" style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Child%20maltreatment%20aces%20in%20ehrs.jpg'); background-size: cover; background-position: center;"></div>
+    <!-- Gradient Overlay for readability -->
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40"></div>
+    
     <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-32 text-center md:text-left">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/20 text-rose-200 border border-rose-500/30 text-sm font-semibold mb-6">
+        <i class="fas fa-shield-alt"></i> ACE Domain Reference
+      </div>
       <h1 class="hero-title drop-shadow-lg">
-        Child <span style="color: #bfdbfe !important;">maltreatment</span>
+        Child <span class="text-rose-400">maltreatment</span>
       </h1>
       <p class="hero-subtitle drop-shadow-md mx-auto md:mx-0">
         This domain includes indicators of child maltreatment (CM). CM refers to any act of commission or omission by a parent or other caregiver that results in harm, potential for harm, or threat of harm to a child. Harm does not need to be intended.
@@ -149,196 +189,227 @@ author_profile: false
 
   <!-- Main Content Areas -->
   
-  <!-- SECTION 1: DEFINITIONS -->
+  <!-- SECTION 1: DEFINITIONS & QUICK INFOS -->
   <section class="bg-white py-16 border-b border-slate-200">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-10 h-10 rounded-full bg-rose-50 text-rose-600 flex items-center justify-center shrink-0">
-          <i class="fas fa-book-open text-lg"></i>
-        </div>
-        <h2 class="content-heading text-slate-900 !mb-0">Definition</h2>
-      </div>
-
-      <p class="content-text text-slate-700">
-        Any recorded act of commission or omission by a parent or caregiver resulting in harm, the potential for harm or threat of child harm, including neglect, psychological, physical, sexual and emotional abuse. Harm does not need to be intended <sup><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(08)61706-7/fulltext" target="_blank" class="text-blue-600 hover:underline">1</a></sup>. 
-      </p>
+    <div class="max-w-5xl mx-auto px-6">
       
-      <p class="content-text text-slate-700">
-        In the UK, <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/942454/Working_together_to_safeguard_children_inter_agency_guidance.pdf" target="_blank" class="text-blue-600 hover:underline font-medium">statutory guidelines of CM</a> include child exposure to IPV, and maternal evidence for omission or commission during pregnancy such as Neonatal Abstinence Syndrome (NAS) and Fetal Alcohol Syndrome (FAS). It includes indicators such as neglect (pre- and post-birth), child protection recordings, or out-of-home placements by social care services (see <a href="https://acesinehrs.com/codelistbrowse/" class="text-blue-600 hover:underline">code list browser</a>).
-      </p>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main Definition -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
+              <i class="fas fa-book-open text-xl"></i>
+            </div>
+            <h2 class="content-heading text-slate-900 !mb-0">Definition</h2>
+          </div>
 
-      <div class="notice-card notice-info mt-8 bg-blue-50/50">
-        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 mt-0.5">
-          <i class="fas fa-search text-sm"></i>
-        </div>
-        <div>
-          <h4 class="text-[16px] !important text-blue-900">Suspected CM</h4>
-          <p class="text-[16px] !important text-slate-700 leading-relaxed">
-            Suspected CM includes any maltreatment-related indicator with codes or measures describing presentations likely to refer to CM, but without mentioning the underlying cause (e.g., harm caused by non-specified person), safeguarding procedures, or child social service interventions. For instance, the "suspected CM, NOS" indicator contains codes mentioning <em>"Victim of sexual abuse"</em>, <em>"Multi-professional risk assessment done"</em>, and <em>"Assault in the home"</em>.
+          <p class="content-text text-slate-700 text-lg">
+            Any recorded act of commission or omission by a parent or caregiver resulting in harm, the potential for harm or threat of child harm, including neglect, psychological, physical, sexual and emotional abuse. Harm does not need to be intended <sup><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(08)61706-7/fulltext" target="_blank" class="text-blue-600 hover:underline">1</a></sup>. 
+          </p>
+          
+          <p class="content-text text-slate-600">
+            In the UK, <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/942454/Working_together_to_safeguard_children_inter_agency_guidance.pdf" target="_blank" class="text-blue-600 hover:underline font-medium">statutory guidelines of CM</a> include child exposure to IPV, and maternal evidence for omission or commission during pregnancy such as Neonatal Abstinence Syndrome (NAS) and Fetal Alcohol Syndrome (FAS). It includes indicators such as neglect (pre- and post-birth), child protection recordings, or out-of-home placements by social care services.
           </p>
         </div>
+
+        <!-- Callout Info -->
+        <div class="lg:col-span-1">
+          <div class="bg-blue-50/50 rounded-2xl border border-blue-100 p-6 h-full shadow-sm">
+            <div class="flex items-center gap-3 mb-3">
+              <i class="fas fa-search text-blue-600 text-xl"></i>
+              <h4 class="text-[18px] font-bold text-blue-900 m-0 border-none">Suspected CM</h4>
+            </div>
+            <p class="text-[15px] !important text-slate-700 leading-relaxed m-0">
+              Includes any maltreatment-related indicator with codes describing presentations likely to refer to CM, but without mentioning the underlying cause (e.g., harm caused by non-specified person), safeguarding procedures, or social interventions. <br><br>
+              <em>E.g., "Victim of sexual abuse", "Assault in the home".</em>
+            </p>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
-  <!-- SECTION 2: INDICATOR LIST & DOWNLOADS -->
-  <section class="bg-slate-50 py-16 border-b border-slate-200 shadow-inner">
-    <div class="max-w-6xl mx-auto px-6">
+  <!-- SECTION 2: ASSETS & IMPLEMENTATION (The New Stacked Grid) -->
+  <section class="bg-slate-50 pt-16 pb-12">
+    <div class="max-w-5xl mx-auto px-6">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <!-- Side-by-Side Cards (Equal Height) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         
-        <!-- Left Column: Downloads & Implementation -->
-        <div class="lg:col-span-5 flex flex-col">
+        <!-- DOWNLOAD CARD -->
+        <div class="panel-card relative overflow-hidden group">
+          <div class="absolute top-0 left-0 w-full h-1.5 bg-brand-rose"></div>
           
-          <h3 class="content-subheading !mt-0">Code list download</h3>
-          <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/CM_2025ACEsinEHRs.txt" target="_blank" class="dl-card border-l-4 border-l-rose-500 mb-4">
-            <div>
-              <h4 class="dl-title">Child maltreatment</h4>
-              <p class="dl-meta">3,852 codes</p>
-            </div>
-            <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-rose-600 group-hover:bg-rose-50 transition-colors"><i class="fas fa-download"></i></div>
-          </a>
+          <h3 class="content-subheading !mt-0 flex items-center">
+            <i class="fas fa-cloud-download-alt text-brand-rose mr-3"></i> Code list download
+          </h3>
+          <p class="text-sm text-slate-500 mb-6">Access the complete set of clinical codes mapped to the CM domain.</p>
           
-          <a href="https://github.com/shabeer-syed/acesinehrs/raw/master/assets/control_documentation/ACEsinEHRs%20Control%20documentation%20v2.pdf" target="_blank" class="text-sm text-blue-600 hover:underline font-medium mb-12 flex items-center">
-            <i class="fas fa-file-pdf text-slate-400 mr-2"></i> ACEsinEHRs control documentation
-          </a>
-
-          <h3 class="content-subheading !mt-0">Implementation Rules</h3>
-          <p class="content-text text-sm text-slate-600 mb-4">Certain specific indicators within this domain require rule-based algorithms to prevent misclassification.</p>
-          
-          <!-- Modern Code Card (Replaces awkward table) -->
-          <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden mb-0">
-            <div class="bg-slate-100 border-b border-slate-200 px-5 py-3">
-              <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Indicator:</span>
-              <span class="ml-2 font-bold text-slate-800">CM, FGM</span>
-            </div>
-            <div class="p-5">
-              <p class="text-[14px] text-slate-600 mb-4 leading-relaxed mt-0">
-                Apply codes mentioning circumcision to female children only (e.g. <em>"54314 - routine or ritual circumcision"</em>). Code list includes markers for rule inclusion.
-              </p>
-              <div class="code-container !mb-0">
-                <pre class="code-pre"><code>cm_fgm &lt;- merged_data %&gt;% 
-  <span class="syntax-function">filter</span>(Domain==<span class="syntax-string">"CM"</span> & individual==<span class="syntax-string">"4"</span> & gender==<span class="syntax-string">"female"</span>)</code></pre>
+          <!-- Download Button Component -->
+          <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/CM_2025ACEsinEHRs.txt" target="_blank" class="block w-full border border-slate-200 rounded-xl p-4 hover:border-brand-rose hover:bg-rose-50 transition-colors group/btn mb-6 mt-auto">
+            <div class="flex items-center justify-between">
+              <div>
+                <h4 class="text-base font-bold text-slate-800 m-0 group-hover/btn:text-brand-rose transition-colors">Child maltreatment (.txt)</h4>
+                <p class="text-xs text-slate-500 mt-1 mb-0 font-medium tracking-wide uppercase">3,852 codes included</p>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 group-hover/btn:bg-brand-rose group-hover/btn:text-white transition-all transform group-hover/btn:scale-105">
+                <i class="fas fa-arrow-down"></i>
               </div>
             </div>
-          </div>
+          </a>
 
+          <a href="https://github.com/shabeer-syed/acesinehrs/raw/master/assets/control_documentation/ACEsinEHRs%20Control%20documentation%20v2.pdf" target="_blank" class="inline-flex items-center text-[14px] text-blue-600 hover:text-blue-800 font-semibold group/pdf">
+            <i class="fas fa-file-pdf text-rose-500 mr-2 group-hover/pdf:scale-110 transition-transform"></i> ACEsinEHRs control documentation
+          </a>
         </div>
 
-        <!-- Right Column: Indicator List Manual Table -->
-        <div class="lg:col-span-7">
-          <h3 class="content-subheading !mt-0">Indicator list</h3>
+        <!-- RULES CARD -->
+        <div class="panel-card relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1.5 bg-slate-800"></div>
           
-          <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden overflow-x-auto">
-            <table class="w-full text-left border-collapse min-w-[600px]">
-              <thead>
-                <tr class="bg-slate-50 border-b border-slate-200 text-slate-800">
-                  <th class="p-4 font-bold text-sm uppercase tracking-wider w-24">ACE domain</th>
-                  <th class="p-4 font-bold text-sm uppercase tracking-wider w-32">Indicator code</th>
-                  <th class="p-4 font-bold text-sm uppercase tracking-wider">Indicator name</th>
-                </tr>
-              </thead>
-              <tbody class="text-[15px] text-slate-700">
-                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                  <td class="bg-[#c4325a] border-b border-white/20 text-white font-semibold px-4 py-3 text-center">CM</td>
-                  <td class="p-4">CM1</td>
-                  <td class="p-4">Child protection/safeguarding</td>
-                </tr>
-                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                  <td class="bg-[#c4325a] border-b border-white/20 text-white font-semibold px-4 py-3 text-center">CM</td>
-                  <td class="p-4">CM2</td>
-                  <td class="p-4">CM NOS, incl. physical or sexual abuse (merged)</td>
-                </tr>
-                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                  <td class="bg-[#c4325a] border-b border-white/20 text-white font-semibold px-4 py-3 text-center">CM</td>
-                  <td class="p-4">CM3</td>
-                  <td class="p-4">Neglect (incl. NAS/FASD) and emotional/psychological abuse</td>
-                </tr>
-                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                  <td class="bg-[#c4325a] border-b border-white/20 text-white font-semibold px-4 py-3 text-center">CM</td>
-                  <td class="p-4">CM4</td>
-                  <td class="p-4">Social service involved (incl. parental imprisonment/criminal activity)</td>
-                </tr>
-                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                  <td class="bg-[#c4325a] border-b border-white/20 text-white font-semibold px-4 py-3 text-center">CM</td>
-                  <td class="p-4">CM5</td>
-                  <td class="p-4">Child in care</td>
-                </tr>
-                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                  <td class="bg-[#c4325a] border-b border-white/20 text-white font-semibold px-4 py-3 text-center">CM</td>
-                  <td class="p-4">CM6</td>
-                  <td class="p-4">Suspected CM NOS (incl. neglect and social service involvements)</td>
-                </tr>
-                <tr class="hover:bg-slate-50 transition-colors">
-                  <td class="bg-[#c4325a] text-white font-semibold px-4 py-3 text-center">CM</td>
-                  <td class="p-4">CM7</td>
-                  <td class="p-4">Child assaulted NOS (incl. physical/sexual abuse ≤10, rib fractures ≤3†)</td>
-                </tr>
-              </tbody>
-            </table>
+          <h3 class="content-subheading !mt-0 flex items-center">
+            <i class="fas fa-code-branch text-slate-700 mr-3"></i> Implementation Rules
+          </h3>
+          <p class="text-[14.5px] text-slate-600 mb-4 leading-relaxed">
+            Certain specific indicators within this domain require rule-based algorithms to prevent misclassification.
+          </p>
+
+          <div class="bg-slate-100 border border-slate-200 rounded-lg p-3 mb-4 inline-flex items-center w-max">
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider mr-2">Applies to:</span>
+            <span class="text-sm font-bold text-slate-800 bg-white px-2 py-0.5 rounded shadow-sm">CM, FGM</span>
           </div>
 
+          <p class="text-[14px] text-slate-600 mb-4 leading-relaxed mt-0">
+            Apply codes mentioning circumcision to female children only (e.g. <em>"54314 - routine or ritual circumcision"</em>). Code list includes markers for rule inclusion.
+          </p>
+          
+          <div class="code-container">
+            <pre class="code-pre"><code>cm_fgm &lt;- merged_data %&gt;% 
+  <span class="syntax-function">filter</span>(Domain==<span class="syntax-string">"CM"</span> & individual==<span class="syntax-string">"4"</span> & gender==<span class="syntax-string">"female"</span>)</code></pre>
+          </div>
         </div>
 
       </div>
+
+      <!-- FULL WIDTH TABLE SECTION -->
+      <h3 class="content-subheading flex items-center mb-6">
+        <i class="fas fa-table text-slate-400 mr-3"></i> Indicator structure & taxonomy
+      </h3>
+      
+      <div class="table-wrapper">
+        <table class="custom-table min-w-[700px]">
+          <thead>
+            <tr>
+              <th style="width: 15%;">ACE Domain</th>
+              <th style="width: 20%;">Indicator Code</th>
+              <th>Indicator Name / Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="domain-badge bg-brand-light text-brand-dark">CM</span></td>
+              <td class="font-mono text-sm text-slate-500 font-semibold">CM1</td>
+              <td class="font-medium text-slate-800">Child protection/safeguarding</td>
+            </tr>
+            <tr>
+              <td><span class="domain-badge bg-brand-light text-brand-dark">CM</span></td>
+              <td class="font-mono text-sm text-slate-500 font-semibold">CM2</td>
+              <td class="font-medium text-slate-800">CM NOS, incl. physical or sexual abuse <span class="text-slate-400 font-normal ml-1">(merged)</span></td>
+            </tr>
+            <tr>
+              <td><span class="domain-badge bg-brand-light text-brand-dark">CM</span></td>
+              <td class="font-mono text-sm text-slate-500 font-semibold">CM3</td>
+              <td class="font-medium text-slate-800">Neglect (incl. NAS/FASD) and emotional/psychological abuse</td>
+            </tr>
+            <tr>
+              <td><span class="domain-badge bg-brand-light text-brand-dark">CM</span></td>
+              <td class="font-mono text-sm text-slate-500 font-semibold">CM4</td>
+              <td class="font-medium text-slate-800">Social service involved <span class="text-slate-500 font-normal ml-1">(incl. parental imprisonment/criminal activity)</span></td>
+            </tr>
+            <tr>
+              <td><span class="domain-badge bg-brand-light text-brand-dark">CM</span></td>
+              <td class="font-mono text-sm text-slate-500 font-semibold">CM5</td>
+              <td class="font-medium text-slate-800">Child in care</td>
+            </tr>
+            <tr>
+              <td><span class="domain-badge bg-brand-light text-brand-dark">CM</span></td>
+              <td class="font-mono text-sm text-slate-500 font-semibold">CM6</td>
+              <td class="font-medium text-slate-800">Suspected CM NOS <span class="text-slate-500 font-normal ml-1">(incl. neglect and social service involvements)</span></td>
+            </tr>
+            <tr>
+              <td><span class="domain-badge bg-brand-light text-brand-dark">CM</span></td>
+              <td class="font-mono text-sm text-slate-500 font-semibold">CM7</td>
+              <td class="font-medium text-slate-800">Child assaulted NOS <span class="text-slate-500 font-normal ml-1">(incl. physical/sexual abuse ≤10, rib fractures ≤3†)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
     </div>
   </section>
 
   <!-- SECTION 3: PUBLICATIONS -->
-  <section class="bg-white py-16">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="flex items-center gap-3 mb-8 pb-4 border-b-2 border-slate-100">
-        <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0">
-          <i class="fas fa-graduation-cap text-lg"></i>
+  <section class="bg-white py-16 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-6">
+      
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-100 text-slate-600 mb-4">
+          <i class="fas fa-graduation-cap text-xl"></i>
         </div>
-        <h2 class="content-heading !m-0 !border-none !pb-0 text-slate-800">Related Publications</h2>
+        <h2 class="content-heading text-slate-900 !m-0">Related Publications</h2>
+        <p class="text-slate-500 mt-2">Core research outputs associated with this specific ACE domain.</p>
       </div>
 
-      <div class="space-y-1">
+      <div class="space-y-4 max-w-4xl mx-auto">
+        
         <!-- Pub 1 -->
-        <div class="pub-item">
+        <div class="pub-item hover:-translate-y-1">
           <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext" target="_blank" class="pub-link">
             Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England.
           </a>
-          <p class="text-sm text-slate-500 m-0">Syed S, Gilbert R, Feder G, Howe LD, Powell C, Howarth E, Deighton J, Lacey RE. <em>The Lancet Public Health</em>. 2023.</p>
+          <p class="text-[15px] text-slate-500 m-0">Syed S, Gilbert R, Feder G, Howe LD, Powell C, Howarth E, Deighton J, Lacey RE. <em class="text-slate-700">The Lancet Public Health</em>. 2023.</p>
         </div>
         
         <!-- Pub 2 -->
-        <div class="pub-item">
+        <div class="pub-item hover:-translate-y-1">
           <a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext" target="_blank" class="pub-link">
             Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study.
           </a>
-          <p class="text-sm text-slate-500 m-0">Syed S, Gonzalez-Izquierdo A, Allister J, Feder G, Li L, Gilbert R. <em>The Lancet Digital Health</em>. 2022.</p>
+          <p class="text-[15px] text-slate-500 m-0">Syed S, Gonzalez-Izquierdo A, Allister J, Feder G, Li L, Gilbert R. <em class="text-slate-700">The Lancet Digital Health</em>. 2022.</p>
         </div>
 
         <!-- Pub 3 -->
-        <div class="pub-item">
+        <div class="pub-item hover:-translate-y-1">
           <a href="https://www.sciencedirect.com/science/article/pii/S0140673611610878" target="_blank" class="pub-link">
             Child maltreatment: variation in trends and policies in six developed countries.
           </a>
-          <p class="text-sm text-slate-500 m-0">Gilbert R, Fluke J, O'Donnell M, et al. <em>The Lancet</em>. 2012. <a href="https://ars.els-cdn.com/content/image/1-s2.0-S0140673611610878-mmc1.pdf" target="_blank" class="text-blue-500 hover:underline">View Code List</a></p>
+          <p class="text-[15px] text-slate-500 m-0 flex flex-wrap gap-2 items-center">
+            <span>Gilbert R, Fluke J, O'Donnell M, et al. <em class="text-slate-700">The Lancet</em>. 2012.</span>
+            <a href="https://ars.els-cdn.com/content/image/1-s2.0-S0140673611610878-mmc1.pdf" target="_blank" class="inline-flex items-center px-2.5 py-1 rounded-md bg-blue-50 text-blue-600 text-xs font-semibold hover:bg-blue-100 transition-colors border-none !no-underline"><i class="fas fa-file-pdf mr-1.5"></i> View Code List</a>
+          </p>
         </div>
 
         <!-- Pub 4 -->
-        <div class="pub-item">
+        <div class="pub-item hover:-translate-y-1">
           <a href="https://link.springer.com/article/10.1186/1472-6963-12-65" target="_blank" class="pub-link">
             Health service use in families where children enter public care: a nested case control study using the General Practice Research Database.
           </a>
-          <p class="text-sm text-slate-500 m-0">Simkiss DE, Spencer NJ, Stallard N, Thorogood M. <em>BMC Health Services Research</em>. 2012.</p>
+          <p class="text-[15px] text-slate-500 m-0">Simkiss DE, Spencer NJ, Stallard N, Thorogood M. <em class="text-slate-700">BMC Health Services Research</em>. 2012.</p>
         </div>
 
         <!-- Pub 5 -->
-        <div class="pub-item border-none">
+        <div class="pub-item hover:-translate-y-1">
           <a href="https://elearning.rcgp.org.uk/mod/book/view.php?id=12531" target="_blank" class="pub-link">
             Child safeguarding toolkit.
           </a>
-          <p class="text-sm text-slate-500 m-0">Royal College of General Practitioners.</p>
+          <p class="text-[15px] text-slate-500 m-0">Royal College of General Practitioners.</p>
         </div>
       </div>
       
-      <div class="mt-10 pt-8 border-t border-slate-200 text-center">
-        <a href="https://acesinehrs.com/ACE-domains/" class="inline-flex items-center text-slate-500 hover:text-blue-600 font-medium transition-colors text-[16px] !important bg-slate-50 hover:bg-blue-50 px-5 py-2.5 rounded-lg border border-slate-200">
-          <i class="fas fa-arrow-left mr-2"></i> All ACE Domains
+      <div class="mt-12 text-center">
+        <a href="https://acesinehrs.com/ACE-domains/" class="inline-flex items-center text-slate-600 hover:text-blue-600 font-semibold transition-all text-[16px] !important bg-white hover:bg-blue-50 px-6 py-3 rounded-full border border-slate-200 hover:border-blue-200 shadow-sm hover:shadow-md">
+          <i class="fas fa-arrow-left mr-2"></i> Back to all ACE Domains
         </a>
       </div>
 
