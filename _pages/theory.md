@@ -251,40 +251,40 @@ author_profile: false
           </div>
           
           <!-- Tiny Footnote -->
-          <p class="mt-6 text-[13px] text-slate-500 italic mb-0 leading-snug">
+          <p class="mt-6 text-[11px] text-slate-500 italic mb-0 leading-snug">
             *Not included in the initial ACE domains; added in later studies to form the "Ten ACEs."
           </p>
         </div>
       </div>
 
-      <!-- Definition of ACEs Box (Dark Theme matched) -->
-      <div class="mt-8 bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-lg">
-        <div class="bg-slate-900 px-6 py-4 border-b border-slate-700">
-          <h3 class="text-xl font-bold text-white m-0 border-none flex items-center">
-            <i class="fas fa-book-open mr-3 text-blue-400 opacity-90"></i> Definition of ACEs
+      <!-- Definition of ACEs Box (Elegant Light Theme) -->
+      <div class="mt-8 bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+        <div class="bg-slate-50 px-6 py-4 border-b border-slate-100">
+          <h3 class="text-xl font-bold text-slate-800 m-0 border-none flex items-center">
+            <i class="fas fa-book-open mr-3 text-blue-600 opacity-90"></i> Definition of ACEs
           </h3>
         </div>
         <div class="p-6 md:p-8">
-          <p class="content-text-dark mb-5 text-white font-medium">ACEs can be defined as any experience within the family environment considered to be:</p>
-          <ul class="custom-list-dark mb-6">
+          <p class="content-text mb-5 text-slate-800 font-medium">ACEs can be defined as any experience within the family environment considered to be:</p>
+          <ul class="custom-list mb-6">
             <li>
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              <span>Frightening, violent, traumatic or neglectful (<a href="https://apps.who.int/iris/bitstream/handle/10665/42495/9241545615_eng.pdf" target="_blank" class="text-blue-400 hover:underline">see WHO violence definition</a>), with potential for immediate or longer-term harm to a child's biopsychosocial development (intentionally or unintentionally) (<a href="https://assets.publishing.service.gov.uk/media/65cb4349a7ded0000c79e4e1/Working_together_to_safeguard_children_2023_-_statutory_guidance.pdf" target="_blank" class="text-blue-400 hover:underline">see UK government definition</a>);</span>
+              <svg class="text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Frightening, violent, traumatic or neglectful (<a href="https://apps.who.int/iris/bitstream/handle/10665/42495/9241545615_eng.pdf" target="_blank" class="text-blue-600 hover:underline">see WHO violence definition</a>), with potential for immediate or longer-term harm to a child's biopsychosocial development (intentionally or unintentionally) (<a href="https://assets.publishing.service.gov.uk/media/65cb4349a7ded0000c79e4e1/Working_together_to_safeguard_children_2023_-_statutory_guidance.pdf" target="_blank" class="text-blue-600 hover:underline">see UK government definition</a>);</span>
             </li>
             <li>
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <svg class="text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               <span>Caused by a single event or through repeated exposure;</span>
             </li>
             <li>
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <svg class="text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               <span>Caused by external factors and not the child themselves, such as self-harm; and</span>
             </li>
             <li>
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              <span>Amenable to health or social care intervention at a family level (i.e. excluding wider factors such as socioeconomic status, community violence, school bullying etc.)<sup><a href="https://jamanetwork.com/journals/jama/fullarticle/2783975" target="_blank" class="text-blue-400 hover:underline">1</a>, <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2022-to-2025/chapter-4-identifying-and-working-with-families" target="_blank" class="text-blue-400 hover:underline">2</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749379719300315" target="_blank" class="text-blue-400 hover:underline">3</a></sup>.</span>
+              <svg class="text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Amenable to health or social care intervention at a family level (i.e. excluding wider factors such as socioeconomic status, community violence, school bullying etc.)<sup><a href="https://jamanetwork.com/journals/jama/fullarticle/2783975" target="_blank" class="text-blue-600 hover:underline">1</a>, <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2022-to-2025/chapter-4-identifying-and-working-with-families" target="_blank" class="text-blue-600 hover:underline">2</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749379719300315" target="_blank" class="text-blue-600 hover:underline">3</a></sup>.</span>
             </li>
           </ul>
-          <a href="#definitions-and-inclusions" class="inline-flex items-center text-blue-400 font-semibold hover:text-blue-300 hover:underline transition-colors mt-2 text-[16px]">
+          <a href="#definitions-and-inclusions" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 hover:underline transition-colors mt-2 text-[16px]">
             Read full inclusion criteria and rationale <i class="fas fa-arrow-down ml-2"></i>
           </a>
         </div>
@@ -354,27 +354,28 @@ author_profile: false
           </h3>
 
           <!-- The Theory Boxes Grid -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 relative z-10">
             
             <!-- TOP ARROW (Life Course -> Attachment) -->
-            <svg class="absolute hidden lg:block z-30 pointer-events-none text-blue-500" 
-                 style="top: -25px; left: 25%; right: 25%; width: 50%; height: 50px; overflow: visible;" 
-                 viewBox="0 0 100 50" preserveAspectRatio="none">
-              <path class="flowing-dash" d="M 90 45 Q 50 -10 10 45" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="8,8" marker-end="url(#arrowhead)" />
+            <!-- Positioned completely inside the gray container -->
+            <svg class="absolute hidden lg:block z-0 pointer-events-none text-blue-500 opacity-70" 
+                 style="top: -20px; left: 30%; right: 30%; width: 40%; height: 40px; overflow: visible;" 
+                 viewBox="0 0 100 40" preserveAspectRatio="none">
+              <path class="flowing-dash" d="M 90 30 Q 50 -10 10 30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrowhead)" />
             </svg>
 
             <!-- LEFT ARROW (Attachment -> Cognitive) -->
-            <svg class="absolute hidden lg:block z-30 pointer-events-none text-blue-500" 
-                 style="top: 25%; bottom: 25%; left: -30px; width: 60px; height: 50%; overflow: visible;" 
-                 viewBox="0 0 50 100" preserveAspectRatio="none">
-              <path class="flowing-dash" d="M 40 10 Q -10 50 40 90" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="8,8" marker-end="url(#arrowhead)" />
+            <svg class="absolute hidden lg:block z-0 pointer-events-none text-blue-500 opacity-70" 
+                 style="top: 38%; left: 20%; width: 60px; height: 16%; overflow: visible;" 
+                 viewBox="0 0 60 100" preserveAspectRatio="none">
+              <path class="flowing-dash" d="M 30 0 Q -10 50 30 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrowhead)" />
             </svg>
 
             <!-- RIGHT ARROW (Cognitive -> Life Course) -->
-            <svg class="absolute hidden lg:block z-30 pointer-events-none text-blue-500" 
-                 style="top: 25%; bottom: 25%; right: -30px; width: 60px; height: 50%; overflow: visible;" 
-                 viewBox="0 0 50 100" preserveAspectRatio="none">
-              <path class="flowing-dash" d="M 10 90 Q 60 50 10 10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="8,8" marker-end="url(#arrowhead)" />
+            <svg class="absolute hidden lg:block z-0 pointer-events-none text-blue-500 opacity-70" 
+                 style="top: 38%; right: 20%; width: 60px; height: 16%; overflow: visible;" 
+                 viewBox="0 0 60 100" preserveAspectRatio="none">
+              <path class="flowing-dash" d="M 30 100 Q 70 50 30 0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrowhead)" />
             </svg>
 
             <!-- Card 1: Attachment (Col 1) -->
@@ -415,8 +416,8 @@ author_profile: false
     <section class="bg-slate-100 py-12 md:py-16 border-y border-slate-200">
       <div class="max-w-4xl mx-auto px-6">
         
-        <!-- NEW ADDED TITLE HERE -->
-        <h2 class="content-heading text-center mt-0 mb-12 border-none">Adverse Childhood Experiences (ACEs) using Electronic Health Records (EHRs)</h2>
+        <!-- NEW ADDED TITLE HERE (Dark Blue matching) -->
+        <h2 class="content-heading text-center mt-0 mb-12 border-none text-blue-900">Adverse Childhood Experiences (ACEs) using Electronic Health Records (EHRs)</h2>
 
         <h3 class="content-subheading mt-0 border-none"><i class="fas fa-chart-line text-blue-500 mr-2"></i> A multistage risk prediction model to determine relevance of candidate ACEs</h3>
         <p class="content-text">
