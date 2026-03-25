@@ -145,6 +145,16 @@ author_profile: false
   html { scroll-behavior: smooth; }
 </style>
 
+<!-- HIDDEN SVG DEFINITIONS FOR ARROWHEAD MARKERS -->
+<svg style="width:0; height:0; position:absolute;" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Solid Greyish Marker for Inter-Box Flow -->
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+</svg>
+
 <!-- 4. The HTML Content -->
 <div class="full-bleed tailwind-wrap text-gray-800 antialiased flex flex-col min-h-screen">
 
@@ -202,7 +212,7 @@ author_profile: false
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            <!-- Child Maltreatment Card (Reduced padding for less top breathing room) -->
+            <!-- Child Maltreatment Card -->
             <div class="bg-white px-5 pt-4 pb-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-rose-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <h4 class="text-rose-600 font-bold mb-2 flex items-center text-lg"><i class="fas fa-child mr-2 text-rose-500"></i> Child maltreatment</h4>
               <ul class="space-y-2 list-disc pl-5" style="font-size: 15px !important; color: #475569 !important;">
@@ -214,7 +224,7 @@ author_profile: false
               </ul>
             </div>
 
-            <!-- Household Dysfunction Card (Reduced padding for less top breathing room) -->
+            <!-- Household Dysfunction Card -->
             <div class="bg-white px-5 pt-4 pb-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-emerald-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <h4 class="text-emerald-700 font-bold mb-2 flex items-center text-lg"><i class="fas fa-house-damage mr-2 text-emerald-500"></i> Household dysfunction</h4>
               <ul class="space-y-2 list-disc pl-5" style="font-size: 15px !important; color: #475569 !important;">
@@ -264,12 +274,19 @@ author_profile: false
             </li>
             <li>
               <i class="far fa-check-circle text-blue-500 absolute left-0 top-1 text-[1.15rem]"></i>
-              <span>Amenable to health or social care intervention at a family level (i.e. excluding wider factors such as socioeconomic status, community violence, school bullying etc.)<sup><a href="https://jamanetwork.com/journals/jama/fullarticle/2783975" target="_blank" class="text-blue-600 hover:underline">1</a>, <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2022-to-2025/chapter-4-identifying-and-working-with-families" target="_blank" class="text-blue-600 hover:underline">2</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749379719300315" target="_blank" class="text-blue-600 hover:underline">3</a></sup>.</span>
+              <span>Amenable to health or social care intervention at a family level (i.e. excluding wider factors such as socioeconomic status, community violence, school bullying etc)*.</span>
             </li>
           </ul>
-          <a href="#definitions-and-inclusions" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 hover:underline transition-colors mt-2 text-[15px]">
-            Read full inclusion criteria and rationale <i class="fas fa-arrow-down ml-2 text-sm"></i>
-          </a>
+          
+          <!-- New Footnote section for Definition box -->
+          <div class="mt-6 pt-5 border-t border-slate-200">
+            <p style="font-size: 11px !important; line-height: 1.5 !important; margin: 0 0 10px 0 !important; color: #64748b !important;">
+              *Refers to the ACEs included as part of the research examining ACEs using electronic health records <sup><a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00061-9/fulltext" target="_blank" style="color: #2563eb !important; text-decoration: underline !important;">1</a>, <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext" target="_blank" style="color: #2563eb !important; text-decoration: underline !important;">2</a>, <a href="https://www.thelancet.com/journals/lanpub/article/piis2468-2667(24)00301-3/fulltext" target="_blank" style="color: #2563eb !important; text-decoration: underline !important;">3</a></sup>.
+            </p>
+            <a href="#definitions-and-inclusions" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 hover:underline transition-colors mt-2 text-[15px]">
+              Read full inclusion criteria and rationale <i class="fas fa-arrow-down ml-2 text-sm"></i>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -294,13 +311,13 @@ author_profile: false
           </p>
         </div>
 
-        <!-- Image Card with matching button -->
+        <!-- Image Card with smaller, forced-white button -->
         <div class="mt-10 bg-white p-4 md:p-8 rounded-2xl shadow-md border border-slate-200 text-center relative overflow-hidden group">
           <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/formulation%20lower%20res%201.png" alt="Biopsychosocial model of ACEs formulation" class="w-full h-auto object-contain rounded-lg mx-auto transition-transform duration-500 group-hover:scale-[1.02]" style="max-width: 800px; margin: 0 auto !important;">
           <p class="text-sm text-slate-500 mt-6 mb-4 italic">The figure does not represent an exhaustive list of potential mechanisms behind ACEs.</p>
           
-          <!-- Styled "View Figure" Button matched to platform aesthetics -->
-          <a href="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/formulation.png" target="_blank" class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+          <!-- Made Button smaller (px-4 py-2) and forced text white (!important) -->
+          <a href="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/formulation.png" target="_blank" style="color: #ffffff !important;" class="inline-flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-sm font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
             <i class="fas fa-search-plus mr-2"></i> View Figure in High Resolution
           </a>
 
@@ -342,17 +359,11 @@ author_profile: false
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 relative z-10 pt-6">
             
             <!-- Card 1: Attachment (Col 1) -->
-            <!-- Embedded SVG drops downward out of this card -->
-            <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-10">
+            <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-20">
               
-              <!-- Bottom-Left Snaking Arrow (Drops into Cognitive Card) -->
-              <svg class="absolute hidden lg:block pointer-events-none z-0" style="bottom: -50px; left: 40px; width: 40px; height: 50px; overflow: visible;" viewBox="0 0 40 50">
-                <defs>
-                  <marker id="arrow-down-left" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444" />
-                  </marker>
-                </defs>
-                <path d="M 20 0 C -10 25, -10 25, 20 50" fill="none" stroke="#ef4444" stroke-width="3" marker-end="url(#arrow-down-left)" stroke-linecap="round" />
+              <!-- GREY ARROW 2: Anchored to Bottom of Card 1 (Drops down into Cognitive Card) -->
+              <svg class="absolute hidden lg:block pointer-events-none z-10" style="top: 100%; left: 20%; width: 40px; height: 60px; overflow: visible;" viewBox="0 0 40 60">
+                <path d="M 20 0 C -10 30, -10 30, 20 60" fill="none" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow-grey)" stroke-linecap="round" />
               </svg>
 
               <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-link text-emerald-500 mr-2"></i> Attachment and learning theory</h4>
@@ -360,27 +371,16 @@ author_profile: false
             </div>
 
             <!-- Card 2: Life Course (Col 2) -->
-            <!-- Embedded SVGs branch Left (to Card 1) and Down (to Card 3) -->
-            <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-10">
+            <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-20">
               
-              <!-- Top-Left Snaking Arrow (Shoots out leftward into Attachment Card) -->
-              <svg class="absolute hidden lg:block pointer-events-none z-0" style="top: -20px; left: -80px; width: 80px; height: 40px; overflow: visible;" viewBox="0 0 80 40">
-                <defs>
-                  <marker id="arrow-left-top" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444" />
-                  </marker>
-                </defs>
-                <path d="M 80 40 C 60 10, 20 10, 0 40" fill="none" stroke="#ef4444" stroke-width="3" marker-end="url(#arrow-left-top)" stroke-linecap="round" />
+              <!-- GREY ARROW 1: Anchored to Left side of Card 2 (Arcs over to Card 1) -->
+              <svg class="absolute hidden lg:block pointer-events-none z-10" style="top: 40px; right: 100%; width: 60px; height: 30px; overflow: visible;" viewBox="0 0 60 30">
+                <path d="M 60 15 C 30 -15, 30 -15, 0 15" fill="none" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow-grey)" stroke-linecap="round" />
               </svg>
 
-              <!-- Bottom-Right Snaking Arrow (Drops into Cognitive Card) -->
-              <svg class="absolute hidden lg:block pointer-events-none z-0" style="bottom: -50px; right: 40px; width: 40px; height: 50px; overflow: visible;" viewBox="0 0 40 50">
-                <defs>
-                  <marker id="arrow-down-right" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444" />
-                  </marker>
-                </defs>
-                <path d="M 20 0 C 50 25, 50 25, 20 50" fill="none" stroke="#ef4444" stroke-width="3" marker-end="url(#arrow-down-right)" stroke-linecap="round" />
+              <!-- GREY ARROW 3: Anchored to Bottom of Card 2 (Drops down into Cognitive Card) -->
+              <svg class="absolute hidden lg:block pointer-events-none z-10" style="top: 100%; right: 20%; width: 40px; height: 60px; overflow: visible;" viewBox="0 0 40 60">
+                <path d="M 20 0 C 50 30, 50 30, 20 60" fill="none" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow-grey)" stroke-linecap="round" />
               </svg>
 
               <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-road text-emerald-500 mr-2"></i> Life-course approach</h4>
@@ -388,7 +388,7 @@ author_profile: false
             </div>
             
             <!-- Card 3: Cognitive & Behavioural (Spans both columns) -->
-            <div class="bg-white p-6 md:p-8 rounded-xl shadow-md border border-slate-100 lg:col-span-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-10 mt-4 lg:mt-0">
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-md border border-slate-100 lg:col-span-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative z-20 mt-4 lg:mt-0">
               <h4 class="text-lg font-bold text-slate-800 mb-4"><i class="fas fa-brain text-emerald-500 mr-2"></i> Cognitive and behavioural theories</h4>
               
               <p class="content-text" style="font-size: 15px !important;">
