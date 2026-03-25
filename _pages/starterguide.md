@@ -67,7 +67,7 @@ author_profile: false
 
   /* === PREMIUM CONTENT STYLES === */
   .content-section {
-    scroll-margin-top: 160px !important; /* Prevents sticky nav from hiding section headers */
+    scroll-margin-top: 180px !important; /* CSS Fallback: Prevents external anchor links from hiding under nav */
   }
   .content-heading {
     font-size: 30px !important; font-weight: 700 !important; color: #0f172a !important;
@@ -276,14 +276,14 @@ author_profile: false
   <section id="prerequisites" class="content-section bg-slate-50 py-16 md:py-20 border-b border-slate-200">
     <div class="max-w-4xl mx-auto px-6">
       
-      <!-- Re-instated soft Blue Info Callout (Matching requested screenshot) -->
-      <div class="bg-blue-50 border border-blue-100 rounded-lg py-4 px-5 mb-10 flex items-center gap-4 shadow-sm">
-        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
+      <!-- Reverted White Info Callout -->
+      <div class="notice-card notice-info mb-10">
+        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 mt-0.5">
           <i class="fas fa-info text-sm"></i>
         </div>
-        <p class="text-blue-900 font-medium m-0 text-[15px] !important border-none" style="font-size: 15px !important; line-height: 1.5 !important; margin: 0 !important;">
-          This page provides a guide to get you started incorporating validated indicators to identify ACEs in EHRs.
-        </p>
+        <div>
+          <p class="text-[15px] !important font-medium text-slate-800 m-0">This page provides a guide to get you started incorporating validated indicators to identify ACEs in EHRs.</p>
+        </div>
       </div>
 
       <h2 class="content-heading text-blue-900">1. Prerequisites & Governance</h2>
@@ -717,30 +717,43 @@ aces_data &lt;- aces_data %&gt;% <span class="syntax-function">mutate_all</span>
 </div>
 
 <script>
-// Advanced script to handle sticky nav highlighting based on scroll position
+// Advanced script to perfectly handle sticky nav highlighting and scroll offsets
 document.addEventListener('DOMContentLoaded', () => {
   const navItems = document.querySelectorAll('.nav-item');
+  const stickyHeader = document.querySelector('.sticky');
   const sections = document.querySelectorAll('.content-section');
   
-  // Setup click behaviors
+  // 1. Perfect Smooth Scroll Offset on Click
   navItems.forEach(step => {
     step.addEventListener('click', function(e) {
-      // Remove active class from all
-      navItems.forEach(s => s.classList.remove('active'));
-      // Add active to clicked
-      this.classList.add('active');
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      
+      if (targetSection && stickyHeader) {
+        // Calculate exact height of the sticky menu + 30px breathing room
+        const headerOffset = stickyHeader.offsetHeight + 30; 
+        const elementPosition = targetSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
     });
   });
 
-  // Setup scroll behavior to highlight active section
+  // 2. Highlight active step dynamically on scroll
   window.addEventListener('scroll', () => {
     let current = '';
+    // Determine the hit-zone offset dynamically based on sticky header height
+    const hitZoneOffset = stickyHeader ? stickyHeader.offsetHeight + 40 : 180;
     
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      // 200px offset accommodates the sticky header
-      if (pageYOffset >= (sectionTop - 200)) {
+      if (pageYOffset >= (sectionTop - hitZoneOffset)) {
         current = section.getAttribute('id');
       }
     });
