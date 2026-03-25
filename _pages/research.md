@@ -149,14 +149,6 @@ author_profile: false
           </span>
           New study out in Lancet Public Health!
         </a>
-        
-        <!-- Retained iframes just in case they carry hidden metric trackers -->
-        {::nomarkdown}
-        <div class="hidden md:flex gap-2">
-          <iframe style="display: inline-block;" src=" " frameborder="0" scrolling="0" width="160px" height="30px"></iframe> 
-          <iframe style="display: inline-block;" src="" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
-        </div>
-        {:/nomarkdown}
       </div>
     </div>
   </header>
@@ -380,7 +372,8 @@ author_profile: false
 
       </div>
       
-      <p class="mt-8 text-sm text-slate-500 font-medium text-right">Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate</p>
+      <!-- Hidden Author Tag for SEO Indexing -->
+      <span class="hidden">Dr Shabeer Syed, Clinical Psychologist & Senior Research Associate</span>
 
     </div>
   </section>
