@@ -112,6 +112,10 @@ author_profile: false
     position: absolute !important; left: 0 !important; top: 0.25rem !important; color: #3b82f6 !important; font-size: 1.1rem !important;
   }
 
+  /* Hide default summary marker for standard details tags */
+  details > summary { list-style: none; }
+  details > summary::-webkit-details-marker { display: none; }
+
   /* BMJ-Style Stepper Container */
   .stepper-scroll-container {
     width: 100%; overflow-x: auto; padding-bottom: 0.5rem; scrollbar-width: thin;
@@ -469,29 +473,221 @@ aces_data &lt;- aces_data %&gt;% <span class="syntax-function">mutate_all</span>
  <span class="syntax-function">unite</span>(new_date,<span class="syntax-function">c</span>(<span class="syntax-string">"year"</span>,<span class="syntax-string">"month"</span>,<span class="syntax-string">"day"</span>),sep=<span class="syntax-string">"-"</span>)</code></pre>
       </div>
 
-      <p class="content-text mt-8">
-        <strong>Creating the Master File (Streaming Approach):</strong> We recommend a streaming approach to bind patient data into one manageable file. This iterates over patient IDs in chunks rather than crashing your memory.
+      <p class="content-text mt-10 font-bold text-slate-800">
+        Data Extraction Strategies: In-Memory vs. Chunking
+      </p>
+      <p class="content-text mb-6">
+        Depending on your server’s memory capacity and the size of your datasets, you will need to choose the right extraction strategy. Below are two approaches for filtering patient data against your specific code lists.
       </p>
 
-      <div class="code-container mb-0">
-        <div class="code-header">
-          <div class="code-window-dot bg-rose-500"></div><div class="code-window-dot bg-amber-500"></div><div class="code-window-dot bg-emerald-500"></div>
-        </div>
-        <pre class="code-pre"><code><span class="syntax-comment"># Stream through EHR files and save relevant patient data</span>
-<span class="syntax-keyword">for</span> (ehr_file <span class="syntax-keyword">in</span> <span class="syntax-function">list.files</span>(pattern = <span class="syntax-string">"*.txt"</span>)) {
-  output_file &lt;- <span class="syntax-function">paste0</span>(<span class="syntax-string">"output_"</span>, ehr_file)
+      <!-- Expandable Box 1: In-Memory -->
+      <details class="group mb-4 bg-white rounded-lg border border-blue-200 shadow-sm overflow-hidden">
+        <summary class="flex justify-between items-center font-medium cursor-pointer list-none bg-blue-50 text-blue-900 px-5 py-4 hover:bg-blue-100 transition-colors text-[16px]">
+          <span class="flex items-center">
+            <i class="fas fa-memory mr-3 text-blue-500 text-lg"></i>
+            Option 1: In-Memory Filtering (For Standard Datasets)
+          </span>
+          <span>
+            <i class="fas fa-chevron-down opacity-70 transition-transform duration-300 group-open:rotate-180"></i>
+          </span>
+        </summary>
+        <div class="p-5 border-t border-blue-100 bg-slate-50">
+          <p class="content-text text-[15px] !important mb-4">
+            When your server has enough RAM to hold the entire dataset at once (e.g., loading a 20GB file on a machine with 64GB+ of RAM), a standard in-memory approach using <code>data.table</code>, <code>dplyr</code>, and <code>fastmatch</code> is the fastest method. This example script loads the full file, filters it against your code list, and saves the output before clearing the memory for the next file.
+          </p>
+          <div class="code-container mb-0">
+            <div class="code-header">
+              <div class="code-window-dot bg-rose-500"></div><div class="code-window-dot bg-amber-500"></div><div class="code-window-dot bg-emerald-500"></div>
+              <span class="text-xs text-slate-400 font-mono ml-2">R Script</span>
+            </div>
+            <pre class="code-pre"><code><span class="syntax-comment"># ==============================================================================</span>
+<span class="syntax-comment"># OPTION 1: IN-MEMORY EXTRACTION - EXAMPLE CPRD GOLD</span>
+<span class="syntax-comment"># (Note: Using a master file approach where all CRPD GOLD files are combined)</span>
+<span class="syntax-comment"># Use ONLY if your system RAM comfortably exceeds your file sizes.</span>
+<span class="syntax-comment"># ==============================================================================</span>
+<span class="syntax-keyword">library</span>(data.table)
+<span class="syntax-keyword">library</span>(dplyr)
+<span class="syntax-keyword">library</span>(fastmatch)
 
-  <span class="syntax-comment"># Create empty file & write column names</span>
-  <span class="syntax-function">fwrite</span>(<span class="syntax-function">data.frame</span>(), output_file)
-  <span class="syntax-function">fwrite</span>(<span class="syntax-function">names</span>(data.table::<span class="syntax-function">fread</span>(ehr_file, nrows = 0, header = T)), output_file, append = T)
-  
-  <span class="syntax-comment"># Read in chunks, filter against cohort list</span>
-  ehr_stream &lt;- data.table::<span class="syntax-function">fread</span>(ehr_file, header = T, colClasses=<span class="syntax-string">"character"</span>, nThread=8)
-  relevant_data &lt;- ehr_stream %&gt;% <span class="syntax-function">filter</span>(patient_id %fin% patient_id_list$patient_id)
-  
-  <span class="syntax-function">fwrite</span>(relevant_data, output_file, append = T)
+<span class="syntax-comment"># 1. PREPARE & CLEAN THE CODELIST ----------------------------------------------</span>
+<span class="syntax-function">cat</span>(<span class="syntax-string">"Loading and cleaning codelist...\n"</span>)
+
+<span class="syntax-comment"># Read codelist, filter specific systems, remove NA’s</span>
+codelist_file &lt;- <span class="syntax-string">"INSERT PATH TO FILE"</span>
+
+codelist &lt;- <span class="syntax-function">fread</span>(codelist_file, colClasses = <span class="syntax-string">"character"</span>, header = TRUE) %&gt;% 
+  <span class="syntax-function">filter</span>(system %in% <span class="syntax-function">c</span>(<span class="syntax-string">"read"</span>, <span class="syntax-string">"prodcode"</span>, <span class="syntax-string">"OXMIS"</span>)) %&gt;%
+  <span class="syntax-function">filter</span>(code != <span class="syntax-string">""</span>) 
+
+<span class="syntax-comment"># Clean code: strip spaces and punctuation</span>
+codelist$code &lt;- <span class="syntax-function">gsub</span>(<span class="syntax-string">'\\s+'</span>, <span class="syntax-string">''</span>, codelist$code)
+codelist$code &lt;- <span class="syntax-function">gsub</span>(<span class="syntax-string">'\\.'</span>, <span class="syntax-string">''</span>, codelist$code)
+
+<span class="syntax-comment"># Keep only distinct codes to speed up filtering</span>
+codelist &lt;- codelist %&gt;% <span class="syntax-function">distinct</span>(code, .keep_all = TRUE)
+
+<span class="syntax-comment"># Garbage collection to free memory before loading large data</span>
+<span class="syntax-function">gc</span>() 
+
+<span class="syntax-comment"># Define exactly which columns to extract (dropping unused saves RAM)</span>
+target_cols &lt;- <span class="syntax-function">c</span>(<span class="syntax-string">"patid"</span>, <span class="syntax-string">"medcode"</span>, <span class="syntax-string">"eventdate"</span>, <span class="syntax-string">"enttype"</span>, <span class="syntax-string">"data1"</span>, <span class="syntax-string">"data2"</span>, <span class="syntax-string">"data3"</span>, <span class="syntax-string">"data4"</span>, <span class="syntax-string">"data5"</span>, <span class="syntax-string">"data6"</span>, <span class="syntax-string">"data7"</span>, <span class="syntax-string">"source"</span>)
+
+<span class="syntax-comment"># 2. PROCESS DATA (Example: Mother Data) ---------------------------------------</span>
+<span class="syntax-function">cat</span>(<span class="syntax-string">"Processing Mother Data...\n"</span>)
+
+<span class="syntax-comment"># Load the entire dataset into RAM</span>
+all_mum &lt;- <span class="syntax-function">fread</span>(<span class="syntax-string">"cprd_all_mum_data.txt"</span>, colClasses = <span class="syntax-string">"character"</span>, header = TRUE, nThread = 8, select = target_cols)
+
+<span class="syntax-comment"># Filter the massive dataset against our cleaned codelist</span>
+mother_aces_data &lt;- all_mum %&gt;% <span class="syntax-function">filter</span>(medcode %fin% codelist$code)
+
+<span class="syntax-comment"># Write filtered data to a new file</span>
+<span class="syntax-function">fwrite</span>(mother_aces_data, <span class="syntax-string">"mother_aces_data_cprd_gold.txt"</span>, sep = <span class="syntax-string">"\t"</span>, nThread = 7)
+
+<span class="syntax-comment"># CRITICAL: Delete large tables from RAM and clear memory before moving on</span>
+<span class="syntax-function">rm</span>(all_mum, mother_aces_data)
+<span class="syntax-function">gc</span>()
+
+<span class="syntax-comment"># -> Repeat Step 2 for subsequent files (e.g., Baby data, Dad data)</span></code></pre>
+          </div>
+        </div>
+      </details>
+
+      <!-- Expandable Box 2: Chunking -->
+      <details class="group mb-4 bg-white rounded-lg border border-emerald-200 shadow-sm overflow-hidden">
+        <summary class="flex justify-between items-center font-medium cursor-pointer list-none bg-emerald-50 text-emerald-900 px-5 py-4 hover:bg-emerald-100 transition-colors text-[16px]">
+          <span class="flex items-center">
+            <i class="fas fa-layer-group mr-3 text-emerald-500 text-lg"></i>
+            Option 2: Filtering Massive Files (Chunking Approach)
+          </span>
+          <span>
+            <i class="fas fa-chevron-down opacity-70 transition-transform duration-300 group-open:rotate-180"></i>
+          </span>
+        </summary>
+        <div class="p-5 border-t border-emerald-100 bg-slate-50">
+           <p class="content-text text-[15px] !important mb-4">
+             We recommend a high-performance chunking approach when extracting data from extremely large datasets (e.g., 100GB+) that cannot fit into RAM. This iterates through the massive file in fixed-size batches—filtering against your medical code list and appending the matches to a new file—ensuring you never crash your system's memory.
+           </p>
+           <div class="code-container mb-0">
+            <div class="code-header">
+              <div class="code-window-dot bg-rose-500"></div><div class="code-window-dot bg-amber-500"></div><div class="code-window-dot bg-emerald-500"></div>
+              <span class="text-xs text-slate-400 font-mono ml-2">R Script</span>
+            </div>
+            <pre class="code-pre"><code><span class="syntax-comment"># ==============================================================================</span>
+<span class="syntax-comment"># OPTIMIZED R SCRIPT: CODELIST EXTRACTION ONLY (CHUNKING)</span>
+<span class="syntax-comment"># Strategy:</span>
+<span class="syntax-comment"># 1. Read huge file in chunks.</span>
+<span class="syntax-comment"># 2. Filter ONLY based on Medical codelist.</span>
+<span class="syntax-comment"># 3. Append to result file.</span>
+<span class="syntax-comment"># ==============================================================================</span>
+
+<span class="syntax-comment"># 1. LIBRARIES -----------------------------------------------------------------</span>
+<span class="syntax-keyword">library</span>(data.table)
+<span class="syntax-keyword">library</span>(bit64) <span class="syntax-comment"># Essential for CPRD ID handling</span>
+
+<span class="syntax-comment"># 2. SETUP PARAMETERS ----------------------------------------------------------</span>
+
+<span class="syntax-comment"># INPUT: The massive 100GB+ file</span>
+input_large_file &lt;- <span class="syntax-string">"INSERT LARGE FILE PATH HERE"</span>
+
+<span class="syntax-comment"># OUTPUT: where the filtered data will be saved</span>
+output_final_file &lt;- <span class="syntax-string">"INSERT OUTPUT FILE PATH HERE"</span>
+
+<span class="syntax-comment"># FILTER: Codelist only</span>
+codelist_file &lt;- <span class="syntax-string">"INSERT ACES CODELIST FILE PATH HERE"</span>
+
+<span class="syntax-comment"># CONFIGURATION:</span>
+<span class="syntax-comment"># Column name for codes in the LARGE data (usually medcodeid or prodcodeid)</span>
+target_code_col &lt;- <span class="syntax-string">"medcodeid"</span>
+<span class="syntax-comment"># Column name for codes in your CODELIST file</span>
+codelist_col_name &lt;- <span class="syntax-string">"code"</span>
+
+<span class="syntax-comment"># CHUNK SIZE: 5 million rows is a sweet spot for speed vs memory.</span>
+chunk_size &lt;- 5000000
+
+<span class="syntax-comment"># 3. PREPARE FILTER (CODELIST ONLY) --------------------------------------------</span>
+<span class="syntax-function">cat</span>(<span class="syntax-string">"Preparing codelist lookup...\n"</span>)
+
+codes_raw &lt;- <span class="syntax-function">fread</span>(codelist_file)
+target_codes &lt;- <span class="syntax-function">unique</span>(codes_raw[[codelist_col_name]])
+<span class="syntax-function">rm</span>(codes_raw)
+
+<span class="syntax-function">cat</span>(<span class="syntax-function">paste0</span>(<span class="syntax-string">"Ready: Filtering for "</span>, <span class="syntax-function">length</span>(target_codes), <span class="syntax-string">" medical codes.\n"</span>))
+
+<span class="syntax-comment"># 4. INITIALIZE LOOP -----------------------------------------------------------</span>
+
+<span class="syntax-comment"># Read header row first to get column names</span>
+header_row &lt;- <span class="syntax-function">names</span>(<span class="syntax-function">fread</span>(input_large_file, nrows = 0))
+
+<span class="syntax-keyword">if</span>(!(target_code_col %in% header_row)) <span class="syntax-function">stop</span>(<span class="syntax-function">paste0</span>(<span class="syntax-string">"Column '"</span>, target_code_col, <span class="syntax-string">"' not found."</span>))
+
+current_skip &lt;- 0
+first_write &lt;- TRUE
+chunk_counter &lt;- 1
+found_rows_total &lt;- 0
+
+<span class="syntax-comment"># 5. EXECUTION LOOP ------------------------------------------------------------</span>
+<span class="syntax-function">cat</span>(<span class="syntax-string">"Starting High-Performance Chunking...\n"</span>)
+
+<span class="syntax-keyword">repeat</span> {
+
+  <span class="syntax-comment"># --- STEP A: READ CHUNK ---</span>
+  <span class="syntax-keyword">if</span>(chunk_counter %% 10 == 0) <span class="syntax-function">cat</span>(<span class="syntax-function">paste0</span>(<span class="syntax-string">"...Processing Batch "</span>, chunk_counter, <span class="syntax-string">"...\n"</span>))
+
+  <span class="syntax-keyword">if</span>(current_skip == 0) {
+    <span class="syntax-comment"># First chunk: Read header normally</span>
+    chunk_dt &lt;- <span class="syntax-function">fread</span>(input_large_file, nrows = chunk_size, header = TRUE, nThread = 8, colClasses = <span class="syntax-string">"character"</span>)
+  } <span class="syntax-keyword">else</span> {
+    <span class="syntax-comment"># Subsequent chunks: Skip rows, No header</span>
+    chunk_dt &lt;- <span class="syntax-function">fread</span>(input_large_file, skip = current_skip, nrows = chunk_size, header = FALSE, nThread = 8, colClasses = <span class="syntax-string">"character"</span>)
+
+    <span class="syntax-keyword">if</span> (<span class="syntax-function">nrow</span>(chunk_dt) == 0) <span class="syntax-keyword">break</span>
+    <span class="syntax-function">setnames</span>(chunk_dt, header_row)
+  }
+
+  rows_read &lt;- <span class="syntax-function">nrow</span>(chunk_dt)
+
+  <span class="syntax-comment"># --- STEP B: FILTERING ---</span>
+  chunk_dt &lt;- chunk_dt[<span class="syntax-function">get</span>(target_code_col) %in% target_codes]
+
+  <span class="syntax-comment"># --- STEP C: WRITE RESULTS ---</span>
+  matches_n &lt;- <span class="syntax-function">nrow</span>(chunk_dt)
+
+  <span class="syntax-keyword">if</span> (matches_n &gt; 0) {
+    <span class="syntax-function">cat</span>(<span class="syntax-function">paste0</span>(<span class="syntax-string">" Batch "</span>, chunk_counter, <span class="syntax-string">": Found "</span>, matches_n, <span class="syntax-string">" matches. Appending.\n"</span>))
+
+    <span class="syntax-function">fwrite</span>(chunk_dt,
+           file = output_final_file,
+           append = !first_write,
+           sep = <span class="syntax-string">"\t"</span>,
+           col.names = first_write,
+           nThread = 8)
+
+    first_write &lt;- FALSE
+    found_rows_total &lt;- found_rows_total + matches_n
+  }
+
+  <span class="syntax-comment"># --- STEP D: CLEANUP & INCREMENT ---</span>
+  <span class="syntax-function">rm</span>(chunk_dt)
+  <span class="syntax-keyword">if</span>(chunk_counter %% 5 == 0) <span class="syntax-function">gc</span>()
+
+  <span class="syntax-keyword">if</span>(rows_read &lt; chunk_size) {
+    <span class="syntax-function">cat</span>(<span class="syntax-string">"End of file reached.\n"</span>)
+    <span class="syntax-keyword">break</span>
+  }
+
+  <span class="syntax-keyword">if</span> (chunk_counter == 1) {
+    current_skip &lt;- rows_read + 1
+  } <span class="syntax-keyword">else</span> {
+    current_skip &lt;- current_skip + rows_read
+  }
+
+  chunk_counter &lt;- chunk_counter + 1
 }</code></pre>
-      </div>
+           </div>
+        </div>
+      </details>
+
     </div>
   </section>
 
