@@ -78,6 +78,9 @@ author_profile: false
   .content-text {
     font-size: 17px !important; line-height: 1.75 !important; color: #475569 !important; margin-bottom: 1.5rem !important;
   }
+  .content-text-dark {
+    font-size: 17px !important; line-height: 1.75 !important; color: #cbd5e1 !important; margin-bottom: 1.5rem !important;
+  }
 
   /* Modern Info Cards */
   .feature-card {
@@ -97,6 +100,16 @@ author_profile: false
   }
   .custom-list li svg {
     position: absolute !important; left: 0 !important; top: 0.25rem !important; width: 1.5rem !important; height: 1.5rem !important;
+  }
+  
+  /* Dark Mode List */
+  .custom-list-dark { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+  .custom-list-dark li {
+    position: relative !important; padding-left: 2.5rem !important; margin-bottom: 1.25rem !important;
+    font-size: 16px !important; line-height: 1.6 !important; color: #e2e8f0 !important;
+  }
+  .custom-list-dark li svg {
+    position: absolute !important; left: 0 !important; top: 0.25rem !important; width: 1.5rem !important; height: 1.5rem !important; color: #60a5fa !important;
   }
 
   /* Modern Bottom Grid Cards */
@@ -123,8 +136,14 @@ author_profile: false
   }
   .grid-card:hover .card-title { color: #2563eb !important; }
   
-  html {
-    scroll-behavior: smooth;
+  html { scroll-behavior: smooth; }
+
+  /* SVG Arrow Flow Animation */
+  @keyframes dash-flow {
+    to { stroke-dashoffset: -12; }
+  }
+  .animate-dash {
+    animation: dash-flow 0.8s linear infinite;
   }
 </style>
 
@@ -145,7 +164,7 @@ author_profile: false
 
   <main class="flex-grow">
     
-    <!-- SEO INTRO BANNER (CRUCIAL FOR GOOGLE INDEXING) -->
+    <!-- SEO INTRO BANNER -->
     <section class="bg-blue-50 border-b border-blue-100 py-8 relative z-20 shadow-sm">
       <div class="max-w-4xl mx-auto px-6 text-center flex flex-col md:flex-row items-center justify-center gap-4">
         <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
@@ -183,7 +202,9 @@ author_profile: false
         <div class="p-6 md:p-8">
           <p class="content-text">The initial ACEs predominately referred to domains of adversity in the home environment. They are typically categorised into three main groups:</p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+            
+            <!-- Abuse Card (Color Coded Border) -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-blue-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <h4 class="text-blue-800 font-bold mb-3 flex items-center"><i class="fas fa-child mr-2 text-blue-500"></i> Abuse</h4>
               <ul class="space-y-2 list-disc pl-4" style="font-size: 16px !important; color: #475569 !important;">
                 <li>Psychological abuse</li>
@@ -191,7 +212,9 @@ author_profile: false
                 <li>Sexual abuse</li>
               </ul>
             </div>
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+
+            <!-- Dysfunction Card (Color Coded Border) -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-emerald-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <h4 class="text-emerald-800 font-bold mb-3 flex items-center"><i class="fas fa-house-damage mr-2 text-emerald-500"></i> Dysfunction</h4>
               <ul class="space-y-2 list-disc pl-4" style="font-size: 16px !important; color: #475569 !important;">
                 <li>Substance abuse</li>
@@ -201,7 +224,9 @@ author_profile: false
                 <li>Parental separation</li>
               </ul>
             </div>
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+
+            <!-- Neglect Card (Color Coded Border) -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-rose-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <h4 class="text-rose-800 font-bold mb-3 flex items-center"><i class="fas fa-user-times mr-2 text-rose-500"></i> Neglect</h4>
               <ul class="space-y-2 list-disc pl-4" style="font-size: 16px !important; color: #475569 !important;">
                 <li>Physical neglect</li>
@@ -212,34 +237,34 @@ author_profile: false
         </div>
       </div>
 
-      <!-- Concise Definitions Box (Indigo Theme) -->
-      <div class="mt-8 bg-indigo-50 rounded-2xl border border-indigo-100 overflow-hidden shadow-sm">
-        <div class="bg-indigo-600 px-6 py-4">
+      <!-- Definition of ACEs Box (Dark Theme matched) -->
+      <div class="mt-8 bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-lg">
+        <div class="bg-slate-900 px-6 py-4 border-b border-slate-700">
           <h3 class="text-xl font-bold text-white m-0 border-none flex items-center">
-            <i class="fas fa-search mr-3 opacity-80"></i> How we define ACEs in EHRs
+            <i class="fas fa-book-open mr-3 text-blue-400 opacity-90"></i> Definition of ACEs
           </h3>
         </div>
         <div class="p-6 md:p-8">
-          <p class="content-text mb-5 text-indigo-950 font-medium">For our electronic health record indicators, we concisely define an ACE as any experience within the family environment that is:</p>
-          <ul class="space-y-3 list-none pl-0 mb-6" style="font-size: 17px !important; color: #475569 !important;">
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3 shrink-0"></i> 
-              <span>Frightening, violent, traumatic, or neglectful with potential for harm.</span>
+          <p class="content-text-dark mb-5 text-white font-medium">ACEs can be defined as any experience within the family environment considered to be:</p>
+          <ul class="custom-list-dark mb-6">
+            <li>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Frightening, violent, traumatic or neglectful <a href="https://apps.who.int/iris/bitstream/handle/10665/42495/9241545615_eng.pdf" target="_blank" class="text-blue-400 hover:underline">(see WHO violence definition)</a>, with potential for immediate or longer-term harm to a child's biopsychosocial development (intentionally or unintentionally) <a href="https://assets.publishing.service.gov.uk/media/65cb4349a7ded0000c79e4e1/Working_together_to_safeguard_children_2023_-_statutory_guidance.pdf" target="_blank" class="text-blue-400 hover:underline">(see UK government definition)</a>;</span>
             </li>
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3 shrink-0"></i> 
-              <span>Caused by a single event or repeated exposure.</span>
+            <li>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Caused by a single event or through repeated exposure;</span>
             </li>
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3 shrink-0"></i> 
-              <span>Caused by external factors (not the child themselves).</span>
+            <li>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Caused by external factors and not the child themselves, such as self-harm; and</span>
             </li>
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3 shrink-0"></i> 
-              <span>Amenable to health or social care intervention at the family level.</span>
+            <li>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Amenable to health or social care intervention at a family level (i.e. excluding wider factors such as socioeconomic status, community violence, school bullying etc; see <a href="https://jamanetwork.com/journals/jama/fullarticle/2783975" target="_blank" class="text-blue-400 hover:underline">1</a>, <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2022-to-2025/chapter-4-identifying-and-working-with-families" target="_blank" class="text-blue-400 hover:underline">2</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749379719300315" target="_blank" class="text-blue-400 hover:underline">3</a>).</span>
             </li>
           </ul>
-          <a href="#definitions-and-inclusions" class="inline-flex items-center text-indigo-700 font-semibold hover:text-indigo-900 hover:underline transition-colors mt-2 text-[16px]">
+          <a href="#definitions-and-inclusions" class="inline-flex items-center text-blue-400 font-semibold hover:text-blue-300 hover:underline transition-colors mt-2 text-[16px]">
             Read full inclusion criteria and rationale <i class="fas fa-arrow-down ml-2"></i>
           </a>
         </div>
@@ -264,10 +289,10 @@ author_profile: false
         </div>
 
         <!-- Image Card -->
-        <div class="mt-10 bg-white p-4 md:p-8 rounded-2xl shadow-md border border-slate-200 text-center relative">
-          <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/formulation%20lower%20res%201.png" alt="Biopsychosocial model of ACEs formulation" class="w-full h-auto object-contain rounded-lg mx-auto" style="max-width: 800px; margin: 0 auto !important;">
+        <div class="mt-10 bg-white p-4 md:p-8 rounded-2xl shadow-md border border-slate-200 text-center relative overflow-hidden group">
+          <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/formulation%20lower%20res%201.png" alt="Biopsychosocial model of ACEs formulation" class="w-full h-auto object-contain rounded-lg mx-auto transition-transform duration-500 group-hover:scale-[1.02]" style="max-width: 800px; margin: 0 auto !important;">
           <p class="text-sm text-slate-500 mt-6 mb-2 italic">The figure does not represent an exhaustive list of potential mechanisms behind ACEs.</p>
-          <a href="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/formulation.png" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm">
+          <a href="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/formulation.png" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm mt-2">
             <i class="fas fa-search-plus mr-2"></i> View Figure in High Resolution
           </a>
         </div>
@@ -297,37 +322,70 @@ author_profile: false
         </div>
 
         <!-- Individual & Family Level Container -->
-        <div class="bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-200 shadow-sm">
-          <h3 class="content-subheading mt-0 mb-6 flex items-center border-none">
+        <div class="bg-slate-50 rounded-2xl p-6 md:p-10 border border-slate-200 shadow-sm relative">
+          
+          <h3 class="content-subheading mt-0 mb-8 flex items-center border-none relative z-20">
             <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mr-3"><i class="fas fa-users text-lg"></i></div>
             Individual & family level
           </h3>
           
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <!-- Attachment -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+          <!-- CYCLICAL ARROWS SVG DEFINITIONS & OVERLAYS -->
+          <svg width="0" height="0" class="absolute">
+            <defs>
+              <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
+              </marker>
+            </defs>
+          </svg>
+
+          <!-- The Theory Boxes Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
+            
+            <!-- Top Arrow: Life-course (Right) to Attachment (Left) -->
+            <div class="hidden lg:block absolute -top-8 left-[25%] right-[25%] h-12 text-blue-400 opacity-60 pointer-events-none z-0">
+              <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path class="animate-dash" d="M 90 80 Q 50 0 10 80" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrowhead)" />
+              </svg>
+            </div>
+
+            <!-- Left Arrow: Attachment (Top) to Cognitive (Bottom) -->
+            <div class="hidden lg:block absolute top-[15%] bottom-[20%] -left-8 w-12 text-blue-400 opacity-60 pointer-events-none z-0">
+              <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path class="animate-dash" d="M 80 10 Q 0 50 80 90" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrowhead)" />
+              </svg>
+            </div>
+
+            <!-- Right Arrow: Cognitive (Bottom) to Life-course (Top) -->
+            <div class="hidden lg:block absolute top-[25%] bottom-[30%] -right-8 w-12 text-blue-400 opacity-60 pointer-events-none z-0">
+              <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path class="animate-dash" d="M 20 90 Q 100 50 20 10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrowhead)" />
+              </svg>
+            </div>
+
+            <!-- Card 1: Attachment (Col 1) -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md relative z-10">
               <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-link text-emerald-500 mr-2"></i> Attachment and learning theory</h4>
               <p class="content-text" style="margin-bottom: 0 !important;">Social risk factors can negatively influence carers' ability to respond, such as being available and responsive to a child's attachment cues. Children with ACEs may be more likely to develop insecure attachments from reduced caregiving responses of emotional validation (e.g., "my pain matters") and reduced experiences of healthy parental modelling of emotion regulation. This can also mean a child loses friends and the support of adults and misses out on opportunities to grow social support networks.</p>
             </div>
 
-            <!-- Life Course -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+            <!-- Card 2: Life Course (Col 2) -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md relative z-10">
               <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-road text-emerald-500 mr-2"></i> Life-course approach</h4>
               <p class="content-text" style="margin-bottom: 0 !important;">Taken together, the model views ACEs as a complex social phenomenon and considers families as resilient and constantly striving to cope using different strategies and resources at hand. The model helps separate the <em>adverse experience</em> from the <em>adverse stress</em> response, overcoming previous limitations of reverse causality when looking at long-term outcomes. We consider ACEs recorded at the family level amenable to service intervention and relevant to EHRs.</p>
             </div>
             
-            <!-- Cognitive & Behavioural (Full Width inside grid) -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 lg:col-span-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-brain text-emerald-500 mr-2"></i> Cognitive and behavioural theories</h4>
+            <!-- Card 3: Cognitive & Behavioural (Spans both columns) -->
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-slate-200 lg:col-span-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md relative z-10">
+              <h4 class="text-lg font-bold text-slate-800 mb-4"><i class="fas fa-brain text-emerald-500 mr-2"></i> Cognitive and behavioural theories</h4>
               
               <p class="content-text">
-                People cope with stress and perceived threats using various survival strategies—such as avoidance, escape, or fighting—to minimise negative consequences. Children who grow up in dangerous, unpredictable, or highly stressful environments are more likely to perceive the world as unsafe and doubt their ability to manage challenges. To cope, children may develop cognitive biases towards threats, suppress their emotions, and avoid situations they fear will cause distress (aligning with <a href="https://psycnet.apa.org/record/1986-15090-001" target="_blank" class="text-blue-600 hover:underline">theories on emotional processing</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/10402694/" target="_blank" class="text-blue-600 hover:underline">selective attention and overestimation of threat</a>).
+                People cope with stress and perceived threats using various survival strategies—such as <strong>avoidance, escape, or fighting</strong>—to minimise negative consequences. Children who grow up in dangerous, unpredictable, or highly stressful environments are more likely to perceive the world as unsafe and doubt their ability to manage challenges. To cope, children may develop <strong>cognitive biases towards threats</strong>, suppress their emotions, and avoid situations they fear will cause distress (aligning with <a href="https://psycnet.apa.org/record/1986-15090-001" target="_blank" class="text-blue-600 hover:underline">theories on emotional processing</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/10402694/" target="_blank" class="text-blue-600 hover:underline">selective attention and overestimation of threat</a>).
               </p>
               <p class="content-text">
-                While these coping mechanisms hold functional value and provide a short-term sense of safety, they can increase the long-term risk of health problems. First, these strategies overemphasise threats, creating a heightened state of alert that becomes difficult to "turn off" even in safer, normative environments where the behaviours are no longer effective. These children have a smaller window of tolerance to stress and perceived threat. Second, survival responses like avoidance, withdrawal, or reactive hostility prevent opportunities for new learning and the development of balanced cognitive appraisals (such as realising, "I can cope"). As these children grow, their trauma responses and behaviour can drive peers away, stripping them of protective social networks and increasing their vulnerability. This creates a maintenance cycle of stress <a href="https://doi.org/10.1111/jcpp.12713" target="_blank" class="text-blue-600 hover:underline">(4)</a>, <a href="https://doi.org/10.1016/j.chiabu.2016.08.003" target="_blank" class="text-blue-600 hover:underline">(5)</a>.
+                While these coping mechanisms hold functional value and provide a short-term sense of safety, they can increase the long-term risk of health problems. <strong>First,</strong> these strategies overemphasise threats, creating a heightened state of alert that becomes difficult to "turn off" even in safer, normative environments where the behaviours are no longer effective. These children have a smaller window of tolerance to stress and perceived threat. <strong>Second,</strong> survival responses like avoidance, withdrawal, or reactive hostility prevent opportunities for new learning and the development of balanced cognitive appraisals (such as realising, "I can cope"). As these children grow, their trauma responses and behaviour can drive peers away, stripping them of protective social networks and increasing their vulnerability. This creates a <strong>maintenance cycle of stress</strong> <a href="https://doi.org/10.1111/jcpp.12713" target="_blank" class="text-blue-600 hover:underline">(4)</a>, <a href="https://doi.org/10.1016/j.chiabu.2016.08.003" target="_blank" class="text-blue-600 hover:underline">(5)</a>.
               </p>
               <p class="content-text">
-                For some families, these social risk factors and coping responses are carried over across generations as children become parents themselves. Whilst strategies are perceived as logical at the moment, over time, they can leave families in a cycle that perpetuates stress. As underlying stress increases, caregivers and children have fewer resources to cope and regulate responses (e.g. reduced response inhibition/executive functioning) <a href="https://pubmed.ncbi.nlm.nih.gov/12212647/" target="_blank" class="text-blue-600 hover:underline">(6)</a>, increasing the risk of more immediate coping responses to escape or re-gaining control (e.g. shouting, violence, neglect).
+                For some families, these social risk factors and coping responses are <strong>carried over across generations</strong> as children become parents themselves. Whilst strategies are perceived as logical at the moment, over time, they can leave families in a cycle that perpetuates stress. As underlying stress increases, caregivers and children have fewer resources to cope and regulate responses (e.g. reduced response inhibition/executive functioning) <a href="https://pubmed.ncbi.nlm.nih.gov/12212647/" target="_blank" class="text-blue-600 hover:underline">(6)</a>, increasing the risk of more immediate coping responses to escape or re-gaining control (e.g. shouting, violence, neglect).
               </p>
               <p class="content-text" style="margin-bottom: 0 !important;">
                 Coping responses may vary as a function of the level of need to escape distress and harm, ranging from immediate escape (e.g. violence, substance misuse, abandonment/neglect) to stronger forms of avoidance (e.g. avoiding going out, which reduces social support systems in the longer-term) <a href="https://link.springer.com/article/10.1023/B:JOBA.0000007455.08539.94" target="_blank" class="text-blue-600 hover:underline">(7)</a>.
@@ -341,6 +399,10 @@ author_profile: false
     <!-- SECTION 4: Risk Prediction & Challenges (Slate 100 to differentiate from previous white) -->
     <section class="bg-slate-100 py-12 md:py-16 border-y border-slate-200">
       <div class="max-w-4xl mx-auto px-6">
+        
+        <!-- NEW ADDED TITLE HERE -->
+        <h2 class="content-heading text-center mt-0 mb-12 border-none">Adverse Childhood Experiences (ACEs) using Electronic Health Records (EHRs)</h2>
+
         <h3 class="content-subheading mt-0 border-none"><i class="fas fa-chart-line text-blue-500 mr-2"></i> A multistage risk prediction model to determine relevance of candidate ACEs</h3>
         <p class="content-text">
           We assessed the relevance of identified candidate ACE indicators based on their consistent risk association with a reference standard of family violence in a multistage prediction model. The reference standard (outcome) was any occurrence of child maltreatment (CM) and maternal intimate partner violence (mIPV) up to 5-years post-birth.
@@ -354,7 +416,18 @@ author_profile: false
           Since the late 1990s, the initial "ACE domains" have undergone numerous expansions across studies. Whilst this variation helped innovate and adapt indicators of ACEs to different goals, there is currently little consistency in the definition and inclusion of ACEs. The large variation of measured ACEs also means there is no agreed reference standard for developing new measures of ACEs.
         </p>
         <p class="content-text">
-          Previous studies have mainly assessed the validity and relevance of ACEs based on their risk association with poorer health outcomes in adulthood. However, most studies reporting on the negative health effects of ACEs are based on cross-sectional samples of adults asked to recall experiences from childhood <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">(1)</a>. Recent birth cohort studies, however, reveal that ACEs are relatively poor predictors of negative health outcomes in adulthood relative to other socioeconomic factors <a href="https://jamanetwork.com/journals/jamapediatrics/article-abstract/2775420" target="_blank" class="text-blue-600 font-medium hover:underline">(2)</a>. Global studies by the World Health Organization show that traumatic stress symptoms naturally resolve on average six years after a linked traumatic event (e.g., an ACE) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5632781/" target="_blank" class="text-blue-600 font-medium hover:underline">(3)</a>, <a href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2595039" target="_blank" class="text-blue-600 font-medium hover:underline">(4)</a>. These gaps create multiple challenges when attempting to develop new indicators of ACEs for electronic health records (EHRs).
+          Previous studies have mainly assessed the validity and relevance of ACEs based on their risk association with poorer health outcomes in adulthood. However, most studies reporting on the negative health effects of ACEs are based on cross-sectional samples of adults asked to recall experiences from childhood <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">(1)</a>. Recent birth cohort studies, however, reveal that ACEs are relatively poor predictors of negative health outcomes in adulthood relative to other socioeconomic factors <a href="https://jamanetwork.com/journals/jamapediatrics/article-abstract/2775420" target="_blank" class="text-blue-600 font-medium hover:underline">(2)</a>. 
+        </p>
+
+        <!-- ADDED PULL QUOTE FOR READABILITY -->
+        <div class="border-l-4 border-l-blue-400 bg-blue-50 p-5 rounded-r-lg my-6">
+          <p class="text-blue-900 font-medium mb-0" style="font-size: 16px; line-height: 1.6;">
+            <i class="fas fa-quote-left text-blue-300 mr-2"></i> Global studies by the World Health Organization show that traumatic stress symptoms naturally resolve on average six years after a linked traumatic event (e.g., an ACE) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5632781/" target="_blank" class="text-blue-600 hover:underline">(3)</a>, <a href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2595039" target="_blank" class="text-blue-600 hover:underline">(4)</a>.
+          </p>
+        </div>
+
+        <p class="content-text">
+          These gaps create multiple challenges when attempting to develop new indicators of ACEs for electronic health records (EHRs).
         </p>
 
         <h3 class="content-subheading mt-10 border-none"><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Establishing a consistent definition</h3>
@@ -364,89 +437,87 @@ author_profile: false
       </div>
     </section>
 
-    <!-- SECTION 5: Definitions and Inclusions (Reverted to White Theme) -->
-    <section id="definitions-and-inclusions" class="bg-white py-12 md:py-16 border-b border-slate-200">
+    <!-- SECTION 5: Definitions and Inclusions (DARK MODE - High Premium Contrast) -->
+    <section id="definitions-and-inclusions" class="bg-slate-900 py-16 md:py-20 border-b border-slate-800">
       <div class="max-w-4xl mx-auto px-6">
-        <h2 class="content-heading text-center mt-0 mb-10 border-none">Definitions and Inclusions</h2>
+        <h2 class="text-3xl font-bold text-white mb-10 text-center border-none">Definitions and Inclusions</h2>
         
-        <div class="bg-white rounded-2xl border border-blue-100 shadow-md overflow-hidden relative mb-10">
+        <div class="bg-slate-800 rounded-2xl border border-blue-500 shadow-2xl overflow-hidden relative mb-10">
           <div class="h-2 w-full bg-blue-500 absolute top-0 left-0"></div>
           <div class="p-8 md:p-10">
-            <p class="content-text font-semibold text-slate-800 mb-6">
+            <p class="content-text-dark font-semibold text-white mb-6">
               We defined ACE indicators as any experience within the family environment recorded in the child or the parent data source (e.g. health record) considered to be:
             </p>
             
-            <ul class="custom-list">
+            <ul class="custom-list-dark">
               <li>
-                <svg class="text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                Frightening, violent, traumatic or neglectful <a href="https://apps.who.int/iris/bitstream/handle/10665/42495/9241545615_eng.pdf" target="_blank" class="text-blue-600 hover:underline">(see WHO violence definition)</a>, with potential for immediate or longer-term harm to a child's biopsychosocial development (intentionally or unintentionally) <a href="https://assets.publishing.service.gov.uk/media/65cb4349a7ded0000c79e4e1/Working_together_to_safeguard_children_2023_-_statutory_guidance.pdf" target="_blank" class="text-blue-600 hover:underline">(see UK government definition)</a>;
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Frightening, violent, traumatic or neglectful <a href="https://apps.who.int/iris/bitstream/handle/10665/42495/9241545615_eng.pdf" target="_blank" class="text-blue-400 hover:underline">(see WHO violence definition)</a>, with potential for immediate or longer-term harm to a child's biopsychosocial development (intentionally or unintentionally) <a href="https://assets.publishing.service.gov.uk/media/65cb4349a7ded0000c79e4e1/Working_together_to_safeguard_children_2023_-_statutory_guidance.pdf" target="_blank" class="text-blue-400 hover:underline">(see UK government definition)</a>;
               </li>
               <li>
-                <svg class="text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 Caused by a single event or through repeated exposure;
               </li>
               <li>
-                <svg class="text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 Caused by external factors and not the child themselves, such as self-harm; and
               </li>
               <li>
-                <svg class="text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                Amenable to health or social care intervention at a family level (i.e. excluding wider factors such as socioeconomic status, community violence, school bullying etc; see <a href="https://jamanetwork.com/journals/jama/fullarticle/2783975" target="_blank" class="text-blue-600 hover:underline">1</a>, <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2022-to-2025/chapter-4-identifying-and-working-with-families" target="_blank" class="text-blue-600 hover:underline">2</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749379719300315" target="_blank" class="text-blue-600 hover:underline">3</a>).
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Amenable to health or social care intervention at a family level (i.e. excluding wider factors such as socioeconomic status, community violence, school bullying etc; see <a href="https://jamanetwork.com/journals/jama/fullarticle/2783975" target="_blank" class="text-blue-400 hover:underline">1</a>, <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2022-to-2025/chapter-4-identifying-and-working-with-families" target="_blank" class="text-blue-400 hover:underline">2</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749379719300315" target="_blank" class="text-blue-400 hover:underline">3</a>).
               </li>
             </ul>
           </div>
         </div>
 
-        <p class="content-text">
-          We made several adaptations to previously studied ACEs for feasible ascertainment in electronic health records (EHRs). We defined indicators as variables of grouped codes and measures. We aimed to develop ACE indicators that reflected clinically meaningful risk groups of adversity to identify families that may be eligible for targeted maternal-child care interventions in England (e.g. <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2021-to-2022" target="_blank" class="text-blue-600 font-medium hover:underline">Supporting Families programme</a>, or previously "targeted care pathway" of <a href="https://www.gov.uk/government/publications/healthy-child-programme-0-to-19-health-visitor-and-school-nurse-commissioning" target="_blank" class="text-blue-600 font-medium hover:underline">the Healthy Child Programme</a>. See also WHO for <a href="https://www.who.int/teams/social-determinants-of-health/violence-prevention/global-status-report-on-violence-against-children-2020" target="_blank" class="text-blue-600 font-medium hover:underline">intervention studies</a>).
+        <p class="content-text-dark">
+          We made several adaptations to previously studied ACEs for feasible ascertainment in electronic health records (EHRs). We defined indicators as variables of grouped codes and measures. We aimed to develop ACE indicators that reflected clinically meaningful risk groups of adversity to identify families that may be eligible for targeted maternal-child care interventions in England (e.g. <a href="https://www.gov.uk/government/publications/supporting-families-programme-guidance-2021-to-2022" target="_blank" class="text-blue-400 font-medium hover:underline">Supporting Families programme</a>, or previously "targeted care pathway" of <a href="https://www.gov.uk/government/publications/healthy-child-programme-0-to-19-health-visitor-and-school-nurse-commissioning" target="_blank" class="text-blue-400 font-medium hover:underline">the Healthy Child Programme</a>. See also WHO for <a href="https://www.who.int/teams/social-determinants-of-health/violence-prevention/global-status-report-on-violence-against-children-2020" target="_blank" class="text-blue-400 font-medium hover:underline">intervention studies</a>).
         </p>
 
-        <p class="content-text">
-          We manually grouped indicators into broader ACE domains consistent with the <a href="https://www.ajpmonline.org/article/S0749-3797(98)00017-8/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">original study</a> by <a href="https://www.cdc.gov/violenceprevention/aces/index.html" target="_blank" class="text-blue-600 font-medium hover:underline">Kaiser Permanente and CDC</a>. Due to the lack of recordings, we collapsed all types of child abuse and neglect into child maltreatment (CM). We collapsed "imprisonment of household members" and "household challenges" into Adverse family environments. We created a separate indicator, "Social service involvement" (SSI), for social care-related codes that did not contain descriptions of CM or IPV. Due to few recordings and high intercorrelations, SSI was merged with CM in the final selection process.
+        <p class="content-text-dark">
+          We manually grouped indicators into broader ACE domains consistent with the <a href="https://www.ajpmonline.org/article/S0749-3797(98)00017-8/fulltext" target="_blank" class="text-blue-400 font-medium hover:underline">original study</a> by <a href="https://www.cdc.gov/violenceprevention/aces/index.html" target="_blank" class="text-blue-400 font-medium hover:underline">Kaiser Permanente and CDC</a>. Due to the lack of recordings, we collapsed all types of child abuse and neglect into child maltreatment (CM). We collapsed "imprisonment of household members" and "household challenges" into Adverse family environments. We created a separate indicator, "Social service involvement" (SSI), for social care-related codes that did not contain descriptions of CM or IPV. Due to few recordings and high intercorrelations, SSI was merged with CM in the final selection process.
         </p>
 
-        <p class="content-text">
-          Given the substantial under-recording of CM and IPV (e.g. see <a href="https://www.cambridge.org/core/journals/the-british-journal-of-psychiatry/article/barriers-and-facilitators-of-disclosures-of-domestic-violence-by-mental-health-service-users-qualitative-study/7A690CCBC0322D045442549A5FA3C4CF" target="_blank" class="text-blue-600 hover:underline">1</a>, <a href="https://bjgp.org/content/67/659/e437.long" target="_blank" class="text-blue-600 hover:underline">2</a>), we also added the domain “high-risk presentations of CM” (HRP-CM). HRP-CM encompassed indicators from the <a href="https://www.nice.org.uk/guidance/cg89/chapter/1-Guidance" target="_blank" class="text-blue-600 font-medium hover:underline">National Institute for Health and Care Excellence (NICE)</a> and <a href="https://www.rcgp.org.uk/clinical-and-research/resources/toolkits/child-safeguarding-toolkit.aspx" target="_blank" class="text-blue-600 font-medium hover:underline">Royal College of General Practitioners (RGCP)</a> that should raise clinical suspicion for CM.
+        <p class="content-text-dark">
+          Given the substantial under-recording of CM and IPV (e.g. see <a href="https://www.cambridge.org/core/journals/the-british-journal-of-psychiatry/article/barriers-and-facilitators-of-disclosures-of-domestic-violence-by-mental-health-service-users-qualitative-study/7A690CCBC0322D045442549A5FA3C4CF" target="_blank" class="text-blue-400 hover:underline">1</a>, <a href="https://bjgp.org/content/67/659/e437.long" target="_blank" class="text-blue-400 hover:underline">2</a>), we also added the domain “high-risk presentations of CM” (HRP-CM). HRP-CM encompassed indicators from the <a href="https://www.nice.org.uk/guidance/cg89/chapter/1-Guidance" target="_blank" class="text-blue-400 font-medium hover:underline">National Institute for Health and Care Excellence (NICE)</a> and <a href="https://www.rcgp.org.uk/clinical-and-research/resources/toolkits/child-safeguarding-toolkit.aspx" target="_blank" class="text-blue-400 font-medium hover:underline">Royal College of General Practitioners (RGCP)</a> that should raise clinical suspicion for CM.
         </p>
 
-        <div class="mt-8 bg-emerald-50 p-6 rounded-xl border-l-4 border-l-emerald-500">
-          <p class="content-text text-emerald-900 mb-0 italic">
+        <div class="mt-8 bg-slate-800 p-6 rounded-xl border-l-4 border-l-emerald-500">
+          <p class="content-text-dark mb-0 italic">
             <strong>Note:</strong> ACEs can be recorded in both parents’ and children’s records. ACEs are considered based on each specific child’s time from birth. Children are, therefore, considered unexposed if no relevant recording occurs during the study period, regardless of previous exposure to children within the same family. This approach mirrors changes in stress levels as the family moves through different life stages.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 6: Next Steps / Navigation Grid (Slate 50) -->
-    <section class="bg-slate-50 max-w-full mx-auto px-6 py-16">
-      <div class="max-w-4xl mx-auto">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <a href="https://acesinehrs.com/ACE-domains/" class="grid-card group">
-            <div class="img-wrapper" style="padding-bottom: 0 !important;">
-              <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains.png" alt="View Domains" style="height: 180px !important;">
-            </div>
-            <div class="content-wrapper mt-4">
-              <h3 class="card-title">Explore ACE Domains</h3>
-              <p class="text-sm text-slate-500 mb-0">View comprehensive lists of selected indicators.</p>
-            </div>
-          </a>
+    <!-- SECTION 6: Next Steps / Navigation Grid (White) -->
+    <section class="max-w-4xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <a href="https://acesinehrs.com/ACE-domains/" class="grid-card group">
+          <div class="img-wrapper" style="padding-bottom: 0 !important;">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/home%20view%20domains.png" alt="View Domains" style="height: 180px !important;">
+          </div>
+          <div class="content-wrapper mt-4">
+            <h3 class="card-title">Explore ACE Domains</h3>
+            <p class="text-sm text-slate-500 mb-0">View comprehensive lists of selected indicators.</p>
+          </div>
+        </a>
 
-          <a href="https://acesinehrs.com/codelistbrowse/" class="grid-card group">
-            <div class="img-wrapper" style="padding-bottom: 0 !important;">
-              <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png" alt="Code Lists" style="height: 180px !important;">
-            </div>
-            <div class="content-wrapper mt-4">
-              <h3 class="card-title">Browse Code Lists</h3>
-              <p class="text-sm text-slate-500 mb-0">Search and access clinical code lists seamlessly.</p>
-            </div>
-          </a>
-        </div>
-        
-        <div class="text-center mt-12">
-          <a href="https://acesinehrs.com/" class="inline-flex items-center text-slate-500 hover:text-blue-600 font-medium transition-colors">
-            <i class="fas fa-arrow-left mr-2"></i> Go back to homepage
-          </a>
-        </div>
+        <a href="https://acesinehrs.com/codelistbrowse/" class="grid-card group">
+          <div class="img-wrapper" style="padding-bottom: 0 !important;">
+            <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/code%20lists.png" alt="Code Lists" style="height: 180px !important;">
+          </div>
+          <div class="content-wrapper mt-4">
+            <h3 class="card-title">Browse Code Lists</h3>
+            <p class="text-sm text-slate-500 mb-0">Search and access clinical code lists seamlessly.</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="https://acesinehrs.com/" class="inline-flex items-center text-slate-500 hover:text-blue-600 font-medium transition-colors">
+          <i class="fas fa-arrow-left mr-2"></i> Go back to homepage
+        </a>
       </div>
     </section>
 
