@@ -90,17 +90,17 @@ author_profile: false
   font-size: 16px !important; line-height: 1.75 !important; color: #475569 !important; margin-bottom: 1.25rem !important;
  }
 
- /* Premium Box Panels (For Downloads & Rules) */
+ /* Premium Box Panels (Height restriction removed to stop stretching) */
  .panel-card {
   background-color: #ffffff !important; border-radius: 1.25rem !important; border: 1px solid #e2e8f0 !important;
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02), 0 10px 15px -3px rgba(0,0,0,0.03) !important;
-  padding: 2rem !important; height: 100% !important; display: flex !important; flex-direction: column !important;
+  padding: 2rem !important; display: flex !important; flex-direction: column !important;
  }
 
- /* Code Blocks (Aligned with Starter Guide) */
+ /* Code Blocks */
  .code-container {
   background: #0d1117 !important; border-radius: 0.75rem !important; overflow: hidden !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important; margin-top: auto !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
  }
  .code-header {
   background: #161b22 !important; padding: 0.5rem 1rem !important; border-bottom: 1px solid #30363d !important;
@@ -114,6 +114,7 @@ author_profile: false
  .syntax-keyword { color: #ff7b72 !important; }
  .syntax-string { color: #a5d6ff !important; }
  .syntax-function { color: #d2a8ff !important; }
+ .syntax-comment { color: #8b949e !important; font-style: italic !important; }
 
  /* SaaS Table Styles */
  .table-wrapper {
@@ -183,40 +184,34 @@ author_profile: false
   
   <!-- SECTION 1: DEFINITIONS & QUICK INFOS -->
   <section class="bg-white py-16 border-b border-slate-200">
-   <div class="max-w-5xl mx-auto px-6">
+   <div class="max-w-4xl mx-auto px-6">
     
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-     <!-- Main Definition -->
-     <div class="lg:col-span-2">
-      <div class="flex items-center gap-3 mb-6">
-       <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
-        <i class="fas fa-book-open text-xl"></i>
-       </div>
-       <h2 class="content-heading text-slate-900 !mb-0">Definition</h2>
-      </div>
-
-      <p class="content-text text-slate-700 text-lg font-medium">
-       Any recorded act of commission or omission by a parent or caregiver resulting in harm, the potential for harm or threat of child harm, including neglect, psychological, physical, sexual and emotional abuse. Harm does not need to be intended <sup><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(08)61706-7/fulltext" target="_blank" class="text-blue-600 hover:underline">1</a></sup>. 
-      </p>
-       
-      <p class="content-text text-slate-600">
-       In the UK, <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/942454/Working_together_to_safeguard_children_inter_agency_guidance.pdf" target="_blank" class="text-blue-600 hover:underline font-medium">statutory guidelines of CM</a> include child exposure to IPV, and maternal evidence for omission or commission during pregnancy such as Neonatal Abstinence Syndrome (NAS) and Fetal Alcohol Syndrome (FAS). It includes indicators such as neglect (pre- and post-birth), child protection recordings, or out-of-home placements by social care services.
-      </p>
+    <div class="flex items-center gap-3 mb-6">
+     <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
+      <i class="fas fa-book-open text-xl"></i>
      </div>
+     <h2 class="content-heading text-slate-900 !mb-0">Definition</h2>
+    </div>
 
-     <!-- Callout Info -->
-     <div class="lg:col-span-1">
-      <div class="bg-rose-50/50 rounded-2xl border border-rose-100 p-6 h-full shadow-sm transition-shadow hover:shadow-md">
-       <div class="flex items-center gap-3 mb-3">
-        <i class="fas fa-search text-brand-rose text-xl"></i>
-        <h4 class="text-[18px] font-bold text-rose-950 m-0 border-none">Suspected CM</h4>
-       </div>
-       <p class="text-[15px] !important text-slate-700 leading-relaxed m-0">
-        Includes any maltreatment-related indicator with codes describing presentations likely to refer to CM, but without mentioning the underlying cause (e.g., harm caused by non-specified person), safeguarding procedures, or social interventions. <br><br>
-        <em class="text-rose-800 font-medium">E.g., "Victim of sexual abuse", "Assault in the home".</em>
-       </p>
-      </div>
-     </div>
+    <p class="content-text text-slate-700 text-lg font-medium">
+     Any recorded act of commission or omission by a parent or caregiver resulting in harm, the potential for harm or threat of child harm, including neglect, psychological, physical, sexual and emotional abuse. Harm does not need to be intended <sup><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(08)61706-7/fulltext" target="_blank" class="text-blue-600 hover:underline">1</a></sup>. 
+    </p>
+     
+    <p class="content-text text-slate-600">
+     In the UK, <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/942454/Working_together_to_safeguard_children_inter_agency_guidance.pdf" target="_blank" class="text-blue-600 hover:underline font-medium">statutory guidelines of CM</a> include child exposure to IPV, and maternal evidence for omission or commission during pregnancy such as Neonatal Abstinence Syndrome (NAS) and Fetal Alcohol Syndrome (FAS). It includes indicators such as neglect (pre- and post-birth), child protection recordings, or out-of-home placements by social care services.
+    </p>
+
+    <!-- Integrated Suspected CM block -->
+    <div class="mt-8 border-l-4 border-brand-rose pl-5 py-1">
+     <h3 class="text-lg font-bold text-slate-900 mb-2 flex items-center">
+      <i class="fas fa-search text-brand-rose mr-2 text-base"></i> Suspected CM
+     </h3>
+     <p class="content-text text-slate-600 !mb-2">
+      Includes any maltreatment-related indicator with codes describing presentations likely to refer to CM, but without mentioning the underlying cause (e.g., harm caused by non-specified person), safeguarding procedures, or social interventions.
+     </p>
+     <p class="content-text !mb-0">
+      <em class="text-rose-800 font-medium">E.g., "Victim of sexual abuse", "Assault in the home".</em>
+     </p>
     </div>
 
    </div>
@@ -226,8 +221,8 @@ author_profile: false
   <section class="bg-slate-50 pt-16 pb-12">
    <div class="max-w-5xl mx-auto px-6">
     
-    <!-- Side-by-Side Cards (Equal Height) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+    <!-- Side-by-Side Cards (items-start prevents the gap stretching issue) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-start">
       
      <!-- DOWNLOAD CARD -->
      <div class="panel-card relative overflow-hidden group">
@@ -239,7 +234,7 @@ author_profile: false
       <p class="text-sm text-slate-500 mb-6">Access the complete set of clinical codes mapped to the CM domain.</p>
        
       <!-- Download Button Component -->
-      <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/CM_2025ACEsinEHRs.txt" target="_blank" class="block w-full border border-slate-200 rounded-xl p-4 hover:border-brand-rose hover:bg-rose-50 transition-colors group/btn mb-6 mt-auto shadow-sm hover:shadow">
+      <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/CM_2025ACEsinEHRs.txt" target="_blank" class="block w-full border border-slate-200 rounded-xl p-4 hover:border-brand-rose hover:bg-rose-50 transition-colors group/btn mb-6 shadow-sm hover:shadow">
        <div class="flex items-center justify-between">
         <div>
          <h4 class="text-base font-bold text-slate-800 m-0 group-hover/btn:text-brand-rose transition-colors">Child maltreatment (.txt)</h4>
@@ -256,34 +251,75 @@ author_profile: false
       </a>
      </div>
 
-     <!-- RULES CARD -->
+     <!-- RULES CARD (Expanded for multiple algorithms) -->
      <div class="panel-card relative overflow-hidden">
       <div class="absolute top-0 left-0 w-full h-1.5 bg-slate-800"></div>
        
-      <h3 class="content-subheading !mt-0 flex items-center">
+      <h3 class="content-subheading !mt-0 flex items-center mb-6">
        <i class="fas fa-code-branch text-slate-700 mr-3"></i> Implementation Rules
       </h3>
-      <p class="text-[14.5px] text-slate-600 mb-4 leading-relaxed">
+      <p class="text-[14.5px] text-slate-600 mb-8 leading-relaxed">
        Certain specific indicators within this domain require rule-based algorithms to prevent misclassification.
       </p>
 
-      <div class="bg-slate-100 border border-slate-200 rounded-lg p-3 mb-4 inline-flex items-center w-max">
-       <span class="text-xs font-bold text-slate-500 uppercase tracking-wider mr-2">Applies to:</span>
-       <span class="text-sm font-bold text-slate-800 bg-white px-2 py-0.5 rounded shadow-sm">CM, FGM</span>
+      <!-- Rule 1 -->
+      <div class="mb-8 pb-8 border-b border-slate-100">
+       <div class="bg-slate-100 border border-slate-200 rounded-lg p-2.5 mb-3 inline-flex items-center w-max">
+        <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider mr-2">Applies to:</span>
+        <span class="text-xs font-bold text-slate-800 bg-white px-2 py-0.5 rounded shadow-sm">CM, FGM</span>
+       </div>
+       <p class="text-[14px] text-slate-600 mb-4 leading-relaxed mt-0">
+        Apply codes mentioning circumcision to female children only (e.g. <em>"54314 - routine or ritual circumcision"</em>). Code list includes markers for rule inclusion.
+       </p>
+       <div class="code-container">
+        <div class="code-header">
+         <div class="code-window-dot bg-rose-500"></div><div class="code-window-dot bg-amber-500"></div><div class="code-window-dot bg-emerald-500"></div>
+         <span class="text-[11px] text-slate-400 font-mono ml-2">R Script</span>
+        </div>
+        <pre class="code-pre"><code>cm_fgm &lt;- merged_data %&gt;% 
+  <span class="syntax-function">filter</span>(Domain==<span class="syntax-string">"CM"</span> & individual==<span class="syntax-string">"4"</span> & gender==<span class="syntax-string">"female"</span>)</code></pre>
+       </div>
       </div>
 
-      <p class="text-[14px] text-slate-600 mb-4 leading-relaxed mt-0">
-       Apply codes mentioning circumcision to female children only (e.g. <em>"54314 - routine or ritual circumcision"</em>). Code list includes markers for rule inclusion.
-      </p>
-       
-      <div class="code-container">
-       <div class="code-header">
-        <div class="code-window-dot bg-rose-500"></div><div class="code-window-dot bg-amber-500"></div><div class="code-window-dot bg-emerald-500"></div>
-        <span class="text-xs text-slate-400 font-mono ml-2">R Script</span>
+      <!-- Rule 2 -->
+      <div class="mb-8 pb-8 border-b border-slate-100">
+       <div class="bg-slate-100 border border-slate-200 rounded-lg p-2.5 mb-3 inline-flex items-center w-max">
+        <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider mr-2">Applies to:</span>
+        <span class="text-xs font-bold text-slate-800 bg-white px-2 py-0.5 rounded shadow-sm">CM, Physical Abuse</span>
        </div>
-       <pre class="code-pre"><code>cm_fgm &lt;- merged_data %&gt;% 
-  <span class="syntax-function">filter</span>(Domain==<span class="syntax-string">"CM"</span> & individual==<span class="syntax-string">"4"</span> & gender==<span class="syntax-string">"female"</span>)</code></pre>
+       <p class="text-[14px] text-slate-600 mb-4 leading-relaxed mt-0">
+        Restrict codes relating to shaken baby syndrome exclusively to children aged 5 years or younger at the time of the event.
+       </p>
+       <div class="code-container">
+        <div class="code-header">
+         <div class="code-window-dot bg-rose-500"></div><div class="code-window-dot bg-amber-500"></div><div class="code-window-dot bg-emerald-500"></div>
+         <span class="text-[11px] text-slate-400 font-mono ml-2">R Script</span>
+        </div>
+        <pre class="code-pre"><code>cm_sbs &lt;- merged_data %&gt;% 
+  <span class="syntax-function">filter</span>(Domain==<span class="syntax-string">"CM"</span> & code_group==<span class="syntax-string">"Shaken Baby"</span> & age_at_event &lt;= 5)</code></pre>
+       </div>
       </div>
+
+      <!-- Rule 3 -->
+      <div class="mb-0">
+       <div class="bg-slate-100 border border-slate-200 rounded-lg p-2.5 mb-3 inline-flex items-center w-max">
+        <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider mr-2">Applies to:</span>
+        <span class="text-xs font-bold text-slate-800 bg-white px-2 py-0.5 rounded shadow-sm">CM, HRP-CM</span>
+       </div>
+       <p class="text-[14px] text-slate-600 mb-4 leading-relaxed mt-0">
+        Exclude high-risk presentations (e.g. rib fractures) if the child has a documented accidental injury code occurring on the exact same date.
+       </p>
+       <div class="code-container">
+        <div class="code-header">
+         <div class="code-window-dot bg-rose-500"></div><div class="code-window-dot bg-amber-500"></div><div class="code-window-dot bg-emerald-500"></div>
+         <span class="text-[11px] text-slate-400 font-mono ml-2">R Script</span>
+        </div>
+        <pre class="code-pre"><code><span class="syntax-comment"># Exclude cases matching on patient ID and event date</span>
+cm_hrp_filtered &lt;- cm_hrp_data %&gt;% 
+  <span class="syntax-function">anti_join</span>(accidental_injuries, by = <span class="syntax-function">c</span>(<span class="syntax-string">"patid"</span>, <span class="syntax-string">"eventdate"</span>))</code></pre>
+       </div>
+      </div>
+
      </div>
 
     </div>
