@@ -84,11 +84,7 @@ author_profile: false
 
   /* SUPERSCRIPT RESET (Prevents line-height warping) */
   sup {
-    font-size: 0.75em;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-    top: -0.5em;
+    font-size: 0.75em; line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;
   }
 
   /* Modern Info Cards */
@@ -149,20 +145,24 @@ author_profile: false
 
   /* SVG Arrow Flow Animation */
   @keyframes dash-flow {
-    from { stroke-dashoffset: 16; }
+    from { stroke-dashoffset: 20; }
     to { stroke-dashoffset: 0; }
   }
   .flowing-dash {
-    animation: dash-flow 0.8s linear infinite;
+    animation: dash-flow 1s linear infinite;
   }
 </style>
 
 <!-- HIDDEN SVG DEFINITIONS FOR ARROWHEAD MARKER -->
 <svg style="width:0; height:0; position:absolute;" aria-hidden="true" focusable="false">
   <defs>
-    <!-- Using hex #3b82f6 (Tailwind blue-500) directly to ensure arrowhead matches the line -->
-    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6" />
+    <!-- Using hex #ef4444 (Tailwind red-500) for red arrows -->
+    <marker id="arrowhead-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444" />
+    </marker>
+    <!-- Using hex #94a3b8 (Tailwind slate-400) for grey arrows -->
+    <marker id="arrowhead-grey" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8" />
     </marker>
   </defs>
 </svg>
@@ -212,22 +212,25 @@ author_profile: false
         The concept of ACEs helped bring together and measure a diverse set of preventable adverse childhood experiences that can lead to considerable long-term health problems, and can substantially pressure families, health and social care systems<sup><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(17)30118-4/fulltext" target="_blank" class="text-blue-600 font-medium hover:underline">1</a></sup>.
       </p>
 
-      <!-- CDC Style Callout Box for the 10 ACEs -->
-      <div class="bg-blue-50 rounded-2xl border border-blue-100 overflow-hidden shadow-sm">
-        <div class="bg-blue-600 px-6 py-4">
+      <!-- CDC Style Callout Box for the 10 ACEs - Updated Design -->
+      <div class="bg-white rounded-2xl border-2 border-blue-100 overflow-hidden shadow-lg relative transform transition-transform hover:scale-[1.01] duration-500">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4">
           <h3 class="text-xl font-bold text-white m-0 border-none flex items-center">
-            <i class="fas fa-clipboard-list mr-3 opacity-80"></i> The Original Ten ACEs
+            <i class="fas fa-clipboard-list mr-3 opacity-90"></i> The Original Ten ACEs
           </h3>
         </div>
-        <div class="p-6 md:p-8">
-          <p class="content-text">The initial ACEs predominately referred to domains of adversity in the home environment. They are typically categorised into the following main groups:</p>
+        
+        <div class="p-6 md:p-8 bg-blue-50/50">
+          <p class="content-text text-sm md:text-base">The initial ACEs predominately referred to domains of adversity in the home environment. They are typically categorised into the following main groups:</p>
           
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             
             <!-- Child Maltreatment Card (Merged Abuse & Neglect) -->
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-blue-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <h4 class="text-blue-800 font-bold mb-3 flex items-center"><i class="fas fa-child mr-2 text-blue-500"></i> Child maltreatment</h4>
-              <ul class="space-y-2 list-disc pl-4" style="font-size: 16px !important; color: #475569 !important;">
+            <div class="bg-white p-5 rounded-xl shadow-md border border-rose-100 border-l-4 border-l-rose-500 transition-all duration-300 hover:shadow-lg">
+              <!-- UPDATED: Red Heading -->
+              <h4 class="text-rose-600 font-bold mb-3 flex items-center text-lg"><i class="fas fa-child mr-2"></i> Child maltreatment</h4>
+              <ul class="space-y-2 list-disc pl-4 text-sm font-medium text-slate-600">
                 <li>Psychological abuse</li>
                 <li>Physical abuse</li>
                 <li>Sexual abuse</li>
@@ -237,12 +240,13 @@ author_profile: false
             </div>
 
             <!-- Household Dysfunction Card -->
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-emerald-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <h4 class="text-emerald-800 font-bold mb-3 flex items-center"><i class="fas fa-house-damage mr-2 text-emerald-500"></i> Household dysfunction</h4>
-              <ul class="space-y-2 list-disc pl-4" style="font-size: 16px !important; color: #475569 !important;">
+            <div class="bg-white p-5 rounded-xl shadow-md border border-emerald-100 border-l-4 border-l-emerald-500 transition-all duration-300 hover:shadow-lg">
+              <h4 class="text-emerald-800 font-bold mb-3 flex items-center text-lg"><i class="fas fa-house-damage mr-2 text-emerald-500"></i> Household dysfunction</h4>
+              <ul class="space-y-2 list-disc pl-4 text-sm font-medium text-slate-600">
                 <li>Substance abuse</li>
                 <li>Mental illness</li>
-                <li>Domestic violence</li>
+                <!-- UPDATED: Text Change & Footnote -->
+                <li>Intimate partner violence<sup>†</sup></li>
                 <li>Criminal behaviour</li>
                 <li>Parental separation*</li>
               </ul>
@@ -250,10 +254,15 @@ author_profile: false
 
           </div>
           
-          <!-- Tiny Footnote -->
-          <p class="mt-6 text-[11px] text-slate-500 italic mb-0 leading-snug">
-            *Not included in the initial ACE domains; added in later studies to form the "Ten ACEs."
-          </p>
+          <!-- UPDATED: Tiny Footnotes -->
+          <div class="mt-8 pt-4 border-t border-blue-100">
+             <p class="text-[11px] text-slate-500 italic mb-1 leading-snug">
+              *Not included in the initial ACE domains<sup><a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" class="text-blue-600 hover:underline">(2)</a></sup>; added in later studies to form the "Ten ACEs".
+            </p>
+            <p class="text-[11px] text-slate-500 italic mb-0 leading-snug">
+              † In the UK, children exposed to intimate partner violence are legally recognised as victims of domestic abuse in their own right, and this exposure is classified as a form of child abuse<sup><a href="https://www.gov.uk/government/publications/domestic-abuse-bill-2020-factsheets/statutory-definition-of-domestic-abuse-factsheet" target="_blank" class="text-blue-600 hover:underline">(4)</a></sup>.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -296,128 +305,121 @@ author_profile: false
     <section class="bg-slate-50 py-12 md:py-16 border-y border-slate-200 shadow-inner">
       <div class="max-w-5xl mx-auto px-6">
         
-        <!-- UPDATED HEADER HIERARCHY -->
         <h2 class="content-heading text-center mt-0 mb-4 border-none">Theory and frameworks</h2>
         <h3 class="content-subheading text-center mt-0 mb-8 border-none text-slate-600">A conceptual model of ACEs: the biopsychosocial approach</h3>
         
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-4xl mx-auto mb-10">
           <p class="content-text text-center">
             The concept of ACEs is not based on a single theory. Instead, it is best understood through an integrative biopsychosocial model that combines psychological, biological, and sociological perspectives. The goal of this model is to explain why ACEs occur, how they lead to long-term health and social problems, and why their effects vary depending on the specific type or number of adversities experienced.
           </p>
-          <p class="content-text text-center">
-            This model uses the socio-ecological systems theories of <a href="https://psycnet.apa.org/record/1978-06857-001" target="_blank" class="text-blue-600 font-medium hover:underline">Bronfenbrenner (1977)</a> and <a href="https://psycnet.apa.org/record/1980-12117-001" target="_blank" class="text-blue-600 font-medium hover:underline">Belsky (1980)</a> as a foundational platform. By focusing specifically on the first two ecological levels—the individual and the family environment—this approach deliberately restricts the definition of ACEs to those that are clinically measurable and intervenable at the family level, whilst acknowledging that other adversities occur in the wider community.
-          </p>
-          <p class="content-text text-center">
-            Across these two ecological levels, the model integrates several key frameworks to predict and understand relevant ACEs. These include attachment theory (Bowlby, 1969–1982; Ainsworth et al., 1978), the <a href="https://pubmed.ncbi.nlm.nih.gov/22201156/" target="_blank" class="text-blue-600 font-medium hover:underline">cumulative stress model</a> (encompassing both the <a href="https://www.nejm.org/doi/10.1056/NEJM199801153380307" target="_blank" class="text-blue-600 font-medium hover:underline">"allostatic load"</a> and <a href="https://www.publications.aap.org/pediatrics/article-split/129/1/e232/31628/The-Lifelong-Effects-of-Early-Childhood-Adversity" target="_blank" class="text-blue-600 font-medium hover:underline">"ecobiodevelopmental"</a> frameworks), and <a href="https://psycnet.apa.org/record/1989-26231-001" target="_blank" class="text-blue-600 font-medium hover:underline">cognitive behavioural theories of emotion</a>.
-          </p>
         </div>
 
-        <!-- Image Card -->
-        <div class="mt-10 bg-white p-4 md:p-8 rounded-2xl shadow-md border border-slate-200 text-center relative overflow-hidden group">
-          <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/formulation%20lower%20res%201.png" alt="Biopsychosocial model of ACEs formulation" class="w-full h-auto object-contain rounded-lg mx-auto transition-transform duration-500 group-hover:scale-[1.02]" style="max-width: 800px; margin: 0 auto !important;">
-          <p class="text-sm text-slate-500 mt-6 mb-2 italic">The figure does not represent an exhaustive list of potential mechanisms behind ACEs.</p>
-          <a href="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/formulation.png" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm mt-2">
-            <i class="fas fa-search-plus mr-2"></i> View Figure in High Resolution
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: Ecological Levels (White) -->
-    <section class="max-w-5xl mx-auto px-6 py-12 md:py-16">
-      <div class="text-center mb-12">
-        <h2 class="content-heading mt-0 border-none">Ecological Levels & Theoretical Mechanisms</h2>
-        <p class="content-text max-w-3xl mx-auto">Below, we summarise different key theories and mechanisms hypothesised to play a role in the ACEs framework. It does not represent an exhaustive list.</p>
-      </div>
-      
-      <div class="space-y-0">
-        <!-- Society Level -->
-        <div class="feature-card border-t-4 border-t-blue-500 relative z-10 border-x-slate-200 border-b-slate-200 bg-white">
-          <h3 class="content-subheading mt-0 flex items-center">
-            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3"><i class="fas fa-city text-lg"></i></div>
-            Society & community level
-          </h3>
-          <p class="content-text" style="margin-bottom: 0 !important;">Social determinants of health encompass socioeconomic conditions that shape health outcomes for individuals, families and communities. Children with ACEs are more likely to grow up in environments where raising a family and coping with everyday challenges is harder. Families may live in communities with high unemployment and a lack of local resources for families, with parents having to travel long distances to work, or family members may be more likely to suffer from health problems that make it difficult to work.</p>
-        </div>
-
-        <!-- Arrow connecting the ecological levels -->
-        <div class="flex justify-center my-4 text-slate-300 text-4xl">
-          <i class="fas fa-arrow-down"></i>
-        </div>
-
-        <!-- Individual & Family Level Container -->
-        <div class="bg-slate-50 rounded-2xl p-6 md:p-10 border border-slate-200 shadow-sm relative">
+        <div class="space-y-0 relative">
           
-          <h3 class="content-subheading mt-0 mb-8 flex items-center border-none relative z-20">
-            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mr-3"><i class="fas fa-users text-lg"></i></div>
-            Individual & family level
-          </h3>
+          <!-- Society Level -->
+          <div class="feature-card border-t-4 border-t-blue-500 relative z-10 border-x-slate-200 border-b-slate-200 bg-white max-w-4xl mx-auto">
+            <h3 class="content-subheading mt-0 flex items-center">
+              <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3"><i class="fas fa-city text-lg"></i></div>
+              Society & community level
+            </h3>
+            <p class="content-text" style="margin-bottom: 0 !important;">Social determinants of health encompass socioeconomic conditions that shape health outcomes for individuals, families and communities. Children with ACEs are more likely to grow up in environments where raising a family and coping with everyday challenges is harder. Families may live in communities with high unemployment and a lack of local resources for families, with parents having to travel long distances to work, or family members may be more likely to suffer from health problems that make it difficult to work.</p>
+          </div>
 
-          <!-- The Theory Boxes Grid -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 relative z-10">
+          <!-- Vertical Arrow connecting Society to Individual -->
+          <div class="flex justify-center h-16 relative z-0">
+             <svg class="h-full w-6 text-slate-300 overflow-visible" viewBox="0 0 6 50">
+               <line x1="3" y1="0" x2="3" y2="48" stroke="currentColor" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowhead-grey)" />
+             </svg>
+          </div>
+
+          <!-- Individual & Family Level Container -->
+          <div class="bg-white rounded-2xl p-6 md:p-10 border border-slate-200 shadow-xl relative max-w-5xl mx-auto">
             
-            <!-- TOP ARROW (Life Course -> Attachment) -->
-            <!-- Positioned completely inside the gray container -->
-            <svg class="absolute hidden lg:block z-0 pointer-events-none text-blue-500 opacity-70" 
-                 style="top: -20px; left: 30%; right: 30%; width: 40%; height: 40px; overflow: visible;" 
-                 viewBox="0 0 100 40" preserveAspectRatio="none">
-              <path class="flowing-dash" d="M 90 30 Q 50 -10 10 30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrowhead)" />
-            </svg>
+            <h3 class="content-subheading mt-0 mb-8 flex items-center border-none relative z-20">
+              <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mr-3"><i class="fas fa-users text-lg"></i></div>
+              Individual & family level
+            </h3>
 
-            <!-- LEFT ARROW (Attachment -> Cognitive) -->
-            <svg class="absolute hidden lg:block z-0 pointer-events-none text-blue-500 opacity-70" 
-                 style="top: 38%; left: 20%; width: 60px; height: 16%; overflow: visible;" 
-                 viewBox="0 0 60 100" preserveAspectRatio="none">
-              <path class="flowing-dash" d="M 30 0 Q -10 50 30 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrowhead)" />
-            </svg>
-
-            <!-- RIGHT ARROW (Cognitive -> Life Course) -->
-            <svg class="absolute hidden lg:block z-0 pointer-events-none text-blue-500 opacity-70" 
-                 style="top: 38%; right: 20%; width: 60px; height: 16%; overflow: visible;" 
-                 viewBox="0 0 60 100" preserveAspectRatio="none">
-              <path class="flowing-dash" d="M 30 100 Q 70 50 30 0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrowhead)" />
-            </svg>
-
-            <!-- Card 1: Attachment (Col 1) -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md relative z-10">
-              <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-link text-emerald-500 mr-2"></i> Attachment and learning theory</h4>
-              <p class="content-text" style="margin-bottom: 0 !important;">Social risk factors can negatively influence carers' ability to respond, such as being available and responsive to a child's attachment cues. Children with ACEs may be more likely to develop insecure attachments from reduced caregiving responses of emotional validation (e.g., "my pain matters") and reduced experiences of healthy parental modelling of emotion regulation. This can also mean a child loses friends and the support of adults and misses out on opportunities to grow social support networks.</p>
-            </div>
-
-            <!-- Card 2: Life Course (Col 2) -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md relative z-10">
-              <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-road text-emerald-500 mr-2"></i> Life-course approach</h4>
-              <p class="content-text" style="margin-bottom: 0 !important;">Taken together, the model views ACEs as a complex social phenomenon and considers families as resilient and constantly striving to cope using different strategies and resources at hand. The model helps separate the <em>adverse experience</em> from the <em>adverse stress</em> response, overcoming previous limitations of reverse causality when looking at long-term outcomes. We consider ACEs recorded at the family level amenable to service intervention and relevant to EHRs.</p>
-            </div>
-            
-            <!-- Card 3: Cognitive & Behavioural (Spans both columns) -->
-            <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-slate-200 lg:col-span-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md relative z-10">
-              <h4 class="text-lg font-bold text-slate-800 mb-4"><i class="fas fa-brain text-emerald-500 mr-2"></i> Cognitive and behavioural theories</h4>
+            <!-- The Theory Boxes Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-16 relative z-10">
               
-              <p class="content-text">
-                People cope with stress and perceived threats using various survival strategies—such as <strong>avoidance, escape, or fighting</strong>—to minimise negative consequences. Children who grow up in dangerous, unpredictable, or highly stressful environments are more likely to perceive the world as unsafe and doubt their ability to manage challenges. To cope, children may develop <strong>cognitive biases towards threats</strong>, suppress their emotions, and avoid situations they fear will cause distress (aligning with <a href="https://psycnet.apa.org/record/1986-15090-001" target="_blank" class="text-blue-600 hover:underline">theories on emotional processing</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/10402694/" target="_blank" class="text-blue-600 hover:underline">selective attention and overestimation of threat</a>).
-              </p>
-              <p class="content-text">
-                While these coping mechanisms hold functional value and provide a short-term sense of safety, they can increase the long-term risk of health problems. <strong>First,</strong> these strategies overemphasise threats, creating a heightened state of alert that becomes difficult to "turn off" even in safer, normative environments where the behaviours are no longer effective. These children have a smaller window of tolerance to stress and perceived threat. <strong>Second,</strong> survival responses like avoidance, withdrawal, or reactive hostility prevent opportunities for new learning and the development of balanced cognitive appraisals (such as realising, "I can cope"). As these children grow, their trauma responses and behaviour can drive peers away, stripping them of protective social networks and increasing their vulnerability. This creates a <strong>maintenance cycle of stress</strong><sup><a href="https://doi.org/10.1111/jcpp.12713" target="_blank" class="text-blue-600 hover:underline">4</a>, <a href="https://doi.org/10.1016/j.chiabu.2016.08.003" target="_blank" class="text-blue-600 hover:underline">5</a></sup>.
-              </p>
-              <p class="content-text">
-                For some families, these social risk factors and coping responses are <strong>carried over across generations</strong> as children become parents themselves. Whilst strategies are perceived as logical at the moment, over time, they can leave families in a cycle that perpetuates stress. As underlying stress increases, caregivers and children have fewer resources to cope and regulate responses (e.g. reduced response inhibition/executive functioning)<sup><a href="https://pubmed.ncbi.nlm.nih.gov/12212647/" target="_blank" class="text-blue-600 hover:underline">6</a></sup>, increasing the risk of more immediate coping responses to escape or re-gaining control (e.g. shouting, violence, neglect).
-              </p>
-              <p class="content-text" style="margin-bottom: 0 !important;">
-                Coping responses may vary as a function of the level of need to escape distress and harm, ranging from immediate escape (e.g. violence, substance misuse, abandonment/neglect) to stronger forms of avoidance (e.g. avoiding going out, which reduces social support systems in the longer-term)<sup><a href="https://link.springer.com/article/10.1023/B:JOBA.0000007455.08539.94" target="_blank" class="text-blue-600 hover:underline">7</a></sup>.
-              </p>
+              <!-- === ANIMATED RED ARROWS (Desktop Only) === -->
+              
+              <!-- Arrow: Life-course (Right) -> Attachment (Left) -->
+              <!-- Arcs from top-left of right box, up and over to top-right of left box -->
+              <svg class="absolute hidden lg:block pointer-events-none text-rose-500" 
+                   style="top: 0; left: 0; width: 100%; height: 100%; z-index: 50; overflow: visible;">
+                 <!-- Path: Start (Right Box Left Edge) -> Curve Up -> End (Left Box Right Edge) -->
+                 <!-- Adjust coordinates based on generic grid spacing -->
+                 <path class="flowing-dash" 
+                       d="M 540 60 Q 500 20 450 60" 
+                       fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="8,6" marker-end="url(#arrowhead-red)" 
+                       vector-effect="non-scaling-stroke"
+                       style="display: none;" /> 
+                 <!-- Note: Coordinates are hard to guess perfectly responsively. Using a simpler CSS visual approach for the arrow connecting boxes -->
+              </svg>
+
+              <!-- Improved Arrow Approach: Absolute positioned SVGs between grid cells -->
+              
+              <!-- Arrow 1: Right to Left (Life course -> Attachment) -->
+              <div class="absolute hidden lg:block top-[10%] left-[48%] w-[4%] h-20 z-20">
+                 <svg class="overflow-visible w-full h-full transform -translate-x-1/2 -translate-y-1/2 scale-[3]" viewBox="0 0 100 50">
+                    <path class="flowing-dash" d="M 60 40 Q 30 0 0 40" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrowhead-red)" />
+                 </svg>
+              </div>
+
+              <!-- Arrow 2: Left to Bottom (Attachment -> Cognitive) -->
+              <div class="absolute hidden lg:block top-[45%] left-[20%] w-20 h-20 z-20">
+                 <svg class="overflow-visible w-full h-full" viewBox="0 0 50 100">
+                    <path class="flowing-dash" d="M 25 0 Q 25 50 25 90" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arrowhead-red)" />
+                 </svg>
+              </div>
+
+              <!-- Arrow 3: Right to Bottom (Life-course -> Cognitive) -->
+              <div class="absolute hidden lg:block top-[45%] right-[20%] w-20 h-20 z-20">
+                 <svg class="overflow-visible w-full h-full" viewBox="0 0 50 100">
+                    <path class="flowing-dash" d="M 25 0 Q 25 50 25 90" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arrowhead-red)" />
+                 </svg>
+              </div>
+
+
+              <!-- Card 1: Attachment (Col 1) -->
+              <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-200 relative z-10 h-full">
+                <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-link text-emerald-500 mr-2"></i> Attachment and learning theory</h4>
+                <p class="content-text text-sm" style="margin-bottom: 0 !important;">Social risk factors can negatively influence carers' ability to respond, such as being available and responsive to a child's attachment cues. Children with ACEs may be more likely to develop insecure attachments from reduced caregiving responses of emotional validation (e.g., "my pain matters") and reduced experiences of healthy parental modelling of emotion regulation. This can also mean a child loses friends and the support of adults and misses out on opportunities to grow social support networks.</p>
+              </div>
+
+              <!-- Card 2: Life Course (Col 2) -->
+              <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-200 relative z-10 h-full">
+                <h4 class="text-lg font-bold text-slate-800 mb-3"><i class="fas fa-road text-emerald-500 mr-2"></i> Life-course approach</h4>
+                <p class="content-text text-sm" style="margin-bottom: 0 !important;">Taken together, the model views ACEs as a complex social phenomenon and considers families as resilient and constantly striving to cope using different strategies and resources at hand. The model helps separate the <em>adverse experience</em> from the <em>adverse stress</em> response, overcoming previous limitations of reverse causality when looking at long-term outcomes. We consider ACEs recorded at the family level amenable to service intervention and relevant to EHRs.</p>
+              </div>
+              
+              <!-- Card 3: Cognitive & Behavioural (Spans both columns) -->
+              <div class="bg-slate-50 p-6 md:p-8 rounded-xl shadow-sm border border-slate-200 lg:col-span-2 relative z-10">
+                <h4 class="text-lg font-bold text-slate-800 mb-4"><i class="fas fa-brain text-emerald-500 mr-2"></i> Cognitive and behavioural theories</h4>
+                
+                <p class="content-text text-sm">
+                  People cope with stress and perceived threats using various survival strategies—such as <strong>avoidance, escape, or fighting</strong>—to minimise negative consequences. Children who grow up in dangerous, unpredictable, or highly stressful environments are more likely to perceive the world as unsafe and doubt their ability to manage challenges. To cope, children may develop <strong>cognitive biases towards threats</strong>, suppress their emotions, and avoid situations they fear will cause distress (aligning with <a href="https://psycnet.apa.org/record/1986-15090-001" target="_blank" class="text-blue-600 hover:underline">theories on emotional processing</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/10402694/" target="_blank" class="text-blue-600 hover:underline">selective attention and overestimation of threat</a>).
+                </p>
+                <p class="content-text text-sm" style="margin-bottom: 0 !important;">
+                  While these coping mechanisms hold functional value and provide a short-term sense of safety, they can increase the long-term risk of health problems. <strong>First,</strong> these strategies overemphasise threats, creating a heightened state of alert that becomes difficult to "turn off" even in safer, normative environments where the behaviours are no longer effective. These children have a smaller window of tolerance to stress and perceived threat. <strong>Second,</strong> survival responses like avoidance, withdrawal, or reactive hostility prevent opportunities for new learning and the development of balanced cognitive appraisals (such as realising, "I can cope"). As these children grow, their trauma responses and behaviour can drive peers away, stripping them of protective social networks and increasing their vulnerability. This creates a <strong>maintenance cycle of stress</strong><sup><a href="https://doi.org/10.1111/jcpp.12713" target="_blank" class="text-blue-600 hover:underline">4</a>, <a href="https://doi.org/10.1016/j.chiabu.2016.08.003" target="_blank" class="text-blue-600 hover:underline">5</a></sup>.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 4: Risk Prediction & Challenges (Slate 100 to differentiate from previous white) -->
+    <!-- SECTION 4: Risk Prediction & Challenges (Dark Blue Text as requested) -->
     <section class="bg-slate-100 py-12 md:py-16 border-y border-slate-200">
       <div class="max-w-4xl mx-auto px-6">
         
-        <!-- NEW ADDED TITLE HERE (Dark Blue matching) -->
-        <h2 class="content-heading text-center mt-0 mb-12 border-none text-blue-900">Adverse Childhood Experiences (ACEs) using Electronic Health Records (EHRs)</h2>
+        <!-- UPDATED: Dark Blue Title -->
+        <h2 class="content-heading text-center mt-0 mb-12 border-none text-[#1e3a8a] !text-3xl leading-tight">
+          Adverse Childhood Experiences (ACEs) using Electronic Health Records (EHRs)
+        </h2>
 
         <h3 class="content-subheading mt-0 border-none"><i class="fas fa-chart-line text-blue-500 mr-2"></i> A multistage risk prediction model to determine relevance of candidate ACEs</h3>
         <p class="content-text">
@@ -436,7 +438,7 @@ author_profile: false
         </p>
 
         <!-- ADDED PULL QUOTE FOR READABILITY -->
-        <div class="border-l-4 border-l-blue-400 bg-blue-50 p-5 rounded-r-lg my-6">
+        <div class="border-l-4 border-l-blue-400 bg-white p-5 rounded-r-lg my-6 shadow-sm">
           <p class="text-blue-900 font-medium mb-0" style="font-size: 16px; line-height: 1.6;">
             <i class="fas fa-quote-left text-blue-300 mr-2"></i> Global studies by the World Health Organization show that traumatic stress symptoms naturally resolve on average six years after a linked traumatic event (e.g., an ACE)<sup><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5632781/" target="_blank" class="text-blue-600 hover:underline">3</a>, <a href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2595039" target="_blank" class="text-blue-600 hover:underline">4</a></sup>.
           </p>
