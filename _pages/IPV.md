@@ -297,25 +297,31 @@ author_profile: false
        </div>
       </div>
       
+      <!-- UPDATED SEX ROW -->
       <div class="grid grid-cols-1 md:grid-cols-4 border-b border-slate-100">
        <div class="bg-slate-50 py-2.5 px-4 text-slate-500 font-semibold md:border-r border-slate-100 flex items-center">Sex</div>
-       <div class="py-2.5 px-4 md:col-span-3 flex items-center">
+       <div class="py-2.5 px-4 md:col-span-3 flex flex-wrap items-center gap-2">
         <span class="hdr-pill !bg-slate-100 !text-slate-700 !border-slate-200">Both</span>
+        <span class="text-xs text-slate-500 font-medium ml-1">(Note: Female-specific codes apply; see implementation)</span>
        </div>
       </div>
 
+      <!-- UPDATED AGE RANGE ROW -->
       <div class="grid grid-cols-1 md:grid-cols-4 border-b border-slate-100">
        <div class="bg-slate-50 py-2.5 px-4 text-slate-500 font-semibold md:border-r border-slate-100 flex items-center">Age Range</div>
-       <div class="py-2.5 px-4 md:col-span-3 flex items-center">
-        <span class="hdr-pill !bg-slate-100 !text-slate-700 !border-slate-200">16+ years (Parent), Any (Child exposure)</span>
+       <div class="py-2.5 px-4 md:col-span-3 flex flex-wrap items-center gap-2">
+        <span class="hdr-pill !bg-slate-100 !text-slate-700 !border-slate-200">Child (0-18y)</span>
+        <span class="hdr-pill !bg-slate-100 !text-slate-700 !border-slate-200">Adult (Any age)</span>
        </div>
       </div>
 
+      <!-- UPDATED INDIVIDUAL ROW -->
       <div class="grid grid-cols-1 md:grid-cols-4 border-b border-slate-100">
        <div class="bg-slate-50 py-2.5 px-4 text-slate-500 font-semibold md:border-r border-slate-100 flex items-center">Individual</div>
-       <div class="py-2.5 px-4 md:col-span-3 flex items-center gap-2">
+       <div class="py-2.5 px-4 md:col-span-3 flex flex-wrap items-center gap-2">
         <span class="hdr-pill !bg-slate-100 !text-slate-700 !border-slate-200">Parent</span>
         <span class="hdr-pill !bg-slate-100 !text-slate-700 !border-slate-200">Child</span>
+        <span class="hdr-pill !bg-slate-100 !text-slate-700 !border-slate-200" title="Can be used for general IPV outside ACEs context">Any Adult (General IPV)</span>
        </div>
       </div>
 
@@ -369,10 +375,11 @@ author_profile: false
       <div class="flex items-center"><span class="section-number">3</span> Clinical Codelist</div>
      </h2>
      
+     <!-- UPDATED BUTTONS (Matched Styling) -->
      <div class="flex flex-col sm:flex-row gap-3 mb-6">
       <!-- File 1 -->
-      <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/IPV_no_algo_2025ACEsinEHRs.txt" target="_blank" class="inline-flex items-center px-4 py-2 bg-white border border-slate-300 rounded-lg text-[13px] font-semibold text-slate-700 hover:bg-slate-50 hover:border-indigo-400 hover:text-indigo-700 shadow-sm transition-all hover:-translate-y-0.5">
-       <i class="fas fa-file-download text-brand-indigo mr-2 text-lg"></i> Download IPV Codelist (2044 codes - excluding algo)
+      <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/IPV_no_algo_2025ACEsinEHRs.txt" target="_blank" class="inline-flex items-center px-4 py-2 bg-indigo-50 border border-indigo-200 rounded-lg text-[13px] font-semibold text-indigo-800 hover:bg-indigo-100 shadow-sm transition-all hover:-translate-y-0.5">
+       <i class="fas fa-file-download text-indigo-600 mr-2 text-lg"></i> Download IPV Codelist (2044 codes - excluding algo)
       </a>
       <!-- File 2 -->
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/IPV_2025ACEsinEHRs.txt" target="_blank" class="inline-flex items-center px-4 py-2 bg-indigo-50 border border-indigo-200 rounded-lg text-[13px] font-semibold text-indigo-800 hover:bg-indigo-100 shadow-sm transition-all hover:-translate-y-0.5">
