@@ -399,54 +399,6 @@ author_profile: false
       </div>
      </details>
 
-     <!-- Expandable Rule 2 -->
-     <details class="expandable-box group">
-      <summary class="expandable-summary">
-       <div class="flex items-center">
-        <span class="bg-slate-200 text-slate-700 text-[10px] uppercase font-bold px-2 py-0.5 rounded mr-3">Rule</span>
-        CM, Physical Abuse (Shaken Baby)
-       </div>
-       <i class="fas fa-chevron-down expandable-icon"></i>
-      </summary>
-      <div class="expandable-content border-t border-slate-100 bg-slate-50">
-       <p class="text-[14px] text-slate-600 mb-4 mt-0">
-        Restrict codes relating to shaken baby syndrome exclusively to children aged 5 years or younger at the time of the event.
-       </p>
-       <div class="code-container">
-        <div class="code-header">
-         <div class="code-window-dot bg-rose-500"></div><div class="code-window-dot bg-amber-500"></div><div class="code-window-dot bg-emerald-500"></div>
-         <span class="text-[11px] text-slate-400 font-mono ml-2">R Script</span>
-        </div>
-        <pre class="code-pre"><code>cm_sbs &lt;- merged_data %&gt;% 
-  <span class="syntax-function">filter</span>(Domain==<span class="syntax-string">"CM"</span> & code_group==<span class="syntax-string">"Shaken Baby"</span> & age_at_event &lt;= 5)</code></pre>
-       </div>
-      </div>
-     </details>
-
-     <!-- Expandable Rule 3 -->
-     <details class="expandable-box group">
-      <summary class="expandable-summary">
-       <div class="flex items-center">
-        <span class="bg-slate-200 text-slate-700 text-[10px] uppercase font-bold px-2 py-0.5 rounded mr-3">Rule</span>
-        CM, High-Risk Presentations (HRP-CM)
-       </div>
-       <i class="fas fa-chevron-down expandable-icon"></i>
-      </summary>
-      <div class="expandable-content border-t border-slate-100 bg-slate-50">
-       <p class="text-[14px] text-slate-600 mb-4 mt-0">
-        Exclude high-risk presentations (e.g. rib fractures) if the child has a documented accidental injury code occurring on the exact same date.
-       </p>
-       <div class="code-container">
-        <div class="code-header">
-         <div class="code-window-dot bg-rose-500"></div><div class="code-window-dot bg-amber-500"></div><div class="code-window-dot bg-emerald-500"></div>
-         <span class="text-[11px] text-slate-400 font-mono ml-2">R Script</span>
-        </div>
-        <pre class="code-pre"><code><span class="syntax-comment"># Exclude cases matching on patient ID and event date</span>
-cm_hrp_filtered &lt;- cm_hrp_data %&gt;% 
-  <span class="syntax-function">anti_join</span>(accidental_injuries, by = <span class="syntax-function">c</span>(<span class="syntax-string">"patid"</span>, <span class="syntax-string">"eventdate"</span>))</code></pre>
-       </div>
-      </div>
-     </details>
     </section>
 
     <!-- 5. PUBLICATIONS -->
