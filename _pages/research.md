@@ -50,7 +50,7 @@ author_profile: false
  }
   
  /* Reset link styles BUT ignore custom components */
- .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.pub-link):not(.text-blue-600):not(.scholar-link):not(.gs-title) {
+ .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.pub-custom-link):not(.text-blue-600):not(.scholar-link) {
   border-bottom: none !important; text-decoration: none !important; box-shadow: none !important;
  }
 
@@ -80,14 +80,14 @@ author_profile: false
  .research-card {
   background-color: #ffffff !important; 
   border-radius: 1.25rem !important; 
-  border: 1px solid #bfdbfe !important; 
+  border: 1px solid #bfdbfe !important;
   box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.05), 0 2px 4px -1px rgba(37, 99, 235, 0.03) !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   display: flex !important; flex-direction: column !important; overflow: hidden !important; height: 100% !important;
  }
  .research-card:hover {
   transform: translateY(-6px) !important; 
-  border-color: #60a5fa !important; 
+  border-color: #60a5fa !important;
   box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.1), 0 0 0 3px rgba(191, 219, 254, 0.4) !important;
  }
  .research-card .img-wrapper {
@@ -116,21 +116,6 @@ author_profile: false
   box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2) !important;
  }
 
- /* PUBLICATION LIST */
- .pub-item {
-  display: flex !important; flex-direction: column !important; gap: 1rem !important;
-  padding: 1.5rem 0 !important; border-bottom: 1px solid #e2e8f0 !important;
- }
- @media (min-width: 640px) {
-  .pub-item { flex-direction: row !important; justify-content: space-between !important; align-items: flex-start !important; }
- }
- .pub-item:last-child { border-bottom: none !important; }
- .pub-link {
-  font-size: 16px !important; font-weight: 600 !important; color: #2563eb !important; line-height: 1.5 !important;
-  text-decoration: none !important; transition: color 0.2s !important; border: none !important; display: block !important;
- }
- .pub-link:hover { color: #1d4ed8 !important; text-decoration: underline !important; text-underline-offset: 3px !important; }
-
  /* WIDGET STYLES */
  .scholar-feed::-webkit-scrollbar { width: 6px; }
  .scholar-feed::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
@@ -153,13 +138,11 @@ author_profile: false
     Research <span style="color: #bfdbfe !important;">& Outputs</span>
    </h1>
     
-   <!-- mx-auto for mobile centering, md:mx-0 for left align on desktop -->
    <p class="hero-subtitle drop-shadow-md mx-auto md:mx-0">
     Explore peer-reviewed publications, academic presentations, and research outputs generated using the ACEs in EHRs framework.
    </p>
     
    <div class="mt-8 flex flex-col md:flex-row items-center md:justify-start gap-4">
-    <!-- Upgraded Button Styling for better contrast -->
     <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00119-6/fulltext" target="_blank" class="inline-flex items-center px-5 py-2.5 bg-slate-800 bg-opacity-60 hover:bg-opacity-80 border border-blue-400 rounded-full text-white text-sm font-medium transition-all backdrop-blur-md shadow-md">
      <span class="flex h-2.5 w-2.5 relative mr-3">
       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-300 opacity-75"></span>
@@ -207,7 +190,7 @@ author_profile: false
      </div>
     </a>
 
-    <!-- Feature Card 3 (UPDATED TITLE) -->
+    <!-- Feature Card 3 -->
     <a href="/research-aces-ipv/" class="research-card group">
      <div class="img-wrapper">
       <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Syed%202023%20Family%20adversity%20and%20IPV%20and%20lancet%20public%20health.png" alt="Family adversity and health characteristics">
@@ -301,10 +284,9 @@ author_profile: false
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/512px-Google_Scholar_logo.svg.png" alt="Google Scholar" class="h-6">
      </div>
 
-     <!-- Scrollable Feed (UPDATED CITATIONS) -->
+     <!-- Scrollable Feed -->
      <div class="scholar-feed max-h-[300px] overflow-y-auto pr-3 space-y-5 text-slate-800">
        
-      <!-- Li 2026 -->
       <div class="group">
        <a href="https://scholar.google.com/scholar?q=The+Role+of+Artificial+Intelligence+for+Intimate+Partner+Violence+Prevention%3A+A+Systematic+Review" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
         <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">The Role of Artificial Intelligence for Intimate Partner Violence Prevention: A Systematic Review</h4>
@@ -313,7 +295,6 @@ author_profile: false
        <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Intimate partner violence (IPV), encompassing physical, sexual, emotional and economic abuse, remains a pervasive global health concern. Traditional prevention efforts...</p>
       </div>
 
-      <!-- Lee 2025 -->
       <div class="group">
        <a href="https://scholar.google.com/scholar?q=Artificial+intelligence+in+applied+family+research+involving+families+with+young+children%3A+A+scoping+review" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
         <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Artificial intelligence in applied family research involving families with young children: A scoping review</h4>
@@ -322,7 +303,6 @@ author_profile: false
        <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">This scoping review systematically examined the applied family science literature involving families raising young children to understand how relevant studies have applied...</p>
       </div>
 
-      <!-- Syed 2025 -->
       <div class="group">
        <a href="https://scholar.google.com/scholar?q=Adverse+childhood+experiences+in+firstborns+and+mental+health+risk+and+health-care+use+in+siblings" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
         <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Adverse childhood experiences in firstborns and mental health risk and health-care use in siblings: a population-based birth cohort study</h4>
@@ -331,7 +311,6 @@ author_profile: false
        <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Adverse childhood experiences (ACEs) often affect multiple children within families, yet studies tend to focus on the health outcomes of individual children...</p>
       </div>
 
-      <!-- Baird 2025 -->
       <div class="group">
        <a href="https://scholar.google.com/scholar?q=Applying+analytics+to+sociodemographic+disparities+in+mental+health" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
         <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Applying analytics to sociodemographic disparities in mental health</h4>
@@ -340,7 +319,6 @@ author_profile: false
        <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Mental health services and treatment are unfortunately subject to sociodemographic disparities. To address this issue, recent studies have begun to apply analytics methods...</p>
       </div>
 
-      <!-- Crowley 2025 -->
       <div class="group">
        <a href="https://scholar.google.com/scholar?q=Machine+learning+for+prediction+of+childhood+mental+health+problems+in+social+care" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
         <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Machine learning for prediction of childhood mental health problems in social care</h4>
@@ -349,7 +327,6 @@ author_profile: false
        <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Rates of childhood mental health problems are increasing in the UK. Early identification of childhood mental health problems is challenging but critical to children's...</p>
       </div>
 
-      <!-- Joshi 2025 -->
       <div class="group">
        <a href="https://scholar.google.com/scholar?q=Examining+the+rollout+of+the+Triple+P+system+parenting+program+in+Manitoba+on+rates+of+child+maltreatment" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
         <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Examining the rollout of the Triple P system parenting program in Manitoba on rates of child maltreatment</h4>
@@ -358,7 +335,6 @@ author_profile: false
        <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Triple P is a multilevel parenting program aimed at promoting children's emotional, social, and behavioural competence and preventing behavioural problems...</p>
       </div>
 
-      <!-- Schoenaker 2024 -->
       <div class="group">
        <a href="https://scholar.google.com/scholar?q=Preconception+indicators+and+associations+with+health+outcomes+reported+in+UK+routine+primary+care+data%3A+a+systematic+review" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
         <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Preconception indicators and associations with health outcomes reported in UK routine primary care data: a systematic review</h4>
@@ -367,7 +343,6 @@ author_profile: false
        <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Routine primary care data may be a valuable resource for preconception health research and informing provision of preconception care. Aim: To review how primary...</p>
       </div>
 
-      <!-- Danese 2024 -->
       <div class="group">
        <a href="https://scholar.google.com/scholar?q=Revisiting+the+use+of+adverse+childhood+experience+screening+in+healthcare+settings" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
         <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Revisiting the use of adverse childhood experience screening in healthcare settings</h4>
@@ -376,7 +351,6 @@ author_profile: false
        <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Adverse childhood experiences (ACEs) are key modifiable risk factors for mental illness. The potential to detect and mitigate ACEs to improve population mental health...</p>
       </div>
 
-      <!-- Lam 2024 -->
       <div class="group">
        <a href="https://scholar.google.com/scholar?q=The+association+between+adverse+childhood+experiences+and+mental+health%2C+behaviour%2C+and+educational+performance+in+adolescence" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
         <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">The association between adverse childhood experiences and mental health, behaviour, and educational performance in adolescence</h4>
@@ -385,7 +359,6 @@ author_profile: false
        <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Adverse childhood experiences (ACEs) are thought to have negative effects on mental health and well-being in adolescence. The definition of ACEs varies between studies...</p>
       </div>
 
-      <!-- Ungar 2024 -->
       <div class="group">
        <a href="https://scholar.google.com/scholar?q=Access+without+borders%3A+a+scoping+review+to+identify+solutions+to+creating+portable+identity%2C+education+and+health+records+for+refugee+children" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
         <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Access without borders: a scoping review to identify solutions to creating portable identity, education and health records for refugee children</h4>
@@ -411,155 +384,350 @@ author_profile: false
   </div>
  </section>
 
- <!-- SECTION 3: Publication List -->
- <section id="publication-list" class="bg-white py-16 md:py-24">
-  <div class="max-w-4xl mx-auto px-6">
+ <!-- SECTION 3: Publication List (MODERN CARD LAYOUT) -->
+ <section id="publication-list" class="bg-slate-50 py-16 md:py-24 border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-6">
     
-   <div class="flex items-center gap-4 mb-10 pb-4 border-b-2 border-slate-100">
-    <div class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-     <i class="fas fa-file-alt text-xl"></i>
+   <div class="flex items-center gap-4 mb-10 pb-4 border-b border-slate-200">
+    <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 shadow-sm">
+     <i class="fas fa-layer-group text-xl"></i>
     </div>
-    <h2 class="content-heading !m-0 !border-none !pb-0 text-slate-800">Publication list</h2>
+    <h2 class="content-heading !m-0 !border-none !pb-0 text-slate-800">Master publication list</h2>
    </div>
 
-   <div class="space-y-2">
+   <div class="space-y-4">
      
-    <!-- Pub Item -->
-    <div class="pub-item group">
-     <a href="https://doi.org/10.1016/S2468-2667(24)00301-3" target="_blank" class="pub-link pr-4">
-      Adverse childhood experiences in firstborns and mental health risk and health-care use in siblings: a population-based birth cohort study of half a million children in England
-     </a>
-     <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
+    <!-- Pub Card 1 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">The Lancet Public Health</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2024</span>
+      </div>
+      <a href="https://doi.org/10.1016/S2468-2667(24)00301-3" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       Adverse childhood experiences in firstborns and mental health risk and health-care use in siblings: a population-based birth cohort study of half a million children in England
+      </a>
+      <a href="https://doi.org/10.1016/S2468-2667(24)00301-3" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0 opacity-90 group-hover:opacity-100 transition-opacity">
       <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="173795607"></div>
      </div>
     </div>
 
-    <!-- Pub Item -->
-    <div class="pub-item group">
-     <a href="https://doi.org/10.1016/S2468-2667(23)00119-6" target="_blank" class="pub-link pr-4">
-      Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England
-     </a>
-     <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
+    <!-- Pub Card 2 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">The Lancet Public Health</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2023</span>
+      </div>
+      <a href="https://doi.org/10.1016/S2468-2667(23)00119-6" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England
+      </a>
+      <a href="https://doi.org/10.1016/S2468-2667(23)00119-6" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0 opacity-90 group-hover:opacity-100 transition-opacity">
       <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="150725211"></div>
      </div>
     </div>
 
-    <!-- Pub Item (No Altmetric) -->
-    <div class="pub-item group">
-     <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2801832" target="_blank" class="pub-link pr-4">
-      Association of interparental violence and maternal depression with depression among adolescents at the population and individual level
-     </a>
-     <div class="shrink-0 min-w-[60px]"></div>
+    <!-- Pub Card 3 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">JAMA Network Open</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2023</span>
+      </div>
+      <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2801832" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       Association of interparental violence and maternal depression with depression among adolescents at the population and individual level
+      </a>
+      <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2801832" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0"></div>
     </div>
 
-    <!-- Pub Item -->
-    <div class="pub-item group">
-     <a href="https://doi.org/10.1016/S2589-7500(22)00061-9" target="_blank" class="pub-link pr-4">
-      Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study
-     </a>
-     <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
+    <!-- Pub Card 4 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">The Lancet Digital Health</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2022</span>
+      </div>
+      <a href="https://doi.org/10.1016/S2589-7500(22)00061-9" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       Identifying adverse childhood experiences with electronic health records of linked mothers and children in England: a multistage development and validation study
+      </a>
+      <a href="https://doi.org/10.1016/S2589-7500(22)00061-9" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0 opacity-90 group-hover:opacity-100 transition-opacity">
       <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="128460919"></div>
      </div>
     </div>
 
-    <!-- Pub Item -->
-    <div class="pub-item group">
-     <a href="https://doi.org/10.1038/s41598-023-34011-3" target="_blank" class="pub-link pr-4">
-      An external validation of coding for childhood maltreatment in routinely collected primary and secondary care data
-     </a>
-     <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
+    <!-- Pub Card 5 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">Scientific Reports</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2023</span>
+      </div>
+      <a href="https://doi.org/10.1038/s41598-023-34011-3" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       An external validation of coding for childhood maltreatment in routinely collected primary and secondary care data
+      </a>
+      <a href="https://doi.org/10.1038/s41598-023-34011-3" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0 opacity-90 group-hover:opacity-100 transition-opacity">
       <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="148625842"></div>
      </div>
     </div>
 
-    <!-- Pub Item -->
-    <div class="pub-item group">
-     <a href="http://dx.doi.org/10.1136/archdischild-2020-319027" target="_blank" class="pub-link pr-4">
-      Predictive value of indicators for identifying child maltreatment and intimate partner violence in coded electronic health records: a systematic review and meta-analysis
-     </a>
-     <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
+    <!-- Pub Card 6 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">Archives of Disease in Childhood</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2021</span>
+      </div>
+      <a href="http://dx.doi.org/10.1136/archdischild-2020-319027" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       Predictive value of indicators for identifying child maltreatment and intimate partner violence in coded electronic health records: a systematic review and meta-analysis
+      </a>
+      <a href="http://dx.doi.org/10.1136/archdischild-2020-319027" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0 opacity-90 group-hover:opacity-100 transition-opacity">
       <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="88250923"></div>
      </div>
     </div>
 
-    <!-- Pub Item (No Altmetric) -->
-    <div class="pub-item group">
-     <a href="https://journals.sagepub.com/doi/full/10.1177/10775595221079308" target="_blank" class="pub-link pr-4">
-      Leveraging administrative data to better understand and address child maltreatment: a scoping review of data linkage studies
-     </a>
-     <div class="shrink-0 min-w-[60px]"></div>
+    <!-- Pub Card 7 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">Trauma, Violence, & Abuse</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2022</span>
+      </div>
+      <a href="https://journals.sagepub.com/doi/full/10.1177/10775595221079308" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       Leveraging administrative data to better understand and address child maltreatment: a scoping review of data linkage studies
+      </a>
+      <a href="https://journals.sagepub.com/doi/full/10.1177/10775595221079308" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0"></div>
     </div>
 
-    <!-- Pub Item (No Altmetric) -->
-    <div class="pub-item group">
-     <a href="https://jamanetwork.com/journals/jamanetworkopen/article-abstract/2807932" target="_blank" class="pub-link pr-4">
-      Association of pregnancy-specific alcohol policies with infant morbidities and maltreatment
-     </a>
-     <div class="shrink-0 min-w-[60px]"></div>
+    <!-- Pub Card 8 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">JAMA Network Open</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2023</span>
+      </div>
+      <a href="https://jamanetwork.com/journals/jamanetworkopen/article-abstract/2807932" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       Association of pregnancy-specific alcohol policies with infant morbidities and maltreatment
+      </a>
+      <a href="https://jamanetwork.com/journals/jamanetworkopen/article-abstract/2807932" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0"></div>
     </div>
 
-    <!-- Pub Item (No Altmetric) -->
-    <div class="pub-item group">
-     <a href="https://link.springer.com/article/10.1186/s12916-021-02119-w" target="_blank" class="pub-link pr-4">
-      The risk of COVID-19 in survivors of domestic violence and abuse
-     </a>
-     <div class="shrink-0 min-w-[60px]"></div>
+    <!-- Pub Card 9 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">BMC Medicine</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2021</span>
+      </div>
+      <a href="https://link.springer.com/article/10.1186/s12916-021-02119-w" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       The risk of COVID-19 in survivors of domestic violence and abuse
+      </a>
+      <a href="https://link.springer.com/article/10.1186/s12916-021-02119-w" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0"></div>
     </div>
 
-    <!-- Pub Item (No Altmetric) -->
-    <div class="pub-item group">
-     <a href="https://journals.sagepub.com/doi/abs/10.1177/15248380221090977" target="_blank" class="pub-link pr-4">
-      The measurement of intimate partner violence using International Classification of Diseases diagnostic codes: a systematic review
-     </a>
-     <div class="shrink-0 min-w-[60px]"></div>
+    <!-- Pub Card 10 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">Trauma, Violence, & Abuse</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2022</span>
+      </div>
+      <a href="https://journals.sagepub.com/doi/abs/10.1177/15248380221090977" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       The measurement of intimate partner violence using International Classification of Diseases diagnostic codes: a systematic review
+      </a>
+      <a href="https://journals.sagepub.com/doi/abs/10.1177/15248380221090977" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0"></div>
     </div>
 
-    <!-- Pub Item -->
-    <div class="pub-item group">
-     <a href="https://doi.org/10.1093/pubmed/fdaa115" target="_blank" class="pub-link pr-4">
-      Are children who are home from school at an increased risk of child maltreatment?
-     </a>
-     <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
+    <!-- Pub Card 11 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">Journal of Public Health</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2021</span>
+      </div>
+      <a href="https://doi.org/10.1093/pubmed/fdaa115" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       Are children who are home from school at an increased risk of child maltreatment?
+      </a>
+      <a href="https://doi.org/10.1093/pubmed/fdaa115" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0 opacity-90 group-hover:opacity-100 transition-opacity">
       <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="86946201"></div>
      </div>
     </div>
 
-    <!-- Pub Item -->
-    <div class="pub-item group">
-     <a href="http://dx.doi.org/10.1136/bmjopen-2019-036564" target="_blank" class="pub-link pr-4">
-      Association between health indicators of maternal adversity and the rate of infant entry to local authority care in England: a longitudinal ecological study
-     </a>
-     <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
+    <!-- Pub Card 12 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">BMJ Open</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2020</span>
+      </div>
+      <a href="http://dx.doi.org/10.1136/bmjopen-2019-036564" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       Association between health indicators of maternal adversity and the rate of infant entry to local authority care in England: a longitudinal ecological study
+      </a>
+      <a href="http://dx.doi.org/10.1136/bmjopen-2019-036564" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0 opacity-90 group-hover:opacity-100 transition-opacity">
       <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="88240312"></div>
      </div>
     </div>
 
-    <!-- Pub Item -->
-    <div class="pub-item group">
-     <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)31045-0/fulltext" target="_blank" class="pub-link pr-4">
-      Causes of death up to 10 years after admissions to hospitals for self-inflicted, drug-related or alcohol-related, or violent injury during adolescence: a retrospective, nationwide, cohort study
-     </a>
-     <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
+    <!-- Pub Card 13 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">The Lancet</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2017</span>
+      </div>
+      <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)31045-0/fulltext" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       Causes of death up to 10 years after admissions to hospitals for self-inflicted, drug-related or alcohol-related, or violent injury during adolescence: a retrospective, nationwide, cohort study
+      </a>
+      <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)31045-0/fulltext" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0 opacity-90 group-hover:opacity-100 transition-opacity">
       <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="20533675"></div>
      </div>
     </div>
 
-    <!-- Pub Item -->
-    <div class="pub-item group">
-     <a href="https://bmjopen.bmj.com/content/5/2/e006079" target="_blank" class="pub-link pr-4">
-      Violence, self-harm and drug or alcohol misuse in adolescents admitted to hospitals in England for injury: a retrospective cohort study
-     </a>
-     <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
+    <!-- Pub Card 14 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">BMJ Open</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2015</span>
+      </div>
+      <a href="https://bmjopen.bmj.com/content/5/2/e006079" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       Violence, self-harm and drug or alcohol misuse in adolescents admitted to hospitals in England for injury: a retrospective cohort study
+      </a>
+      <a href="https://bmjopen.bmj.com/content/5/2/e006079" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0 opacity-90 group-hover:opacity-100 transition-opacity">
       <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="3443408"></div>
      </div>
     </div>
 
-    <!-- Pub Item -->
-    <div class="pub-item group">
-     <a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001931" target="_blank" class="pub-link pr-4">
-      10-y Risks of Death and Emergency Re-admission in Adolescents Hospitalised with Violent, Drug- or Alcohol-Related, or Self-Inflicted Injury: A Population-Based Cohort Study
-     </a>
-     <div class="shrink-0 flex items-center opacity-90 group-hover:opacity-100 transition-opacity min-w-[60px] justify-end mt-2 sm:mt-0">
+    <!-- Pub Card 15 -->
+    <div class="group relative bg-white rounded-xl border border-slate-200 p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col md:flex-row gap-5 items-start">
+     <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-l-xl"></div>
+     <div class="w-10 h-10 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors shrink-0 mt-1">
+      <i class="fas fa-file-medical-alt text-lg"></i>
+     </div>
+     <div class="flex-grow">
+      <div class="flex flex-wrap gap-2 mb-2.5">
+       <span class="bg-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">PLOS Medicine</span>
+       <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded">2013</span>
+      </div>
+      <a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001931" target="_blank" class="text-[16px] md:text-[17px] font-bold text-slate-800 leading-snug block mb-3 group-hover:text-blue-600 transition-colors border-none pub-custom-link">
+       10-y Risks of Death and Emergency Re-admission in Adolescents Hospitalised with Violent, Drug- or Alcohol-Related, or Self-Inflicted Injury: A Population-Based Cohort Study
+      </a>
+      <a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001931" target="_blank" class="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-800 transition-colors border-none pub-custom-link">
+       Read article <i class="fas fa-arrow-right ml-1.5 text-[11px]"></i>
+      </a>
+     </div>
+     <div class="shrink-0 min-w-[60px] flex justify-end mt-2 md:mt-0 opacity-90 group-hover:opacity-100 transition-opacity">
       <div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="4934607"></div>
      </div>
     </div>
@@ -573,7 +741,7 @@ author_profile: false
  </section>
 
  <!-- Logos Banner (Footer Equivalent) -->
- <section class="bg-slate-50 border-t border-slate-200 py-8 shadow-inner">
+ <section class="bg-white border-t border-slate-200 py-8 shadow-inner">
   <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500">
    <a href="https://www.ucl.ac.uk/children-policy-research/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20CPRU%20logo%20aces%20in%20ehrs%20footer.png" alt="NIHR CPRU" class="h-8 md:h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
    <a href="https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/ucl%20ich%20logo%20aces%20in%20ehrs.png" alt="UCL ICH" class="h-8 md:h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
