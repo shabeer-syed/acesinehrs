@@ -318,6 +318,7 @@ author_profile: false
        </div>
       </div>
 
+      <!-- UPDATED CODING SYSTEM ROW -->
       <div class="grid grid-cols-1 md:grid-cols-4 border-b border-slate-100">
        <div class="bg-slate-50 py-2.5 px-4 text-slate-500 font-semibold md:border-r border-slate-100 flex items-center">Coding System</div>
        <div class="py-2.5 px-4 md:col-span-3 flex flex-wrap gap-2">
@@ -325,9 +326,9 @@ author_profile: false
         <span class="hdr-pill !bg-emerald-50 !text-emerald-700 !border-emerald-200">SNOMED CT</span>
         <span class="hdr-pill !bg-emerald-50 !text-emerald-700 !border-emerald-200">ICD-10</span>
         <span class="hdr-pill !bg-emerald-50 !text-emerald-700 !border-emerald-200">ICD-9</span>
-        <span class="hdr-pill !bg-emerald-50 !text-emerald-700 !border-emerald-200">HES-APC</span>
-        <span class="hdr-pill !bg-emerald-50 !text-emerald-700 !border-emerald-200">HES-AE</span>
-        <span class="hdr-pill !bg-emerald-50 !text-emerald-700 !border-emerald-200">HES-OP</span>
+        <span class="hdr-pill !bg-emerald-50 !text-emerald-700 !border-emerald-200">HES-AE speciality field</span>
+        <span class="hdr-pill !bg-emerald-50 !text-emerald-700 !border-emerald-200">HES-OP speciality field</span>
+        <span class="hdr-pill !bg-emerald-50 !text-emerald-700 !border-emerald-200">CPRD GOLD speciality field</span>
        </div>
       </div>
 
