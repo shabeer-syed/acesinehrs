@@ -119,13 +119,9 @@ author_profile: false
  <main class="flex-grow pb-20 relative">
   <div class="max-w-4xl mx-auto px-6">
    
-   <!-- Centered Original Size Video Box -->
-   <div class="relative z-20 -mt-16 md:-mt-20 mb-12 flex justify-center">
-    <div class="rounded-xl shadow-2xl border border-slate-200 overflow-hidden bg-black max-w-full" style="width: 640px;">
-     <div class="relative w-full" style="padding-top: 56.25%;">
-      <iframe class="absolute top-0 left-0 w-full h-full" src="https://player.vimeo.com/video/840480281?h=0ea3958d16" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="vimeo-player"></iframe>
-     </div>
-    </div>
+   <!-- Restored Original Video Dimensions (Floats over hero cleanly) -->
+   <div class="relative z-20 -mt-16 md:-mt-20 mb-12 flex justify-center px-2">
+    <iframe title="vimeo-player" src="https://player.vimeo.com/video/840480281?h=0ea3958d16" width="640" height="360" frameborder="0" allowfullscreen class="rounded-xl shadow-2xl border border-slate-200 bg-black max-w-full"></iframe>
    </div>
 
    <!-- Article Body -->
