@@ -89,7 +89,7 @@ author_profile: false
 <div class="full-bleed tailwind-wrap text-gray-800 antialiased flex flex-col min-h-screen bg-slate-50">
 
  <!-- Article Hero Section -->
- <header class="relative bg-[#1e293b] text-white pt-12 pb-32 md:pt-16 md:pb-40" style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/acamh%20seminar%20ipv%20and%20aces%202023%20thumbnail.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;">
+ <header class="relative bg-[#1e293b] text-white pt-12 pb-32 md:pt-16 md:pb-40" style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/ACAMHS%20ACEsinEHRs%20Seminar%20presentation.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;">
   <div class="max-w-5xl mx-auto px-6 relative z-10">
    
    <!-- Back Button -->
@@ -119,9 +119,9 @@ author_profile: false
  <main class="flex-grow pb-20 relative">
   <div class="max-w-4xl mx-auto px-6">
    
-   <!-- Responsive Embedded Video (Floats over hero) -->
-   <div class="bg-slate-900 rounded-2xl p-2 md:p-3 shadow-2xl border border-slate-700 -mt-20 md:-mt-28 relative z-20 mb-12 overflow-hidden">
-    <div class="relative w-full rounded-xl overflow-hidden bg-black" style="padding-top: 56.25%;">
+   <!-- Clean Responsive Embedded Video (Floats over hero without chunky borders) -->
+   <div class="rounded-2xl shadow-2xl border border-slate-200 -mt-20 md:-mt-28 relative z-20 mb-12 overflow-hidden bg-black">
+    <div class="relative w-full" style="padding-top: 56.25%;">
      <iframe class="absolute top-0 left-0 w-full h-full" src="https://player.vimeo.com/video/840480281?h=0ea3958d16" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="vimeo-player"></iframe>
     </div>
    </div>
@@ -144,7 +144,7 @@ author_profile: false
     <!-- Modern Grid for Links -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
      
-     <a href="https://www.acamh.org/freeview/pmi-violence-recording/" target="_blank" class="resource-card group">
+     <a href="https://www.acamh.org/event/pmi-violence/" target="_blank" class="resource-card group">
       <div class="rc-icon"><i class="fas fa-play-circle"></i></div>
       <div class="rc-title group-hover:text-blue-600">Link to ACAMH event</div>
      </a>
