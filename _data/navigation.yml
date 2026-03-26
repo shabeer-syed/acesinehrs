@@ -1,20 +1,33 @@
 # main links
 main:
   - title: "About"
-    url: https://shabeer-syed.github.io/acesinehrs/about/
+    url: https://acesinehrs.com/about/
   - title: "Getting started"
-    url: https://shabeer-syed.github.io/acesinehrs/starterguide/
+    url: https://acesinehrs.com/starterguide/
+  - title: "Theory & framework"
+    url: https://acesinehrs.com/theory/
+  - title: "ACE domains ▾"
+    url: https://acesinehrs.com/indicators/
+    children:
+      - title: "All indicators"
+        url: https://acesinehrs.com/indicators/
+      - title: "Child maltreatment (CM)"
+        url: https://acesinehrs.com/CM/
+      - title: "Intimate partner violence (IPV)"
+        url: https://acesinehrs.com/IPV/
+      - title: "High-risk presentations (HRP-CM)"
+        url: https://acesinehrs.com/HRPCM/
+      - title: "Parental mental health (MHPs)"
+        url: https://acesinehrs.com/MHPs/
+      - title: "Parental substance misuse (SM)"
+        url: https://acesinehrs.com/SM/
+      - title: "Adverse family environments (AFE)"
+        url: https://acesinehrs.com/AFE/
+  - title: "Browse codes"
+    url: https://acesinehrs.com/codelistbrowse/
   - title: "Research"
-    url: https://shabeer-syed.github.io/acesinehrs/research/
-  - title: "Browse code list"
-    url: https://shabeer-syed.github.io/acesinehrs/codelistbrowse/
-  - title: "ACE domains & indicators"
-    url: https://shabeer-syed.github.io/acesinehrs/ACE-domains/
-  - title: "Framework & definitions"
-    url: https://shabeer-syed.github.io/acesinehrs/theory/
-    
-  # - title: "Sitemap"
-  #   url: /sitemap/
+    url: https://acesinehrs.com/research/
+
 # documentation links
 docs:
   - title: Getting Started
@@ -41,21 +54,21 @@ docs:
         url: /starterguide/#data-restructuring
       - title: "Data cleaning & standardisation"
         url: /starterguide/#data-cleaning-and-standardisation
-      - title: "Converating code prefixes"
+      - title: "Converting code prefixes"
         url: /starterguide/#conversation-table-of-codes-requiring-prefixes
       - title: "Create ACE-specific master file"
-        url: starterguide/#create-ace-specific-master-file
+        url: /starterguide/#create-ace-specific-master-file
 
   - title: Deriving variables
     children:
       - title: "Introduction"
         url: /starterguide/#deriving-variables
       - title: "Algorithms"
-        url: starterguide/#applying-algorithms-using-the-code-lists-built-in-helper-functions
+        url: /starterguide/#applying-algorithms-using-the-code-lists-built-in-helper-functions
       - title: "Using code list helper functions"
         url: /starterguide/#applying-algorithms-using-the-code-lists-built-in-helper-functions
 
-  - title: Donwloads
+  - title: Downloads
     children:
       - title: "Download code lists"
         url: /starterguide/#download-code-lists
