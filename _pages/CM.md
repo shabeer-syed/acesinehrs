@@ -286,7 +286,7 @@ author_profile: false
      </div>
 
      <p class="content-text">
-      In the UK, <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/942454/Working_together_to_safeguard_children_inter_agency_guidance.pdf" target="_blank" class="text-blue-600 hover:underline font-medium">statutory guidelines of CM</a> include child exposure to intimate partner violence (IPV), and maternal evidence for omission or commission during pregnancy such as Neonatal Abstinence Syndrome (NAS) and Fetal Alcohol Syndrome (FAS). It includes indicators such as neglect (pre- and post-birth), child protection recordings, or out-of-home placements by social care services.
+      In the UK, <a href="https://assets.publishing.service.gov.uk/media/69c2c4ce380a2a73a7cf9df4/Working_together_to_safeguard_children_2026.pdf" target="_blank" class="text-blue-600 hover:underline font-medium">statutory guidelines of CM</a> include child exposure to intimate partner violence (IPV), and maternal evidence for omission or commission during pregnancy such as Neonatal Abstinence Syndrome (NAS) and Fetal Alcohol Syndrome (FAS). It includes indicators such as neglect (pre- and post-birth), child protection recordings, or out-of-home placements by social care services.
      </p>
 
      <p class="content-text">
