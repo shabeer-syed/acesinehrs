@@ -136,11 +136,11 @@ author_profile: false
    <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-slate-200">
     
     <p class="article-text">
-     Intimate partner violence (IPV) is a deeply concerning issue that affects millions of women worldwide. One in three women experiences IPV, translating to over 800 million women globally. These women endure a harrowing reality where they feel trapped, restricted, and fear losing their children.
+     Intimate partner violence (IPV) is a significant public health issue that affects millions of women worldwide. One in three women experiences IPV, translating to over 800 million women globally. Affected individuals often face significant psychological and physical distress, including restrictions on their autonomy and concerns regarding the safety of their children.
     </p>
 
     <p class="article-text">
-     The World Health Organization (WHO) defines IPV as any behaviour causing physical, psychological, or sexual harm within intimate relationships. IPV is often linked to other family adversities and can lead to various mental and physical health problems, increased health and social care needs, and even premature death. Despite the increased healthcare needs of affected families, IPV is often overlooked in general practice, missing a crucial opportunity to support vulnerable families.
+     The World Health Organization (WHO) defines IPV as any behaviour causing physical, psychological, or sexual harm within intimate relationships. IPV is often linked to other family adversities and is associated with various mental and physical health problems, increased health and social care needs, and premature death. Despite the increased healthcare needs of affected families, IPV is often unrecorded in general practice, representing a missed opportunity to support vulnerable families.
     </p>
 
     <h2 class="text-2xl font-bold text-slate-900 mb-5 mt-10 border-b border-slate-100 pb-3">Key findings</h2>
@@ -150,15 +150,15 @@ author_profile: false
     </p>
 
     <ul class="list-disc pl-6 mb-8 text-[17px] text-slate-700 space-y-3">
-     <li><strong>High prevalence of adversity:</strong> Two in five children and parents had recorded family adversities, while 2.1% had recorded IPV during the study period.</li>
-     <li><strong>Compounding risks:</strong> The probability of IPV increased with the number of different family adversities. The highest probability was observed in families experiencing three or more adversities.</li>
+     <li><strong>Prevalence of adversity:</strong> Two in five children and parents had recorded family adversities, while 2.1% had recorded IPV during the study period.</li>
+     <li><strong>Compounding factors:</strong> The probability of IPV increased with the number of different family adversities. The highest probability was observed in families experiencing three or more adversities.</li>
      <li><strong>Associated health burdens:</strong> Families with IPV had significantly increased risks of parental physical and mental health problems compared to families without IPV.</li>
     </ul>
 
     <!-- Expert Quote -->
     <h3 class="author-heading">Lead author Dr Shabeer Syed (UCL Great Ormond Street Institute of Child Health), said:</h3>
     <div class="quote-text">
-     <p class="mb-0">“Our findings highlight the profound co-occurrence of intimate partner violence with other adverse childhood experiences. It is crucial that healthcare professionals are trained to safely ask about IPV and family adversities during clinical encounters to ensure the safety and well-being of affected families.”</p>
+     <p class="mb-0">“Our findings highlight the co-occurrence of intimate partner violence with other adverse childhood experiences. It is essential that healthcare professionals are trained to safely ask about IPV and family adversities during clinical encounters to support the safety and well-being of affected families.”</p>
     </div>
 
     <h2 class="text-2xl font-bold text-slate-900 mb-5 mt-10 border-b border-slate-100 pb-3">Clinical implications</h2>
@@ -168,8 +168,8 @@ author_profile: false
     </p>
 
     <ul class="list-disc pl-6 mb-8 text-[17px] text-slate-700 space-y-3">
-     <li>Healthcare professionals in primary and secondary care settings should be vigilant in asking about IPV when families present with indicators of family adversity or associated health problems.</li>
-     <li>A <strong>"think-family" approach</strong> is essential, involving a comprehensive review of both parents' and children's electronic health records to effectively inform clinical responses to IPV.</li>
+     <li>Healthcare professionals in primary and secondary care settings should systematically ask about IPV when families present with indicators of family adversity or associated health problems.</li>
+     <li>A <strong>"think-family" approach</strong> is important, involving a comprehensive review of both parents' and children's electronic health records to effectively inform clinical responses to IPV.</li>
      <li>Healthcare providers should implement integrated think-family functions in electronic health record systems, allowing clinicians to securely search for adversity across household records.</li>
      <li>National policies should prioritise family-centered interventions to support families experiencing adversity, offering emotional support, risk assessment, safety planning, and appropriate referrals to specialists.</li>
      <li>Adequate training and resources for health and social care professionals are necessary to respond effectively to family adversities and IPV disclosures.</li>
