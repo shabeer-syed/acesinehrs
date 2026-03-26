@@ -544,15 +544,17 @@ author_profile: false
       <span class="section-number">4</span> Implementation
      </h2>
      
-     <!-- Clean Placeholder for Empty Implementation -->
-     <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center shadow-sm">
-      <div class="w-12 h-12 bg-white border border-slate-200 rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm">
-       <i class="fas fa-code-branch text-blue-500 text-lg"></i>
+     <!-- Compact Placeholder for Empty Implementation -->
+     <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center gap-4 shadow-sm mb-6">
+      <div class="w-10 h-10 bg-white border border-slate-200 rounded-full flex shrink-0 items-center justify-center shadow-sm">
+       <i class="fas fa-code-branch text-blue-500 text-base"></i>
       </div>
-      <h3 class="text-slate-800 font-semibold text-base m-0 border-none">Standard Mapping Applied</h3>
-      <p class="text-[14px] text-slate-500 mt-2 mb-0 max-w-lg mx-auto">
-       No complex rule-based algorithms are currently required for the Adverse family environments domain beyond standard clinical code mapping.
-      </p>
+      <div>
+       <h3 class="text-slate-800 font-semibold text-[15px] m-0 border-none">Standard Mapping Applied</h3>
+       <p class="text-[14px] text-slate-500 mt-0.5 mb-0">
+        No complex rule-based algorithms are currently required for the Adverse family environments domain beyond standard clinical code mapping.
+       </p>
+      </div>
      </div>
 
     </section>
@@ -637,19 +639,8 @@ author_profile: false
   </div>
  </main>
 
- <!-- HDR UK Banner -->
- <section class="bg-white py-12 border-t border-slate-200">
-  <div class="max-w-4xl mx-auto px-6">
-   <a href="https://phenotypes.healthdatagateway.org/" target="_blank" class="block bg-slate-50 border border-slate-200 rounded-2xl p-8 hover:border-blue-300 hover:shadow-md transition-all duration-300 group text-center">
-    <h4 class="text-lg font-bold text-slate-800 mb-4 border-none">Need more code lists?</h4>
-    <img src="https://raw.githubusercontent.com/shabeer-syed/ACEs/main/hdruk%20small.png" alt="HDR UK Phenotype Library" class="h-12 object-contain mx-auto group-hover:scale-105 transition-transform duration-300" style="margin: 0 auto !important;">
-    <p class="text-sm text-slate-500 mt-4 font-medium group-hover:text-blue-600 transition-colors">Visit the HDR UK CALIBER Phenotype Library <i class="fas fa-arrow-right ml-1"></i></p>
-   </a>
-  </div>
- </section>
-
  <!-- Logos Banner -->
- <section class="bg-slate-50 border-t border-slate-200 py-10 shadow-inner">
+ <section class="bg-slate-50 border-t border-slate-200 py-10 shadow-inner mt-auto">
   <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500">
    <a href="https://www.ucl.ac.uk/children-policy-research/" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/NIHR%20CPRU%20logo%20aces%20in%20ehrs%20footer.png" alt="NIHR CPRU" class="h-8 md:h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
    <a href="https://www.ucl.ac.uk/child-health/great-ormond-street-institute-child-health-0" target="_blank"><img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/logos/ucl%20ich%20logo%20aces%20in%20ehrs.png" alt="UCL ICH" class="h-8 md:h-10 object-contain hover:scale-105 transition-transform" style="margin: 0 !important;"></a>
