@@ -8,7 +8,8 @@ author_profile: false
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
  tailwind.config = {
-  corePlugins: { preflight: false },
+  core
+Plugins: { preflight: false },
   theme: {
    extend: {
     colors: {
@@ -235,23 +236,23 @@ author_profile: false
      
      <li class="relative pl-6 nav-item">
       <div class="nav-dot">1</div>
-      <a href="#master-list" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors border-none hover:bg-transparent">Master Indicator List</a>
+      <a href="#master-list" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors border-none hover:bg-transparent">Master indicator list</a>
      </li>
      <li class="relative pl-6 nav-item">
       <div class="nav-dot">2</div>
-      <a href="#notices" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors border-none hover:bg-transparent">Important Notices</a>
+      <a href="#notices" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors border-none hover:bg-transparent">Important notices</a>
      </li>
      <li class="relative pl-6 nav-item">
       <div class="nav-dot">3</div>
-      <a href="#all-aces-downloads" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors border-none hover:bg-transparent">All ACEs Code Lists</a>
+      <a href="#all-aces-downloads" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors border-none hover:bg-transparent">All ACEs code lists</a>
      </li>
      <li class="relative pl-6 nav-item">
       <div class="nav-dot">4</div>
-      <a href="#domain-downloads" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors border-none hover:bg-transparent">Domain Code Lists</a>
+      <a href="#domain-downloads" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors border-none hover:bg-transparent">Domain code lists</a>
      </li>
      <li class="relative pl-6 nav-item">
       <div class="nav-dot">5</div>
-      <a href="#exclusions" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors border-none hover:bg-transparent">Exclusion Rules</a>
+      <a href="#exclusions" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors border-none hover:bg-transparent">Exclusion rules</a>
      </li>
 
     </ul>
@@ -263,7 +264,7 @@ author_profile: false
     <!-- 1. MASTER INDICATOR LIST -->
     <section id="master-list" class="scroll-mt-10">
      <h2 class="section-header">
-      <span class="section-number">1</span> Master Indicator List
+      <span class="section-number">1</span> Master indicator list
      </h2>
      
      <!-- EXPANDABLE COMPACT TABLE BOX -->
@@ -379,29 +380,23 @@ author_profile: false
     <!-- 2. NOTICES -->
     <section id="notices" class="scroll-mt-10">
      <h2 class="section-header">
-      <span class="section-number">2</span> Important Notices
+      <span class="section-number">2</span> Important notices
      </h2>
 
-     <div class="space-y-3">
+     <div class="space-y-2.5">
       
-      <!-- Info Notice (Compact Horizontal) -->
-      <div class="bg-blue-50 border border-blue-100 rounded-lg p-3 flex gap-3 shadow-sm items-start">
-       <div class="mt-0.5"><i class="fas fa-users text-blue-500 text-base"></i></div>
-       <div>
-        <p class="text-[13.5px] text-blue-800 m-0 leading-relaxed">
-         <strong class="text-blue-900 font-semibold mr-1">Think-family approach:</strong> Unless specified, indicators refer to information recorded in the child, mother and father.
-        </p>
-       </div>
+      <!-- Info Notice (Ultra Compact Inline) -->
+      <div class="bg-blue-50 border border-blue-200 rounded px-3 py-2 text-[13px] text-blue-800 shadow-sm leading-tight">
+       <i class="fas fa-users text-blue-500 mr-1.5"></i>
+       <strong class="text-blue-900 font-semibold mr-1">Think-family approach:</strong>
+       Unless specified, indicators refer to information recorded in the child, mother and father.
       </div>
 
-      <!-- Danger Notice (Compact Horizontal) -->
-      <div class="bg-rose-50 border border-rose-100 rounded-lg p-3 flex gap-3 shadow-sm items-start">
-       <div class="mt-0.5"><i class="fas fa-exclamation-triangle text-rose-500 text-base"></i></div>
-       <div>
-        <p class="text-[13.5px] text-rose-800 m-0 leading-relaxed">
-         <strong class="text-rose-900 font-semibold mr-1">Implementation Rules Required:</strong> The indicators use <a href="https://advanced-r-solutions.rbind.io/control-flow.html" target="_blank" class="font-semibold underline hover:text-rose-900">control flow methods</a> to implement rule-based algorithms. These must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth.
-        </p>
-       </div>
+      <!-- Danger Notice (Ultra Compact Inline) -->
+      <div class="bg-rose-50 border border-rose-200 rounded px-3 py-2 text-[13px] text-rose-800 shadow-sm leading-tight">
+       <i class="fas fa-exclamation-triangle text-rose-500 mr-1.5"></i>
+       <strong class="text-rose-900 font-semibold mr-1">Implementation rules required:</strong>
+       The indicators use <a href="https://advanced-r-solutions.rbind.io/control-flow.html" target="_blank" class="font-semibold underline hover:text-rose-900">control flow methods</a> to implement rule-based algorithms. These must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth.
       </div>
 
      </div>
@@ -411,10 +406,10 @@ author_profile: false
     <section id="all-aces-downloads" class="scroll-mt-10">
      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-4 border-b border-slate-200 pb-3 gap-2">
       <h2 class="text-2xl font-bold text-slate-900 m-0 border-none flex items-center">
-       <span class="section-number">3</span> All ACEs Code Lists
+       <span class="section-number">3</span> All ACEs code lists
       </h2>
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/assets/control_documentation/ACEsinEHRs%20Control%20documentation%20v3.pdf" target="_blank" class="text-sm font-semibold text-blue-600 hover:text-blue-800 hover:underline">
-       <i class="fas fa-file-pdf mr-1"></i> Control Documentation v3
+       <i class="fas fa-file-pdf mr-1"></i> Control documentation v3
       </a>
      </div>
      
@@ -424,21 +419,21 @@ author_profile: false
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/ACEs_2025ACEsinEHRs.txt" target="_blank" class="download-card border-slate-300">
        <div class="dl-icon-wrapper bg-slate-100 text-slate-600"><i class="fas fa-file-alt"></i></div>
        <div class="dl-content">
-        <span class="dl-title">All ACEs Master List</span>
+        <span class="dl-title">All ACEs master list</span>
         <span class="dl-meta">23,164 codes</span>
        </div>
       </a>
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/ACEs_2025_medcode_prodcode_CPRD_GOLD_Aurum_ACEsinEHRs.txt" target="_blank" class="download-card border-slate-300">
        <div class="dl-icon-wrapper bg-slate-100 text-slate-600"><i class="fas fa-laptop-medical"></i></div>
        <div class="dl-content">
-        <span class="dl-title">GP/CPRD GOLD/AURUM Only</span>
+        <span class="dl-title">GP/CPRD GOLD/Aurum only</span>
         <span class="dl-meta">20,925 codes</span>
        </div>
       </a>
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/ACEs_2025_ICD910_special_fields_HES_ACEsinEHRs.txt" target="_blank" class="download-card border-slate-300 md:col-span-2 lg:col-span-1">
        <div class="dl-icon-wrapper bg-slate-100 text-slate-600"><i class="fas fa-hospital"></i></div>
        <div class="dl-content">
-        <span class="dl-title">Hospital Only (ICD/HES)</span>
+        <span class="dl-title">Hospital only (ICD/HES)</span>
         <span class="dl-meta">2,239 codes</span>
        </div>
       </a>
@@ -448,7 +443,7 @@ author_profile: false
     <!-- 4. DOMAIN DOWNLOADS -->
     <section id="domain-downloads" class="scroll-mt-10">
      <h2 class="section-header">
-      <span class="section-number">4</span> Domain Code Lists
+      <span class="section-number">4</span> Domain code lists
      </h2>
      
      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -457,7 +452,7 @@ author_profile: false
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/CM_2025ACEsinEHRs.txt" target="_blank" class="download-card border-rose-200 hover:border-rose-400">
        <div class="dl-icon-wrapper bg-rose-50 text-rose-600"><i class="fas fa-child"></i></div>
        <div class="dl-content">
-        <span class="dl-title group-hover:text-rose-700">Child Maltreatment (CM)</span>
+        <span class="dl-title group-hover:text-rose-700">Child maltreatment (CM)</span>
         <span class="dl-meta">3,852 codes</span>
        </div>
       </a>
@@ -466,7 +461,7 @@ author_profile: false
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/HRPCM_2025ACEsinEHRs.txt" target="_blank" class="download-card border-purple-200 hover:border-purple-400">
        <div class="dl-icon-wrapper bg-purple-50 text-purple-600"><i class="fas fa-exclamation-circle"></i></div>
        <div class="dl-content">
-        <span class="dl-title group-hover:text-purple-700">High-risk Presentation of CM</span>
+        <span class="dl-title group-hover:text-purple-700">High-risk presentation of CM</span>
         <span class="dl-meta">1,774 codes</span>
        </div>
       </a>
@@ -475,7 +470,7 @@ author_profile: false
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/IPV_2025ACEsinEHRs.txt" target="_blank" class="download-card border-indigo-200 hover:border-indigo-400">
        <div class="dl-icon-wrapper bg-indigo-50 text-indigo-600"><i class="fas fa-user-injured"></i></div>
        <div class="dl-content">
-        <span class="dl-title group-hover:text-indigo-700">Intimate Partner Violence</span>
+        <span class="dl-title group-hover:text-indigo-700">Intimate partner violence</span>
         <span class="dl-meta">3,281 codes (incl. algorithms)</span>
        </div>
       </a>
@@ -484,7 +479,7 @@ author_profile: false
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/IPV_no_algo_2025ACEsinEHRs.txt" target="_blank" class="download-card border-indigo-100 hover:border-indigo-300">
        <div class="dl-icon-wrapper bg-slate-50 text-indigo-400"><i class="fas fa-file-code"></i></div>
        <div class="dl-content">
-        <span class="dl-title text-slate-600">IPV (Base List Only)</span>
+        <span class="dl-title text-slate-600">IPV (base list only)</span>
         <span class="dl-meta">2,044 codes (excl. algorithms)</span>
        </div>
       </a>
@@ -493,7 +488,7 @@ author_profile: false
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/SM_2025ACEsinEHRs.txt" target="_blank" class="download-card border-amber-200 hover:border-amber-400">
        <div class="dl-icon-wrapper bg-amber-50 text-amber-600"><i class="fas fa-wine-glass-alt"></i></div>
        <div class="dl-content">
-        <span class="dl-title group-hover:text-amber-700">Parental Substance Misuse</span>
+        <span class="dl-title group-hover:text-amber-700">Parental substance misuse</span>
         <span class="dl-meta">2,886 codes</span>
        </div>
       </a>
@@ -502,7 +497,7 @@ author_profile: false
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/AFE_2025ACEsinEHRs.txt" target="_blank" class="download-card border-blue-200 hover:border-blue-400">
        <div class="dl-icon-wrapper bg-blue-50 text-blue-600"><i class="fas fa-home"></i></div>
        <div class="dl-content">
-        <span class="dl-title group-hover:text-blue-700">Adverse Family Environments</span>
+        <span class="dl-title group-hover:text-blue-700">Adverse family environments</span>
         <span class="dl-meta">2,308 codes</span>
        </div>
       </a>
@@ -511,7 +506,7 @@ author_profile: false
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/MHP_2025ACEsinEHRs.txt" target="_blank" class="download-card border-emerald-200 hover:border-emerald-400 md:col-span-2 lg:col-span-1">
        <div class="dl-icon-wrapper bg-emerald-50 text-emerald-600"><i class="fas fa-brain"></i></div>
        <div class="dl-content">
-        <span class="dl-title group-hover:text-emerald-700">Parental Mental Health Problems</span>
+        <span class="dl-title group-hover:text-emerald-700">Parental mental health problems</span>
         <span class="dl-meta">9,063 codes</span>
        </div>
       </a>
@@ -520,7 +515,7 @@ author_profile: false
       <a href="https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/Health%20comorbidities.txt" target="_blank" class="download-card border-slate-300 hover:border-slate-500 md:col-span-2 lg:col-span-1 bg-slate-50">
        <div class="dl-icon-wrapper bg-white text-slate-700 shadow-sm"><i class="fas fa-plus-circle"></i></div>
        <div class="dl-content">
-        <span class="dl-title text-slate-800">Covariates (Non-ACEs)</span>
+        <span class="dl-title text-slate-800">Covariates (non-ACEs)</span>
         <span class="dl-meta">8,808 codes (Health comorbidities)</span>
        </div>
       </a>
@@ -531,7 +526,7 @@ author_profile: false
     <!-- 5. EXCLUSION RULES -->
     <section id="exclusions" class="scroll-mt-10">
      <h2 class="section-header">
-      <span class="section-number">5</span> Exclusion Rules Code Lists
+      <span class="section-number">5</span> Exclusion rules code lists
      </h2>
      
      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -546,7 +541,7 @@ author_profile: false
       <a href="https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/Osteoporosis%20Bone%20disease.txt" target="_blank" class="download-card border-slate-200 hover:border-rose-300">
        <div class="dl-icon-wrapper bg-slate-50 text-slate-500"><i class="fas fa-bone"></i></div>
        <div class="dl-content">
-        <span class="dl-title">Osteoporosis / Bone Disease</span>
+        <span class="dl-title">Osteoporosis / bone disease</span>
         <span class="dl-meta">406 codes</span>
        </div>
       </a>
@@ -554,7 +549,7 @@ author_profile: false
       <a href="https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/Birth%20injury%20or%20complication.txt" target="_blank" class="download-card border-slate-200 hover:border-rose-300">
        <div class="dl-icon-wrapper bg-slate-50 text-slate-500"><i class="fas fa-baby"></i></div>
        <div class="dl-content">
-        <span class="dl-title">Birth Injuries/Complications</span>
+        <span class="dl-title">Birth injuries / complications</span>
         <span class="dl-meta">238 codes</span>
        </div>
       </a>
@@ -562,7 +557,7 @@ author_profile: false
       <a href="https://raw.githubusercontent.com/shabeer-syed/ACEs/code-lists/Mother-to-child%20transmission.txt" target="_blank" class="download-card border-slate-200 hover:border-rose-300">
        <div class="dl-icon-wrapper bg-slate-50 text-slate-500"><i class="fas fa-virus"></i></div>
        <div class="dl-content">
-        <span class="dl-title">Mother-to-Child Transmissions</span>
+        <span class="dl-title">Mother-to-child transmissions</span>
         <span class="dl-meta">15 codes</span>
        </div>
       </a>
