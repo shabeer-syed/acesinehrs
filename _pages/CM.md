@@ -23,11 +23,12 @@ author_profile: false
  }
 </script>
 
-<!-- 2. Load Fonts & Icons -->
+<!-- 2. Load Fonts, Icons & DataTables CSS -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 
-<!-- 3. The "Iron Shield" Overrides -->
+<!-- 3. The "Iron Shield" Overrides & Custom Styles -->
 <style>
  /* === FIX THE MENU & LOGO === */
  .masthead__inner-wrap .site-logo img { max-height: 24px !important; width: auto !important; }
@@ -100,7 +101,7 @@ author_profile: false
  }
 
  /* === HDR UK STYLE EXPANDABLE BOXES === */
- details > summary { list-style: none !important; }
+ details > summary { list-style: none !important; outline: none !important; }
  details > summary::-webkit-details-marker { display: none !important; }
  .expandable-box {
   background: #ffffff !important; border: 1px solid #e2e8f0 !important; border-radius: 0.75rem !important;
@@ -144,11 +145,32 @@ author_profile: false
  .syntax-function { color: #d2a8ff !important; }
  .syntax-comment { color: #8b949e !important; font-style: italic !important; }
 
- /* Taxonomy Table */
+ /* Custom Tables */
  .custom-table { width: 100% !important; border-collapse: collapse !important; text-align: left !important; }
  .custom-table th { background-color: #f8fafc !important; padding: 1rem !important; font-size: 13px !important; font-weight: 700 !important; color: #475569 !important; border-bottom: 2px solid #e2e8f0 !important; white-space: nowrap !important; }
  .custom-table td { padding: 1rem !important; font-size: 14px !important; color: #334155 !important; border-bottom: 1px solid #f1f5f9 !important; }
  .domain-badge { display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 0.25rem 0.5rem !important; border-radius: 0.25rem !important; font-size: 12px !important; font-weight: 700 !important; background: #ffe4e6 !important; color: #be123c !important; }
+
+ /* === DATATABLES OVERRIDES FOR TAILWIND/HDR UK LOOK === */
+ .dataTables_wrapper .dataTables_filter input {
+  border: 1px solid #cbd5e1 !important; border-radius: 0.375rem !important;
+  padding: 0.35rem 0.75rem !important; margin-left: 0.5rem !important; outline: none !important;
+  font-family: 'Inter', sans-serif !important; font-size: 13px !important; color: #334155 !important;
+ }
+ .dataTables_wrapper .dataTables_filter input:focus { border-color: #3b82f6 !important; box-shadow: 0 0 0 1px #3b82f6 !important; }
+ .dataTables_wrapper .dataTables_length select {
+  border: 1px solid #cbd5e1 !important; border-radius: 0.375rem !important;
+  padding: 0.25rem 1.5rem 0.25rem 0.5rem !important; outline: none !important; font-size: 13px !important; color: #334155 !important;
+ }
+ .dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 0.25rem 0.75rem !important; margin-left: 0.25rem !important; border-radius: 0.375rem !important;
+  border: 1px solid #e2e8f0 !important; background: #f8fafc !important; font-size: 13px !important; color: #475569 !important;
+ }
+ .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: #e2e8f0 !important; border-color: #cbd5e1 !important; color: #0f172a !important; font-weight: 600 !important;
+ }
+ .dataTables_wrapper .dataTables_paginate .paginate_button:hover { background: #e2e8f0 !important; color: #0f172a !important; border-color: #cbd5e1 !important; }
+ table.dataTable.no-footer { border-bottom: 1px solid #e2e8f0 !important; }
 
  /* PUBLICATION LIST */
  .pub-item { display: flex !important; flex-direction: column !important; gap: 0.5rem !important; padding: 1.25rem !important; border: 1px solid #e2e8f0 !important; border-radius: 0.75rem !important; background: #ffffff !important; margin-bottom: 1rem !important; transition: all 0.3s ease !important; }
@@ -299,18 +321,18 @@ author_profile: false
      <h2 class="section-header justify-between">
       <div class="flex items-center"><span class="section-number">3</span> Clinical Codelist</div>
       
-      <!-- Export/Download Button styled like HDR UK Export Dropdown -->
-      <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/CM_2025ACEsinEHRs.txt" target="_blank" class="inline-flex items-center px-3 py-1.5 bg-white border border-slate-300 rounded-md text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-rose shadow-sm transition-all border-none">
-       <i class="fas fa-download mr-2 text-slate-400"></i> Download (.txt)
+      <!-- UPDATED Export/Download Button -->
+      <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/CM_2025ACEsinEHRs.txt" target="_blank" class="inline-flex items-center px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:border-slate-400 shadow-sm transition-all hover:-translate-y-0.5">
+       <i class="fas fa-file-download text-brand-rose mr-2"></i> Download (.txt)
       </a>
      </h2>
 
      <p class="content-text mb-6">
-      Access the complete set of 3,852 clinical codes mapped to the CM domain. See the <a href="https://github.com/shabeer-syed/acesinehrs/raw/master/assets/control_documentation/ACEsinEHRs%20Control%20documentation%20v2.pdf" target="_blank" class="text-blue-600 font-medium hover:underline"><i class="fas fa-file-pdf mr-1 text-rose-500"></i>Control documentation</a> for code processing rules.
+      Access the complete set of 2877 clinical codes mapped to the CM domain. See the <a href="https://github.com/shabeer-syed/acesinehrs/raw/master/assets/control_documentation/ACEsinEHRs%20Control%20documentation%20v2.pdf" target="_blank" class="text-blue-600 font-medium hover:underline"><i class="fas fa-file-pdf mr-1 text-rose-500"></i>Control documentation</a> for code processing rules.
      </p>
 
      <!-- Expandable Taxonomy Box -->
-     <details class="expandable-box group">
+     <details class="expandable-box group mb-4">
       <summary class="expandable-summary">
        Indicator Structure & Taxonomy
        <i class="fas fa-chevron-down expandable-icon"></i>
@@ -364,6 +386,63 @@ author_profile: false
        </table>
       </div>
      </details>
+
+     <!-- NEW: Browse & Search Interactive Box -->
+     <details class="expandable-box group">
+      <summary class="expandable-summary">
+       Browse & Search Clinical Codelist (Preview)
+       <i class="fas fa-search text-slate-400 group-hover:text-brand-rose transition-colors ml-2 mr-auto text-sm"></i>
+       <i class="fas fa-chevron-down expandable-icon"></i>
+      </summary>
+      
+      <div class="expandable-content p-0">
+       
+       <!-- HDR UK Style Gray Header -->
+       <div class="bg-[#a3a3a3] px-5 py-3.5 text-white text-sm font-semibold flex justify-between items-center tracking-wide">
+        <span>CM1 - CM7 - Child maltreatment | ALL CODING SYSTEMS</span>
+       </div>
+
+       <!-- White Interactive Area -->
+       <div class="p-5 bg-white">
+        
+        <!-- Published Banner / Info -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 pb-4 border-b border-slate-100 gap-3">
+         <span class="text-[13px] font-bold text-slate-500 tracking-wider">PUBLISHED</span>
+        </div>
+
+        <!-- The Interactive Table -->
+        <div class="overflow-x-auto">
+         <table id="codeSearchTable" class="custom-table w-full">
+          <thead>
+           <tr>
+            <th style="width: 20%;">Code</th>
+            <th style="width: 45%;">Description</th>
+            <th style="width: 20%;">Coding System</th>
+            <th style="width: 15%;">Indicator</th>
+           </tr>
+          </thead>
+          <tbody>
+           <!-- Sample Representative Rows for Live Demo -->
+           <tr><td class="font-mono">1620023</td><td>Child protection register</td><td>READ</td><td><span class="hdr-pill !bg-slate-100 !border-slate-200 !text-slate-700">CM1</span></td></tr>
+           <tr><td class="font-mono">SN532100</td><td>Victim of child abuse</td><td>SNOMED CT</td><td><span class="hdr-pill !bg-slate-100 !border-slate-200 !text-slate-700">CM2</span></td></tr>
+           <tr><td class="font-mono">Z04.0</td><td>Observation following suspected neglect</td><td>ICD-10</td><td><span class="hdr-pill !bg-slate-100 !border-slate-200 !text-slate-700">CM3</span></td></tr>
+           <tr><td class="font-mono">1L13.</td><td>Looked after child</td><td>READ</td><td><span class="hdr-pill !bg-slate-100 !border-slate-200 !text-slate-700">CM5</span></td></tr>
+           <tr><td class="font-mono">SN992144</td><td>Assault in the home</td><td>SNOMED CT</td><td><span class="hdr-pill !bg-slate-100 !border-slate-200 !text-slate-700">CM7</span></td></tr>
+           <tr><td class="font-mono">T74.2</td><td>Sexual abuse, suspected</td><td>ICD-10</td><td><span class="hdr-pill !bg-slate-100 !border-slate-200 !text-slate-700">CM6</span></td></tr>
+           <tr><td class="font-mono">1622...</td><td>On child protection register</td><td>READ</td><td><span class="hdr-pill !bg-slate-100 !border-slate-200 !text-slate-700">CM1</span></td></tr>
+           <tr><td class="font-mono">SN884100</td><td>Child emotional abuse</td><td>SNOMED CT</td><td><span class="hdr-pill !bg-slate-100 !border-slate-200 !text-slate-700">CM3</span></td></tr>
+           <tr><td class="font-mono">Y07.9</td><td>Other maltreatment syndromes</td><td>ICD-10</td><td><span class="hdr-pill !bg-slate-100 !border-slate-200 !text-slate-700">CM2</span></td></tr>
+           <tr><td class="font-mono">13HM.</td><td>Social services involvement</td><td>READ</td><td><span class="hdr-pill !bg-slate-100 !border-slate-200 !text-slate-700">CM4</span></td></tr>
+           <tr><td class="font-mono">SN112200</td><td>Fetal alcohol syndrome</td><td>SNOMED CT</td><td><span class="hdr-pill !bg-slate-100 !border-slate-200 !text-slate-700">CM3</span></td></tr>
+           <tr><td class="font-mono">Z04.5</td><td>Observation following suspected assault</td><td>ICD-10</td><td><span class="hdr-pill !bg-slate-100 !border-slate-200 !text-slate-700">CM6</span></td></tr>
+          </tbody>
+         </table>
+        </div>
+
+       </div>
+      </div>
+     </details>
+
     </section>
 
     <!-- 4. IMPLEMENTATION RULES -->
@@ -471,3 +550,21 @@ author_profile: false
  </section>
 
 </div>
+
+<!-- DataTables Initialization Script -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+ $(document).ready(function() {
+  $('#codeSearchTable').DataTable({
+   "pageLength": 10,
+   "lengthMenu":[5, 10, 25, 50],
+   "dom": '<"flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-3"lf>rt<"flex flex-col sm:flex-row justify-between items-center mt-4 gap-3"ip>',
+   "language": {
+    "search": "",
+    "searchPlaceholder": "Search codes or keywords...",
+    "lengthMenu": "_MENU_ entries per page"
+   }
+  });
+ });
+</script>
