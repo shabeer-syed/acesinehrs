@@ -7,37 +7,35 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-<!-- === CUSTOM DROPDOWN FIX FOR ACE DOMAINS === -->
+<!-- === BULLETPROOF CUSTOM DROPDOWN FIX === -->
 <style>
-  /* Dropdown Container */
-  .custom-nav-dropdown {
+  /* Global Dropdown Container */
+  #global-ace-dropdown {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px); /* Centers it and pushes it down slightly */
-    top: 100%;
-    width: 260px;
+    transform: translateX(-50%) translateY(10px);
+    width: 280px;
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: 0.75rem;
-    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1);
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 99999;
+    z-index: 999999;
     padding: 0.5rem 0;
     display: flex;
     flex-direction: column;
   }
   
-  /* Hover effect on the parent menu item triggers the dropdown */
-  .masthead__menu-item:hover .custom-nav-dropdown {
+  /* Active Class added by JavaScript */
+  #global-ace-dropdown.show-dropdown {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0); /* Slides up smoothly */
+    transform: translateX(-50%) translateY(0);
   }
 
-  /* Style the links inside the dropdown */
-  .custom-nav-dropdown a {
+  /* Style the links inside */
+  #global-ace-dropdown a {
     padding: 0.75rem 1.25rem !important;
     font-size: 14px !important;
     color: #475569 !important;
@@ -48,47 +46,72 @@
     font-family: 'Inter', sans-serif !important;
     text-align: left !important;
     transition: all 0.2s ease !important;
+    box-shadow: none !important;
   }
   
-  .custom-nav-dropdown a:hover {
+  #global-ace-dropdown a:hover {
     background-color: #f8fafc !important;
-    color: #2563eb !important; /* Turns blue on hover */
-    padding-left: 1.5rem !important; /* Slight indent animation */
+    color: #2563eb !important;
+    padding-left: 1.5rem !important; /* Premium slide effect */
   }
 
-  .custom-nav-dropdown a:last-child {
+  #global-ace-dropdown a:last-child {
     border-bottom: none !important;
   }
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // 1. Find the navigation link that contains "ACE domains"
-    const menuLinks = document.querySelectorAll('.masthead__menu-item a');
-    
-    menuLinks.forEach(link => {
-      if(link.textContent.includes("ACE domains")) {
-        const parentLi = link.parentElement;
-        parentLi.style.position = 'relative'; // Required to anchor the dropdown
-        
-        // 2. Create the beautiful dropdown HTML
-        const dropdown = document.createElement('div');
-        dropdown.className = 'custom-nav-dropdown';
-        dropdown.innerHTML = `
-          <a href="https://acesinehrs.com/indicators/">All indicators</a>
-          <a href="https://acesinehrs.com/CM/">Child maltreatment (CM)</a>
-          <a href="https://acesinehrs.com/IPV/">Intimate partner violence (IPV)</a>
-          <a href="https://acesinehrs.com/HRPCM/">High-risk presentations (HRP-CM)</a>
-          <a href="https://acesinehrs.com/MHPs/">Parental mental health (MHPs)</a>
-          <a href="https://acesinehrs.com/SM/">Parental substance misuse (SM)</a>
-          <a href="https://acesinehrs.com/AFE/">Adverse family environments (AFE)</a>
-        `;
-        
-        // 3. Attach it to the menu item
-        parentLi.appendChild(dropdown);
+    // 1. Create the floating dropdown element once and append it to the BODY (escapes the header)
+    const dropdown = document.createElement('div');
+    dropdown.id = 'global-ace-dropdown';
+    dropdown.innerHTML = `
+      <a href="https://acesinehrs.com/indicators/">All indicators</a>
+      <a href="https://acesinehrs.com/CM/">Child maltreatment (CM)</a>
+      <a href="https://acesinehrs.com/IPV/">Intimate partner violence (IPV)</a>
+      <a href="https://acesinehrs.com/HRPCM/">High-risk presentations (HRP-CM)</a>
+      <a href="https://acesinehrs.com/MHPs/">Parental mental health (MHPs)</a>
+      <a href="https://acesinehrs.com/SM/">Parental substance misuse (SM)</a>
+      <a href="https://acesinehrs.com/AFE/">Adverse family environments (AFE)</a>
+    `;
+    document.body.appendChild(dropdown);
+
+    let hoverTimeout;
+
+    // Function to calculate exact position and show
+    function showDropdown(triggerElement) {
+      clearTimeout(hoverTimeout);
+      const rect = triggerElement.getBoundingClientRect();
+      
+      // Center it below the nav link
+      dropdown.style.left = (rect.left + window.scrollX + (rect.width / 2)) + 'px';
+      dropdown.style.top = (rect.bottom + window.scrollY + 10) + 'px'; 
+      dropdown.classList.add('show-dropdown');
+    }
+
+    function hideDropdown() {
+      // Add a slight delay so the mouse can safely move from the link to the dropdown box
+      hoverTimeout = setTimeout(() => {
+        dropdown.classList.remove('show-dropdown');
+      }, 150); 
+    }
+
+    // Event Delegation: Listens to the whole body so it works even if the theme moves links around
+    document.body.addEventListener('mouseover', function(e) {
+      const isAceLink = e.target.tagName === 'A' && e.target.textContent.includes('ACE domains');
+      const isInsideDropdown = e.target.closest('#global-ace-dropdown');
+
+      if (isAceLink) {
+        showDropdown(e.target);
+      } else if (isInsideDropdown) {
+        clearTimeout(hoverTimeout); // Keep it open if they are hovering the dropdown itself
+      } else {
+        hideDropdown();
       }
     });
+
+    // Make sure it closes if they move off the dropdown box
+    dropdown.addEventListener('mouseleave', hideDropdown);
   });
 </script>
-<!-- === END CUSTOM DROPDOWN FIX === -->
-<!-- end custom head snippets -->
+<!-- === END BULLETPROOF CUSTOM DROPDOWN === -->
