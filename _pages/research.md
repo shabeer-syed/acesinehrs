@@ -50,7 +50,7 @@ author_profile: false
  }
   
  /* Reset link styles BUT ignore custom components */
- .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.pub-link):not(.text-blue-600):not(.scholar-link) {
+ .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.pub-link):not(.text-blue-600):not(.scholar-link):not(.gs-title) {
   border-bottom: none !important; text-decoration: none !important; box-shadow: none !important;
  }
 
@@ -76,19 +76,19 @@ author_profile: false
   font-size: 16px !important; line-height: 1.75 !important; color: #475569 !important; margin-bottom: 1.25rem !important;
  }
 
- /* FEATURED RESEARCH CARDS (Upgraded to POP) */
+ /* FEATURED RESEARCH CARDS */
  .research-card {
   background-color: #ffffff !important; 
   border-radius: 1.25rem !important; 
-  border: 1px solid #bfdbfe !important; /* Subtle blue outline matching site highlight */
+  border: 1px solid #bfdbfe !important; 
   box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.05), 0 2px 4px -1px rgba(37, 99, 235, 0.03) !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   display: flex !important; flex-direction: column !important; overflow: hidden !important; height: 100% !important;
  }
  .research-card:hover {
   transform: translateY(-6px) !important; 
-  border-color: #60a5fa !important; /* Darkens slightly to frame it on hover */
-  box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.1), 0 0 0 3px rgba(191, 219, 254, 0.4) !important; /* Soft blue glow */
+  border-color: #60a5fa !important; 
+  box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.1), 0 0 0 3px rgba(191, 219, 254, 0.4) !important;
  }
  .research-card .img-wrapper {
   width: 100% !important; height: 200px !important; overflow: hidden !important; background-color: #f1f5f9 !important;
@@ -112,7 +112,7 @@ author_profile: false
   padding: 8px 16px !important; border-radius: 6px !important; text-decoration: none !important; transition: all 0.3s ease !important; border: none !important;
  }
  .research-card:hover .btn-card { 
-  background-color: #2563eb !important; /* Button turns primary blue on card hover */
+  background-color: #2563eb !important; 
   box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2) !important;
  }
 
@@ -207,7 +207,7 @@ author_profile: false
      </div>
     </a>
 
-    <!-- Feature Card 3 -->
+    <!-- Feature Card 3 (UPDATED TITLE) -->
     <a href="/research-aces-ipv/" class="research-card group">
      <div class="img-wrapper">
       <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Syed%202023%20Family%20adversity%20and%20IPV%20and%20lancet%20public%20health.png" alt="Family adversity and health characteristics">
@@ -219,7 +219,7 @@ author_profile: false
      </div>
     </a>
 
-    <!-- Feature Card 4 (MOVED AHEAD OF REVIEW AS REQUESTED) -->
+    <!-- Feature Card 4 (Validation Study) -->
     <a href="/research-acesinehrs-validation/" class="research-card group">
      <div class="img-wrapper">
       <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20getting%20started%20page.jpg" alt="Validation Study">
@@ -231,7 +231,7 @@ author_profile: false
      </div>
     </a>
 
-    <!-- Feature Card 5 (MOVED AFTER VALIDATION STUDY) -->
+    <!-- Feature Card 5 (Review) -->
     <a href="/research-review-ipv-cm/" class="research-card group">
      <div class="img-wrapper">
       <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/aces%20in%20ehrs%20research%20review%20CM%20IPV.png" alt="State of the art review">
@@ -301,43 +301,97 @@ author_profile: false
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/512px-Google_Scholar_logo.svg.png" alt="Google Scholar" class="h-6">
      </div>
 
-     <!-- Scrollable Feed -->
+     <!-- Scrollable Feed (UPDATED CITATIONS) -->
      <div class="scholar-feed max-h-[300px] overflow-y-auto pr-3 space-y-5 text-slate-800">
        
+      <!-- Li 2026 -->
       <div class="group">
-       <h4 class="text-blue-700 font-semibold text-[15px] leading-snug mb-1 group-hover:underline cursor-pointer">Developing machine models predicting childhood mental health issues</h4>
-       <p class="text-emerald-700 text-xs font-medium mb-1.5">Crowley et al. - <span class="text-slate-500 font-normal">2025</span></p>
-       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2">Utilising ACEsinEHRs indicators to train predictive models identifying risk factors for adolescent psychiatric presentations.</p>
+       <a href="https://scholar.google.com/scholar?q=The+Role+of+Artificial+Intelligence+for+Intimate+Partner+Violence+Prevention%3A+A+Systematic+Review" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
+        <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">The Role of Artificial Intelligence for Intimate Partner Violence Prevention: A Systematic Review</h4>
+       </a>
+       <p class="text-emerald-700 text-xs font-medium mb-1.5 mt-0">Li et al. - <span class="text-slate-500 font-normal">2026</span></p>
+       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Intimate partner violence (IPV), encompassing physical, sexual, emotional and economic abuse, remains a pervasive global health concern. Traditional prevention efforts...</p>
       </div>
 
+      <!-- Lee 2025 -->
       <div class="group">
-       <h4 class="text-blue-700 font-semibold text-[15px] leading-snug mb-1 group-hover:underline cursor-pointer">Analysing maternal vulnerabilities in the family court system</h4>
-       <p class="text-emerald-700 text-xs font-medium mb-1.5">Ireland et al. - <span class="text-slate-500 font-normal">2024</span></p>
-       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2">A data-driven think-family approach investigating the intersection of domestic adversity and legal interventions.</p>
+       <a href="https://scholar.google.com/scholar?q=Artificial+intelligence+in+applied+family+research+involving+families+with+young+children%3A+A+scoping+review" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
+        <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Artificial intelligence in applied family research involving families with young children: A scoping review</h4>
+       </a>
+       <p class="text-emerald-700 text-xs font-medium mb-1.5 mt-0">Lee et al. - <span class="text-slate-500 font-normal">2025</span></p>
+       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">This scoping review systematically examined the applied family science literature involving families raising young children to understand how relevant studies have applied...</p>
       </div>
 
+      <!-- Syed 2025 -->
       <div class="group">
-       <h4 class="text-blue-700 font-semibold text-[15px] leading-snug mb-1 group-hover:underline cursor-pointer">Optimising ACE screening in clinical practice</h4>
-       <p class="text-emerald-700 text-xs font-medium mb-1.5">Danese et al. - <span class="text-slate-500 font-normal">2024</span></p>
-       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2">Evaluating routine care screening protocols against validated electronic health record phenotyping algorithms.</p>
+       <a href="https://scholar.google.com/scholar?q=Adverse+childhood+experiences+in+firstborns+and+mental+health+risk+and+health-care+use+in+siblings" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
+        <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Adverse childhood experiences in firstborns and mental health risk and health-care use in siblings: a population-based birth cohort study</h4>
+       </a>
+       <p class="text-emerald-700 text-xs font-medium mb-1.5 mt-0">Syed et al. - <span class="text-slate-500 font-normal">2025</span></p>
+       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Adverse childhood experiences (ACEs) often affect multiple children within families, yet studies tend to focus on the health outcomes of individual children...</p>
       </div>
 
+      <!-- Baird 2025 -->
       <div class="group">
-       <h4 class="text-blue-700 font-semibold text-[15px] leading-snug mb-1 group-hover:underline cursor-pointer">Integrating healthcare responses to intimate partner violence</h4>
-       <p class="text-emerald-700 text-xs font-medium mb-1.5">Fanslow - <span class="text-slate-500 font-normal">2023</span></p>
-       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2">Policy integration leveraging linked maternal and child health records to inform population-level interventions.</p>
+       <a href="https://scholar.google.com/scholar?q=Applying+analytics+to+sociodemographic+disparities+in+mental+health" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
+        <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Applying analytics to sociodemographic disparities in mental health</h4>
+       </a>
+       <p class="text-emerald-700 text-xs font-medium mb-1.5 mt-0">Baird & Xia - <span class="text-slate-500 font-normal">2025</span></p>
+       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Mental health services and treatment are unfortunately subject to sociodemographic disparities. To address this issue, recent studies have begun to apply analytics methods...</p>
       </div>
 
+      <!-- Crowley 2025 -->
       <div class="group">
-       <h4 class="text-blue-700 font-semibold text-[15px] leading-snug mb-1 group-hover:underline cursor-pointer">Externally validating algorithms for identifying child maltreatment</h4>
-       <p class="text-emerald-700 text-xs font-medium mb-1.5">John et al. - <span class="text-slate-500 font-normal">2023</span></p>
-       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2">The first external validation of coding algorithms designed to reliably identify safeguarding interventions in routine care.</p>
+       <a href="https://scholar.google.com/scholar?q=Machine+learning+for+prediction+of+childhood+mental+health+problems+in+social+care" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
+        <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Machine learning for prediction of childhood mental health problems in social care</h4>
+       </a>
+       <p class="text-emerald-700 text-xs font-medium mb-1.5 mt-0">Crowley et al. - <span class="text-slate-500 font-normal">2025</span></p>
+       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Rates of childhood mental health problems are increasing in the UK. Early identification of childhood mental health problems is challenging but critical to children's...</p>
       </div>
-       
+
+      <!-- Joshi 2025 -->
       <div class="group">
-       <h4 class="text-blue-700 font-semibold text-[15px] leading-snug mb-1 group-hover:underline cursor-pointer">Evaluating health visiting models for ACE mitigation</h4>
-       <p class="text-emerald-700 text-xs font-medium mb-1.5">Woodman et al. - <span class="text-slate-500 font-normal">2022</span></p>
-       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2">Utilising standard data classifications to assess the efficacy of early-years public health visiting interventions.</p>
+       <a href="https://scholar.google.com/scholar?q=Examining+the+rollout+of+the+Triple+P+system+parenting+program+in+Manitoba+on+rates+of+child+maltreatment" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
+        <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Examining the rollout of the Triple P system parenting program in Manitoba on rates of child maltreatment</h4>
+       </a>
+       <p class="text-emerald-700 text-xs font-medium mb-1.5 mt-0">Joshi et al. - <span class="text-slate-500 font-normal">2025</span></p>
+       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Triple P is a multilevel parenting program aimed at promoting children's emotional, social, and behavioural competence and preventing behavioural problems...</p>
+      </div>
+
+      <!-- Schoenaker 2024 -->
+      <div class="group">
+       <a href="https://scholar.google.com/scholar?q=Preconception+indicators+and+associations+with+health+outcomes+reported+in+UK+routine+primary+care+data%3A+a+systematic+review" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
+        <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Preconception indicators and associations with health outcomes reported in UK routine primary care data: a systematic review</h4>
+       </a>
+       <p class="text-emerald-700 text-xs font-medium mb-1.5 mt-0">Schoenaker et al. - <span class="text-slate-500 font-normal">2024</span></p>
+       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Routine primary care data may be a valuable resource for preconception health research and informing provision of preconception care. Aim: To review how primary...</p>
+      </div>
+
+      <!-- Danese 2024 -->
+      <div class="group">
+       <a href="https://scholar.google.com/scholar?q=Revisiting+the+use+of+adverse+childhood+experience+screening+in+healthcare+settings" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
+        <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Revisiting the use of adverse childhood experience screening in healthcare settings</h4>
+       </a>
+       <p class="text-emerald-700 text-xs font-medium mb-1.5 mt-0">Danese et al. - <span class="text-slate-500 font-normal">2024</span></p>
+       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Adverse childhood experiences (ACEs) are key modifiable risk factors for mental illness. The potential to detect and mitigate ACEs to improve population mental health...</p>
+      </div>
+
+      <!-- Lam 2024 -->
+      <div class="group">
+       <a href="https://scholar.google.com/scholar?q=The+association+between+adverse+childhood+experiences+and+mental+health%2C+behaviour%2C+and+educational+performance+in+adolescence" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
+        <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">The association between adverse childhood experiences and mental health, behaviour, and educational performance in adolescence</h4>
+       </a>
+       <p class="text-emerald-700 text-xs font-medium mb-1.5 mt-0">Lam et al. - <span class="text-slate-500 font-normal">2024</span></p>
+       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">Adverse childhood experiences (ACEs) are thought to have negative effects on mental health and well-being in adolescence. The definition of ACEs varies between studies...</p>
+      </div>
+
+      <!-- Ungar 2024 -->
+      <div class="group">
+       <a href="https://scholar.google.com/scholar?q=Access+without+borders%3A+a+scoping+review+to+identify+solutions+to+creating+portable+identity%2C+education+and+health+records+for+refugee+children" target="_blank" class="gs-title block text-blue-700 hover:text-blue-800 border-none !no-underline group-hover:underline">
+        <h4 class="font-semibold text-[15px] leading-snug mb-1 m-0">Access without borders: a scoping review to identify solutions to creating portable identity, education and health records for refugee children</h4>
+       </a>
+       <p class="text-emerald-700 text-xs font-medium mb-1.5 mt-0">Ungar & Seymour - <span class="text-slate-500 font-normal">2024</span></p>
+       <p class="text-slate-600 text-[14px] leading-relaxed line-clamp-2 m-0">The focus of this scoping review is to identify studies, reports, and other relevant sources from the peer-reviewed and grey literature that reports on refugee children's access...</p>
       </div>
 
      </div>
