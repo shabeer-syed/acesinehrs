@@ -45,7 +45,7 @@ author_profile: false
  .tailwind-wrap { box-sizing: border-box; }
  .tailwind-wrap h1, .tailwind-wrap h2, .tailwind-wrap h3, .tailwind-wrap h4,
  .tailwind-wrap p, .tailwind-wrap a, .tailwind-wrap span, .tailwind-wrap div,
- .tailwind-wrap li, .tailwind-wrap ul, .tailwind-wrap blockquote {
+ .tailwind-wrap li, .tailwind-wrap ul, .tailwind-wrap blockquote, .tailwind-wrap figure, .tailwind-wrap figcaption {
   font-family: 'Inter', sans-serif !important;
  }
   
@@ -85,8 +85,8 @@ author_profile: false
 <!-- 4. The HTML Content -->
 <div class="full-bleed tailwind-wrap text-gray-800 antialiased flex flex-col min-h-screen bg-slate-50">
 
- <!-- Article Hero Section -->
- <header class="relative bg-[#1e293b] text-white pt-12 pb-24 md:pt-16 md:pb-32" style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20getting%20started%20page.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;">
+ <!-- Article Hero Section (UPDATED IMAGE) -->
+ <header class="relative bg-[#1e293b] text-white pt-12 pb-24 md:pt-16 md:pb-32" style="background-image: url('https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/images/juan-pablo-rodriguez-7f_gsUxmiOQ-unsplash%20smaller%20size.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;">
   <div class="max-w-4xl mx-auto px-6 relative z-10">
    
    <!-- Back Button -->
@@ -161,6 +161,17 @@ author_profile: false
      These included: child maltreatment, intimate partner violence, maternal substance misuse, maternal mental health problems, adverse family environments (e.g. homelessness), and high-risk presentations of child maltreatment (e.g. unexplained child injuries).
     </p>
 
+    <!-- NEW INFOGRAPHIC INTEGRATION -->
+    <figure class="float-none md:float-right w-full md:w-[320px] lg:w-[360px] mb-6 md:mb-4 md:ml-8 mt-2">
+     <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/c4abe4037be4225e959e736274783c6765f79db0/images/ACEs%20in%20firstborns%20and%20mental%20health%20risk%20in%20siblings%20small1.jpg" target="_blank" class="block rounded-xl overflow-hidden shadow-md border border-slate-200 group relative bg-slate-50 btn-custom">
+      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/c4abe4037be4225e959e736274783c6765f79db0/images/ACEs%20in%20firstborns%20and%20mental%20health%20risk%20in%20siblings%20small1.jpg" alt="Study Infographic" class="w-full h-auto object-cover m-0 group-hover:scale-105 transition-transform duration-500">
+      <div class="absolute inset-0 bg-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+       <div class="bg-white/95 text-blue-600 rounded-full w-12 h-12 flex items-center justify-center shadow-lg"><i class="fas fa-search-plus text-lg"></i></div>
+      </div>
+     </a>
+     <figcaption class="text-[13px] text-slate-500 text-center mt-3 font-medium flex justify-center items-center gap-1.5"><i class="fas fa-expand-alt text-slate-400"></i> Click to view full infographic</figcaption>
+    </figure>
+
     <ul class="list-disc pl-6 mb-8 text-[17px] text-slate-700 space-y-3">
      <li>Over a third (37.1%) of firstborn children had at least one recorded adverse childhood experience.</li>
      <li>The most common adverse childhood experiences were living with maternal mental health problems (21.6%), followed by adverse family environments (14.5%) such as parental criminality and housing instability.</li>
@@ -174,6 +185,9 @@ author_profile: false
     <p class="article-text">
      The risk of mental health problems was consistent across all siblings, regardless of birth order (firstborn vs thirdborn), in families where the firstborn experienced adverse childhood experiences. Furthermore, children in families where the firstborn experienced adversity also had <strong>50% more emergency hospital admissions</strong> for any reason and double the amount of mental health-related healthcare contacts.
     </p>
+    
+    <!-- Clear floats so the rest of the content lays out normally below the image if it is long -->
+    <div class="clear-both"></div>
 
     <!-- Expert Quotes Section (Anna Freud Style) -->
     
