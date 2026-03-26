@@ -327,7 +327,6 @@ author_profile: false
         <span class="hdr-pill !bg-purple-50 !text-purple-700 !border-purple-200">SNOMED CT</span>
         <span class="hdr-pill !bg-purple-50 !text-purple-700 !border-purple-200">ICD-10</span>
         <span class="hdr-pill !bg-purple-50 !text-purple-700 !border-purple-200">ICD-9</span>
-        <span class="hdr-pill !bg-purple-50 !text-purple-700 !border-purple-200">HES-APC</span>
        </div>
       </div>
 
