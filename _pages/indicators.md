@@ -4,7 +4,8 @@ title: "All ACE domains & indicators"
 permalink: /indicators/
 author_profile: false
 ---
-<!-- 1. Load Tailwind Safely -->
+<!-- 1. Load Tailwind
+ Safely -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
  tailwind.config = {
@@ -103,14 +104,33 @@ author_profile: false
   justify-content: center !important; font-size: 14px !important; color: #64748b !important; margin-right: 0.75rem !important;
  }
 
+ /* === HDR UK STYLE EXPANDABLE BOXES === */
+ details > summary { list-style: none !important; outline: none !important; }
+ details > summary::-webkit-details-marker { display: none !important; }
+ .expandable-box {
+  background: #ffffff !important; border: 1px solid #e2e8f0 !important; border-radius: 0.75rem !important;
+  overflow: hidden !important; margin-bottom: 1rem !important; box-shadow: 0 1px 2px rgba(0,0,0,0.02) !important;
+  transition: box-shadow 0.3s ease !important;
+ }
+ .expandable-box:hover { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05) !important; border-color: #cbd5e1 !important; }
+ .expandable-summary {
+  padding: 1rem 1.25rem !important; background-color: #f8fafc !important; cursor: pointer !important;
+  display: flex !important; justify-content: space-between !important; align-items: center !important;
+  font-weight: 600 !important; color: #1e293b !important; font-size: 16px !important;
+ }
+ .expandable-box[open] .expandable-summary { border-bottom: 1px solid #e2e8f0 !important; background-color: #ffffff !important; }
+ .expandable-icon { transition: transform 0.3s ease !important; color: #94a3b8 !important; }
+ .expandable-box[open] .expandable-icon { transform: rotate(180deg) !important; color: #475569 !important; }
+ .expandable-content { padding: 1.25rem !important; background: #ffffff !important; }
+
  /* Content Typography */
  .content-text { font-size: 16px !important; line-height: 1.75 !important; color: #475569 !important; margin-bottom: 1.25rem !important; }
  
- /* Custom Tables */
- .custom-table { width: 100% !important; border-collapse: collapse !important; text-align: left !important; }
- .custom-table th { background-color: #f8fafc !important; padding: 1rem !important; font-size: 13px !important; font-weight: 700 !important; color: #475569 !important; border-bottom: 2px solid #e2e8f0 !important; white-space: nowrap !important; }
- .custom-table td { padding: 1rem !important; font-size: 14px !important; color: #334155 !important; border-bottom: 1px solid #f1f5f9 !important; }
- .domain-badge { display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 0.25rem 0.5rem !important; border-radius: 0.25rem !important; font-size: 12px !important; font-weight: 700 !important; }
+ /* === CUSTOM COMPACT TABLES === */
+ .custom-table-compact { width: 100% !important; border-collapse: collapse !important; text-align: left !important; }
+ .custom-table-compact th { background-color: #f8fafc !important; padding: 0.5rem 1rem !important; font-size: 12px !important; font-weight: 700 !important; color: #475569 !important; border-bottom: 2px solid #e2e8f0 !important; white-space: nowrap !important; }
+ .custom-table-compact td { padding: 0.4rem 1rem !important; font-size: 13px !important; color: #334155 !important; border-bottom: 1px solid #f1f5f9 !important; }
+ .domain-badge { display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 0.15rem 0.4rem !important; border-radius: 0.25rem !important; font-size: 11px !important; font-weight: 700 !important; }
 
  /* === DATATABLES OVERRIDES FOR TAILWIND/HDR UK LOOK === */
  .dataTables_wrapper .dataTables_filter input {
@@ -243,111 +263,114 @@ author_profile: false
       <span class="section-number">1</span> Master Indicator List
      </h2>
      
-     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-      <div class="bg-slate-50 px-5 py-3.5 border-b border-slate-200 flex justify-between items-center">
-       <span class="text-sm font-semibold text-slate-700">Comprehensive Taxonomy View</span>
-      </div>
+     <!-- EXPANDABLE COMPACT TABLE BOX -->
+     <details class="expandable-box group">
+      <summary class="expandable-summary">
+       Comprehensive Taxonomy View
+       <i class="fas fa-chevron-down expandable-icon"></i>
+      </summary>
       
-      <div class="p-5">
-       <div class="overflow-x-auto">
-        <table id="masterTaxonomyTable" class="custom-table w-full">
-         <thead>
-          <tr>
-           <th style="width: 15%;">ACE Domain</th>
-           <th style="width: 15%;">Indicator Code</th>
-           <th style="width: 55%;">Indicator Name</th>
-           <th style="width: 15%;">No. Codes</th>
-          </tr>
-         </thead>
-         <tbody>
-          
-          <!-- CM ROWS -->
-          <tr class="bg-rose-50/30 font-semibold"><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td>CM00</td><td>Child maltreatment (CM)</td><td>-</td></tr>
-          <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td>CM1</td><td>Child protection/safeguarding</td><td>50</td></tr>
-          <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td>CM2</td><td>CM NOS, incl. physical or sexual abuse (merged)</td><td>154</td></tr>
-          <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td>CM3</td><td>Neglect (incl. NAS/FASD) and emotional/psychological abuse</td><td>76</td></tr>
-          <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td>CM4</td><td>Social service involved (incl. parental imprisonment/criminal activity)</td><td>80</td></tr>
-          <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td>CM5</td><td>Child in care</td><td>107</td></tr>
-          <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td>CM6</td><td>Suspected CM NOS (incl. neglect and social service involvements)</td><td>244</td></tr>
-          <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td>CM7</td><td>Child assaulted NOS (incl. physical/sexual abuse ≤10, rib fractures ≤3†)</td><td>545</td></tr>
+      <div class="expandable-content p-0">
+       <div class="p-4">
+        <div class="overflow-x-auto">
+         <table id="masterTaxonomyTable" class="custom-table-compact w-full">
+          <thead>
+           <tr>
+            <th style="width: 15%;">ACE Domain</th>
+            <th style="width: 15%;">Indicator Code</th>
+            <th style="width: 70%;">Indicator Name</th>
+           </tr>
+          </thead>
+          <tbody>
+           
+           <!-- CM ROWS -->
+           <tr class="bg-rose-50/40"><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td class="font-mono font-semibold">CM00</td><td class="font-semibold text-slate-800">Child maltreatment (CM)</td></tr>
+           <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td class="font-mono">CM1</td><td class="font-medium">Child protection/safeguarding</td></tr>
+           <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td class="font-mono">CM2</td><td class="font-medium">CM NOS, incl. physical or sexual abuse (merged)</td></tr>
+           <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td class="font-mono">CM3</td><td class="font-medium">Neglect (incl. NAS/FASD) and emotional/psychological abuse</td></tr>
+           <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td class="font-mono">CM4</td><td class="font-medium">Social service involved (incl. parental imprisonment/criminal activity)</td></tr>
+           <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td class="font-mono">CM5</td><td class="font-medium">Child in care</td></tr>
+           <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td class="font-mono">CM6</td><td class="font-medium">Suspected CM NOS (incl. neglect and social service involvements)</td></tr>
+           <tr><td data-sort="1"><span class="domain-badge bg-rose-100 text-rose-800">CM</span></td><td class="font-mono">CM7</td><td class="font-medium">Child assaulted NOS (incl. physical/sexual abuse ≤10, rib fractures ≤3†)</td></tr>
 
-          <!-- IPV ROWS -->
-          <tr class="bg-amber-50/30 font-semibold"><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td>IPV00</td><td>Intimate partner violence (IPV)</td><td>-</td></tr>
-          <tr><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td>IPV1</td><td>IPV, NOS (incl. physical/sexual abuse)</td><td>67</td></tr>
-          <tr><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td>IPV2</td><td>Mother assaulted + child protection recording or pregnant incident†</td><td>554</td></tr>
-          <tr><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td>IPV3</td><td>Suspected IPV NOS</td><td>33</td></tr>
-          <tr><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td>IPV4</td><td>Suspected IPV, physical or sexual abuse</td><td>45</td></tr>
-          <tr><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td>IPV5</td><td>Mother assaulted NOS (hospital admission only)</td><td>119</td></tr>
-          <tr><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td>IPV6</td><td>Mother assaulted + high-risk presentations (algorithm)†</td><td>236</td></tr>
+           <!-- IPV ROWS -->
+           <tr class="bg-amber-50/40"><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td class="font-mono font-semibold">IPV00</td><td class="font-semibold text-slate-800">Intimate partner violence (IPV)</td></tr>
+           <tr><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td class="font-mono">IPV1</td><td class="font-medium">IPV, NOS (incl. physical/sexual abuse)</td></tr>
+           <tr><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td class="font-mono">IPV2</td><td class="font-medium">Mother assaulted + child protection recording or pregnant incident†</td></tr>
+           <tr><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td class="font-mono">IPV3</td><td class="font-medium">Suspected IPV NOS</td></tr>
+           <tr><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td class="font-mono">IPV4</td><td class="font-medium">Suspected IPV, physical or sexual abuse</td></tr>
+           <tr><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td class="font-mono">IPV5</td><td class="font-medium">Mother assaulted NOS (hospital admission only)</td></tr>
+           <tr><td data-sort="2"><span class="domain-badge bg-amber-100 text-amber-800">IPV</span></td><td class="font-mono">IPV6</td><td class="font-medium">Mother assaulted + high-risk presentations (algorithm)†</td></tr>
 
-          <!-- HRP-CM ROWS -->
-          <tr class="bg-purple-50/30 font-semibold"><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td>HRPCM00</td><td>High-risk presentations of CM (HRP-CM)</td><td>-</td></tr>
-          <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td>HRPCM1</td><td>Bruising & contusions ≤3†</td><td>114</td></tr>
-          <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td>HRPCM2</td><td>Superficial injuries of head, neck or multiple body parts ≤3†</td><td>37</td></tr>
-          <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td>HRPCM3</td><td>Thermal injuries - head, face or neck ≤3†</td><td>161</td></tr>
-          <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td>HRPCM4</td><td>Thermal injuries - trunk, back or trachea ≤3†</td><td>53</td></tr>
-          <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td>HRPCM5</td><td>Skull fractures or intracranial crush injury ≤3†</td><td>16</td></tr>
-          <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td>HRPCM6</td><td>Child harm by undetermined intent - rare injuries & life-threatening events (retinal haemorrhages, drownings, SUDI, firearm etc.) ≤10†</td><td>239</td></tr>
-          <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td>HRPCM7</td><td>Child harm by undetermined intent - exposure to unspecified factor≤10†</td><td>4</td></tr>
-          <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td>HRPCM8</td><td>Failure to thrive (excessive thirst, suspected malnutrition) ≤10†</td><td>48</td></tr>
-          <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td>HRPCM9</td><td>Non-attendance of child appointment (≥3 appts. within 2-years) ≤10†</td><td>16</td></tr>
+           <!-- HRP-CM ROWS -->
+           <tr class="bg-purple-50/40"><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td class="font-mono font-semibold">HRPCM00</td><td class="font-semibold text-slate-800">High-risk presentations of CM (HRP-CM)</td></tr>
+           <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td class="font-mono">HRPCM1</td><td class="font-medium">Bruising & contusions ≤3†</td></tr>
+           <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td class="font-mono">HRPCM2</td><td class="font-medium">Superficial injuries of head, neck or multiple body parts ≤3†</td></tr>
+           <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td class="font-mono">HRPCM3</td><td class="font-medium">Thermal injuries - head, face or neck ≤3†</td></tr>
+           <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td class="font-mono">HRPCM4</td><td class="font-medium">Thermal injuries - trunk, back or trachea ≤3†</td></tr>
+           <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td class="font-mono">HRPCM5</td><td class="font-medium">Skull fractures or intracranial crush injury ≤3†</td></tr>
+           <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td class="font-mono">HRPCM6</td><td class="font-medium">Child harm by undetermined intent - rare injuries & life-threatening events (retinal haemorrhages, drownings, SUDI, firearm etc.) ≤10†</td></tr>
+           <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td class="font-mono">HRPCM7</td><td class="font-medium">Child harm by undetermined intent - exposure to unspecified factor≤10†</td></tr>
+           <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td class="font-mono">HRPCM8</td><td class="font-medium">Failure to thrive (excessive thirst, suspected malnutrition) ≤10†</td></tr>
+           <tr><td data-sort="3"><span class="domain-badge bg-purple-100 text-purple-800">HRP-CM</span></td><td class="font-mono">HRPCM9</td><td class="font-medium">Non-attendance of child appointment (≥3 appts. within 2-years) ≤10†</td></tr>
 
-          <!-- SM ROWS -->
-          <tr class="bg-emerald-50/30 font-semibold"><td data-sort="4"><span class="domain-badge bg-emerald-100 text-emerald-800">SM</span></td><td>SM00</td><td>Parental substance misuse (SM)</td><td>-</td></tr>
-          <tr><td data-sort="4"><span class="domain-badge bg-emerald-100 text-emerald-800">SM</span></td><td>SM1</td><td>Drug misuse, severe (dependence levels)</td><td>564</td></tr>
-          <tr><td data-sort="4"><span class="domain-badge bg-emerald-100 text-emerald-800">SM</span></td><td>SM2</td><td>Drug misuse, moderate (all other)</td><td>213</td></tr>
-          <tr><td data-sort="4"><span class="domain-badge bg-emerald-100 text-emerald-800">SM</span></td><td>SM3</td><td>Drug prescription for opioid dependence, multipurpose usage</td><td>21</td></tr>
-          <tr><td data-sort="4"><span class="domain-badge bg-emerald-100 text-emerald-800">SM</span></td><td>SM4</td><td>Family substance misuse (i.e. unspecified family member)</td><td>19</td></tr>
-          <tr><td data-sort="4"><span class="domain-badge bg-emerald-100 text-emerald-800">SM</span></td><td>SM5</td><td>Alcohol misuse, severe (incl. self-report measures/≥35 alcohol units per week103)†</td><td>273</td></tr>
+           <!-- SM ROWS -->
+           <tr class="bg-emerald-50/40"><td data-sort="4"><span class="domain-badge bg-emerald-100 text-emerald-800">SM</span></td><td class="font-mono font-semibold">SM00</td><td class="font-semibold text-slate-800">Parental substance misuse (SM)</td></tr>
+           <tr><td data-sort="4"><span class="domain-badge bg-emerald-100 text-emerald-800">SM</span></td><td class="font-mono">SM1</td><td class="font-medium">Drug misuse, severe (dependence levels)</td></tr>
+           <tr><td data-sort="4"><span class="domain-badge bg-emerald-100 text-emerald-800">SM</span></td><td class="font-mono">SM2</td><td class="font-medium">Drug misuse, moderate (all other)</td></tr>
+           <tr><td data-sort="4"><span class="domain-badge bg-emerald-100 text-emerald-800">SM</span></td><td class="font-mono">SM3</td><td class="font-medium">Drug prescription for opioid dependence, multipurpose usage</td></tr>
+           <tr><td data-sort="4"><span class="domain-badge bg-emerald-100 text-emerald-800">SM</span></td><td class="font-mono">SM4</td><td class="font-medium">Family substance misuse (i.e. unspecified family member)</td></tr>
+           <tr><td data-sort="4"><span class="domain-badge bg-emerald-100 text-emerald-800">SM</span></td><td class="font-mono">SM5</td><td class="font-medium">Alcohol misuse, severe (incl. self-report measures/≥35 alcohol units per week103)†</td></tr>
 
-          <!-- AFE ROWS -->
-          <tr class="bg-blue-50/30 font-semibold"><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE00</td><td>Adverse family environments (AFE)</td><td>-</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE1</td><td>High-risk antenatal presentation, social-risk specific</td><td>2</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE2</td><td>High-risk antenatal presentation, psychosocial NOS</td><td>38</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE3</td><td>Unwanted/concealed pregnancy incl. attempted abortion of the current child</td><td>46</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE4</td><td>Psychosocial health problem with lower-level intervention</td><td>20</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE5</td><td>Health visitor increasing concern</td><td>11</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE6</td><td>Family disruptions and parental conflicts NOS</td><td>108</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE7</td><td>Parental separations</td><td>27</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE8</td><td>Parent with legal problems</td><td>32</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE9</td><td>Family is cause for concern (incl. maternal FGM, current rec. historic event)</td><td>182</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE10</td><td>Problems related to negative childhood events</td><td>26</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE11</td><td>Mother assaulted NOS (GP record only)</td><td>1</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE12</td><td>Housing problems, effects of deprivation and refugee (excl. homelessness)</td><td>57</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE13</td><td>Homelessness (child/mother)</td><td>22</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE14</td><td>Vulnerable family NOS (incl. CPA)</td><td>31</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE15</td><td>Family/parental support referral</td><td>12</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE16</td><td>Problems related to psychosocial circumstances</td><td>24</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE17</td><td>Learning or intellectual disability</td><td>276</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE18</td><td>Increased concerns of parental capacity</td><td>10</td></tr>
-          <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td>AFE19</td><td>Parental problems with daily living/limited capacity to work (incl. financial concerns)</td><td>41</td></tr>
+           <!-- AFE ROWS -->
+           <tr class="bg-blue-50/40"><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono font-semibold">AFE00</td><td class="font-semibold text-slate-800">Adverse family environments (AFE)</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE1</td><td class="font-medium">High-risk antenatal presentation, social-risk specific</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE2</td><td class="font-medium">High-risk antenatal presentation, psychosocial NOS</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE3</td><td class="font-medium">Unwanted/concealed pregnancy incl. attempted abortion of the current child</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE4</td><td class="font-medium">Psychosocial health problem with lower-level intervention</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE5</td><td class="font-medium">Health visitor increasing concern</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE6</td><td class="font-medium">Family disruptions and parental conflicts NOS</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE7</td><td class="font-medium">Parental separations</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE8</td><td class="font-medium">Parent with legal problems</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE9</td><td class="font-medium">Family is cause for concern (incl. maternal FGM, current rec. historic event)</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE10</td><td class="font-medium">Problems related to negative childhood events</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE11</td><td class="font-medium">Mother assaulted NOS (GP record only)</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE12</td><td class="font-medium">Housing problems, effects of deprivation and refugee (excl. homelessness)</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE13</td><td class="font-medium">Homelessness (child/mother)</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE14</td><td class="font-medium">Vulnerable family NOS (incl. CPA)</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE15</td><td class="font-medium">Family/parental support referral</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE16</td><td class="font-medium">Problems related to psychosocial circumstances</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE17</td><td class="font-medium">Learning or intellectual disability</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE18</td><td class="font-medium">Increased concerns of parental capacity</td></tr>
+           <tr><td data-sort="5"><span class="domain-badge bg-blue-100 text-blue-800">AFE</span></td><td class="font-mono">AFE19</td><td class="font-medium">Parental problems with daily living/limited capacity to work (incl. financial concerns)</td></tr>
 
-          <!-- MHPs ROWS -->
-          <tr class="bg-teal-50/30 font-semibold"><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP00</td><td>Parental mental health problems (MHPs)</td><td>-</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP</td><td>Common mental health problems</td><td>-</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP1</td><td>Depression incl. antidepressants†</td><td>818</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP2</td><td>Self-harm or suicide attempts</td><td>744</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP3</td><td>Anxiety disorder NOS incl. anxiolytics†</td><td>549</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP4</td><td>Panic disorder (incl. agoraphobia, health anxiety)</td><td>24</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP5</td><td>Obsessive-compulsive disorders</td><td>27</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP6</td><td>PTSD incl. acute stress disorder</td><td>72</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP7</td><td>Sleep-wake disorders</td><td>33</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP8</td><td>Mental health problems NOS</td><td>17</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP9</td><td>Referred/seen by a mental health professional (≥tier 3 profession)</td><td>180</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP10</td><td>Puerperal mental health problem NOS</td><td>5</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP11</td><td>Anorexia nervosa</td><td>13</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP12</td><td>Eating disorders NOS (incl. Bulimia)</td><td>49</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP13</td><td>Psychosis incl. mental health sections NOS</td><td>339</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP14</td><td>Antipsychotics (1st-2nd gen & NOS)</td><td>324</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP15</td><td>Bipolar disorders</td><td>66</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP16</td><td>Personality disorders (e.g. BPD)</td><td>177</td></tr>
-          <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td>MHP17</td><td>Neurodevelopmental conditions and conduct disorders</td><td>245</td></tr>
+           <!-- MHPs ROWS -->
+           <tr class="bg-teal-50/40"><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono font-semibold">MHP00</td><td class="font-semibold text-slate-800">Parental mental health problems (MHPs)</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP</td><td class="font-medium">Common mental health problems</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP1</td><td class="font-medium">Depression incl. antidepressants†</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP2</td><td class="font-medium">Self-harm or suicide attempts</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP3</td><td class="font-medium">Anxiety disorder NOS incl. anxiolytics†</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP4</td><td class="font-medium">Panic disorder (incl. agoraphobia, health anxiety)</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP5</td><td class="font-medium">Obsessive-compulsive disorders</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP6</td><td class="font-medium">PTSD incl. acute stress disorder</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP7</td><td class="font-medium">Sleep-wake disorders</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP8</td><td class="font-medium">Mental health problems NOS</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP9</td><td class="font-medium">Referred/seen by a mental health professional (≥tier 3 profession)</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP10</td><td class="font-medium">Puerperal mental health problem NOS</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP11</td><td class="font-medium">Anorexia nervosa</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP12</td><td class="font-medium">Eating disorders NOS (incl. Bulimia)</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP13</td><td class="font-medium">Psychosis incl. mental health sections NOS</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP14</td><td class="font-medium">Antipsychotics (1st-2nd gen & NOS)</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP15</td><td class="font-medium">Bipolar disorders</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP16</td><td class="font-medium">Personality disorders (e.g. BPD)</td></tr>
+           <tr><td data-sort="6"><span class="domain-badge bg-teal-100 text-teal-800">MHPs</span></td><td class="font-mono">MHP17</td><td class="font-medium">Neurodevelopmental conditions and conduct disorders</td></tr>
 
-         </tbody>
-        </table>
+          </tbody>
+         </table>
+        </div>
        </div>
       </div>
-     </div>
+     </details>
     </section>
 
     <!-- 2. NOTICES -->
