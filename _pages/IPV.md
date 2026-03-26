@@ -297,7 +297,6 @@ author_profile: false
        </div>
       </div>
       
-      <!-- UPDATED SEX ROW -->
       <div class="grid grid-cols-1 md:grid-cols-4 border-b border-slate-100">
        <div class="bg-slate-50 py-2.5 px-4 text-slate-500 font-semibold md:border-r border-slate-100 flex items-center">Sex</div>
        <div class="py-2.5 px-4 md:col-span-3 flex flex-wrap items-center gap-2">
@@ -306,7 +305,6 @@ author_profile: false
        </div>
       </div>
 
-      <!-- UPDATED AGE RANGE ROW -->
       <div class="grid grid-cols-1 md:grid-cols-4 border-b border-slate-100">
        <div class="bg-slate-50 py-2.5 px-4 text-slate-500 font-semibold md:border-r border-slate-100 flex items-center">Age Range</div>
        <div class="py-2.5 px-4 md:col-span-3 flex flex-wrap items-center gap-2">
@@ -315,7 +313,6 @@ author_profile: false
        </div>
       </div>
 
-      <!-- UPDATED INDIVIDUAL ROW -->
       <div class="grid grid-cols-1 md:grid-cols-4 border-b border-slate-100">
        <div class="bg-slate-50 py-2.5 px-4 text-slate-500 font-semibold md:border-r border-slate-100 flex items-center">Individual</div>
        <div class="py-2.5 px-4 md:col-span-3 flex flex-wrap items-center gap-2">
@@ -325,6 +322,7 @@ author_profile: false
        </div>
       </div>
 
+      <!-- UPDATED CODING SYSTEM ROW -->
       <div class="grid grid-cols-1 md:grid-cols-4 border-b border-slate-100">
        <div class="bg-slate-50 py-2.5 px-4 text-slate-500 font-semibold md:border-r border-slate-100 flex items-center">Coding System</div>
        <div class="py-2.5 px-4 md:col-span-3 flex flex-wrap gap-2">
@@ -332,8 +330,8 @@ author_profile: false
         <span class="hdr-pill !bg-indigo-50 !text-indigo-700 !border-indigo-200">SNOMED CT</span>
         <span class="hdr-pill !bg-indigo-50 !text-indigo-700 !border-indigo-200">ICD-10</span>
         <span class="hdr-pill !bg-indigo-50 !text-indigo-700 !border-indigo-200">ICD-9</span>
-        <span class="hdr-pill !bg-indigo-50 !text-indigo-700 !border-indigo-200">HES-APC</span>
-        <span class="hdr-pill !bg-indigo-50 !text-indigo-700 !border-indigo-200">HES-AE</span>
+        <span class="hdr-pill !bg-indigo-50 !text-indigo-700 !border-indigo-200">HES-APC speciality field</span>
+        <span class="hdr-pill !bg-indigo-50 !text-indigo-700 !border-indigo-200">HES-AE speciality field</span>
        </div>
       </div>
 
@@ -375,7 +373,6 @@ author_profile: false
       <div class="flex items-center"><span class="section-number">3</span> Clinical Codelist</div>
      </h2>
      
-     <!-- UPDATED BUTTONS (Matched Styling) -->
      <div class="flex flex-col sm:flex-row gap-3 mb-6">
       <!-- File 1 -->
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/IPV_no_algo_2025ACEsinEHRs.txt" target="_blank" class="inline-flex items-center px-4 py-2 bg-indigo-50 border border-indigo-200 rounded-lg text-[13px] font-semibold text-indigo-800 hover:bg-indigo-100 shadow-sm transition-all hover:-translate-y-0.5">
@@ -480,13 +477,13 @@ author_profile: false
         </div>
         <pre class="code-pre"><code><span class="syntax-comment"># Logic flag for IPV high-risk presentation algorithm</span>
 ipv_algo_high_risk &lt;- merged_data %&gt;%
-  <span class="syntax-function">filter</span>(indicator == <span class="syntax-string">"Assault NOS"</span>) %&gt;%
-  <span class="syntax-function">mutate</span>(
-    is_ipv = <span class="syntax-function">ifelse</span>(
-      (days_to_high_risk &gt;= -<span class="syntax-keyword">30</span> & days_to_high_risk &lt;= <span class="syntax-keyword">100</span>), 
-      <span class="syntax-keyword">TRUE</span>, <span class="syntax-keyword">FALSE</span>
-    )
-  )</code></pre>
+ <span class="syntax-function">filter</span>(indicator == <span class="syntax-string">"Assault NOS"</span>) %&gt;%
+ <span class="syntax-function">mutate</span>(
+  is_ipv = <span class="syntax-function">ifelse</span>(
+   (days_to_high_risk &gt;= -<span class="syntax-keyword">30</span> & days_to_high_risk &lt;= <span class="syntax-keyword">100</span>), 
+   <span class="syntax-keyword">TRUE</span>, <span class="syntax-keyword">FALSE</span>
+  )
+ )</code></pre>
        </div>
       </div>
      </details>
@@ -511,13 +508,13 @@ ipv_algo_high_risk &lt;- merged_data %&gt;%
         </div>
         <pre class="code-pre"><code><span class="syntax-comment"># Logic flag for IPV 45-day safeguarding/pregnancy algorithm</span>
 ipv_algo_45_days &lt;- merged_data %&gt;%
-  <span class="syntax-function">filter</span>(indicator == <span class="syntax-string">"Assault NOS"</span>) %&gt;%
-  <span class="syntax-function">mutate</span>(
-    is_ipv = <span class="syntax-function">ifelse</span>(
-      (safeguarding_or_preg == <span class="syntax-keyword">TRUE</span> & <span class="syntax-function">abs</span>(days_between) &lt;= <span class="syntax-keyword">45</span>), 
-      <span class="syntax-keyword">TRUE</span>, <span class="syntax-keyword">FALSE</span>
-    )
-  )</code></pre>
+ <span class="syntax-function">filter</span>(indicator == <span class="syntax-string">"Assault NOS"</span>) %&gt;%
+ <span class="syntax-function">mutate</span>(
+  is_ipv = <span class="syntax-function">ifelse</span>(
+   (safeguarding_or_preg == <span class="syntax-keyword">TRUE</span> & <span class="syntax-function">abs</span>(days_between) &lt;= <span class="syntax-keyword">45</span>), 
+   <span class="syntax-keyword">TRUE</span>, <span class="syntax-keyword">FALSE</span>
+  )
+ )</code></pre>
        </div>
       </div>
      </details>
@@ -585,3 +582,19 @@ ipv_algo_45_days &lt;- merged_data %&gt;%
  </section>
 
 </div>
+
+<!-- DataTables Initialization Script -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+ $(document).ready(function() {
+  $('#codeSearchTable').DataTable({
+   "pageLength": 10,
+   "lengthMenu":[5, 10, 25, 50],
+   "dom": '<"flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-3"lf>rt<"flex flex-col sm:flex-row justify-between items-center mt-4 gap-3"ip>',
+   "language": {
+    "search": "",
+    "searchPlaceholder": "Search codes or keywords...",
+    "lengthMenu": "_MENU_ entries per page"
+   }
+  });
