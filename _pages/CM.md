@@ -63,7 +63,7 @@ author_profile: false
  }
   
  /* Reset link styles BUT ignore custom components */
- .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.pub-link):not(.text-blue-600):not(.text-rose-600):not(.data-source-link) {
+ .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.pub-link):not(.text-blue-600):not(.text-rose-600):not(.data-source-link):not(.domain-nav-link) {
   border-bottom: none !important; text-decoration: none !important; box-shadow: none !important;
  }
 
@@ -77,6 +77,11 @@ author_profile: false
   color: rgb(241, 245, 249) !important; margin-bottom: 0 !important;
   max-width: 820px !important;
  }
+
+ /* === DOMAIN TIMELINE NAVIGATION === */
+ .hide-scrollbar::-webkit-scrollbar { display: none; }
+ .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+ .domain-nav-link { text-decoration: none !important; border: none !important; }
 
  /* === HDR UK STYLE SIDEBAR & SECTIONS === */
  .nav-dot {
@@ -198,6 +203,49 @@ author_profile: false
    </p>
   </div>
  </header>
+
+ <!-- DOMAIN TIMELINE NAVIGATION -->
+ <div class="bg-slate-50 border-b border-slate-200 shadow-sm relative z-20">
+  <div class="max-w-6xl mx-auto px-6 overflow-hidden">
+   <div class="overflow-x-auto hide-scrollbar py-4">
+    <div class="relative flex items-center gap-3 w-max min-w-full">
+     
+     <!-- The Connecting Line -->
+     <div class="absolute top-1/2 left-4 right-4 h-[2px] bg-slate-200 -translate-y-1/2 z-0"></div>
+     
+     <!-- Domain Nodes -->
+     <a href="https://acesinehrs.com/indicators/" class="domain-nav-link relative z-10 shrink-0 inline-flex items-center justify-center bg-white border border-slate-300 text-slate-600 hover:text-slate-900 hover:border-slate-400 text-[13px] font-semibold px-4 py-2 rounded-full transition-all duration-200">
+      All indicators
+     </a>
+     
+     <a href="https://acesinehrs.com/CM/" class="domain-nav-link relative z-10 shrink-0 inline-flex items-center justify-center bg-slate-800 border-2 border-slate-800 text-white text-[13px] font-semibold px-4 py-2 rounded-full shadow-md">
+      Child maltreatment
+     </a>
+
+     <a href="https://acesinehrs.com/IPV/" class="domain-nav-link relative z-10 shrink-0 inline-flex items-center justify-center bg-white border border-slate-300 text-slate-600 hover:text-slate-900 hover:border-slate-400 text-[13px] font-semibold px-4 py-2 rounded-full transition-all duration-200">
+      Intimate partner violence
+     </a>
+
+     <a href="https://acesinehrs.com/HRPCM/" class="domain-nav-link relative z-10 shrink-0 inline-flex items-center justify-center bg-white border border-slate-300 text-slate-600 hover:text-slate-900 hover:border-slate-400 text-[13px] font-semibold px-4 py-2 rounded-full transition-all duration-200">
+      High-risk presentation of child maltreatment
+     </a>
+
+     <a href="https://acesinehrs.com/MHPs/" class="domain-nav-link relative z-10 shrink-0 inline-flex items-center justify-center bg-white border border-slate-300 text-slate-600 hover:text-slate-900 hover:border-slate-400 text-[13px] font-semibold px-4 py-2 rounded-full transition-all duration-200">
+      Parental mental health problems
+     </a>
+
+     <a href="https://acesinehrs.com/SM/" class="domain-nav-link relative z-10 shrink-0 inline-flex items-center justify-center bg-white border border-slate-300 text-slate-600 hover:text-slate-900 hover:border-slate-400 text-[13px] font-semibold px-4 py-2 rounded-full transition-all duration-200">
+      Parental substance misuse
+     </a>
+
+     <a href="https://acesinehrs.com/AFE/" class="domain-nav-link relative z-10 shrink-0 inline-flex items-center justify-center bg-white border border-slate-300 text-slate-600 hover:text-slate-900 hover:border-slate-400 text-[13px] font-semibold px-4 py-2 rounded-full transition-all duration-200">
+      Adverse family environments
+     </a>
+
+    </div>
+   </div>
+  </div>
+ </div>
 
  <main class="flex-grow max-w-6xl mx-auto px-6 py-12 w-full">
   
