@@ -207,14 +207,14 @@ author_profile: false
      </div>
     </a>
 
-    <!-- Feature Card 3 -->
+    <!-- Feature Card 3 (UPDATED TITLE) -->
     <a href="/research-aces-ipv/" class="research-card group">
      <div class="img-wrapper">
       <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/Syed%202023%20Family%20adversity%20and%20IPV%20and%20lancet%20public%20health.png" alt="Clinical characteristics">
      </div>
      <div class="content-wrapper">
-      <h3 class="card-title">Clinical characteristics of families affected by intimate partner violence</h3>
-      <p class="card-excerpt">Intimate partner violence (IPV) is a violation against human rights that affects millions of women worldwide. One in three women experiences IPV, translating to over 800 million women globally...</p>
+      <h3 class="card-title">Family adversity and health characteristics associated with intimate partner violence in children and parents</h3>
+      <p class="card-excerpt">Intimate partner violence (IPV) is a significant public health issue that affects millions of women worldwide. One in three women experiences IPV, translating to over 800 million women globally...</p>
       <span class="btn-card">Learn more</span>
      </div>
     </a>
@@ -227,6 +227,18 @@ author_profile: false
      <div class="content-wrapper">
       <h3 class="card-title">State of the art review: indicators of child maltreatment and intimate partner violence</h3>
       <p class="card-excerpt">Intimate partner violence (IPV) and child maltreatment (CM) are forms of family violence that often go unnoticed by services, despite recommendations to improve monitoring efforts by the World Health Organization (WHO)..</p>
+      <span class="btn-card">Learn more</span>
+     </div>
+    </a>
+
+    <!-- Feature Card 5 (NEWLY ADDED) -->
+    <a href="/research-acesinehrs-validation/" class="research-card group">
+     <div class="img-wrapper">
+      <img src="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/master/images/ACEsinEHRs%20getting%20started%20page.jpg" alt="Validation Study">
+     </div>
+     <div class="content-wrapper">
+      <h3 class="card-title">Identifying adverse childhood experiences with electronic health records of linked mothers and children in England</h3>
+      <p class="card-excerpt">A multistage development and validation study establishing clinically relevant ACE indicators in routine healthcare data. A total of 63 distinct ACE indicators were developed and validated for use in routine EHRs...</p>
       <span class="btn-card">Learn more</span>
      </div>
     </a>
