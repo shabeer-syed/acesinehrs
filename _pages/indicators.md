@@ -4,8 +4,7 @@ title: "All ACE domains & indicators"
 permalink: /indicators/
 author_profile: false
 ---
-<!-- 1. Load Tailwind
- Safely -->
+<!-- 1. Load Tailwind Safely -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
  tailwind.config = {
@@ -129,7 +128,11 @@ author_profile: false
  /* === CUSTOM COMPACT TABLES === */
  .custom-table-compact { width: 100% !important; border-collapse: collapse !important; text-align: left !important; }
  .custom-table-compact th { background-color: #f8fafc !important; padding: 0.5rem 1rem !important; font-size: 12px !important; font-weight: 700 !important; color: #475569 !important; border-bottom: 2px solid #e2e8f0 !important; white-space: nowrap !important; }
- .custom-table-compact td { padding: 0.4rem 1rem !important; font-size: 13px !important; color: #334155 !important; border-bottom: 1px solid #f1f5f9 !important; }
+ .custom-table-compact td { padding: 0.4rem 1rem !important; font-size: 13px !important; color: #334155 !important; border-bottom: 1px solid #f1f5f9 !important; transition: background-color 0.2s ease !important; }
+ 
+ /* ROW HOVER EFFECT */
+ .custom-table-compact tbody tr:hover td { background-color: #f1f5f9 !important; }
+ 
  .domain-badge { display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 0.15rem 0.4rem !important; border-radius: 0.25rem !important; font-size: 11px !important; font-weight: 700 !important; }
 
  /* === DATATABLES OVERRIDES FOR TAILWIND/HDR UK LOOK === */
@@ -266,7 +269,7 @@ author_profile: false
      <!-- EXPANDABLE COMPACT TABLE BOX -->
      <details class="expandable-box group">
       <summary class="expandable-summary">
-       Comprehensive Taxonomy View
+       View list
        <i class="fas fa-chevron-down expandable-icon"></i>
       </summary>
       
@@ -379,38 +382,34 @@ author_profile: false
       <span class="section-number">2</span> Important Notices
      </h2>
 
-     <div class="space-y-4">
-      <!-- Info Notice -->
-      <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex gap-4 shadow-sm">
-       <div class="w-10 h-10 rounded-full bg-white flex shrink-0 items-center justify-center text-blue-600 shadow-sm">
-        <i class="fas fa-users text-lg"></i>
-       </div>
+     <div class="space-y-3">
+      
+      <!-- Info Notice (Compact Horizontal) -->
+      <div class="bg-blue-50 border border-blue-100 rounded-lg p-3 flex gap-3 shadow-sm items-start">
+       <div class="mt-0.5"><i class="fas fa-users text-blue-500 text-base"></i></div>
        <div>
-        <h4 class="text-blue-900 font-bold text-[15px] m-0 border-none mb-1">Think-family approach</h4>
-        <p class="text-[14px] text-blue-800 m-0 leading-relaxed">
-         Unless specified, indicators refer to information recorded in the child, mother and father.
+        <p class="text-[13.5px] text-blue-800 m-0 leading-relaxed">
+         <strong class="text-blue-900 font-semibold mr-1">Think-family approach:</strong> Unless specified, indicators refer to information recorded in the child, mother and father.
         </p>
        </div>
       </div>
 
-      <!-- Danger Notice -->
-      <div class="bg-rose-50 border border-rose-200 rounded-xl p-4 flex gap-4 shadow-sm">
-       <div class="w-10 h-10 rounded-full bg-white flex shrink-0 items-center justify-center text-rose-600 shadow-sm">
-        <i class="fas fa-exclamation-triangle text-lg"></i>
-       </div>
+      <!-- Danger Notice (Compact Horizontal) -->
+      <div class="bg-rose-50 border border-rose-100 rounded-lg p-3 flex gap-3 shadow-sm items-start">
+       <div class="mt-0.5"><i class="fas fa-exclamation-triangle text-rose-500 text-base"></i></div>
        <div>
-        <h4 class="text-rose-900 font-bold text-[15px] m-0 border-none mb-1">Implementation Rules Required</h4>
-        <p class="text-[14px] text-rose-800 m-0 leading-relaxed">
-         The indicators use <a href="https://advanced-r-solutions.rbind.io/control-flow.html" target="_blank" class="font-semibold underline hover:text-rose-900">control flow methods</a> to implement rule-based algorithms. These must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth.
+        <p class="text-[13.5px] text-rose-800 m-0 leading-relaxed">
+         <strong class="text-rose-900 font-semibold mr-1">Implementation Rules Required:</strong> The indicators use <a href="https://advanced-r-solutions.rbind.io/control-flow.html" target="_blank" class="font-semibold underline hover:text-rose-900">control flow methods</a> to implement rule-based algorithms. These must be applied to specific indicators (mainly HRP-CM) to prevent misclassification including age-restrictions, exclusions of accidental injuries, genetic predispositions (bone diseases), traumatic birth injuries or maternal-child transmissions during birth.
         </p>
        </div>
       </div>
+
      </div>
     </section>
 
     <!-- 3. ALL ACEs DOWNLOADS -->
     <section id="all-aces-downloads" class="scroll-mt-10">
-     <div class="flex justify-between items-end mb-4 border-b border-slate-200 pb-3">
+     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-4 border-b border-slate-200 pb-3 gap-2">
       <h2 class="text-2xl font-bold text-slate-900 m-0 border-none flex items-center">
        <span class="section-number">3</span> All ACEs Code Lists
       </h2>
