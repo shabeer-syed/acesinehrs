@@ -352,7 +352,7 @@ author_profile: false
   <section class="max-w-5xl mx-auto px-6 pb-16">
    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
      
-    <a href="https://shabeer-syed.github.io/acesinehrs/about/" class="grid-card group">
+    <a href="https://acesinehrs.com/about/" class="grid-card group">
      <div class="img-wrapper">
       <img src="images/Introduction aces new no text.png" alt="About" style="margin: 0 !important;">
      </div>
@@ -363,7 +363,7 @@ author_profile: false
      </div>
     </a>
 
-    <a href="https://shabeer-syed.github.io/acesinehrs/ACE-domains/" class="grid-card group">
+    <a href="https://acesinehrs.com/ACE-domains/" class="grid-card group">
      <div class="img-wrapper">
       <img src="images/view domains indicators no text.png" alt="Domains" style="margin: 0 !important;">
      </div>
@@ -374,7 +374,7 @@ author_profile: false
      </div>
     </a>
 
-    <a href="https://shabeer-syed.github.io/acesinehrs/codelistbrowse/" class="grid-card group">
+    <a href="https://acesinehrs.com/codelistbrowse/" class="grid-card group">
      <div class="img-wrapper">
       <img src="images/code lists browse no text.png" alt="Code Lists" style="margin: 0 !important;">
      </div>
