@@ -266,7 +266,7 @@ author_profile: false
      <div class="flex-1">
       <p style="font-size: 15px !important; color: #334155 !important; margin: 0 !important;">
        <strong style="color: #0f172a !important; font-weight: 600 !important;">Mandatory Citation:</strong> Users must cite the publication 
-       <span style="color: #dc2626 !important; font-weight: 500 !important; text-decoration: underline !important; text-decoration-color: #fecaca !important; text-underline-offset: 4px !important;">"The Lancet Public Health (2024)"</span> 
+       <span style="color: #dc2626 !important; font-weight: 500 !important; text-decoration: underline !important; text-decoration-color: #fecaca !important; text-underline-offset: 4px !important;">"The Lancet Public Health (2025)"</span> 
        when utilising this CYP Mental Health Problems code list in any research outputs.
       </p>
      </div>
