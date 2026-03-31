@@ -668,7 +668,7 @@ cyp_neurodev_validated &lt;- dataset %&gt;%
        <a href="https://doi.org/10.1016/S2468-2667(24)00301-3" target="_blank" class="pub-link">
         Family adversity and health characteristics associated with intimate partner violence in children and parents presenting to health care: a population-based birth cohort study in England.
        </a>
-       <p class="text-[14px] text-slate-500 m-0">Syed S, Gilbert R, Feder G, Howe LD, Powell C, Howarth E, Deighton J, Lacey RE. <em class="text-slate-700">The Lancet Public Health</em>. 2024.</p>
+       <p class="text-[14px] text-slate-500 m-0">Syed S, Gilbert R, Feder G, Howe LD, Powell C, Howarth E, Deighton J, Lacey RE. <em class="text-slate-700">The Lancet Public Health</em>. 2025.</p>
       </div>
 
      </div>
