@@ -8,8 +8,7 @@ author_profile: false
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
  tailwind.config = {
-  core
-Plugins: { preflight: false },
+  corePlugins: { preflight: false },
   theme: {
    extend: {
     colors: {
@@ -221,6 +220,10 @@ Plugins: { preflight: false },
       Adverse family environments
      </a>
 
+     <a href="https://acesinehrs.com/CYP-MHPs/" class="domain-nav-link relative z-10 shrink-0 inline-flex items-center justify-center bg-white border border-slate-300 text-slate-600 hover:text-slate-900 hover:border-slate-400 text-[13px] font-semibold px-4 py-2 rounded-full transition-all duration-200">
+      Outcomes: CYP Mental Health Problems
+     </a>
+
     </div>
    </div>
   </div>
@@ -253,6 +256,10 @@ Plugins: { preflight: false },
      <li class="relative pl-6 nav-item">
       <div class="nav-dot">5</div>
       <a href="#exclusions" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors border-none hover:bg-transparent">Exclusion rules</a>
+     </li>
+     <li class="relative pl-6 nav-item">
+      <div class="nav-dot">6</div>
+      <a href="#cyp-outcomes" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors border-none hover:bg-transparent">Child & adolescent outcomes</a>
      </li>
 
     </ul>
@@ -564,6 +571,35 @@ Plugins: { preflight: false },
      </div>
     </section>
 
+    <!-- 6. CHILD & ADOLESCENT OUTCOMES -->
+    <section id="cyp-outcomes" class="scroll-mt-10">
+     <h2 class="section-header">
+      <span class="section-number">6</span> Child & adolescent outcomes
+     </h2>
+     
+     <div class="mb-5">
+      <p class="text-sm text-slate-600 font-medium">
+       This section provides the clinical code list to identify mental health problems and substance misuse indicators specifically structured as outcomes in children and adolescents (up to 18 years).
+      </p>
+     </div>
+     
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/CYP_mental_health_problems_2025_ACEsinEHR.txt" target="_blank" class="download-card border-emerald-200 hover:border-emerald-400">
+       <div class="dl-icon-wrapper bg-emerald-50 text-emerald-600"><i class="fas fa-child"></i></div>
+       <div class="dl-content">
+        <span class="dl-title group-hover:text-emerald-700">CYP mental health problems</span>
+        <span class="dl-meta">Outcome codelist</span>
+       </div>
+      </a>
+     </div>
+
+     <div>
+      <a href="https://acesinehrs.com/CYP-MHPs/" class="inline-flex items-center justify-center bg-emerald-600 text-white hover:bg-emerald-700 text-[14px] font-semibold px-5 py-2.5 rounded-lg shadow-sm transition-all duration-200 border-none" style="text-decoration: none !important;">
+       <i class="fas fa-info-circle mr-2"></i> View definitions & algorithms for CYP MHPs
+      </a>
+     </div>
+    </section>
+
    </div>
   </div>
  </main>
@@ -599,6 +635,15 @@ Plugins: { preflight: false },
     "searchPlaceholder": "Search indicators or codes...",
     "lengthMenu": "_MENU_ entries per page"
    }
+  });
+
+  // Smooth scroll for internal links
+  $('a[href^="#"]').on('click', function(e) {
+   e.preventDefault();
+   var target = this.hash;
+   $('html, body').animate({
+    scrollTop: $(target).offset().top - 40
+   }, 500);
   });
  });
 </script>
