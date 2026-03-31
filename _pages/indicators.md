@@ -601,8 +601,8 @@ author_profile: false
       </div>
       <div class="flex-1 text-[13.5px] text-slate-600 m-0 leading-relaxed pr-2">
        <strong class="text-slate-800">Users must cite</strong> the publication 
-       <span class="text-rose-600 font-medium underline group-hover:text-rose-700" style="text-underline-offset: 3px; text-decoration-color: #fecaca;">"The Lancet Public Health (2024)"</span> 
-       when utilising this CYP Mental Health Problems code list in any research outputs.
+       <span class="text-rose-600 font-medium underline group-hover:text-rose-700" style="text-underline-offset: 3px; text-decoration-color: #fecaca;">"The Lancet Public Health (2025)"</span> 
+       when utilising this CYP Mental Health Problems code list in any work and research outputs.
       </div>
      </a>
 
