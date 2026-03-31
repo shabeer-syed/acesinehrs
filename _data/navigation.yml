@@ -6,7 +6,7 @@ main:
     url: https://acesinehrs.com/starterguide/
   - title: "Theory & framework"
     url: https://acesinehrs.com/theory/
-  - title: "ACE domains ▾"
+  - title: "ACE domains & Health conditions ▾"
     url: https://acesinehrs.com/indicators/
     children:
       - title: "All indicators"
@@ -23,6 +23,8 @@ main:
         url: https://acesinehrs.com/SM/
       - title: "Adverse family environments (AFE)"
         url: https://acesinehrs.com/AFE/
+      - title: "CYP mental health problems"
+        url: https://acesinehrs.com/CYP-MHPs/
   - title: "Browse codes"
     url: https://acesinehrs.com/codelistbrowse/
   - title: "Research"
