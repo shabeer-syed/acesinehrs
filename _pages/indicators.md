@@ -61,7 +61,7 @@ author_profile: false
  }
   
  /* Reset link styles BUT ignore custom components */
- .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.pub-link):not(.data-source-link):not(.domain-nav-link):not(.download-card) {
+ .tailwind-wrap a:not(.btn-secondary):not(.btn-primary):not(.pub-link):not(.data-source-link):not(.domain-nav-link):not(.download-card):not(.compact-notice) {
   border-bottom: none !important; text-decoration: none !important; box-shadow: none !important;
  }
 
@@ -583,7 +583,7 @@ author_profile: false
       </p>
      </div>
      
-     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
       <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/CYP_mental_health_problems_2025_ACEsinEHR.txt" target="_blank" class="download-card border-emerald-200 hover:border-emerald-400">
        <div class="dl-icon-wrapper bg-emerald-50 text-emerald-600"><i class="fas fa-child"></i></div>
        <div class="dl-content">
@@ -592,6 +592,19 @@ author_profile: false
        </div>
       </a>
      </div>
+
+     <!-- Compact Citation Notice -->
+     <a href="https://doi.org/10.1016/S2468-2667(24)00301-3" target="_blank" class="compact-notice flex items-center gap-4 p-4 mb-6 bg-white border border-slate-100 rounded-xl shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+      <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-rose-500"></div>
+      <div class="flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-full bg-rose-50 text-rose-500 ml-1.5">
+       <i class="fas fa-exclamation-triangle text-[15px]"></i>
+      </div>
+      <div class="flex-1 text-[13.5px] text-slate-600 m-0 leading-relaxed pr-2">
+       <strong class="text-slate-800">Users must cite</strong> the publication 
+       <span class="text-rose-600 font-medium underline group-hover:text-rose-700" style="text-underline-offset: 3px; text-decoration-color: #fecaca;">"The Lancet Public Health (2024)"</span> 
+       when utilising this CYP Mental Health Problems code list in any research outputs.
+      </div>
+     </a>
 
      <div>
       <a href="https://acesinehrs.com/CYP-MHPs/" class="inline-flex items-center justify-center bg-emerald-600 text-white hover:bg-emerald-700 text-[14px] font-semibold px-5 py-2.5 rounded-lg shadow-sm transition-all duration-200 border-none" style="text-decoration: none !important;">
