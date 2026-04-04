@@ -113,7 +113,7 @@ author_profile: false
 
         <!-- Download Button (Forced White Text) -->
         <div class="flex-shrink-0">
-          <a href="https://acesinehrs.com/starterguide/#downloads" style="color: #ffffff !important;" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-[15px] font-semibold rounded-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+          <a href="https://acesinehrs.com/indicators/" style="color: #ffffff !important;" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-[15px] font-semibold rounded-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
             <i class="fas fa-file-download mr-2" style="color: #ffffff !important;"></i> Download code lists
           </a>
         </div>
