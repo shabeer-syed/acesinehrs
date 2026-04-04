@@ -1,6 +1,6 @@
 ---
 layout: splash
-permalink: /CYP-MHPs/
+permalink: /codelistbrowse-CYP-MHP/
 title: "CYP mental health problems"
 author_profile: false
 ---
