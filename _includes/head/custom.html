@@ -7,10 +7,11 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
+
 <!-- === BULLETPROOF CUSTOM DROPDOWN FIX === -->
 <style>
-  /* Global Dropdown Container */
-  #global-ace-dropdown {
+  /* Global Dropdown Container (Applies to both dropdowns) */
+  .bulletproof-dropdown {
     position: absolute;
     transform: translateX(-50%) translateY(10px);
     width: 280px;
@@ -28,14 +29,14 @@
   }
   
   /* Active Class added by JavaScript */
-  #global-ace-dropdown.show-dropdown {
+  .bulletproof-dropdown.show-dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
   }
 
   /* Style the links inside */
-  #global-ace-dropdown a {
+  .bulletproof-dropdown a {
     padding: 0.75rem 1.25rem !important;
     font-size: 14px !important;
     color: #475569 !important;
@@ -49,23 +50,25 @@
     box-shadow: none !important;
   }
   
-  #global-ace-dropdown a:hover {
+  .bulletproof-dropdown a:hover {
     background-color: #f8fafc !important;
     color: #2563eb !important;
     padding-left: 1.5rem !important; /* Premium slide effect */
   }
 
-  #global-ace-dropdown a:last-child {
+  .bulletproof-dropdown a:last-child {
     border-bottom: none !important;
   }
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // 1. Create the floating dropdown element once and append it to the BODY (escapes the header)
-    const dropdown = document.createElement('div');
-    dropdown.id = 'global-ace-dropdown';
-    dropdown.innerHTML = `
+    
+    // 1. Create the ACE Domains Dropdown
+    const dropdownAce = document.createElement('div');
+    dropdownAce.id = 'global-ace-dropdown';
+    dropdownAce.className = 'bulletproof-dropdown';
+    dropdownAce.innerHTML = `
       <a href="https://acesinehrs.com/indicators/">All indicators</a>
       <a href="https://acesinehrs.com/CM/">Child maltreatment (CM)</a>
       <a href="https://acesinehrs.com/IPV/">Intimate partner violence (IPV)</a>
@@ -75,44 +78,73 @@
       <a href="https://acesinehrs.com/AFE/">Adverse family environments (AFE)</a>
       <a href="https://acesinehrs.com/CYP-MHPs/">CYP Mental health problems</a>
     `;
-    document.body.appendChild(dropdown);
+    document.body.appendChild(dropdownAce);
+
+    // 2. Create the Browse Codes Dropdown
+    const dropdownBrowse = document.createElement('div');
+    dropdownBrowse.id = 'global-browse-dropdown';
+    dropdownBrowse.className = 'bulletproof-dropdown';
+    dropdownBrowse.innerHTML = `
+      <a href="https://acesinehrs.com/codelistbrowse/">ACEs</a>
+      <a href="https://acesinehrs.com/codelistbrowse-CYP-MHP/">CYP Mental health problems</a>
+    `;
+    document.body.appendChild(dropdownBrowse);
 
     let hoverTimeout;
+    let activeDropdown = null; // Keeps track of which one is currently showing
 
     // Function to calculate exact position and show
-    function showDropdown(triggerElement) {
+    function showDropdown(triggerElement, targetDropdown) {
       clearTimeout(hoverTimeout);
+      
+      // Hide the other dropdown if it's currently open
+      if (activeDropdown && activeDropdown !== targetDropdown) {
+        activeDropdown.classList.remove('show-dropdown');
+      }
+      
+      activeDropdown = targetDropdown;
       const rect = triggerElement.getBoundingClientRect();
       
       // Center it below the nav link
-      dropdown.style.left = (rect.left + window.scrollX + (rect.width / 2)) + 'px';
-      dropdown.style.top = (rect.bottom + window.scrollY + 10) + 'px'; 
-      dropdown.classList.add('show-dropdown');
+      targetDropdown.style.left = (rect.left + window.scrollX + (rect.width / 2)) + 'px';
+      targetDropdown.style.top = (rect.bottom + window.scrollY + 10) + 'px'; 
+      targetDropdown.classList.add('show-dropdown');
     }
 
-    function hideDropdown() {
+    // Function to hide all dropdowns
+    function hideDropdowns() {
       // Add a slight delay so the mouse can safely move from the link to the dropdown box
       hoverTimeout = setTimeout(() => {
-        dropdown.classList.remove('show-dropdown');
+        dropdownAce.classList.remove('show-dropdown');
+        dropdownBrowse.classList.remove('show-dropdown');
+        activeDropdown = null;
       }, 150); 
     }
 
     // Event Delegation: Listens to the whole body so it works even if the theme moves links around
     document.body.addEventListener('mouseover', function(e) {
+      // Look for the specific text in the navigation links
       const isAceLink = e.target.tagName === 'A' && e.target.textContent.includes('ACE domains');
-      const isInsideDropdown = e.target.closest('#global-ace-dropdown');
+      const isBrowseLink = e.target.tagName === 'A' && e.target.textContent.includes('Browse codes');
+      
+      // Check if hovering inside the actual dropdown boxes
+      const isInsideAce = e.target.closest('#global-ace-dropdown');
+      const isInsideBrowse = e.target.closest('#global-browse-dropdown');
 
       if (isAceLink) {
-        showDropdown(e.target);
-      } else if (isInsideDropdown) {
+        showDropdown(e.target, dropdownAce);
+      } else if (isBrowseLink) {
+        showDropdown(e.target, dropdownBrowse);
+      } else if (isInsideAce || isInsideBrowse) {
         clearTimeout(hoverTimeout); // Keep it open if they are hovering the dropdown itself
       } else {
-        hideDropdown();
+        hideDropdowns();
       }
     });
 
-    // Make sure it closes if they move off the dropdown box
-    dropdown.addEventListener('mouseleave', hideDropdown);
+    // Make sure they close if the user moves off the dropdown boxes
+    dropdownAce.addEventListener('mouseleave', hideDropdowns);
+    dropdownBrowse.addEventListener('mouseleave', hideDropdowns);
   });
 </script>
 <!-- === END BULLETPROOF CUSTOM DROPDOWN === -->
