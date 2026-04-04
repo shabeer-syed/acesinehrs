@@ -25,7 +25,7 @@ main:
         url: https://acesinehrs.com/AFE/
       - title: "CYP mental health problems"
         url: https://acesinehrs.com/CYP-MHPs/
-  - title: "Browse codes"
+  - title: "Browse codes ▾"
     url: https://acesinehrs.com/codelistbrowse/
   - title: "Research"
     url: https://acesinehrs.com/research/
