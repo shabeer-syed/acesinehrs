@@ -106,7 +106,7 @@ author_profile: false
           <div class="flex flex-wrap gap-2.5">
             <!-- CYP-MHPs -->
             <div class="inline-flex items-center px-3 py-1.5 rounded-md bg-indigo-50 border border-indigo-100 text-indigo-800 text-sm font-medium">
-              <span class="bg-indigo-500 text-white px-2 py-0.5 rounded text-xs font-bold mr-2">CYP-MHPs</span> Child & Young Person Mental Health Problems
+              <span class="bg-indigo-500 text-white px-2 py-0.5 rounded text-xs font-bold mr-2">CYP-MHPs</span> Child & Young People - Mental Health Problems
             </div>
           </div>
         </div>
