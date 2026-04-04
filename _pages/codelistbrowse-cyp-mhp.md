@@ -1,7 +1,7 @@
 ---
 layout: splash
 permalink: /codelistbrowse-CYP-MHP/
-title: "CYP mental health problems"
+title: "Code list browser: CYP mental health problems"
 author_profile: false
 ---
 <!-- 1. Load Tailwind Safely -->
