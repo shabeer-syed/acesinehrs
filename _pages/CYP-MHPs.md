@@ -351,8 +351,11 @@ author_profile: false
      </h2>
      
      <div class="flex flex-col sm:flex-row gap-3 mb-6">
-      <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/CYP_mental_health_problems_2025_ACEsinEHR.txt" target="_blank" class="inline-flex items-center px-4 py-2 bg-emerald-50 border border-emerald-200 rounded-lg text-[13px] font-semibold text-emerald-800 hover:bg-emerald-100 shadow-sm transition-all hover:-translate-y-0.5">
+      <a href="https://raw.githubusercontent.com/shabeer-syed/acesinehrs/refs/heads/master/codelists/CYP_mental_health_problems_2025_ACEsinEHR.txt" target="_blank" class="inline-flex items-center justify-center px-4 py-2 bg-emerald-50 border border-emerald-200 rounded-lg text-[13px] font-semibold text-emerald-800 hover:bg-emerald-100 shadow-sm transition-all hover:-translate-y-0.5">
        <i class="fas fa-file-download text-emerald-600 mr-2 text-lg"></i> Download CYP MHP Codelist
+      </a>
+      <a href="https://acesinehrs.com/codelistbrowse-CYP-MHP/" class="inline-flex items-center justify-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-lg text-[13px] font-semibold text-blue-800 hover:bg-blue-100 shadow-sm transition-all hover:-translate-y-0.5">
+       <i class="fas fa-search text-blue-600 mr-2 text-lg"></i> Browse code list
       </a>
      </div>
 
